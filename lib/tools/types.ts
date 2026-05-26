@@ -14,6 +14,7 @@ export interface ToolSEO {
   what?: string;
   how?: string[];
   benefits?: string[];
+  relatedSlugs?: string[];
 }
 
 export interface Tool {

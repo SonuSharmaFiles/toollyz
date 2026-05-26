@@ -5,6 +5,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "qr-code-generator": dynamic(
     () => import("@/components/tools/qr-code-generator"),
   ),
+  "uuid-generator": dynamic(
+    () => import("@/components/tools/uuid-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

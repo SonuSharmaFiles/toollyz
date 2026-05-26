@@ -262,13 +262,96 @@ export const tools: Tool[] = [
   {
     slug: "uuid-generator",
     name: "UUID Generator",
-    tagline: "Generate v1, v4 and v7 UUIDs in bulk.",
+    tagline: "Generate v1, v4, v6 and v7 UUIDs in bulk — validate any UUID instantly.",
     description:
-      "Produce one or many universally unique identifiers in any major version, copy or download instantly.",
+      "Generate universally unique identifiers (UUIDs) for any version — v1, v4, v6 or v7. Bulk-generate, copy, download or paste in a UUID to validate it and reveal its version.",
     categoryId: "generators",
     icon: Fingerprint,
-    status: "coming-soon",
-    keywords: ["uuid", "guid", "identifier", "v4", "v7"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "uuid",
+      "uuid generator",
+      "guid",
+      "guid generator",
+      "uuid v4",
+      "uuid v1",
+      "uuid v7",
+      "uuid v6",
+      "uuid validator",
+      "unique identifier",
+      "rfc 4122",
+    ],
+    seo: {
+      title: "UUID Generator — Generate UUID v1, v4, v6 & v7 Online Free | Toollyz",
+      description:
+        "Generate secure UUIDs instantly. Create UUID v1, v4, v6 and v7 identifiers, validate UUIDs, copy bulk UUIDs and download results — 100% free, private and instant.",
+      what:
+        "A Universally Unique Identifier (UUID) is a 128-bit value used to uniquely identify items across distributed systems without coordination. Toollyz UUID Generator creates RFC 4122-compliant UUIDs in your browser — supporting versions 1, 4, 6 and 7, plus a validator that detects the version of any UUID you paste in.",
+      how: [
+        "Pick the UUID version you need — v4 is the safe default for most apps.",
+        "Choose how many UUIDs to generate (1 to 100) and toggle uppercase or remove hyphens if needed.",
+        "Click Generate to create UUIDs instantly. Copy individual UUIDs, copy all, or download as a TXT file.",
+        "Switch to the Validate tab and paste any UUID to verify it and reveal its version.",
+      ],
+      benefits: [
+        "100% client-side — UUIDs are generated in your browser and never sent to any server.",
+        "Supports every modern UUID version: v1, v4 (random), v6 (sortable v1) and v7 (Unix-time prefixed).",
+        "Bulk-generate up to 100 UUIDs at once — copy all or download as TXT in one click.",
+        "Built-in validator that detects version and surfaces UUID structure.",
+        "Formatting controls — UPPERCASE and hyphen-stripped output for any system.",
+        "Auto-refresh mode for live regeneration when you need quick variety.",
+        "Cryptographically random v4 UUIDs powered by the Web Crypto API.",
+      ],
+      relatedSlugs: [
+        "password-generator",
+        "hash-generator",
+        "base64-encoder-decoder",
+        "json-formatter",
+      ],
+      faqs: [
+        {
+          q: "What is a UUID?",
+          a: "A UUID (Universally Unique Identifier) is a 128-bit value formatted as 36 characters (32 hex + 4 hyphens) used to uniquely identify resources across systems without a central coordinator. UUIDs follow the RFC 4122 specification.",
+        },
+        {
+          q: "Is UUID v4 truly random?",
+          a: "Yes — UUID v4 takes 122 random bits from a cryptographically strong random number generator (the Web Crypto API in browsers). The remaining 6 bits encode the version (4) and variant (RFC 4122).",
+        },
+        {
+          q: "Are UUIDs guaranteed to be unique?",
+          a: "Not strictly guaranteed, but the probability of a v4 collision is so small it can be treated as zero in practice. You'd need to generate billions of UUIDs every second for centuries to have any meaningful collision risk.",
+        },
+        {
+          q: "Can UUIDs collide?",
+          a: "Theoretically yes, but the odds are vanishingly small for v4. A single collision in v4 would require roughly 2.71 × 10¹⁸ generated UUIDs before reaching a 50% chance of one collision — far beyond any realistic workload.",
+        },
+        {
+          q: "Which UUID version should I use?",
+          a: "Use v4 for most general-purpose IDs. Use v7 for database primary keys that benefit from time-ordering (indexes stay tight). Use v6 when you need v1-like time data but in a sortable order. Use v1 only when you specifically need MAC + timestamp embedding.",
+        },
+        {
+          q: "Are UUIDs secure?",
+          a: "v4 UUIDs are unpredictable and safe to use as IDs — but they are not secrets. Don't use UUIDs as authentication tokens, session keys or to authorize access. For those, use a dedicated cryptographically-random token instead.",
+        },
+        {
+          q: "How long is a UUID?",
+          a: "A UUID is 128 bits (16 bytes). In its canonical text form it's 36 characters: 32 hex digits plus 4 hyphens. Stripped of hyphens it's 32 characters.",
+        },
+        {
+          q: "Why use UUIDs instead of auto-increment IDs?",
+          a: "UUIDs can be generated anywhere — on the client, across distributed services, or offline — without coordinating with a database. They also avoid leaking row counts and don't reveal creation order (except for v6/v7, which intentionally do for sortability).",
+        },
+        {
+          q: "What's the difference between UUID v1 and v4?",
+          a: "v1 encodes a 60-bit timestamp and the generating machine's MAC address — useful for sorting by creation time but slightly reveals where it was generated. v4 is purely random with no embedded data — privacy-safer and the most common choice.",
+        },
+        {
+          q: "What is UUID v7 and why is it popular?",
+          a: "UUID v7 prefixes the value with a 48-bit Unix timestamp (millisecond precision), making UUIDs sortable in time order. This is ideal for database indexes — they pack tightly and stay in B-tree order, dramatically improving insert performance compared to random v4 IDs.",
+        },
+      ],
+    },
   },
   {
     slug: "lorem-ipsum-generator",
@@ -2584,6 +2667,24 @@ export function getFeaturedTools(): Tool[] {
 export function getRelatedTools(slug: string, limit = 4): Tool[] {
   const current = getToolBySlug(slug);
   if (!current) return [];
+
+  const explicit = current.seo?.relatedSlugs ?? [];
+  if (explicit.length) {
+    const pinned = explicit
+      .map((s) => getToolBySlug(s))
+      .filter((t): t is Tool => Boolean(t) && t!.slug !== slug);
+    if (pinned.length >= limit) return pinned.slice(0, limit);
+    const fillers = tools
+      .filter(
+        (t) =>
+          t.categoryId === current.categoryId &&
+          t.slug !== slug &&
+          !pinned.some((p) => p.slug === t.slug),
+      )
+      .slice(0, limit - pinned.length);
+    return [...pinned, ...fillers];
+  }
+
   return tools
     .filter((t) => t.categoryId === current.categoryId && t.slug !== slug)
     .slice(0, limit);
