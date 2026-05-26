@@ -3,6 +3,8 @@ import { SITE } from "@/lib/seo/constants";
 import { tools } from "@/lib/tools/registry";
 import { categories } from "@/lib/tools/categories";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const base = SITE.url.replace(/\/$/, "");

@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: `${SITE.basePath}/favicon.ico`,
   },
   formatDetection: { telephone: false, email: false, address: false },
 };

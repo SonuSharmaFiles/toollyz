@@ -1,10 +1,13 @@
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const SITE = {
   name: "Toollyz",
   tagline: "All-in-one online tools for everyone",
   description:
     "A premium suite of fast, privacy-first online tools. Generate, convert, format, and create — all in your browser, no signup required.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://toollyz.com",
-  ogImage: "/og-default.png",
+  basePath: BASE_PATH,
+  ogImage: `${BASE_PATH}/og-default.png`,
   twitter: "@toollyz",
   locale: "en_US",
   themeColorLight: "#ffffff",
