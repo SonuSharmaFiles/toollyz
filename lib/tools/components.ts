@@ -1,0 +1,12 @@
+import dynamic from "next/dynamic";
+import type { ComponentType } from "react";
+
+const TOOL_COMPONENTS: Record<string, ComponentType> = {
+  "qr-code-generator": dynamic(
+    () => import("@/components/tools/qr-code-generator"),
+  ),
+};
+
+export function getToolComponent(slug: string): ComponentType | null {
+  return TOOL_COMPONENTS[slug] ?? null;
+}
