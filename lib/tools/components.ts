@@ -26,6 +26,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "password-generator": dynamic(
     () => import("@/components/tools/password-generator"),
   ),
+  "otp-generator": dynamic(
+    () => import("@/components/tools/otp-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

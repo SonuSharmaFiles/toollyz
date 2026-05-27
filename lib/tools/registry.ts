@@ -914,13 +914,96 @@ export const tools: Tool[] = [
   {
     slug: "otp-generator",
     name: "OTP Generator",
-    tagline: "Generate one-time passwords for testing 2FA flows.",
+    tagline:
+      "Generate secure one-time codes — numeric, alphanumeric, PIN, verification or backup recovery.",
     description:
-      "Generate TOTP/HOTP codes from any secret key. Useful for testing authentication flows and recovering codes.",
+      "Generate cryptographically secure OTPs and verification codes in six formats with optional countdown timer, auto-refresh, and TXT/CSV/JSON export. 100% client-side — codes never leave your browser.",
     categoryId: "generators",
     icon: LockKeyhole,
-    status: "coming-soon",
-    keywords: ["otp", "totp", "2fa", "authenticator", "one time password"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "otp generator",
+      "one time password",
+      "verification code generator",
+      "pin generator",
+      "backup recovery codes",
+      "alphanumeric otp",
+      "hex code",
+      "2fa testing",
+      "auth code",
+    ],
+    seo: {
+      title: "OTP Generator — Generate Secure One-Time Passwords | Toollyz",
+      description:
+        "Generate secure OTPs instantly. Six formats — numeric, alphanumeric, hex, PIN, verification, backup recovery — with countdown timer, auto-refresh and TXT/CSV/JSON export. 100% client-side.",
+      what:
+        "An OTP (One-Time Password) is a short code that's valid for a single login attempt or a brief time window. They're the backbone of two-factor authentication (2FA), email/SMS verification flows, account recovery, and short-lived API tokens. Toollyz OTP Generator produces six formats — numeric, alphanumeric, hex, PIN, verification, and backup recovery codes — using the browser's cryptographically secure Web Crypto API. Use it to test 2FA flows, seed verification systems, or generate one-off codes you'll consume yourself.",
+      how: [
+        "Pick an OTP type — Numeric, Alphanumeric, Hex, PIN, Verification, or Backup recovery.",
+        "Adjust length and quantity. Each type has sensible bounds (4–10 for PIN, 8–24 for backup codes, etc.).",
+        "Optionally set an expiration timer (30s, 60s, 2min, 5min) and enable auto-refresh to keep a fresh code rotating.",
+        "Copy a single code, copy all, or download as TXT, CSV or JSON. Save favorites for reuse — everything stays in your browser.",
+      ],
+      benefits: [
+        "Cryptographically secure — every code generated via window.crypto.getRandomValues.",
+        "Six purpose-built formats: numeric, alphanumeric, hex, PIN, verification, backup recovery.",
+        "Optional expiration timer with animated circular countdown and auto-refresh on expiry.",
+        "Bulk-generate up to 100 codes with deduplication where the pool allows.",
+        "Backup-recovery format produces grouped codes (xxxx-xxxx-…) ready to print and store offline.",
+        "Exclude-ambiguous toggle drops 0/O/1/l/I so codes are readable in any font.",
+        "Avoid-repeats option for cleaner PINs and verification codes.",
+        "Local-only history and favorites — codes never reach our servers.",
+      ],
+      relatedSlugs: [
+        "password-generator",
+        "uuid-generator",
+        "secure-notes",
+        "wifi-qr-code-generator",
+      ],
+      faqs: [
+        {
+          q: "What is an OTP?",
+          a: "An OTP — One-Time Password — is a short code that's only valid for a single use or a brief time window (typically 30 seconds to 5 minutes). They're widely used as a second factor in 2FA, in email/SMS verification, and in account-recovery flows. Once consumed or expired, the code can never be reused.",
+        },
+        {
+          q: "How does OTP authentication work?",
+          a: "In a real OTP flow, a server generates a short code, sends it via SMS/email/authenticator app, then validates it on the next login attempt. Time-based OTPs (TOTP) regenerate every 30 seconds; HOTP codes increment with each use. The strength comes from short validity windows, not code complexity.",
+        },
+        {
+          q: "Are these generated OTPs secure?",
+          a: "Yes — every code is generated using the browser's cryptographically secure Web Crypto API with proper modulo-bias rejection. The codes themselves are statistically indistinguishable from true random. Security in production OTP systems comes from the surrounding flow (expiry, single-use) — use this tool for testing and personal use, not as a replacement for a real auth backend.",
+        },
+        {
+          q: "Can OTPs expire automatically?",
+          a: "Yes — set the expiration timer to 30s, 60s, 2min or 5min. A circular countdown displays the time remaining; when it hits zero the code shows an Expired state. Enable Auto-refresh to generate a fresh code as soon as the timer ends.",
+        },
+        {
+          q: "What's the difference between an OTP and a password?",
+          a: "A password is a long-lived secret you reuse across logins; an OTP is single-use and short-lived. OTPs are weaker individually (they're shorter) but stronger in practice because they can't be reused if intercepted or leaked. The two work together: password for identification, OTP for verification.",
+        },
+        {
+          q: "What are backup recovery codes?",
+          a: "When you enable 2FA on a service, the service usually shows a list of long one-time codes (Google, GitHub, etc. give ~10 of these). If you lose access to your authenticator, any one of these unlocks your account. Toollyz Backup mode generates grouped 8/16-char codes you can print and store offline.",
+        },
+        {
+          q: "Can I generate multiple OTPs at once?",
+          a: "Yes — set the Quantity to 5, 10, 25, 50 or 100. Bulk generation includes deduplication where the character pool allows (4-digit PINs only have 10,000 combinations, so duplicates are tolerated for very short codes).",
+        },
+        {
+          q: "Are my OTPs stored or transmitted?",
+          a: "No. Generation runs entirely in your browser via the Web Crypto API. Recent codes are saved only in your browser's localStorage, on your device. We don't log, transmit or sync any code you generate.",
+        },
+        {
+          q: "Why are OTPs important for security?",
+          a: "Even if your password leaks in a data breach, an attacker still can't log in without your OTP. That's the whole point of two-factor authentication — adding a layer of proof that you, not just the password, are present. Enable 2FA wherever it's offered.",
+        },
+        {
+          q: "Is this OTP generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Generation, history and favorites all stay in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "audio-volume-booster",
