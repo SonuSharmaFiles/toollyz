@@ -8,6 +8,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "uuid-generator": dynamic(
     () => import("@/components/tools/uuid-generator"),
   ),
+  "lorem-ipsum-generator": dynamic(
+    () => import("@/components/tools/lorem-ipsum-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

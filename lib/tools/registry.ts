@@ -356,13 +356,96 @@ export const tools: Tool[] = [
   {
     slug: "lorem-ipsum-generator",
     name: "Lorem Ipsum Generator",
-    tagline: "Generate placeholder text for designs and mockups.",
+    tagline:
+      "Generate placeholder text in 6 styles — classic, tech, startup, marketing, minimal or funny.",
     description:
-      "Produce paragraphs, sentences or words of classic Lorem Ipsum filler text in any quantity you need.",
+      "Produce paragraphs, sentences, words or exact character counts of placeholder text. Pick from six themed vocabularies, control formatting, and copy or download instantly.",
     categoryId: "generators",
     icon: AlignJustify,
-    status: "coming-soon",
-    keywords: ["lorem ipsum", "placeholder", "dummy text", "filler"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "lorem ipsum",
+      "lorem ipsum generator",
+      "placeholder text",
+      "dummy text",
+      "filler text",
+      "mock content",
+      "design copy",
+      "tech ipsum",
+      "startup ipsum",
+      "random paragraphs",
+    ],
+    seo: {
+      title:
+        "Lorem Ipsum Generator — Generate Placeholder Text Online Free | Toollyz",
+      description:
+        "Generate Lorem Ipsum placeholder text instantly. Create paragraphs, sentences, words, or custom-length placeholder text in 6 styles for websites, UI mockups, apps and design projects.",
+      what:
+        "Lorem Ipsum is scrambled placeholder text used in design and publishing to fill space before real content is available. Toollyz Lorem Ipsum Generator goes further — it produces classic Latin filler plus five modern themed vocabularies (tech, startup, marketing, minimal, funny) so your mockups feel closer to the actual product.",
+      how: [
+        "Pick what to generate — paragraphs, sentences, words or exact character count.",
+        "Choose an ipsum mode (Classic, Tech, Startup, Marketing, Minimal, or Funny) to set the vocabulary.",
+        "Dial in quantity using the slider or a preset, and toggle commas, line breaks or the classic opening line.",
+        "Pick an output format — Plain text, HTML <p> tags, or Markdown — then copy or download.",
+      ],
+      benefits: [
+        "Six themed vocabularies — classic Latin, tech, startup, marketing, minimal and funny.",
+        "Generate by paragraphs, sentences, words or exact character count.",
+        "Live word, character, sentence, paragraph and reading-time stats.",
+        "Output as plain text, HTML <p> tags or Markdown — copy or download as TXT/HTML/MD.",
+        "Toggle commas, line breaks and the classic Lorem ipsum opener.",
+        "100% client-side — no signup, no usage limits, no watermark.",
+      ],
+      relatedSlugs: [
+        "case-converter",
+        "character-counter",
+        "word-counter",
+        "markdown-editor",
+      ],
+      faqs: [
+        {
+          q: "What is Lorem Ipsum?",
+          a: "Lorem Ipsum is dummy placeholder text used by the printing and design industries since the 1500s. It's deliberately meaningless so readers focus on the visual layout rather than the content. The traditional version is scrambled Latin from Cicero's 'De finibus bonorum et malorum' written in 45 BC.",
+        },
+        {
+          q: "Why do designers use Lorem Ipsum?",
+          a: "Real copy distracts reviewers — they end up critiquing the writing instead of the layout. Lorem Ipsum has the rough word-length and rhythm of real English, so a design looks finished without anyone getting hooked on the words.",
+        },
+        {
+          q: "What does Lorem Ipsum actually mean?",
+          a: "It doesn't mean anything coherent. It comes from a scrambled passage of Cicero — the original Latin includes 'Dolorem ipsum quia dolor sit amet...' which roughly means 'pain itself, because pain is...'. Modern Lorem Ipsum is a typographic descendant of that text.",
+        },
+        {
+          q: "Is Lorem Ipsum copyrighted?",
+          a: "No. Lorem Ipsum is over 2,000 years old in its original form and the modern scrambled version has been in the public domain for centuries. You can use it freely in any project.",
+        },
+        {
+          q: "Can I use Lorem Ipsum commercially?",
+          a: "Yes — Lorem Ipsum is free to use in any commercial, personal or open-source project. There are no licensing requirements.",
+        },
+        {
+          q: "How many words are in the standard Lorem Ipsum?",
+          a: "The classic passage that begins 'Lorem ipsum dolor sit amet…' is about 70 words. The full traditional Lipsum library contains roughly 200 unique words shuffled into endless variations.",
+        },
+        {
+          q: "Is Lorem Ipsum SEO friendly?",
+          a: "Not in production. Search engines see Lorem Ipsum as low-quality, non-original content. Always replace placeholder text with your real copy before launching a page publicly.",
+        },
+        {
+          q: "Can Lorem Ipsum hurt my SEO?",
+          a: "Yes if it ships to production. Google can detect placeholder text and may demote pages that contain it. Use Lorem Ipsum only during design and development, never on indexed live pages.",
+        },
+        {
+          q: "What's the best Lorem Ipsum generator?",
+          a: "A good generator gives you control — paragraphs vs sentences vs character counts, multiple vocabularies for different design moods, easy copy/download, and clean output formats. Toollyz combines all of those with six themed vocabularies and a real stats panel.",
+        },
+        {
+          q: "How do I generate random paragraphs?",
+          a: "Pick 'Paragraphs' as the generation type, dial in how many you need with the slider or preset, choose a mode, and click Regenerate. Each click reshuffles the words for a fresh layout-friendly block.",
+        },
+      ],
+    },
   },
   {
     slug: "fake-address-generator",
