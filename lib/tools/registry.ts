@@ -546,13 +546,97 @@ export const tools: Tool[] = [
   {
     slug: "fake-name-generator",
     name: "Fake Name Generator",
-    tagline: "Generate realistic fake names from any region.",
+    tagline:
+      "Generate realistic fake identities from 11 cultures — names, usernames, emails, jobs and more.",
     description:
-      "Produce realistic fake names — first, last, full — across regions and genders. Great for QA, design mockups and demo content.",
+      "Generate believable fictional identity profiles from 11 cultures and languages. Each identity includes full name, username, nickname, email, phone, occupation, age and location. Export TXT, CSV or JSON.",
     categoryId: "generators",
     icon: UserCircle,
-    status: "coming-soon",
-    keywords: ["fake name", "random name", "test data", "mock data"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "fake name generator",
+      "random name generator",
+      "fake identity",
+      "test data generator",
+      "mock identity",
+      "fake username",
+      "fake person",
+      "name generator by country",
+      "fake email",
+      "qa testing",
+      "demo data",
+    ],
+    seo: {
+      title: "Fake Name Generator — Generate Random Names & Identities | Toollyz",
+      description:
+        "Generate realistic fake names and full identity profiles from 11 cultures. Names, usernames, emails, phones, occupations and birthdates for testing, development and creative projects — 100% free.",
+      what:
+        "A Fake Name Generator produces realistic-looking but entirely fictional identity profiles for use in development, QA, design mockups and creative writing. Toollyz Fake Name Generator covers eleven cultures — the United States, United Kingdom, India, Nepal, Japan, China, Germany, France, Brazil, Russia and Arabic-speaking countries — generating culturally-accurate names alongside usernames, emails, phone numbers, occupations and locations. All data is invented and must never be used to deceive anyone.",
+      how: [
+        "Pick a country / culture, or choose Random global to mix all 11 in one batch.",
+        "Filter by gender (any / female / male) and age range (any / young / adult / senior).",
+        "Toggle which fields each identity should include: username, email, phone, occupation, company, birthdate, middle name.",
+        "Generate 1, 5, 10, 25, 50 or 100 identities and copy / download as TXT, CSV or JSON.",
+      ],
+      benefits: [
+        "Eleven culture-accurate locales — Latin, Cyrillic, Arabic, Chinese and Japanese scripts.",
+        "Full identity profiles — name, username, nickname, email, phone, occupation, company, age, birthdate, city.",
+        "Smart username generation that derives ASCII handles even from non-Latin name scripts.",
+        "Gender and age-range filters for realistic test personas.",
+        "Bulk export TXT, CSV, JSON — CSV opens directly in spreadsheets.",
+        "Per-card copy-as-text and copy-as-JSON, plus per-field hover-to-copy.",
+        "100% client-side — generated identities never leave your browser.",
+      ],
+      relatedSlugs: [
+        "fake-address-generator",
+        "username-generator",
+        "password-generator",
+        "qr-code-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a fake name generator?",
+          a: "A tool that produces realistic-looking but completely fictional identity profiles — name, username, email, phone, occupation, location — for use in development, QA, design mockups, fiction and education. Every value is invented; no real person's data is used.",
+        },
+        {
+          q: "Are the generated names real?",
+          a: "No. Names are built from culturally-appropriate pools of first names and last names, randomly combined. The specific combinations almost certainly don't belong to any real person.",
+        },
+        {
+          q: "Can I use fake names for testing?",
+          a: "Yes — that's exactly what they're for. Real customer data shouldn't live in dev or staging environments because of privacy risk. Fake identities let you seed databases, demo UIs, write tests and exercise validation without ever touching real personal information.",
+        },
+        {
+          q: "Is using fake names legal?",
+          a: "Yes for development, testing, education, fiction and design mockups. It is not legal to use fake identities to deceive a service, commit fraud, evade verification, impersonate a real person, or sign up for accounts that require real identity. Use them honestly.",
+        },
+        {
+          q: "Can I generate names by country?",
+          a: "Yes — eleven cultures are supported with locale-aware datasets: US, UK, India, Nepal, Japan, China, Germany, France, Brazil, Russia and Arabic-speaking countries. There's also a Random global option that picks a culture per identity.",
+        },
+        {
+          q: "How are fake usernames generated?",
+          a: "Toollyz combines the generated first and last name into common username patterns — first.last, first_last, first[0]last, firstLast{number}, last.first[0], the{first}, first{year} — then normalizes non-Latin scripts to ASCII so the username works on any platform.",
+        },
+        {
+          q: "Are the email addresses real?",
+          a: "Emails combine the fake name with a real provider domain (gmail.com, outlook.com, etc.) but the local part is random. In rare cases a generated address might happen to belong to a real person, so never send anything important to one.",
+        },
+        {
+          q: "Are the phone numbers real?",
+          a: "No — they follow each country's standard format (so they look real) but the digits are randomized. Calling them isn't recommended; you may reach an unrelated person who happens to have that number.",
+        },
+        {
+          q: "Can I export generated identities?",
+          a: "Yes — copy single fields, copy a full profile as text or JSON, or bulk-export the whole batch as TXT, CSV or JSON. The CSV opens directly in Excel and Google Sheets; the JSON is ready to seed any database.",
+        },
+        {
+          q: "Is this fake name generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Generation happens entirely in your browser, so we never see or store the identities you generate.",
+        },
+      ],
+    },
   },
   {
     slug: "username-generator",

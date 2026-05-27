@@ -17,6 +17,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "username-generator": dynamic(
     () => import("@/components/tools/username-generator"),
   ),
+  "fake-name-generator": dynamic(
+    () => import("@/components/tools/fake-name-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
