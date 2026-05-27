@@ -450,13 +450,98 @@ export const tools: Tool[] = [
   {
     slug: "fake-address-generator",
     name: "Fake Address Generator",
-    tagline: "Generate realistic fake addresses for testing.",
+    tagline:
+      "Generate realistic fake addresses, names, phones and emails from 10 countries.",
     description:
-      "Generate believable fake postal addresses from countries around the world — perfect for testing forms and apps without using real data.",
+      "Generate believable fake postal addresses with full identity-style data from the US, UK, Canada, Australia, Germany, France, India, Nepal, Japan and Brazil. Export as TXT, CSV or JSON — perfect for testing, mockups and demos.",
     categoryId: "generators",
     icon: MapPin,
-    status: "coming-soon",
-    keywords: ["fake address", "test data", "dummy address", "mock"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "fake address generator",
+      "fake address",
+      "test address",
+      "dummy address",
+      "random address",
+      "mock data",
+      "test data generator",
+      "fake name",
+      "fake phone",
+      "fake email",
+      "fake identity",
+      "qa testing",
+    ],
+    seo: {
+      title:
+        "Fake Address Generator — Generate Random Addresses Online | Toollyz",
+      description:
+        "Generate realistic fake addresses, names, phones and emails from 10+ countries. Export as TXT, CSV or JSON for testing, development and educational purposes — 100% free.",
+      what:
+        "A Fake Address Generator produces realistic-looking but entirely fictional postal addresses, names, contact details and identity data for use in testing and development. Toollyz Fake Address Generator covers ten countries with locale-aware formats — addresses look right for the United States, United Kingdom, Canada, Australia, Germany, France, India, Nepal, Japan and Brazil. Generated data is never real and must never be used to deceive anyone.",
+      how: [
+        "Pick a country (or choose Random) and how many addresses you want — 1, 5, 10, 25 or 50.",
+        "Toggle which fields to include: phone, email, company and geo coordinates.",
+        "Optionally filter by gender and age group for more realistic test personas.",
+        "Click Generate, then copy individual fields, copy all, or export as TXT, CSV or JSON.",
+      ],
+      benefits: [
+        "Ten country-specific locales with correct address, phone and postal-code formats.",
+        "Bulk generate up to 50 addresses with a single click and paginate through them cleanly.",
+        "Per-card copy, copy-all, plus three export formats (TXT, CSV, JSON) for any downstream tool.",
+        "Optional geo coordinates within each country's actual bounding box, with timezone.",
+        "Gender and age-group filters for realistic test personas.",
+        "100% client-side — your generated data never touches a server.",
+      ],
+      relatedSlugs: [
+        "fake-name-generator",
+        "username-generator",
+        "password-generator",
+        "qr-code-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a fake address generator?",
+          a: "It's a tool that produces realistic-looking but completely fictional postal addresses — including streets, cities, postal codes, names, phone numbers and emails — for use in development, QA, design mockups and education. The data is invented, not pulled from any real database.",
+        },
+        {
+          q: "Are the generated addresses real?",
+          a: "No. Addresses are constructed from country-appropriate format rules and randomized name/street tokens. They look real because they follow the right patterns, but the specific combinations almost certainly don't exist.",
+        },
+        {
+          q: "Is it legal to use fake addresses?",
+          a: "Yes — for development, testing, education and design mockups. It is not legal to use fake addresses to deceive a service, commit fraud, evade verification, sign up for accounts that require real identity, or impersonate someone. Use them honestly.",
+        },
+        {
+          q: "Why do developers use fake addresses?",
+          a: "Real customer data shouldn't sit in dev or staging environments — that's a privacy risk. Fake addresses let teams seed databases, test forms, exercise validation rules, demo UIs to clients and run QA scripts without ever touching real personal data.",
+        },
+        {
+          q: "Are the phone numbers real?",
+          a: "No. They follow each country's standard formatting pattern (so they look like real numbers) but the digits are randomized. Calling them is not recommended — you may reach an actual unrelated person.",
+        },
+        {
+          q: "Are the email addresses real?",
+          a: "Generated emails combine fake names with real provider domains (gmail.com, outlook.com, etc.) but the local part is random. In rare cases, someone could happen to own that exact address — never send anything important to a generated email.",
+        },
+        {
+          q: "How are fake addresses generated?",
+          a: "Toollyz uses locale-aware data via faker — real city names, real state/province names and country-correct postal-code formats are combined with randomized street numbers and randomized identity tokens. Geo coordinates are randomized within each country's actual lat/long bounds.",
+        },
+        {
+          q: "Can I generate addresses by country?",
+          a: "Yes — ten countries are supported with correct formatting: US, UK, Canada, Australia, Germany, France, India, Nepal, Japan and Brazil. There is also a Random option that picks a country at random for each address.",
+        },
+        {
+          q: "Can I export generated addresses?",
+          a: "Yes — copy individual fields, copy the whole list as plain text, or download as TXT, CSV or JSON. The CSV opens directly in Excel, Google Sheets and any spreadsheet tool. The JSON is ready to seed any database or API.",
+        },
+        {
+          q: "Is the fake address generator free?",
+          a: "Yes — completely free with no signup, no usage limits and no watermark. Generation runs entirely in your browser, so we never see your data either.",
+        },
+      ],
+    },
   },
   {
     slug: "fake-name-generator",

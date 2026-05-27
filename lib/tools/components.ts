@@ -11,6 +11,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "lorem-ipsum-generator": dynamic(
     () => import("@/components/tools/lorem-ipsum-generator"),
   ),
+  "fake-address-generator": dynamic(
+    () => import("@/components/tools/fake-address-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
