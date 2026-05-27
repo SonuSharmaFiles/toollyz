@@ -20,6 +20,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "fake-name-generator": dynamic(
     () => import("@/components/tools/fake-name-generator"),
   ),
+  "wifi-qr-code-generator": dynamic(
+    () => import("@/components/tools/wifi-qr-code-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

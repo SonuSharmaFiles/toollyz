@@ -239,14 +239,98 @@ export const tools: Tool[] = [
   {
     slug: "wifi-qr-code-generator",
     name: "WiFi QR Code Generator",
-    tagline: "Share your WiFi instantly with a scannable QR code.",
+    tagline:
+      "Create scannable WiFi QR codes and printable cards — guests join in one tap.",
     description:
-      "Generate a QR code that automatically connects guests to your WiFi when scanned. Supports WPA, WPA2 and open networks.",
+      "Generate WiFi QR codes that connect guests to your network in a single scan. Customize colors, pick from four printable card templates (Minimal, Café, Office, Home), and export as PNG, SVG or JPG.",
     categoryId: "generators",
     icon: Wifi,
-    status: "coming-soon",
+    status: "live",
     featured: true,
-    keywords: ["wifi", "qr code", "wifi qr", "share wifi", "wpa"],
+    keywords: [
+      "wifi qr code generator",
+      "wifi qr code",
+      "share wifi",
+      "wifi card",
+      "guest wifi",
+      "wpa qr",
+      "scannable wifi",
+      "hidden network qr",
+      "cafe wifi",
+      "restaurant wifi",
+    ],
+    seo: {
+      title:
+        "WiFi QR Code Generator — Create WiFi QR Codes Online Free | Toollyz",
+      description:
+        "Generate WiFi QR codes instantly. Create scannable QR codes for any WiFi network, customize colors, pick printable card templates and download as PNG, SVG or JPG — 100% free.",
+      what:
+        "A WiFi QR Code is a special QR code that, when scanned by a phone's camera, automatically connects the device to a WiFi network — no typing required. Toollyz WiFi QR Code Generator produces standard-compliant codes (the same format Android and iOS use natively), with customizable colors, four printable card templates, and built-in print and download in PNG, SVG and JPG.",
+      how: [
+        "Enter your network name (SSID) and password, then pick the security type (WPA, WEP or open).",
+        "Customize the QR size, margin, foreground and background colors — or pick a preset palette.",
+        "Pick a printable card template (Minimal, Café, Office or Home) for a polished poster-ready design.",
+        "Download as PNG, SVG or JPG, copy the WiFi details, or print a card directly with one click.",
+      ],
+      benefits: [
+        "Standard-compliant WiFi QR format — scans natively on iPhone, Android and most QR apps.",
+        "Four premium printable card templates: Minimal, Café, Office, Home.",
+        "Full color customization with 5 curated presets plus custom hex picker.",
+        "Multiple output formats: PNG, SVG (lossless print) and JPG.",
+        "Print a beautifully formatted card directly from your browser.",
+        "Hidden network support with one toggle.",
+        "Recent networks + favourites saved locally in your browser — never on any server.",
+        "100% client-side — your WiFi password never leaves your device.",
+      ],
+      relatedSlugs: [
+        "qr-code-generator",
+        "barcode-generator",
+        "password-generator",
+        "secure-notes",
+      ],
+      faqs: [
+        {
+          q: "What is a WiFi QR code?",
+          a: "A WiFi QR code is a QR code that encodes the network name (SSID), password and security type using the standard 'WIFI:T:...;S:...;P:...;;' format. When scanned by a phone's camera, the phone offers to join the network automatically — no typing required.",
+        },
+        {
+          q: "How do I scan a WiFi QR code?",
+          a: "Open your phone's camera app and point it at the QR code. Both iOS (13+) and Android (10+) recognize WiFi codes natively and offer a 'Connect to network' prompt. Older devices may need a dedicated QR scanner app.",
+        },
+        {
+          q: "Are WiFi QR codes secure?",
+          a: "The WiFi password is encoded directly inside the QR code, so anyone with line-of-sight to the printed code can read it with a scanner. Treat a WiFi QR code like a printed password — only display it where you'd be comfortable showing the password.",
+        },
+        {
+          q: "Can iPhones scan WiFi QR codes?",
+          a: "Yes — iOS 13 and newer can scan WiFi QR codes natively from the Camera app. The phone will show a banner offering to join the network. No app installation required.",
+        },
+        {
+          q: "Do Android phones support WiFi QR codes?",
+          a: "Yes — Android 10 and newer scan WiFi QR codes natively from the camera. You can also generate them from the WiFi settings on most modern Android devices.",
+        },
+        {
+          q: "Can I create a QR code for a hidden network?",
+          a: "Yes — toggle the 'Hidden network' option. This adds H:true to the QR string, telling phones to add the network even if it's not broadcasting its SSID.",
+        },
+        {
+          q: "What security types are supported?",
+          a: "WPA / WPA2 / WPA3 (the modern standard), WEP (legacy, deprecated — only use if you must), and open networks with no password. WPA3 networks scan correctly using the WPA setting since the QR format doesn't distinguish between WPA generations.",
+        },
+        {
+          q: "Can I print WiFi QR codes?",
+          a: "Yes — Toollyz includes four printable card templates. Click 'Print card' to open a clean, print-ready version with your QR code, network name, password and connection instructions, then print directly or save as PDF.",
+        },
+        {
+          q: "Are my WiFi passwords stored or transmitted?",
+          a: "No — Toollyz generates everything in your browser using the Web's built-in crypto. Your SSID and password never reach our servers. The optional 'Save' button stores recent networks only in your browser's localStorage, on your device.",
+        },
+        {
+          q: "Is this WiFi QR generator free?",
+          a: "Yes — completely free with no signup, no usage limits and no watermark on any output. Use it as often as you like for personal, café, restaurant, office or commercial purposes.",
+        },
+      ],
+    },
   },
   {
     slug: "barcode-generator",
