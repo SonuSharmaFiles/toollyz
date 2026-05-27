@@ -23,6 +23,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "wifi-qr-code-generator": dynamic(
     () => import("@/components/tools/wifi-qr-code-generator"),
   ),
+  "password-generator": dynamic(
+    () => import("@/components/tools/password-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

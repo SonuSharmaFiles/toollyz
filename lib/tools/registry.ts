@@ -820,14 +820,96 @@ export const tools: Tool[] = [
   {
     slug: "password-generator",
     name: "Password Generator",
-    tagline: "Create strong, random passwords with custom rules.",
+    tagline:
+      "Create strong, secure passwords in 6 modes — with live entropy and crack-time analysis.",
     description:
-      "Generate cryptographically secure passwords with custom length, symbols, numbers and case rules.",
+      "Generate cryptographically secure passwords using the Web Crypto API. Six modes: Random, Memorable, Passphrase, PIN, WiFi and API Key — each with real-time entropy, strength rating and crack-time estimate.",
     categoryId: "generators",
     icon: KeyRound,
-    status: "coming-soon",
+    status: "live",
     featured: true,
-    keywords: ["password", "generator", "secure", "random"],
+    keywords: [
+      "password generator",
+      "secure password",
+      "strong password",
+      "random password",
+      "passphrase generator",
+      "pin generator",
+      "api key generator",
+      "password strength",
+      "password entropy",
+      "wifi password",
+    ],
+    seo: {
+      title: "Password Generator — Create Strong Secure Passwords | Toollyz",
+      description:
+        "Generate strong secure passwords instantly. Six modes — Random, Memorable, Passphrase, PIN, WiFi, API Key — with live entropy analysis. 100% client-side, never stored or transmitted.",
+      what:
+        "A Password Generator produces unpredictable strings of characters that resist brute-force, dictionary and credential-stuffing attacks. Toollyz Password Generator uses the browser's cryptographically secure Web Crypto API (window.crypto.getRandomValues) — the same source modern operating systems trust for key generation — and analyzes every result for entropy and estimated crack time. Six modes cover everything from random alphanumeric passwords to memorable passphrases, PINs, WiFi credentials and API keys.",
+      how: [
+        "Pick a mode — Random, Memorable, Passphrase, PIN, WiFi or API Key — based on what you'll use the password for.",
+        "Adjust length and toggle character classes (lowercase, uppercase, numbers, symbols) plus advanced rules like exclude-similar, avoid-repeats and avoid-sequential.",
+        "Click Generate. The strength meter updates instantly with entropy in bits, a category badge and an estimated crack time.",
+        "Copy, save to favourites, or download bulk batches as TXT/CSV. Recent results stay in your browser only.",
+      ],
+      benefits: [
+        "Cryptographically secure — built on window.crypto.getRandomValues, never Math.random.",
+        "Six purpose-built modes: Random, Memorable, Passphrase, PIN, WiFi, API Key.",
+        "Real-time strength analysis with entropy (in bits) and crack-time estimate at 100 billion guesses/sec.",
+        "Advanced filters: exclude similar characters (i/l/1/L/o/0/O), exclude ambiguous symbols, avoid repeats, avoid sequences.",
+        "Passphrase mode uses a curated dictionary of common English words with capitalization and separator controls.",
+        "Bulk generation (1–50) with copy-all, TXT and CSV (including strength column) export.",
+        "Local-only history and favourites — passwords never touch a server or network.",
+      ],
+      relatedSlugs: [
+        "username-generator",
+        "wifi-qr-code-generator",
+        "uuid-generator",
+        "secure-notes",
+      ],
+      faqs: [
+        {
+          q: "What is a password generator?",
+          a: "A password generator is a tool that produces unpredictable strings of characters to use as account credentials. A good generator uses a cryptographically secure source of randomness so each password is statistically impossible to guess — even with massive computing power.",
+        },
+        {
+          q: "How secure are these generated passwords?",
+          a: "Toollyz generates every password using the Web Crypto API — the same standard cryptography modern browsers use for TLS keys, web authentication and signing. Combined with a long character pool, even a 20-character random password takes centuries to crack with today's hardware.",
+        },
+        {
+          q: "Are generated passwords stored or transmitted?",
+          a: "No. Every password is generated locally in your browser — no network request leaves your device. Recent passwords are only saved in your browser's localStorage on your own machine, and only if you click Generate. We never see, log or transmit any password.",
+        },
+        {
+          q: "What is password entropy?",
+          a: "Entropy is a measure of how unpredictable a password is, expressed in bits. Each bit doubles the number of possible passwords an attacker must try. A 60-bit password takes a million times more guesses than a 40-bit one. Generally: <40 bits is weak, 65+ is strong, 90+ is very strong, 128+ is excellent.",
+        },
+        {
+          q: "What makes a strong password?",
+          a: "Length first, randomness second, character diversity third. A 20-character random password from a full alphanumeric+symbol pool yields about 130 bits of entropy — beyond reach for any realistic brute-force attack. Avoid personal info, common words and reused passwords.",
+        },
+        {
+          q: "Are passphrases safer than passwords?",
+          a: "For memorability they're often better. A 5-word random passphrase (e.g. 'velvet-rain-trumpet-river-onion') has around 65 bits of entropy — strong, hard to brute-force and far easier to type than a random symbol soup. Use a passphrase for your password manager master key.",
+        },
+        {
+          q: "Should I use symbols in passwords?",
+          a: "Yes when the site allows them — they roughly double the per-character pool size and add bits of entropy per character. But length matters more: a 24-character alphanumeric password is stronger than a 12-character one with symbols. Use both when you can.",
+        },
+        {
+          q: "How long should my passwords be?",
+          a: "For most accounts, aim for 16+ characters. For high-value accounts (email, banking, password manager), aim for 20+ random characters or a 6+ word passphrase. Length compounds entropy faster than complexity.",
+        },
+        {
+          q: "Can hackers crack generated passwords?",
+          a: "Not realistically. A 16-character random password from the full keyboard pool has ~104 bits of entropy. Even at a trillion guesses per second (well beyond current real-world attacks), it would take longer than the age of the universe to brute-force.",
+        },
+        {
+          q: "Is this password generator free?",
+          a: "Yes — completely free with no signup, no usage limits and no watermark. Generation, strength analysis and history all run in your browser; nothing is uploaded.",
+        },
+      ],
+    },
   },
   {
     slug: "otp-generator",
