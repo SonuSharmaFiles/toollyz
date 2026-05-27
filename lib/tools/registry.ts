@@ -557,13 +557,97 @@ export const tools: Tool[] = [
   {
     slug: "username-generator",
     name: "Username Generator",
-    tagline: "Generate unique, available-looking usernames.",
+    tagline:
+      "Generate 10 styles of usernames — gaming, aesthetic, professional, brandable and more.",
     description:
-      "Generate creative, memorable usernames across themes — gamer, professional, cute, mysterious and more.",
+      "Create unique, memorable usernames in 10 distinct styles. Filter by length and separator, save favorites locally, and instantly preview availability on Instagram, X, TikTok and GitHub.",
     categoryId: "generators",
     icon: AtSign,
-    status: "coming-soon",
-    keywords: ["username", "handle", "screen name", "gamer tag"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "username generator",
+      "username",
+      "handle",
+      "gamer tag",
+      "screen name",
+      "aesthetic usernames",
+      "brandable username",
+      "social media handle",
+      "instagram username",
+      "twitter handle",
+      "tiktok handle",
+    ],
+    seo: {
+      title: "Username Generator — Generate Cool & Unique Usernames | Toollyz",
+      description:
+        "Generate unique usernames instantly. 10 styles — gaming, aesthetic, professional, tech, brandable, funny, social media and more. Save favorites and check availability on Instagram, X, TikTok and GitHub.",
+      what:
+        "A Username Generator produces unique handles for online identities — social media, gaming, forums, developer accounts, brands and businesses. Toollyz Username Generator uses curated word lists, smart pattern logic and pronounceable algorithms to produce ten distinct styles of usernames you can actually use.",
+      how: [
+        "Pick a style — Random, Name-based, Gaming, Aesthetic, Professional, Tech, Brandable, Funny, Social media or Short.",
+        "Optionally provide a seed (your name, nickname or favourite keyword) for personalized results.",
+        "Adjust length, separator, casing and toggles for numbers, special characters and pronounceability.",
+        "Generate, save favourites with the heart icon, then click the small platform badge to check availability on Instagram, X, TikTok or GitHub.",
+      ],
+      benefits: [
+        "Ten generation styles — from edgy gaming handles to clean professional aliases.",
+        "Smart pattern logic produces names that read like real usernames, not random gibberish.",
+        "Pronounceable mode builds brandable usernames using consonant/vowel alternation.",
+        "Length control with quick 4–6 / 6–10 / 10–15 presets and dual sliders.",
+        "Save unlimited favorites — persisted locally in your browser, never sent to a server.",
+        "One-click availability checks on Instagram, X, TikTok and GitHub.",
+        "Export TXT or CSV for bulk use in spreadsheets and onboarding flows.",
+      ],
+      relatedSlugs: [
+        "fake-name-generator",
+        "password-generator",
+        "fake-address-generator",
+        "qr-code-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a username generator?",
+          a: "A username generator is a tool that produces creative, unique handles for online identities — gaming, social media, work accounts, forums or brands. Good generators combine real words, smart patterns and customizable rules so the output feels like something a person would actually pick.",
+        },
+        {
+          q: "How do I create a unique username?",
+          a: "Combine two unrelated concepts (a colour + an animal, a feeling + an object), add a number or short suffix, and check it across the platforms you care about. Toollyz does this automatically — generate a batch, save a few favourites, then click the platform icons to see what's still available.",
+        },
+        {
+          q: "What makes a good username?",
+          a: "Short enough to remember, easy to type, hard to misspell, and ideally pronounceable. Avoid lookalike characters (0/O, 1/l), excessive numbers, and underscores at the start. Aim for 6–14 characters and pick something that scales across platforms.",
+        },
+        {
+          q: "Can I generate gaming usernames?",
+          a: "Yes. The Gaming mode uses an aggressive vocabulary (shadow, reaper, voidwalker, kraken) and patterns like X_Username_X, name+number and prefixed handles. Combine with the Numbers toggle for classic gamer-tag energy.",
+        },
+        {
+          q: "Can I create aesthetic usernames?",
+          a: "Yes — Aesthetic mode pulls from a soft, dreamy vocabulary (lunar, velvet, moonbeam, lullaby, gossamer). Combine with the dot separator and lowercase casing for the classic minimalist look.",
+        },
+        {
+          q: "Are generated usernames unique?",
+          a: "Each batch is deduplicated locally, so you won't see the same username twice. Across the global pool, usernames are not guaranteed to be unique — that's why we add availability checks. Use the platform badges to quickly see if a handle is taken.",
+        },
+        {
+          q: "Can I check username availability?",
+          a: "Toollyz provides one-click availability previews — click the small Instagram, X, TikTok or GitHub badge on any card and the platform opens with that handle. A 404 means the handle is free. We don't store or transmit your generated usernames anywhere.",
+        },
+        {
+          q: "How long should a username be?",
+          a: "6–14 characters is the sweet spot for most platforms. Twitter/X allows up to 15, Instagram up to 30, TikTok up to 24, Discord 32. Shorter is easier to remember and type, but the shorter you go the harder availability gets.",
+        },
+        {
+          q: "What usernames work best for branding?",
+          a: "Brandable usernames are short, made-up, pronounceable, and have no negative meaning in major languages. Toollyz's Brandable mode generates these using consonant/vowel alternation — think 'zenova', 'byteflux', 'kavora'. They sound like real product names.",
+        },
+        {
+          q: "Is this username generator free?",
+          a: "Yes — completely free with no signup, no usage limits and no watermark. Generation runs entirely in your browser, and your saved favourites live only in your browser's localStorage. We never see your data.",
+        },
+      ],
+    },
   },
   {
     slug: "password-generator",

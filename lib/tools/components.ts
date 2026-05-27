@@ -14,6 +14,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "fake-address-generator": dynamic(
     () => import("@/components/tools/fake-address-generator"),
   ),
+  "username-generator": dynamic(
+    () => import("@/components/tools/username-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
