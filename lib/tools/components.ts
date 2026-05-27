@@ -29,6 +29,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "otp-generator": dynamic(
     () => import("@/components/tools/otp-generator"),
   ),
+  "audio-volume-booster": dynamic(
+    () => import("@/components/tools/audio-volume-booster"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
