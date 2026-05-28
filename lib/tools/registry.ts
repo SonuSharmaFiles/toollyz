@@ -1102,13 +1102,100 @@ export const tools: Tool[] = [
   {
     slug: "white-noise-generator",
     name: "White Noise Generator",
-    tagline: "Play white, pink and brown noise for focus and sleep.",
+    tagline:
+      "Mix calming sounds for sleep, focus and meditation — 14 sounds, presets and a sleep timer.",
     description:
-      "Generate calming white, pink and brown noise on-demand. Adjustable volume and timer — perfect for focus, relaxation or sleep.",
+      "Mix white, pink, brown, blue and gray noise with ambient sounds like rain, ocean, wind and fireplace. All sounds are synthesized live in your browser — no uploads, no streaming, no signup. Includes a sleep timer with smooth fade-out.",
     categoryId: "generators",
     icon: Waves,
-    status: "coming-soon",
-    keywords: ["white noise", "pink noise", "brown noise", "focus", "sleep"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "white noise generator",
+      "white noise",
+      "pink noise",
+      "brown noise",
+      "ambient sound generator",
+      "rain sounds",
+      "ocean sounds",
+      "sleep sounds",
+      "focus sounds",
+      "study sounds",
+      "meditation sounds",
+      "sleep timer",
+    ],
+    seo: {
+      title:
+        "White Noise Generator — Relaxing Ambient Sounds Online Free | Toollyz",
+      description:
+        "Listen to white noise, brown noise, rain sounds, ocean waves and ambient audio. Mix multiple sounds, save your favorites, set a sleep timer — 100% client-side, no signup.",
+      what:
+        "A white noise generator produces a constant calming sound that masks distracting noises, helping you sleep, focus or relax. Toollyz White Noise Generator synthesizes every sound live in your browser using the Web Audio API — five noise colors (white, pink, brown, blue, gray), eight ambient sounds (rain, wind, ocean, fan, fireplace, coffee shop, crickets, heartbeat) and a soft hum, all mixable with individual volume controls.",
+      how: [
+        "Tap any sound card to start it. Tap again to pause. Multiple sounds can play at once.",
+        "Adjust each sound's volume with its slider, or use the master volume in the top bar.",
+        "Pick a built-in preset (Deep sleep, Study mode, Focus flow, Relaxing rain, Ocean meditation) or save your own mix.",
+        "Set a sleep timer (15 / 30 / 60 / 120 minutes) and the audio fades out smoothly when the timer ends.",
+      ],
+      benefits: [
+        "100% client-side — every sound synthesized in your browser, nothing streamed or uploaded.",
+        "14 distinct sounds across noise colors, ambient and sleep categories.",
+        "Multi-track mixer with per-sound volume sliders, fade-in/out, and instant transitions.",
+        "Five built-in presets (Deep sleep, Study mode, Focus flow, Relaxing rain, Ocean meditation) + unlimited custom presets stored locally.",
+        "Sleep timer with 8-second fade-out — perfect for drifting off without abrupt cuts.",
+        "Calming ambient background with subtle animated gradient orbs.",
+        "Works offline once the page loads (no streaming required).",
+        "Favorites stored in your browser, never on any server.",
+      ],
+      relatedSlugs: [
+        "audio-volume-booster",
+        "pomodoro-timer",
+        "alarm-clock",
+        "stopwatch",
+      ],
+      faqs: [
+        {
+          q: "What is white noise?",
+          a: "White noise contains equal energy at every audible frequency. It sounds like a steady, even hiss — similar to TV static — and is excellent at masking other sounds because it covers the full hearing range uniformly.",
+        },
+        {
+          q: "What's the difference between white, pink and brown noise?",
+          a: "White noise has equal energy across all frequencies. Pink noise has more energy in lower frequencies (−3 dB per octave) and sounds warmer and more natural. Brown noise has even more low end (−6 dB per octave) and sounds like a deep waterfall or wind — many people find it the most relaxing.",
+        },
+        {
+          q: "Does white noise help sleep?",
+          a: "For many people, yes. White and pink noise mask sudden sounds (traffic, voices, creaks) that wake light sleepers. Brown noise is often preferred for deep sleep because of its low rumble. Combine with the sleep timer for a fade-out as you drift off.",
+        },
+        {
+          q: "Can white noise improve focus?",
+          a: "Steady ambient noise can help — research shows pink noise and constant background sound improve concentration for some people by stabilizing the auditory environment. Try the 'Study mode' preset (pink noise + coffee shop chatter).",
+        },
+        {
+          q: "Is white noise safe for babies?",
+          a: "Many pediatricians recommend white noise to soothe infants because it mimics womb sounds. Keep volume low — under 50 dB at the crib — and place the device at least 2 metres away. Don't run it 24/7; use it for sleep only.",
+        },
+        {
+          q: "Can I mix multiple ambient sounds?",
+          a: "Yes — Toollyz is built as a multi-track mixer. Start any combination of sounds simultaneously, tune each one's volume independently, and save your blend as a custom preset for later.",
+        },
+        {
+          q: "Does this work offline?",
+          a: "Yes — once the page is loaded, all audio is synthesized in your browser using the Web Audio API. No network is required. You can disconnect and the sounds keep playing.",
+        },
+        {
+          q: "Are the sounds processed locally?",
+          a: "Completely. Toollyz doesn't stream recordings or upload your preferences. Every sound is generated on the fly using oscillators, noise buffers and audio filters — all running locally on your device.",
+        },
+        {
+          q: "Can I use this on mobile?",
+          a: "Yes — mobile browsers fully support Web Audio. The controls are touch-friendly and responsive. Keep the tab open while playing (browsers may pause audio if the tab is closed).",
+        },
+        {
+          q: "Is this white noise generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. All processing runs in your browser, so there's no cost to deliver.",
+        },
+      ],
+    },
   },
   {
     slug: "random-color-generator",

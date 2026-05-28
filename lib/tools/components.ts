@@ -32,6 +32,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "audio-volume-booster": dynamic(
     () => import("@/components/tools/audio-volume-booster"),
   ),
+  "white-noise-generator": dynamic(
+    () => import("@/components/tools/white-noise-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
