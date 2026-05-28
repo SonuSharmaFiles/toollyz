@@ -1296,15 +1296,98 @@ export const tools: Tool[] = [
     },
   },
   {
-    slug: "coin-flip",
+    slug: "coin-flip-simulator",
     name: "Coin Flip Simulator",
-    tagline: "Flip a virtual coin for instant decisions.",
+    tagline:
+      "Flip a realistic 3D coin with stats, streaks and decision modes.",
     description:
-      "Flip a fair, animated coin in your browser. Heads or tails — track totals across multiple flips.",
+      "Flip a fair, animated 3D coin in your browser. Choose from five coin styles, flip 1 or up to 100 at once, track heads/tails stats and streaks, switch to Yes/No or Truth/Dare modes, and export your results.",
     categoryId: "generators",
     icon: Coins,
-    status: "coming-soon",
-    keywords: ["coin flip", "heads or tails", "random", "decision"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "coin flip simulator",
+      "coin flip",
+      "flip a coin",
+      "heads or tails",
+      "virtual coin toss",
+      "online coin flip",
+      "random decision maker",
+      "coin toss probability",
+    ],
+    seo: {
+      title: "Coin Flip Simulator — Flip a Virtual Coin Online Free | Toollyz",
+      description:
+        "Flip a virtual coin instantly. Realistic 3D animation, heads/tails statistics, streak tracking, probability charts, multi-flip modes and customizable coin styles — free, no signup.",
+      what:
+        "A Coin Flip Simulator is a digital coin toss — a fast, fair way to make 50/50 decisions, settle debates, pick teams, or demonstrate probability. Toollyz Coin Flip Simulator uses your browser's cryptographic random generator for true fairness, wrapped in a realistic 3D flip animation with five coin styles, live statistics, streak tracking and decision modes like Yes/No and Truth/Dare.",
+      how: [
+        "Tap Flip coin (or press the spacebar) to toss a single coin with a realistic 3D animation.",
+        "Pick a coin style — classic gold, silver, minimal, casino chip or neon — and a decision mode (Heads/Tails, Yes/No, Truth/Dare, Team picker).",
+        "Use the multi-flip buttons (5–100×) to run many tosses instantly and watch the distribution converge toward 50/50.",
+        "Track heads/tails percentages and streaks in the dashboard, then export your full history as CSV.",
+      ],
+      benefits: [
+        "Cryptographically fair — each flip uses window.crypto.getRandomValues, a true 50/50.",
+        "Realistic 3D coin animation with physics-inspired easing, shadow and landing motion.",
+        "Five coin styles: classic gold, silver, minimal, casino chip and neon.",
+        "Decision modes — Heads/Tails, Yes/No, Truth/Dare and Team picker — relabel the coin for any choice.",
+        "Live statistics: totals, heads/tails percentages, current streak and longest streak.",
+        "Multi-flip up to 100 tosses at once with an animated distribution bar.",
+        "Confetti and a celebratory toast when you hit a 5+ streak.",
+        "Spacebar shortcut, reduced-motion support and synthesized flip/landing sounds you can mute.",
+        "History and settings saved locally — export results as CSV anytime.",
+      ],
+      relatedSlugs: [
+        "spin-wheel",
+        "decision-maker",
+        "lucky-draw",
+        "password-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a coin flip simulator?",
+          a: "A coin flip simulator is an online tool that recreates a physical coin toss. You tap a button, a virtual coin spins, and it lands on heads or tails. It's used for quick decisions, settling bets, picking who goes first, or teaching probability.",
+        },
+        {
+          q: "Is the coin toss random?",
+          a: "Yes — Toollyz uses the browser's cryptographic random number generator (window.crypto.getRandomValues), the same source trusted for security keys. Each flip is an independent, unbiased 50/50 event.",
+        },
+        {
+          q: "What are the odds of heads or tails?",
+          a: "Exactly 50% each on every flip. The coin has no memory — even after ten heads in a row, the next flip is still 50/50. (Real physical coins have a tiny bias toward the side facing up at launch, but a digital coin is perfectly fair.)",
+        },
+        {
+          q: "Can I flip multiple coins at once?",
+          a: "Yes — use the multi-flip buttons to toss 5, 10, 25, 50 or 100 coins instantly. The results are added to your history and the distribution bar updates so you can watch the percentages converge toward 50/50.",
+        },
+        {
+          q: "Does this tool work on mobile?",
+          a: "Yes — the coin, controls and stats are fully responsive and touch-friendly. Tap the flip button or the coin to toss. It works in every modern mobile browser.",
+        },
+        {
+          q: "Are the results truly random?",
+          a: "As random as software gets. Cryptographic random number generators are designed to be unpredictable and statistically uniform — far more so than a hurried human coin toss, which can be biased by technique.",
+        },
+        {
+          q: "Can I export coin flip results?",
+          a: "Yes — click Export CSV to download your entire flip history with the result and timestamp of every toss. Useful for classroom probability exercises or keeping a record of decisions.",
+        },
+        {
+          q: "Is the coin toss fair?",
+          a: "Completely. There's no hidden bias, no 'house edge', and no weighting toward either side. Both heads and tails have an identical 50% chance on every single flip.",
+        },
+        {
+          q: "Can I customize the coin?",
+          a: "Yes — pick from five coin styles (gold, silver, minimal, casino chip, neon) and four decision modes that relabel the two sides (Heads/Tails, Yes/No, Truth/Dare, Team A/B).",
+        },
+        {
+          q: "Is this coin flip simulator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Everything runs in your browser, including the randomness, statistics and history.",
+        },
+      ],
+    },
   },
   {
     slug: "bingo-card-generator",

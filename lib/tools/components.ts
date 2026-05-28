@@ -38,6 +38,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "random-color-generator": dynamic(
     () => import("@/components/tools/random-color-generator"),
   ),
+  "coin-flip-simulator": dynamic(
+    () => import("@/components/tools/coin-flip-simulator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
