@@ -65,6 +65,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "random-quote-generator": dynamic(
     () => import("@/components/tools/random-quote-generator"),
   ),
+  "calendar-generator": dynamic(
+    () => import("@/components/tools/calendar-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

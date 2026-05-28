@@ -2153,11 +2153,99 @@ export const tools: Tool[] = [
     name: "Calendar Generator",
     tagline: "Generate printable calendars for any year or month.",
     description:
-      "Create clean, printable calendars for any year, month or custom date range. Multiple layouts and color themes.",
+      "Create clean, printable calendars for any year or month with seven color themes, holidays, custom events and a built-in planner. Export to PDF, PNG or ICS — completely free.",
     categoryId: "generators",
     icon: Calendar,
-    status: "coming-soon",
-    keywords: ["calendar", "printable", "planner", "monthly"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "calendar",
+      "calendar generator",
+      "printable calendar",
+      "monthly calendar",
+      "yearly calendar",
+      "2025 calendar",
+      "2026 calendar",
+      "calendar maker",
+      "custom calendar",
+      "calendar with holidays",
+      "calendar template",
+      "planner",
+      "blank calendar",
+      "calendar pdf",
+    ],
+    seo: {
+      title:
+        "Calendar Generator — Create Printable Calendars Online | Toollyz",
+      description:
+        "Free online calendar generator. Make printable monthly or yearly calendars for any year with seven themes, holidays, custom events and a planner. Export to PDF, PNG or ICS — no signup.",
+      what:
+        "A Calendar Generator builds clean, customizable calendars you can view, personalize and print for any month or year. Toollyz Calendar Generator lets you switch between a detailed monthly layout and a full-year overview, choose from seven design themes (from minimal and corporate to pastel, classroom and printable black-and-white), start the week on Sunday or Monday, highlight weekends, and overlay public holidays for the US, UK, India or international dates. Add color-coded custom events with emojis, keep a to-do list and notes alongside your calendar, then export everything as a print-ready PDF, a high-resolution PNG image, or an ICS file you can import into Google Calendar, Apple Calendar or Outlook.",
+      how: [
+        "Pick Month or Year view, then navigate to the year and month you want with the arrows or the Today button.",
+        "Choose a theme, holiday region, week start day and whether to highlight weekends.",
+        "Click any day to add color-coded events with emojis, and jot to-dos and notes in the side planner.",
+        "Export your calendar as PDF, PNG or ICS — or hit Print for a ready-to-pin paper copy.",
+      ],
+      benefits: [
+        "Monthly and full-year layouts that update instantly as you customize.",
+        "Seven polished themes including a true black-and-white printable design that saves ink.",
+        "Built-in public holidays for the US, UK, India and international dates, for any year.",
+        "Add unlimited color-coded events with emojis, plus a to-do list and notes planner.",
+        "Export to print-ready PDF, high-resolution PNG, or ICS for Google, Apple and Outlook calendars.",
+        "Choose a Sunday or Monday week start and toggle weekend highlighting.",
+        "Works for any year — generate 2025, 2026 or any past or future calendar.",
+        "100% private: events, notes and exports stay in your browser and are saved locally.",
+      ],
+      relatedSlugs: [
+        "world-clock",
+        "pomodoro-timer",
+        "business-days-calculator",
+        "age-difference-calculator",
+      ],
+      faqs: [
+        {
+          q: "What is a calendar generator?",
+          a: "A calendar generator is a free online tool that creates customizable, printable calendars for any month or year. You choose the layout, theme, holidays and events, then download or print the result — no software to install.",
+        },
+        {
+          q: "Can I make a calendar for any year?",
+          a: "Yes — use the navigation arrows or the Today button to move to any year, past or future. Holidays are calculated automatically for whatever year you select, so you can build a 2025, 2026 or 2030 calendar in seconds.",
+        },
+        {
+          q: "Can I create both monthly and yearly calendars?",
+          a: "Yes. Switch between a detailed Month view, which shows day numbers, holidays and event dots, and a Year view that displays all twelve months at a glance. Click any month in the year view to open it in detail.",
+        },
+        {
+          q: "How do I add my own events?",
+          a: "Click any day on the calendar (or pick a date in the sidebar), type a title, choose a color and an emoji, and press Add event. Your events appear as colored dots on the calendar and are listed in the sidebar.",
+        },
+        {
+          q: "Can I export the calendar as a PDF?",
+          a: "Yes. Press Save PDF (or Print) and choose 'Save as PDF' in your browser's print dialog. The calendar is rendered at high resolution so it stays crisp on paper or screen.",
+        },
+        {
+          q: "Can I download a PNG image of the calendar?",
+          a: "Yes — the PNG button exports the current view as a high-resolution image. In Month view you get a single month; in Year view you get a composite image of all twelve months.",
+        },
+        {
+          q: "Can I import events into Google or Apple Calendar?",
+          a: "Yes. The ICS button downloads a standard .ics file containing your custom events. Import it into Google Calendar, Apple Calendar, Outlook or any app that supports the iCalendar format.",
+        },
+        {
+          q: "Does it include public holidays?",
+          a: "Yes — choose International, United States, United Kingdom or India, and the matching public holidays are highlighted on the calendar for the selected year. You can also turn holidays off entirely.",
+        },
+        {
+          q: "Can the week start on Monday?",
+          a: "Yes. Toggle the week to start on Sunday or Monday, and optionally highlight weekends. The choice applies to every view and is remembered for your next visit.",
+        },
+        {
+          q: "Is my data private?",
+          a: "Completely. The Calendar Generator runs entirely in your browser — your events, to-dos and notes are saved only in your device's local storage and never uploaded to any server. The tool is free with no signup.",
+        },
+      ],
+    },
   },
   {
     slug: "horoscope-generator",
