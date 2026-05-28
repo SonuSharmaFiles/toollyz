@@ -41,6 +41,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "coin-flip-simulator": dynamic(
     () => import("@/components/tools/coin-flip-simulator"),
   ),
+  "bingo-card-generator": dynamic(
+    () => import("@/components/tools/bingo-card-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

@@ -1392,13 +1392,96 @@ export const tools: Tool[] = [
   {
     slug: "bingo-card-generator",
     name: "Bingo Card Generator",
-    tagline: "Create custom printable Bingo cards.",
+    tagline:
+      "Create custom printable bingo cards with 9 themes, a live caller and bulk export.",
     description:
-      "Generate one or many custom Bingo cards with your own words or numbers. Print or save as PDF for your event.",
+      "Generate beautiful printable bingo cards for classrooms, parties and events. Pick a grid size (3×3 to 6×6), fill with numbers, emoji, words or your own list, choose from nine themes, then print, save as PDF or download as PNG. Includes a built-in caller mode.",
     categoryId: "generators",
     icon: Grid3x3,
-    status: "coming-soon",
-    keywords: ["bingo", "card generator", "party", "printable"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "bingo card generator",
+      "printable bingo cards",
+      "custom bingo cards",
+      "classroom bingo",
+      "party bingo",
+      "bingo maker",
+      "emoji bingo",
+      "bingo caller",
+      "bingo template",
+    ],
+    seo: {
+      title: "Bingo Card Generator — Create Printable Bingo Cards | Toollyz",
+      description:
+        "Generate printable bingo cards instantly. Create custom bingo for classrooms, parties and events with 9 themes, grid sizes 3×3–6×6, a live caller mode and PDF/PNG export — free.",
+      what:
+        "A Bingo Card Generator turns a list of items — numbers, words, emoji or your own custom entries — into randomized, printable bingo cards. Toollyz Bingo Card Generator creates classroom games, party activities, team-building icebreakers and trivia rounds, with nine visual themes, grid sizes from 3×3 to 6×6, a free-space toggle, bulk generation up to 100 cards, and a built-in caller for hosting live games.",
+      how: [
+        "Choose your content — classic numbers, emoji, animals, party words, classroom vocab, or paste your own list (or upload a .txt/.csv).",
+        "Pick a grid size (3×3, 4×4, 5×5 or 6×6), a theme, a card title, and whether to include a free center space.",
+        "Set how many unique cards to generate (1–100) and click Generate — each card is randomized independently.",
+        "Print to PDF (2 cards per page), download a card as PNG, or open Caller mode to host a live game.",
+      ],
+      benefits: [
+        "Nine printable themes — minimal, classroom, neon, birthday, Christmas, Halloween, corporate, kids, retro.",
+        "Grid sizes from 3×3 to 6×6 with optional customizable free center space.",
+        "Six content sources plus custom paste and .txt/.csv upload.",
+        "Bulk-generate up to 100 independently randomized cards from one pool.",
+        "Print-ready PDF layout (2 cards per page) with exact color reproduction.",
+        "High-resolution PNG export drawn on canvas at 2× retina scale.",
+        "Built-in caller mode with shuffle, call history, auto-call and spoken/beep announcements.",
+        "Settings saved locally — your theme, grid and content persist between visits.",
+      ],
+      relatedSlugs: [
+        "coin-flip-simulator",
+        "spin-wheel",
+        "lucky-draw",
+        "random-color-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a bingo card generator?",
+          a: "It's a tool that creates randomized bingo cards from a set of items — numbers, words or emoji. Instead of drawing grids by hand, you pick content and a theme and instantly get printable, unique cards for your game.",
+        },
+        {
+          q: "Can I create custom bingo cards?",
+          a: "Yes — select 'Custom list', paste your own entries (one per line or comma-separated), or upload a .txt/.csv file. Great for vocabulary words, team names, inside jokes, product features or any theme you like.",
+        },
+        {
+          q: "Can I print bingo cards?",
+          a: "Yes — click Print / PDF to open a print-ready layout with two cards per page and exact theme colors. From the print dialog you can print directly or save as a PDF.",
+        },
+        {
+          q: "How many unique cards can I generate?",
+          a: "Up to 100 at once. Each card is randomized independently from your content pool, so they differ. (With a small pool and many cards, some overlap is mathematically unavoidable — add more entries for greater variety.)",
+        },
+        {
+          q: "Can I upload my own words?",
+          a: "Yes — paste a list into the custom field or drop a .txt or .csv file onto it. Entries can be separated by new lines or commas, and duplicates are removed automatically.",
+        },
+        {
+          q: "Does this tool work for classrooms?",
+          a: "Absolutely — it's built for it. Use the Classroom vocab preset or your own spelling/math/topic words, pick the friendly Classroom or Kids theme, and print a class set in seconds. Caller mode lets you host the round.",
+        },
+        {
+          q: "Can I export bingo cards as PDF?",
+          a: "Yes — the Print / PDF button generates a clean printable sheet. Choose 'Save as PDF' as the destination in your browser's print dialog to get a PDF file. You can also export a single card as a PNG image.",
+        },
+        {
+          q: "Is there a free space option?",
+          a: "Yes — toggle the free center space on or off and customize its text (default 'FREE'). It applies to odd-sized grids (3×3, 5×5) which have a true center cell.",
+        },
+        {
+          q: "Can I use this on mobile?",
+          a: "Yes — the generator, live preview and caller are fully responsive. Generate and preview on your phone, then print from any connected printer or save the PDF.",
+        },
+        {
+          q: "Is this bingo card generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Generation, theming, caller mode and exports all run in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "spin-wheel",
