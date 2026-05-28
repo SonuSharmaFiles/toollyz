@@ -2557,11 +2557,102 @@ export const tools: Tool[] = [
     name: "Case Converter",
     tagline: "Switch text between camelCase, snake_case, kebab-case and more.",
     description:
-      "Convert text between every common case style — including title case, sentence case, alternating case and more.",
+      "Instantly convert text into UPPERCASE, lowercase, Title Case, camelCase, snake_case, kebab-case and 15+ styles, with live preview, developer formats and text utilities. Free and private.",
     categoryId: "text",
     icon: CaseSensitive,
-    status: "coming-soon",
-    keywords: ["case", "camelcase", "snake_case", "kebab-case", "uppercase"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "case converter",
+      "text case converter",
+      "uppercase to lowercase",
+      "title case converter",
+      "sentence case",
+      "camelcase converter",
+      "snake_case converter",
+      "kebab-case",
+      "pascalcase",
+      "constant case",
+      "alternating case",
+      "change text case",
+      "capitalize text",
+      "convert text case online",
+    ],
+    seo: {
+      title: "Case Converter — Convert Text Cases Instantly Online",
+      description:
+        "Convert text instantly with Toollyz Case Converter. Transform text into UPPERCASE, lowercase, camelCase, snake_case, PascalCase, title case, kebab-case and more with real-time preview.",
+      what:
+        "A Case Converter is a tool that instantly transforms your text into different letter cases and formatting styles. Toollyz Case Converter supports 15+ styles — UPPERCASE, lowercase, Title Case, Sentence case, Capitalized Case, aLtErNaTiNg and InVeRsE for writing, plus developer formats like camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case and Header-Case. It shows the original and converted text side by side with a live preview, applies developer formats per line so you can batch-convert lists, and includes handy utilities like reverse text, sort lines, strip symbols and normalize spacing. Live statistics, favorites, history and one-click copy or download make it a complete text-formatting workspace — and everything runs privately in your browser.",
+      how: [
+        "Type or paste your text into the editor, or drag and drop a .txt file.",
+        "Pick a case style from the conversion panel — the converted result updates instantly beside your text.",
+        "Copy the result, download it as TXT, or apply it back to your source. Star your favorite styles for quick access.",
+        "Use the utilities to reverse, sort, strip symbols or normalize spacing before converting.",
+      ],
+      benefits: [
+        "15+ case styles for writing and code, applied in real time.",
+        "Side-by-side original and converted preview with smooth transitions.",
+        "Developer formats (camelCase, snake_case, kebab-case and more) applied per line for bulk lists.",
+        "A developer-formats comparison card showing every naming convention at once.",
+        "Text utilities: reverse, sort A→Z, strip special characters, normalize spacing and clean whitespace.",
+        "Live character, word, line and reading-time stats, plus SEO title and meta length awareness.",
+        "Favorite presets, recent-text history, in-text search highlighting, focus and fullscreen modes.",
+        "One-click copy, TXT download and share — 100% private, with auto-save in your browser.",
+      ],
+      relatedSlugs: [
+        "word-counter",
+        "character-counter",
+        "text-reverser",
+        "duplicate-word-finder",
+      ],
+      faqs: [
+        {
+          q: "What is a case converter?",
+          a: "A case converter is an online tool that transforms your text into different letter cases and formatting styles, such as UPPERCASE, lowercase, Title Case, camelCase and snake_case. Toollyz Case Converter updates the result instantly as you type.",
+        },
+        {
+          q: "Can I convert text to uppercase and lowercase?",
+          a: "Yes. Click UPPERCASE to capitalize every letter or lowercase to make everything small. The original and converted versions are shown side by side so you can compare instantly.",
+        },
+        {
+          q: "What is camelCase?",
+          a: "camelCase joins words with no spaces and capitalizes the first letter of each word except the first — for example, 'helloWorld'. It's widely used for variable and function names in JavaScript and many other languages.",
+        },
+        {
+          q: "What is the difference between camelCase and PascalCase?",
+          a: "Both remove spaces and capitalize word boundaries, but camelCase keeps the first letter lowercase ('helloWorld') while PascalCase capitalizes it too ('HelloWorld'). PascalCase is common for class and component names.",
+        },
+        {
+          q: "What is snake_case used for?",
+          a: "snake_case joins lowercase words with underscores ('hello_world'). It's popular for variable names, database fields and file names in languages like Python and Ruby. kebab-case is the hyphenated version ('hello-world'), often used for URLs and CSS classes.",
+        },
+        {
+          q: "Can I convert large text blocks?",
+          a: "Yes. Paste long articles, lists or paragraphs and convert them in one click. Developer formats are applied per line, so a list of items each becomes its own camelCase, snake_case or kebab-case value.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Absolutely. The editor, conversion panel and preview are fully responsive and touch-friendly, with a focus mode for distraction-free editing on any device.",
+        },
+        {
+          q: "Is my text stored online?",
+          a: "No. All conversions happen entirely in your browser — your text is never uploaded to any server. Your recent text and favorite styles are saved only in your device's local storage.",
+        },
+        {
+          q: "Can I copy converted text instantly?",
+          a: "Yes. Use the Copy button to copy the converted result in one click, download it as a TXT file, or apply it back to your source text. You can also star your most-used styles for quick access.",
+        },
+        {
+          q: "Does it support developer formatting?",
+          a: "Yes. Alongside writing cases it supports camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case and Header-Case, with a comparison card that shows your text in every naming convention at once.",
+        },
+        {
+          q: "Is this case converter free?",
+          a: "Completely free with no signup and no limits. Every style and utility is available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "slugify",

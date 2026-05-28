@@ -77,6 +77,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "character-counter": dynamic(
     () => import("@/components/tools/character-counter"),
   ),
+  "case-converter": dynamic(
+    () => import("@/components/tools/case-converter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
