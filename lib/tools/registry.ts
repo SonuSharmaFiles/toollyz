@@ -1767,15 +1767,100 @@ export const tools: Tool[] = [
     },
   },
   {
-    slug: "random-emoji",
+    slug: "random-emoji-generator",
     name: "Random Emoji Generator",
-    tagline: "Generate random emojis from every category.",
+    tagline:
+      "Generate random emojis, aesthetic packs and themed combos for bios, chats and socials.",
     description:
-      "Pull one or many random emojis from any category. Great for content, captions, or just for fun.",
+      "Generate random emojis by category or curated vibe — soft aesthetic, kawaii, gamer, dark, TikTok and Instagram-bio modes. Search 400+ emojis, build packs, save favorites, preview in chat/bio mockups, and copy or export with one tap.",
     categoryId: "generators",
     icon: Smile,
-    status: "coming-soon",
-    keywords: ["emoji", "random emoji", "emoji picker"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "random emoji generator",
+      "emoji generator",
+      "aesthetic emojis",
+      "emoji combinations",
+      "emoji pack",
+      "kawaii emojis",
+      "instagram bio emojis",
+      "tiktok emojis",
+      "emoji search",
+      "cute emoji combos",
+    ],
+    seo: {
+      title:
+        "Random Emoji Generator — Generate Fun Emoji Combinations | Toollyz",
+      description:
+        "Generate random emojis, aesthetic emoji packs, cute combos and social-media emoji sets instantly. Filter by category or vibe, search 400+ emojis, save favorites — free, no signup.",
+      what:
+        "A Random Emoji Generator produces random emojis or curated emoji combinations for messages, bios, captions, usernames and design inspiration. Toollyz Random Emoji Generator goes beyond a basic picker — generate by Unicode category (smileys, animals, food, symbols, hearts and more) or by curated vibe (soft aesthetic, kawaii, gamer, dark aesthetic, TikTok, Instagram bio), search 400+ named emojis instantly, save favorites locally, and preview your pack inside chat, Instagram-bio, TikTok-caption and Discord mockups.",
+      how: [
+        "Choose how many emojis to generate (1–50) and pick a category, or switch to a style mode like Soft aesthetic or Gamer pack.",
+        "Hit Generate (or press the spacebar) to roll a fresh set. Tap any emoji to copy it instantly.",
+        "Search by keyword — type 'fire', 'heart' or 'pizza' to find exactly what you need.",
+        "Save favorites, copy the whole pack, download as TXT, or preview it in a chat / bio / caption mockup.",
+      ],
+      benefits: [
+        "400+ named emojis across 9 Unicode categories plus 8 curated vibe modes.",
+        "Style modes — soft aesthetic, kawaii, gamer, dark aesthetic, TikTok, Instagram bio, minimal combos and chaos.",
+        "Instant keyword search across emoji names — find 'fire', 'cat', 'sparkle' in a tap.",
+        "Tap-to-copy anywhere, copy the full pack, or download as TXT.",
+        "Social previews show your pack inside chat bubbles, Instagram bios, TikTok captions and Discord names.",
+        "Per-emoji name and Unicode codepoint metadata, plus generate-similar from the same category.",
+        "Save unlimited favorites locally — copy them all in one click.",
+        "Floating emoji animations, spacebar reroll and reduced-motion support.",
+      ],
+      relatedSlugs: [
+        "username-generator",
+        "random-color-generator",
+        "case-converter",
+        "spin-wheel-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a random emoji generator?",
+          a: "It's a tool that randomly produces emojis or emoji combinations. Instead of scrolling through a giant picker, you generate a fresh set instantly — by category or by curated aesthetic — for chats, bios, captions and design inspiration.",
+        },
+        {
+          q: "Can I generate aesthetic emojis?",
+          a: "Yes — switch to the Soft aesthetic, Kawaii or Dark aesthetic style modes for curated, on-trend emoji vibes. There are also TikTok and Instagram-bio modes tuned to how those platforms use emojis.",
+        },
+        {
+          q: "Can I copy emoji packs?",
+          a: "Yes — tap any single emoji to copy it, or use Copy pack to copy the whole generated set at once. You can also download the pack as a TXT file or copy all your saved favorites together.",
+        },
+        {
+          q: "How do I use emojis in my bio?",
+          a: "Generate a small set (3–5) in Instagram-bio or aesthetic mode, copy the pack, and paste it into your bio. The built-in Instagram-bio preview shows roughly how it'll look before you paste.",
+        },
+        {
+          q: "Can I search emojis by keyword?",
+          a: "Yes — type a keyword like 'heart', 'fire', 'cat' or 'pizza' into the search box and matching emojis appear instantly. Tap any result to copy it.",
+        },
+        {
+          q: "Are emojis supported on all devices?",
+          a: "Standard Unicode emojis render on virtually all modern phones, computers and browsers, though the exact artwork differs by platform (Apple, Google, Microsoft, etc.). Very new emojis may not appear on older devices.",
+        },
+        {
+          q: "Can I save favorite emojis?",
+          a: "Yes — tap the heart on any emoji card to save it. Favorites are stored locally in your browser and shown in a dedicated panel where you can copy them all at once.",
+        },
+        {
+          q: "Can I generate emoji combinations?",
+          a: "Yes — set the quantity to 3, 5 or 10 and generate a combination at once, or use a style mode to get a themed combo (e.g. kawaii or gamer). The 'generate similar' button swaps one emoji for another in the same category.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes — the generator, search and previews are fully responsive and touch-friendly. Tap to copy, swipe through results. It works in every modern mobile browser.",
+        },
+        {
+          q: "Is this emoji generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Generation, search, favorites and exports all run in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "random-fact",

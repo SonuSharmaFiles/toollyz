@@ -53,6 +53,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "lucky-draw-generator": dynamic(
     () => import("@/components/tools/lucky-draw-generator"),
   ),
+  "random-emoji-generator": dynamic(
+    () => import("@/components/tools/random-emoji-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
