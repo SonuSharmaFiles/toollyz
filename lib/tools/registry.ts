@@ -2252,11 +2252,99 @@ export const tools: Tool[] = [
     name: "Horoscope Generator",
     tagline: "Daily, weekly and monthly horoscopes by sign.",
     description:
-      "Get personalized horoscopes for your zodiac sign. Daily, weekly and monthly readings on love, work and wellness.",
+      "Get personalized daily, weekly, monthly and yearly horoscopes for every zodiac sign, plus love compatibility, lucky numbers and shareable astrology cards — all free.",
     categoryId: "generators",
     icon: Stars,
-    status: "coming-soon",
-    keywords: ["horoscope", "zodiac", "astrology", "daily"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "horoscope",
+      "horoscope generator",
+      "daily horoscope",
+      "zodiac",
+      "astrology",
+      "zodiac compatibility",
+      "love horoscope",
+      "weekly horoscope",
+      "monthly horoscope",
+      "zodiac signs",
+      "star sign",
+      "lucky numbers",
+      "compatibility checker",
+      "astrology reading",
+    ],
+    seo: {
+      title:
+        "Horoscope Generator — Daily Zodiac Predictions Online | Toollyz",
+      description:
+        "Generate personalized daily, weekly, monthly and yearly horoscopes, zodiac compatibility reports, lucky numbers and shareable astrology cards instantly with Toollyz. Free, no signup.",
+      what:
+        "A Horoscope Generator creates personalized astrology readings for your zodiac sign on demand. Toollyz Horoscope Generator delivers daily, weekly, monthly and yearly predictions across love, career, health, finance and friendship, complete with a mood indicator, energy meters, lucky numbers, lucky colors and the signs most compatible with you today. An interactive zodiac wheel lets you pick your sign (or find it from your birth date), a compatibility checker compares any two signs with an animated match score and relationship insights, and a discovery mode lets you explore all twelve zodiac personalities by element. Every reading is rendered as a beautiful, shareable cosmic card you can download or post — all generated privately in your browser for entertainment and self-reflection.",
+      how: [
+        "Tap your sign on the animated zodiac wheel, or enter your birth date to find it automatically.",
+        "Choose a time frame — daily, weekly, monthly or yearly — and a focus like love, career or health.",
+        "Read your personalized prediction with mood, energy meters, lucky numbers and compatible signs.",
+        "Check compatibility with another sign, then copy, download or share your astrology card.",
+      ],
+      benefits: [
+        "Daily, weekly, monthly and yearly horoscopes for all twelve zodiac signs.",
+        "Focus readings for love, career, health, finance and friendship in one place.",
+        "Interactive zodiac wheel plus a birth-date finder to identify your sign.",
+        "Compatibility checker with an animated match score and emotional, communication, trust and passion breakdowns.",
+        "Lucky numbers, lucky colors, lucky time and the signs most compatible with you today.",
+        "Five cosmic card themes and downloadable, social-ready astrology images.",
+        "Discovery mode to explore every zodiac personality, strength and element.",
+        "Save favorite readings and compatibility reports locally — 100% private, no signup.",
+      ],
+      relatedSlugs: [
+        "zodiac-sign-finder",
+        "love-compatibility-calculator",
+        "random-quote-generator",
+        "age-difference-calculator",
+      ],
+      faqs: [
+        {
+          q: "What is a horoscope generator?",
+          a: "A horoscope generator is a tool that creates personalized astrology readings for your zodiac sign. Toollyz generates daily, weekly, monthly and yearly predictions across love, career, health and more, along with lucky numbers and compatibility — instantly and for free.",
+        },
+        {
+          q: "How does zodiac compatibility work?",
+          a: "Our compatibility checker compares two signs using their elements (Fire, Earth, Air, Water), modalities and positions on the zodiac wheel to produce a match score, plus breakdowns for emotional connection, communication, trust, passion and long-term outlook — with notes on strengths and possible conflicts.",
+        },
+        {
+          q: "Can I generate daily horoscopes?",
+          a: "Yes. Pick your sign and choose the Daily time frame to get a fresh reading for today. You can also switch to weekly, monthly or yearly horoscopes at any time.",
+        },
+        {
+          q: "Are horoscope readings personalized?",
+          a: "Each reading is tailored to your specific sign, time frame and chosen focus (love, career, health, finance or friendship), and stays consistent for that period — so your daily horoscope is the same each time you check it that day.",
+        },
+        {
+          q: "Can I compare two zodiac signs?",
+          a: "Yes — open the Compatibility tab, pick any two signs, and get an animated match score with detailed relationship insights covering emotional, communication, trust, passion and long-term compatibility.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Absolutely. The zodiac wheel, readings, compatibility checker and discovery cards are fully responsive and touch-friendly, with reduced-motion support for comfortable viewing on any device.",
+        },
+        {
+          q: "Can I save horoscope readings?",
+          a: "Yes. Tap the heart to save any reading or compatibility report. Saved items are stored locally in your browser and shown in a dedicated panel you can revisit anytime.",
+        },
+        {
+          q: "Can I export astrology cards?",
+          a: "Yes — download a beautiful 1080×1080 astrology card in one of five cosmic themes, copy your horoscope as text, or export it as a TXT file. The built-in Instagram and Story previews show how it will look before you share.",
+        },
+        {
+          q: "Are all zodiac signs supported?",
+          a: "Yes, all twelve signs are included — Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius and Pisces — each with full personality profiles, elements and ruling planets.",
+        },
+        {
+          q: "Is this horoscope generator free?",
+          a: "Completely free with no signup and no limits. Everything runs in your browser for entertainment and self-reflection, and your saved readings never leave your device. Horoscopes are for fun and inspiration, not professional advice.",
+        },
+      ],
+    },
   },
 
   // ─── TEXT ────────────────────────────────────────────────────────────────

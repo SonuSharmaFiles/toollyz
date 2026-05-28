@@ -68,6 +68,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "calendar-generator": dynamic(
     () => import("@/components/tools/calendar-generator"),
   ),
+  "horoscope-generator": dynamic(
+    () => import("@/components/tools/horoscope-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
