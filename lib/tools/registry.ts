@@ -2659,11 +2659,102 @@ export const tools: Tool[] = [
     name: "Slugify",
     tagline: "Convert any string into a URL-friendly slug.",
     description:
-      "Turn titles and phrases into clean, URL-safe slugs. Handles unicode, accents, custom separators and casing.",
+      "Turn titles into clean, SEO-friendly URL slugs in real time — with Unicode transliteration, custom separators, bulk generation, an SEO score and developer formats. Free and private.",
     categoryId: "text",
     icon: TextCursorInput,
-    status: "coming-soon",
-    keywords: ["slug", "slugify", "url", "permalink", "seo"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "slugify",
+      "slug generator",
+      "url slug",
+      "seo friendly url",
+      "permalink generator",
+      "url generator",
+      "wordpress slug",
+      "kebab case url",
+      "text to slug",
+      "blog url generator",
+      "clean url",
+      "transliterate to slug",
+      "bulk slug generator",
+      "filename slug",
+    ],
+    seo: {
+      title: "Slugify Tool — Generate SEO-Friendly URL Slugs Online",
+      description:
+        "Convert text into SEO-friendly URL slugs instantly with Toollyz Slugify. Generate clean blog URLs, WordPress slugs, route names and developer-safe identifiers — with bulk mode and Unicode support.",
+      what:
+        "Slugify turns any title or phrase into a clean, SEO-friendly URL slug in real time. Toollyz Slugify lowercases text, replaces spaces with your chosen separator, strips symbols and emojis, and transliterates accented and non-Latin characters (Latin diacritics, Cyrillic and Greek) into URL-safe ASCII — or preserves Unicode letters when you prefer. It supports multiple formats (standard URL slug, snake_case, dot.case, path/case, camelCase and PascalCase), bulk conversion of multiple lines with duplicate detection and CSV/TXT export, a live URL preview, an SEO readability score with actionable tips, and ready-made developer outputs for WordPress, Next.js routes, API endpoints, database fields and filenames. Everything runs privately in your browser.",
+      how: [
+        "Type a title — or paste multiple lines to bulk-generate slugs — into the editor.",
+        "Pick a separator, case and format preset, and toggle cleanup options like removing stop words or numbers.",
+        "Preview the live URL, check the SEO score and tips, and copy the slug or full URL in one click.",
+        "Export bulk slugs as TXT or CSV, or grab a ready-made WordPress, Next.js or database identifier.",
+      ],
+      benefits: [
+        "Real-time, SEO-friendly slug generation as you type.",
+        "Unicode transliteration for accented Latin, Cyrillic and Greek — or keep Unicode letters intact.",
+        "Multiple formats: URL slug, snake_case, dot.case, path/case, camelCase and PascalCase.",
+        "Custom separator (hyphen, underscore, dot, slash), case and max-length control.",
+        "Bulk mode: convert many lines at once with duplicate detection, auto-numbering and CSV/TXT export.",
+        "SEO score with practical tips on length, stop words, hyphens vs underscores and casing.",
+        "Developer & CMS outputs for WordPress, Next.js routes, API endpoints, DB fields and filenames.",
+        "Cleanup toggles for stop words, numbers and emojis — 100% private, with history and auto-save.",
+      ],
+      relatedSlugs: [
+        "case-converter",
+        "meta-tag-generator",
+        "word-counter",
+        "character-counter",
+      ],
+      faqs: [
+        {
+          q: "What is a slug?",
+          a: "A slug is the part of a URL that identifies a specific page in a readable way — for example, the “my-first-post” in example.com/blog/my-first-post. A good slug is short, lowercase, hyphen-separated and describes the page content.",
+        },
+        {
+          q: "Why are URL slugs important for SEO?",
+          a: "Clean, keyword-rich slugs help search engines and users understand what a page is about, can improve click-through rates, and create tidy, shareable links. Short lowercase slugs with hyphens are the search-engine-friendly standard.",
+        },
+        {
+          q: "Can I generate slugs for multiple lines?",
+          a: "Yes. Paste multiple lines and Slugify switches to bulk mode, generating a slug for each line with duplicate detection and optional auto-numbering. You can copy them all or export as TXT or CSV.",
+        },
+        {
+          q: "Does this support Unicode and accented characters?",
+          a: "Yes. In transliterate mode it converts accented Latin characters, Cyrillic and Greek into URL-safe ASCII. In keep-Unicode mode it preserves non-Latin letters (useful for languages like Hindi, Arabic, Chinese or Japanese) while still cleaning spaces and symbols.",
+        },
+        {
+          q: "Can I customize the separator?",
+          a: "Yes. Choose a hyphen (-), underscore (_), dot (.) or slash (/) as the word separator, and set the case to lowercase, UPPERCASE or Title Case. Format presets configure these for you instantly.",
+        },
+        {
+          q: "What is the difference between hyphens and underscores in URLs?",
+          a: "Search engines treat hyphens as word separators but underscores as word joiners, so 'my-blog-post' is read as three words while 'my_blog_post' may be read as one. Hyphens are recommended for SEO-friendly URLs.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes. The editor, settings, live preview and bulk table are fully responsive and touch-friendly, with a focus mode for distraction-free use on any device.",
+        },
+        {
+          q: "Can I export slug lists?",
+          a: "Yes. In bulk mode you can copy all slugs at once, download them as a TXT file, or export an original-to-slug mapping as a CSV ready for spreadsheets or a CMS import.",
+        },
+        {
+          q: "Can I generate WordPress-friendly slugs?",
+          a: "Yes. The developer panel shows a ready-made WordPress permalink slug, plus Next.js route paths, API endpoints, snake_case database fields and SEO-friendly filenames generated from your text.",
+        },
+        {
+          q: "Is my text stored online?",
+          a: "No. All slug generation happens entirely in your browser — your text is never uploaded. Your recent titles and settings are saved only in your device's local storage.",
+        },
+        {
+          q: "Is this Slugify tool free?",
+          a: "Completely free with no signup and no limits. Real-time generation, bulk mode, Unicode support, SEO scoring and exports are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "online-notepad",

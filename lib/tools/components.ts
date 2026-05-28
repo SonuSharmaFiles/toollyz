@@ -80,6 +80,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "case-converter": dynamic(
     () => import("@/components/tools/case-converter"),
   ),
+  "slugify": dynamic(
+    () => import("@/components/tools/slugify"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
