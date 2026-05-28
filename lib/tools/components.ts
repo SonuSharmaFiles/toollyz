@@ -35,6 +35,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "white-noise-generator": dynamic(
     () => import("@/components/tools/white-noise-generator"),
   ),
+  "random-color-generator": dynamic(
+    () => import("@/components/tools/random-color-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

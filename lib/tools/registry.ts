@@ -1200,13 +1200,100 @@ export const tools: Tool[] = [
   {
     slug: "random-color-generator",
     name: "Random Color Generator",
-    tagline: "Generate beautiful random colors and palettes.",
+    tagline:
+      "Generate beautiful random palettes, gradients and design-ready colors with live UI preview.",
     description:
-      "Generate single random colors or whole palettes. Copy as HEX, RGB, HSL or OKLCH with one click.",
+      "Generate random colors and palettes in 10 styles (analogous, complementary, triadic, pastel, neon, earthy, dark, minimal and more), apply hue/saturation/lightness adjustments, check WCAG contrast, see colors in a live UI preview, and export as CSS, SCSS, Tailwind config, JSON or PNG.",
     categoryId: "generators",
     icon: Shuffle,
-    status: "coming-soon",
-    keywords: ["random color", "palette", "color generator", "hex"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "random color generator",
+      "color palette generator",
+      "hex color generator",
+      "gradient generator",
+      "tailwind colors",
+      "css color palette",
+      "design palette",
+      "ui color scheme",
+      "wcag contrast",
+      "complementary colors",
+      "triadic palette",
+    ],
+    seo: {
+      title:
+        "Random Color Generator — Generate Beautiful Color Palettes | Toollyz",
+      description:
+        "Generate random colors, gradients and stunning color palettes instantly. Export HEX, RGB, HSL, CSS, SCSS, Tailwind config, JSON or PNG. Live UI preview, WCAG contrast checking, and 10 palette styles.",
+      what:
+        "A Random Color Generator helps designers and developers explore color combinations they wouldn't pick on their own. Toollyz Random Color Generator produces colors using ten harmony styles — random, monochromatic, analogous, complementary, triadic, pastel, neon, earthy, dark and minimal — with built-in WCAG contrast checking, real-time UI preview and exports for CSS, SCSS, Tailwind, JSON and PNG. Lock the colors you like, hit space to regenerate the rest.",
+      how: [
+        "Pick a palette style (random, complementary, triadic, etc.) and how many colors you want (2, 3, 5 or 10).",
+        "Press Generate or hit the spacebar to roll a new palette. Lock any color you want to keep and re-roll the rest.",
+        "Adjust hue, saturation or lightness globally, or fine-tune any single color with the per-card controls.",
+        "Preview the palette in a live UI mockup, build a gradient from it, then export as CSS variables, SCSS, Tailwind config, JSON or a PNG swatch sheet.",
+      ],
+      benefits: [
+        "10 harmony styles — random, monochromatic, analogous, complementary, triadic, pastel, neon, earthy, dark mode and minimal.",
+        "Lock individual colors and re-roll only the unlocked slots — perfect for refining a palette.",
+        "WCAG contrast checker on every card showing AA / AA-large / Fail with the actual contrast ratio.",
+        "Live UI preview shows your palette in a nav bar, hero card, button and accent components.",
+        "Build linear, radial or conic gradients straight from the palette with copyable CSS.",
+        "Built-in EyeDropper (where supported) to sample any color from your screen.",
+        "Spacebar shortcut to instantly re-roll the palette.",
+        "5 export formats: CSS variables, SCSS variables, Tailwind config, JSON and a PNG swatch sheet.",
+        "Favorites and saved palettes persist locally in your browser — never on any server.",
+      ],
+      relatedSlugs: [
+        "color-picker",
+        "gradient-generator",
+        "meta-tag-generator",
+        "css-animation-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a random color generator?",
+          a: "A random color generator produces colors algorithmically — either pure random samples or curated harmonies (complementary, triadic, etc.). They help designers explore combinations beyond personal habits and quickly prototype branding, UI themes and design systems.",
+        },
+        {
+          q: "How do I generate color palettes?",
+          a: "Pick a style (Analogous, Complementary, Triadic, Pastel, Neon, Earthy, Dark mode or Minimal), set how many colors you want (2, 3, 5 or 10), then click Generate or press the spacebar. Lock any color you love to keep it across rolls.",
+        },
+        {
+          q: "What is the difference between HEX and RGB?",
+          a: "HEX is a 6-character hexadecimal representation (e.g. #4F46E5) of the same three values RGB uses (e.g. rgb(79, 70, 229)). They store identical data. HSL (Hue / Saturation / Lightness) is a different model that's more intuitive for human-friendly color adjustments.",
+        },
+        {
+          q: "How do I create accessible color combinations?",
+          a: "Use the contrast badge on each color card. AA-passing combinations have at least 4.5:1 contrast for normal text. Aim for 7:1 (AAA) for body text. The card auto-picks black or white text and shows the exact ratio.",
+        },
+        {
+          q: "Can I export Tailwind colors?",
+          a: "Yes — click Tailwind in the Export section to download a ready-to-paste tailwind.config.ts snippet with your palette mapped to semantic names (primary, secondary, accent, etc.). Drop it into your project and you're done.",
+        },
+        {
+          q: "What are complementary colors?",
+          a: "Complementary colors sit opposite each other on the color wheel — like blue and orange, or red and green. They create high visual contrast and are great for accent / call-to-action pairings, but can feel intense if both are at full saturation.",
+        },
+        {
+          q: "How do gradients work?",
+          a: "A gradient blends one color into another across an angle or shape. Toollyz builds linear, radial and conic gradients from your palette automatically — you can change the angle (for linear and conic), reverse the order, and copy the production-ready CSS.",
+        },
+        {
+          q: "Can I save generated palettes?",
+          a: "Yes — the Save palette button stores the current palette in your browser's localStorage. Open the Saved palettes panel below to reload any past palette in one click. Up to 12 palettes are kept locally.",
+        },
+        {
+          q: "Does this tool work on mobile?",
+          a: "Yes — the layout adapts down to a single column. Tap any color to copy, long-press to drag (where supported), and the picker, sliders and exports all work the same way as desktop.",
+        },
+        {
+          q: "Is this random color generator free?",
+          a: "Yes — completely free with no signup, no usage limits and no watermark. Generation, exports, favorites and saved palettes all run in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "coin-flip",
