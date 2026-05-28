@@ -2053,15 +2053,100 @@ export const tools: Tool[] = [
     },
   },
   {
-    slug: "random-quote",
+    slug: "random-quote-generator",
     name: "Random Quote Generator",
-    tagline: "Inspirational, funny and famous quotes at random.",
+    tagline:
+      "Inspiring quotes across 12 categories — filter by author, export aesthetic images, save favorites.",
     description:
-      "Pull random quotes from authors, scientists, athletes and more. Perfect for daily inspiration, social posts or content.",
+      "Generate inspirational, motivational, philosophical and famous quotes from great thinkers. Filter by category or author, get a fresh Quote of the Day, export aesthetic quote images in six themes, save favorites and share anywhere.",
     categoryId: "generators",
     icon: Quote,
-    status: "coming-soon",
-    keywords: ["quote", "random quote", "inspirational", "famous quotes"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "random quote generator",
+      "inspirational quotes",
+      "motivational quotes",
+      "famous quotes",
+      "quote of the day",
+      "stoic quotes",
+      "quote image maker",
+      "quotes for instagram",
+      "wisdom quotes",
+      "success quotes",
+    ],
+    seo: {
+      title:
+        "Random Quote Generator — Inspirational Quotes Online | Toollyz",
+      description:
+        "Generate inspirational, motivational, philosophical and famous quotes instantly. Filter by author, export aesthetic quote images, save favorites — explore wisdom, success and happiness. Free.",
+      what:
+        "A Random Quote Generator surfaces meaningful quotes on demand for motivation, reflection and content creation. Toollyz Random Quote Generator draws from a curated collection of quotes by great thinkers — Marcus Aurelius, Steve Jobs, Maya Angelou, Lao Tzu, Einstein and many more — across 12 categories from motivation and stoicism to creativity and mindfulness. Filter by author, get a fresh Quote of the Day, export beautiful shareable quote images in six gradient themes, and save the ones that resonate.",
+      how: [
+        "Pick a category and optionally a specific author, then choose how many quotes to generate.",
+        "Hit Generate (or press the spacebar) to add quotes to your inspiration feed. Tap Inspire me for a random category.",
+        "Choose an image theme and download an aesthetic, social-ready quote image for any quote.",
+        "Search by keyword or author, save favorites, and share quotes to any platform.",
+      ],
+      benefits: [
+        "Curated quotes from renowned thinkers across 12 categories.",
+        "Filter by author — browse only Marcus Aurelius, Steve Jobs, Rumi, Einstein and more.",
+        "Export aesthetic 1080×1080 quote images in six gradient themes, perfect for Instagram and Pinterest.",
+        "A deterministic Quote of the Day that refreshes daily for everyone, themed to your chosen palette.",
+        "Inspiration feed with an Endless mode plus an Inspire-me random-category button.",
+        "Keyword and author search, native sharing, copy and TXT export.",
+        "Save unlimited favorites locally and revisit them anytime.",
+        "Elegant editorial typography, spacebar shortcut and reduced-motion support.",
+      ],
+      relatedSlugs: [
+        "random-fact-generator",
+        "random-joke-generator",
+        "random-emoji-generator",
+        "decision-maker-wheel",
+      ],
+      faqs: [
+        {
+          q: "What is a random quote generator?",
+          a: "It's a tool that shows you a meaningful quote at random. Instead of searching for inspiration, you click a button and discover wisdom from great thinkers — across motivation, philosophy, success, happiness and more.",
+        },
+        {
+          q: "Can I generate motivational quotes?",
+          a: "Yes — choose the Motivation or Success categories for an uplifting boost, or explore Stoicism, Leadership and Self-improvement-style wisdom. The Inspire-me button surfaces a random category each time.",
+        },
+        {
+          q: "Can I search quotes by author?",
+          a: "Yes — use the author filter to generate quotes only from a specific person, like Marcus Aurelius, Steve Jobs, Rumi or Einstein. You can also search by author name in the search box.",
+        },
+        {
+          q: "Can I save favorite quotes?",
+          a: "Yes — tap the heart on any quote to save it. Favorites are stored locally in your browser and shown in a dedicated panel where you can export them all as a text file.",
+        },
+        {
+          q: "Can I export quote images?",
+          a: "Yes — pick one of six gradient themes and download a beautiful 1080×1080 quote image, ready to post on Instagram, Pinterest or anywhere. The image renders entirely in your browser.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes — the feed, search, themes and image export are fully responsive and touch-friendly with elegant, readable typography. It works in every modern mobile browser.",
+        },
+        {
+          q: "Are quotes updated regularly?",
+          a: "The curated collection grows over time as we add and verify quotes across categories and authors. Because everything runs client-side, new quotes appear automatically when you reload.",
+        },
+        {
+          q: "Can I use quotes on social media?",
+          a: "Absolutely — copy the text, use the native share button, or download a styled quote image. The built-in Instagram and X previews show how your quote will look before you post.",
+        },
+        {
+          q: "Can I customize quote cards?",
+          a: "Yes — choose from six gradient image themes (Indigo night, Sunset, Ocean, Forest, Mono dark, Rose gold) that style both the on-page daily card and your exported quote images.",
+        },
+        {
+          q: "Is this random quote generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark on text. Generation, image export, favorites and search all run in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "calendar-generator",
