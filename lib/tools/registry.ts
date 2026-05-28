@@ -1341,7 +1341,7 @@ export const tools: Tool[] = [
       ],
       relatedSlugs: [
         "spin-wheel-generator",
-        "decision-maker",
+        "decision-maker-wheel",
         "lucky-draw",
         "password-generator",
       ],
@@ -1532,7 +1532,7 @@ export const tools: Tool[] = [
         "coin-flip-simulator",
         "bingo-card-generator",
         "lucky-draw",
-        "decision-maker",
+        "decision-maker-wheel",
       ],
       faqs: [
         {
@@ -1579,15 +1579,98 @@ export const tools: Tool[] = [
     },
   },
   {
-    slug: "decision-maker",
+    slug: "decision-maker-wheel",
     name: "Decision Maker Wheel",
-    tagline: "Can't decide? Let the wheel choose for you.",
+    tagline:
+      "Can't decide? Spin the wheel — with 10 ready-made templates and a winner reveal.",
     description:
-      "Add your options, spin, and let chance decide. Perfect for resolving small dilemmas — from dinner to what to watch.",
+      "Make decisions the fun way. Load a ready-made template (lunch, movie, workout, travel and more) or add your own options, spin a physics-inspired wheel, and reveal the winner with confetti. Includes elimination mode, themes, sound and PNG/JSON export.",
     categoryId: "generators",
     icon: HelpCircle,
-    status: "coming-soon",
-    keywords: ["decision maker", "choose for me", "random picker", "yes or no"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "decision maker wheel",
+      "decision wheel",
+      "what should i eat",
+      "random decision",
+      "choose for me",
+      "yes or no wheel",
+      "picker wheel",
+      "spin to decide",
+      "random choice generator",
+    ],
+    seo: {
+      title: "Decision Maker Wheel — Spin the Wheel Online | Toollyz",
+      description:
+        "Make random decisions instantly. Spin a customizable wheel for food choices, movies, teams, workouts and more — 10 ready templates, elimination mode, confetti reveal. Free, no signup.",
+      what:
+        "A Decision Maker Wheel takes the agonizing out of small choices. Type your options (or load a ready-made template like 'What should I eat?'), give the wheel a spin, and let chance decide — complete with a satisfying physics-inspired spin and a celebratory winner reveal. Toollyz Decision Maker Wheel includes ten instant templates, ten themes, elimination mode for tournaments, sound effects and PNG/JSON export, all running locally in your browser.",
+      how: [
+        "Tap a quick-decision template (Lunch, Movie night, Workout, Travel…) to instantly load options and a matching theme.",
+        "Or add your own options — type and press Enter, paste a list, then shuffle or de-duplicate.",
+        "Spin by clicking the wheel, the center button, or pressing the spacebar.",
+        "The winner is revealed in a celebratory modal — copy it, spin again, or enable elimination mode to remove it and keep going.",
+      ],
+      benefits: [
+        "Ten ready-made templates — lunch, movie night, yes/no, truth or dare, workout, study, team picker, date ideas, travel, weekend plans.",
+        "Cryptographically fair selection — the wheel always lands on the genuinely-chosen option.",
+        "Ten coordinated themes, physics-inspired spin, decelerating tick sounds and a confetti winner reveal.",
+        "Elimination mode for tournaments and progressive 'last one standing' rounds.",
+        "Full option management — add, paste, shuffle, de-duplicate, inline edit.",
+        "Spacebar to spin, reduced-motion support and touch-friendly controls.",
+        "Export the wheel as PNG or your setup as JSON; recent decisions saved locally.",
+        "100% in your browser — nothing uploaded, no signup, no limits.",
+      ],
+      relatedSlugs: [
+        "spin-wheel-generator",
+        "coin-flip-simulator",
+        "bingo-card-generator",
+        "lucky-draw",
+      ],
+      faqs: [
+        {
+          q: "What is a decision maker wheel?",
+          a: "It's an interactive spinning wheel that picks a random option for you. Add your choices — restaurants, movies, tasks, names — spin, and the wheel lands on one. It turns indecision into a fun, gamified moment.",
+        },
+        {
+          q: "Is the wheel spin random?",
+          a: "Yes — the winning option is selected with your browser's cryptographic random generator before the spin, then the wheel rotates exactly so it lands on that option. Every choice has an equal chance.",
+        },
+        {
+          q: "Can I customize the wheel colors?",
+          a: "Yes — pick from ten themes (minimal, neon, luxury gold, gaming, classroom, casino, corporate, birthday, retro, dark mode), each with its own coordinated palette. Quick-decision templates also auto-select a fitting theme.",
+        },
+        {
+          q: "Can I remove options after spinning?",
+          a: "Yes — turn on Elimination mode and each winning option is removed after it's chosen. It's ideal for tournaments, raffles and narrowing a list down to a final answer.",
+        },
+        {
+          q: "Can I save my wheels?",
+          a: "Your options, theme and recent decisions are saved automatically in your browser. You can also export the full setup as a JSON file to keep or re-import later.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes — the wheel, templates and winner modal are fully responsive and touch-friendly. Tap the wheel or the spin button to decide. Works in every modern mobile browser.",
+        },
+        {
+          q: "Can I share wheel results?",
+          a: "Yes — copy the winner to your clipboard from the result modal, or export the wheel as a PNG image to share the setup with friends or a class.",
+        },
+        {
+          q: "How many options can I add?",
+          a: "As many as you like. Label text resizes automatically as you add more. For easy reading, 2–24 options look best on the wheel, but there's no hard cap.",
+        },
+        {
+          q: "Is the wheel fair?",
+          a: "Completely — there's no weighting or bias toward any option. Each choice has an identical probability on every spin, backed by a cryptographic random source.",
+        },
+        {
+          q: "Is this decision maker wheel free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Spinning, templates, themes, elimination mode and exports all run in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "lucky-draw",

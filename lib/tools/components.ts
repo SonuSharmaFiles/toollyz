@@ -47,6 +47,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "spin-wheel-generator": dynamic(
     () => import("@/components/tools/spin-wheel-generator"),
   ),
+  "decision-maker-wheel": dynamic(
+    () => import("@/components/tools/decision-maker-wheel"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
