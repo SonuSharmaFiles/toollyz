@@ -1958,15 +1958,99 @@ export const tools: Tool[] = [
     },
   },
   {
-    slug: "random-joke",
+    slug: "random-joke-generator",
     name: "Random Joke Generator",
-    tagline: "Get a fresh joke whenever you need a laugh.",
+    tagline:
+      "Laugh on demand — clean jokes across 15 categories with reactions, a daily joke and favorites.",
     description:
-      "Generate random jokes across categories — clean, dad jokes, programming, and more. Share instantly.",
+      "Generate funny, family-friendly jokes across 15 categories — dad jokes, programming, puns, knock-knocks, one-liners and more. React with emojis, save favorites, get a fresh Joke of the Day, and share anywhere. 100% clean and free.",
     categoryId: "generators",
     icon: Laugh,
-    status: "coming-soon",
-    keywords: ["joke", "random joke", "dad joke", "funny"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "random joke generator",
+      "funny jokes",
+      "dad jokes",
+      "programming jokes",
+      "one liners",
+      "puns",
+      "knock knock jokes",
+      "joke of the day",
+      "clean jokes",
+      "jokes for kids",
+    ],
+    seo: {
+      title: "Random Joke Generator — Funny Jokes Online | Toollyz",
+      description:
+        "Generate funny random jokes instantly. Explore dad jokes, programming jokes, one-liners, puns, knock-knocks and meme humor — all clean and family-friendly. React, save and share. Free.",
+      what:
+        "A Random Joke Generator delivers a laugh on demand. Toollyz Random Joke Generator pulls from a hand-curated collection of clean, family-friendly jokes across 15 categories — dad jokes, programming, tech, school, animals, knock-knocks, one-liners, puns, gaming, meme humor, office, relationships, food, kids and science. Every joke is safe-for-work by design. React with emojis, save your favorites, enjoy a fresh Joke of the Day, and share to any platform.",
+      how: [
+        "Pick a category (or leave it on All) and choose how many jokes to generate.",
+        "Hit 'Make me laugh' (or press the spacebar) to add jokes to your feed. Tap Surprise me for a random category.",
+        "React with 😂 / 😐 / 🤯 / ❤️, copy, share, or save jokes you love.",
+        "Search by keyword, turn on Endless feed for a continuous stream, and enjoy a new Joke of the Day daily.",
+      ],
+      benefits: [
+        "120+ hand-curated jokes across 15 categories — all clean and family-friendly.",
+        "Setup-and-punchline formatting for dad jokes and knock-knocks, plus snappy one-liners and puns.",
+        "Emoji reaction bar (😂 😐 🤯 ❤️) with a fun floating-emoji burst, saved locally.",
+        "A deterministic Joke of the Day that refreshes daily for everyone.",
+        "Discovery feed with an Endless mode that auto-streams new jokes.",
+        "Keyword search, Surprise-me random category, copy, native share and TXT export.",
+        "Save unlimited favorites locally and revisit them anytime.",
+        "Spacebar shortcut, reduced-motion support and clean readable typography.",
+      ],
+      relatedSlugs: [
+        "random-fact-generator",
+        "random-emoji-generator",
+        "spin-wheel-generator",
+        "coin-flip-simulator",
+      ],
+      faqs: [
+        {
+          q: "What is a random joke generator?",
+          a: "It's a tool that gives you a funny joke at random. Instead of searching for something to make you laugh, you click a button and instantly get a joke — across dad jokes, puns, programming humor and many more categories.",
+        },
+        {
+          q: "Can I generate programming jokes?",
+          a: "Yes — there's a dedicated Programming category full of developer humor (think dark mode, bugs, and SQL joins), plus a Tech category for gadget-related laughs.",
+        },
+        {
+          q: "Are the jokes family-friendly?",
+          a: "Yes — every joke in Toollyz is hand-curated to be clean and safe-for-work by design. You can confidently use it in classrooms, with kids, at the office or anywhere.",
+        },
+        {
+          q: "Can I save favorite jokes?",
+          a: "Yes — tap the heart on any joke (or react with ❤️) to save it. Favorites are stored locally in your browser and shown in a dedicated panel where you can export them all as a text file.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes — the feed, reactions, search and cards are fully responsive and touch-friendly with large readable text. It works in every modern mobile browser.",
+        },
+        {
+          q: "Can I share jokes on social media?",
+          a: "Yes — each joke has a share button (using your device's native share sheet where available) and a copy button, so you can post jokes anywhere or message them to friends.",
+        },
+        {
+          q: "Are jokes updated regularly?",
+          a: "The curated collection grows over time as we add and review new jokes across categories. Because everything runs client-side, new jokes appear automatically when you reload.",
+        },
+        {
+          q: "Can I search jokes by category?",
+          a: "Yes — filter by any of the 15 categories, search jokes by keyword, or hit Surprise me to jump to a random category. You can also generate packs of 5 or 10 at once.",
+        },
+        {
+          q: "Is dark humor optional?",
+          a: "Toollyz keeps every joke clean and family-friendly by design — we don't include offensive or NSFW content, so it's safe to share with anyone, anywhere.",
+        },
+        {
+          q: "Is this random joke generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Generation, reactions, favorites, search and export all run in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "random-quote",
