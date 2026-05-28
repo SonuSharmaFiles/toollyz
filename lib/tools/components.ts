@@ -44,6 +44,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "bingo-card-generator": dynamic(
     () => import("@/components/tools/bingo-card-generator"),
   ),
+  "spin-wheel-generator": dynamic(
+    () => import("@/components/tools/spin-wheel-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

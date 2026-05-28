@@ -1340,7 +1340,7 @@ export const tools: Tool[] = [
         "History and settings saved locally — export results as CSV anytime.",
       ],
       relatedSlugs: [
-        "spin-wheel",
+        "spin-wheel-generator",
         "decision-maker",
         "lucky-draw",
         "password-generator",
@@ -1435,7 +1435,7 @@ export const tools: Tool[] = [
       ],
       relatedSlugs: [
         "coin-flip-simulator",
-        "spin-wheel",
+        "spin-wheel-generator",
         "lucky-draw",
         "random-color-generator",
       ],
@@ -1484,15 +1484,99 @@ export const tools: Tool[] = [
     },
   },
   {
-    slug: "spin-wheel",
+    slug: "spin-wheel-generator",
     name: "Spin Wheel Generator",
-    tagline: "Create a custom spin-the-wheel for any decision.",
+    tagline:
+      "Build a customizable spinning wheel with 10 themes, elimination mode and a winner reveal.",
     description:
-      "Build a colorful spin wheel with your own options. Spin to randomly pick a winner — great for games, prizes and choices.",
+      "Create colorful spinning wheels for giveaways, classrooms, raffles, team selection and random decisions. Add your own entries, pick from ten themes, spin with physics-inspired motion, and reveal winners with confetti. Elimination mode, sound effects and PNG/JSON export included.",
     categoryId: "generators",
     icon: CircleDot,
-    status: "coming-soon",
-    keywords: ["spin wheel", "wheel of names", "random picker", "raffle"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "spin wheel generator",
+      "spin the wheel",
+      "wheel of names",
+      "random picker wheel",
+      "prize wheel",
+      "giveaway wheel",
+      "decision wheel",
+      "team picker",
+      "raffle wheel",
+      "classroom spinner",
+    ],
+    seo: {
+      title: "Spin Wheel Generator — Create Random Spinning Wheels | Toollyz",
+      description:
+        "Create customizable spinning wheels instantly. Perfect for giveaways, classrooms, raffles, team selection and random choices — 10 themes, elimination mode, confetti winner reveal, free.",
+      what:
+        "A Spin Wheel Generator turns a list of options into an interactive spinning wheel — give it a spin and it randomly lands on one. Toollyz Spin Wheel Generator is built for giveaways, classroom activities, raffles, team selection, prize draws and everyday decisions. Add your own entries, choose from ten vibrant themes, and enjoy physics-inspired spin motion, a celebratory winner reveal with confetti, optional elimination mode and PNG/JSON export — all running in your browser.",
+      how: [
+        "Add entries one at a time, paste a list, or import a .txt/.csv file. Shuffle or de-duplicate with one click.",
+        "Pick a theme and spin duration, then spin by clicking the wheel, the center hub, or the Spin button.",
+        "The wheel decelerates with realistic easing and reveals the winner in a celebratory modal with confetti.",
+        "Turn on elimination mode to remove each winner automatically — perfect for tournaments and progressive draws.",
+      ],
+      benefits: [
+        "Ten vibrant wheel themes — neon, casino, classroom, corporate, minimal, birthday, gaming, retro, luxury gold, dark mode.",
+        "Crisp SVG wheel that scales to any screen with auto-contrast segment labels.",
+        "Cryptographically fair winner selection (window.crypto) — the visual always matches the true result.",
+        "Physics-inspired spin with decelerating tick sounds and a confetti winner reveal.",
+        "Elimination mode removes winners automatically for tournaments and raffles.",
+        "Entry management: add, paste, import .txt/.csv, shuffle, de-duplicate, inline edit.",
+        "Adjustable spin duration (quick / normal / dramatic) and a reduced-motion mode.",
+        "Export the wheel as PNG or your full setup as JSON. Winner history kept locally.",
+      ],
+      relatedSlugs: [
+        "coin-flip-simulator",
+        "bingo-card-generator",
+        "lucky-draw",
+        "decision-maker",
+      ],
+      faqs: [
+        {
+          q: "What is a spin wheel generator?",
+          a: "It's an interactive tool that turns a list of options into a spinning wheel. You give it a spin and it randomly lands on one entry — great for giveaways, picking teams, choosing what to eat, classroom games or any random decision.",
+        },
+        {
+          q: "Is the wheel spin random?",
+          a: "Yes — the winner is chosen using your browser's cryptographic random generator (window.crypto.getRandomValues) before the animation starts, then the wheel is rotated precisely so it lands on that result. Every entry has an equal chance.",
+        },
+        {
+          q: "Can I customize the wheel colors?",
+          a: "Yes — choose from ten built-in themes (neon, casino, classroom, corporate, minimal, birthday, gaming, retro, luxury gold, dark mode). Each theme has its own coordinated segment palette, pointer and center hub.",
+        },
+        {
+          q: "Can I save multiple wheels?",
+          a: "Your current entries, theme and settings are saved automatically in your browser, so the wheel is exactly as you left it next time. You can also export any setup as JSON to keep or share, and re-import the entries later.",
+        },
+        {
+          q: "Can I remove winners automatically?",
+          a: "Yes — enable Elimination mode. After each spin the winner is removed from the wheel, which is ideal for tournaments, progressive raffles or 'last one standing' games.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes — the wheel, entry manager and winner modal are fully responsive and touch-friendly. Tap the wheel or the Spin button to spin. It works in every modern mobile browser.",
+        },
+        {
+          q: "Can I export my wheel?",
+          a: "Yes — download the wheel as a PNG image, or export your full setup (entries, theme and winner history) as a JSON file. You can also import entries from .txt or .csv files.",
+        },
+        {
+          q: "How many entries can I add?",
+          a: "As many as you like. The wheel automatically resizes label text as you add more entries. For readability, 2–24 entries display best, but there's no hard limit.",
+        },
+        {
+          q: "Are the results fair?",
+          a: "Completely. There's no weighting toward any segment and no hidden bias — each entry has exactly the same probability of being selected on every spin, backed by a cryptographic random source.",
+        },
+        {
+          q: "Is this spin wheel generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Spinning, theming, elimination mode and exports all run in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "decision-maker",
