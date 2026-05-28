@@ -50,6 +50,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "decision-maker-wheel": dynamic(
     () => import("@/components/tools/decision-maker-wheel"),
   ),
+  "lucky-draw-generator": dynamic(
+    () => import("@/components/tools/lucky-draw-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

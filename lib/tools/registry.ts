@@ -1342,7 +1342,7 @@ export const tools: Tool[] = [
       relatedSlugs: [
         "spin-wheel-generator",
         "decision-maker-wheel",
-        "lucky-draw",
+        "lucky-draw-generator",
         "password-generator",
       ],
       faqs: [
@@ -1436,7 +1436,7 @@ export const tools: Tool[] = [
       relatedSlugs: [
         "coin-flip-simulator",
         "spin-wheel-generator",
-        "lucky-draw",
+        "lucky-draw-generator",
         "random-color-generator",
       ],
       faqs: [
@@ -1531,7 +1531,7 @@ export const tools: Tool[] = [
       relatedSlugs: [
         "coin-flip-simulator",
         "bingo-card-generator",
-        "lucky-draw",
+        "lucky-draw-generator",
         "decision-maker-wheel",
       ],
       faqs: [
@@ -1626,7 +1626,7 @@ export const tools: Tool[] = [
         "spin-wheel-generator",
         "coin-flip-simulator",
         "bingo-card-generator",
-        "lucky-draw",
+        "lucky-draw-generator",
       ],
       faqs: [
         {
@@ -1673,15 +1673,98 @@ export const tools: Tool[] = [
     },
   },
   {
-    slug: "lucky-draw",
+    slug: "lucky-draw-generator",
     name: "Lucky Draw Generator",
-    tagline: "Pick random winners from a list of participants.",
+    tagline:
+      "Run fair lucky draws with a slot-machine reveal, multi-winner podium and templates.",
     description:
-      "Paste a list of names or entries, then pick winners at random for giveaways, raffles and contests.",
+      "Pick random winners for giveaways, raffles, classrooms and contests. Add participants or load a template, choose how many winners, then watch the animated name reel land on the winners with confetti. Multi-winner podium, elimination mode and CSV/winner-card export included.",
     categoryId: "generators",
     icon: Ticket,
-    status: "coming-soon",
-    keywords: ["lucky draw", "raffle", "giveaway", "random winner"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "lucky draw generator",
+      "random winner picker",
+      "giveaway picker",
+      "raffle generator",
+      "random name picker",
+      "contest winner",
+      "classroom picker",
+      "instagram giveaway picker",
+      "youtube giveaway",
+    ],
+    seo: {
+      title: "Lucky Draw Generator — Random Winner Picker Online | Toollyz",
+      description:
+        "Run fair random lucky draws instantly. Pick giveaway, raffle, classroom and contest winners with an animated reel reveal, multi-winner podium, templates and export — free, no signup.",
+      what:
+        "A Lucky Draw Generator randomly selects one or more winners from a list of participants. It's the fair, transparent way to run giveaways, raffles, classroom picks, team selections and contest draws. Toollyz Lucky Draw Generator features an exciting slot-machine name reel that flickers through participants before landing on the winners, a multi-winner podium with medal tiers, six ready-made templates, elimination mode, sound effects, and CSV / winner-card export — all powered by your browser's cryptographic random generator.",
+      how: [
+        "Load a template (classroom, giveaway, raffle, team, tournament, party) or add your own participants — type, paste, or import a .txt/.csv.",
+        "Choose how many winners to draw (1, 3, 5, 10 or custom) and set a draw title and prize label.",
+        "Click Start lucky draw — the name reel flickers and decelerates to a dramatic winner reveal with confetti.",
+        "Winners appear on a medal podium. Copy them, download a winner card image or CSV, and optionally remove winners for the next round.",
+      ],
+      benefits: [
+        "Cryptographically fair selection — every participant has an equal chance, backed by window.crypto.",
+        "Exciting slot-machine reel reveal with decelerating flicker, drumroll ticks and a confetti finale.",
+        "Pick 1, 3, 5, 10 or a custom number of winners, shown on a medal podium (🥇 🥈 🥉).",
+        "Six ready templates — classroom, giveaway, team, raffle, tournament and party.",
+        "Participant management: add, paste, import .txt/.csv, shuffle, de-duplicate.",
+        "Elimination mode removes winners so you can run multiple rounds from one list.",
+        "Export winners as CSV or a branded winner-card image; recent draws saved locally.",
+        "Sound effects, spacebar to draw, reduced-motion support and full mobile optimization.",
+      ],
+      relatedSlugs: [
+        "spin-wheel-generator",
+        "decision-maker-wheel",
+        "coin-flip-simulator",
+        "bingo-card-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a lucky draw generator?",
+          a: "It's a tool that randomly picks winners from a list of participants. You add names (or import them), choose how many winners you need, and the tool fairly selects them — perfect for giveaways, raffles, classroom picks and contests.",
+        },
+        {
+          q: "Is the winner selection random?",
+          a: "Yes — winners are chosen using your browser's cryptographic random generator (window.crypto.getRandomValues), which is unbiased and unpredictable. The animated reel is purely for excitement; the result is decided fairly the moment you start the draw.",
+        },
+        {
+          q: "Can I pick multiple winners?",
+          a: "Yes — draw 1, 3, 5, 10 or a custom number of winners at once. They're revealed on a medal podium with 1st, 2nd and 3rd place badges, and you can export them all together.",
+        },
+        {
+          q: "Can I upload participant lists?",
+          a: "Yes — paste a multiline list directly, or import a .txt or .csv file. Entries can be separated by new lines or commas. You can also start from one of the six built-in templates.",
+        },
+        {
+          q: "Does the tool remove duplicate entries?",
+          a: "Yes — click Dedupe to remove duplicate participants in one click, with a count of how many were removed. This keeps your draw fair so no one gets multiple entries by accident.",
+        },
+        {
+          q: "Can I save previous draws?",
+          a: "Yes — every draw is saved to your browser's local history with its winners, title and timestamp. You can review past draws and clear the history anytime. Nothing is uploaded to a server.",
+        },
+        {
+          q: "Can I export winner results?",
+          a: "Yes — download winners as a CSV file, or generate a branded winner-card image (PNG) to share on social media or post at your event. You can also copy the winners to your clipboard.",
+        },
+        {
+          q: "Is the draw fair?",
+          a: "Completely. There's no weighting or bias — each participant has exactly the same probability of being drawn, and the selection uses a cryptographically secure random source. Turn on elimination mode to prevent the same person winning twice.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes — the participant manager, draw stage and winner podium are fully responsive and touch-friendly. Tap Start lucky draw to run it. Works in every modern mobile browser.",
+        },
+        {
+          q: "Is this lucky draw generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Drawing, templates, history and exports all run in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "random-emoji",
