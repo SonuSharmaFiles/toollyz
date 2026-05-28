@@ -1863,15 +1863,99 @@ export const tools: Tool[] = [
     },
   },
   {
-    slug: "random-fact",
+    slug: "random-fact-generator",
     name: "Random Fact Generator",
-    tagline: "Discover a surprising new fact every time.",
+    tagline:
+      "Discover surprising facts across 18 categories — with a daily fact, search and favorites.",
     description:
-      "Generate random fascinating facts about science, history, animals, space and more — perfect for trivia and small talk.",
+      "Generate interesting, verified facts about science, space, history, psychology, animals and more. Filter by category, search 140+ facts, enjoy a fresh Fact of the Day, save favorites, and explore endlessly in discovery mode.",
     categoryId: "generators",
     icon: Lightbulb,
-    status: "coming-soon",
-    keywords: ["random fact", "trivia", "did you know", "fun fact"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "random fact generator",
+      "fun facts",
+      "interesting facts",
+      "did you know",
+      "fact of the day",
+      "trivia facts",
+      "weird facts",
+      "mind blowing facts",
+      "facts for kids",
+      "educational facts",
+    ],
+    seo: {
+      title: "Random Fact Generator — Fun & Interesting Facts Online | Toollyz",
+      description:
+        "Discover fun, weird, educational and mind-blowing facts instantly. Explore science, space, history, psychology, animals and more — with a daily fact, search and favorites. Free.",
+      what:
+        "A Random Fact Generator surfaces interesting, bite-sized pieces of knowledge on demand. Toollyz Random Fact Generator pulls from a hand-curated collection of verified facts across 18 categories — science, space, technology, history, psychology, animals, the human body, geography, food, movies, gaming, internet culture, business, nature, weird, funny, mind-blowing and kids. Generate a single fact or a pack, get a fresh Fact of the Day, search by keyword, save your favorites, and explore endlessly in discovery mode.",
+      how: [
+        "Pick a category (or leave it on All) and choose how many facts to generate — 1, 5 or 10.",
+        "Hit Generate (or press the spacebar) to add facts to your discovery feed. Tap Surprise me for a random category.",
+        "Search by keyword to jump straight to facts about space, the brain, honey — anything.",
+        "Save favorites with the heart, copy or share any fact, and turn on Endless discovery for a continuous stream.",
+      ],
+      benefits: [
+        "140+ hand-curated, verified facts across 18 categories.",
+        "A deterministic Fact of the Day that refreshes daily for everyone.",
+        "Discovery feed that stacks new facts as you generate — plus an Endless mode.",
+        "Keyword search across every fact and a Surprise-me random-category button.",
+        "Each fact card shows its category, an estimated reading time, and copy/share/save/similar actions.",
+        "Save unlimited favorites locally and export them as a TXT file.",
+        "Spacebar shortcut, reduced-motion support and clean, highly readable typography.",
+        "100% in your browser — no signup, no tracking of what you read.",
+      ],
+      relatedSlugs: [
+        "random-emoji-generator",
+        "spin-wheel-generator",
+        "decision-maker-wheel",
+        "lucky-draw-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a random fact generator?",
+          a: "It's a tool that shows you interesting facts at random. Instead of searching for trivia, you click a button and discover something new — across science, history, animals, space and many more topics.",
+        },
+        {
+          q: "Are the facts accurate?",
+          a: "Yes — every fact in Toollyz is hand-curated and verified against reliable sources, and we deliberately bust a few popular myths (like 'the Great Wall is visible from space'). We avoid disputed or exaggerated claims.",
+        },
+        {
+          q: "Can I generate facts by category?",
+          a: "Yes — choose from 18 categories including science, space, psychology, animals, food, gaming, weird and kids, or leave it on 'All categories' for a mix. The Surprise-me button picks a random category for you.",
+        },
+        {
+          q: "Can I save favorite facts?",
+          a: "Yes — tap the heart on any fact to save it. Favorites are stored locally in your browser and shown in a dedicated panel where you can export them all as a text file.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes — the feed, search and cards are fully responsive and touch-friendly, with large readable text. It works in every modern mobile browser.",
+        },
+        {
+          q: "Can kids use this tool?",
+          a: "Absolutely — there's a dedicated 'Kids' category with simple, fun, age-appropriate facts, and all content is family-friendly. It's great for classrooms and curious young learners.",
+        },
+        {
+          q: "Can I share facts on social media?",
+          a: "Yes — each fact has a share button (using your device's native share sheet where available) and a copy button, so you can post facts to any platform or message them to friends.",
+        },
+        {
+          q: "How are facts selected?",
+          a: "Facts are chosen using your browser's secure random generator, optionally filtered by the category you pick. The Fact of the Day is deterministic — everyone sees the same one on a given day.",
+        },
+        {
+          q: "Are new facts added regularly?",
+          a: "The curated collection grows over time as we add and verify new facts across categories. Because everything is client-side, updates appear automatically when you reload.",
+        },
+        {
+          q: "Is this random fact generator free?",
+          a: "Yes — completely free with no signup, no limits and no watermark. Generation, search, favorites and export all run in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "random-joke",
