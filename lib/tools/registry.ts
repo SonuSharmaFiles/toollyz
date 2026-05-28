@@ -2455,11 +2455,102 @@ export const tools: Tool[] = [
     name: "Character Counter",
     tagline: "Live character count with limits for tweets and bios.",
     description:
-      "Count characters in real-time with built-in presets for Twitter/X, Instagram bios, meta descriptions and more.",
+      "Count characters, spaces, words and lines in real time with platform limit trackers for Twitter/X, Instagram, SEO titles and SMS, plus live social previews and PDF reports. Free and private.",
     categoryId: "text",
     icon: Pilcrow,
-    status: "coming-soon",
-    keywords: ["character count", "twitter", "bio", "meta description"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "character counter",
+      "character count",
+      "count characters",
+      "letter counter",
+      "characters with spaces",
+      "characters without spaces",
+      "twitter character counter",
+      "meta description length",
+      "seo title length",
+      "sms character count",
+      "byte counter",
+      "text length",
+      "caption length",
+      "social media character limit",
+    ],
+    seo: {
+      title: "Character Counter — Count Characters, Spaces & Text Length",
+      description:
+        "Count characters, spaces, words, lines and bytes instantly with Toollyz Character Counter. Track social media and SEO limits, preview posts, and optimize content — free and private.",
+      what:
+        "A Character Counter is a real-time tool that measures the length of your text down to each character. Toollyz Character Counter shows characters with and without spaces, words, sentences, lines, byte size and a full character breakdown (letters, digits, punctuation, symbols, emoji and uppercase/lowercase ratio) as you type. It tracks platform-specific limits for Twitter/X, Instagram, TikTok, Facebook, LinkedIn, YouTube, Google title tags, meta descriptions and SMS, with progress bars and over-limit warnings, and renders live previews of how your text will appear as a tweet, Instagram caption, Google search result, LinkedIn post or SMS. With built-in text-cleaning tools, file import, character targets, a session timer and one-click TXT and PDF reports, it's a complete content-optimization workspace — and everything runs privately in your browser.",
+      how: [
+        "Type or paste your text into the editor, or drag and drop a .txt file to import it.",
+        "Watch the live counters update characters, spaces, words, bytes and a full character breakdown instantly.",
+        "Open the Limits tab to track Twitter, SEO and SMS limits, and the Preview tab to see live social and search snippets.",
+        "Set a character target, clean up your text, then copy it or export a TXT summary or PDF report.",
+      ],
+      benefits: [
+        "Real-time character count with and without spaces, plus words, sentences, lines and byte size.",
+        "Detailed breakdown: letters, digits, punctuation, symbols, emoji and uppercase/lowercase ratio.",
+        "Platform limit trackers for Twitter/X, Instagram, TikTok, Facebook, LinkedIn, YouTube, Google and SMS.",
+        "Live previews for tweets, Instagram captions, Google search snippets, LinkedIn posts and SMS messages.",
+        "SEO helpers for title-tag and meta-description length with ideal-range guidance.",
+        "Text-cleaning tools, case conversion, in-text search highlighting and drag-and-drop file import.",
+        "Character targets with a progress ring, session timer, typing speed and achievement badges.",
+        "Export a TXT summary or polished PDF report — 100% private, with auto-saved drafts in your browser.",
+      ],
+      relatedSlugs: [
+        "word-counter",
+        "tweet-character-counter",
+        "case-converter",
+        "keyword-density-checker",
+      ],
+      faqs: [
+        {
+          q: "What is a character counter?",
+          a: "A character counter is an online tool that counts the number of characters in your text in real time, along with spaces, words, lines and more. Toollyz Character Counter also tracks social media and SEO limits and previews how your text will look on each platform.",
+        },
+        {
+          q: "Does this count spaces?",
+          a: "Yes. The tool shows the total character count including spaces, and separately reports a dedicated space count, so you always know exactly how whitespace affects your length.",
+        },
+        {
+          q: "Can I count characters without spaces?",
+          a: "Yes. Alongside the total, the counter shows characters excluding spaces — useful for limits and assignments that don't count whitespace.",
+        },
+        {
+          q: "Does it work for social media captions?",
+          a: "Absolutely. The Limits tab tracks Twitter/X, Instagram, TikTok, Facebook, LinkedIn and YouTube limits with progress bars and warnings, and the Preview tab shows live tweet, caption, LinkedIn and SMS previews.",
+        },
+        {
+          q: "Can I optimize SEO titles and meta descriptions?",
+          a: "Yes. The tool flags the ideal length for Google title tags (about 50–60 characters) and meta descriptions (about 120–160 characters), and a live Google search-snippet preview shows how your title and description will appear in results.",
+        },
+        {
+          q: "Does it count bytes and emoji?",
+          a: "Yes. It reports the UTF-8 byte size of your text and counts emoji separately, which is helpful for databases, APIs and platforms that measure length in bytes.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes. The editor, analytics tabs, limit trackers and previews are fully responsive and touch-friendly, with a focus mode for distraction-free writing on any device.",
+        },
+        {
+          q: "Can I upload text files?",
+          a: "Yes. Drag and drop or browse for plain-text files such as .txt and .md and the content loads straight into the editor. For Word documents, copy and paste the text in.",
+        },
+        {
+          q: "Is my text stored online?",
+          a: "No. All analysis happens entirely in your browser — your text is never uploaded to any server. Drafts and your target are saved only in your device's local storage.",
+        },
+        {
+          q: "Can I export analysis reports?",
+          a: "Yes. Copy your text, download a TXT analysis summary, or generate a polished PDF report with your full character breakdown and platform-limit status.",
+        },
+        {
+          q: "Is this character counter free?",
+          a: "Completely free with no signup and no limits. Every feature — real-time counts, platform trackers, previews, exports and drafts — is available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "case-converter",
