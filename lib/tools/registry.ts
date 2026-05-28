@@ -2353,11 +2353,102 @@ export const tools: Tool[] = [
     name: "Word Counter",
     tagline: "Count words, characters, sentences and paragraphs.",
     description:
-      "Instant text statistics including word count, character count, reading time and keyword density — perfect for writers, students and SEOs.",
+      "Analyze text in real time — word count, character count, sentences, reading time, readability scores and keyword density — with a distraction-free editor and PDF reports. Free and private.",
     categoryId: "text",
     icon: AlignLeft,
-    status: "coming-soon",
-    keywords: ["word count", "character count", "text statistics", "reading time"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "word counter",
+      "word count",
+      "character counter",
+      "character count",
+      "count words",
+      "reading time calculator",
+      "keyword density",
+      "readability checker",
+      "flesch reading ease",
+      "sentence counter",
+      "paragraph counter",
+      "text analysis",
+      "essay word count",
+      "writing tool",
+    ],
+    seo: {
+      title: "Word Counter — Count Words, Characters & Reading Time",
+      description:
+        "Analyze text instantly with Toollyz Word Counter. Count words, characters, sentences, paragraphs, reading time, keyword density and readability scores online — free and private.",
+      what:
+        "A Word Counter is a writing tool that analyzes your text in real time and reports detailed statistics as you type. Toollyz Word Counter goes far beyond a basic textbox: it counts words, characters (with and without spaces), sentences, paragraphs and lines; estimates reading and speaking time; calculates readability scores like Flesch Reading Ease, Flesch-Kincaid Grade and the Gunning Fog Index; and surfaces keyword density, repeated words, unique-word counts and lexical diversity. A distraction-free editor with focus and fullscreen modes, built-in text-cleaning tools, file import, writing goals, a session timer and one-click PDF reports make it a complete writing-productivity workspace — and because everything runs in your browser, your text is never uploaded.",
+      how: [
+        "Type or paste your text into the editor — or drag and drop a .txt file to import it.",
+        "Watch the live dashboard update word count, characters, reading time, readability and keyword density instantly.",
+        "Use the text tools to clean spaces, change case or remove duplicate lines, and set a word goal to track progress.",
+        "Copy your text or export a TXT summary or a formatted PDF analysis report.",
+      ],
+      benefits: [
+        "Real-time counts for words, characters, sentences, paragraphs, lines, reading and speaking time.",
+        "Readability scores — Flesch Reading Ease, Flesch-Kincaid Grade and Gunning Fog — with an estimated education level.",
+        "Keyword density for single words and two-word phrases, with overuse warnings for SEO.",
+        "Advanced stats: unique words, lexical diversity, average word and sentence length, and passive-voice estimates.",
+        "Distraction-free editor with focus mode, fullscreen, in-text search and repeated-word highlighting.",
+        "One-click text cleaning, case conversion, undo and drag-and-drop file import.",
+        "Writing goals with a progress ring, a session timer, typing speed and achievement badges.",
+        "Export a TXT summary or a polished PDF report — 100% private, with auto-saved drafts in your browser.",
+      ],
+      relatedSlugs: [
+        "character-counter",
+        "case-converter",
+        "keyword-density-checker",
+        "duplicate-word-finder",
+      ],
+      faqs: [
+        {
+          q: "What is a word counter?",
+          a: "A word counter is an online tool that analyzes your text and reports statistics like the number of words, characters, sentences and paragraphs, plus reading time, readability and keyword density. Toollyz Word Counter updates every metric in real time as you type.",
+        },
+        {
+          q: "How does word count work?",
+          a: "Words are counted by splitting your text on spaces and line breaks, so each run of non-space characters counts as one word. The tool recalculates instantly with every keystroke, so the count is always accurate and up to date.",
+        },
+        {
+          q: "Can I count characters without spaces?",
+          a: "Yes. The tool shows both the total character count and the character count excluding spaces — useful for social media limits, meta descriptions and assignments with strict character rules.",
+        },
+        {
+          q: "Does this tool calculate reading time?",
+          a: "Yes. Reading time is estimated at about 200 words per minute and speaking time at about 130 words per minute, so you can quickly gauge how long an article, script or speech will take.",
+        },
+        {
+          q: "Can I analyze keyword density?",
+          a: "Yes. The keyword density panel lists your most-used words and two-word phrases with their frequency and percentage, and warns you when any keyword exceeds about 6% so you can avoid keyword stuffing.",
+        },
+        {
+          q: "Does it measure readability?",
+          a: "Yes. It calculates the Flesch Reading Ease score, the Flesch-Kincaid Grade level and the Gunning Fog Index, then translates them into a clear label and estimated education level so you know how easy your writing is to read.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Absolutely. The editor and analytics dashboard are fully responsive and touch-friendly, with a focus mode for distraction-free writing on phones and tablets.",
+        },
+        {
+          q: "Can I upload text files?",
+          a: "Yes. You can drag and drop or browse for plain-text files such as .txt and .md, and the content loads straight into the editor for analysis. For Word documents, copy and paste the text in.",
+        },
+        {
+          q: "Is my text stored online?",
+          a: "No. All analysis happens entirely in your browser — your text is never uploaded to any server. Drafts and your word goal are saved only in your device's local storage.",
+        },
+        {
+          q: "Can I export analysis reports?",
+          a: "Yes. You can copy your text, download a TXT analysis summary, or generate a polished PDF report containing your full statistics, readability scores and top keywords.",
+        },
+        {
+          q: "Is this word counter free?",
+          a: "Completely free with no signup and no limits. Every feature — real-time counts, readability, keyword density, exports and drafts — is available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "character-counter",
