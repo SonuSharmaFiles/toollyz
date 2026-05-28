@@ -85,6 +85,16 @@ function downloadBlob(blob: Blob, filename: string) {
   URL.revokeObjectURL(url);
 }
 
+// Pick a readable text color (black/white) for a given background hex.
+function readableOn(hex: string): string {
+  const h = hex.replace("#", "");
+  const r = parseInt(h.slice(0, 2), 16);
+  const g = parseInt(h.slice(2, 4), 16);
+  const b = parseInt(h.slice(4, 6), 16);
+  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return lum > 0.62 ? "#1a1a1a" : "#ffffff";
+}
+
 export default function CalendarGenerator() {
   const reduceMotion = useReducedMotion();
   const [mounted, setMounted] = React.useState(false);
@@ -594,9 +604,11 @@ function MonthCard({
                       type="button"
                       onClick={() => d.inMonth && onSelectDay(d.iso)}
                       disabled={!d.inMonth}
-                      aria-label={`${d.day} ${MONTH_NAMES[month]}${holiday ? ` — ${holiday}` : ""}`}
+                      aria-label={`${d.day} ${MONTH_NAMES[month]}${holiday ? ` — ${holiday}` : ""}${
+                        dayEvents?.length ? ` — ${dayEvents.map((e) => e.title).join(", ")}` : ""
+                      }`}
                       className={cn(
-                        "relative flex h-16 w-full flex-col items-start gap-0.5 p-1.5 text-left transition-[box-shadow] sm:h-20",
+                        "relative flex min-h-16 w-full flex-col items-start gap-0.5 overflow-hidden p-1.5 text-left transition-[box-shadow] sm:min-h-24",
                         d.inMonth && "cursor-pointer hover:brightness-95",
                         isSelected && "ring-2 ring-inset ring-primary",
                       )}
@@ -614,18 +626,24 @@ function MonthCard({
                         </span>
                       )}
                       {dayEvents && dayEvents.length > 0 && (
-                        <span className="mt-auto flex flex-wrap gap-1">
-                          {dayEvents.slice(0, 3).map((ev) => (
+                        <span className="mt-auto flex w-full flex-col gap-0.5">
+                          {dayEvents.slice(0, 2).map((ev) => (
                             <span
                               key={ev.id}
-                              className="inline-block size-2 rounded-full"
-                              style={{ background: ev.color }}
+                              className="flex w-full items-center gap-1 rounded px-1 py-0.5 text-[9px] font-semibold leading-tight sm:text-[10px]"
+                              style={{ background: ev.color, color: readableOn(ev.color) }}
                               title={`${ev.emoji ?? ""} ${ev.title}`.trim()}
-                            />
+                            >
+                              {ev.emoji && <span className="shrink-0 leading-none">{ev.emoji}</span>}
+                              <span className="truncate">{ev.title}</span>
+                            </span>
                           ))}
-                          {dayEvents.length > 3 && (
-                            <span className="text-[9px] font-semibold leading-none opacity-70">
-                              +{dayEvents.length - 3}
+                          {dayEvents.length > 2 && (
+                            <span
+                              className="px-1 text-[9px] font-semibold leading-none"
+                              style={{ color: d.isToday ? theme.todayText : theme.mutedText }}
+                            >
+                              +{dayEvents.length - 2} more
                             </span>
                           )}
                         </span>
@@ -719,7 +737,7 @@ function MiniMonth({
                       {d.day}
                       {hasEvent && (
                         <span
-                          className="absolute bottom-0.5 size-1 rounded-full"
+                          className="absolute bottom-0.5 size-1.5 rounded-full ring-1 ring-white/50"
                           style={{ background: eventsByDate[d.iso][0].color }}
                         />
                       )}

@@ -364,6 +364,8 @@ export function monthToCanvas(
           : holiday
             ? theme.holidayText
             : theme.dayText;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "top";
       ctx.font = "bold 22px system-ui, sans-serif";
       ctx.fillText(String(dayCell.day), x + 10, y + 8);
 
@@ -374,12 +376,29 @@ export function monthToCanvas(
       }
       const evs = dayCell.inMonth ? events[dayCell.iso] : undefined;
       if (evs && evs.length) {
-        evs.slice(0, 2).forEach((ev, i) => {
+        const shown = evs.slice(0, 2);
+        const extra = evs.length - shown.length;
+        const chipH = 22;
+        const gap = 4;
+        let cy = y + cell - 8 - shown.length * (chipH + gap) - (extra > 0 ? 14 : 0) + gap;
+        cy = Math.max(cy, y + 40);
+        ctx.textBaseline = "middle";
+        for (const ev of shown) {
           ctx.fillStyle = ev.color;
-          ctx.beginPath();
-          ctx.arc(x + 16 + i * 14, y + cell - 16, 4, 0, Math.PI * 2);
+          roundRect(ctx, x + 8, cy, cell - 16, chipH, 5);
           ctx.fill();
-        });
+          ctx.fillStyle = readableHex(ev.color);
+          ctx.font = "600 13px system-ui, sans-serif";
+          const label = `${ev.emoji ? ev.emoji + " " : ""}${ev.title}`;
+          ctx.fillText(truncateText(ctx, label, cell - 26), x + 14, cy + chipH / 2);
+          cy += chipH + gap;
+        }
+        if (extra > 0) {
+          ctx.fillStyle = theme.mutedText;
+          ctx.font = "600 12px system-ui, sans-serif";
+          ctx.textBaseline = "top";
+          ctx.fillText(`+${extra} more`, x + 12, cy);
+        }
       }
     });
   });
@@ -428,4 +447,24 @@ function wrapText(
   }
   if (lines.length < maxLines && line) lines.push(line);
   lines.slice(0, maxLines).forEach((l, i) => ctx.fillText(l, x, y + i * lineHeight));
+}
+
+// Readable text color (black/white) for a given background hex.
+function readableHex(hex: string): string {
+  const h = hex.replace("#", "");
+  const r = parseInt(h.slice(0, 2), 16);
+  const g = parseInt(h.slice(2, 4), 16);
+  const b = parseInt(h.slice(4, 6), 16);
+  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return lum > 0.62 ? "#1a1a1a" : "#ffffff";
+}
+
+// Truncate text with an ellipsis so it fits inside maxWidth.
+function truncateText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string {
+  if (ctx.measureText(text).width <= maxWidth) return text;
+  let out = text;
+  while (out.length > 1 && ctx.measureText(`${out}…`).width > maxWidth) {
+    out = out.slice(0, -1);
+  }
+  return `${out}…`;
 }

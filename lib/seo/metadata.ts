@@ -59,7 +59,9 @@ export function buildMetadata({
 }
 
 export function toolMetadata(tool: Tool): Metadata {
-  const title = tool.seo?.title ?? `${tool.name} — ${SITE.name}`;
+  // Title is brandless here; the root layout template ("%s | Toollyz")
+  // appends the brand exactly once.
+  const title = tool.seo?.title ?? tool.name;
   const description = tool.seo?.description ?? tool.tagline;
   return buildMetadata({
     title,
@@ -71,7 +73,7 @@ export function toolMetadata(tool: Tool): Metadata {
 
 export function categoryMetadata(category: Category, toolCount: number): Metadata {
   return buildMetadata({
-    title: `${category.name} Tools — ${SITE.name}`,
+    title: `${category.name} Tools`,
     description: `${category.description} Browse ${toolCount} ${category.name.toLowerCase()} tools, all free and privacy-first.`,
     path: `/category/${category.slug}`,
   });

@@ -261,7 +261,7 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "WiFi QR Code Generator — Create WiFi QR Codes Online Free | Toollyz",
+        "WiFi QR Code Generator — Create WiFi QR Codes Online Free",
       description:
         "Generate WiFi QR codes instantly. Create scannable QR codes for any WiFi network, customize colors, pick printable card templates and download as PNG, SVG or JPG — 100% free.",
       what:
@@ -367,7 +367,7 @@ export const tools: Tool[] = [
       "rfc 4122",
     ],
     seo: {
-      title: "UUID Generator — Generate UUID v1, v4, v6 & v7 Online Free | Toollyz",
+      title: "UUID Generator — Generate UUID v1, v4, v6 & v7 Online Free",
       description:
         "Generate secure UUIDs instantly. Create UUID v1, v4, v6 and v7 identifiers, validate UUIDs, copy bulk UUIDs and download results — 100% free, private and instant.",
       what:
@@ -462,7 +462,7 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "Lorem Ipsum Generator — Generate Placeholder Text Online Free | Toollyz",
+        "Lorem Ipsum Generator — Generate Placeholder Text Online Free",
       description:
         "Generate Lorem Ipsum placeholder text instantly. Create paragraphs, sentences, words, or custom-length placeholder text in 6 styles for websites, UI mockups, apps and design projects.",
       what:
@@ -558,7 +558,7 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "Fake Address Generator — Generate Random Addresses Online | Toollyz",
+        "Fake Address Generator — Generate Random Addresses Online",
       description:
         "Generate realistic fake addresses, names, phones and emails from 10+ countries. Export as TXT, CSV or JSON for testing, development and educational purposes — 100% free.",
       what:
@@ -652,7 +652,7 @@ export const tools: Tool[] = [
       "demo data",
     ],
     seo: {
-      title: "Fake Name Generator — Generate Random Names & Identities | Toollyz",
+      title: "Fake Name Generator — Generate Random Names & Identities",
       description:
         "Generate realistic fake names and full identity profiles from 11 cultures. Names, usernames, emails, phones, occupations and birthdates for testing, development and creative projects — 100% free.",
       what:
@@ -747,7 +747,7 @@ export const tools: Tool[] = [
       "tiktok handle",
     ],
     seo: {
-      title: "Username Generator — Generate Cool & Unique Usernames | Toollyz",
+      title: "Username Generator — Generate Cool & Unique Usernames",
       description:
         "Generate unique usernames instantly. 10 styles — gaming, aesthetic, professional, tech, brandable, funny, social media and more. Save favorites and check availability on Instagram, X, TikTok and GitHub.",
       what:
@@ -841,7 +841,7 @@ export const tools: Tool[] = [
       "wifi password",
     ],
     seo: {
-      title: "Password Generator — Create Strong Secure Passwords | Toollyz",
+      title: "Password Generator — Create Strong Secure Passwords",
       description:
         "Generate strong secure passwords instantly. Six modes — Random, Memorable, Passphrase, PIN, WiFi, API Key — with live entropy analysis. 100% client-side, never stored or transmitted.",
       what:
@@ -934,7 +934,7 @@ export const tools: Tool[] = [
       "auth code",
     ],
     seo: {
-      title: "OTP Generator — Generate Secure One-Time Passwords | Toollyz",
+      title: "OTP Generator — Generate Secure One-Time Passwords",
       description:
         "Generate secure OTPs instantly. Six formats — numeric, alphanumeric, hex, PIN, verification, backup recovery — with countdown timer, auto-refresh and TXT/CSV/JSON export. 100% client-side.",
       what:
@@ -1028,7 +1028,7 @@ export const tools: Tool[] = [
       "audio gain",
     ],
     seo: {
-      title: "Audio Volume Booster — Increase Audio Volume Online Free | Toollyz",
+      title: "Audio Volume Booster — Increase Audio Volume Online Free",
       description:
         "Boost audio volume online instantly with Toollyz Audio Volume Booster. Increase MP3, WAV and OGG loudness, normalize audio, prevent clipping, preview live and download lossless WAV — 100% client-side.",
       what:
@@ -1126,7 +1126,7 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "White Noise Generator — Relaxing Ambient Sounds Online Free | Toollyz",
+        "White Noise Generator — Relaxing Ambient Sounds Online Free",
       description:
         "Listen to white noise, brown noise, rain sounds, ocean waves and ambient audio. Mix multiple sounds, save your favorites, set a sleep timer — 100% client-side, no signup.",
       what:
@@ -1223,7 +1223,7 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "Random Color Generator — Generate Beautiful Color Palettes | Toollyz",
+        "Random Color Generator — Generate Beautiful Color Palettes",
       description:
         "Generate random colors, gradients and stunning color palettes instantly. Export HEX, RGB, HSL, CSS, SCSS, Tailwind config, JSON or PNG. Live UI preview, WCAG contrast checking, and 10 palette styles.",
       what:
@@ -1317,7 +1317,7 @@ export const tools: Tool[] = [
       "coin toss probability",
     ],
     seo: {
-      title: "Coin Flip Simulator — Flip a Virtual Coin Online Free | Toollyz",
+      title: "Coin Flip Simulator — Flip a Virtual Coin Online Free",
       description:
         "Flip a virtual coin instantly. Realistic 3D animation, heads/tails statistics, streak tracking, probability charts, multi-flip modes and customizable coin styles — free, no signup.",
       what:
@@ -1412,7 +1412,7 @@ export const tools: Tool[] = [
       "bingo template",
     ],
     seo: {
-      title: "Bingo Card Generator — Create Printable Bingo Cards | Toollyz",
+      title: "Bingo Card Generator — Create Printable Bingo Cards",
       description:
         "Generate printable bingo cards instantly. Create custom bingo for classrooms, parties and events with 9 themes, grid sizes 3×3–6×6, a live caller mode and PDF/PNG export — free.",
       what:
@@ -1507,7 +1507,7 @@ export const tools: Tool[] = [
       "classroom spinner",
     ],
     seo: {
-      title: "Spin Wheel Generator — Create Random Spinning Wheels | Toollyz",
+      title: "Spin Wheel Generator — Create Random Spinning Wheels",
       description:
         "Create customizable spinning wheels instantly. Perfect for giveaways, classrooms, raffles, team selection and random choices — 10 themes, elimination mode, confetti winner reveal, free.",
       what:
@@ -1601,7 +1601,7 @@ export const tools: Tool[] = [
       "random choice generator",
     ],
     seo: {
-      title: "Decision Maker Wheel — Spin the Wheel Online | Toollyz",
+      title: "Decision Maker Wheel — Spin the Wheel Online",
       description:
         "Make random decisions instantly. Spin a customizable wheel for food choices, movies, teams, workouts and more — 10 ready templates, elimination mode, confetti reveal. Free, no signup.",
       what:
@@ -1695,7 +1695,7 @@ export const tools: Tool[] = [
       "youtube giveaway",
     ],
     seo: {
-      title: "Lucky Draw Generator — Random Winner Picker Online | Toollyz",
+      title: "Lucky Draw Generator — Random Winner Picker Online",
       description:
         "Run fair random lucky draws instantly. Pick giveaway, raffle, classroom and contest winners with an animated reel reveal, multi-winner podium, templates and export — free, no signup.",
       what:
@@ -1791,7 +1791,7 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "Random Emoji Generator — Generate Fun Emoji Combinations | Toollyz",
+        "Random Emoji Generator — Generate Fun Emoji Combinations",
       description:
         "Generate random emojis, aesthetic emoji packs, cute combos and social-media emoji sets instantly. Filter by category or vibe, search 400+ emojis, save favorites — free, no signup.",
       what:
@@ -1886,7 +1886,7 @@ export const tools: Tool[] = [
       "educational facts",
     ],
     seo: {
-      title: "Random Fact Generator — Fun & Interesting Facts Online | Toollyz",
+      title: "Random Fact Generator — Fun & Interesting Facts Online",
       description:
         "Discover fun, weird, educational and mind-blowing facts instantly. Explore science, space, history, psychology, animals and more — with a daily fact, search and favorites. Free.",
       what:
@@ -1981,7 +1981,7 @@ export const tools: Tool[] = [
       "jokes for kids",
     ],
     seo: {
-      title: "Random Joke Generator — Funny Jokes Online | Toollyz",
+      title: "Random Joke Generator — Funny Jokes Online",
       description:
         "Generate funny random jokes instantly. Explore dad jokes, programming jokes, one-liners, puns, knock-knocks and meme humor — all clean and family-friendly. React, save and share. Free.",
       what:
@@ -2077,7 +2077,7 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "Random Quote Generator — Inspirational Quotes Online | Toollyz",
+        "Random Quote Generator — Inspirational Quotes Online",
       description:
         "Generate inspirational, motivational, philosophical and famous quotes instantly. Filter by author, export aesthetic quote images, save favorites — explore wisdom, success and happiness. Free.",
       what:
@@ -2176,7 +2176,7 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "Calendar Generator — Create Printable Calendars Online | Toollyz",
+        "Calendar Generator — Create Printable Calendars Online",
       description:
         "Free online calendar generator. Make printable monthly or yearly calendars for any year with seven themes, holidays, custom events and a planner. Export to PDF, PNG or ICS — no signup.",
       what:
@@ -2275,7 +2275,7 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "Horoscope Generator — Daily Zodiac Predictions Online | Toollyz",
+        "Horoscope Generator — Daily Zodiac Predictions Online",
       description:
         "Generate personalized daily, weekly, monthly and yearly horoscopes, zodiac compatibility reports, lucky numbers and shareable astrology cards instantly with Toollyz. Free, no signup.",
       what:

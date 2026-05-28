@@ -5,7 +5,7 @@ import { ToolsExplorer } from "@/components/tools/tools-explorer";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "All Tools — Toollyz",
+  title: "All Tools",
   description:
     "Explore every tool on Toollyz. Generators, converters, calculators, SEO helpers and developer utilities — all in one place.",
   path: "/tools",
