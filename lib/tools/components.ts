@@ -125,6 +125,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "ip-address-finder": dynamic(
     () => import("@/components/tools/ip-address-finder"),
   ),
+  "ping-test": dynamic(
+    () => import("@/components/tools/ping-test"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

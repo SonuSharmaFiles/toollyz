@@ -4175,13 +4175,104 @@ export const tools: Tool[] = [
   {
     slug: "ping-test",
     name: "Ping Test Tool",
-    tagline: "Check latency to any server or domain.",
+    tagline: "Measure round-trip latency to any host from your browser.",
     description:
-      "Measure the round-trip latency to any domain or IP. Useful for diagnosing slow or unstable connections.",
+      "Check the HTTP(S) round-trip latency, jitter and packet loss to any domain or host, with live per-request results and handy presets — straight from your browser. Free and private.",
     categoryId: "developer",
     icon: Activity,
-    status: "coming-soon",
-    keywords: ["ping", "latency", "network test"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "ping test",
+      "latency test",
+      "ping tool",
+      "network latency",
+      "ping online",
+      "check latency",
+      "round trip time",
+      "jitter test",
+      "packet loss test",
+      "ping website",
+      "host latency",
+      "connection test",
+      "rtt test",
+      "ping domain",
+    ],
+    seo: {
+      title: "Ping Test — Measure Latency, Jitter & Packet Loss Online",
+      description:
+        "Measure round-trip latency, jitter and packet loss to any host with Toollyz Ping Test. Live per-request results and one-click presets, run entirely from your browser — free and private.",
+      what:
+        "A Ping Test measures how long it takes a request to travel to a server and back — your latency. Because browsers cannot send real ICMP ping packets, Toollyz Ping Test measures HTTP(S) round-trip time instead: it times repeated requests to the host you choose and reports the minimum, average, median and maximum latency, plus jitter (how much latency varies) and packet loss. A DNS/TLS warm-up request is discarded so the numbers reflect steady-state latency, and unreachable attempts count as lost packets. The requests go directly from your browser to the host (or fall back to an image load) — there is no Toollyz server in the middle. Because it's HTTP-based, the numbers are higher than a terminal ICMP ping and include the web server's response time, so it's best used to compare hosts and spot instability rather than as an absolute ping value.",
+      how: [
+        "Type a domain or host (or pick a preset like Cloudflare or Google).",
+        "Click Ping — the tool sends several requests and times each round trip.",
+        "Watch the live latency bars, then read min, average, jitter and packet loss.",
+        "Compare different hosts, or re-run any host from your recent history.",
+      ],
+      benefits: [
+        "Min, average, median and max round-trip latency for any host.",
+        "Jitter and packet-loss measurement to spot unstable connections.",
+        "Live per-request latency bars as the test runs.",
+        "One-click HTTPS presets (Cloudflare, Google, GitHub) plus a custom host field.",
+        "A discarded DNS/TLS warm-up so results reflect steady-state latency.",
+        "Recent-test history you can re-run with one click.",
+        "Runs directly from your browser — no Toollyz server in the path.",
+        "Honest methodology: clearly labeled HTTP(S) latency, not ICMP ping.",
+      ],
+      relatedSlugs: [
+        "internet-speed-test",
+        "ip-address-finder",
+        "dns-lookup",
+        "json-formatter",
+      ],
+      faqs: [
+        {
+          q: "What is a ping test?",
+          a: "A ping test measures latency — the round-trip time for a request to reach a server and come back. Lower is better. This tool reports min/avg/median/max latency along with jitter and packet loss for the host you choose.",
+        },
+        {
+          q: "Is this a real ICMP ping?",
+          a: "No. Browsers cannot send ICMP echo packets, so this measures HTTP(S) round-trip time to the host instead. It's a reliable relative measure of latency, but the absolute numbers are higher than a terminal `ping` because they include TLS and web-server response time.",
+        },
+        {
+          q: "Why are my numbers higher than command-line ping?",
+          a: "Command-line ping uses ICMP, which a server answers almost instantly at the network layer. A browser request goes through HTTPS and the web server's application layer, adding overhead. Use this tool to compare hosts and detect jitter/instability, not as an exact ICMP value.",
+        },
+        {
+          q: "What are jitter and packet loss?",
+          a: "Jitter is how much your latency varies between requests — high jitter causes choppy calls and games even when average latency looks fine. Packet loss is the percentage of requests that got no response; anything above 0% on a stable host warrants attention.",
+        },
+        {
+          q: "Why must the host use HTTPS?",
+          a: "This page is served over HTTPS, and browsers block insecure (http://) requests from a secure page (mixed content). The tool automatically upgrades hosts to https://. A host that doesn't support HTTPS will show up as packet loss.",
+        },
+        {
+          q: "Why do the presets use hostnames instead of raw IPs like 8.8.8.8?",
+          a: "Browsers require a valid TLS certificate for the address you connect to. Many raw IPs don't present a browser-valid certificate, so they'd appear as 100% loss. The presets use HTTPS hostnames (like 1.1.1.1 and dns.google) that do.",
+        },
+        {
+          q: "Can I test any website?",
+          a: "Yes — enter any domain. Some hosts block or rate-limit automated requests, which can show as higher latency or loss; that reflects how that host treats browser requests, not a fault in the tool.",
+        },
+        {
+          q: "Is my data sent to a server?",
+          a: "No. Toollyz has no server — the timing requests go directly from your browser to the host you choose. Your recent-test history is stored only in your browser's local storage.",
+        },
+        {
+          q: "How many requests does it send?",
+          a: "It sends a warm-up request (discarded) followed by about a dozen timed requests with a short gap between them, then aggregates the results. This balances accuracy with speed.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The host input, presets, live latency bars and results are fully responsive, so you can test latency from any device.",
+        },
+        {
+          q: "Is this ping test free?",
+          a: "Completely free with no signup and no limits. Latency, jitter and packet-loss testing are available to everyone, directly from your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "ip-address-finder",
