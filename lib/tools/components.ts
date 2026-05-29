@@ -122,6 +122,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "clipboard-manager": dynamic(
     () => import("@/components/tools/clipboard-manager"),
   ),
+  "ip-address-finder": dynamic(
+    () => import("@/components/tools/ip-address-finder"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

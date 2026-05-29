@@ -4186,13 +4186,100 @@ export const tools: Tool[] = [
   {
     slug: "ip-address-finder",
     name: "IP Address Finder",
-    tagline: "See your public IP, location and ISP at a glance.",
+    tagline: "See your public IP, location, ISP and network details.",
     description:
-      "Find your public IP address along with location, ISP and network details — all in one quick view.",
+      "Find your public IPv4 and IPv6 address along with approximate location, ISP, timezone, local IP and connection details — looked up directly from your browser. Free and private.",
     categoryId: "developer",
     icon: Globe,
-    status: "coming-soon",
-    keywords: ["ip address", "what is my ip", "location", "isp"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "ip address finder",
+      "what is my ip",
+      "my ip address",
+      "find my ip",
+      "ip lookup",
+      "public ip",
+      "ip location",
+      "ipv6 address",
+      "isp lookup",
+      "check my ip",
+      "whats my ip",
+      "ip geolocation",
+      "my ip location",
+      "ip checker",
+    ],
+    seo: {
+      title: "IP Address Finder — What Is My IP, Location & ISP",
+      description:
+        "Instantly find your public IPv4/IPv6 address, approximate location, ISP, timezone, local IP and connection details with Toollyz IP Address Finder — looked up directly from your browser.",
+      what:
+        "An IP Address Finder tells you the public IP address your internet connection presents to the websites you visit, along with the details that can be inferred from it. Toollyz IP Address Finder shows your public IPv4 (and IPv6, if your network has one), an approximate location (city, region, country), your ISP and organization, your timezone, and — detected entirely in your browser — your local/private IP and connection estimate. Because this site has no server of its own, the lookup is made directly from your browser to a reputable public API (ipwho.is, with ipapi.co and ipify as fallbacks); finding your public IP necessarily reveals it to that one provider, but Toollyz never sees or stores it. Your local IP is discovered in-browser via WebRTC and never leaves your device, and the browser/connection details come straight from your own browser.",
+      how: [
+        "Open the tool — it automatically looks up your public IP and details.",
+        "Read your public IP, location, ISP and timezone, with IPv6 if available.",
+        "Check your in-browser local IP and connection estimate below.",
+        "Click your IP to copy it, or press Refresh to look it up again.",
+      ],
+      benefits: [
+        "Your public IPv4 and IPv6 (when your network supports it), with one-click copy.",
+        "Approximate location — city, region, country — plus ISP, organization and timezone.",
+        "Local/private IP discovered in your browser via WebRTC, never uploaded.",
+        "Connection estimate (type, downlink, RTT) where the browser exposes it.",
+        "Browser & device details: platform, languages, timezone, screen and CPU.",
+        "Sequential provider chain so your IP is revealed to at most one lookup service.",
+        "Clear privacy notes — no Toollyz server, nothing stored.",
+        "Free, instant and works on any device.",
+      ],
+      relatedSlugs: [
+        "internet-speed-test",
+        "ping-test",
+        "dns-lookup",
+        "jwt-decoder",
+      ],
+      faqs: [
+        {
+          q: "What is my IP address?",
+          a: "Your IP address is the unique number your network presents to the internet so servers know where to send responses. This tool shows your public IP (the one websites see) plus, when available, your IPv6 address and your device's local IP.",
+        },
+        {
+          q: "What's the difference between my public and local IP?",
+          a: "Your public IP is assigned by your ISP and shared by every device on your network — it's what websites see. Your local (private) IP, like 192.168.x.x, identifies your device inside your home/office network. This tool shows both when your browser allows it.",
+        },
+        {
+          q: "How accurate is the location?",
+          a: "IP-based geolocation is approximate. It often points to your ISP's regional hub rather than your exact address and can be off by tens of miles. If you use a VPN or proxy, it shows that server's location instead of yours.",
+        },
+        {
+          q: "Is my IP sent to Toollyz?",
+          a: "No — Toollyz has no server. The lookup is made directly from your browser to a public API (ipwho.is, with ipapi.co/ipify as fallbacks). Finding your public IP unavoidably reveals it to that one provider, but Toollyz never receives or stores it.",
+        },
+        {
+          q: "Why don't I see an IPv6 address?",
+          a: "Many home connections are still IPv4-only or use carrier-grade NAT, so there's no public IPv6 to show. If your network supports IPv6, it appears in its own card; otherwise the tool says it isn't available.",
+        },
+        {
+          q: "Why is my local IP shown as a .local name?",
+          a: "Modern browsers deliberately hide your real local IP behind a random “.local” address for privacy (mDNS obfuscation). That's expected and a good thing — when it happens, the tool says so rather than showing a private address.",
+        },
+        {
+          q: "Why is the connection card missing in my browser?",
+          a: "The connection estimate uses the Network Information API, which only Chromium-based browsers implement. On Safari and Firefox the card is hidden because the data isn't available. For a real measurement, use the Internet Speed Test.",
+        },
+        {
+          q: "Can I hide or change my IP address?",
+          a: "Yes — a VPN or proxy routes your traffic through another server, so websites (and this tool) see that server's IP and location instead of yours. Run the finder with your VPN on and off to see the difference.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The lookup and all detail cards are fully responsive, though local-IP detection and the connection card depend on what your mobile browser exposes.",
+        },
+        {
+          q: "Is this IP address finder free?",
+          a: "Completely free with no signup. Looking up your IP, location, ISP and network details is available to everyone, directly from your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "dns-lookup",
