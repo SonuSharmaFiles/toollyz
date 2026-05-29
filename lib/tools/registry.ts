@@ -3455,13 +3455,104 @@ export const tools: Tool[] = [
   {
     slug: "html-minifier",
     name: "HTML Minifier",
-    tagline: "Minify HTML to reduce file size.",
+    tagline: "Minify, optimize and validate HTML in one workspace.",
     description:
-      "Remove whitespace, comments and redundant attributes from HTML — preview output side-by-side.",
+      "Compress, beautify, validate and analyze HTML in an IDE-style editor with granular minification controls, live before/after comparison, performance analytics, inline CSS/JS minification, bulk processing and export. Free and private.",
     categoryId: "developer",
     icon: Code,
-    status: "coming-soon",
-    keywords: ["html", "minify", "compress", "optimize"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "html minifier",
+      "minify html",
+      "html compressor",
+      "compress html",
+      "html optimizer",
+      "optimize html",
+      "html beautifier",
+      "html formatter",
+      "html validator",
+      "minify html online",
+      "html minify tool",
+      "shrink html",
+      "reduce html size",
+      "inline css minifier",
+    ],
+    seo: {
+      title: "HTML Minifier — Compress & Optimize HTML Code Online",
+      description:
+        "Minify and optimize HTML instantly with Toollyz HTML Minifier. Reduce file size, improve page speed, validate markup, analyze performance gains, and export optimized HTML code online — 100% in your browser.",
+      what:
+        "An HTML Minifier removes everything a browser doesn't need — extra whitespace, line breaks, comments and redundant attributes — so your pages download and render faster without changing how they look. Toollyz HTML Minifier is a complete optimization workspace, not just a compressor: an IDE-style editor with syntax highlighting and line numbers, granular minification controls (collapse whitespace, remove comments while preserving conditional comments, drop redundant and empty attributes, collapse boolean attributes, remove optional tags) plus one-click Safe, Maximum and Conservative presets. It minifies inline CSS and JavaScript, beautifies and cleans up messy markup, validates your HTML for unclosed tags, deprecated elements and accessibility gaps, and shows a live before/after comparison with a full analytics dashboard — bytes saved, compression percentage, an optimization score and estimated load-time savings. You can also batch-process multiple files at once and export optimized HTML — all entirely in your browser, so your code is never uploaded.",
+      how: [
+        "Paste, type or drop an HTML file into the editor — it minifies and validates as you type.",
+        "Pick a preset (Safe, Maximum or Conservative) or fine-tune each option in the Settings tab.",
+        "Review the live output, before/after comparison and the analytics dashboard for size savings.",
+        "Copy the minified HTML or download it — or drop several files into the Bulk tab to optimize them together.",
+      ],
+      benefits: [
+        "Real-time minification with a live before/after comparison and bytes-saved breakdown.",
+        "Granular controls plus Safe, Maximum and Conservative presets for one-click optimization.",
+        "IDE-style editor with HTML syntax highlighting, line numbers and code-style typography.",
+        "Inline CSS and JavaScript minification, attribute cleanup and optional-tag removal.",
+        "Validation that flags unclosed tags, deprecated elements, missing alt text and duplicate ids.",
+        "Analytics dashboard — size reduction, compression percentage, optimization score and load-time savings.",
+        "Bulk processing for multiple files with per-file savings and one-click multi-file export.",
+        "100% private — everything runs in your browser, with undo/redo, saved sessions and instant export.",
+      ],
+      relatedSlugs: [
+        "css-minifier",
+        "javascript-minifier",
+        "json-formatter",
+        "xml-formatter",
+      ],
+      faqs: [
+        {
+          q: "What is an HTML minifier?",
+          a: "An HTML minifier is a tool that strips everything a browser doesn't need to render a page — extra whitespace, line breaks, comments and redundant attributes — to produce a smaller file. Toollyz HTML Minifier goes further with presets, inline CSS/JS minification, validation, a before/after comparison and a full analytics dashboard.",
+        },
+        {
+          q: "How does HTML minification work?",
+          a: "The tool parses your markup into tokens, then re-emits it without the bytes that don't affect rendering: it collapses runs of whitespace, removes comments, drops default and empty attributes, collapses boolean attributes and can remove optional tags. You choose exactly how aggressive to be with presets or individual toggles.",
+        },
+        {
+          q: "Will minification break my HTML?",
+          a: "The default Safe preset is designed never to change how your page renders — whitespace inside <pre> and <textarea> is preserved and only redundant bytes are removed. The Maximum preset is more aggressive (it removes optional tags and empty attributes), so use the live comparison and validation to confirm the result before shipping.",
+        },
+        {
+          q: "Can I beautify HTML again after minifying?",
+          a: "Yes. Click Beautify to pretty-print minified or messy HTML with clean, consistent indentation (2 spaces, 4 spaces or tabs). You can switch between minify and beautify as often as you like, and undo/redo is always available.",
+        },
+        {
+          q: "Does this minify inline CSS?",
+          a: "Yes. With “Minify inline CSS” enabled, the tool compresses both your <style> blocks and style=\"…\" attributes — removing comments, collapsing whitespace and trimming redundant semicolons — while leaving string values intact.",
+        },
+        {
+          q: "Does this minify inline JavaScript?",
+          a: "Yes. Enable “Minify inline JavaScript” (included in the Maximum preset) to strip comments and indentation from <script> blocks. It uses a safe, string- and regex-aware pass that preserves line breaks so your code keeps working.",
+        },
+        {
+          q: "Can I upload or batch-process HTML files?",
+          a: "Yes. Drag a single file onto the editor to load it, or drop several files into the Bulk tab to minify them all at once with your current settings. You'll see per-file savings and can download each optimized file or all of them together.",
+        },
+        {
+          q: "Does it validate my HTML?",
+          a: "Yes. The Validate tab reports unclosed and mismatched tags, deprecated elements and attributes, missing image alt text, duplicate ids and a missing doctype or lang attribute — with line numbers and fix hints. Validation is advisory, so minification still works even if warnings appear.",
+        },
+        {
+          q: "Is my HTML code stored online?",
+          a: "No. All parsing, minification, validation and analysis happen entirely in your browser — your HTML is never uploaded to any server. Saved sessions are kept only in your device's local storage.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The editor, settings, analytics, validation, comparison and bulk tools are fully responsive and touch-friendly, so you can optimize HTML on any device.",
+        },
+        {
+          q: "Is this HTML minifier free?",
+          a: "Completely free with no signup and no limits. Minification, beautifying, validation, analytics, comparison, inline CSS/JS minification, bulk processing and exports are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "javascript-minifier",

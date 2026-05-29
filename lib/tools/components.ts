@@ -98,6 +98,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "xml-formatter": dynamic(
     () => import("@/components/tools/xml-formatter"),
   ),
+  "html-minifier": dynamic(
+    () => import("@/components/tools/html-minifier"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),
