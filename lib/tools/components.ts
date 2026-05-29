@@ -83,6 +83,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "slugify": dynamic(
     () => import("@/components/tools/slugify"),
   ),
+  "online-notepad": dynamic(
+    () => import("@/components/tools/online-notepad"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

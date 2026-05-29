@@ -2761,11 +2761,102 @@ export const tools: Tool[] = [
     name: "Online Notepad",
     tagline: "A distraction-free, auto-saving online notepad.",
     description:
-      "Write, save and access your notes from any device. Auto-save, dark mode and markdown support — no signup required.",
+      "A distraction-free online notepad with auto-save, multiple notes, Markdown formatting and live preview, word goals, a focus timer and TXT/MD/HTML/PDF/DOC export. Free, private and offline-ready.",
     categoryId: "text",
     icon: NotebookPen,
-    status: "coming-soon",
-    keywords: ["notepad", "notes", "scratch pad", "writing"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "online notepad",
+      "notepad online",
+      "free notepad",
+      "browser notepad",
+      "online text editor",
+      "notes online",
+      "markdown editor",
+      "distraction free writing",
+      "auto save notes",
+      "scratch pad",
+      "online notes app",
+      "write online",
+      "note taking",
+      "offline notepad",
+    ],
+    seo: {
+      title: "Online Notepad — Free Browser-Based Text Editor",
+      description:
+        "Write, edit, save and organize notes instantly with Toollyz Online Notepad. Distraction-free writing with auto-save, Markdown support, live preview, exports and productivity tools — free and private.",
+      what:
+        "An Online Notepad is a browser-based writing space where you can jot down notes, draft documents and organize ideas without installing anything. Toollyz Online Notepad is a premium, distraction-free workspace that auto-saves every keystroke to your browser, so your notes are always there when you return — even offline. Manage multiple notes in a searchable sidebar with pinning and duplication, write in plain text or Markdown with a floating formatting toolbar and a live split-screen preview, and track your progress with live word and character counts, a word goal, a focus timer and writing streak badges. Find & replace, undo/redo, font and layout customization, focus and fullscreen modes, and one-click export to TXT, Markdown, HTML, PDF or DOC make it a complete lightweight editor. Everything stays private in your browser — no account, no upload.",
+      how: [
+        "Start typing in the editor — your note auto-saves to your browser instantly.",
+        "Create and organize multiple notes in the sidebar; pin, duplicate, search or delete them.",
+        "Turn on Markdown to format with the toolbar and see a live preview in split-screen.",
+        "Set a word goal, run the focus timer, then export your note as TXT, Markdown, HTML, PDF or DOC.",
+      ],
+      benefits: [
+        "Auto-saves everything locally — pick up exactly where you left off, even offline.",
+        "Multiple notes with a searchable sidebar, pinning, duplication and quick switching.",
+        "Markdown formatting with a floating toolbar and live split-screen preview.",
+        "Live word, character, sentence, paragraph and reading-time analytics.",
+        "Word goals, a focus timer, typing speed and writing achievement badges.",
+        "Find & replace, undo/redo, and font, size, line-height and width customization.",
+        "Focus and fullscreen distraction-free writing modes with light and dark themes.",
+        "Export to TXT, Markdown, HTML, PDF and DOC — 100% private, no signup.",
+      ],
+      relatedSlugs: [
+        "markdown-editor",
+        "word-counter",
+        "character-counter",
+        "text-diff-checker",
+      ],
+      faqs: [
+        {
+          q: "What is an online notepad?",
+          a: "An online notepad is a web-based text editor you can use straight from your browser to write and save notes without installing software. Toollyz Online Notepad adds auto-save, multiple notes, Markdown formatting, analytics and exports on top of a clean, distraction-free writing experience.",
+        },
+        {
+          q: "Does the notepad auto-save?",
+          a: "Yes. Every change is saved automatically to your browser's local storage within moments, and a save indicator confirms it. When you come back later, your notes are exactly as you left them.",
+        },
+        {
+          q: "Can I use this offline?",
+          a: "Yes. Because everything is stored locally in your browser, you can keep writing without an internet connection. Your notes persist between sessions on the same device and browser.",
+        },
+        {
+          q: "Can I export my notes?",
+          a: "Yes. Export any note as a plain-text TXT, a Markdown .md file, a styled HTML page, a Word-compatible DOC, or a PDF via the print dialog. You can also copy the text or print it directly.",
+        },
+        {
+          q: "Does this support Markdown?",
+          a: "Yes. Toggle Markdown mode to use a formatting toolbar (bold, italic, headings, lists, quotes, code and more) and see a live, GitHub-style preview in split-screen — including syntax-styled code blocks.",
+        },
+        {
+          q: "Can I create multiple notes?",
+          a: "Yes. Use the sidebar to create, rename, duplicate, pin, search and delete as many notes as you like. Pinned notes stay at the top, and the most recently edited notes are listed first.",
+        },
+        {
+          q: "Can I upload text files?",
+          a: "Yes. Drag and drop or browse for plain-text and Markdown files (.txt, .md and similar) and they'll open as a new note ready to edit. For Word documents, paste the text in.",
+        },
+        {
+          q: "Is my data stored online?",
+          a: "No. Your notes never leave your device — they're saved only in your browser's local storage. There's no account and nothing is uploaded to a server, so your writing stays completely private.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The editor, sidebar, toolbar and preview are fully responsive and touch-friendly, with a focus mode for comfortable, distraction-free writing on phones and tablets.",
+        },
+        {
+          q: "Can I print my notes?",
+          a: "Yes. The Print / PDF option opens a clean, formatted version of your note in a new window so you can print it or save it as a PDF from your browser's print dialog.",
+        },
+        {
+          q: "Is this online notepad free?",
+          a: "Completely free with no signup and no limits. Auto-save, multiple notes, Markdown, analytics, productivity tools and all export formats are available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "markdown-editor",
