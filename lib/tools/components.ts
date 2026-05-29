@@ -107,6 +107,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "css-minifier": dynamic(
     () => import("@/components/tools/css-minifier"),
   ),
+  "jwt-decoder": dynamic(
+    () => import("@/components/tools/jwt-decoder"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

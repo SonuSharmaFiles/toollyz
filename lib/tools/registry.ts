@@ -3783,13 +3783,100 @@ export const tools: Tool[] = [
   {
     slug: "jwt-decoder",
     name: "JWT Decoder",
-    tagline: "Decode and inspect JSON Web Tokens.",
+    tagline: "Decode, inspect and verify JSON Web Tokens.",
     description:
-      "Paste any JWT to view its header, payload and signature. Verify expiration and issuer claims locally.",
+      "Decode any JWT to read its header, payload and claims, humanize expiry dates, spot unsafe tokens and verify HS256 signatures — all locally in your browser. Free and private.",
     categoryId: "developer",
     icon: ShieldCheck,
-    status: "coming-soon",
-    keywords: ["jwt", "decode", "token", "auth"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "jwt decoder",
+      "decode jwt",
+      "json web token",
+      "jwt parser",
+      "jwt debugger",
+      "jwt viewer",
+      "jwt verify",
+      "decode token online",
+      "jwt claims",
+      "jwt expiration",
+      "hs256 verify",
+      "bearer token decoder",
+      "jwt inspector",
+      "auth token decoder",
+    ],
+    seo: {
+      title: "JWT Decoder — Decode & Verify JSON Web Tokens Online",
+      description:
+        "Decode and inspect JSON Web Tokens instantly with Toollyz JWT Decoder. Read the header and payload, humanize exp/iat claims, detect unsafe tokens, and verify HS256 signatures — 100% in your browser.",
+      what:
+        "A JWT Decoder splits a JSON Web Token into its three parts — header, payload and signature — and base64url-decodes the first two so you can read what a token actually contains. Toollyz JWT Decoder is a full inspection workspace: it pretty-prints the header and payload with syntax highlighting, lists every claim with a plain-English description, and humanizes the registered date claims (exp, iat, nbf) into readable timestamps with relative times and an at-a-glance status — active, expired or not-yet-valid. It flags unsafe tokens (alg: none), malformed structures and empty signatures, and can verify HS256 signatures right in your browser using the Web Crypto API when you paste the secret. RS256/ES256 tokens are decoded for inspection (verifying those requires the issuer's public key). Everything — decoding, claim analysis and signature verification — happens entirely on your device, so your tokens and secrets are never uploaded.",
+      how: [
+        "Paste a JWT (header.payload.signature) into the token box — it decodes as you type.",
+        "Read the colour-coded header and payload, and review every claim with its meaning.",
+        "Check the status badge to see whether the token is active, expired or not yet valid.",
+        "For HS256 tokens, paste the secret and click Verify to confirm the signature locally.",
+      ],
+      benefits: [
+        "Instant, UTF-8-correct base64url decoding of the header and payload.",
+        "Syntax-highlighted, pretty-printed header and payload with one-click copy.",
+        "Every claim explained, with exp/iat/nbf humanized into readable dates and relative times.",
+        "Clear status — active, expired or not-yet-valid — plus warnings for alg: none and malformed tokens.",
+        "HS256 signature verification in your browser via the Web Crypto API.",
+        "RS256/ES256 tokens decoded for inspection with a clear note on public-key verification.",
+        "Works with bearer tokens, ID tokens and access tokens from any provider.",
+        "100% private — tokens and secrets never leave your browser, with autosave for your last token.",
+      ],
+      relatedSlugs: [
+        "json-formatter",
+        "base64-encoder-decoder",
+        "secure-notes",
+        "regex-tester",
+      ],
+      faqs: [
+        {
+          q: "What is a JWT decoder?",
+          a: "A JWT decoder reads a JSON Web Token and shows you what's inside it. A JWT has three base64url-encoded parts — header, payload and signature — and the decoder reveals the header and payload as readable JSON, along with the claims and their meaning.",
+        },
+        {
+          q: "How does JWT decoding work?",
+          a: "The token is split on its two dots into header, payload and signature. The header and payload are base64url-decoded (URL-safe base64 without padding) and parsed as JSON. Toollyz then humanizes the standard date claims and surfaces the algorithm, type and validity status.",
+        },
+        {
+          q: "Does decoding a JWT verify it?",
+          a: "No — decoding just reads the contents, which anyone can do. Verifying proves the token hasn't been tampered with and was signed by a trusted party. This tool can verify HS256 signatures when you supply the secret; for RS256/ES256 you'd need the issuer's public key.",
+        },
+        {
+          q: "Can I verify the signature?",
+          a: "Yes, for HS256 tokens. Paste the HMAC secret and click Verify — the check runs in your browser with the Web Crypto API and tells you whether the signature matches. RS256 and ES256 tokens are decoded for inspection but not verified, since that requires the issuer's public key.",
+        },
+        {
+          q: "Is it safe to paste my token here?",
+          a: "Yes. Everything happens locally in your browser — your token and any secret you enter are never sent to a server. That said, treat real production tokens carefully and avoid pasting them into tools you don't trust; this one is fully client-side and open to inspection.",
+        },
+        {
+          q: "How do I read the expiry (exp) claim?",
+          a: "JWT dates are NumericDate values (seconds since 1970). The decoder converts exp, iat and nbf into human-readable timestamps with a relative time (e.g. “in 2 days” or “3 hours ago”) and shows whether the token is active, expired or not yet valid.",
+        },
+        {
+          q: "What does “alg: none” mean?",
+          a: "It means the token is unsigned. Such tokens carry no cryptographic guarantee and must never be trusted in production — the decoder shows a clear warning when it sees alg: none.",
+        },
+        {
+          q: "Does it support modern tokens with Unicode?",
+          a: "Yes. Decoding is UTF-8 aware, so claims containing accented characters, emoji or non-Latin scripts (common in name and email fields) display correctly.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The token input, decoded panels, claims table and signature verification are fully responsive and touch-friendly, so you can inspect tokens on any device.",
+        },
+        {
+          q: "Is this JWT decoder free?",
+          a: "Completely free with no signup and no limits. Decoding, claim analysis and HS256 verification are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "secure-notes",
