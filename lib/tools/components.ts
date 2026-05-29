@@ -116,6 +116,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "hashtag-generator": dynamic(
     () => import("@/components/tools/hashtag-generator"),
   ),
+  "secure-notes": dynamic(
+    () => import("@/components/tools/secure-notes"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

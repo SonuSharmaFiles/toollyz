@@ -3968,13 +3968,100 @@ export const tools: Tool[] = [
   {
     slug: "secure-notes",
     name: "Secure Notes Tool",
-    tagline: "Write notes encrypted in your browser.",
+    tagline: "Password-encrypted notes that never leave your browser.",
     description:
-      "Create end-to-end encrypted notes that stay in your browser. Set a password — only you can decrypt.",
+      "Keep a password-locked vault of AES-256-encrypted notes in your browser, and share self-contained encrypted notes with a passphrase. Zero-knowledge, offline-ready and 100% private.",
     categoryId: "developer",
     icon: Lock,
-    status: "coming-soon",
-    keywords: ["secure notes", "encrypted", "private notes", "password"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "secure notes",
+      "encrypted notes",
+      "private notes",
+      "password protected notes",
+      "encrypted notepad",
+      "aes encryption",
+      "end to end encrypted notes",
+      "zero knowledge notes",
+      "encrypt text",
+      "encrypt note",
+      "secure notepad",
+      "offline notes",
+      "private notepad",
+      "encrypted journal",
+    ],
+    seo: {
+      title: "Secure Notes — Password-Encrypted Notes in Your Browser",
+      description:
+        "Write password-protected, AES-256-encrypted notes that stay in your browser with Toollyz Secure Notes. Keep a private vault and share self-contained encrypted notes — zero-knowledge and 100% offline.",
+      what:
+        "Secure Notes is a private, encrypted notebook that runs entirely in your browser. It gives you two things: a password-locked vault — a list of notes encrypted at rest with AES-256-GCM using a key derived from your master password (PBKDF2-SHA-256, 250,000 iterations) — and a share mode that encrypts any note with a passphrase into a single self-contained string you can send to someone, who decrypts it here with the same passphrase. Because it's zero-knowledge, nothing is ever uploaded: your notes, your password and your passphrases all stay on your device. The vault auto-locks when idle, stores only ciphertext in local storage, never keeps your password, and uses a fresh random salt and initialization vector for every encryption. The trade-off of true client-side encryption is that there's no password recovery — if you forget your master password, the notes genuinely cannot be decrypted by anyone, including us.",
+      how: [
+        "Create a vault and choose a master password (there's no reset, so keep it safe).",
+        "Write notes — they're encrypted and saved to your browser automatically as you type.",
+        "Lock the vault when you step away; unlock it later with your password.",
+        "Use the Share tab to encrypt a note with a passphrase, then send the encrypted text and passphrase separately.",
+      ],
+      benefits: [
+        "AES-256-GCM encryption with a PBKDF2-SHA-256-derived key (250,000 iterations).",
+        "A password-locked vault of multiple notes, encrypted at rest in your browser.",
+        "Share mode: encrypt a note into a self-contained string anyone can decrypt with the passphrase.",
+        "Zero-knowledge and offline — nothing is ever uploaded and no account is needed.",
+        "Auto-lock on inactivity, with the decryption key held only in memory.",
+        "Only ciphertext is written to local storage; your password is never stored.",
+        "Fresh random salt and IV for every encryption, with a versioned, future-proof format.",
+        "Change your master password any time — your notes are transparently re-encrypted.",
+      ],
+      relatedSlugs: [
+        "online-notepad",
+        "password-generator",
+        "jwt-decoder",
+        "base64-encoder-decoder",
+      ],
+      faqs: [
+        {
+          q: "How are my notes encrypted?",
+          a: "With AES-256-GCM, a strong authenticated encryption standard. The key is derived from your master password using PBKDF2-SHA-256 with 250,000 iterations and a random salt, so the same password produces a strong, unique key.",
+        },
+        {
+          q: "Where are my notes stored?",
+          a: "Only in your own browser's local storage, and only as encrypted ciphertext. Nothing is ever sent to a server — the tool works completely offline once the page has loaded.",
+        },
+        {
+          q: "What happens if I forget my master password?",
+          a: "There is no recovery. Because the encryption key comes from your password and is never stored, forgetting the password means the notes cannot be decrypted by anyone, including us. Choose a password you'll remember or store it in a password manager.",
+        },
+        {
+          q: "How does the share feature work?",
+          a: "Share mode encrypts a single note with a passphrase into one self-contained string (starting with TLZ1.). Send that string to someone and tell them the passphrase separately; they paste it into the Decrypt box here to read it. The string contains everything needed to decrypt except the passphrase.",
+        },
+        {
+          q: "Is this truly zero-knowledge?",
+          a: "Yes. Encryption and decryption happen in your browser with the Web Crypto API. Your password, passphrases and plaintext never leave the page, so there's nothing on any server to leak.",
+        },
+        {
+          q: "Does the vault lock automatically?",
+          a: "Yes. After a period of inactivity the vault locks and the decryption key is dropped from memory, so you'll need your password again. It also locks whenever you close or refresh the tab.",
+        },
+        {
+          q: "Can I change my master password?",
+          a: "Yes. While the vault is unlocked, open the Password panel to set a new master password — your notes are re-encrypted with a freshly derived key and saved.",
+        },
+        {
+          q: "Is it safe to share the encrypted string publicly?",
+          a: "The string is encrypted, but its safety depends entirely on the strength and secrecy of the passphrase. Use a strong, unique passphrase and share it through a different channel than the encrypted text.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. Creating and unlocking the vault, editing notes, and the encrypt/decrypt share tools are all responsive and touch-friendly.",
+        },
+        {
+          q: "Is this secure notes tool free?",
+          a: "Completely free with no signup and no limits. The encrypted vault, sharing and all encryption features are available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "clipboard-manager",
