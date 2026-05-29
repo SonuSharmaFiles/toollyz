@@ -89,6 +89,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "markdown-editor-previewer": dynamic(
     () => import("@/components/tools/markdown-editor-previewer"),
   ),
+  "ascii-art-generator": dynamic(
+    () => import("@/components/tools/ascii-art-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

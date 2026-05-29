@@ -2965,11 +2965,98 @@ export const tools: Tool[] = [
     name: "ASCII Art Generator",
     tagline: "Turn text into stylized ASCII art.",
     description:
-      "Generate ASCII art banners and text. Pick from dozens of fonts and styles, then copy or download.",
+      "Convert text and images into ASCII art instantly — with stylized banner fonts, image-to-ASCII conversion, color mode, frames and TXT/PNG/SVG/HTML export. Free and private.",
     categoryId: "text",
     icon: SquareCode,
-    status: "coming-soon",
-    keywords: ["ascii", "ascii art", "text banner", "figlet"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "ascii art generator",
+      "text to ascii",
+      "image to ascii",
+      "ascii art",
+      "ascii banner",
+      "text art generator",
+      "ascii font",
+      "figlet generator",
+      "ascii text",
+      "terminal banner",
+      "ascii image converter",
+      "ascii art maker",
+      "ansi art",
+      "ascii generator online",
+    ],
+    seo: {
+      title: "ASCII Art Generator — Convert Text & Images to ASCII Online",
+      description:
+        "Create stunning ASCII art instantly with Toollyz ASCII Art Generator. Convert text and images into creative ASCII designs, terminal banners, color ASCII and downloadable artwork online.",
+      what:
+        "An ASCII Art Generator turns text and images into pictures made of characters. Toollyz ASCII Art Generator does both: type any word or name and render it as a stylized banner in over a dozen styles — block, shade, outline, banner, shadow, 3D, slant and more — with adjustable height, font family and a custom fill character; or upload an image and convert it to ASCII with control over width, character set (density), brightness, contrast, invert and full-color mode. A frame generator wraps text in decorative borders, a live terminal-style preview offers zoom and fullscreen, and you can copy or export your art as TXT, PNG, SVG or HTML. A built-in style gallery and ready-made art help you start fast — and everything runs privately in your browser, so uploaded images never leave your device.",
+      how: [
+        "Choose a mode: Text to ASCII, Image to ASCII, or the Frame generator.",
+        "For text, type your words and pick a style, height and fill character; for images, upload or drop a file and tune width, character set, brightness and color.",
+        "Preview your art live in the terminal window, with zoom and fullscreen.",
+        "Copy the result or export it as TXT, PNG, SVG or HTML.",
+      ],
+      benefits: [
+        "Text-to-ASCII with 14 banner styles, adjustable height, font family and custom fill characters.",
+        "Image-to-ASCII conversion for PNG, JPG, WEBP and GIF with width and density control.",
+        "Brightness, contrast, invert and seven character ramps for fine-tuned image art.",
+        "Full-color ASCII mode that samples your image's real colors.",
+        "Decorative frame generator with single, double, rounded, bold and ASCII borders.",
+        "Live terminal-style preview with zoom, fullscreen and pick-your-color output.",
+        "Export to TXT, PNG, SVG and HTML, plus a style gallery and ready-made art.",
+        "Saved history and favorites — 100% private, your images never leave your browser.",
+      ],
+      relatedSlugs: [
+        "qr-code-generator",
+        "online-notepad",
+        "markdown-editor-previewer",
+        "random-emoji-generator",
+      ],
+      faqs: [
+        {
+          q: "What is ASCII art?",
+          a: "ASCII art is a graphic design technique that uses printable text characters to create pictures and stylized text. It dates back to early computers and typewriters and is still popular for terminal banners, code comments, social media and retro aesthetics.",
+        },
+        {
+          q: "How does ASCII art generation work?",
+          a: "For text, Toollyz renders your words to an invisible canvas and samples the shapes into a grid of characters, then styles them as block, outline, shadow or 3D art. For images, it scales the picture down and maps each cell's brightness to a character from light to dark.",
+        },
+        {
+          q: "Can I convert images to ASCII art?",
+          a: "Yes. Upload, drag and drop, or paste an image URL, then adjust the width, character set, brightness, contrast and invert to get the look you want. PNG, JPG, WEBP and GIF (first frame) are supported.",
+        },
+        {
+          q: "Can I customize the character set?",
+          a: "Yes. Choose from seven built-in ramps — standard, detailed, blocks, shades, minimal, binary and dots — or type your own custom character set ordered from dark to light. For text art you can pick any fill character.",
+        },
+        {
+          q: "Can I export ASCII art as PNG?",
+          a: "Yes. Export your art as a PNG image, an SVG vector, an HTML file or plain TXT. You can also copy it to the clipboard with one click to paste anywhere.",
+        },
+        {
+          q: "Does this support colored ASCII?",
+          a: "Yes. Turn on color mode when converting an image and the ASCII characters keep the colors sampled from your photo. You can also pick a terminal color (green, cyan, amber, neon or white) for text art.",
+        },
+        {
+          q: "Can I create terminal banners and frames?",
+          a: "Yes. The text mode is perfect for terminal and README banners, and the Frame generator wraps any text in decorative borders — single, double, rounded, bold, ASCII, stars or dotted.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes. The generator, controls, live preview and galleries are fully responsive and touch-friendly, with zoom and fullscreen for comfortable viewing on any device.",
+        },
+        {
+          q: "Is my uploaded image stored online?",
+          a: "No. All conversion happens entirely in your browser using a canvas — your images are never uploaded to any server. Your saved art and settings stay in your device's local storage.",
+        },
+        {
+          q: "Is this ASCII art generator free?",
+          a: "Completely free with no signup and no limits. Text art, image conversion, color mode, frames and all export formats are available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "fancy-text-generator",
