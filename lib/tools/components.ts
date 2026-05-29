@@ -113,6 +113,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "regex-tester": dynamic(
     () => import("@/components/tools/regex-tester"),
   ),
+  "hashtag-generator": dynamic(
+    () => import("@/components/tools/hashtag-generator"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

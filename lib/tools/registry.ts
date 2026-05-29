@@ -5657,13 +5657,100 @@ export const tools: Tool[] = [
   {
     slug: "hashtag-generator",
     name: "Hashtag Generator",
-    tagline: "Generate trending hashtags from any keyword.",
+    tagline: "Generate relevant hashtags for any topic.",
     description:
-      "Find trending and relevant hashtags for Instagram, X, TikTok and LinkedIn from any seed keyword.",
+      "Turn any keyword into relevant, popular and niche hashtag suggestions for Instagram, TikTok, X, LinkedIn and YouTube, with a broad/niche reach mix, favorites and one-click copy. Free and private.",
     categoryId: "seo",
     icon: Hash,
-    status: "coming-soon",
-    keywords: ["hashtag generator", "trending hashtags", "instagram"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "hashtag generator",
+      "instagram hashtags",
+      "tiktok hashtags",
+      "hashtag suggestions",
+      "best hashtags",
+      "hashtags for reels",
+      "hashtag finder",
+      "social media hashtags",
+      "hashtag tool",
+      "youtube hashtags",
+      "linkedin hashtags",
+      "niche hashtags",
+      "hashtag ideas",
+      "copy hashtags",
+    ],
+    seo: {
+      title: "Hashtag Generator — Relevant Hashtags for Any Topic",
+      description:
+        "Generate relevant, popular and niche hashtags for Instagram, TikTok, X, LinkedIn and YouTube with Toollyz Hashtag Generator. Pick a reach mix, save favorites and copy with one click — free and private.",
+      what:
+        "A Hashtag Generator turns a topic or keyword into a set of relevant hashtags you can add to a post to reach more people. Toollyz Hashtag Generator expands your seed keyword into useful variations and pairs it with curated banks of popular and long-tail tags tuned for each platform — Instagram, TikTok, X, LinkedIn and YouTube — each with its own sensible default count. A reach-mix control lets you lean toward broad, high-volume tags (more reach, more competition) or niche, long-tail tags (smaller audiences that are easier to rank in), and it auto-detects the topic's category (travel, food, fitness, tech and more) to add fitting suggestions. You can shuffle for fresh ideas, save favorites, and copy everything as a ready-to-paste block or one tag per line. Importantly, these are curated, relevance-ranked suggestions generated entirely in your browser — not live trend data scraped from any platform — so nothing you type is ever uploaded.",
+      how: [
+        "Enter a topic or a few keywords (for example, “vegan recipes”).",
+        "Choose your platform and set how many hashtags you want.",
+        "Pick a reach mix — broad, balanced or niche — and shuffle for fresh ideas.",
+        "Tap any hashtag to copy it, save favorites, or copy the whole set at once.",
+      ],
+      benefits: [
+        "Keyword expansion into relevant, ready-to-use hashtags.",
+        "Per-platform tuning for Instagram, TikTok, X, LinkedIn and YouTube.",
+        "Broad ↔ niche reach mix to balance audience size and competition.",
+        "Automatic topic detection (travel, food, fitness, tech and more) for fitting tags.",
+        "Save favorites and copy as a block or one tag per line.",
+        "A built-in blocklist avoids commonly banned or spammy tags.",
+        "Shuffle for fresh, deterministic variations any time.",
+        "100% private — generated in your browser, nothing is uploaded.",
+      ],
+      relatedSlugs: [
+        "fancy-text-generator",
+        "username-generator",
+        "word-counter",
+        "case-converter",
+      ],
+      faqs: [
+        {
+          q: "What is a hashtag generator?",
+          a: "A hashtag generator suggests relevant hashtags for a topic so your posts can reach a wider, more interested audience. You enter a keyword and it returns a mix of popular and niche tags you can copy into your caption.",
+        },
+        {
+          q: "Are these live trending hashtags?",
+          a: "No — and we're upfront about that. A privacy-first tool that runs entirely in your browser can't pull live trend data from platform APIs. Instead it generates curated, relevance-ranked suggestions from your keyword plus well-known popular and long-tail tags. They're a strong starting point you can refine for your audience.",
+        },
+        {
+          q: "How many hashtags should I use?",
+          a: "It depends on the platform. Instagram allows up to 30 and many creators use 10–20; TikTok and X do best with just a few highly relevant tags; LinkedIn typically 3–5. The tool sets a sensible default per platform, which you can adjust.",
+        },
+        {
+          q: "What's the difference between broad and niche hashtags?",
+          a: "Broad hashtags (like #travel) have huge audiences but enormous competition, so your post is seen briefly. Niche hashtags (like #solotraveltips) reach fewer but more relevant people and are easier to rank in. The reach-mix control lets you balance the two.",
+        },
+        {
+          q: "Which platforms does it support?",
+          a: "Instagram, TikTok, X (Twitter), LinkedIn and YouTube. Each platform gets its own default count and a set of platform-appropriate tags mixed into the suggestions.",
+        },
+        {
+          q: "Can I save and reuse hashtags?",
+          a: "Yes. Tap the star on any hashtag to save it; your favorites are kept in your browser's local storage and can be copied as a group whenever you need them.",
+        },
+        {
+          q: "Will it avoid banned hashtags?",
+          a: "It filters against a built-in blocklist of commonly banned or spammy tags, so they won't appear in your suggestions. Platforms change their rules often, so it's still wise to review tags before posting.",
+        },
+        {
+          q: "Is my topic or keyword stored online?",
+          a: "No. All generation happens entirely in your browser — nothing you type is uploaded. Your last topic, platform and saved favorites are kept only in your device's local storage.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The keyword input, platform picker, reach control and hashtag chips are fully responsive and touch-friendly, so you can build hashtag sets on your phone.",
+        },
+        {
+          q: "Is this hashtag generator free?",
+          a: "Completely free with no signup and no limits. Generating, shuffling, saving favorites and copying are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "website-screenshot-generator",
