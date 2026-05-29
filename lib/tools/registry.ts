@@ -3659,13 +3659,104 @@ export const tools: Tool[] = [
   {
     slug: "css-minifier",
     name: "CSS Minifier",
-    tagline: "Minify CSS to ship smaller, faster stylesheets.",
+    tagline: "Minify, beautify and analyze CSS safely.",
     description:
-      "Compress CSS by removing whitespace, comments and redundant rules — preview output side-by-side.",
+      "Compress, beautify, validate and analyze CSS in an IDE-style editor with safe minification, optimization presets, stylesheet analysis, before/after comparison, performance insights, bulk processing and export. Free and private.",
     categoryId: "developer",
     icon: FileMinus,
-    status: "coming-soon",
-    keywords: ["css", "minify", "compress", "optimize"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "css minifier",
+      "minify css",
+      "css compressor",
+      "compress css",
+      "css optimizer",
+      "css beautifier",
+      "css formatter",
+      "minify css online",
+      "reduce css size",
+      "shrink css",
+      "css minify tool",
+      "optimize stylesheet",
+      "css validator",
+      "clean css",
+    ],
+    seo: {
+      title: "CSS Minifier — Compress & Optimize CSS Code Online",
+      description:
+        "Minify and optimize CSS instantly with Toollyz CSS Minifier. Reduce file size, improve page speed, validate and analyze your stylesheet, compare before/after, and export optimized CSS online — 100% in your browser.",
+      what:
+        "A CSS Minifier removes everything a browser doesn't need to apply your styles — comments, whitespace, indentation and redundant characters — so stylesheets download and parse faster without changing how the page looks. Toollyz CSS Minifier is a complete optimization workspace, not just a compressor: an IDE-style editor with CSS syntax highlighting and line numbers, safe minification, and Safe, Aggressive and Conservative presets. It can lowercase and shorten hex colors (#ffffff → #fff), strip units from zero values, remove empty rules and preserve /*! license */ banners, beautify minified CSS back into readable form, and validate your stylesheet for unbalanced braces and unterminated comments or strings. A live before/after comparison, an analytics dashboard (bytes saved, compression percentage, optimization score, estimated load-time savings) and a stylesheet analysis (rules, selectors, declarations, media queries, colors) give real insight, plus bulk processing for many files at once. Crucially, the minifier never collapses a descendant-combinator space or alters calc() spacing, so it can't break your layout — and everything runs in your browser, so your code is never uploaded.",
+      how: [
+        "Paste, type or drop a CSS file into the editor — it minifies and validates as you type.",
+        "Pick a preset (Safe, Aggressive or Conservative) or fine-tune each option in the Settings tab.",
+        "Review the live output, before/after comparison, stylesheet analysis and size savings.",
+        "Copy the minified CSS or download it — or drop several files into the Bulk tab to optimize them together.",
+      ],
+      benefits: [
+        "Safe minification that never breaks layout — descendant combinators and calc() spacing are preserved.",
+        "Safe, Aggressive and Conservative presets for one-click optimization.",
+        "IDE-style editor with CSS syntax highlighting, line numbers and code-style typography.",
+        "Lowercase & shorten hex colors, strip zero units, remove empty rules and keep license banners.",
+        "Beautify minified CSS back to readable form with 2-space, 4-space or tab indentation.",
+        "Validation for unbalanced braces and unterminated comments or strings, with line numbers.",
+        "Analytics & stylesheet analysis — size reduction, optimization score, rules, selectors, colors.",
+        "Before/after comparison, diff, bulk processing and instant export — 100% private in your browser.",
+      ],
+      relatedSlugs: [
+        "html-minifier",
+        "javascript-minifier",
+        "json-formatter",
+        "base64-encoder-decoder",
+      ],
+      faqs: [
+        {
+          q: "What is a CSS minifier?",
+          a: "A CSS minifier removes characters that aren't needed to render styles — comments, whitespace, indentation and redundant punctuation — to produce a smaller stylesheet that downloads and parses faster. Toollyz CSS Minifier also beautifies, validates, compares and analyzes your CSS.",
+        },
+        {
+          q: "How does CSS minification work?",
+          a: "The tool scans your stylesheet and re-emits it without unnecessary bytes: it collapses whitespace, drops comments, removes the last semicolon before a closing brace and can shorten colors and zero units. You choose how aggressive to be with presets or individual toggles.",
+        },
+        {
+          q: "Will minifying break my CSS?",
+          a: "No. The minifier is whitespace-aware: it never removes the space in a descendant combinator (.a .b is kept distinct from .a.b) and never alters the operator spacing inside calc(). The Safe preset only removes bytes that don't affect rendering; the Aggressive preset adds opt-in transforms you can preview before shipping.",
+        },
+        {
+          q: "Can I beautify CSS again after minifying?",
+          a: "Yes. Click Beautify to pretty-print minified or messy CSS with clean, consistent indentation (2 spaces, 4 spaces or tabs) and one declaration per line. You can switch between minify and beautify freely, with full undo/redo.",
+        },
+        {
+          q: "Does it shorten hex colors and remove units?",
+          a: "Yes. Enable “Shorten hex colors” to collapse #ffffff to #fff (only when safe) and “Lowercase hex colors” to normalize them. The Aggressive preset also strips units from zero values (0px → 0) for length units outside calc().",
+        },
+        {
+          q: "Can I keep license comments?",
+          a: "Yes. With “Preserve license comments” on (the default), /*! … */ and @license banners are kept even while all other comments are removed — so legal notices survive minification.",
+        },
+        {
+          q: "Can I upload or batch-process CSS files?",
+          a: "Yes. Drag a single file onto the editor to load it, or drop several files into the Bulk tab to minify them all at once with your current settings, with per-file savings and one-click download.",
+        },
+        {
+          q: "Does it validate my CSS?",
+          a: "It performs structural validation — flagging unbalanced braces or parentheses and unterminated comments or strings with line numbers — so you can catch the mistakes that most often break a stylesheet before you ship it.",
+        },
+        {
+          q: "Is my CSS stored online?",
+          a: "No. All scanning, minification, validation and analysis happen entirely in your browser — your CSS is never uploaded to any server. Saved sessions live only in your device's local storage.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The editor, settings, analytics, validation, comparison and bulk tools are fully responsive and touch-friendly, so you can optimize CSS on any device.",
+        },
+        {
+          q: "Is this CSS minifier free?",
+          a: "Completely free with no signup and no limits. Minification, beautifying, validation, analytics, comparison, bulk processing and exports are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "hash-generator",
