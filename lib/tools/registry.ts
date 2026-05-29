@@ -3557,13 +3557,104 @@ export const tools: Tool[] = [
   {
     slug: "javascript-minifier",
     name: "JavaScript Minifier",
-    tagline: "Minify JavaScript for production-ready output.",
+    tagline: "Minify, beautify and analyze JavaScript safely.",
     description:
-      "Compress JavaScript by removing whitespace, comments and mangling names — ship smaller, faster scripts.",
+      "Compress, beautify, validate and analyze JavaScript in an IDE-style editor with safe minification, optimization presets, bundle analysis, before/after comparison, performance insights, bulk processing and export. Free and private.",
     categoryId: "developer",
     icon: FileCode2,
-    status: "coming-soon",
-    keywords: ["javascript", "js", "minify", "compress"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "javascript minifier",
+      "minify javascript",
+      "js minifier",
+      "javascript compressor",
+      "compress javascript",
+      "minify js online",
+      "javascript optimizer",
+      "javascript beautifier",
+      "js beautifier",
+      "javascript validator",
+      "reduce js size",
+      "shrink javascript",
+      "minify js file",
+      "remove console logs",
+    ],
+    seo: {
+      title: "JavaScript Minifier — Compress & Optimize JS Code Online",
+      description:
+        "Minify and optimize JavaScript instantly with Toollyz JavaScript Minifier. Reduce file size, improve website performance, validate code, analyze bundle savings, and export optimized JS online — 100% in your browser.",
+      what:
+        "A JavaScript Minifier removes everything an engine doesn't need to run your code — comments, whitespace, indentation and line breaks — so scripts download and parse faster. Toollyz JavaScript Minifier is a full optimization workspace, not just a compressor: an IDE-style editor with ES6+/ESNext syntax highlighting and line numbers, safe token-based minification, and Safe, Aggressive, Production and Debug-friendly presets. It can remove console and debugger statements, preserve /*! license */ banners, optimize booleans, beautify minified code back into readable form, and validate your JavaScript for unterminated strings, mismatched brackets and syntax errors with line numbers. A live before/after comparison, an analytics dashboard (bytes saved, compression percentage, optimization score, estimated parse and load-time savings) and a bundle analysis (functions, declarations, complexity) give you real insight, and bulk processing optimizes many files at once. Crucially, it never renames your variables or functions — so unlike obfuscators, it can't change how your program behaves — and everything runs in your browser, so your code is never uploaded.",
+      how: [
+        "Paste, type or drop a JavaScript file into the editor — it minifies and validates as you type.",
+        "Pick a preset (Safe, Aggressive, Production or Debug-friendly) or fine-tune each option in Settings.",
+        "Review the live output, before/after comparison, bundle analysis and size savings.",
+        "Copy the minified JavaScript or download it — or drop several files into the Bulk tab to optimize them together.",
+      ],
+      benefits: [
+        "Safe token-based minification that never renames identifiers, so it can't break your code.",
+        "Full ES6+/ESNext support — arrow functions, classes, async/await, template literals, optional chaining and more.",
+        "Safe, Aggressive, Production and Debug-friendly presets for one-click optimization.",
+        "Remove console & debugger statements, preserve license banners and optimize booleans.",
+        "Beautify minified code back to readable form with 2-space, 4-space or tab indentation.",
+        "Validation for unterminated strings, mismatched brackets and syntax errors with line numbers.",
+        "Analytics & bundle analysis — size reduction, optimization score, parse/load savings, function counts.",
+        "Before/after comparison, diff, bulk processing and instant export — 100% private in your browser.",
+      ],
+      relatedSlugs: [
+        "html-minifier",
+        "css-minifier",
+        "json-formatter",
+        "base64-encoder-decoder",
+      ],
+      faqs: [
+        {
+          q: "What is a JavaScript minifier?",
+          a: "A JavaScript minifier removes characters that aren't needed to run your code — comments, whitespace, indentation and unnecessary line breaks — to produce a smaller file that downloads and parses faster. Toollyz JavaScript Minifier also validates, beautifies, compares and analyzes your code.",
+        },
+        {
+          q: "How does JavaScript minification work?",
+          a: "The tool tokenizes your code with a full ES6+ lexer, then re-emits it with the shortest safe spacing between tokens, dropping comments and collapsing whitespace. It preserves line breaks only where automatic semicolon insertion (ASI) requires them, so the output behaves exactly like your original.",
+        },
+        {
+          q: "Will minification break my code?",
+          a: "No. This is safe minification — it never renames variables or functions and never reorders statements, and it keeps the line breaks that ASI depends on. That makes it impossible for the minifier to change your program's behavior, unlike aggressive obfuscators.",
+        },
+        {
+          q: "Can I beautify JavaScript again?",
+          a: "Yes. Click Beautify to pretty-print minified or messy code with clean indentation (2 spaces, 4 spaces or tabs). You can toggle between minify and beautify freely, with full undo/redo.",
+        },
+        {
+          q: "Does this support ES6+ syntax?",
+          a: "Yes. The tokenizer fully understands modern JavaScript — arrow functions, classes, async/await, destructuring, template literals, optional chaining (?.), nullish coalescing (??), BigInt, numeric separators and private class fields all minify correctly.",
+        },
+        {
+          q: "Can I remove console.log statements?",
+          a: "Yes. Enable “Remove console statements” (included in the Aggressive and Production presets) to strip standalone console.log/info/warn/… calls, and “Remove debugger” to drop debugger statements before shipping.",
+        },
+        {
+          q: "What's the difference between minification and obfuscation?",
+          a: "Minification shrinks file size while keeping the code readable-ish and behaviorally identical. Obfuscation deliberately makes code hard to understand, often by mangling names and restructuring logic. This tool does safe minification, not obfuscation — for name mangling, pair it with a bundler like esbuild or Terser.",
+        },
+        {
+          q: "Can I upload or batch-process JavaScript files?",
+          a: "Yes. Drag a single file onto the editor to load it, or drop several files into the Bulk tab to minify them all at once with your current settings, with per-file savings and one-click download.",
+        },
+        {
+          q: "Is my code stored online?",
+          a: "No. All tokenizing, minification, validation and analysis happen entirely in your browser — your JavaScript is never uploaded to any server. Saved sessions live only in your device's local storage.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The editor, settings, analytics, validation, comparison and bulk tools are fully responsive and touch-friendly, so you can optimize JavaScript on any device.",
+        },
+        {
+          q: "Is this JavaScript minifier free?",
+          a: "Completely free with no signup and no limits. Minification, beautifying, validation, analytics, bundle analysis, comparison, bulk processing and exports are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "css-minifier",
