@@ -86,6 +86,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "online-notepad": dynamic(
     () => import("@/components/tools/online-notepad"),
   ),
+  "markdown-editor-previewer": dynamic(
+    () => import("@/components/tools/markdown-editor-previewer"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

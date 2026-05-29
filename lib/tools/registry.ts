@@ -485,7 +485,7 @@ export const tools: Tool[] = [
         "case-converter",
         "character-counter",
         "word-counter",
-        "markdown-editor",
+        "markdown-editor-previewer",
       ],
       faqs: [
         {
@@ -2805,7 +2805,7 @@ export const tools: Tool[] = [
         "Export to TXT, Markdown, HTML, PDF and DOC — 100% private, no signup.",
       ],
       relatedSlugs: [
-        "markdown-editor",
+        "markdown-editor-previewer",
         "word-counter",
         "character-counter",
         "text-diff-checker",
@@ -2859,15 +2859,106 @@ export const tools: Tool[] = [
     },
   },
   {
-    slug: "markdown-editor",
+    slug: "markdown-editor-previewer",
     name: "Markdown Editor & Previewer",
     tagline: "Write Markdown with a live, side-by-side preview.",
     description:
-      "A clean Markdown editor with live preview, syntax highlighting, table support and export options.",
+      "A premium live Markdown editor with real-time GitHub-Flavored preview, syntax highlighting, tables, task lists, an outline panel, templates and TXT/MD/HTML/PDF/DOC export. Free and private.",
     categoryId: "text",
     icon: FileType,
-    status: "coming-soon",
-    keywords: ["markdown", "editor", "preview", "md"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "markdown editor",
+      "markdown previewer",
+      "live markdown editor",
+      "online markdown editor",
+      "markdown preview",
+      "github flavored markdown",
+      "gfm editor",
+      "markdown to html",
+      "md editor online",
+      "markdown live preview",
+      "readme editor",
+      "markdown table generator",
+      "markdown syntax highlighting",
+      "free markdown editor",
+    ],
+    seo: {
+      title: "Markdown Editor & Previewer — Live Markdown Editor Online",
+      description:
+        "Write, preview and export Markdown instantly with Toollyz Markdown Editor & Previewer. Real-time GitHub-Flavored rendering, syntax highlighting, templates, an outline, analytics and exports.",
+      what:
+        "A Markdown Editor & Previewer is a writing tool that renders Markdown into formatted HTML in real time as you type. Toollyz Markdown Editor & Previewer is a premium, distraction-free documentation workspace with a split-screen live preview that supports GitHub-Flavored Markdown — headings, bold, italic, strikethrough, tables, task lists, blockquotes, links, images, emoji shortcodes and syntax-highlighted code blocks. A formatting toolbar and keyboard shortcuts speed up writing, an automatic document outline lets you jump between sections, and a template library gives you ready-made README, blog, documentation, changelog and project-plan scaffolds. Live analytics count words, headings, links, images and more; everything auto-saves to your browser with version snapshots and undo/redo; and you can view the generated HTML or export to Markdown, HTML, PDF, DOC or plain text — all completely private and free.",
+      how: [
+        "Type Markdown in the editor and watch the formatted preview update instantly in split-screen.",
+        "Use the toolbar or keyboard shortcuts for bold, headings, lists, tables, code blocks and links.",
+        "Load a template, navigate with the outline panel, and search with find & replace.",
+        "View the generated HTML, then export your document as Markdown, HTML, PDF, DOC or TXT.",
+      ],
+      benefits: [
+        "Real-time GitHub-Flavored Markdown preview with tables, task lists and emoji.",
+        "Beautiful syntax highlighting for code blocks across many languages.",
+        "Edit, Split and Preview modes plus focus and fullscreen distraction-free writing.",
+        "Automatic document outline for quick navigation of long documents.",
+        "Eight ready-made templates: README, blog, docs, meeting notes, changelog and more.",
+        "Live analytics: words, characters, reading time, headings, links, images, code blocks and tables.",
+        "Auto-save with version snapshots, undo/redo, find & replace and a Markdown cheat sheet.",
+        "View the generated HTML and export to MD, HTML, PDF, DOC or TXT — 100% private, no signup.",
+      ],
+      relatedSlugs: [
+        "online-notepad",
+        "markdown-to-html",
+        "word-counter",
+        "text-diff-checker",
+      ],
+      faqs: [
+        {
+          q: "What is a Markdown editor?",
+          a: "A Markdown editor lets you write in Markdown — a lightweight, plain-text formatting syntax — and see it rendered as formatted HTML. Toollyz Markdown Editor & Previewer shows a live side-by-side preview so you can see exactly how your document will look as you type.",
+        },
+        {
+          q: "What is Markdown used for?",
+          a: "Markdown is widely used for README files, documentation, blog posts, notes, chat messages and anywhere you want clean formatting without writing HTML. It's the standard on GitHub, GitLab, Reddit, Discord and most static-site generators.",
+        },
+        {
+          q: "Does this support GitHub Flavored Markdown?",
+          a: "Yes. It supports GitHub-Flavored Markdown (GFM) including tables, task lists (checkboxes), strikethrough, fenced code blocks with syntax highlighting and automatic links, plus emoji shortcodes like :rocket:.",
+        },
+        {
+          q: "Can I export Markdown as PDF?",
+          a: "Yes. Use Print / PDF to open a cleanly formatted version of your document and save it as a PDF from your browser's print dialog. You can also export to Markdown, HTML, DOC or plain text.",
+        },
+        {
+          q: "Can I preview Markdown in real time?",
+          a: "Yes. The split-screen mode renders your Markdown instantly as you type. You can also switch to editor-only or preview-only, and toggle a raw HTML view to see the generated code.",
+        },
+        {
+          q: "Does it have templates?",
+          a: "Yes. The template library includes ready-made README, blog post, documentation, meeting notes, changelog, project plan, technical guide and knowledge-base scaffolds you can load with one click.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes. The editor, preview, toolbar and outline are fully responsive and touch-friendly, with a focus mode for distraction-free writing on phones and tablets.",
+        },
+        {
+          q: "Can I upload Markdown files?",
+          a: "Yes. Drag and drop or browse for .md, .markdown and .txt files and they'll open in the editor instantly. You can also import plain-text notes to format as Markdown.",
+        },
+        {
+          q: "Is my content stored online?",
+          a: "No. All editing and rendering happen entirely in your browser — your document is never uploaded. Your work and version snapshots are saved only in your device's local storage.",
+        },
+        {
+          q: "Can I export HTML?",
+          a: "Yes. Toggle the HTML view to see and copy the generated HTML, or export a complete, self-styled HTML document ready to publish.",
+        },
+        {
+          q: "Is this Markdown editor free?",
+          a: "Completely free with no signup and no limits. Live preview, syntax highlighting, templates, analytics, the outline and all export formats are available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "ascii-art-generator",
