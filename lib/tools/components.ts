@@ -110,6 +110,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "jwt-decoder": dynamic(
     () => import("@/components/tools/jwt-decoder"),
   ),
+  "regex-tester": dynamic(
+    () => import("@/components/tools/regex-tester"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

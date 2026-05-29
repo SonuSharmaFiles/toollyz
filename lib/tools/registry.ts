@@ -3772,13 +3772,100 @@ export const tools: Tool[] = [
   {
     slug: "regex-tester",
     name: "Regex Tester",
-    tagline: "Test, debug and learn regular expressions in real time.",
+    tagline: "Test, debug and build regular expressions in real time.",
     description:
-      "Build and test regular expressions against sample text with live highlighting, capture groups and explanations.",
+      "Test JavaScript regular expressions against your text with live match highlighting, capture and named groups, a replace preview and a library of common patterns. Free, fast and private.",
     categoryId: "developer",
     icon: Regex,
-    status: "coming-soon",
-    keywords: ["regex", "regular expression", "test", "debug"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "regex tester",
+      "regular expression tester",
+      "regex test online",
+      "regex debugger",
+      "regex match",
+      "javascript regex",
+      "test regex",
+      "regex replace",
+      "regex groups",
+      "regex playground",
+      "regex validator",
+      "regex tool",
+      "pattern matching",
+      "regex cheatsheet",
+    ],
+    seo: {
+      title: "Regex Tester — Test & Debug Regular Expressions Online",
+      description:
+        "Test and debug regular expressions instantly with Toollyz Regex Tester. Live match highlighting, capture and named groups, a replace preview and a library of common patterns — 100% in your browser.",
+      what:
+        "A Regex Tester lets you write a regular expression and immediately see what it matches in your text. Toollyz Regex Tester uses the same JavaScript regex engine your code runs on, so what you test is exactly what you get. As you type, it highlights every match in the test string, lists each match with its position, capture groups and named groups, and shows whether your pattern is valid (with the engine's error message if not). Toggle the g, i, m, s, u and y flags, preview replacements with $1 and $<name> backreferences, and load ready-made patterns for emails, URLs, IPv4 addresses, hex colors, dates and more from the built-in library. It runs entirely in your browser — your patterns and text are never uploaded — with built-in guardrails (input limits, iteration caps and a zero-length-match guard) that keep the page responsive and warn you about patterns prone to catastrophic backtracking.",
+      how: [
+        "Type a regular expression in the pattern bar and toggle the flags you need (g, i, m, …).",
+        "Enter or paste your test string — matches highlight live as you type.",
+        "Open the Matches tab to inspect each match's capture and named groups.",
+        "Use the Replace tab to preview substitutions, or load a ready-made pattern from the Library.",
+      ],
+      benefits: [
+        "Live match highlighting using the real JavaScript RegExp engine.",
+        "Capture groups and named groups listed for every match.",
+        "All six flags (g, i, m, s, u, y) as one-click toggles with explanations.",
+        "Replace preview with $1, $<name> and $& backreferences plus a match count.",
+        "Clear, inline error messages for invalid patterns.",
+        "A library of common patterns — email, URL, IPv4, hex color, date, phone and more.",
+        "ReDoS guardrails — input limits, iteration caps and a catastrophic-backtracking warning.",
+        "100% private — patterns and text never leave your browser, and your work autosaves.",
+      ],
+      relatedSlugs: [
+        "javascript-minifier",
+        "json-formatter",
+        "html-minifier",
+        "jwt-decoder",
+      ],
+      faqs: [
+        {
+          q: "What is a regex tester?",
+          a: "A regex tester is a tool for writing and debugging regular expressions. You enter a pattern and some text, and it shows you exactly what matches — including capture groups — so you can refine the pattern before using it in your code.",
+        },
+        {
+          q: "Which regex flavor does this use?",
+          a: "It uses the JavaScript (ECMAScript) regular expression engine built into your browser — the same one used by Node.js and front-end code. Patterns you test here behave identically in your JavaScript and TypeScript projects.",
+        },
+        {
+          q: "What do the flags g, i, m, s, u and y mean?",
+          a: "g finds all matches (not just the first), i ignores case, m makes ^ and $ match at line breaks, s lets . match newlines (dotAll), u enables full Unicode handling, and y (sticky) matches only from the current position. Toggle them above the pattern.",
+        },
+        {
+          q: "Does it support capture and named groups?",
+          a: "Yes. The Matches tab lists every numbered capture group and any named groups (e.g. (?<year>\\d{4})) for each match, so you can confirm your groups capture exactly what you expect.",
+        },
+        {
+          q: "Can I test find-and-replace?",
+          a: "Yes. The Replace tab previews substitutions using standard backreferences — $1 for numbered groups, $<name> for named groups and $& for the whole match — and shows how many replacements were made.",
+        },
+        {
+          q: "Will a complex pattern freeze the page?",
+          a: "The tester caps the test-string size and the number of matches it iterates, guards against infinite zero-length-match loops, and runs matching off the main typing path. It also warns when a pattern nests quantifiers (like (a+)+), which can cause catastrophic backtracking on large inputs.",
+        },
+        {
+          q: "Is my pattern or text stored online?",
+          a: "No. All matching, grouping and replacing happen entirely in your browser — nothing is uploaded. Your last pattern, flags and test string are saved only in your device's local storage.",
+        },
+        {
+          q: "Do I need to escape the slashes in my pattern?",
+          a: "No. You type the pattern body only (the part between the slashes), so a literal slash is just /. Backslashes work exactly as in a normal regex, e.g. \\d for a digit or \\. for a literal dot.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The pattern bar, flag toggles, highlighted test area, match list, replace preview and pattern library are all responsive and touch-friendly.",
+        },
+        {
+          q: "Is this regex tester free?",
+          a: "Completely free with no signup and no limits. Testing, groups, replace preview and the pattern library are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "jwt-decoder",
