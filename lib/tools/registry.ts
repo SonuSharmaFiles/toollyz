@@ -4164,13 +4164,100 @@ export const tools: Tool[] = [
   {
     slug: "internet-speed-test",
     name: "Internet Speed Test",
-    tagline: "Measure your download, upload and ping speeds.",
+    tagline: "Measure your download, upload, ping and jitter.",
     description:
-      "Test your internet connection — download, upload, latency and jitter — straight from your browser.",
+      "Test your internet connection's download and upload speed, ping and jitter straight from your browser, with live gauges and a history of past runs. Free and private.",
     categoryId: "developer",
     icon: Gauge,
-    status: "coming-soon",
-    keywords: ["speed test", "internet speed", "bandwidth", "ping"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "internet speed test",
+      "speed test",
+      "wifi speed test",
+      "bandwidth test",
+      "download speed test",
+      "upload speed test",
+      "broadband speed test",
+      "check internet speed",
+      "network speed test",
+      "mbps test",
+      "ping test",
+      "connection speed",
+      "test my internet",
+      "speed test online",
+    ],
+    seo: {
+      title: "Internet Speed Test — Check Download, Upload & Ping",
+      description:
+        "Test your internet speed with Toollyz Internet Speed Test. Measure download and upload in Mbps, plus ping and jitter, with live gauges — run directly in your browser against Cloudflare's network.",
+      what:
+        "An Internet Speed Test measures how fast your connection is right now: how quickly it downloads data, how quickly it uploads, and how responsive it is (latency). Toollyz Internet Speed Test runs entirely in your browser against Cloudflare's public speed endpoints — the same network many speed tests use. It first measures latency (ping) and jitter with a series of tiny requests, then measures download by streaming data and timing a steady-state window (discarding the initial ramp-up for a stable number), then measures upload by sending data back. Results appear live on animated gauges in megabits per second (Mbps). Because it's a single-stream, browser-based test, the numbers read a little lower than dedicated multi-connection apps — but they're a reliable, repeatable measure of your connection, and nothing is uploaded to Toollyz (there is no Toollyz server; the test talks directly to Cloudflare).",
+      how: [
+        "Click Start speed test — keep the tab focused for the most accurate result.",
+        "Watch ping and jitter measure first, then download, then upload, live on the gauges.",
+        "Read your speeds in Mbps and latency in milliseconds when the test finishes.",
+        "Run it again any time, and compare against your recent-test history below.",
+      ],
+      benefits: [
+        "Download and upload speed in Mbps, plus ping and jitter.",
+        "Live animated gauges that update as each phase runs.",
+        "Accurate download measurement using a steady-state window (slow-start discarded).",
+        "Runs against Cloudflare's global network — no Toollyz server in the middle.",
+        "A history of past runs so you can compare over time or between locations.",
+        "Honest methodology notes about single-stream, browser-based measurement.",
+        "Works on any device, no app or signup required.",
+        "Free and private — results stay in your browser.",
+      ],
+      relatedSlugs: [
+        "ping-test",
+        "ip-address-finder",
+        "dns-lookup",
+        "json-formatter",
+      ],
+      faqs: [
+        {
+          q: "How does this speed test work?",
+          a: "It runs in your browser against Cloudflare's public speed endpoints. It times a streamed download over a steady-state window, times an upload of raw data, and measures ping/jitter with small requests. Speeds are reported in megabits per second (Mbps).",
+        },
+        {
+          q: "Why is my speed lower than my plan or another speed test?",
+          a: "This is a single-stream, browser-based test, so it typically reads a bit lower than dedicated apps that open many parallel connections. Browser/JS overhead, Wi-Fi, VPNs, other devices on your network, and your distance to Cloudflare's nearest edge all affect the number.",
+        },
+        {
+          q: "What do download, upload, ping and jitter mean?",
+          a: "Download is how fast you receive data (streaming, browsing); upload is how fast you send it (calls, backups, posting). Ping is round-trip latency — lower is more responsive — and jitter is how much that latency varies, which matters for calls and gaming.",
+        },
+        {
+          q: "What's a good internet speed?",
+          a: "It depends on use: ~25 Mbps download handles HD streaming, 100+ Mbps suits busy households and 4K, and low ping (under ~50 ms) matters for video calls and gaming. Upload of 10+ Mbps is comfortable for calls and uploads.",
+        },
+        {
+          q: "Is my data sent to Toollyz?",
+          a: "No. Toollyz has no server — the test transfers data directly between your browser and Cloudflare's speed endpoints purely to measure throughput. Your results are stored only in your browser's local storage.",
+        },
+        {
+          q: "Why should I keep the tab focused during the test?",
+          a: "Browsers throttle timers and network in background tabs to save resources, which can skew the measurement. Keeping the tab active gives the most accurate result.",
+        },
+        {
+          q: "Does the test use a lot of data?",
+          a: "It transfers a modest amount — enough to measure steady-state throughput for a few seconds each way. On very fast connections that's some tens of megabytes; be mindful if you're on a metered or capped mobile plan.",
+        },
+        {
+          q: "Why is upload sometimes lower or slower to measure?",
+          a: "Most connections are asymmetric — upload is slower than download by design. Upload here is measured as a full round-trip (including the server's acknowledgment), and the tool sizes the test to your connection so it doesn't take too long.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The gauges and controls are fully responsive, so you can test Wi-Fi or mobile data on any device. Keep the tab in the foreground for accuracy.",
+        },
+        {
+          q: "Is this internet speed test free?",
+          a: "Completely free with no signup and no limits. Download, upload, ping and jitter testing are available to everyone, directly from your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "ping-test",
