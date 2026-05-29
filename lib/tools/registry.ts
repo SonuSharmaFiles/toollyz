@@ -4066,13 +4066,100 @@ export const tools: Tool[] = [
   {
     slug: "clipboard-manager",
     name: "Clipboard Manager",
-    tagline: "Track and re-use your recent clipboard history.",
+    tagline: "Save, search and re-use your clipboard history.",
     description:
-      "Keep a quick history of recently copied text snippets. Re-copy with one click — all kept locally in your browser.",
+      "Keep a private history of copied text snippets, pin the ones you reuse, search them and re-copy with one click — all stored locally in your browser. Free and private.",
     categoryId: "developer",
     icon: Clipboard,
-    status: "coming-soon",
-    keywords: ["clipboard", "copy history", "paste manager"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "clipboard manager",
+      "clipboard history",
+      "copy history",
+      "paste manager",
+      "clipboard tool",
+      "save clipboard",
+      "clipboard organizer",
+      "snippet manager",
+      "copy paste history",
+      "online clipboard",
+      "clipboard history online",
+      "manage clipboard",
+      "text snippets",
+      "clipboard board",
+    ],
+    seo: {
+      title: "Clipboard Manager — Save & Re-use Clipboard History Online",
+      description:
+        "Keep a private clipboard history with Toollyz Clipboard Manager. Save copied text snippets, pin favorites, search them and re-copy with one click — 100% in your browser, nothing uploaded.",
+      what:
+        "A Clipboard Manager remembers the things you copy so you can paste any of them again later, instead of only the single most-recent item your system clipboard holds. Toollyz Clipboard Manager keeps a running history of text snippets you save: paste or type something and click Save, or pull the current system clipboard in with one button. Each entry shows a preview, character count and when you saved it; click any entry to copy it straight back to your clipboard. You can pin the snippets you reuse most so they stay at the top, search your whole history instantly, and delete entries or clear everything in one go. Everything is stored only in your browser's local storage — there's no account and nothing is ever uploaded — so it works offline and your snippets stay completely private to your device.",
+      how: [
+        "Type or paste text into the box and click Save (or press ⌘/Ctrl + Enter).",
+        "Or click “Paste from clipboard” to pull in whatever you last copied.",
+        "Click any saved item to copy it back to your clipboard instantly.",
+        "Pin the snippets you reuse, search your history, and delete what you don't need.",
+      ],
+      benefits: [
+        "A searchable history of everything you save — no more losing the thing you copied two copies ago.",
+        "One-click re-copy of any saved snippet.",
+        "Pin frequently used snippets so they stay at the top.",
+        "Pull in the current system clipboard with a single button.",
+        "Instant search and filtering across your whole history.",
+        "Works offline — no account, no signup, no limits.",
+        "100% private: snippets are stored only in your browser and never uploaded.",
+        "Automatic de-duplication and a generous history cap keep the list tidy.",
+      ],
+      relatedSlugs: [
+        "online-notepad",
+        "word-counter",
+        "case-converter",
+        "slugify",
+      ],
+      faqs: [
+        {
+          q: "What is a clipboard manager?",
+          a: "A clipboard manager keeps a history of the things you copy, so you can paste any earlier item rather than only the most recent one. Toollyz Clipboard Manager stores your saved snippets in your browser and lets you re-copy, pin, search and organize them.",
+        },
+        {
+          q: "Does it automatically capture everything I copy?",
+          a: "No — browsers don't allow web pages to silently watch your system clipboard, which is good for your privacy. Instead you add snippets deliberately: paste or type them and click Save, or use the “Paste from clipboard” button to pull in the current clipboard on demand.",
+        },
+        {
+          q: "Where is my clipboard history stored?",
+          a: "Entirely in your browser's local storage on this device. Nothing is uploaded to any server, so your snippets stay private and the tool keeps working offline.",
+        },
+        {
+          q: "Why does “Paste from clipboard” ask for permission?",
+          a: "Reading the system clipboard requires your explicit permission for security reasons. If you allow it, the tool reads the current clipboard once; if you block it, just paste into the box manually instead — both work.",
+        },
+        {
+          q: "How do I re-copy a saved snippet?",
+          a: "Click the snippet (or its copy icon) and it's written straight back to your system clipboard, ready to paste anywhere. Reused items also jump back to the top of the list.",
+        },
+        {
+          q: "Can I keep important snippets from disappearing?",
+          a: "Yes. Pin any snippet and it stays at the top of your history and is kept even as older unpinned items age out. The history is capped to stay fast, with the most recent and pinned items retained.",
+        },
+        {
+          q: "Will my history survive a page refresh?",
+          a: "Yes. Your snippets are saved to local storage, so they persist across refreshes and browser restarts on the same device. Clearing your browser data or using a different device/browser starts fresh.",
+        },
+        {
+          q: "Is my data private?",
+          a: "Completely. Everything happens locally in your browser — there is no server, no account and no tracking of your snippets. You can clear your entire history at any time.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. Saving, searching, pinning and re-copying are all responsive and touch-friendly, though clipboard read/write permissions vary by mobile browser.",
+        },
+        {
+          q: "Is this clipboard manager free?",
+          a: "Completely free with no signup and no limits. Saving, pinning, searching and re-copying are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "internet-speed-test",

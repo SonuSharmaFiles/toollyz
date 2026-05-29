@@ -119,6 +119,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "secure-notes": dynamic(
     () => import("@/components/tools/secure-notes"),
   ),
+  "clipboard-manager": dynamic(
+    () => import("@/components/tools/clipboard-manager"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),
