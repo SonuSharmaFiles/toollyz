@@ -3161,11 +3161,98 @@ export const tools: Tool[] = [
     name: "Invisible Text Generator",
     tagline: "Generate invisible/blank Unicode characters.",
     description:
-      "Produce invisible Unicode characters useful for blank usernames, hidden messages or empty social fields.",
+      "Generate invisible Unicode characters and blank text for usernames, empty messages and social fields, with platform compatibility, a hidden-character analyzer and developer info. Free and instant.",
     categoryId: "text",
     icon: EyeOff,
-    status: "coming-soon",
-    keywords: ["invisible text", "blank character", "hidden text", "unicode"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "invisible text generator",
+      "blank text",
+      "invisible character",
+      "zero width space",
+      "blank username",
+      "empty character copy paste",
+      "invisible space",
+      "hidden text",
+      "blank message",
+      "invisible name",
+      "unicode invisible",
+      "whitespace character",
+      "blank discord name",
+      "invisible character detector",
+    ],
+    seo: {
+      title: "Invisible Text Generator — Copy Blank Unicode Characters Online",
+      description:
+        "Generate invisible text, blank characters and hidden Unicode spaces instantly with Toollyz Invisible Text Generator. Create blank usernames, empty messages and invisible profile text — free.",
+      what:
+        "An Invisible Text Generator produces real Unicode characters that take up space (or none) but render as nothing visible, so you can copy and paste 'empty' text anywhere. Toollyz Invisible Text Generator lets you pick from several invisible characters — Zero Width Space, Zero Width Joiner/Non-Joiner, Word Joiner, the Hangul Filler and the Braille blank — choose how many to generate, and copy the result in one click. It includes ready-made presets for blank usernames, empty messages and invisible bios, a platform-compatibility dashboard showing where invisible text works (Instagram, TikTok, Discord, WhatsApp and games like Free Fire and PUBG), a built-in analyzer that detects and reveals hidden characters inside any pasted text, and a developer panel with the exact code point, UTF-8/UTF-16 bytes and JS/HTML/CSS escapes. Everything runs privately in your browser.",
+      how: [
+        "Pick an invisible character type — Hangul Filler or Braille blank are most reliable for blank usernames.",
+        "Choose how many characters to generate, or tap a preset like “Blank username”.",
+        "Copy the invisible text in one click and paste it into your profile, name or message.",
+        "Use the Analyzer to detect hidden characters in any text, or the Developer tab for Unicode details.",
+      ],
+      benefits: [
+        "Multiple invisible character types with usage and width guidance.",
+        "Ready-made presets for blank usernames, empty messages and invisible bios.",
+        "Platform compatibility dashboard for social, messaging and gaming apps.",
+        "Built-in analyzer that detects, counts and reveals hidden Unicode characters.",
+        "A Reveal mode so you can see exactly what your invisible text contains.",
+        "Developer panel with code point, UTF-8/UTF-16 hex and JS/HTML/CSS escapes.",
+        "One-click copy with feedback, saved history and TXT export of the full set.",
+        "100% free, no signup — everything runs privately in your browser.",
+      ],
+      relatedSlugs: [
+        "fancy-text-generator",
+        "username-generator",
+        "ascii-art-generator",
+        "random-emoji-generator",
+      ],
+      faqs: [
+        {
+          q: "What is invisible text?",
+          a: "Invisible text is made of special Unicode characters that display as nothing — either taking up no width (like the Zero Width Space) or a blank space (like the Hangul Filler). It looks empty but is still real, copy-paste-able text.",
+        },
+        {
+          q: "How does an invisible text generator work?",
+          a: "It inserts invisible Unicode code points such as U+200B (Zero Width Space) or U+3164 (Hangul Filler) into a string. You choose the character and how many, then copy the result and paste it wherever you need 'empty' text.",
+        },
+        {
+          q: "Can I create blank usernames?",
+          a: "Yes. Use the Blank username preset — the Hangul Filler and Braille blank are the most reliable because they occupy real width and survive platforms that trim pure zero-width characters.",
+        },
+        {
+          q: "Does invisible text work on Instagram?",
+          a: "Yes. Blank characters work in Instagram bios, names and captions. Some platforms trim leading or trailing zero-width characters, so the blank-width characters tend to be the most dependable.",
+        },
+        {
+          q: "Can I use invisible text in games?",
+          a: "Often, yes. Games like Free Fire, PUBG/BGMI, Discord and Steam commonly accept invisible names, while a few (like Fortnite) restrict them. The compatibility dashboard shows what to expect.",
+        },
+        {
+          q: "What is a Zero Width Space?",
+          a: "The Zero Width Space (U+200B) is an invisible character with no width. It's used to allow line breaks or to separate text invisibly, but many platforms strip it — which is why blank-width characters are better for usernames.",
+        },
+        {
+          q: "Can I send blank messages?",
+          a: "Yes. Use the Blank message preset to copy an invisible character and send an 'empty' message on apps like WhatsApp, Discord or Telegram that won't accept a truly empty input.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes. The generator, presets, compatibility dashboard and analyzer are fully responsive and touch-friendly, with one-tap copy on any device.",
+        },
+        {
+          q: "Is invisible text detectable?",
+          a: "Yes — by tools like the built-in Analyzer, which reveals every hidden character and its Unicode code. Paste any text to check for invisible characters before using or trusting it.",
+        },
+        {
+          q: "Is this invisible text generator free?",
+          a: "Completely free with no signup and no limits. Generation, presets, the analyzer, developer info and exports are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
 
   // ─── DEVELOPER ───────────────────────────────────────────────────────────

@@ -101,6 +101,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),
+  "invisible-text-generator": dynamic(
+    () => import("@/components/tools/invisible-text-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
