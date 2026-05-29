@@ -3087,12 +3087,98 @@ export const tools: Tool[] = [
     name: "JSON Formatter",
     tagline: "Format, validate and minify JSON in one click.",
     description:
-      "Beautify messy JSON, validate structure, and minify for production. Syntax highlighting and error pointers included.",
+      "Format, validate, beautify, minify and analyze JSON in an IDE-style editor with precise error messages, an interactive tree explorer, diff comparison and TXT/JSON/CSV export. Free and private.",
     categoryId: "developer",
     icon: Braces,
-    status: "coming-soon",
+    status: "live",
     featured: true,
-    keywords: ["json", "format", "beautify", "validate", "minify"],
+    keywords: [
+      "json formatter",
+      "json validator",
+      "json beautifier",
+      "json minifier",
+      "format json",
+      "validate json",
+      "json viewer",
+      "json tree viewer",
+      "json pretty print",
+      "json diff",
+      "json editor online",
+      "json parser",
+      "json to csv",
+      "json lint",
+    ],
+    seo: {
+      title: "JSON Formatter — Format, Validate & Beautify JSON Online",
+      description:
+        "Format, validate, beautify, minify and analyze JSON instantly with Toollyz JSON Formatter. Explore JSON trees, validate with precise errors, compare JSON files and export formatted data.",
+      what:
+        "A JSON Formatter is a developer tool that turns messy or minified JSON into clean, readable, validated data. Toollyz JSON Formatter is a full JSON workspace: an IDE-style editor with syntax highlighting and line numbers, real-time validation that pinpoints the exact line, column and reason for every error (with fix hints), one-click beautify and minify with 2-space, 4-space or tab indentation, key sorting, and escape/unescape utilities. An interactive tree explorer lets you expand, collapse, search and copy the path of any node, a statistics dashboard summarizes objects, arrays, keys, depth and size, and a diff view compares two JSON documents and highlights every added, removed and changed value. Import files by drag-and-drop and export to JSON, minified JSON or CSV — all running privately in your browser, so your data is never uploaded.",
+      how: [
+        "Paste, type or drop a JSON file into the editor — it validates as you type.",
+        "Click Format to beautify (or Minify to compress), and choose your indentation.",
+        "Explore the structure in the tree view, check the statistics, or search for any key or value.",
+        "Compare against a second JSON in the Diff tab, then copy or export to JSON, minified or CSV.",
+      ],
+      benefits: [
+        "Real-time validation with the exact line, column, message and a fix hint for every error.",
+        "IDE-style editor with JSON syntax highlighting, line numbers and code-style typography.",
+        "One-click beautify and minify with 2-space, 4-space or tab indentation.",
+        "Interactive tree explorer: expand/collapse, search keys and values, and copy any JSON path.",
+        "Statistics dashboard — objects, arrays, keys, depth, node count, size and a health score.",
+        "JSON diff to compare two documents with added, removed and changed highlights.",
+        "Sort keys, escape/unescape, undo/redo and saved-session history.",
+        "Import by drag-and-drop and export to JSON, minified JSON or CSV — 100% private, no upload.",
+      ],
+      relatedSlugs: [
+        "json-to-csv",
+        "base64-encoder-decoder",
+        "xml-formatter",
+        "yaml-to-json",
+      ],
+      faqs: [
+        {
+          q: "What is a JSON formatter?",
+          a: "A JSON formatter takes raw JSON and reformats it into a clean, indented, human-readable structure. Toollyz JSON Formatter also validates the data, visualizes it as a tree, reports errors precisely and lets you minify, sort, diff and export it.",
+        },
+        {
+          q: "How does JSON validation work?",
+          a: "As you type, the tool parses your JSON with a strict parser. If something is wrong — a missing comma, an unclosed bracket, a trailing comma or invalid quotes — it shows the exact line and column, a clear message and a hint on how to fix it, with a Jump button to take you there.",
+        },
+        {
+          q: "Can I beautify JSON instantly?",
+          a: "Yes. Click Format (or press Ctrl/⌘ S) to pretty-print your JSON with your chosen indentation — 2 spaces, 4 spaces or tabs. Formatting happens entirely in your browser, so it's instant even for large documents.",
+        },
+        {
+          q: "Can I minify JSON?",
+          a: "Yes. The Minify button strips all whitespace to produce the smallest valid JSON for production or transport. You can also download the minified version directly.",
+        },
+        {
+          q: "Can I upload JSON files?",
+          a: "Yes. Drag and drop a .json or .txt file onto the editor, or use the Import button. The contents load straight into the editor for formatting and inspection.",
+        },
+        {
+          q: "Does this support large JSON files?",
+          a: "Yes. Parsing, formatting and statistics run efficiently in your browser, and the tree explorer loads nodes on demand so you can navigate large, deeply nested documents smoothly.",
+        },
+        {
+          q: "Can I compare two JSON documents?",
+          a: "Yes. Open the Diff tab and paste a second JSON document. The tool highlights every added, removed and changed value with its path, so you can spot API or data differences at a glance.",
+        },
+        {
+          q: "Is my JSON stored online?",
+          a: "No. All formatting, validation and analysis happen entirely in your browser — your JSON is never uploaded to any server. Saved sessions are kept only in your device's local storage.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The editor, validation, tree explorer, statistics and diff are fully responsive and touch-friendly, so you can format and inspect JSON on any device.",
+        },
+        {
+          q: "Is this JSON formatter free?",
+          a: "Completely free with no signup and no limits. Formatting, validation, the tree viewer, diff, statistics and exports are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "xml-formatter",

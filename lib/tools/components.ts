@@ -92,6 +92,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "ascii-art-generator": dynamic(
     () => import("@/components/tools/ascii-art-generator"),
   ),
+  "json-formatter": dynamic(
+    () => import("@/components/tools/json-formatter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
