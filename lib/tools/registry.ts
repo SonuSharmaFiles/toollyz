@@ -3063,11 +3063,98 @@ export const tools: Tool[] = [
     name: "Fancy Text Generator",
     tagline: "Turn plain text into fancy Unicode styles.",
     description:
-      "Convert your text into bold, italic, cursive, bubble, retro and other Unicode styles — perfect for bios and social posts.",
+      "Turn plain text into 100+ stylish Unicode fonts — bold, cursive, gothic, bubble, aesthetic and more — plus symbols, decorations, stylish usernames and bios. Free and instant.",
     categoryId: "text",
     icon: Sparkle,
-    status: "coming-soon",
-    keywords: ["fancy text", "unicode", "bold text", "italic text", "stylish"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "fancy text generator",
+      "stylish text generator",
+      "unicode text",
+      "cool fonts copy paste",
+      "instagram fonts",
+      "discord fonts",
+      "cursive text generator",
+      "bold text generator",
+      "aesthetic text",
+      "gaming username generator",
+      "nickname generator",
+      "stylish name",
+      "fancy fonts",
+      "text symbols",
+    ],
+    seo: {
+      title: "Fancy Text Generator — Stylish Fonts & Unicode Text Online",
+      description:
+        "Generate stylish fancy text instantly with Toollyz Fancy Text Generator. Create aesthetic fonts, gaming usernames, Instagram bios, TikTok profiles, Discord nicknames and decorative Unicode text.",
+      what:
+        "A Fancy Text Generator turns ordinary text into eye-catching Unicode styles you can copy and paste anywhere. Toollyz Fancy Text Generator transforms what you type — in real time — into 100+ variations including bold, italic, script, cursive, gothic Fraktur, double-struck, monospace, small caps, circled, squared, bubble, vaporwave (full-width), upside-down, strikethrough and glitch styles. Because the output is real Unicode (not images or fonts), it works directly in Instagram bios, TikTok and Discord names, gaming profiles, WhatsApp, YouTube and more. Beyond fonts, it includes a decoration system for fancy frames like ꧁ text ꧂, a searchable symbol library, a stylish username and nickname generator, an aesthetic bio builder, live social-profile previews, and one-click copy with saved favorites — all running privately in your browser.",
+      how: [
+        "Type your text in the input box — every style updates instantly.",
+        "Browse the font styles, decorations and symbols; search or filter by category.",
+        "Tap copy on any style, or generate a stylish username or aesthetic bio.",
+        "Preview your text in Instagram, TikTok and Discord mockups, and save your favorites.",
+      ],
+      benefits: [
+        "100+ Unicode font styles generated live as you type.",
+        "Works on Instagram, TikTok, Discord, gaming profiles and most apps — it's real Unicode.",
+        "Decoration frames (꧁ ꧂, ★, ♡, 『』) and a searchable symbol library with one-click insert.",
+        "Stylish username and nickname generator for gaming and social profiles.",
+        "Aesthetic bio builder you can paste straight into your profile.",
+        "Live Instagram, TikTok and Discord profile previews.",
+        "Search and category filters to find the perfect style fast.",
+        "One-click copy, saved favorites and TXT export — 100% free and private.",
+      ],
+      relatedSlugs: [
+        "ascii-art-generator",
+        "case-converter",
+        "username-generator",
+        "random-emoji-generator",
+      ],
+      faqs: [
+        {
+          q: "What is a fancy text generator?",
+          a: "A fancy text generator converts normal text into stylish, decorative letters using special Unicode characters. You can copy the result and paste it into social media bios, usernames, captions and messages to make your text stand out.",
+        },
+        {
+          q: "How does fancy Unicode text work?",
+          a: "Unicode includes thousands of letter-like symbols — such as bold, italic, script and circled characters — that look different but are still text. The generator maps each letter you type to its styled Unicode equivalent, so the output is copy-paste text, not an image.",
+        },
+        {
+          q: "Can I use fancy text on Instagram?",
+          a: "Yes. The styles are real Unicode characters, so they work in Instagram bios, captions, comments and usernames (where allowed). Bold, script and aesthetic styles are especially popular for bios.",
+        },
+        {
+          q: "Does this work on TikTok and Discord?",
+          a: "Yes. Fancy text works in TikTok profiles and captions and in Discord usernames, nicknames and messages. Use the built-in profile previews to see how it will look before you post.",
+        },
+        {
+          q: "Can I create gaming usernames?",
+          a: "Yes. The username generator combines stylish fonts with decorative prefixes, symbols and frames to create unique names for Free Fire, PUBG, Roblox, Twitch, Discord and more — just enter a name and generate.",
+        },
+        {
+          q: "Are all styles Unicode compatible?",
+          a: "Most styles work almost everywhere, but some apps and older devices may not render every glyph (combining effects like strikethrough or glitch are the most variable). If a style doesn't show correctly somewhere, try a simpler one like bold or italic.",
+        },
+        {
+          q: "Can I copy fancy text instantly?",
+          a: "Yes. Every style has a one-click copy button, and you can copy all styles at once or export them as a TXT file. A confirmation appears each time you copy.",
+        },
+        {
+          q: "Does this work on mobile?",
+          a: "Yes. The generator, style gallery, symbol library and previews are fully responsive and touch-friendly, so you can create and copy fancy text on any phone or tablet.",
+        },
+        {
+          q: "Can I save favorite styles?",
+          a: "Yes. Tap the star on any style or username to save it. Favorites are stored locally in your browser and shown in a dedicated panel for quick reuse.",
+        },
+        {
+          q: "Is this fancy text generator free?",
+          a: "Completely free with no signup and no limits. All 100+ styles, decorations, symbols, the username and bio generators and exports are available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "invisible-text-generator",
