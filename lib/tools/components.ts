@@ -95,6 +95,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "json-formatter": dynamic(
     () => import("@/components/tools/json-formatter"),
   ),
+  "xml-formatter": dynamic(
+    () => import("@/components/tools/xml-formatter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

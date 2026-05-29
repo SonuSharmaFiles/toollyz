@@ -3185,11 +3185,98 @@ export const tools: Tool[] = [
     name: "XML Formatter",
     tagline: "Format and validate XML documents.",
     description:
-      "Beautify, validate and minify XML. Catch syntax errors with clear messages and highlighting.",
+      "Format, validate, beautify and minify XML in an IDE-style editor with precise errors, a tree explorer, XPath testing, XML-to-JSON conversion, diff and export. Free and private.",
     categoryId: "developer",
     icon: CodeXml,
-    status: "coming-soon",
-    keywords: ["xml", "format", "beautify", "validate"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "xml formatter",
+      "xml validator",
+      "xml beautifier",
+      "xml minifier",
+      "format xml",
+      "validate xml",
+      "xml viewer",
+      "xml tree viewer",
+      "xml pretty print",
+      "xpath tester",
+      "xml to json",
+      "xml diff",
+      "xml editor online",
+      "xml parser",
+    ],
+    seo: {
+      title: "XML Formatter — Format, Validate & Beautify XML Online",
+      description:
+        "Format, validate, beautify, minify and analyze XML instantly with Toollyz XML Formatter. Explore XML trees, test XPath, convert XML to JSON, compare documents and export formatted XML.",
+      what:
+        "An XML Formatter turns messy or minified XML into clean, readable, well-formed markup. Toollyz XML Formatter is a complete XML workspace: an IDE-style editor with syntax highlighting and line numbers, real-time well-formedness validation that pinpoints the exact line, column and reason for every error (with fix hints), and one-click beautify and minify with 2-space, 4-space or tab indentation. An interactive tree explorer lets you expand, collapse, search and copy the path of any element or attribute; an XPath tester runs queries against your document and highlights matching nodes; an XML-to-JSON converter previews the equivalent JSON; a diff view compares two documents line by line; and a statistics dashboard summarizes elements, attributes, namespaces, depth and size. Import files by drag-and-drop and export to XML, minified XML or JSON — all running privately in your browser, so your data is never uploaded.",
+      how: [
+        "Paste, type or drop an XML file into the editor — it validates as you type.",
+        "Click Format to beautify (or Minify to compress), and choose your indentation.",
+        "Explore the structure in the tree view, run XPath queries, or convert to JSON.",
+        "Compare against a second document in the Diff tab, then copy or export your XML or JSON.",
+      ],
+      benefits: [
+        "Real-time well-formedness validation with the exact line, column, message and a fix hint.",
+        "IDE-style editor with XML syntax highlighting, line numbers and code-style typography.",
+        "One-click beautify and minify with 2-space, 4-space or tab indentation.",
+        "Interactive tree explorer: expand/collapse, search tags, attributes and text, and copy paths.",
+        "Built-in XPath tester that runs queries and shows matching nodes.",
+        "XML-to-JSON conversion with a copyable, exportable preview.",
+        "Statistics dashboard — elements, attributes, namespaces, depth, node count and size.",
+        "XML diff, sort attributes, remove empty nodes, escape/unescape and export — 100% private.",
+      ],
+      relatedSlugs: [
+        "json-formatter",
+        "yaml-to-json",
+        "base64-encoder-decoder",
+        "json-to-csv",
+      ],
+      faqs: [
+        {
+          q: "What is an XML formatter?",
+          a: "An XML formatter takes raw XML and reformats it into clean, indented, readable markup. Toollyz XML Formatter also validates well-formedness, visualizes the structure as a tree, reports errors precisely and lets you minify, run XPath, convert to JSON, diff and export.",
+        },
+        {
+          q: "How does XML validation work?",
+          a: "As you type, the tool parses your XML with a strict well-formedness parser. If something is wrong — a missing or mismatched closing tag, an unquoted attribute, improper nesting or multiple root elements — it shows the exact line and column, a clear message and a hint, with a Jump button to take you there.",
+        },
+        {
+          q: "Can I beautify XML instantly?",
+          a: "Yes. Click Format (or press Ctrl/⌘ S) to pretty-print your XML with your chosen indentation — 2 spaces, 4 spaces or tabs. Formatting happens entirely in your browser, so it is instant.",
+        },
+        {
+          q: "Can I minify XML?",
+          a: "Yes. The Minify button removes insignificant whitespace between tags to produce the most compact valid XML for transport or storage, and you can download the minified version directly.",
+        },
+        {
+          q: "Can I convert XML to JSON?",
+          a: "Yes. The JSON tab converts your XML into an equivalent JSON structure — attributes become @-prefixed keys, repeated elements become arrays — which you can copy or export as a .json file.",
+        },
+        {
+          q: "Can I test XPath expressions?",
+          a: "Yes. The XPath tab lets you run XPath queries against your document using your browser's native engine and lists every matching element, attribute or value, with handy example queries to get started.",
+        },
+        {
+          q: "Does this support large XML files?",
+          a: "Yes. Parsing, formatting and statistics run efficiently in your browser, and the tree explorer loads nodes on demand so you can navigate large, deeply nested documents like SOAP responses, RSS feeds and sitemaps smoothly.",
+        },
+        {
+          q: "Is my XML stored online?",
+          a: "No. All formatting, validation, XPath and conversion happen entirely in your browser — your XML is never uploaded to any server. Saved sessions are kept only in your device's local storage.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The editor, validation, tree explorer, XPath, JSON view and diff are fully responsive and touch-friendly, so you can format and inspect XML on any device.",
+        },
+        {
+          q: "Is this XML formatter free?",
+          a: "Completely free with no signup and no limits. Formatting, validation, the tree viewer, XPath, XML-to-JSON, diff, statistics and exports are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "html-minifier",
