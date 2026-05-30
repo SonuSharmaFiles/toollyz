@@ -260,6 +260,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "drag-click-test": dynamic(
     () => import("@/components/tools/drag-click-test"),
   ),
+  "spacebar-counter": dynamic(
+    () => import("@/components/tools/spacebar-counter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

@@ -8466,13 +8466,100 @@ export const tools: Tool[] = [
   {
     slug: "spacebar-counter",
     name: "Spacebar Counter",
-    tagline: "Count how many times you can hit space in a window.",
+    tagline: "Press Space as fast as you can — auto-repeats ignored.",
     description:
-      "Hit the spacebar as many times as you can in a fixed time window. Track and share your high scores.",
+      "Count how many times you can press the Space bar in 1, 5, 10, 30 or 60 seconds. OS auto-repeats are detected and skipped, live presses-per-second updates each frame, and the 30 most recent runs save to local history. Free, private, browser-only.",
     categoryId: "calculators",
     icon: SquareAsterisk,
-    status: "coming-soon",
-    keywords: ["spacebar counter", "space test", "tap test"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "spacebar counter",
+      "space bar counter",
+      "spacebar test",
+      "spacebar click test",
+      "fastest spacebar",
+      "spacebar counter online",
+      "free spacebar test",
+      "browser spacebar test",
+      "spacebar tap test",
+      "spacebar speed test",
+      "spacebar press test",
+      "keyboard tap test",
+      "space test",
+      "spacebar 10 seconds",
+    ],
+    seo: {
+      title: "Spacebar Counter — Free Space-Press Test (Auto-Repeats Ignored)",
+      description:
+        "Count Space presses in 1 / 5 / 10 / 30 / 60-second windows with Toollyz Spacebar Counter. OS auto-repeats are detected and skipped, live presses-per-second updates each frame, 30-run history — entirely in your browser.",
+      what:
+        "A spacebar counter measures how many times you can press the Space bar in a fixed time window. Toollyz Spacebar Counter runs entirely in your browser using `keydown` listeners on the window. Pick a duration (1, 5, 10, 30 or 60 seconds), click the focusable pad to capture keyboard focus, then start pressing Space — the first press arms the timer and subsequent presses contribute to the count. Crucially, the counter checks `event.repeat` on every keydown so that OS-level auto-repeats (which fire when you hold a key down) don't pollute the score; rejected auto-repeats are surfaced in a small counter beside the main stats so you know exactly what's happening. Live presses-per-second, time remaining and the best score for the chosen duration update each frame; the 30 most recent runs save to localStorage. Toollyz has no backend — every press stays on your device.",
+      how: [
+        "Pick a duration (1 / 5 / 10 / 30 / 60 seconds).",
+        "Click the spacebar pad once to give the page keyboard focus.",
+        "Press Space as fast as you can — the first press starts the timer, the rest count toward the score.",
+        "When the timer hits zero, the result lands in History with per-duration best surfaced in the hero.",
+      ],
+      benefits: [
+        "Five duration windows: 1 / 5 / 10 / 30 / 60 s.",
+        "OS auto-repeats detected via `event.repeat` and shown in a separate counter — only fresh presses score.",
+        "Live presses-per-second updated every frame via requestAnimationFrame.",
+        "30-run history with timestamp, count and per-second rate.",
+        "Per-duration best score surfaced in the hero so you always know your target.",
+        "Page consumes the Space keypress to prevent accidental scroll while you tap.",
+        "Touch-friendly via the focusable pad — works on tablets with a connected keyboard.",
+        "100% private — Toollyz has no backend, presses stay in your browser.",
+      ],
+      relatedSlugs: [
+        "cps-test",
+        "drag-click-test",
+        "typing-speed-test",
+        "keyboard-tester",
+      ],
+      faqs: [
+        {
+          q: "Why are some presses ignored?",
+          a: "When you hold Space down, the operating system generates auto-repeat keydown events. Toollyz detects these via the `event.repeat` flag and skips them so the score reflects actual finger taps, not key holds. Skipped auto-repeats are shown in a counter so you can see what's being filtered.",
+        },
+        {
+          q: "Why do I have to click the pad first?",
+          a: "Browsers only deliver keyboard events to focused elements. The pad is a focusable element so clicking it captures keyboard input; before that, the keystrokes might trigger scroll or shortcuts in the page itself.",
+        },
+        {
+          q: "Why doesn't the page scroll when I press Space?",
+          a: "Toollyz calls `event.preventDefault()` on the Space keydown so the browser's default scroll is suppressed while the test runs. The rest of the page still scrolls with the wheel, trackpad or arrow keys.",
+        },
+        {
+          q: "Does the test work with a touchscreen keyboard?",
+          a: "Yes, but mobile soft keyboards often suppress auto-repeats and report each press cleanly — so your effective rate on a phone is whatever you can tap. The score still counts.",
+        },
+        {
+          q: "How does this differ from the Typing Speed Test?",
+          a: "Typing Speed Test scores correct characters typed against a target passage and produces WPM. Spacebar Counter only watches the Space key and reports raw presses per second. They measure different things.",
+        },
+        {
+          q: "What's the highest possible score?",
+          a: "Most humans top out around 8–10 Space presses per second; sustained 12+ requires unusual hand muscle. Hardware (some membrane keyboards have higher key-actuation delays) and the OS's key-repeat thresholds set a practical ceiling.",
+        },
+        {
+          q: "Are auto-clickers / macros counted?",
+          a: "Any keyboard event the browser delivers as a fresh keydown counts. If a macro releases the key cleanly between presses, the tool sees normal keydowns; if the macro holds the key, those become auto-repeats and get rejected.",
+        },
+        {
+          q: "Is my history saved across devices?",
+          a: "No — only on this device, in localStorage. Toollyz has no backend; nothing is uploaded or synced.",
+        },
+        {
+          q: "Does the test penalise mistakes?",
+          a: "No — there's no \"wrong\" Space press, so every fresh keydown counts. Use the Typing Speed Test if you want accuracy in addition to speed.",
+        },
+        {
+          q: "Is this Spacebar Counter free?",
+          a: "Completely free with no signup and no limits. Run as many tests as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "reaction-time-test",
