@@ -239,6 +239,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "barcode-generator": dynamic(
     () => import("@/components/tools/barcode-generator"),
   ),
+  "screenshot-to-pdf": dynamic(
+    () => import("@/components/tools/screenshot-to-pdf"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

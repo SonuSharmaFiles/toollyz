@@ -7691,13 +7691,100 @@ export const tools: Tool[] = [
   {
     slug: "screenshot-to-pdf",
     name: "Screenshot to PDF",
-    tagline: "Combine screenshots into a single shareable PDF.",
+    tagline: "Stitch screenshots with captions, cover page and page numbers.",
     description:
-      "Drop screenshots, reorder them and export a single, clean PDF — perfect for bug reports and walkthroughs.",
+      "Combine PNG / JPG / WebP screenshots into a single shareable PDF — every page hugs the screenshot exactly, with optional cover title/subtitle/date, per-page captions and page numbers. Free, private, browser-only.",
     categoryId: "pdf",
     icon: Camera,
-    status: "coming-soon",
-    keywords: ["screenshot to pdf", "bug report", "walkthrough"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "screenshot to pdf",
+      "screenshots to pdf",
+      "bug report pdf",
+      "walkthrough pdf",
+      "combine screenshots pdf",
+      "screenshots pdf converter",
+      "screenshot report builder",
+      "qa screenshot pdf",
+      "pdf from screenshots",
+      "free screenshot pdf",
+      "browser screenshot to pdf",
+      "no upload screenshot pdf",
+      "private screenshot pdf",
+      "screenshot caption pdf",
+    ],
+    seo: {
+      title: "Screenshot to PDF — Bug Reports & Walkthroughs (Free, Captions)",
+      description:
+        "Combine PNG/JPG/WebP screenshots into a single PDF with Toollyz Screenshot to PDF. Cover title/subtitle/date, per-page captions, page numbers — entirely in your browser, no upload.",
+      what:
+        "A screenshot-to-PDF tool stitches multiple screenshots into one shareable PDF — the easiest way to ship a bug report, design walkthrough or step-by-step guide. Toollyz Screenshot to PDF runs everything in your browser using the open-source pdf-lib library. Drop up to 30 PNG, JPG or WebP screenshots; each becomes a page sized exactly to the image (pixels are treated as PDF points so there's zero scaling). Add a 2-line caption under each screenshot — it word-wraps to the page width — and a footer page number (\"Page n / N\") that includes the optional cover page in the count. The cover page can have a title (Helvetica Bold 32pt), subtitle (16pt) and today's date (11pt). Configure the page background colour, text colour and outer margin. WebP screenshots are transparently re-encoded to PNG since the PDF spec doesn't carry WebP. The final PDF downloads with whatever filename you set; nothing is uploaded.",
+      how: [
+        "Drop your screenshots in the order you want them — re-order with Up/Down per item.",
+        "(Optional) Add a cover title, subtitle and today's date for a polished first page.",
+        "Add per-page captions, choose background / text colours, set the outer margin and filename.",
+        "Click Build PDF — the file is generated and saved entirely in your browser.",
+      ],
+      benefits: [
+        "Each page sizes itself to the screenshot — no scaling, no quality loss.",
+        "Optional cover page with title (Helvetica Bold 32pt), subtitle (16pt) and today's date.",
+        "Per-screenshot caption that word-wraps to a maximum of two lines under the image.",
+        "Footer page numbers in the format \"Page n / N\" (counts the cover page if present).",
+        "Configurable page background, text colour and 0–80 pt outer margin.",
+        "Up to 30 screenshots per PDF, with Up/Down re-order and individual remove buttons.",
+        "WebP screenshots transparently re-encoded to PNG (PDF spec doesn't carry WebP).",
+        "100% private — Toollyz has no backend, files stay in your browser.",
+      ],
+      relatedSlugs: [
+        "image-to-pdf",
+        "pdf-merger",
+        "pdf-splitter",
+        "pdf-to-image",
+      ],
+      faqs: [
+        {
+          q: "How does this differ from the regular Image to PDF tool?",
+          a: "Image to PDF lets you pick A4 / A3 / Letter / Legal / Custom / Auto page sizes and Fit / Fill / Stretch layout — useful for printable photo books. Screenshot to PDF is opinionated: every page hugs the screenshot exactly (no scaling), and it adds a cover page, per-page captions and page numbers that are perfect for bug reports and walkthroughs.",
+        },
+        {
+          q: "How are the page sizes calculated?",
+          a: "Image pixels are treated as PDF points (1 pt = 1/72 in). A 1280×800 screenshot becomes a 1280×800 pt page (plus margin, caption and footer space). The resulting PDF reads at native size in most viewers.",
+        },
+        {
+          q: "How long can a caption be?",
+          a: "Captions word-wrap to two lines under each screenshot. If your caption needs more, drop a separate text screenshot or shorten it; this tool is intentionally minimal to keep reports skimmable.",
+        },
+        {
+          q: "Does the cover page count toward the page numbers?",
+          a: "Yes — if you set a cover title (or subtitle or date), the cover is page 1, the first screenshot is page 2, and so on. The footer reads \"Page n / N\" with N including the cover.",
+        },
+        {
+          q: "Why are my WebP screenshots re-encoded?",
+          a: "The PDF specification supports JPEG and PNG image streams (DCT and Flate filters) but not WebP. Toollyz transparently decodes WebP via a 2D canvas and embeds the result as PNG. Visually identical; the encoded size is slightly larger than the original WebP.",
+        },
+        {
+          q: "What if my screenshot is very wide?",
+          a: "The page becomes that wide — most PDF viewers handle ultra-wide pages by fitting to width. If the resulting page is wider than 2048 pt, consider resizing the source screenshot first (Toollyz Image Resizer can do this).",
+        },
+        {
+          q: "Can I export a Word document instead?",
+          a: "Not from this tool — the PDF output is the goal. You can drag the PDF into Word's \"Insert as Object\" or rasterise pages first via the PDF to Image Converter.",
+        },
+        {
+          q: "Are my files saved anywhere?",
+          a: "No. Toollyz has no backend — screenshots are loaded into memory while the page is open and discarded on reload. Settings save to localStorage.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The picker uses your phone's camera roll, the queue scrolls and building works in any modern mobile browser. Very large screenshot batches may strain mobile memory; if a build fails, retry with fewer.",
+        },
+        {
+          q: "Is this Screenshot to PDF tool free?",
+          a: "Completely free with no signup and no limits. Build as many reports as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "resume-pdf-generator",
