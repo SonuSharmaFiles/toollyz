@@ -5259,13 +5259,100 @@ export const tools: Tool[] = [
   {
     slug: "base64-encoder-decoder",
     name: "Base64 Encoder / Decoder",
-    tagline: "Encode and decode Base64 strings instantly.",
+    tagline: "Encode and decode Base64 — text and files, standard or URL-safe.",
     description:
-      "Convert text and files to and from Base64 — perfect for embedding images, debugging APIs, or moving binary data through text-only channels.",
+      "Convert text and files to and from Base64 instantly — pick standard or URL-safe variants, preview image data URIs and copy or download in one click. Free and private.",
     categoryId: "converters",
     icon: Binary,
-    status: "coming-soon",
-    keywords: ["base64", "encode", "decode", "binary", "encoding"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "base64",
+      "base64 encoder",
+      "base64 decoder",
+      "encode base64",
+      "decode base64",
+      "base64 to text",
+      "text to base64",
+      "base64url",
+      "file to base64",
+      "image to base64",
+      "data uri encoder",
+      "base64 converter",
+      "base64 tool",
+      "encode binary",
+    ],
+    seo: {
+      title: "Base64 Encoder / Decoder — Text & File, Standard or URL-Safe",
+      description:
+        "Encode or decode Base64 for text and files with Toollyz Base64 Encoder/Decoder — UTF-8 aware, standard or URL-safe variants, image data-URI preview. 100% in your browser.",
+      what:
+        "Base64 is an encoding that represents arbitrary bytes using a 64-character alphabet, so binary data can travel through text-only channels like JSON, URLs, emails or HTML. Toollyz Base64 Encoder/Decoder converts both ways — UTF-8 aware text in or out — and also handles whole files: drop any file in and get its Base64 plus a ready-to-paste data URI; if it's an image, you'll see a live preview rendered from that data URI. You can switch between standard Base64 and URL-safe Base64 (`base64url`, using `-` and `_` with no padding — the variant used by JWT, OAuth and many APIs). Decoding catches malformed input and shows the exact error. Files are read in your browser; nothing is uploaded.",
+      how: [
+        "Pick the Text or File tab.",
+        "For text, choose Encode or Decode and pick Standard or URL-safe Base64.",
+        "Type or paste your input — the result appears instantly in the output box.",
+        "For files, drop one in to get the Base64 and a copy-ready data URI (with image preview when applicable).",
+      ],
+      benefits: [
+        "Instant, live conversion as you type (UTF-8 aware).",
+        "Standard or URL-safe (base64url) variants with one click.",
+        "File mode for any file — text, JSON, image, PDF — directly in the browser.",
+        "Image data-URI preview rendered from the encoded Base64.",
+        "Download decoded Base64 back to a binary file.",
+        "Clear error message when Base64 input is malformed.",
+        "Swap input and output to chain conversions.",
+        "100% private — files and text never leave your browser.",
+      ],
+      relatedSlugs: [
+        "url-encoder-decoder",
+        "jwt-decoder",
+        "json-formatter",
+        "html-minifier",
+      ],
+      faqs: [
+        {
+          q: "What is Base64?",
+          a: "Base64 is a way of encoding any byte sequence as text using 64 printable characters (A–Z, a–z, 0–9, +, /). It's used wherever binary data has to travel through text — JSON, JWTs, email attachments, HTML data URIs.",
+        },
+        {
+          q: "What's the difference between Base64 and Base64URL?",
+          a: "Standard Base64 uses + and / and may end with =. URL-safe Base64 (base64url) replaces + with - and / with _ and drops the = padding, so the string is safe to put in URLs and JWTs. Pick whichever your downstream consumer expects.",
+        },
+        {
+          q: "Why is the encoded output longer than my input?",
+          a: "Base64 needs 4 characters to represent every 3 bytes, so output is roughly 4/3 the size of input — about 33% larger. The tool shows the exact byte delta so you can plan around it.",
+        },
+        {
+          q: "Is Base64 encryption?",
+          a: "No. Base64 is just a way to represent bytes as text — anyone can decode it instantly. Use it for transport, not for hiding secrets. If you need privacy, encrypt the data first (e.g. with our Secure Notes tool).",
+        },
+        {
+          q: "Why did decoding fail?",
+          a: "Standard Base64 accepts only A–Z, a–z, 0–9, +, /, =. A space, a stray hyphen or a missing character will throw. The tool surfaces the engine's exact error so you can fix it.",
+        },
+        {
+          q: "Can I encode files like images and PDFs?",
+          a: "Yes. Switch to the File tab and drop any file in — you'll get its Base64 plus a ready-to-paste data URI. For images, a live preview confirms it round-trips correctly.",
+        },
+        {
+          q: "What's a data URI?",
+          a: "A data URI like `data:image/png;base64,…` lets you embed a file directly into HTML, CSS or JSON without a separate request. The tool prepares one with the correct MIME type for any file you drop in.",
+        },
+        {
+          q: "Does it work with Unicode and emoji?",
+          a: "Yes — text is UTF-8 encoded before Base64 encoding (and decoded back from UTF-8), so accented characters, emoji and non-Latin scripts round-trip correctly.",
+        },
+        {
+          q: "Is my data sent anywhere?",
+          a: "No. Toollyz has no server — all encoding and decoding happens in your browser. The file mode reads files locally and discards them when you leave the page.",
+        },
+        {
+          q: "Is this Base64 tool free?",
+          a: "Completely free with no signup and no limits. Encode or decode as much text or as many files as you like, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "url-encoder-decoder",
