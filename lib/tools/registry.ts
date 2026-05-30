@@ -10328,13 +10328,100 @@ export const tools: Tool[] = [
   {
     slug: "zodiac-sign-finder",
     name: "Zodiac Sign Finder",
-    tagline: "Find your zodiac sign by date of birth.",
+    tagline: "Western sun sign + Chinese animal with proper New Year boundary.",
     description:
-      "Enter your birth date to discover your Western and Chinese zodiac signs, traits and element.",
+      "Enter your birth date to find both your Western (tropical) sun sign and your Chinese (lunisolar) zodiac animal, plus element, polarity, traits and compatible signs. Chinese New Year lookup covers 1900–2050. Honest &quot;for fun, not forecasting&quot; framing.",
     categoryId: "calculators",
     icon: Star,
-    status: "coming-soon",
-    keywords: ["zodiac", "horoscope", "astrology"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "zodiac sign calculator",
+      "zodiac sign finder",
+      "sun sign calculator",
+      "chinese zodiac calculator",
+      "western zodiac",
+      "horoscope sign finder",
+      "what's my zodiac",
+      "astrology sign",
+      "chinese zodiac year",
+      "zodiac element",
+      "zodiac compatibility",
+      "browser zodiac calculator",
+      "free zodiac calculator",
+      "lunisolar zodiac",
+    ],
+    seo: {
+      title: "Zodiac Sign Finder — Western Sun Sign + Chinese Animal (Free)",
+      description:
+        "Enter your birth date and Toollyz Zodiac Sign Finder returns your Western (tropical) sun sign and your Chinese (lunisolar) zodiac animal with element, polarity, traits and compatible signs. Chinese New Year lookup covers 1900–2050.",
+      what:
+        "A zodiac sign finder converts a birth date to its Western (tropical) sun sign and its Chinese (lunisolar) animal. Toollyz Zodiac Sign Finder ships both engines offline in your browser. The Western engine matches the date against the standard 12 sun-sign ranges (Capricorn wraps Dec 22 → Jan 19) and returns name, glyph, element (Fire / Earth / Air / Water), modality (Cardinal / Fixed / Mutable), ruling planet, four trait words and three popularly-compatible signs. The Chinese engine respects the actual lunisolar boundary — a real Chinese zodiac year starts on Chinese New Year, not Gregorian Jan 1 — so Toollyz ships a lookup table of CNY dates for 1900–2050 and uses the previous year&apos;s animal for dates before that year&apos;s CNY. Animal is computed from (year − 4) mod 12; the element comes from the sexagenary cycle (year mod 10 maps to Wood / Fire / Earth / Metal / Water, two consecutive years per element); polarity (Yang / Yin) from year mod 2. Output includes the animal glyph, the polarity-element pair, traits and compatible animals — and surfaces the actual CNY date used. The Caveats panel is prominently honest: astrology is a cultural tradition, not a predictive science, and &quot;compatible signs&quot; aren&apos;t relationship advice. Toollyz has no backend; the birth date saves to localStorage on this device only.",
+      how: [
+        "Type or pick your date of birth.",
+        "Read your Western sun sign card (with element, modality, ruling planet, traits, compatibility).",
+        "Read your Chinese zodiac card (with animal, polarity, element, year, traits, compatibility).",
+        "Note the CNY date displayed under the Chinese card — important if you were born in January or early February.",
+      ],
+      benefits: [
+        "Both Western (tropical) and Chinese (lunisolar) zodiac in one tool.",
+        "Proper Chinese New Year boundary via a 1900–2050 lookup table — not the Gregorian Jan 1 shortcut most sites use.",
+        "Chinese element (Wood / Fire / Earth / Metal / Water) and polarity (Yang / Yin) from the sexagenary cycle.",
+        "Western element (Fire / Earth / Air / Water), modality (Cardinal / Fixed / Mutable) and ruling planet.",
+        "Four trait words and three popularly-compatible signs for each system.",
+        "Surfaces the CNY date used so users know which year their Chinese sign came from.",
+        "Honest &quot;for fun, not forecasting&quot; caveats panel explaining astrology is a cultural tradition.",
+        "100% private — Toollyz has no backend, birth date saves to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "horoscope-generator",
+        "love-compatibility-calculator",
+        "calendar-generator",
+        "age-difference-calculator",
+      ],
+      faqs: [
+        {
+          q: "What's the difference between Western and Chinese zodiac?",
+          a: "Western (tropical) zodiac is based on the Sun&apos;s apparent path through 12 constellations and is anchored to a 12-month solar year — your sign depends on day-of-year. Chinese zodiac is a 12-year cycle of animals anchored to Chinese New Year (lunisolar), so your sign depends on birth year (and the date relative to that year&apos;s CNY).",
+        },
+        {
+          q: "Why does the Chinese sign sometimes differ from year-divided-by-12?",
+          a: "Because the Chinese year boundary is Chinese New Year (between Jan 21 and Feb 20), not Gregorian Jan 1. If you were born in January or early February, your Chinese sign may be from the prior Gregorian year. Toollyz uses a CNY lookup table 1900–2050 to get this right.",
+        },
+        {
+          q: "How accurate is the Western sign for cusp dates?",
+          a: "Sun-sign boundaries shift by ±1 day across leap-year cycles because the tropical year isn&apos;t exactly 365 days. Toollyz uses the most commonly published boundary dates — if you were born exactly on a transition, your true sun sign depends on your birth time and place. For precision, use a full birth-chart calculator.",
+        },
+        {
+          q: "What's the Chinese element?",
+          a: "The Chinese sexagenary cycle pairs 12 animals with 5 elements (Wood, Fire, Earth, Metal, Water), so the full cycle is 60 years. The element comes from the last digit of the year: 0–1 Metal, 2–3 Water, 4–5 Wood, 6–7 Fire, 8–9 Earth. Even-year Yang, odd-year Yin.",
+        },
+        {
+          q: "Is astrology real?",
+          a: "Astrology is a cultural tradition with thousands of years of history, not a predictive science. There&apos;s no peer-reviewed evidence that birth date determines personality or destiny. Toollyz Zodiac Sign Finder is for fun and cultural context, not forecasting.",
+        },
+        {
+          q: "What about ascendant / moon sign?",
+          a: "Those need birth time and location, not just date. Toollyz handles only the sun sign (Western) and animal sign (Chinese). For full natal charts, use a specialised astrology service.",
+        },
+        {
+          q: "Why is the CNY lookup capped at 2050?",
+          a: "Future Chinese New Year dates require astronomical lunisolar computation; we ship a static table for 1900–2050 (most users) and fall back to an approximate Feb 4 outside that range with a clear note in the UI.",
+        },
+        {
+          q: "Can I see all 12 signs?",
+          a: "Yes — the Western signs are all listed below the cards with their date ranges, elements and modalities. Click any of them to scroll the comparison.",
+        },
+        {
+          q: "Are my birth date and sign saved?",
+          a: "Only in your browser&apos;s localStorage on this device. Toollyz has no backend; nothing is uploaded.",
+        },
+        {
+          q: "Is this Zodiac Sign Finder free?",
+          a: "Completely free with no signup and no limits. Look up as many dates as you like — privately in your browser.",
+        },
+      ],
+    },
   },
 
   // ════════════════════════════════════════════════════════════════════════

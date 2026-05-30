@@ -317,6 +317,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "love-compatibility-calculator": dynamic(
     () => import("@/components/tools/love-compatibility-calculator"),
   ),
+  "zodiac-sign-finder": dynamic(
+    () => import("@/components/tools/zodiac-sign-finder"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
