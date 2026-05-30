@@ -215,6 +215,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "gradient-generator": dynamic(
     () => import("@/components/tools/gradient-generator"),
   ),
+  "meme-generator": dynamic(
+    () => import("@/components/tools/meme-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

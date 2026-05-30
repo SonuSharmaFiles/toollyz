@@ -7014,13 +7014,100 @@ export const tools: Tool[] = [
   {
     slug: "meme-generator",
     name: "Meme Generator",
-    tagline: "Create classic memes with top and bottom text.",
+    tagline: "Upload an image, add top/bottom text, export as PNG.",
     description:
-      "Pick from popular meme templates or upload your own, then add top/bottom text. Download as PNG or share.",
+      "Build classic image-macro memes in your browser. Upload any image (or pick a blank template), add top/middle/bottom text layers with full font, color and stroke control, then download as PNG. No watermark, no signup.",
     categoryId: "image",
     icon: PartyPopper,
-    status: "coming-soon",
-    keywords: ["meme", "meme generator", "image macro"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "meme generator",
+      "image macro generator",
+      "meme maker",
+      "meme creator",
+      "free meme generator",
+      "meme maker online",
+      "impact font meme",
+      "top bottom text meme",
+      "meme caption maker",
+      "browser meme maker",
+      "no watermark meme generator",
+      "meme template",
+      "custom meme",
+      "instagram meme",
+    ],
+    seo: {
+      title: "Meme Generator — Upload, Caption & Download (Free, No Watermark)",
+      description:
+        "Make image-macro memes in your browser. Upload your own image (or pick a blank template), add top/bottom/middle text with full font, color and stroke control, then download as a PNG — no signup, no watermark, fully private.",
+      what:
+        "A meme generator turns an image plus a caption into the classic image-macro everybody knows from social media. Toollyz Meme Generator runs entirely in your browser using an HTML canvas: upload a JPG, PNG or WebP image (or pick one of six blank coloured backgrounds for testing), add one or more text layers anchored to the top, middle or bottom, control every layer's text, font (Impact, Arial Black, Helvetica, Comic Sans MS, Georgia or Courier — all system fonts), font size, fill color, stroke color and stroke width, with an optional UPPERCASE toggle for the classic Impact style. Long captions wrap automatically inside the canvas padding. Render at a canvas width from 480 to 2048 pixels, then download a transparent-background-friendly PNG with no watermark, no signup and no uploads. Toollyz doesn't bundle copyrighted meme templates — upload your own image for the real thing — but the blank templates make it easy to test the engine, build mock layouts or design original macros.",
+      how: [
+        "Upload your meme image (or pick a blank template to test the editor).",
+        "Add up to as many text layers as you need — each anchored to top, middle or bottom with its own alignment.",
+        "Dial in font, size, fill, stroke and the UPPERCASE toggle for that classic image-macro look.",
+        "Click Download PNG — the file is rendered and saved entirely in your browser.",
+      ],
+      benefits: [
+        "Multiple text layers, each anchored top / middle / bottom with left / center / right alignment.",
+        "Six fonts including Impact (classic meme), Arial Black, Helvetica, Comic Sans, Georgia and Courier.",
+        "Per-layer fill color, stroke color and stroke width (the classic black outline goes from 0 to 20 px).",
+        "Auto word-wrap inside a configurable canvas padding.",
+        "Canvas width slider from 480 to 2048 pixels — fits Instagram, Twitter/X, Discord and beyond.",
+        "Six blank background templates for layout experimentation when you don't have an image yet.",
+        "PNG export with no watermark, no signup, no upload.",
+        "100% private — your image never leaves your device, settings saved to localStorage.",
+      ],
+      relatedSlugs: [
+        "image-resizer",
+        "image-compressor",
+        "fancy-text-generator",
+        "gradient-generator",
+      ],
+      faqs: [
+        {
+          q: "Why don't you bundle famous meme templates?",
+          a: "Most well-known meme images (Drake, Distracted Boyfriend, Doge, etc.) are copyrighted stock photos or artworks. Toollyz doesn't host them. The built-in templates are simple coloured backgrounds for layout testing — for a real meme, upload your own image (or a copy you have a license for).",
+        },
+        {
+          q: "Why does my Impact-font meme look wrong on this device?",
+          a: "Fonts use system stacks. If Impact isn't installed (rare on Linux and some mobile devices), the browser falls back to Anton or another bold sans-serif. The Anton fallback ships with many Linux distros and looks similar.",
+        },
+        {
+          q: "Can I have more than two text layers?",
+          a: "Yes — click Layer to add as many as you want. Each layer has its own text, position (top/middle/bottom), alignment, font and color settings.",
+        },
+        {
+          q: "How big can the meme be?",
+          a: "The canvas width slider goes from 480 to 2048 pixels — height is derived from the source image's aspect ratio (or the chosen blank template). For maximum quality, set the width close to your source image's original width.",
+        },
+        {
+          q: "Does the text wrap?",
+          a: "Yes — long captions wrap automatically inside the canvas padding. Increase the padding for more breathing room at the edges; decrease it to push the text out.",
+        },
+        {
+          q: "Is there a watermark?",
+          a: "No — exported PNGs are clean. Toollyz never adds a logo to your output.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The image picker uses your phone's camera roll; the canvas, layer controls and sliders are all touch-friendly; downloads save to your phone's normal downloads folder.",
+        },
+        {
+          q: "Is my image uploaded anywhere?",
+          a: "No. The image goes from your file system into an HTML Image element to a 2D canvas, all in memory in your browser. Toollyz has no server in the path — nothing is uploaded.",
+        },
+        {
+          q: "Where are my settings saved?",
+          a: "Only in your browser's localStorage. Clearing site data wipes them; Toollyz can't recover them because they were never on a server.",
+        },
+        {
+          q: "Is this Meme Generator free?",
+          a: "Completely free with no signup and no limits. Make as many memes as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "signature-generator",
