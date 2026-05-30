@@ -326,6 +326,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "email-signature-generator": dynamic(
     () => import("@/components/tools/email-signature-generator"),
   ),
+  "disposable-password-generator": dynamic(
+    () => import("@/components/tools/disposable-password-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

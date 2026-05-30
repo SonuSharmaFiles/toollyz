@@ -10628,13 +10628,100 @@ export const tools: Tool[] = [
   {
     slug: "disposable-password-generator",
     name: "Disposable Password Generator",
-    tagline: "Single-use passwords that expire after viewing.",
+    tagline: "Generate fresh, copy once, auto-clear from the screen.",
     description:
-      "Generate one-time passwords that auto-expire after a set time or first view — perfect for sharing credentials safely.",
+      "Generate strong single-use passwords with crypto.getRandomValues and rejection sampling. Each Generate next produces a fresh one; the displayed password auto-clears from screen 5–300 seconds after you copy it. Toollyz is a static site — honest framing about no server-side expiring link. Free and private.",
     categoryId: "generators",
     icon: KeySquare,
-    status: "coming-soon",
-    keywords: ["disposable password", "one-time password", "secure share"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "disposable password generator",
+      "one time password",
+      "fresh password generator",
+      "single use password",
+      "auto-clear password",
+      "burner password",
+      "crypto random password",
+      "password generator",
+      "strong password generator",
+      "browser password generator",
+      "free disposable password",
+      "secure password generator",
+      "password rejection sampling",
+      "ephemeral password",
+    ],
+    seo: {
+      title: "Disposable Password Generator — Fresh, Copy, Auto-Clear (Free)",
+      description:
+        "Generate single-use passwords with Toollyz Disposable Password Generator. crypto.getRandomValues + rejection sampling, auto-clear from screen 5–300s after copy, honest framing — Toollyz has no backend so no server-side expiring link.",
+      what:
+        "A disposable password generator produces a fresh, single-use credential each time you ask. Toollyz Disposable Password Generator runs entirely in your browser using `crypto.getRandomValues` — the same cryptographically secure PRNG that backs HTTPS in your browser — with rejection sampling so every character is exactly equally likely. The hero shows the latest password in monospace with a Show/Hide toggle; click Copy and a countdown starts — the password is **cleared from the screen** between 5 and 300 seconds later (configurable). Each Generate next pushes a fresh password to the top and keeps the previous 7 in a recent list, also subject to the auto-clear timer. **Honest framing**: Toollyz is a static site with no backend, so there&apos;s no server-side expiring link. &quot;Disposable&quot; here means *generate fresh, copy once, clear from screen quickly* — for real shared self-destructing secrets across people or devices, use a hosted service like 1Password Items Sharing, Bitwarden Send, OneTimeSecret or PrivateBin. The settings panel covers length (8–64), character classes (uppercase / lowercase / digits / symbols), Avoid confusables (Il1O0 stripped from the alphabet) and Group-with-dashes for readability. Settings save to localStorage; passwords never persist anywhere.",
+      how: [
+        "Set the length, character classes and (optional) confusable-avoidance / dash grouping.",
+        "Set the auto-clear timeout (5–300 seconds) — how long the password stays on screen after you copy it.",
+        "Click Generate next or watch the first one appear on load.",
+        "Copy, paste into the destination, and the screen clears automatically — keep generating fresh ones as needed.",
+      ],
+      benefits: [
+        "crypto.getRandomValues + rejection sampling — no modulo bias, no Math.random fallback.",
+        "Configurable length (8–64), character classes (Aa0!@) and confusable avoidance (Il1O0 stripped).",
+        "Group-with-dashes mode for easier dictation and visual structure.",
+        "Auto-clear from screen 5–300 seconds after Copy — not a fixed timer, so the countdown only starts once it&apos;s actually copied.",
+        "Recent list (last 7) with per-row Copy and the same auto-clear behaviour.",
+        "Show / Hide toggle for screen-share scenarios.",
+        "Honest framing: settings save to localStorage but passwords <strong>never</strong> persist.",
+        "100% private — Toollyz has no backend, all randomness is local.",
+      ],
+      relatedSlugs: [
+        "password-generator",
+        "random-password-phrase-generator",
+        "hash-generator",
+        "secure-notes",
+      ],
+      faqs: [
+        {
+          q: "What does &quot;disposable&quot; mean here?",
+          a: "Generate fresh, copy once, clear from screen quickly. There is no shareable link with server-side expiry — Toollyz is a static site with no backend. For server-side expiring links, use 1Password Items Sharing, Bitwarden Send, OneTimeSecret or PrivateBin.",
+        },
+        {
+          q: "How is the randomness generated?",
+          a: "`crypto.getRandomValues` with rejection sampling. That&apos;s the browser&apos;s cryptographically secure PRNG (same one HTTPS uses), and rejection sampling avoids modulo bias so every character in the configured alphabet is exactly equally likely.",
+        },
+        {
+          q: "Why is the screen clear keyed to Copy and not a fixed timer?",
+          a: "If the timer started at generation, you might lose the password before you finished pasting it. The countdown begins the moment you click Copy, giving you the full configured window to use it in the destination.",
+        },
+        {
+          q: "Do the passwords leave my browser?",
+          a: "No. They&apos;re generated locally and only ever appear on this page. Toollyz has no backend; nothing is uploaded; nothing persists across reload (only the settings save).",
+        },
+        {
+          q: "How do I share a password with someone else securely?",
+          a: "Use a dedicated tool: 1Password Items Sharing, Bitwarden Send, OneTimeSecret or PrivateBin. They handle encryption, server-side expiry and view-count limits. Toollyz Disposable Password Generator focuses on generation, not transport.",
+        },
+        {
+          q: "Why &quot;avoid confusables&quot;?",
+          a: "Capital I, lowercase l, digit 1, capital O and digit 0 are easy to misread when dictated or read from a screenshot. Stripping them gives a slightly smaller alphabet (~5 chars less) in exchange for fewer mistakes.",
+        },
+        {
+          q: "Does grouping with dashes weaken the password?",
+          a: "No — the underlying characters are still uniformly random. The dashes are visual only, inserted every 4 characters for readability. Most password fields accept them; if a destination strips them, the password still has the same entropy.",
+        },
+        {
+          q: "How long should the password be?",
+          a: "20 characters with mixed case + digits gives ~119 bits of entropy — far beyond any practical brute-force attack. 12–16 is fine for casual sites; 24+ is overkill in most scenarios but doesn&apos;t hurt.",
+        },
+        {
+          q: "Why don't symbols default to on?",
+          a: "Some destinations (legacy POS systems, older Wi-Fi config UIs) reject symbols. Length + mixed case + digits is plenty strong without them. Toggle symbols on if your site requires them.",
+        },
+        {
+          q: "Is this Disposable Password Generator free?",
+          a: "Completely free with no signup and no limits. Generate as many as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "favicon-from-text",
