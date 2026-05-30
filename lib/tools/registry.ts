@@ -10530,13 +10530,100 @@ export const tools: Tool[] = [
   {
     slug: "email-signature-generator",
     name: "Email Signature Generator",
-    tagline: "Build a clean, professional email signature.",
+    tagline: "Table-based HTML with inline styles, rich-paste for Gmail / Outlook.",
     description:
-      "Design a polished email signature with logo, social icons and brand colors. Export HTML ready to paste.",
+      "Design a clean, table-based HTML email signature with photo, social icons, brand colour and optional disclaimer. Outputs Outlook-friendly inline-style HTML and supports rich clipboard paste directly into Gmail and Outlook signature editors. Free and private.",
     categoryId: "generators",
     icon: Mailbox,
-    status: "coming-soon",
-    keywords: ["email signature", "signature generator", "html signature"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "email signature generator",
+      "html email signature",
+      "gmail signature generator",
+      "outlook signature generator",
+      "apple mail signature",
+      "professional email signature",
+      "brand email signature",
+      "email signature with logo",
+      "email signature social icons",
+      "free email signature",
+      "browser email signature",
+      "email signature template",
+      "html signature builder",
+      "company email signature",
+    ],
+    seo: {
+      title: "Email Signature Generator — Gmail / Outlook-Friendly HTML (Free)",
+      description:
+        "Build a clean table-based HTML email signature with Toollyz Email Signature Generator. Photo, social icons, brand colour, disclaimer — copy as rich or as HTML source. Optimised for Gmail, Outlook and Apple Mail.",
+      what:
+        "An email-signature generator turns a structured form into the HTML block that appears under every email you send. Toollyz Email Signature Generator outputs **table-based HTML with fully inline styles** — the only layout strategy that survives Outlook&apos;s Word-based renderer intact. Configure four tabs: Identity (name, pronouns, job title, company, photo URL with optional round/square crop), Contact (email, phone, website, address), Social (LinkedIn, X/Twitter, GitHub, Instagram, YouTube — only the ones you fill render), and Style (brand colour for the accent rule and links, optional disclaimer). The hero shows a true live preview rendered with `dangerouslySetInnerHTML` on a white background so you see exactly what the recipient will see. Two copy actions: **Copy rich** uses the Clipboard API&apos;s `ClipboardItem` to put both `text/html` and `text/plain` on your clipboard — paste straight into Gmail&apos;s or Outlook web&apos;s signature editor and the formatting survives. **Copy HTML source** gives the raw string for email clients that need a hand-edited template. Inline SVG social icons mean no external image dependency for the icons themselves (the photo still needs a public URL). Toollyz has no backend; your details save to localStorage on this device only.",
+      how: [
+        "Fill out the four tabs — Identity, Contact, Social, Style.",
+        "Watch the live preview update as you type.",
+        "Click Copy rich to paste straight into Gmail / Outlook signature settings.",
+        "For Apple Mail or custom templates, use Copy HTML source.",
+      ],
+      benefits: [
+        "Table-based HTML with fully inline styles — the only layout that survives Outlook intact.",
+        "Live preview rendered on a white background so you see the recipient&apos;s view exactly.",
+        "Five social platforms (LinkedIn, X/Twitter, GitHub, Instagram, YouTube) as inline SVG icons.",
+        "Configurable brand colour drives the accent rule, the name link and the social icons.",
+        "Optional pronouns, address and disclaimer fields.",
+        "Round-avatar / square-logo toggle for the photo.",
+        "Copy rich (`ClipboardItem` with text/html + text/plain) and Copy HTML source actions.",
+        "100% private — Toollyz has no backend, your details save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "meta-tag-generator",
+        "vcard-generator",
+        "qr-code-generator",
+        "url-shortener",
+      ],
+      faqs: [
+        {
+          q: "Will it work in Outlook?",
+          a: "Yes — the signature uses `<table>` layout with all styles inline, which is what Outlook&apos;s Word-based renderer expects. Outlook desktop strips some advanced CSS (background images, flexbox); Toollyz avoids those entirely.",
+        },
+        {
+          q: "How do I add this to Gmail?",
+          a: "Settings → See all settings → General → scroll to Signature → click Create new → name it → click into the editor → click Copy rich in Toollyz → paste. The formatting carries over. Save changes at the bottom.",
+        },
+        {
+          q: "How do I add it to Outlook for the web?",
+          a: "Settings → Mail → Compose and reply → New signature → click into the editor → paste with Copy rich. For Outlook desktop, paste into the signature editor in File → Options → Mail → Signatures.",
+        },
+        {
+          q: "Apple Mail?",
+          a: "Apple Mail&apos;s signature editor strips rich-paste. The workaround: click Copy HTML source, save it as `signature.html`, open it in Safari, select all and copy from the rendered page, then paste into Apple Mail&apos;s signature editor. A bit clunky but it&apos;s Apple Mail&apos;s fault, not Toollyz&apos;s.",
+        },
+        {
+          q: "Where should I host the photo?",
+          a: "Anywhere publicly reachable over HTTPS — your company CDN, an avatar service, GitHub&apos;s avatar URLs, etc. Recipients&apos; clients fetch the image at view time, so it must be public. 120×120 PNG or JPG renders crisply.",
+        },
+        {
+          q: "Can I add a custom social network?",
+          a: "Not in this release — only LinkedIn, X/Twitter, GitHub, Instagram and YouTube have built-in SVG icons. Custom icons would need to be hosted externally and the inline `<img>` swapped in manually (use Copy HTML source then edit).",
+        },
+        {
+          q: "Will images break for some recipients?",
+          a: "Some email clients (corporate Outlook, conservative webmail) block remote images by default until the user clicks &quot;Show images&quot;. The signature still reads cleanly without the photo because the text block is on the right.",
+        },
+        {
+          q: "Why inline styles instead of a stylesheet?",
+          a: "Email clients strip `<style>` blocks aggressively — even Gmail rewrites them. Inline styles are the only universally-honored option. Toollyz produces fully-inlined HTML so the same string works in every client.",
+        },
+        {
+          q: "Is my data uploaded?",
+          a: "No. Toollyz has no backend. Your identity, contact and social links save to localStorage on this device only. The photo URL is rendered into the HTML — the photo file itself is hosted wherever you chose.",
+        },
+        {
+          q: "Is this Email Signature Generator free?",
+          a: "Completely free with no signup and no limits. Generate as many signatures as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "disposable-password-generator",
