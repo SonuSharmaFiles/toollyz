@@ -4952,13 +4952,100 @@ export const tools: Tool[] = [
   {
     slug: "keyboard-tester",
     name: "Keyboard Tester",
-    tagline: "Test every key on your keyboard for hardware issues.",
+    tagline: "Test every key on your keyboard — instantly, in the browser.",
     description:
-      "Press any key to verify it registers correctly. Detect stuck, ghosted or non-responsive keys in seconds.",
+      "Press any key to verify it registers correctly. See live event details (key, code, keyCode, modifiers), a visual keyboard that highlights what you've tested, and a recent-events log. Free and private.",
     categoryId: "developer",
     icon: Keyboard,
-    status: "coming-soon",
-    keywords: ["keyboard test", "key tester", "stuck key", "hardware test"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "keyboard tester",
+      "key tester",
+      "test keyboard online",
+      "online keyboard test",
+      "stuck key",
+      "key not working",
+      "keyboard checker",
+      "test my keyboard",
+      "key event tester",
+      "keycode",
+      "key code",
+      "keyboard diagnostic",
+      "verify keyboard",
+      "keyboard hardware test",
+    ],
+    seo: {
+      title: "Keyboard Tester — Check Every Key in Your Browser",
+      description:
+        "Test every key on your keyboard live with Toollyz Keyboard Tester. See key, code, keyCode and modifiers for each press, plus a visual keyboard that highlights what you've tested — 100% in your browser.",
+      what:
+        "A Keyboard Tester verifies that each key on your physical keyboard registers correctly — useful for diagnosing stuck, ghosted or non-responsive keys after a spill, replacement or before a return. Toollyz Keyboard Tester captures every keydown and keyup event in your browser and shows live details: the typed character (key), the physical button (code), the legacy numeric keyCode, the location (left/right/numpad/standard) and any held modifiers (Ctrl/Alt/Shift/Meta). A virtual QWERTY layout highlights the keys you've pressed in green and lights up the one currently held in indigo, so you can scan for keys that never register. A recent-events log records the last twelve presses with their codes, and Tab/arrows are captured so they don't move focus away. Nothing is uploaded — this is purely an event monitor in your browser.",
+      how: [
+        "Click anywhere on the page, then start pressing keys — events register instantly.",
+        "Watch the live event details for the last key (key, code, keyCode, location, modifiers).",
+        "Check the virtual keyboard — green keys are ones you've tested.",
+        "Use Reset to clear the highlights and try again, or run through every key methodically.",
+      ],
+      benefits: [
+        "Live event details for every keypress: key, code, keyCode, location, modifiers.",
+        "Visual QWERTY layout that highlights pressed and tested keys.",
+        "Detects stuck keys, missing keys and ghosting before you ship.",
+        "Layout-coverage percentage to track your progress through every key.",
+        "Recent-events log of the last 12 keypresses.",
+        "Tab and arrow keys are captured so they don't move focus away.",
+        "Works for any physical keyboard the OS hands the browser.",
+        "100% private — keystrokes are never sent anywhere.",
+      ],
+      relatedSlugs: [
+        "mouse-click-tester",
+        "mic-test",
+        "device-info",
+        "browser-info",
+      ],
+      faqs: [
+        {
+          q: "What does this keyboard tester check?",
+          a: "Whether each key on your keyboard produces a keydown event. If a key never lights up the virtual layout, your browser (and therefore any app on this system) isn't receiving it — typically a hardware or driver issue.",
+        },
+        {
+          q: "What's the difference between “key” and “code”?",
+          a: "“key” is the typed character or named key (e.g. “A”, “Enter”, “ArrowUp”) — it varies with layout and modifiers. “code” is the physical button on the keyboard (e.g. “KeyA”, “Enter”, “ArrowUp”) — the same code fires regardless of layout, which makes it ideal for games and shortcuts.",
+        },
+        {
+          q: "Why is keyCode deprecated but still shown?",
+          a: "keyCode is the legacy numeric value (65 for “A”, 13 for Enter). It's deprecated in favor of key/code, but the tool still shows it because plenty of older code and reference material relies on those numbers.",
+        },
+        {
+          q: "Why doesn't my Caps Lock light up while held?",
+          a: "Caps Lock fires a single keydown when toggled — it doesn't repeat or stay “held” like a letter. The tester records that one event; if you press it twice you should see it fire each time.",
+        },
+        {
+          q: "How can I detect a stuck key?",
+          a: "Press the suspected key once. If it keeps appearing in the recent-events log without you holding it, or if the virtual key stays highlighted as “pressed” after release, that's a stuck switch — common after a spill or with worn keyboards.",
+        },
+        {
+          q: "What about media keys, function keys and Fn?",
+          a: "Most F1–F12 keys are captured normally. Media and special keys (volume, brightness, Fn combos) are often handled by the OS before the browser sees them and may not appear here — that's normal.",
+        },
+        {
+          q: "Does Tab move focus when I press it?",
+          a: "No — the tool calls preventDefault on Tab, arrows, Space and Backspace so they don't move focus away or scroll the page while you're testing.",
+        },
+        {
+          q: "Why does Shift+A show key “A” but code “KeyA”?",
+          a: "“A” is what would be typed (Shift makes it uppercase); “KeyA” is the physical button. The Shift modifier appears in the “modifiers” badge at the same time.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "It detects keypresses from a connected Bluetooth/USB keyboard on a phone or tablet. On-screen virtual keyboards on phones don't typically fire the same keydown/keyup events.",
+        },
+        {
+          q: "Is this keyboard tester free?",
+          a: "Completely free with no signup. Press as many keys as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "mouse-click-tester",

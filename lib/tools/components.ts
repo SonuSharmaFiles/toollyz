@@ -146,6 +146,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "screen-resolution": dynamic(
     () => import("@/components/tools/screen-resolution"),
   ),
+  "keyboard-tester": dynamic(
+    () => import("@/components/tools/keyboard-tester"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),
