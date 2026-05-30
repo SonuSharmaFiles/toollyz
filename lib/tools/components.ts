@@ -176,6 +176,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "jpg-to-png": dynamic(
     () => import("@/components/tools/jpg-to-png"),
   ),
+  "png-to-webp": dynamic(
+    () => import("@/components/tools/png-to-webp"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

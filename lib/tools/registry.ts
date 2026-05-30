@@ -5934,13 +5934,100 @@ export const tools: Tool[] = [
   {
     slug: "png-to-webp",
     name: "PNG to WebP Converter",
-    tagline: "Convert PNG to WebP for smaller, faster images.",
+    tagline: "Batch-convert PNG (or JPG) to WebP with quality control.",
     description:
-      "Convert PNG to modern WebP for dramatically smaller file sizes with no visible quality loss.",
+      "Drop PNG (or JPG) files to convert them to modern WebP with a quality slider, live size savings and one-click download — entirely in your browser. Free and private.",
     categoryId: "converters",
     icon: FileImage,
-    status: "coming-soon",
-    keywords: ["png to webp", "image converter", "optimize"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "png to webp",
+      "convert png to webp",
+      "webp converter",
+      "image to webp",
+      "optimize images",
+      "compress png",
+      "batch png to webp",
+      "webp encoder",
+      "jpg to webp",
+      "image optimizer",
+      "smaller images",
+      "web performance images",
+      "online webp converter",
+      "image format converter",
+    ],
+    seo: {
+      title: "PNG to WebP Converter — Batch with Quality Control",
+      description:
+        "Convert PNG (or JPG) to modern WebP with Toollyz PNG to WebP Converter. Quality slider, drag-drop batch, live size savings and one-click download — entirely in your browser.",
+      what:
+        "A PNG to WebP Converter re-encodes images into WebP — a modern format that produces dramatically smaller files than PNG at similar (or better) visual quality, supports transparency and is widely supported by browsers. Toollyz PNG to WebP Converter runs entirely in your browser: drop PNG or JPG files (up to 30 at a time), pick a quality from 20–100% with the slider, and each image is decoded with the browser's native pipeline, drawn to a canvas and exported as a WebP Blob. You'll see the original PNG size, the new WebP size and the percentage saved, and you can re-encode the whole queue with a new quality setting in one click. No file is ever uploaded.",
+      how: [
+        "Drop one or more PNG (or JPG) files onto the drop zone.",
+        "Adjust the quality slider — 80–90% is a great default for photos.",
+        "Review per-file savings, dimensions and thumbnails.",
+        "Click WebP to download a single file, or Download all in one go.",
+      ],
+      benefits: [
+        "Drag-and-drop batch conversion — up to 30 files at a time.",
+        "Quality slider from 20% to 100% with a Re-encode all action.",
+        "Per-file thumbnail, dimensions and before/after size with a savings delta.",
+        "Aggregate savings across the batch shown at the top.",
+        "Supports both PNG and JPG inputs.",
+        "Strips EXIF and other metadata as a side effect — privacy bonus.",
+        "Uses the browser's native WebP encoder so quality matches Chrome / Firefox / Edge / Safari.",
+        "100% private — files are decoded and saved locally, nothing uploaded.",
+      ],
+      relatedSlugs: [
+        "jpg-to-png",
+        "html-minifier",
+        "css-minifier",
+        "base64-encoder-decoder",
+      ],
+      faqs: [
+        {
+          q: "Why convert PNG to WebP?",
+          a: "WebP typically gives 25–35% smaller files than PNG (and 25–34% smaller than JPG for photos) at visually similar quality. Modern browsers all support it, so it's the easiest way to make pages load faster without losing quality.",
+        },
+        {
+          q: "What does the quality slider do?",
+          a: "WebP is a lossy format (with a lossless mode that's still smaller than PNG). The slider controls how much detail is preserved versus how small the file gets. 80–90% is usually indistinguishable from the original for photos.",
+        },
+        {
+          q: "Will it preserve transparency?",
+          a: "Yes — if your PNG has an alpha channel, the WebP output keeps it. Set the quality high (90%+) for transparent UI assets where edge fidelity matters.",
+        },
+        {
+          q: "Why is my WebP not smaller than the PNG?",
+          a: "Very small images (icons, tiny screenshots) sometimes encode larger as WebP because of overhead. Try a lower quality, or accept that for small assets PNG can be competitive.",
+        },
+        {
+          q: "What's the difference between lossy and lossless WebP?",
+          a: "Lossy WebP discards detail to shrink the file (controlled by the quality slider). Lossless WebP keeps every pixel and is still typically 25% smaller than PNG. Modern browsers handle both transparently.",
+        },
+        {
+          q: "Do all browsers support WebP?",
+          a: "Yes. Every modern desktop and mobile browser supports WebP. If you need to support very old browsers, keep a PNG fallback.",
+        },
+        {
+          q: "Can I also convert JPG to WebP?",
+          a: "Yes — drop a JPG and it converts the same way. WebP is usually significantly smaller than JPG at the same perceived quality.",
+        },
+        {
+          q: "Does it strip EXIF metadata?",
+          a: "Yes. The conversion re-encodes raw pixels through a canvas, so EXIF, GPS and other metadata are dropped — useful for privacy when sharing photos online.",
+        },
+        {
+          q: "Are my files uploaded anywhere?",
+          a: "No. Toollyz has no server — the conversion is entirely in your browser. Dropped files and converted WebPs never leave the page and are discarded when you reload.",
+        },
+        {
+          q: "Is this PNG to WebP converter free?",
+          a: "Completely free with no signup and no limits. Convert as many images as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "text-to-speech",
