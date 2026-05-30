@@ -8564,13 +8564,100 @@ export const tools: Tool[] = [
   {
     slug: "reaction-time-test",
     name: "Reaction Time Test",
-    tagline: "Measure your reaction time in milliseconds.",
+    tagline: "Click when the screen turns green — millisecond accuracy.",
     description:
-      "Test your reflexes — click when the signal changes and see how fast you react. Track best and average times.",
+      "Measure your visual reaction time in milliseconds. Random 1.5–5 s wait, early-click detection, latest / best / 5-trial average / median in the hero and a 30-run history with categorical labels. Free, private, browser-only.",
     categoryId: "calculators",
     icon: Timer,
-    status: "coming-soon",
-    keywords: ["reaction time", "reflex test", "reaction"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "reaction time test",
+      "reflex test",
+      "reaction time online",
+      "human reaction time",
+      "visual reaction time",
+      "reaction speed test",
+      "reaction time milliseconds",
+      "free reaction time test",
+      "browser reaction test",
+      "online reflex test",
+      "ms reaction test",
+      "reaction time benchmark",
+      "click when green test",
+      "reaction average",
+    ],
+    seo: {
+      title: "Reaction Time Test — Free Visual Reflex Test in Milliseconds",
+      description:
+        "Measure your reaction time with Toollyz Reaction Time Test. Random delay, early-click detection, latest / best / 5-trial average / median stats and a 30-run history with categorical labels — entirely in your browser.",
+      what:
+        "A reaction time test measures how fast you can respond to a visual signal. Toollyz Reaction Time Test runs entirely in your browser: click the big pad to arm, the background turns amber while the test waits a random 1.5–5 seconds, then it snaps to emerald with a giant \"CLICK!\" prompt. The moment you click, the elapsed time from the green flash is recorded using `performance.now()` (sub-millisecond resolution per your browser). Early clicks during the amber wait are detected and shown as \"Too soon!\" so anticipation can't game the score. The hero surfaces four live stats — latest, best ever, average of the last 5 runs and median across all runs — and each result earns a categorical label (Lightning &lt; 180 ms, Excellent &lt; 220 ms, Quick &lt; 280 ms, Average &lt; 340 ms, Slow &lt; 420 ms, Sluggish above that). The 30 most recent runs save to localStorage so you can track improvement over time. Toollyz has no backend — every measurement stays on your device.",
+      how: [
+        "Click the big pad to arm the test — the background turns amber.",
+        "Wait for the random 1.5–5 second delay; clicking during the wait counts as \"Too soon!\".",
+        "When the background turns emerald with the CLICK! prompt, tap as fast as you can.",
+        "Your time and category land in the hero and the History list — click anywhere to go again.",
+      ],
+      benefits: [
+        "Sub-millisecond timing via `performance.now()` — accuracy is whatever your browser exposes (typically 0.1–1 ms).",
+        "Random 1.5–5 s wait so you can't anticipate the signal.",
+        "Early-click detection — anticipating clicks during the amber wait counts as \"Too soon!\".",
+        "Four live hero stats: latest, best ever, average of the last 5 runs, median across all runs.",
+        "Six categorical labels (Lightning / Excellent / Quick / Average / Slow / Sluggish) keyed to standard human reaction benchmarks.",
+        "30-run history with timestamp and label per entry.",
+        "Mobile-friendly — the big pad works equally well with mouse, trackpad and touch.",
+        "100% private — Toollyz has no backend, runs stay in your browser.",
+      ],
+      relatedSlugs: [
+        "cps-test",
+        "drag-click-test",
+        "spacebar-counter",
+        "stopwatch",
+      ],
+      faqs: [
+        {
+          q: "What is reaction time?",
+          a: "Reaction time is the interval between a stimulus (here, the screen turning green) and your motor response (clicking the mouse or tapping the screen). Visual reaction time is bottlenecked by retinal processing (~50 ms), visual cortex routing (~50 ms), motor planning (~50–100 ms) and the click hardware itself (~5–10 ms).",
+        },
+        {
+          q: "What's a good reaction time?",
+          a: "Most studies put simple visual reaction time at 200–300 ms for healthy adults, with a typical median around 250 ms. Under 200 ms is fast (or anticipated); under 150 ms is biologically very unlikely. Reaction time degrades a few ms per decade after age 20.",
+        },
+        {
+          q: "Why does the test sometimes say \"Too soon!\"?",
+          a: "If you click while the background is amber (during the random wait before the green signal), the test counts it as an early click. This stops people anticipating the signal and gaming the score. The amber → green transition is randomized between 1.5 and 5 seconds.",
+        },
+        {
+          q: "How accurate is the timer?",
+          a: "Toollyz uses `performance.now()`, which gives sub-millisecond timestamps but is rounded by your browser for privacy. Chrome and Firefox quantise to 0.1 ms in normal contexts and 1 ms in cross-origin isolation. The result is accurate to roughly ±1 ms.",
+        },
+        {
+          q: "Why is my score worse on mobile?",
+          a: "Touchscreens add 10–50 ms of input latency compared to a wired mouse. Bluetooth mice add another 5–15 ms. Wired mouse + LCD monitor with low input lag gives the fastest scores; the rest of your stack imposes a floor.",
+        },
+        {
+          q: "Does input lag affect my reaction time?",
+          a: "Yes — the measured time includes the path from your retina to the click handler. A high-refresh-rate display, low-latency mouse and a fast OS event pipeline can shave 10–30 ms off the reported number without your reflexes actually changing.",
+        },
+        {
+          q: "Can I cheat with autoclickers?",
+          a: "Sure, but the result is meaningless. The tool counts every click event regardless of source, so any visual stimulus would be hit before a human could process it. Save autoclickers for clicker tests.",
+        },
+        {
+          q: "Why does the median differ from the average?",
+          a: "Median is the middle value of all your runs sorted; it's less sensitive to outliers (one really slow run drags up the average). The 5-trial average reflects recent form; the all-time median reflects long-term ability.",
+        },
+        {
+          q: "Is my history shared?",
+          a: "No. It's stored only in your browser's localStorage on this device. Toollyz has no backend; nothing is uploaded or synced.",
+        },
+        {
+          q: "Is this Reaction Time Test free?",
+          a: "Completely free with no signup and no limits. Run as many tests as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "stopwatch",
