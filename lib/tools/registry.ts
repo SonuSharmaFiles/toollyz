@@ -7789,13 +7789,100 @@ export const tools: Tool[] = [
   {
     slug: "resume-pdf-generator",
     name: "Resume PDF Generator",
-    tagline: "Build a clean, professional resume as a PDF.",
+    tagline: "Two layouts × three fonts, drawn by pdf-lib in your browser.",
     description:
-      "Fill in your details, pick a polished template, and download a print-ready PDF resume in minutes.",
+      "Fill out a structured form (header, summary, experience, education, skills, projects, languages, certifications) and download a print-ready PDF resume. Two layouts (Classic / Modern), three standard PDF fonts and a theme colour — built entirely in your browser.",
     categoryId: "pdf",
     icon: FileUser,
-    status: "coming-soon",
-    keywords: ["resume", "cv", "pdf resume", "resume builder"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "resume builder",
+      "cv builder",
+      "pdf resume",
+      "resume generator",
+      "resume maker online",
+      "free resume builder",
+      "resume pdf download",
+      "cv pdf builder",
+      "resume template pdf",
+      "browser resume builder",
+      "no signup resume",
+      "private resume builder",
+      "ats friendly resume",
+      "single column resume",
+    ],
+    seo: {
+      title: "Resume PDF Generator — Free Print-Ready CV (No Signup)",
+      description:
+        "Build a clean, print-ready resume PDF with Toollyz Resume PDF Generator. Two layouts (Classic / Modern), three standard PDF fonts, theme colour and structured sections for experience, education, skills, projects, languages and certifications — entirely in your browser.",
+      what:
+        "A resume PDF generator turns a structured form into a polished, print-ready CV. Toollyz Resume PDF Generator runs everything inside your browser using the open-source pdf-lib library: it lays out a single-column A4 portrait page (with automatic overflow onto extra pages) using the standard 14 PDF fonts so there are no font-embedding licensing concerns. The form covers every section a recruiter looks for: a header with name, title, email, phone, location and three optional links (Website, LinkedIn, GitHub); a free-form Summary; a list of Experience entries (role, company, location, start/end and a multi-line bullet block); Education entries (school, degree, location, start/end, details); Skills as a comma-, pipe- or newline-separated list rendered with middle-dot separators; Projects (name, link, description); Languages (name and CEFR level / native / fluent); and Certifications (name, issuer, date). Pick the Classic template (centred header, full-width sections with a fine rule under each heading) or Modern (left-aligned header with a 80 × 2.4 pt coloured accent rule); pick Helvetica, Times Roman or Courier; pick a theme colour. Empty sections hide themselves automatically so a minimal resume stays minimal.",
+      how: [
+        "Pick a template (Classic / Modern), font and theme colour in the hero.",
+        "Fill out the tabs — Header, Summary, Experience, Education, Skills, Other (Projects / Languages / Certifications).",
+        "Set a filename and click Download PDF — the file is built and saved entirely in your browser.",
+        "Open in any PDF viewer or send straight to a recruiter.",
+      ],
+      benefits: [
+        "Two layouts: Classic (centred header, ruled sections) and Modern (left-aligned with accent rule).",
+        "Three font choices — Helvetica, Times Roman, Courier — using the standard 14 PDF fonts (no licensing concerns).",
+        "Configurable theme colour for accents, title and section headings.",
+        "A4 portrait with automatic overflow onto additional pages.",
+        "Skills, projects, languages and certifications hide their headers automatically when empty.",
+        "Experience and project bullets accept one-per-line input and render as bullet lists.",
+        "Form data saves to localStorage so a refresh doesn't lose your work.",
+        "100% private — Toollyz has no backend, everything runs in your browser.",
+      ],
+      relatedSlugs: [
+        "invoice-generator",
+        "image-to-pdf",
+        "pdf-merger",
+        "meta-tag-generator",
+      ],
+      faqs: [
+        {
+          q: "Is the PDF ATS-friendly?",
+          a: "Yes for most ATS systems. Toollyz produces a single-column A4 PDF with selectable text (not images of text) and standard PDF fonts. ATS parsers handle this layout well. For maximum compatibility, leave the icons and complex formatting out — the Classic template is the safest pick.",
+        },
+        {
+          q: "What's the difference between Classic and Modern?",
+          a: "Classic centres your name and uses full-width sections with a fine rule under each section heading — a traditional layout that works well in conservative industries. Modern left-aligns the name, adds a coloured accent rule under it and uses the theme colour for section headings — a bit more contemporary.",
+        },
+        {
+          q: "Why these three fonts?",
+          a: "Helvetica, Times Roman and Courier are part of the standard 14 PDF fonts — they're embedded in every PDF viewer, so the PDF size stays tiny and there are no font licensing concerns. Custom fonts can be added in a future update once we tackle font embedding properly.",
+        },
+        {
+          q: "Can I add a photo?",
+          a: "Not yet. Many modern hiring guides recommend against photos on resumes (bias risk, ATS issues), so Toollyz keeps it off by default. If you need one, generate the PDF, then add the photo in a separate editor.",
+        },
+        {
+          q: "How do I write good bullet points?",
+          a: "Use one bullet per line in the form — the engine wraps long lines automatically. Lead with an action verb, include a result or metric when possible, and keep each bullet to one or two lines for readability.",
+        },
+        {
+          q: "Does it support multiple pages?",
+          a: "Yes — long resumes overflow onto additional A4 pages automatically. The page break happens between sections or after a complete entry whenever possible.",
+        },
+        {
+          q: "What if I have no LinkedIn / GitHub / website?",
+          a: "Leave those fields blank. The header joins only the filled fields with middle dots, so missing links don't leave a gap.",
+        },
+        {
+          q: "Are my details uploaded?",
+          a: "No. Toollyz has no backend — the PDF is built in your browser and downloaded directly. Your form data saves to localStorage so a refresh keeps your draft; clearing site data wipes it.",
+        },
+        {
+          q: "Can I customise the section order?",
+          a: "Not in this release. The order is fixed: Header → Summary → Experience → Education → Skills → Projects → Languages → Certifications. We may add a re-orderable list in a future version.",
+        },
+        {
+          q: "Is this Resume PDF Generator free?",
+          a: "Completely free with no signup and no limits. Build as many resumes as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "invoice-generator",

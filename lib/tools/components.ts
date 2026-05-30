@@ -245,6 +245,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "invoice-generator": dynamic(
     () => import("@/components/tools/invoice-generator"),
   ),
+  "resume-pdf-generator": dynamic(
+    () => import("@/components/tools/resume-pdf-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
