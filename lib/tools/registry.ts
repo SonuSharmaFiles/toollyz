@@ -8368,13 +8368,100 @@ export const tools: Tool[] = [
   {
     slug: "drag-click-test",
     name: "Drag Click Test",
-    tagline: "Test your drag-click speed for gaming and benchmarks.",
+    tagline: "Counts clicks while the cursor is moving — honest browser approximation.",
     description:
-      "Measure how fast you can drag-click. See your CPS history and improve your timing.",
+      "Approximate a drag-click run in your browser — rapid clicks while the cursor is in motion. Five duration windows, live CPS, rejection count for stationary clicks and a 30-run history. Toollyz is honest that real drag clicking is a hardware technique; this tool counts pointer-down events during movement.",
     categoryId: "calculators",
     icon: Move,
-    status: "coming-soon",
-    keywords: ["drag click", "click test", "gaming"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "drag click test",
+      "drag clicking test",
+      "minecraft drag click",
+      "drag click cps",
+      "gaming click test",
+      "drag click counter",
+      "browser drag click test",
+      "free drag click test",
+      "drag click practice",
+      "fast drag click",
+      "drag click bench",
+      "click while moving",
+      "pointer drag click",
+      "click during drag",
+    ],
+    seo: {
+      title: "Drag Click Test — Honest Browser Drag-Click Approximation (Free)",
+      description:
+        "Count rapid clicks while moving the cursor with Toollyz Drag Click Test. Five duration windows, live CPS, a stationary-click rejection counter and a 30-run history — entirely in your browser.",
+      what:
+        "Drag clicking in games like Minecraft uses friction between your finger and a specific mouse-button shape to produce dozens of clicks per drag — it's a hardware technique that can't be replicated 1-to-1 in a browser. Toollyz Drag Click Test is an honest approximation: it counts every pointer-down event that arrives while the cursor is in motion (defined as ≥ 4 px of cumulative movement in the last 220 ms) and rejects clicks that arrive while the cursor is stationary. Pick a duration (1, 5, 10, 30 or 60 seconds), click and drag on the target — the first pointer-down arms the test, subsequent ones contribute to the count if you're moving, otherwise they land in the rejected counter. Live CPS, time remaining, the best score for the chosen duration and a 30-run history all surface in the UI. Toollyz is up-front that this is not a hardware drag-click detector; it's the closest the browser can get with Pointer Events.",
+      how: [
+        "Pick a duration (1 / 5 / 10 / 30 / 60 seconds).",
+        "Press the target with the mouse to arm — the first pointer-down begins the timer.",
+        "Keep clicking while you drag the cursor across the target — non-moving clicks land in the rejected counter.",
+        "When the timer runs out the result is saved to the History list with per-duration best surfaced in the hero.",
+      ],
+      benefits: [
+        "Honest approximation of the technique — clicks-while-moving counted, stationary clicks rejected with a visible counter.",
+        "Pointer Events (single code path for mouse, trackpad, touch and stylus).",
+        "Five duration windows: 1, 5, 10, 30 and 60 seconds.",
+        "Live CPS, time remaining and best-per-duration in the hero.",
+        "30-run history with per-run count and CPS.",
+        "Configurable movement parameters in source — 4 px / 220 ms thresholds documented in the UI.",
+        "Touch friendly — `touch-action: none` on the target prevents accidental scroll.",
+        "100% private — Toollyz has no backend, every event stays in your browser.",
+      ],
+      relatedSlugs: [
+        "cps-test",
+        "mouse-click-tester",
+        "spacebar-counter",
+        "reaction-time-test",
+      ],
+      faqs: [
+        {
+          q: "Is this a real drag-click detector?",
+          a: "No. Real drag clicking depends on the physical mouse hardware (a sharp mouse-button edge plus friction tape) and the OS interpreting the resulting chatter as separate clicks. Browsers see only the click events the OS forwards. Toollyz approximates the technique by counting pointer-down events that arrive while the cursor is in motion — a useful warmup, not a hardware benchmark.",
+        },
+        {
+          q: "What counts as moving?",
+          a: "≥ 4 px of cumulative pointer movement in the last 220 ms before the click. If you click while the cursor is stationary, the click lands in the rejected counter (visible in the hero) rather than the score.",
+        },
+        {
+          q: "Why is my rejected count high?",
+          a: "Either you stopped moving mid-drag (the cursor needs continuous motion) or your hardware is producing chatter-clicks the browser can't space out. Try moving more steadily and clicking only while the cursor is travelling.",
+        },
+        {
+          q: "Does it work on touch?",
+          a: "Yes — Pointer Events unify mouse, trackpad, touch and stylus. On a phone, swipe across the target while tapping rapidly. Touchscreen drag-click is naturally lower than mouse drag-click.",
+        },
+        {
+          q: "How does this compare to the CPS Test?",
+          a: "The CPS Test counts every discrete click without checking for movement — a pure clicks-per-second benchmark. The Drag Click Test only counts clicks during movement, modelling the gaming technique. Most people score lower on Drag Click than on CPS for the same duration.",
+        },
+        {
+          q: "Will autoclickers be detected?",
+          a: "No — the tool counts browser click events and doesn't try to distinguish autoclicks from human ones. If you're testing for a game or benchmark with rules, this is between you and the judge.",
+        },
+        {
+          q: "Why does the page disable scroll on the target?",
+          a: "`touch-action: none` on the target prevents your finger swipes from scrolling the page on mobile, so every drag stays on the target.",
+        },
+        {
+          q: "What's a good score?",
+          a: "There's no universal benchmark because real drag-click rates depend on hardware. In-browser, anywhere from 12 to 30 CPS in a 5-second window is impressive for human input. Don't chase 100 CPS scores from autoclickers.",
+        },
+        {
+          q: "Is my history saved?",
+          a: "Yes — the 30 most recent runs save to localStorage on this device only. Toollyz has no backend; nothing is uploaded or shared.",
+        },
+        {
+          q: "Is this Drag Click Test free?",
+          a: "Completely free with no signup and no limits. Run as many tests as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "spacebar-counter",

@@ -257,6 +257,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "cps-test": dynamic(
     () => import("@/components/tools/cps-test"),
   ),
+  "drag-click-test": dynamic(
+    () => import("@/components/tools/drag-click-test"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
