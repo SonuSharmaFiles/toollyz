@@ -9348,13 +9348,100 @@ export const tools: Tool[] = [
   {
     slug: "world-clock",
     name: "World Clock",
-    tagline: "Track time across multiple cities at a glance.",
+    tagline: "Live multi-city clock with day/night and IANA timezones.",
     description:
-      "See current time in cities around the world side-by-side. Perfect for remote teams and travel planning.",
+      "Live clock for any number of cities — picked from the Open-Meteo geocoder and ticking against your browser&apos;s IANA tz database. Day/night badge computed with the NOAA solar algorithm; 12 / 24-hour toggle, show-seconds toggle, drag-friendly re-order. Free, private, browser-only.",
     categoryId: "calculators",
     icon: Globe,
-    status: "coming-soon",
-    keywords: ["world clock", "time zones", "city time"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "world clock",
+      "online world clock",
+      "multi timezone clock",
+      "time zone clock",
+      "city time clock",
+      "live world clock",
+      "remote team clock",
+      "travel timezone clock",
+      "city time tracker",
+      "day night badge clock",
+      "browser world clock",
+      "free world clock",
+      "private world clock",
+      "iana timezones",
+    ],
+    seo: {
+      title: "World Clock — Live Multi-City Clock With Day/Night Badge (Free)",
+      description:
+        "Track time across multiple cities with Toollyz World Clock. Live tick, IANA timezones, day/night badge via the NOAA solar algorithm, Open-Meteo city search, 12 / 24-hour and show-seconds toggles — entirely in your browser.",
+      what:
+        "A world clock keeps the current time across multiple cities visible at a glance. Toollyz World Clock ships with 8 default cities (New York, London, Berlin, Dubai, Mumbai, Singapore, Tokyo, Sydney) and lets you add as many more as you want via the open-source Open-Meteo geocoder — your browser hits the geocoder directly, Toollyz has no server in the path. Each city card shows the live time formatted in the city&apos;s IANA timezone (`Intl.DateTimeFormat` uses your browser&apos;s tz database so DST transitions match the OS), the local date and the UTC offset (computed from the actual `formatToParts` output so daylight-saving offsets are correct), plus a day / night badge calculated by running the NOAA Solar Position Algorithm on the city&apos;s coordinates — the card background gradients from amber for daytime cities to indigo for night-time ones. The top hero shows your own location with a Use my location button. Toggle 12 / 24-hour formatting and whether to show seconds (when seconds are off the clock ticks once every 30 seconds to save CPU). Re-order cards with Up / Down buttons. Settings save to localStorage on this device only.",
+      how: [
+        "Search for a city or tap Use my location to add it.",
+        "Re-order the cards with Up / Down buttons so the most important cities appear first.",
+        "Toggle 12 / 24-hour and show-seconds; the day/night badge updates as the sun sets in each city.",
+        "Remove cards you don&apos;t need with the trash icon.",
+      ],
+      benefits: [
+        "Live tick (1 Hz with seconds, 30 s without) so the cards stay fresh without spinning the CPU.",
+        "IANA timezones via `Intl.DateTimeFormat` — DST and historical offsets match your OS.",
+        "Day / night badge computed offline via the NOAA solar algorithm using each city&apos;s coordinates.",
+        "Card background gradient hints at the day/night state (amber for day, indigo for night).",
+        "Open-Meteo geocoder for city search — browser-side direct, no Toollyz server.",
+        "Browser Geolocation API for adding your own location at the top of the list.",
+        "12 / 24-hour and show-seconds toggles persist per device.",
+        "100% private — settings save to localStorage; only city searches leave the browser.",
+      ],
+      relatedSlugs: [
+        "sunrise-sunset",
+        "unix-timestamp-converter",
+        "alarm-clock",
+        "stopwatch",
+      ],
+      faqs: [
+        {
+          q: "How accurate is the timezone data?",
+          a: "It uses your browser&apos;s built-in IANA tz database (`Intl.DateTimeFormat`). Modern browsers ship a recent copy of the tz database, so DST transitions, historical offsets and political timezone changes match your OS. If a country redefines its timezone tomorrow, you&apos;ll need to update your browser to pick up the new rules.",
+        },
+        {
+          q: "Where do new cities come from?",
+          a: "Open-Meteo (`https://geocoding-api.open-meteo.com`). It&apos;s a free, key-less, CORS-enabled geocoder with 200k+ cities. Your browser calls it directly; Toollyz has no server in the path.",
+        },
+        {
+          q: "How is the day / night badge calculated?",
+          a: "Each city card runs the NOAA Solar Position Algorithm on its coordinates and the current date. If the current UTC instant is between sunrise and sunset for that city, the badge says Day; otherwise Night. Polar day and polar night are detected explicitly.",
+        },
+        {
+          q: "Why does the seconds toggle change the tick rate?",
+          a: "When seconds are shown, the clock has to repaint every second; when they&apos;re hidden, repainting once every 30 seconds is enough. The longer interval saves a bit of CPU and battery on idle tabs.",
+        },
+        {
+          q: "Can the clock tick when the tab is in the background?",
+          a: "Browsers throttle `setInterval` to ~1 minute in background tabs. The displayed time may lag briefly when you return to the tab; the very next tick recalculates from `Date.now()` so the lag never accumulates.",
+        },
+        {
+          q: "Why does the UTC offset show the right value across DST?",
+          a: "The offset is computed from `Intl.DateTimeFormat.formatToParts` — Toollyz formats the current instant in the target timezone, treats the result as if it were UTC, and subtracts. The difference is the correct DST-aware offset.",
+        },
+        {
+          q: "Does it support timezones without coordinates?",
+          a: "The city cards always include coordinates because the day/night badge requires them. If you need to track a bare timezone (no specific city), pick the capital city for that timezone — the time will be identical.",
+        },
+        {
+          q: "Are my cities synced across devices?",
+          a: "No — they&apos;re stored in localStorage on this device only. Toollyz has no backend; nothing is uploaded or synced. Add the same list on each device.",
+        },
+        {
+          q: "Can I add my own location?",
+          a: "Yes — click Use my location to share your GPS coordinates with the page. The browser asks for permission first; Toollyz uses the coordinates locally and never sends them anywhere.",
+        },
+        {
+          q: "Is this World Clock free?",
+          a: "Completely free with no signup and no limits. Track as many cities as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "emi-calculator",

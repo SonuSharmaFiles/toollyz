@@ -287,6 +287,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "sunrise-sunset": dynamic(
     () => import("@/components/tools/sunrise-sunset"),
   ),
+  "world-clock": dynamic(
+    () => import("@/components/tools/world-clock"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
