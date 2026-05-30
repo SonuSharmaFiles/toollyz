@@ -218,6 +218,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "meme-generator": dynamic(
     () => import("@/components/tools/meme-generator"),
   ),
+  "signature-generator": dynamic(
+    () => import("@/components/tools/signature-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

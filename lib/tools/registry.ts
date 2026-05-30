@@ -7112,13 +7112,100 @@ export const tools: Tool[] = [
   {
     slug: "signature-generator",
     name: "Signature Generator",
-    tagline: "Create a handwritten or typed digital signature.",
+    tagline: "Draw or type a signature, export as a transparent PNG.",
     description:
-      "Draw or type your signature, customize the style, then download as a transparent PNG for documents and emails.",
+      "Create a digital signature in your browser — draw with mouse, trackpad or finger, or type your name in a cursive font. Customize pen color and width, undo/redo, trim whitespace, then download as a transparent PNG ready to paste into Word, Pages, email or a PDF. Free and private.",
     categoryId: "image",
     icon: Signature,
-    status: "coming-soon",
-    keywords: ["signature", "digital signature", "sign document"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "signature generator",
+      "digital signature",
+      "online signature maker",
+      "sign document",
+      "handwritten signature",
+      "typed signature",
+      "free signature generator",
+      "transparent signature png",
+      "signature for word",
+      "signature for pdf",
+      "draw signature online",
+      "cursive signature generator",
+      "esignature maker",
+      "browser signature",
+    ],
+    seo: {
+      title: "Signature Generator — Draw or Type Your Signature (Free, PNG)",
+      description:
+        "Create a digital signature in your browser with Toollyz Signature Generator. Draw with mouse/trackpad/finger or type your name in a cursive font, customize pen color and width, then download a transparent PNG — entirely private.",
+      what:
+        "A digital-signature generator is the easiest way to produce a transparent PNG of your signature to drop into PDFs, Word documents, emails, contracts or signup forms. Toollyz Signature Generator runs entirely in your browser using a 2D canvas: in Draw mode you sign with your mouse, trackpad or finger using Pointer Events (so it works the same on desktop, phone and Wacom tablets), with full pen-color and width control, a smoothed line (quadratic-curve interpolation between captured points, with round line cap and join), Undo / Redo and a Clear button. In Type mode you type your name in one of six system cursive fonts (Brush Script, Lucida Handwriting, Snell Roundhand, Bradley Hand, Comic Sans or generic `cursive`), with font size, fill color, letter spacing and an italic toggle. Both modes export a transparent PNG that's automatically trimmed (with a 16-pixel padding) for a clean placement in your document. Settings persist in localStorage; nothing is uploaded.",
+      how: [
+        "Pick Draw to sign with your mouse, trackpad or finger — or Type to render your name in a cursive font.",
+        "Tweak pen / font color, pen width or font size and italic, and (Draw mode) the background colour or transparent.",
+        "Use Undo, Redo and Clear to iterate; the canvas is responsive on mobile.",
+        "Click Download PNG — the image is trimmed and saved with a transparent background.",
+      ],
+      benefits: [
+        "Draw mode with smoothed strokes via Pointer Events — works on mouse, trackpad, finger and stylus.",
+        "Type mode with six system cursive fonts, font-size 40–220 px, italic toggle and letter-spacing control.",
+        "Pen color and width controls, optional background (transparent / white / custom hex).",
+        "Undo, Redo and Clear with full history while you iterate.",
+        "Auto-trim around the strokes / text with a 16-px padding for a tidy transparent PNG.",
+        "Copy as a data URL for inline `<img src=\"…\">` embedding.",
+        "Last settings saved to localStorage — refresh-safe and offline-friendly.",
+        "100% private — Toollyz has no server, your signature never leaves your device.",
+      ],
+      relatedSlugs: [
+        "fancy-text-generator",
+        "image-resizer",
+        "image-compressor",
+        "meme-generator",
+      ],
+      faqs: [
+        {
+          q: "Is a typed or drawn signature legally binding?",
+          a: "In most jurisdictions (US E-SIGN Act, EU eIDAS, UK Electronic Communications Act) a typed or drawn signature image is considered a valid electronic signature for everyday contracts, provided both parties intend it to be a signature and it can be reliably attributed. For higher-value transactions (real estate, wills, court filings) check the specific rules where you live and consider a qualified e-signature service that records audit metadata. Toollyz produces the image; the legal context is on you.",
+        },
+        {
+          q: "Can I sign on my phone?",
+          a: "Yes — Draw mode uses Pointer Events, so it works with mouse, trackpad, finger and Apple Pencil / Wacom / Surface Pen. The canvas is responsive and prevents accidental scrolling while you sign.",
+        },
+        {
+          q: "Why does my typed signature look different on another device?",
+          a: "The cursive fonts are system stacks — your OS may not ship every option (e.g. Snell Roundhand is Apple-only). For a consistent look across devices, install Caveat / Pacifico / Dancing Script locally, or use Draw mode and ship the resulting PNG.",
+        },
+        {
+          q: "What is the trim option?",
+          a: "The export trims rows/columns of fully-transparent pixels around the strokes (with a 16-px padding) so the PNG is sized tightly to your signature. Useful when pasting into Word, Pages, email or a PDF — the signature drops in at the right scale without extra whitespace.",
+        },
+        {
+          q: "Does the PNG have a transparent background?",
+          a: "Yes by default (Draw mode background = transparent). Switch to a white or custom-color background in Draw mode if you want a solid backdrop (e.g. for signing on top of a colored document).",
+        },
+        {
+          q: "How do I undo a stray line?",
+          a: "Click Undo (or use the toolbar). Redo brings it back. Clear wipes everything. There's no limit on how many strokes you can undo in the current session.",
+        },
+        {
+          q: "Can I add my signature to a Word document?",
+          a: "Yes — download the PNG, then in Word use Insert → Pictures → This Device. Right-click the image and choose Wrap Text → In Front of Text so you can drag it over the signature line. The transparent background means the document's underline stays visible.",
+        },
+        {
+          q: "Can I add it to a PDF?",
+          a: "Yes — open the PDF in Preview (macOS), Acrobat or any PDF editor and paste the PNG as an image annotation. The transparent background blends with the page.",
+        },
+        {
+          q: "Is my signature uploaded?",
+          a: "No. Toollyz has no server in the path — the entire generator runs in your browser. The PNG is created and downloaded locally; the settings are saved in localStorage.",
+        },
+        {
+          q: "Is this Signature Generator free?",
+          a: "Completely free with no signup and no limits. Create as many signatures as you like — privately in your browser.",
+        },
+      ],
+    },
   },
 
   // ─── PDF ─────────────────────────────────────────────────────────────────
