@@ -5836,13 +5836,100 @@ export const tools: Tool[] = [
   {
     slug: "jpg-to-png",
     name: "JPG to PNG Converter",
-    tagline: "Convert JPG images to lossless PNG.",
+    tagline: "Batch-convert JPG to lossless PNG in your browser.",
     description:
-      "Convert JPEG images to PNG with transparency support. Batch convert and download all files at once.",
+      "Drop one or many JPG files to convert them to lossless PNG with full transparency support — entirely in your browser, batch-friendly, one-click download. Free and private.",
     categoryId: "converters",
     icon: ImageIcon,
-    status: "coming-soon",
-    keywords: ["jpg to png", "convert image", "transparency"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "jpg to png",
+      "jpeg to png",
+      "convert jpg to png",
+      "jpg to png converter",
+      "batch jpg to png",
+      "image converter",
+      "jpg to lossless png",
+      "online image converter",
+      "browser image converter",
+      "transparent png from jpg",
+      "jpg to png free",
+      "convert image online",
+      "png from jpeg",
+      "image format converter",
+    ],
+    seo: {
+      title: "JPG to PNG Converter — Batch, Lossless, In Your Browser",
+      description:
+        "Convert JPG to lossless PNG with Toollyz JPG to PNG Converter. Drag-drop batch conversion, per-file size comparison and one-click download — entirely in your browser, no uploads.",
+      what:
+        "A JPG to PNG Converter takes JPEG photos and re-encodes them as PNG — a lossless format that supports transparency and crisp edges. Toollyz JPG to PNG Converter runs entirely in your browser: drop one or many JPGs onto the page (up to 30 at a time) and each is decoded with the browser's native image pipeline, drawn to a canvas and exported as a PNG Blob. You can compare each file's original JPG size and new PNG size, download any single result, or grab everything at once. Because PNG is lossless and JPG is compressed, the PNG output is often larger than the input — that's expected and the price of editability, transparency and a clean alpha channel. No file ever leaves your browser.",
+      how: [
+        "Drag one or more JPG files onto the drop zone, or click Choose JPG files.",
+        "Each file is decoded and re-encoded as PNG entirely in your browser.",
+        "Review per-file size, dimensions and a thumbnail of the result.",
+        "Click PNG to download a single file or Download all to grab the batch.",
+      ],
+      benefits: [
+        "Drag-and-drop batch conversion — up to 30 files at a time.",
+        "Per-file thumbnail, dimensions and before/after size.",
+        "Visible delta (+/−%) so you can see if PNG is bigger or smaller.",
+        "Lossless output suitable for editing, transparency and crisp graphics.",
+        "One-click per-file download or Download all in one go.",
+        "Handles large images using the browser's native decoder.",
+        "Clear empty / error / done states for each file.",
+        "100% private — files are decoded and saved locally, nothing uploaded.",
+      ],
+      relatedSlugs: [
+        "png-to-webp",
+        "html-minifier",
+        "base64-encoder-decoder",
+        "css-minifier",
+      ],
+      faqs: [
+        {
+          q: "Why convert JPG to PNG?",
+          a: "PNG is lossless and supports transparency, so it's better for editing, screenshots, UI graphics and anywhere you need a clean alpha channel. JPG, in contrast, is compressed and discards detail.",
+        },
+        {
+          q: "Will the converted PNG be smaller than the JPG?",
+          a: "Usually not. JPG is lossy and very efficient for photos; PNG is lossless and bigger. You gain quality and transparency support, not file-size savings.",
+        },
+        {
+          q: "Does the conversion lose any quality?",
+          a: "PNG is lossless, so the conversion preserves every pixel the browser decoded from the JPG. You can't recover detail JPG already discarded, but you won't lose any more.",
+        },
+        {
+          q: "Can I batch-convert many files at once?",
+          a: "Yes — drop or pick up to 30 JPGs at a time. Each file converts independently and is available for download as soon as it finishes.",
+        },
+        {
+          q: "Will it work on huge images?",
+          a: "It uses your browser's native decoder and a canvas, which works for typical photos (tens of megapixels). On very tall/wide images, browsers have a maximum canvas size — if you hit that limit, the tool reports an error rather than corrupting the output.",
+        },
+        {
+          q: "Will it preserve transparency?",
+          a: "JPGs don't carry transparency (they're always fully opaque), so the converted PNGs will be opaque too. PNG transparency only matters if your source has an alpha channel.",
+        },
+        {
+          q: "Does it strip EXIF metadata?",
+          a: "Yes. The conversion re-encodes raw pixels through a canvas, so EXIF, GPS and other metadata are dropped — useful for privacy when sharing screenshots or photos.",
+        },
+        {
+          q: "Are my files uploaded anywhere?",
+          a: "No. Toollyz has no server — the conversion is entirely in your browser. Dropped files and converted PNGs never leave the page and are discarded when you reload or close the tab.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. Pick files from your camera roll or files app; the conversion works on mobile browsers just like on desktop.",
+        },
+        {
+          q: "Is this JPG to PNG converter free?",
+          a: "Completely free with no signup and no limits. Convert as many images as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "png-to-webp",
