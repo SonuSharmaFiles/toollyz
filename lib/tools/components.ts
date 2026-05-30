@@ -152,6 +152,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "mouse-click-tester": dynamic(
     () => import("@/components/tools/mouse-click-tester"),
   ),
+  "mic-test": dynamic(
+    () => import("@/components/tools/mic-test"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

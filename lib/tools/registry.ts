@@ -5148,13 +5148,100 @@ export const tools: Tool[] = [
   {
     slug: "mic-test",
     name: "Mic Test Tool",
-    tagline: "Quickly check if your microphone is working.",
+    tagline: "Live mic level, waveform and quick record-and-playback.",
     description:
-      "See your microphone input level in real time and verify it's working before joining a call or recording.",
+      "Check your microphone in seconds: live volume meter, dBFS readout, real-time waveform, device picker and a short record/playback test. Free and private — audio never leaves your browser.",
     categoryId: "developer",
     icon: Mic,
-    status: "coming-soon",
-    keywords: ["mic test", "microphone test", "audio input"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "mic test",
+      "microphone test",
+      "test microphone online",
+      "mic checker",
+      "audio input test",
+      "is my mic working",
+      "microphone level",
+      "voice test",
+      "headset mic test",
+      "webcam mic test",
+      "record and playback",
+      "mic not working",
+      "verify microphone",
+      "browser mic test",
+    ],
+    seo: {
+      title: "Mic Test — Live Volume, Waveform & Record/Playback",
+      description:
+        "Test your microphone in your browser with Toollyz Mic Test. Live volume meter, dBFS, real-time waveform, device picker and a quick record-and-playback — entirely in your browser, no uploads.",
+      what:
+        "A Mic Test verifies that your microphone is connected, selected and producing usable sound. Toollyz Mic Test uses the browser's getUserMedia and Web Audio APIs to read your mic stream entirely in your tab: it shows a live RMS volume meter as a percentage, a dBFS readout, a real-time waveform on a canvas and a peak-hold marker so you can see whether your levels are too quiet or clipping. A device picker lets you switch between input devices, and a quick record-and-playback step lets you confirm what you actually sound like before joining a call. Audio is processed and recorded in your browser only — there is no Toollyz server, nothing is uploaded, and recorded clips are discarded as soon as you leave the page.",
+      how: [
+        "Click Start mic and grant the browser permission when prompted.",
+        "Talk into your microphone and watch the level and waveform respond.",
+        "If you have more than one mic, switch with the device picker.",
+        "Hit Start recording, say something, stop, and play it back to hear yourself.",
+      ],
+      benefits: [
+        "Live volume meter and dBFS readout for instant level checks.",
+        "Real-time waveform canvas so silence is obvious at a glance.",
+        "Peak-hold marker that shows your loudest recent level.",
+        "Device picker for switching between connected microphones.",
+        "Quick record-and-playback to hear yourself before a call.",
+        "Color-tuned meter — green for healthy, amber for hot, red for clipping.",
+        "Graceful states for unsupported, denied or missing-mic scenarios.",
+        "100% private — audio stays in your browser, nothing is uploaded.",
+      ],
+      relatedSlugs: [
+        "device-info",
+        "browser-info",
+        "keyboard-tester",
+        "mouse-click-tester",
+      ],
+      faqs: [
+        {
+          q: "How does this mic test work?",
+          a: "It requests access to your microphone with the browser's getUserMedia API, feeds the audio stream into a Web Audio AnalyserNode, and reads the time-domain samples to compute a live level and draw a waveform. Everything happens in your browser.",
+        },
+        {
+          q: "Will it record or upload my voice?",
+          a: "No — it only listens for the meter. If you click Start recording, the clip is held in your browser as a Blob and offered for playback; it's discarded when you reload or leave the page, and is never uploaded.",
+        },
+        {
+          q: "Why does the browser ask for permission?",
+          a: "Microphone access is sensitive, so browsers always require your explicit permission. Click “Allow” when prompted; you can revoke it any time from the lock icon in your address bar.",
+        },
+        {
+          q: "Why is the meter flat / nothing happens?",
+          a: "Either your mic is muted (hardware switch or OS), the wrong input is selected (try the device picker), the browser blocked permission, or the device isn't producing sound. Check the lock icon, your OS sound settings, and try a different input.",
+        },
+        {
+          q: "What is dBFS?",
+          a: "Decibels relative to full-scale. 0 dBFS is the maximum digital level your audio can reach; anything below is shown as a negative number. Speak normally and you'd typically see −20 to −10 dBFS for a healthy signal.",
+        },
+        {
+          q: "What does the colored level mean?",
+          a: "Green means a healthy signal, amber means it's getting hot, and red means you're close to clipping. Aim for green-to-low-amber when you talk normally.",
+        },
+        {
+          q: "Can I switch between my laptop mic and a headset?",
+          a: "Yes — once you've granted permission, the device picker lists every input the browser sees. Pick the one you want and the test restarts on that device.",
+        },
+        {
+          q: "Why doesn't my Bluetooth headset show up?",
+          a: "Bluetooth audio devices have to be paired and selected at the OS level for the browser to see them as inputs. Make sure your headset is connected and set as the default input in your sound settings, then refresh.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes, on browsers that implement getUserMedia (most modern mobile browsers do). The browser will ask for permission once per site.",
+        },
+        {
+          q: "Is this mic test free?",
+          a: "Completely free with no signup. Run as many checks as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "webcam-test",
