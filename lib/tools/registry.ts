@@ -5640,13 +5640,100 @@ export const tools: Tool[] = [
   {
     slug: "hex-to-rgb",
     name: "HEX to RGB Converter",
-    tagline: "Convert HEX colors to RGB / RGBA values.",
+    tagline: "Convert HEX colors to RGB, RGBA, HSL, HSV and CMYK.",
     description:
-      "Instantly convert HEX color codes to RGB and RGBA, with a live preview and copy-ready output.",
+      "Paste a HEX color (with or without alpha) to instantly see RGB, RGBA, HSL, HSLA and CMYK values, with a live preview, color picker and per-channel breakdown. Free and private.",
     categoryId: "converters",
     icon: Pipette,
-    status: "coming-soon",
-    keywords: ["hex to rgb", "color converter", "rgba"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "hex to rgb",
+      "hex to rgba",
+      "hex color converter",
+      "hex to hsl",
+      "hex to cmyk",
+      "color converter",
+      "hexadecimal to rgb",
+      "color code converter",
+      "hex code",
+      "hex color picker",
+      "convert hex color",
+      "hex to rgb online",
+      "color value converter",
+      "alpha channel",
+    ],
+    seo: {
+      title: "HEX to RGB Converter — RGBA, HSL, CMYK with Live Preview",
+      description:
+        "Convert any HEX color code to RGB, RGBA, HSL, HSLA and CMYK with Toollyz HEX to RGB Converter. Live preview, alpha support and per-channel breakdown — 100% in your browser.",
+      what:
+        "A HEX to RGB Converter turns the hexadecimal color code you find in CSS, design tools and brand guidelines into the RGB triplets and other formats your code can compute with. Toollyz HEX to RGB Converter accepts 3, 4, 6 or 8-digit HEX (with or without the leading #) and instantly shows the parsed RGB and alpha channels, a large color preview, plus every common output format: RGB, RGBA, HSL, HSLA, CMYK and a ready-to-paste CSS custom property. A color picker lets you sample any color visually, and a per-channel breakdown shows R, G, B and alpha as both numbers and proportional bars. Everything is parsed in your browser; nothing is uploaded.",
+      how: [
+        "Paste a HEX color (e.g. `#6366F1` or `6366F1`) — 3, 4, 6 or 8 digits all work.",
+        "See the live preview update and the parsed R/G/B/A values appear.",
+        "Read every common format — RGB, RGBA, HSL, CMYK — in the All formats list.",
+        "Click any row to copy the value, or use the color picker to sample new colors.",
+      ],
+      benefits: [
+        "Accepts 3, 4, 6 and 8-digit HEX with or without the leading #.",
+        "Live preview with automatic contrast text for readability.",
+        "Alpha channel parsed from 8-digit HEX (#RRGGBBAA).",
+        "Outputs RGB, RGBA, HSL, HSLA and CMYK in one click.",
+        "Per-channel breakdown with proportional bars.",
+        "Built-in color picker and popular brand presets.",
+        "CSS custom property snippet ready to paste into a stylesheet.",
+        "100% private — colors stay in your browser.",
+      ],
+      relatedSlugs: [
+        "rgb-to-hex",
+        "css-minifier",
+        "random-color-generator",
+        "html-minifier",
+      ],
+      faqs: [
+        {
+          q: "What is a HEX color code?",
+          a: "A 6 or 8-character hexadecimal value preceded by a # that represents an RGB color (plus optional alpha). For example #FF0000 is pure red — FF, 00 and 00 are the R, G and B channels in base 16.",
+        },
+        {
+          q: "What does the 8-digit HEX form mean?",
+          a: "Eight digits add an alpha channel: #RRGGBBAA. So #6366F180 is the brand purple at ~50% opacity. The tool parses this directly and shows the alpha value.",
+        },
+        {
+          q: "Can I paste a HEX without the #?",
+          a: "Yes — `6366F1` works just like `#6366F1`. The tool also accepts 3-digit shorthand (`#F00`) and 4-digit shorthand with alpha (`#F00A`).",
+        },
+        {
+          q: "How does alpha map between hex and decimal?",
+          a: "HEX alpha is a byte 00–FF (0–255); CSS rgba() uses 0–1. The tool converts between them — for example `80` in hex is 128, which is ~0.502 in CSS.",
+        },
+        {
+          q: "What's the difference between HSL and HSV?",
+          a: "Both are cylindrical color models with hue + saturation, but they differ on the third axis: HSL uses lightness (mid is most saturated), HSV uses value (max is most saturated). HSL is more common in CSS; HSV is common in pickers.",
+        },
+        {
+          q: "What is CMYK and when do I need it?",
+          a: "CMYK (Cyan/Magenta/Yellow/Key) is the subtractive color model used in print. The displayed value is a CSS-style approximation — for accurate print proofs, calibrate via your printer's ICC profile.",
+        },
+        {
+          q: "Why is the converted output color slightly different?",
+          a: "Conversions between models round at every step and HSL/HSV/CMYK are not lossless representations of RGB. The HEX/RGB pair is exact; HSL and CMYK are good approximations.",
+        },
+        {
+          q: "Can I sample a color with a picker?",
+          a: "Yes — click the small color swatch next to the HEX input to open your browser's native color picker, or click any preset/random button to load a sample.",
+        },
+        {
+          q: "Is any data sent to a server?",
+          a: "No. Toollyz has no server — parsing and converting happen in your browser. Your last HEX is saved only in your device's local storage.",
+        },
+        {
+          q: "Is this HEX to RGB converter free?",
+          a: "Completely free with no signup. Convert as many colors as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "rgb-to-hex",

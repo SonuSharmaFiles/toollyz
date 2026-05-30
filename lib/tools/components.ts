@@ -167,6 +167,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "markdown-to-html": dynamic(
     () => import("@/components/tools/markdown-to-html"),
   ),
+  "hex-to-rgb": dynamic(
+    () => import("@/components/tools/hex-to-rgb"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),
