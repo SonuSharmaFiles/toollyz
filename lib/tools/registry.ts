@@ -10922,13 +10922,100 @@ export const tools: Tool[] = [
   {
     slug: "vcard-generator",
     name: "VCard Generator",
-    tagline: "Build a downloadable .vcf contact card.",
+    tagline: "RFC 2426 vCard 3.0 with QR scan-to-add for iOS / Android.",
     description:
-      "Create a vCard with name, phone, email, address and notes. Download as a .vcf file or share via QR code.",
+      "Build a compliant vCard 3.0 (.vcf) with multiple phones, emails, websites and addresses, photo URL, birthday and notes. Download the file, copy the source or scan the embedded QR code on any phone to add the contact in one tap. Free and private.",
     categoryId: "generators",
     icon: ContactRound,
-    status: "coming-soon",
-    keywords: ["vcard", "vcf", "contact card", "contacts"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "vcard generator",
+      "vcf generator",
+      "contact card generator",
+      "qr contact card",
+      "vcard 3.0",
+      "rfc 2426 vcard",
+      "ios contact card",
+      "android contact card",
+      "vcf download",
+      "vcard qr code",
+      "free vcard generator",
+      "browser vcard generator",
+      "scan to add contact",
+      "rfc 2426",
+    ],
+    seo: {
+      title: "VCard Generator — RFC 2426 vCard 3.0 + QR Scan (Free, Private)",
+      description:
+        "Build a compliant vCard 3.0 file with Toollyz VCard Generator. Multiple phones, emails, websites and addresses, photo URL, birthday, notes — download the .vcf or scan the embedded QR to add the contact on any phone.",
+      what:
+        "A vCard generator builds the standard `.vcf` file format used by every mobile contacts app on the planet. Toollyz VCard Generator emits **vCard 3.0** (RFC 2426) — version 3.0 specifically because it has the broadest iOS / Android / Outlook / Google Contacts support. The four-tab form covers Identity (first / last / middle / prefix / suffix / nickname / org / department / title / birthday), Contact (multiple phones, emails and websites with type labels like CELL / WORK / HOME), Addresses (full structured address blocks with type labels) and Extras (photo URL and a free-form note). The output is properly escaped (commas, semicolons and newlines per RFC 2426 §2.1.3), wrapped at 75 octets (RFC 2425 §5.8.1) and includes a fresh `REV` timestamp. The hero shows a live QR code embedding the full .vcf — point any modern phone camera at it and the OS offers &quot;Add to contacts&quot; in one tap. Download as `.vcf`, copy the source for inspection or scan the QR. Toollyz has no backend; your contact details save to localStorage on this device only.",
+      how: [
+        "Fill the Identity, Contact, Addresses and Extras tabs (most fields are optional).",
+        "Watch the live QR code update in the hero — point your phone camera at it to test.",
+        "Click Download .vcf to save the file or Download QR PNG for the standalone QR.",
+        "Tap Copy text to grab the raw vCard source for emails or wiki entries.",
+      ],
+      benefits: [
+        "vCard 3.0 (RFC 2426) — broadest iOS / Android / Outlook / Google Contacts support.",
+        "Multiple phones / emails / websites with type labels (CELL / WORK / HOME / FAX / VOICE / PAGER).",
+        "Full structured addresses (street / city / region / postcode / country) per address with type label.",
+        "Birthday, photo URL and free-form note fields.",
+        "Properly escaped values (commas, semicolons, newlines) per RFC 2426 §2.1.3 — every contacts app parses cleanly.",
+        "Lines wrapped at 75 octets per RFC 2425 §5.8.1 — strict parsers accept the output.",
+        "Live QR code embedding the full .vcf — point a phone camera, tap Add to contacts.",
+        "100% private — Toollyz has no backend, details save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "digital-business-card",
+        "qr-code-generator",
+        "email-signature-generator",
+        "barcode-generator",
+      ],
+      faqs: [
+        {
+          q: "What's vCard?",
+          a: "vCard is the standard file format for contact information, defined by RFC 2426. Every modern contacts app (iOS Contacts, Google Contacts, Outlook, macOS Contacts, Android Contacts) imports `.vcf` files and offers Add-to-Contacts when scanning a vCard QR code.",
+        },
+        {
+          q: "Why version 3.0 and not 4.0?",
+          a: "vCard 4.0 (RFC 6350) added gender, kind and richer language tagging, but support across mobile contacts apps is uneven. vCard 3.0 is the safe interoperable target — every major contacts client parses it cleanly.",
+        },
+        {
+          q: "Will the QR code work on iPhone?",
+          a: "Yes. Open the Camera app, point it at the QR code, tap the popup — iOS reads the embedded vCard and offers &quot;Add to Contacts&quot; with all your fields prefilled.",
+        },
+        {
+          q: "How big can the vCard be?",
+          a: "QR codes have a maximum capacity (around 4,296 alphanumeric or 2,953 byte characters at level L error correction). Adding many photos, long notes or huge addresses can push past the QR limit — Toollyz shows a warning toast if that happens. The .vcf file itself has no real-world size limit.",
+        },
+        {
+          q: "Does the photo embed in the QR?",
+          a: "No — the photo is referenced by URL (`PHOTO;VALUE=URI:…`). The receiving phone fetches the image when it imports the contact. Photo URLs must be publicly reachable over HTTPS.",
+        },
+        {
+          q: "How are special characters handled?",
+          a: "Per RFC 2426 §2.1.3, commas (`,`), semicolons (`;`), backslashes (`\\\\`) and newlines (`\\n`) inside values are escaped automatically. Lines longer than 75 octets are folded with a leading space per RFC 2425 §5.8.1.",
+        },
+        {
+          q: "Can I include multiple phones or emails?",
+          a: "Yes — the Contact tab has Add buttons for each list. Each entry gets its own type label (CELL / WORK / HOME etc.), and the output emits one `TEL` / `EMAIL` line per entry.",
+        },
+        {
+          q: "What does the REV field do?",
+          a: "It&apos;s a timestamp recording when the vCard was last modified. Contacts apps use it to decide whether an incoming vCard is fresher than the one already on file. Toollyz stamps it with the current ISO 8601 time on every export.",
+        },
+        {
+          q: "Is my contact info uploaded?",
+          a: "No. Toollyz has no backend. The vCard is built in your browser; your form data saves to localStorage on this device only.",
+        },
+        {
+          q: "Is this VCard Generator free?",
+          a: "Completely free with no signup and no limits. Generate as many vCards as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "digital-business-card",

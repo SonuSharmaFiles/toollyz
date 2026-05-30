@@ -335,6 +335,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "mac-address-generator": dynamic(
     () => import("@/components/tools/mac-address-generator"),
   ),
+  "vcard-generator": dynamic(
+    () => import("@/components/tools/vcard-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
