@@ -344,6 +344,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "avatar-generator": dynamic(
     () => import("@/components/tools/avatar-generator"),
   ),
+  "qr-menu-generator": dynamic(
+    () => import("@/components/tools/qr-menu-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

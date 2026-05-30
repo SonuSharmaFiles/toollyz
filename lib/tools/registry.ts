@@ -11216,13 +11216,100 @@ export const tools: Tool[] = [
   {
     slug: "qr-menu-generator",
     name: "QR Menu Generator for Restaurants",
-    tagline: "Create QR-code menus for restaurants and cafés.",
+    tagline: "Standalone HTML menu + QR — host on Netlify Drop or your CDN.",
     description:
-      "Build a digital restaurant menu with categories, prices and images, then generate a QR code customers can scan at the table.",
+      "Build a digital restaurant menu with sections, items, prices and tags. Live preview in an iframe; export a standalone single-file menu.html (inline CSS, mobile-friendly, print-friendly) you host yourself. Generate a QR code pointing at the hosted URL for table cards. Free and private.",
     categoryId: "generators",
     icon: QrCode,
-    status: "coming-soon",
-    keywords: ["qr menu", "restaurant menu", "digital menu"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "qr menu generator",
+      "restaurant qr menu",
+      "digital restaurant menu",
+      "cafe qr menu",
+      "qr menu code",
+      "menu html export",
+      "menu pdf alternative",
+      "contactless menu",
+      "table qr menu",
+      "mobile restaurant menu",
+      "free qr menu generator",
+      "browser menu generator",
+      "static menu builder",
+      "menu builder online",
+    ],
+    seo: {
+      title: "QR Menu Generator for Restaurants — Standalone HTML + QR (Free)",
+      description:
+        "Build a digital menu with Toollyz QR Menu Generator. Sections, items, prices, tags, currency, brand colour. Export a standalone HTML page you host yourself, plus a QR pointing at the hosted URL — entirely in your browser.",
+      what:
+        "A QR menu lets restaurant guests see the menu on their phone instead of a physical card. Toollyz QR Menu Generator builds a **single standalone HTML file** (inline CSS, no JavaScript, no external assets except an optional logo URL) you host wherever you like — Netlify Drop is the easiest free option, but any static host works (GitHub Pages, Vercel, your own CDN, an S3 bucket). The form covers restaurant identity (name, tagline, currency, logo URL, brand colour, page background colour, footer), and an arbitrary number of sections (Coffee / Brunch / Wine / Desserts…) each containing items with name, description, price and optional tags (vegan, gluten-free, spicy). The hero shows a true live preview rendered in a sandboxed iframe — exactly what guests will see. Prices use `Intl.NumberFormat` with the chosen currency so symbols and decimal conventions follow the customer&apos;s locale. Section reordering with up/down buttons; per-item add and remove. Two export options: download the standalone `menu.html` (typically 5–15 KB) and generate a QR code pointing at the URL where you&apos;ll host it. Toollyz has no backend; menu data saves to localStorage on this device only.",
+      how: [
+        "Fill in restaurant identity, currency and brand colours.",
+        "Add sections and items — the live preview updates as you type.",
+        "Download menu.html and upload it to any static host (Netlify Drop is the fastest free option).",
+        "Enter the hosted URL in the QR generator and download the QR PNG to print on table cards.",
+      ],
+      benefits: [
+        "Single standalone HTML file with inline CSS — no external assets except your optional logo URL.",
+        "Mobile-friendly responsive layout and print-friendly CSS for fall-back printable menus.",
+        "Live preview rendered in a sandboxed iframe so what you see equals what customers see.",
+        "Unlimited sections and items with up/down section reordering and per-item add/remove.",
+        "Optional tags per item (vegan, gluten-free, spicy etc.) rendered as branded badges.",
+        "23 currencies via `Intl.NumberFormat` with locale-correct symbols and decimal precision.",
+        "QR generator for the hosted URL — downloadable PNG ready for table cards.",
+        "100% private — Toollyz has no backend, menu data saves to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "digital-business-card",
+        "qr-code-generator",
+        "favicon-from-text",
+        "currency-converter",
+      ],
+      faqs: [
+        {
+          q: "Why do I host the menu instead of Toollyz?",
+          a: "Toollyz is a static site with no backend — there&apos;s no server to host a unique URL for each restaurant&apos;s menu. We give you a complete standalone HTML file and let you host wherever fits your budget and style. Netlify Drop (netlify.com/drop) is free and works in seconds.",
+        },
+        {
+          q: "How do customers see the menu?",
+          a: "Print the QR code on a sticker or table card. Customers point their phone camera at it (iOS Camera and Android Camera both decode QR natively); their browser opens the menu URL you uploaded. No app, no download.",
+        },
+        {
+          q: "Does the menu need internet to view?",
+          a: "Yes — visitors fetch the page from your host. Once loaded the page itself has no further requests (inline CSS), so it loads fast and works on slow connections. If your venue has spotty Wi-Fi, your guests&apos; mobile data still picks it up.",
+        },
+        {
+          q: "Can I include images of each dish?",
+          a: "Not in this release — Toollyz keeps the file size tiny by skipping images. Visual menus are great for high-end restaurants but slow to scroll on phones; clean text menus are easier to update and quicker to load. A future version may add optional thumbnails.",
+        },
+        {
+          q: "How do I update the menu later?",
+          a: "Re-open Toollyz QR Menu Generator (your menu data is in localStorage) → edit → re-download menu.html → re-upload to the same URL. The QR stays the same.",
+        },
+        {
+          q: "Can I print the menu as a backup?",
+          a: "Yes — the generated HTML includes print-friendly CSS (clean text, no background colour) so opening menu.html in a browser and pressing Cmd/Ctrl-P produces a printable PDF.",
+        },
+        {
+          q: "What does the &quot;tags&quot; field do?",
+          a: "Tags render as small branded badges under each item — perfect for marking vegan, gluten-free, contains nuts, spicy etc. Comma-separated; rendered in your brand colour&apos;s 10% tint.",
+        },
+        {
+          q: "Can I have multiple menus (lunch, dinner, brunch)?",
+          a: "Use sections — &quot;Lunch (until 3pm)&quot;, &quot;Dinner (from 5pm)&quot; — for time-bound items. For truly separate menus, build each menu in Toollyz and host them under different URLs (`/lunch.html`, `/dinner.html`) with different QR codes per table.",
+        },
+        {
+          q: "Are my menu items uploaded?",
+          a: "No. Toollyz has no backend. Your menu data lives in localStorage on this device only. The menu.html you download is a static file — whatever happens to it after upload is up to you.",
+        },
+        {
+          q: "Is this QR Menu Generator free?",
+          a: "Completely free with no signup and no limits. Build and update as many menus as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "temporary-email-generator",
