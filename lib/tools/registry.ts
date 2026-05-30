@@ -8172,13 +8172,100 @@ export const tools: Tool[] = [
   {
     slug: "typing-speed-test",
     name: "Typing Speed Test",
-    tagline: "Measure your typing speed in WPM and accuracy.",
+    tagline: "Live char-by-char WPM, accuracy and 30-run history.",
     description:
-      "Test your typing speed and accuracy with timed sessions. Track WPM, errors and history across attempts.",
+      "Time yourself typing a passage (15/30/60/120 s) with live char-by-char highlighting, WPM, accuracy and error counts. Six built-in passages or paste-your-own — and a 30-run history with per-duration best scores. Free, private, browser-only.",
     categoryId: "calculators",
     icon: TimerReset,
-    status: "coming-soon",
-    keywords: ["typing test", "wpm", "typing speed", "accuracy"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "typing speed test",
+      "wpm test",
+      "typing test online",
+      "typing accuracy test",
+      "free typing speed test",
+      "typing practice",
+      "words per minute",
+      "typing exercise",
+      "online wpm test",
+      "browser typing test",
+      "private typing test",
+      "code typing test",
+      "pangram typing",
+      "type test 60 seconds",
+    ],
+    seo: {
+      title: "Typing Speed Test — Live WPM, Accuracy & Errors (Free)",
+      description:
+        "Measure your WPM, raw WPM and accuracy with Toollyz Typing Speed Test. Live char-by-char highlighting, six built-in passages, paste-your-own and a 30-run history with per-duration best scores — entirely in your browser.",
+      what:
+        "A typing speed test measures how fast and accurately you can type a known passage. Toollyz Typing Speed Test runs entirely in your browser: pick a duration (15, 30, 60 or 120 seconds), pick a passage (Pangram Drills, Alice in Wonderland excerpt, Moby-Dick opening, a TypeScript code snippet, digits of π or a Common-English-words drill) or paste your own paragraph, and start typing. The text renders character by character — correct keystrokes turn emerald, mistakes are highlighted in rose and the current target glows with a primary underline. WPM is calculated as the standard 5-character word convention (correct chars ÷ 5 ÷ minutes elapsed), Raw WPM ignores errors and Accuracy is correct ÷ total typed. The test ends when the timer hits zero or you reach the end of the passage, whichever comes first. The 30 most recent runs save to localStorage, with per-duration best scores surfaced in the controls. Toollyz has no backend — every keystroke stays on your device.",
+      how: [
+        "Pick a duration (15 / 30 / 60 / 120 seconds) and a passage — or paste your own text.",
+        "Start typing in the input — the timer begins automatically.",
+        "Watch live WPM, raw WPM, accuracy, errors and time remaining in the hero.",
+        "When the timer hits zero (or you finish the passage), the run lands in the History list.",
+      ],
+      benefits: [
+        "Four duration presets (15 / 30 / 60 / 120 seconds) with auto-start when you type the first character.",
+        "Live char-by-char highlighting — correct in emerald, mistakes in rose, current target underlined.",
+        "Five live stats: WPM, raw WPM, accuracy %, error count and time remaining.",
+        "Six built-in passages plus paste-your-own (pangrams, classic literature, code, digits, common-word drills).",
+        "30-run history with per-duration best score surfaced alongside the controls.",
+        "Random passage button to shuffle between built-ins.",
+        "Standard WPM formula (correct chars ÷ 5 ÷ minutes elapsed) plus an honest \"raw WPM\" upper bound.",
+        "100% private — Toollyz has no backend, keystrokes and history stay in your browser.",
+      ],
+      relatedSlugs: [
+        "cps-test",
+        "spacebar-counter",
+        "reaction-time-test",
+        "keyboard-tester",
+      ],
+      faqs: [
+        {
+          q: "How is WPM calculated?",
+          a: "WPM = correct characters ÷ 5 ÷ minutes elapsed. The 5-character convention is the standard used by virtually every typing test (Monkeytype, 10FastFingers, traditional CPM-based scoring). Raw WPM ignores errors and uses all typed characters — it's a speed upper bound.",
+        },
+        {
+          q: "What counts as an error?",
+          a: "Every keystroke that lands at a position where the typed character doesn't match the expected character increments the error counter. Backspacing and re-typing correctly still counts as one mistake — typists are scored for both speed and one-shot accuracy.",
+        },
+        {
+          q: "Is paste cheating?",
+          a: "Pasting fills the textarea instantly so your effective WPM would be implausibly high. The tool doesn't actively block paste because it sometimes helps people set up custom passages, but pasting during a run will look obvious in the result.",
+        },
+        {
+          q: "Why does the timer start when I press a key?",
+          a: "Auto-start removes the \"3, 2, 1, go\" overhead so you can warm up by skimming the passage and start the moment you're ready. The clock begins at the first keystroke and ends when the duration expires.",
+        },
+        {
+          q: "Can I bring my own passage?",
+          a: "Yes — pick \"Paste your own…\" in the Passage selector and drop in any text. The pasted text stays on your device; Toollyz has no backend.",
+        },
+        {
+          q: "What does Raw WPM mean?",
+          a: "Raw WPM is WPM that ignores correctness — total chars typed ÷ 5 ÷ minutes. It's a speed ceiling. A big gap between Raw WPM and WPM means you're typing fast but making mistakes; close the gap by slowing down and focusing on accuracy.",
+        },
+        {
+          q: "Is my history saved across devices?",
+          a: "No — it's stored in your browser's localStorage on this device. Toollyz has no server, so syncing is out of scope. Clearing site data wipes the history.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes — the live highlighting, stats and history all work on mobile. Typing speed on a touchscreen is naturally lower than on a physical keyboard; the test doesn't differentiate.",
+        },
+        {
+          q: "What's a good WPM?",
+          a: "Average is around 40 WPM; touch-typists hit 60–80; professional transcriptionists land 80–120; the world record (Stella Pajunas, 1946) was 216 WPM on an IBM Electric typewriter. Don't compare to the records; focus on improving against your own best.",
+        },
+        {
+          q: "Is this Typing Speed Test free?",
+          a: "Completely free with no signup and no limits. Run as many tests as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "cps-test",

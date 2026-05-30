@@ -251,6 +251,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "hash-generator": dynamic(
     () => import("@/components/tools/hash-generator"),
   ),
+  "typing-speed-test": dynamic(
+    () => import("@/components/tools/typing-speed-test"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
