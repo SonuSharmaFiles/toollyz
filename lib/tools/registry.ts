@@ -5542,13 +5542,100 @@ export const tools: Tool[] = [
   {
     slug: "markdown-to-html",
     name: "Markdown to HTML",
-    tagline: "Convert Markdown into clean HTML instantly.",
+    tagline: "Convert Markdown to clean HTML with live preview and templates.",
     description:
-      "Paste Markdown and get production-ready HTML — supports GitHub-flavored syntax, tables, and code blocks.",
+      "Paste Markdown and get production-ready HTML — headings, lists, code blocks, tables and more — with a live preview, ready-made templates, copy, and a full-document download. Free and private.",
     categoryId: "converters",
     icon: FileCode,
-    status: "coming-soon",
-    keywords: ["markdown", "html", "convert", "md"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "markdown to html",
+      "md to html",
+      "markdown converter",
+      "markdown parser",
+      "convert markdown",
+      "render markdown",
+      "markdown preview",
+      "github flavored markdown",
+      "gfm to html",
+      "markdown viewer",
+      "markdown online",
+      "markdown to webpage",
+      "markdown export",
+      "md file converter",
+    ],
+    seo: {
+      title: "Markdown to HTML — Live Preview, Templates & Clean Export",
+      description:
+        "Convert Markdown to clean HTML with Toollyz Markdown to HTML. Live preview, ready-made templates (README, blog post), copy and full-document download — entirely in your browser.",
+      what:
+        "A Markdown to HTML converter turns Markdown — the lightweight syntax used by GitHub, Notion, Discord and countless static-site generators — into the HTML a browser actually renders. Toollyz Markdown to HTML shows your Markdown on one side and the rendered preview on the other, updating live as you type. Switch to HTML view to read the source, or use Split for both at once. It supports headings, paragraphs, bold/italic, lists (ordered, unordered, nested), inline code and fenced code blocks, blockquotes, links, images, tables and horizontal rules. Pick a ready-made template — README, blog post, changelog — to start from a known-good structure, then copy the rendered HTML fragment or download a full standalone .html document with sensible default styles. Conversion happens entirely in your browser — Markdown and the HTML output never leave the page.",
+      how: [
+        "Paste or type Markdown in the editor (or pick a template).",
+        "See the rendered HTML preview update live in Split or Preview view.",
+        "Switch to HTML view to inspect the generated source.",
+        "Copy the HTML fragment, or download a full standalone .html document.",
+      ],
+      benefits: [
+        "Live, instant preview as you type.",
+        "Three views — Split, Preview and HTML source — for any workflow.",
+        "Full GFM-style support: tables, fenced code, task lists, links, images.",
+        "Ready-made templates (README, blog post, changelog) to start fast.",
+        "Copy a clean HTML fragment, or download a full standalone .html document.",
+        "Outline view of all your headings to navigate long documents.",
+        "Char counts for Markdown and HTML and a word count for the rendered output.",
+        "100% private — Markdown and HTML stay in your browser.",
+      ],
+      relatedSlugs: [
+        "html-minifier",
+        "url-encoder-decoder",
+        "base64-encoder-decoder",
+        "json-formatter",
+      ],
+      faqs: [
+        {
+          q: "What Markdown features are supported?",
+          a: "Headings, paragraphs, bold/italic/strike, inline and fenced code, blockquotes, lists (ordered, unordered, nested, task), links, images, tables and horizontal rules. The renderer follows common GitHub-flavored Markdown conventions.",
+        },
+        {
+          q: "Does it support code-block syntax highlighting?",
+          a: "Code blocks render with monospaced styling and the language label, but full color tokenization isn't applied in this view — for syntax-highlighted source, save the .html and add a highlighter like Prism or highlight.js, or use a static-site generator.",
+        },
+        {
+          q: "How does the “Full .html” download differ from the fragment?",
+          a: "The fragment is just the rendered <h1>/<p>/<ul>… markup, ready to paste into an existing page. The full document is a complete .html file with <html>, <head> (title, charset, viewport, basic CSS) and your content inside <body> — open it directly in a browser.",
+        },
+        {
+          q: "Why does my Markdown look different from GitHub?",
+          a: "GitHub adds its own CSS and a few non-standard extensions. The tool covers the core GFM features and a sensible default style; for an exact GitHub look, embed the rendered HTML and apply GitHub's CSS (github-markdown.css).",
+        },
+        {
+          q: "Are tables supported?",
+          a: "Yes. Use the standard pipe syntax (`| col | col |`) with a separator row (`| --- | --- |`); the tool renders them as styled <table>s.",
+        },
+        {
+          q: "Can I include raw HTML in my Markdown?",
+          a: "Raw HTML is allowed where standard Markdown permits it (paragraphs, divs). The renderer escapes content inside code blocks; outside them, recognized inline HTML passes through.",
+        },
+        {
+          q: "Is the HTML output safe?",
+          a: "Toollyz renders Markdown locally and sanitizes obvious attack vectors (e.g. event handlers, script tags) typical of safe Markdown engines. If you accept Markdown from untrusted users in your own app, always run it through a dedicated sanitizer before injecting it.",
+        },
+        {
+          q: "Is anything uploaded?",
+          a: "No. Toollyz has no server — Markdown is parsed and rendered entirely in your browser. Your last document is saved only in your device's local storage.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The editor and preview are responsive — Split shows side-by-side on wide screens and stacks vertically on phones.",
+        },
+        {
+          q: "Is this Markdown to HTML converter free?",
+          a: "Completely free with no signup and no limits. Convert as much Markdown as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "hex-to-rgb",

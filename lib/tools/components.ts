@@ -164,6 +164,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "webcam-test": dynamic(
     () => import("@/components/tools/webcam-test"),
   ),
+  "markdown-to-html": dynamic(
+    () => import("@/components/tools/markdown-to-html"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),
