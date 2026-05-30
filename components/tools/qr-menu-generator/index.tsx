@@ -13,6 +13,7 @@ import {
   RefreshCcw,
   Sparkles,
   Trash2,
+  Upload,
   Utensils,
 } from "lucide-react";
 import { toast } from "sonner";
@@ -229,7 +230,9 @@ export default function QrMenuGenerator() {
               </SelectContent>
             </Select>
           </Field>
-          <Field label="Logo URL (optional)"><Input value={menu.logoUrl} onChange={(e) => patch("logoUrl", e.target.value)} placeholder="https://example.com/logo.png" /></Field>
+          <Field label="Upload logo (optional)">
+            <LogoUpload value={menu.logoUrl} onChange={(v) => patch("logoUrl", v)} />
+          </Field>
           <Field label="Brand colour">
             <ColorRow value={menu.brandColor} onChange={(v) => patch("brandColor", v)} />
           </Field>
@@ -398,4 +401,105 @@ function ColorRow({ value, onChange }: { value: string; onChange: (v: string) =>
 
 function safe(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "") || "menu";
+}
+
+const LOGO_MAX_BYTES = 512 * 1024; // 512 KB raw file cap → ~700 KB base64
+const ACCEPTED_LOGO_MIME = /^image\/(png|jpe?g|webp|svg\+xml|gif)$/;
+
+function LogoUpload({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const inputRef = React.useRef<HTMLInputElement | null>(null);
+  const [fileName, setFileName] = React.useState<string | null>(null);
+
+  function readFile(file: File) {
+    if (!ACCEPTED_LOGO_MIME.test(file.type)) {
+      toast.error("Pick a PNG, JPG, WebP, GIF or SVG image.");
+      return;
+    }
+    if (file.size > LOGO_MAX_BYTES) {
+      toast.error(`Logo is ${(file.size / 1024).toFixed(0)} KB — keep it under ${LOGO_MAX_BYTES / 1024} KB so menu.html stays snappy.`);
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      onChange(String(reader.result));
+      setFileName(file.name);
+      toast.success(`Loaded ${file.name}`);
+    };
+    reader.onerror = () => toast.error("Couldn't read the file.");
+    reader.readAsDataURL(file);
+  }
+
+  function clear() {
+    onChange("");
+    setFileName(null);
+    if (inputRef.current) inputRef.current.value = "";
+  }
+
+  function replace() {
+    inputRef.current?.click();
+  }
+
+  function onPickerChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const f = e.target.files?.[0];
+    if (f) readFile(f);
+  }
+
+  function onDrop(e: React.DragEvent<HTMLLabelElement>) {
+    e.preventDefault();
+    const f = e.dataTransfer.files?.[0];
+    if (f) readFile(f);
+  }
+
+  const hasLogo = value.length > 0;
+  // Estimate the embedded byte cost (base64 inflates by ~4/3).
+  const sizeKb = hasLogo ? Math.round((value.length * 0.75) / 1024) : 0;
+
+  return (
+    <div className="space-y-1.5">
+      <input
+        ref={inputRef}
+        type="file"
+        accept="image/png,image/jpeg,image/webp,image/svg+xml,image/gif"
+        className="hidden"
+        onChange={onPickerChange}
+      />
+      {hasLogo ? (
+        <div className="flex items-center gap-3 rounded-lg border border-border/60 bg-background p-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={value}
+            alt="Logo preview"
+            className="size-14 shrink-0 rounded-lg border border-border/60 bg-white object-contain p-1"
+          />
+          <div className="min-w-0 flex-1 space-y-0.5">
+            <div className="truncate text-xs font-medium text-foreground">{fileName ?? "Embedded logo"}</div>
+            <div className="text-[10px] text-muted-foreground">
+              ~{sizeKb} KB · embedded inline (no external image dependency)
+            </div>
+          </div>
+          <Button type="button" size="sm" variant="outline" onClick={replace}>
+            <Upload className="size-3.5" />
+            Replace
+          </Button>
+          <Button type="button" size="sm" variant="ghost" onClick={clear} aria-label="Remove logo">
+            <Trash2 className="size-3.5" />
+          </Button>
+        </div>
+      ) : (
+        <label
+          onDragOver={(e) => e.preventDefault()}
+          onDrop={onDrop}
+          className={cn(
+            "flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-border bg-background p-3 text-sm text-muted-foreground transition-colors hover:bg-muted/50",
+          )}
+        >
+          <Upload className="size-4 shrink-0" />
+          <div className="space-y-0.5">
+            <div className="text-xs font-medium text-foreground">Click or drop an image</div>
+            <div className="text-[10px] text-muted-foreground">PNG, JPG, WebP, GIF or SVG · up to {LOGO_MAX_BYTES / 1024} KB · embedded as data: URL inside menu.html</div>
+          </div>
+        </label>
+      )}
+    </div>
+  );
 }
