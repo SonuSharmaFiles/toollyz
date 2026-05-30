@@ -194,6 +194,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "currency-converter": dynamic(
     () => import("@/components/tools/currency-converter"),
   ),
+  "url-shortener": dynamic(
+    () => import("@/components/tools/url-shortener"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

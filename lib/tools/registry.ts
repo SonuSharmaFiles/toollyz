@@ -6326,13 +6326,100 @@ export const tools: Tool[] = [
   {
     slug: "url-shortener",
     name: "URL Shortener",
-    tagline: "Shorten long URLs into clean, shareable links.",
+    tagline: "Free short links via TinyURL or is.gd — with optional alias.",
     description:
-      "Turn long URLs into short, branded links. Track clicks and copy with one tap.",
+      "Shorten long URLs with public services (TinyURL with is.gd fallback). Optional custom alias, one-click copy, savings stats and a local history of your recent short links. Free, private, no signup.",
     categoryId: "seo",
     icon: LinkIcon,
-    status: "coming-soon",
-    keywords: ["url shortener", "short link", "tinyurl"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "url shortener",
+      "short link generator",
+      "tinyurl",
+      "is.gd",
+      "shorten url",
+      "shorten link",
+      "custom alias short link",
+      "free url shortener",
+      "no signup url shortener",
+      "link shortener",
+      "free short link",
+      "shorten long link",
+      "tweet link shortener",
+      "marketing short link",
+    ],
+    seo: {
+      title: "URL Shortener — Free Short Links via TinyURL & is.gd",
+      description:
+        "Shorten any URL with Toollyz URL Shortener. Optional custom alias, smart fallback between TinyURL and is.gd, copy-savings stats and local history — entirely in your browser, no signup, no tracking.",
+      what:
+        "A URL shortener takes a long URL and gives you a much shorter one that redirects to it — ideal for tweets, slides, signage, QR codes and SMS. Toollyz is a static site with no backend of its own, so the actual short link is minted by public providers your browser talks to directly: TinyURL (tinyurl.com/api-create.php) and is.gd (is.gd/create.php). Pick one explicitly or use Auto mode, which tries TinyURL first and falls back to is.gd. Both providers support an optional custom alias (3–30 characters, letters/numbers/hyphen/underscore) — the form validates the alias locally before the request and shows the provider's error if the alias is already taken. Each result shows the original URL, the short URL, characters saved and the provider host. Recent links are kept in localStorage so you can re-copy them, but they're never uploaded to Toollyz. Toollyz has no server in the chain.",
+      how: [
+        "Paste a long https:// URL into the input — the form auto-prefixes https:// if you forget.",
+        "(Optional) type a custom alias and pick a provider, or leave Auto to fall back automatically.",
+        "Click Shorten — the result appears in the hero with the savings count and provider tag.",
+        "Copy the short link, open it in a new tab, or pick another from the recent-links history.",
+      ],
+      benefits: [
+        "Two reputable public providers (TinyURL + is.gd) with automatic failover.",
+        "Optional custom alias with local validation so you don't waste a round-trip.",
+        "Per-link savings stats (original length, short length, characters saved).",
+        "Recent-links history saved in localStorage — never uploaded to Toollyz.",
+        "URL auto-prefixing — paste example.com and the tool adds https:// for you.",
+        "Honest error messages from the underlying provider if an alias is taken or the URL is rejected.",
+        "Offline detection + clear error states.",
+        "100% private — Toollyz has no server, your browser talks directly to the providers.",
+      ],
+      relatedSlugs: [
+        "meta-tag-generator",
+        "robots-txt-generator",
+        "qr-code-generator",
+        "slugify",
+      ],
+      faqs: [
+        {
+          q: "How does Toollyz shorten links without a server?",
+          a: "Toollyz is a static site — every page runs in your browser. Your browser POSTs the long URL directly to TinyURL (tinyurl.com/api-create.php) or is.gd (is.gd/create.php); whatever short link those services return is the link you see. Toollyz never sees the URL.",
+        },
+        {
+          q: "Which provider should I pick?",
+          a: "Auto mode (the default) tries TinyURL first and falls back to is.gd if TinyURL is unreachable or rejects the request. If you want a stable host for branding — tinyurl.com vs is.gd — pick the provider explicitly instead.",
+        },
+        {
+          q: "Can I use a custom alias?",
+          a: "Yes. Add a 3–30 character alias (letters, numbers, hyphens and underscores). Aliases aren't reserved by anyone, so the request can fail if someone else already claimed the alias on that provider — you'll see the provider's exact error in that case.",
+        },
+        {
+          q: "Are these links permanent?",
+          a: "TinyURL and is.gd have been around for years and both treat links as effectively permanent, but neither makes a written guarantee. For mission-critical links, also save the original URL somewhere — Toollyz keeps it in your local history.",
+        },
+        {
+          q: "Can I track clicks?",
+          a: "Not from this tool. is.gd lets you append `+` to any short link to see a basic stats page; TinyURL offers stats only on paid plans. For real campaign tracking, build UTM-tagged URLs first (the UTM Link Generator is coming soon) and then shorten the long version.",
+        },
+        {
+          q: "Is shortening a URL safe?",
+          a: "Shortened links hide the destination, so be wary of clicking unknown short links. The tool is safe to use, but never shorten URLs that contain passwords, tokens or other sensitive data — short links are public by nature and can be guessed or shared.",
+        },
+        {
+          q: "Where is my history stored?",
+          a: "Only in your browser, in localStorage. Up to 30 recent short links with their original URLs, providers and timestamps — purely client-side. Clearing your browser data wipes the history; Toollyz can't recover it.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The input, provider picker, copy buttons and history list are all responsive and touch-friendly. The Enter key submits, and tapping a short link opens it in a new tab.",
+        },
+        {
+          q: "Why does the URL get https:// added?",
+          a: "TinyURL and is.gd reject URLs without a scheme. If you paste example.com, the tool prefixes https:// automatically. If you specifically need http://, paste it with the scheme already in place.",
+        },
+        {
+          q: "Is this URL Shortener free?",
+          a: "Completely free with no signup and no limits. The underlying TinyURL and is.gd APIs are free too. Shorten as many URLs as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "utm-link-generator",
