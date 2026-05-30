@@ -6043,14 +6043,100 @@ export const tools: Tool[] = [
   {
     slug: "meta-tag-generator",
     name: "Meta Tag Generator",
-    tagline: "Generate Open Graph, Twitter and SEO meta tags.",
+    tagline: "Open Graph, Twitter and SEO meta with live previews.",
     description:
-      "Generate complete `<head>` markup including Open Graph, Twitter cards, canonical and standard SEO tags.",
+      "Generate a complete `<head>` snippet — title, description, robots, Open Graph, Twitter Card, canonical and theme color — with live Google, Facebook and Twitter previews and an SEO check. Free and private.",
     categoryId: "seo",
     icon: Tags,
-    status: "coming-soon",
+    status: "live",
     featured: true,
-    keywords: ["meta tags", "open graph", "twitter card", "seo"],
+    keywords: [
+      "meta tag generator",
+      "open graph generator",
+      "og tag generator",
+      "twitter card generator",
+      "social meta tags",
+      "seo meta tags",
+      "html head generator",
+      "canonical url tag",
+      "facebook preview generator",
+      "twitter preview generator",
+      "site preview generator",
+      "html title and description",
+      "og image meta",
+      "page meta builder",
+    ],
+    seo: {
+      title: "Meta Tag Generator — Open Graph, Twitter & SEO Tags Online",
+      description:
+        "Build SEO-friendly meta tags with Toollyz Meta Tag Generator. Live Google, Facebook and Twitter previews, Open Graph & Twitter Card support, SEO checklist and one-click copy — entirely in your browser.",
+      what:
+        "A Meta Tag Generator builds the contents of your HTML `<head>` from a structured form: page title, meta description, Open Graph tags (og:title, og:description, og:image, og:url, og:type, og:locale, og:site_name), Twitter Card tags (twitter:card, twitter:site, twitter:creator, twitter:title, twitter:description, twitter:image), canonical link, robots directive, theme color, charset, viewport and favicon. Toollyz Meta Tag Generator updates the output in real time, shows accurate Google SERP, Facebook/LinkedIn and Twitter/X preview cards as you type, and runs lightweight SEO checks — title/description length, missing og:image, malformed URLs, @-prefixed Twitter handles — to produce a 0–100 score. Copy the snippet straight into your page, download it as `head.html`, or refine it until every issue is gone. Nothing leaves your browser; your draft is saved locally so a refresh never wipes your work.",
+      how: [
+        "Fill out the Basic, Open Graph, Twitter and Advanced tabs — the previews update live.",
+        "Watch the title and description length bars stay inside the green band (50–60 and 150–160 chars).",
+        "Add an og:image URL (1200×630) so links shared on Facebook, LinkedIn and Slack render as rich cards.",
+        "Resolve the issues in the SEO checklist, then Copy or Download the generated `<head>` snippet.",
+      ],
+      benefits: [
+        "Live Google SERP, Facebook/LinkedIn and Twitter/X preview cards as you type.",
+        "Full Open Graph and Twitter Card support, with smart fallbacks to the base title/description/image.",
+        "Title and description length bars matched to Google's truncation thresholds.",
+        "SEO checklist with errors, warnings and a 0–100 score — no guesswork.",
+        "Standards-conformant HTML output, ready to paste into any framework.",
+        "One-click Copy or Download as `head.html` for handing off to a developer.",
+        "Saves your draft to localStorage — refresh-safe, no signup, no cloud.",
+        "100% private — every tag is generated in your browser, nothing uploaded.",
+      ],
+      relatedSlugs: [
+        "slugify",
+        "robots-txt-generator",
+        "url-shortener",
+        "json-formatter",
+      ],
+      faqs: [
+        {
+          q: "What are meta tags?",
+          a: "Meta tags are HTML elements in the `<head>` of a page that describe it to search engines, social networks and browsers. The most important ones are the page title and meta description, plus Open Graph and Twitter Card tags that control how the page looks when shared on social media.",
+        },
+        {
+          q: "How long should my title and description be?",
+          a: "Aim for a title of 50–60 characters and a description of 150–160 characters. Beyond those lengths, Google may truncate them with an ellipsis in search results. The length bars in this tool match those thresholds exactly.",
+        },
+        {
+          q: "What is Open Graph?",
+          a: "Open Graph is a protocol started by Facebook that lets you control how your link looks when shared — title, description, image, type, locale and site name. LinkedIn, Slack, WhatsApp, Discord and many others honor it too, which is why og:image is so high-impact.",
+        },
+        {
+          q: "What is a Twitter Card?",
+          a: "Twitter Cards are Twitter/X's equivalent of Open Graph. `summary_large_image` is the big-image card you usually want; `summary` is the small-thumbnail fallback. If you don't set Twitter-specific tags, Twitter falls back to Open Graph automatically.",
+        },
+        {
+          q: "What size should my og:image be?",
+          a: "Use 1200×630 pixels (a 1.91:1 aspect ratio) as a PNG or JPG under ~5 MB. Facebook, LinkedIn, Slack and Twitter all crop to that ratio, so anything else risks awkward cropping. Make sure key text and logos stay inside the safe area.",
+        },
+        {
+          q: "Do I need a canonical URL?",
+          a: "Yes — setting `<link rel=\"canonical\">` to the preferred version of the page tells search engines which URL to index when the same content is reachable via multiple paths (www/non-www, with/without trailing slash, tracking parameters). It avoids duplicate-content issues.",
+        },
+        {
+          q: "What does the SEO score mean?",
+          a: "It's a 0–100 health check based on title and description length, Open Graph image presence, canonical URL, Twitter handle format and viewport/charset declarations. Errors weigh more than warnings. It's a guide, not a guarantee — but a 100 score means your meta tags are well-formed and complete.",
+        },
+        {
+          q: "Are my tags or text uploaded anywhere?",
+          a: "No. Every tag is generated entirely in your browser. The form is saved to localStorage so a refresh doesn't lose your work, but nothing is sent to Toollyz or any other server.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The form, previews and output panel are fully responsive and touch-friendly. You can build a complete `<head>` snippet on a phone or tablet.",
+        },
+        {
+          q: "Is this Meta Tag Generator free?",
+          a: "Completely free with no signup and no limits. Generate, preview and download as many `<head>` snippets as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "robots-txt-generator",

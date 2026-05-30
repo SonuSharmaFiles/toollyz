@@ -185,6 +185,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "invisible-text-generator": dynamic(
     () => import("@/components/tools/invisible-text-generator"),
   ),
+  "meta-tag-generator": dynamic(
+    () => import("@/components/tools/meta-tag-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
