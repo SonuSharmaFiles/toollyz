@@ -10230,13 +10230,100 @@ export const tools: Tool[] = [
   {
     slug: "love-compatibility-calculator",
     name: "Love Compatibility Calculator",
-    tagline: "A fun compatibility score between two names.",
+    tagline: "Deterministic FLAMES + letter overlap, openly &quot;for fun&quot; only.",
     description:
-      "Just for fun — enter two names and get a love-compatibility percentage with a playful breakdown.",
+      "A playful, deterministic love-compatibility score between two names. Blends letter overlap (Jaccard), vowel harmony, length harmony, the classic FLAMES game and a name-based hash into a 0–100% result. Openly framed as entertainment, not real compatibility advice.",
     categoryId: "calculators",
     icon: Heart,
-    status: "coming-soon",
-    keywords: ["love calculator", "compatibility", "fun"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "love calculator",
+      "love compatibility calculator",
+      "name compatibility",
+      "flames calculator",
+      "couple compatibility",
+      "fun love calculator",
+      "love percentage calculator",
+      "romance compatibility",
+      "name matcher",
+      "love test",
+      "browser love calculator",
+      "free love calculator",
+      "playful relationship calculator",
+      "letter overlap love",
+    ],
+    seo: {
+      title: "Love Compatibility Calculator — Playful FLAMES + Letter Score",
+      description:
+        "Type two names, see a playful 0–100% love-compatibility score plus the classic FLAMES verdict. Deterministic blend of letter overlap, vowel harmony, length harmony and a name-based hash — explicitly for fun.",
+      what:
+        "A love-compatibility calculator turns two names into a playful percentage. Toollyz Love Compatibility Calculator is openly entertainment-only — it blends four deterministic factors into a single 0–100% score: letter overlap (Jaccard similarity of the two normalised name letter sets), vowel harmony (similarity of vowel counts), length harmony (how close the two names are in length) and a &quot;cosmic vibe&quot; FNV-1a hash of the sorted name pair that adds quirky variation. The same names always produce the same result. On top of the percentage it runs the classic FLAMES schoolyard game (F-riends, L-overs, A-ffectionate, M-arriage, E-nemies, S-iblings) — cancel repeated letters between the two names and cycle the remaining count through the six categories. The hero shows the percentage plus a verdict band (Friend zone → Soulmate vibes) and FLAMES category; the breakdown panel shows each factor as a 0–100 bar with the shared letters listed. The Caveats panel is unusually prominent: this is **not** a real measure of compatibility — real relationships are built on values, communication, respect and effort. Toollyz has no backend; the two names save to localStorage on this device only.",
+      how: [
+        "Type two names and watch the percentage and FLAMES verdict appear.",
+        "Click Swap to flip the names — the result is symmetric, so the percentage doesn&apos;t change.",
+        "Scroll to the breakdown to see how letter overlap, vowel harmony, length and cosmic vibe contributed.",
+        "Read the &quot;Just for laughs&quot; panel before showing the result to anyone with feelings.",
+      ],
+      benefits: [
+        "Deterministic — same two names always give the same result.",
+        "Four-factor blend: letter overlap, vowel harmony, length harmony, FNV-1a cosmic-vibe hash.",
+        "Classic FLAMES game (Friends, Lovers, Affectionate, Marriage, Enemies, Siblings) with a meaningful one-liner per outcome.",
+        "Five verdict bands from &quot;Friend zone, probably&quot; through &quot;Soulmate vibes&quot;.",
+        "Shows the shared letters that drove the letter overlap score.",
+        "Symmetric — Swap doesn&apos;t change the result.",
+        "Prominent &quot;Just for laughs&quot; caveats so nobody mistakes it for actual compatibility advice.",
+        "100% private — Toollyz has no backend, the two names save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "zodiac-sign-finder",
+        "fancy-text-generator",
+        "random-quote-generator",
+        "horoscope-generator",
+      ],
+      faqs: [
+        {
+          q: "Is this actually accurate?",
+          a: "No. It&apos;s entertainment. The percentage is a deterministic blend of how many letters two names share, how close their vowel counts and lengths are and a hash. None of those map to real-world relationship outcomes; please don&apos;t treat the number as a signal about anything important.",
+        },
+        {
+          q: "Why does the same pair always give the same result?",
+          a: "By design. The components are all deterministic — letter overlap is set arithmetic, vowel and length harmony are simple ratios and the &quot;cosmic vibe&quot; uses a fixed FNV-1a hash. There&apos;s no randomness. So showing the result to the same friend twice always works.",
+        },
+        {
+          q: "What is FLAMES?",
+          a: "A 1980s–90s schoolyard game popular in India, the Philippines and many other countries. Write both names, cancel letters that appear in both, count what&apos;s left, then cycle through F-L-A-M-E-S — the last letter standing is your &quot;result&quot;. Toollyz runs the classic algorithm.",
+        },
+        {
+          q: "Does swapping the names change the result?",
+          a: "No — every component is symmetric. Letter overlap uses set intersection, vowel and length harmonies use absolute differences, and the hash sorts the two names before hashing. Swap is just there for the visual flip.",
+        },
+        {
+          q: "Why so many caveats?",
+          a: "Because algorithms that look authoritative on top of arbitrary inputs are easy to mistake for real predictions. A bold caveats panel keeps the framing honest: this is entertainment, not compatibility science.",
+        },
+        {
+          q: "What about non-Latin scripts?",
+          a: "The normalisation step only keeps a–z (after lowercasing), so Cyrillic, Devanagari, Han, Arabic etc. characters are stripped. Transliterate first (e.g. &quot;Анна&quot; → &quot;Anna&quot;) for a meaningful result. Future versions could keep Unicode letters.",
+        },
+        {
+          q: "Are diacritics handled?",
+          a: "Not specifically — accented letters (é, ñ, ü) are stripped along with the rest of the non-Latin characters. Compare the unaccented form (&quot;María&quot; → &quot;maria&quot;) for a sensible result.",
+        },
+        {
+          q: "Could you add a real relationship-style assessment?",
+          a: "There are evidence-based questionnaires (Gottman Method, Sternberg&apos;s Triangular Love Theory) that predict outcomes better than name letters. A real assessment is out of scope for a calculator like this — by design it&apos;s a snack, not a meal.",
+        },
+        {
+          q: "Are my names saved?",
+          a: "Only in your browser&apos;s localStorage on this device. Toollyz has no backend; nothing is uploaded. Clear site data to wipe the names.",
+        },
+        {
+          q: "Is this Love Compatibility Calculator free?",
+          a: "Completely free with no signup and no limits. Run as many name pairs as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "zodiac-sign-finder",

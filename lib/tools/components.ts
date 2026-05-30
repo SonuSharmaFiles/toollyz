@@ -314,6 +314,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "water-intake-calculator": dynamic(
     () => import("@/components/tools/water-intake-calculator"),
   ),
+  "love-compatibility-calculator": dynamic(
+    () => import("@/components/tools/love-compatibility-calculator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
