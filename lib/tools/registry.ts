@@ -6522,13 +6522,100 @@ export const tools: Tool[] = [
   {
     slug: "whois-lookup",
     name: "WHOIS Domain Lookup",
-    tagline: "Check who owns any domain and when it expires.",
+    tagline: "Modern RDAP lookup — registrar, dates, nameservers and DNSSEC.",
     description:
-      "Look up WHOIS records for any domain — registrar, owner, creation date, expiration and nameservers.",
+      "Look up any domain using RDAP (the modern IETF standard that replaces WHOIS). See registrar, registration / expiration dates, nameservers, DNSSEC and statuses — fetched directly from the registry by your browser.",
     categoryId: "seo",
     icon: SearchCheck,
-    status: "coming-soon",
-    keywords: ["whois", "domain lookup", "owner", "registrar"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "whois lookup",
+      "domain lookup",
+      "domain owner",
+      "rdap",
+      "domain registrar lookup",
+      "domain expiration check",
+      "domain age",
+      "dnssec check",
+      "nameserver lookup",
+      "iana rdap",
+      "whois alternative",
+      "domain info",
+      "who owns this domain",
+      "free whois",
+    ],
+    seo: {
+      title: "WHOIS Domain Lookup — Modern RDAP Lookup (Free, In Browser)",
+      description:
+        "Check who owns any domain, when it expires and where it's hosted. Toollyz WHOIS Domain Lookup uses RDAP — the modern standard that replaces WHOIS — fetched directly from the IANA bootstrap and the registry, with no Toollyz server in the chain.",
+      what:
+        "WHOIS is the traditional plain-text protocol (port 43) that lets you ask a domain registry who owns a given domain, when it was registered, when it expires and which nameservers it uses. Browsers can't speak port 43, so the IETF standardized RDAP (Registration Data Access Protocol) — the modern HTTP+JSON replacement for WHOIS that the major registries (Verisign, Identity Digital, Nominet, Public Interest Registry, etc.) all run today. Toollyz WHOIS Domain Lookup makes RDAP usable from a static website: your browser first fetches the IANA RDAP bootstrap file (a small JSON index of which RDAP server handles each TLD, cached locally for 24 hours), then sends your query directly to the correct registry server. The structured response is parsed into a tidy view — domain age, expiration countdown (red when under 30 days), registrar, registrant, admin/tech/abuse contacts (where disclosed), the full status list, DNSSEC delegation state and every nameserver with its IPv4/IPv6 glue. Some ccTLDs (.de, .fr, .uk, .ru) still rely on traditional WHOIS or block cross-origin browser requests; those failures surface with a clear, honest message. Toollyz never sees your query.",
+      how: [
+        "Type a domain (with or without scheme) and press Enter or click Lookup.",
+        "Your browser pulls the IANA RDAP bootstrap once, picks the right registry server, then queries it directly.",
+        "Inspect registration / expiration dates, the registrar, contacts, statuses, DNSSEC and nameservers with glue IPs.",
+        "Copy the full RDAP JSON for the response if you need raw data — last domain is remembered locally.",
+      ],
+      benefits: [
+        "Uses RDAP, the modern IETF replacement for WHOIS — same data, structured JSON, CORS-friendly.",
+        "Pulls the IANA RDAP bootstrap so the correct registry is queried for any TLD — no hardcoded lists.",
+        "Honest, distinct error states for input errors, missing RDAP server, CORS blocks, timeouts and NXDOMAIN.",
+        "Surfaces age in days, expiry countdown (red <30 days), DNSSEC delegation state and full status flags.",
+        "Parses registrar, registrant, admin/tech/abuse contacts from RDAP entities + vCards.",
+        "Shows every nameserver with IPv4/IPv6 glue and a one-click Copy JSON of the full response.",
+        "24-hour localStorage cache for the bootstrap so subsequent lookups are fast.",
+        "100% browser-side — Toollyz has no server in the chain, ever.",
+      ],
+      relatedSlugs: [
+        "dns-lookup",
+        "ip-address-finder",
+        "ping-test",
+        "url-shortener",
+      ],
+      faqs: [
+        {
+          q: "What is RDAP and how is it different from WHOIS?",
+          a: "RDAP (Registration Data Access Protocol) is the IETF-standardized HTTP+JSON replacement for the old port-43 WHOIS protocol. The data is identical — registrar, registrant, dates, nameservers, statuses — but RDAP is structured (no text-parsing), authenticated (HTTPS) and CORS-friendly, which is the only way a static site can query it directly from your browser.",
+        },
+        {
+          q: "How does Toollyz query RDAP without a server?",
+          a: "Your browser first fetches the IANA RDAP bootstrap (data.iana.org/rdap/dns.json), a tiny static JSON file that maps each TLD to its RDAP server. Toollyz caches that bootstrap for 24 hours, then sends your domain query straight to the correct registry's RDAP endpoint over HTTPS.",
+        },
+        {
+          q: "Why is the registrant blank or redacted?",
+          a: "Since GDPR (2018) and similar laws around the world, most registries redact registrant names, emails and phone numbers from public RDAP/WHOIS responses by default. That's a registry policy, not a Toollyz limitation. Some registries expose contacts behind an authenticated API for legitimate requesters.",
+        },
+        {
+          q: "Why did my .de / .fr / .uk lookup fail?",
+          a: "Some ccTLDs (.de, .fr, .uk, .ru, .nl, …) still use port-43 WHOIS or run an RDAP server that doesn't enable CORS for browsers. Toollyz surfaces a clear error so you know whether to try the registry's own website or a server-side WHOIS tool.",
+        },
+        {
+          q: "What does the expiration countdown mean?",
+          a: "It's the number of days from today until the registry's expiration date. Toollyz turns the number red when it's under 30 days — domains that lapse usually enter a 30-day grace + 30-day redemption period before being deleted, so red means it's time to act.",
+        },
+        {
+          q: "What does DNSSEC signed mean?",
+          a: "DNSSEC (DNS Security Extensions) cryptographically signs DNS responses so resolvers can verify they haven't been tampered with. A DNSSEC-signed domain is harder to hijack via cache poisoning. RDAP reports whether the parent zone holds a signed delegation for the domain.",
+        },
+        {
+          q: "Can I look up an IP or an ASN?",
+          a: "Not yet. This tool focuses on domain RDAP. IP and ASN RDAP are also IETF-standard and may land in a future update; today, Toollyz IP Address Finder gives you the high-level WHOIS-style ISP/AS info for an IP.",
+        },
+        {
+          q: "Is my query stored anywhere?",
+          a: "No. Toollyz has no server — the query goes from your browser straight to IANA and the registry. Only the last domain you typed is saved in localStorage so you don't lose it on refresh.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The search bar, hero, contact cards and nameserver list are fully responsive and touch-friendly.",
+        },
+        {
+          q: "Is this WHOIS Domain Lookup free?",
+          a: "Completely free with no signup and no limits. Look up as many domains as the registry servers will allow you to (most are quite generous for casual use).",
+        },
+      ],
+    },
   },
 
   // ─── IMAGE ───────────────────────────────────────────────────────────────

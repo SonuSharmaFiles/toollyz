@@ -200,6 +200,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "utm-link-generator": dynamic(
     () => import("@/components/tools/utm-link-generator"),
   ),
+  "whois-lookup": dynamic(
+    () => import("@/components/tools/whois-lookup"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
