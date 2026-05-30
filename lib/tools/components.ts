@@ -155,6 +155,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "mic-test": dynamic(
     () => import("@/components/tools/mic-test"),
   ),
+  "url-encoder-decoder": dynamic(
+    () => import("@/components/tools/url-encoder-decoder"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

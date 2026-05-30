@@ -5270,13 +5270,100 @@ export const tools: Tool[] = [
   {
     slug: "url-encoder-decoder",
     name: "URL Encoder / Decoder",
-    tagline: "Percent-encode or decode URLs and query strings.",
+    tagline: "Percent-encode or decode URLs, with a URL parts inspector.",
     description:
-      "Safely encode special characters for URLs and decode percent-encoded strings back into readable text.",
+      "Encode special characters for URLs or decode percent-encoded strings back into readable text — with component vs full-URI scopes and a built-in URL parts inspector. Free and private.",
     categoryId: "converters",
     icon: Link2,
-    status: "coming-soon",
-    keywords: ["url", "encode", "decode", "percent", "query string"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "url encoder",
+      "url decoder",
+      "percent encoding",
+      "encode url",
+      "decode url",
+      "urlencode",
+      "urldecode",
+      "query string encoder",
+      "encode uri",
+      "url parser",
+      "url components",
+      "url escape",
+      "url unescape",
+      "url tool",
+    ],
+    seo: {
+      title: "URL Encoder & Decoder — Percent-Encode and Parse URLs",
+      description:
+        "Encode special characters for URLs and decode percent-encoded strings back to readable text with Toollyz URL Encoder/Decoder — plus a URL parts inspector. 100% in your browser.",
+      what:
+        "A URL Encoder/Decoder converts strings to and from percent-encoding so they're safe to use inside URLs. Toollyz URL Encoder/Decoder handles both directions instantly and lets you switch between component scope (encodeURIComponent — encodes every reserved character, ideal for query values and path segments) and full-URI scope (encodeURI — preserves `://?&=` so a whole URL stays valid). Decoding catches malformed percent escapes and surfaces a clear error. A live URL parts inspector breaks any pasted full URL into its protocol, host, port, pathname, search and hash, and lists each query parameter individually. Everything is computed in your browser — nothing is uploaded.",
+      how: [
+        "Paste a URL or text into the input box.",
+        "Pick Encode or Decode, and choose Component or Full URI scope.",
+        "Read the result live in the output box and copy it with one click.",
+        "Scroll to the URL parts inspector to see protocol, host, path, query parameters and hash.",
+      ],
+      benefits: [
+        "Instant, live encoding or decoding as you type.",
+        "Component vs full-URI scopes for query values vs whole URLs.",
+        "Clear error message when a percent-encoded input is malformed.",
+        "Swap input and output with one click to chain conversions.",
+        "Char-count delta showing how many bytes encoding adds (or decoding saves).",
+        "URL parts inspector with protocol, host, port, pathname, search and hash.",
+        "Query parameter table that handles duplicates and special characters.",
+        "100% private — encoding happens in your browser, nothing uploaded.",
+      ],
+      relatedSlugs: [
+        "base64-encoder-decoder",
+        "json-formatter",
+        "html-minifier",
+        "regex-tester",
+      ],
+      faqs: [
+        {
+          q: "What is URL encoding?",
+          a: "Also called percent-encoding, it replaces characters that are unsafe or reserved in URLs (spaces, slashes, &, =, ?, …) with a % followed by their hex code. Spaces become %20, & becomes %26 and so on — so the URL travels intact through the web.",
+        },
+        {
+          q: "What's the difference between Component and Full URI?",
+          a: "Component (encodeURIComponent / decodeURIComponent) encodes every reserved character — use it for query values, path segments and anything you embed inside a URL. Full URI (encodeURI / decodeURI) preserves :, /, ?, &, = and others — use it when you have a whole URL and want to keep its structure.",
+        },
+        {
+          q: "Which one do I want for query string values?",
+          a: "Component. If a value contains & or = or spaces, encodeURIComponent makes sure they don't break your query string. Use it once per value, not once on the whole URL.",
+        },
+        {
+          q: "Why did I get an error decoding?",
+          a: "decodeURIComponent throws if it sees a percent sign that isn't followed by two hex digits (a malformed %ZZ). The tool surfaces the exact error message; check for stray % characters or incomplete sequences.",
+        },
+        {
+          q: "Does it handle Unicode characters like emoji?",
+          a: "Yes. encodeURIComponent and decodeURIComponent are UTF-8 aware, so non-ASCII characters and emoji round-trip correctly.",
+        },
+        {
+          q: "Why does my % sign keep encoding as %25?",
+          a: "% is itself a reserved character — to represent a literal percent in a URL, it's encoded as %25. Encoding an already-encoded string a second time produces this kind of double-encoding; if you don't want that, decode first.",
+        },
+        {
+          q: "Can it parse a URL into components?",
+          a: "Yes. Paste a full URL into the input and the URL parts panel shows protocol, host, hostname, port, pathname, search and hash, plus a table of every query parameter.",
+        },
+        {
+          q: "What about + signs for spaces?",
+          a: "In query strings, both %20 and + are commonly used for spaces. encodeURIComponent uses %20 (the strict standard); some servers also accept +. Use Component encoding for safety.",
+        },
+        {
+          q: "Is anything sent to a server?",
+          a: "No. Toollyz has no server — encoding, decoding and parsing all happen in your browser. Your last input is saved only in your device's local storage.",
+        },
+        {
+          q: "Is this URL encoder/decoder free?",
+          a: "Completely free with no signup and no limits. Encode or decode as many strings as you like, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "markdown-to-html",
