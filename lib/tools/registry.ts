@@ -9740,13 +9740,100 @@ export const tools: Tool[] = [
   {
     slug: "tip-calculator",
     name: "Tip Calculator",
-    tagline: "Split bills and calculate tips effortlessly.",
+    tagline: "Tip percentage, bill split and round-the-total options.",
     description:
-      "Calculate tips by percentage and split the total across any number of people — with rounding options.",
+      "Calculate a tip and split the bill across any number of people, with rounding (off / nearest 1 / 5 / 10 / round-up) and quick-percentage chips. 23 currencies, region-aware tipping notes. Free, private, browser-only.",
     categoryId: "calculators",
     icon: DollarSign,
-    status: "coming-soon",
-    keywords: ["tip calculator", "bill split", "gratuity"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "tip calculator",
+      "bill split calculator",
+      "tip percentage calculator",
+      "gratuity calculator",
+      "restaurant tip calculator",
+      "split bill calculator",
+      "tip per person",
+      "round up tip calculator",
+      "free tip calculator",
+      "browser tip calculator",
+      "tip 15 percent",
+      "tip 18 percent",
+      "tip 20 percent",
+      "tip with split",
+    ],
+    seo: {
+      title: "Tip Calculator — Tip, Bill Split & Rounding (Free, Private)",
+      description:
+        "Tip and split a restaurant bill with Toollyz Tip Calculator. 9 tip-percentage chips, n-way bill split, 5 rounding modes and 23 currencies — entirely in your browser.",
+      what:
+        "A tip calculator works out a gratuity by percentage and (optionally) splits the total evenly between diners. Toollyz Tip Calculator runs entirely in your browser. The hero shows four live cards — bill, tip, total and per-person — that update as you change inputs. Sliders and quick-pick chips cover the most common tip rates (0%, 5%, 10%, 15%, 18%, 20%, 22%, 25%, 30%); the slider goes up to 40% for generous tips. Bill split is a numeric input with +/− buttons (1–100 people). The rounding panel offers Off, Nearest 1, Nearest 5, Nearest 10 and Round-up — when rounding is on, the displayed Tip absorbs the rounding (so the rounded total is exactly Bill + Tip rather than Tip + Bill plus an awkward few cents). 23 ISO 4217 currencies are formatted with `Intl.NumberFormat`. The notes panel includes region-specific tipping advice (US, Europe, Asia) — useful when travelling. Toollyz has no backend; the last bill, tip percentage and split persist in localStorage on this device only.",
+      how: [
+        "Type the bill amount and pick a currency.",
+        "Slide the tip percentage or pick one of the common-tip chips (15 / 18 / 20%).",
+        "Use +/− buttons to set the number of people splitting the bill.",
+        "Pick a rounding mode — the tip absorbs the rounding so the total is clean.",
+      ],
+      benefits: [
+        "Four live hero cells: bill, tip, total, per-person amount.",
+        "Quick-tip chips (0 / 5 / 10 / 15 / 18 / 20 / 22 / 25 / 30%) plus a 0–40% slider.",
+        "Bill split with +/− buttons (1–100 people) and per-person amount in the hero.",
+        "Five rounding modes: off, nearest 1 / 5 / 10, round-up.",
+        "Tip absorbs the rounding so Total = Bill + Tip exactly when rounding is on.",
+        "23 currencies via `Intl.NumberFormat` with locale-correct symbols.",
+        "Region-aware tipping notes (US / Europe / Asia) in the About section.",
+        "100% private — Toollyz has no backend, the form saves to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "gst-vat-calculator",
+        "currency-converter",
+        "emi-calculator",
+        "fuel-cost-calculator",
+      ],
+      faqs: [
+        {
+          q: "How is the tip calculated?",
+          a: "Tip = tipPercentage × bill. Total = bill + tip. When rounding is on, the total is rounded first and the tip is recomputed as (rounded total − bill) so the math stays consistent.",
+        },
+        {
+          q: "Why does the tip change when I switch rounding modes?",
+          a: "Because the displayed tip absorbs the rounding. If your bill is $42 and the tip is 18% ($7.56), the raw total is $49.56. With Nearest 1 rounding, the total snaps to $50 and the tip becomes $8 — easier to leave in cash without needing change.",
+        },
+        {
+          q: "What's a fair restaurant tip?",
+          a: "It depends on the region. The US norm is 15% for adequate service, 18–20% for good and 20%+ for excellent. Many European countries include service in the bill — round up or leave 5–10% on top. Tipping is uncustomary in much of East Asia. Use the Notes panel for a quick guide.",
+        },
+        {
+          q: "Should I tip on the pre-tax amount or the post-tax total?",
+          a: "Conventions vary. In the US, tipping on the post-tax total is most common; in the UK and Australia tipping on the net (pre-VAT) value is more usual. Toollyz Tip Calculator tips on whatever you enter as the bill — feed it the value you want.",
+        },
+        {
+          q: "How does bill split work?",
+          a: "The total (tip included) is divided by the number of people. Toollyz doesn&apos;t round per person — if the total is $50 split 3 ways, each pays $16.67. To round the per-person amount, set the people count to 1 and split manually with your bank.",
+        },
+        {
+          q: "What does Round-up do?",
+          a: "Always rounds the total up to the next whole unit, regardless of how close the cents are to the next integer. Handy when you want to leave a generous tip and pay in cash without dealing with change.",
+        },
+        {
+          q: "Does it support zero-decimal currencies like JPY?",
+          a: "Yes — `Intl.NumberFormat` handles those automatically, showing no decimals. ¥4,200 and ₩42,000 display cleanly without trailing zeros.",
+        },
+        {
+          q: "Can I tip more than 40%?",
+          a: "The slider tops out at 40% but the input field accepts up to 100. For private services (deliveries, taxis on a generous holiday, exceptional one-off cases) people sometimes tip well above 40% — the calculator doesn&apos;t stop you.",
+        },
+        {
+          q: "Is my data uploaded?",
+          a: "No. Toollyz has no backend — calculations run in your browser. The last bill, tip and split save to localStorage on this device only.",
+        },
+        {
+          q: "Is this Tip Calculator free?",
+          a: "Completely free with no signup and no limits. Calculate as many tips as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "fuel-cost-calculator",

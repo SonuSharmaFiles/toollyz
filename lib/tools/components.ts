@@ -299,6 +299,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "gst-vat-calculator": dynamic(
     () => import("@/components/tools/gst-vat-calculator"),
   ),
+  "tip-calculator": dynamic(
+    () => import("@/components/tools/tip-calculator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
