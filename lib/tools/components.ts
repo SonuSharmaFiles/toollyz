@@ -242,6 +242,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "screenshot-to-pdf": dynamic(
     () => import("@/components/tools/screenshot-to-pdf"),
   ),
+  "invoice-generator": dynamic(
+    () => import("@/components/tools/invoice-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

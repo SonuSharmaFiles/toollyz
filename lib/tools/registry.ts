@@ -7800,13 +7800,100 @@ export const tools: Tool[] = [
   {
     slug: "invoice-generator",
     name: "Invoice Generator",
-    tagline: "Create professional invoices and download as PDF.",
+    tagline: "Line items, tax, discount, logo, 20 currencies → PDF.",
     description:
-      "Build clean invoices with line items, taxes, currency and your branding — download as PDF, ready to send.",
+      "Build a clean, print-ready invoice PDF with line items, tax, discount, 20 ISO 4217 currencies, your logo and a theme colour. Drawn with pdf-lib using built-in Helvetica — no font-embedding licensing concerns. Free and private.",
     categoryId: "pdf",
     icon: Receipt,
-    status: "coming-soon",
-    keywords: ["invoice", "pdf invoice", "billing", "freelance"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "invoice generator",
+      "free invoice generator",
+      "invoice maker",
+      "pdf invoice",
+      "create invoice online",
+      "online invoice generator",
+      "freelance invoice",
+      "small business invoice",
+      "invoice template pdf",
+      "browser invoice generator",
+      "no signup invoice generator",
+      "private invoice maker",
+      "intl currency invoice",
+      "invoice with tax discount",
+    ],
+    seo: {
+      title: "Invoice Generator — Free PDF Invoices With Logo, Tax & Discount",
+      description:
+        "Build a clean PDF invoice with Toollyz Invoice Generator. Line items, tax, discount, 20 ISO 4217 currencies, your logo and a theme colour — drawn entirely in your browser, no signup, no upload.",
+      what:
+        "An Invoice Generator turns a structured form (sender, recipient, line items, totals) into a polished, print-ready invoice PDF. Toollyz Invoice Generator builds the PDF inside your browser using the open-source pdf-lib library. The form has every field a freelancer or small business needs: From and Bill-to addresses (name + email + freeform multi-line address), invoice number, issue date and due date, currency (20 popular ISO 4217 codes — USD, EUR, GBP, JPY, INR, AUD, CAD, CHF, CNY, BRL, SGD, HKD, NZD, KRW, MXN, SEK, NOK, DKK, PLN, AED), tax percentage and a flat discount amount in the chosen currency, free-form Notes and Payment terms text, plus a theme colour that paints the accent bar and total, and an optional logo (PNG or JPG up to 1.5 MB) that's drawn in the top-right corner. The PDF is A4 portrait with Helvetica + Helvetica Bold (the 14 standard PDF fonts, so there are no font-embedding licensing concerns) and line items overflow to additional pages automatically. Currency formatting uses your browser's `Intl.NumberFormat` — symbols, separators and decimal places follow your locale.",
+      how: [
+        "Fill in From and Bill-to addresses, invoice number, dates and currency.",
+        "Add line items (description, quantity, rate) — totals update live in the hero.",
+        "Set tax %, discount, theme colour, notes and payment terms; optionally upload a logo.",
+        "Click Generate PDF — the file is built and downloaded entirely in your browser.",
+      ],
+      benefits: [
+        "Live total in the hero with subtotal, discount, tax breakdown and theme-colored accent.",
+        "Line items with auto-calculated amount (qty × rate) and remove buttons.",
+        "20 ISO 4217 currencies formatted via `Intl.NumberFormat` for proper locale display.",
+        "Tax percentage and flat discount, both applied before the total.",
+        "PNG or JPG logo (up to 1.5 MB) drawn in the top-right corner of the PDF.",
+        "Customizable theme colour for the accent bar, INVOICE title and total line.",
+        "Built-in Helvetica + Helvetica Bold via pdf-lib — no font-embedding licensing concerns.",
+        "100% private — Toollyz has no backend, form values saved to localStorage (without the logo bytes).",
+      ],
+      relatedSlugs: [
+        "currency-converter",
+        "screenshot-to-pdf",
+        "resume-pdf-generator",
+        "pdf-merger",
+      ],
+      faqs: [
+        {
+          q: "How does the Invoice Generator work without a server?",
+          a: "Toollyz is a static site. Your browser uses the open-source pdf-lib library to construct a PDF document in memory from the form data and then offers it for download. There's no upload — every byte stays on your device.",
+        },
+        {
+          q: "Can I include my logo?",
+          a: "Yes — upload a PNG or JPG up to 1.5 MB. It's embedded in the top-right corner of the PDF and capped at 64 pt on the longest edge so it doesn't dominate the header. The logo bytes aren't saved to localStorage; the rest of the form is.",
+        },
+        {
+          q: "Does it support taxes?",
+          a: "Yes — a single tax percentage applied after the discount. For more complex tax setups (multiple rates, per-line taxes) you'd need to bake the tax into each line's rate or extend the tool. Many freelancers find a single rate sufficient.",
+        },
+        {
+          q: "Which currencies are supported?",
+          a: "20 ISO 4217 currencies — USD, EUR, GBP, JPY, INR, AUD, CAD, CHF, CNY, BRL, SGD, HKD, NZD, KRW, MXN, SEK, NOK, DKK, PLN, AED. Symbols, separators and decimals follow your browser locale via `Intl.NumberFormat`. Need a different currency? Pick the closest match and edit the resulting PDF in a viewer that supports it.",
+        },
+        {
+          q: "What page size is the invoice?",
+          a: "A4 portrait (595.28 × 841.89 pt). Line items automatically continue onto additional pages if they overflow. US Letter support and configurable sizes are on the roadmap.",
+        },
+        {
+          q: "Is the PDF accessible?",
+          a: "pdf-lib produces a tagged-content-stream PDF — readable in Acrobat, Preview, Firefox, Chrome, etc., and printable. Full Section 508 / WCAG tagging requires structure trees we don't add yet. For high-stakes accessibility, run the result through a dedicated tagger.",
+        },
+        {
+          q: "What happens to my data after I close the page?",
+          a: "Form values save to localStorage so a refresh doesn't lose your draft. The logo bytes don't (they're often too big and contain image data); you'll need to re-upload after a refresh. Clearing site data wipes everything; Toollyz can't recover it.",
+        },
+        {
+          q: "Can I edit the PDF after downloading?",
+          a: "Yes — open it in any PDF editor (Acrobat, PDFgear, PDFescape, Preview's markup tools). The pdf-lib output uses standard fonts and a simple structure that's friendly to editors.",
+        },
+        {
+          q: "Does it support tax-exclusive vs tax-inclusive pricing?",
+          a: "The line-item rate is taken as tax-exclusive: subtotal + discount adjustment + tax = total. If you need tax-inclusive prices (the EU consumer model), bake VAT into each rate and leave the tax field at 0.",
+        },
+        {
+          q: "Is this Invoice Generator free?",
+          a: "Completely free with no signup and no limits. Generate as many invoices as you like — privately in your browser.",
+        },
+      ],
+    },
   },
 
   // ─── CALCULATORS ─────────────────────────────────────────────────────────
