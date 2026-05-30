@@ -6720,13 +6720,100 @@ export const tools: Tool[] = [
   {
     slug: "image-compressor",
     name: "Image Compressor",
-    tagline: "Compress JPG, PNG and WebP without losing quality.",
+    tagline: "Batch compress JPG, PNG and WebP — auto-pick the best format.",
     description:
-      "Reduce image file size in your browser. Adjustable compression with a live preview before download.",
+      "Compress JPG, PNG and WebP images in your browser with an adjustable quality slider, optional max-dimension resize and a per-file before/after view. Batch up to 30 at a time, choose the output format or let Auto pick. Free and private.",
     categoryId: "image",
     icon: ImageDown,
-    status: "coming-soon",
-    keywords: ["compress", "image", "jpg", "png", "webp"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "image compressor",
+      "compress image online",
+      "jpg compressor",
+      "png compressor",
+      "webp compressor",
+      "batch image compressor",
+      "image optimizer",
+      "shrink image size",
+      "reduce image file size",
+      "browser image compressor",
+      "free image compressor",
+      "image compression online",
+      "tinypng alternative",
+      "compress photos for web",
+    ],
+    seo: {
+      title: "Image Compressor — Batch Compress JPG / PNG / WebP (Free)",
+      description:
+        "Compress JPG, PNG and WebP images in your browser with Toollyz Image Compressor. Quality slider, optional max-dimension resize, batch of 30 and a per-file before/after view — everything runs locally, nothing is uploaded.",
+      what:
+        "An Image Compressor takes a photo or graphic and re-encodes it at a lower file size by lowering quality (lossy) and/or downscaling its dimensions. Toollyz Image Compressor uses your browser's native image decoder + canvas re-encode (the same path the Toollyz JPG-to-PNG and PNG-to-WebP converters use), so no file ever leaves your device and there's no install or signup. Drop up to 30 JPG, PNG or WebP files; pick a target format (Auto keeps the source format, or force JPEG / WebP / PNG); slide the quality from 20% to 100% (ignored for PNG output, which is lossless); optionally set a maximum longest-edge dimension to downscale huge originals before re-encoding. Each file shows the original size, the compressed size, the delta with a green badge for smaller / amber for larger, the output dimensions and the chosen format. Total stats (files compressed, KB saved, percent saved) live in the hero. Re-compress all instantly with new settings — original files are kept until you clear the queue. EXIF and other metadata are dropped during the canvas pass, which is a privacy win when sharing photos.",
+      how: [
+        "Pick your target format (Auto keeps the source), the quality and an optional max-dimension cap.",
+        "Drop one or many JPG / PNG / WebP files onto the drop zone — up to 30 at a time.",
+        "Review the per-file before/after, then click Save on a row or Download all.",
+        "Adjust quality or dimensions and hit Re-compress all to rebuild every file with the new settings.",
+      ],
+      benefits: [
+        "Batch up to 30 files at a time with a thumbnail and per-file size delta.",
+        "Auto format keeps the source format; force JPEG / WebP / PNG when you need a specific target.",
+        "Quality slider (20–100%) for JPEG and WebP — ignored for PNG since PNG is lossless.",
+        "Optional max-dimension downscale for huge originals before re-encoding.",
+        "Aggregate stats: files compressed, total KB saved and percent saved across the batch.",
+        "Re-compress all with new settings without re-dropping files.",
+        "Strips EXIF / GPS / camera metadata during the canvas pass — privacy bonus.",
+        "100% private — files are decoded and re-encoded in your browser, nothing is uploaded.",
+      ],
+      relatedSlugs: [
+        "png-to-webp",
+        "jpg-to-png",
+        "image-resizer",
+        "color-picker",
+      ],
+      faqs: [
+        {
+          q: "How does the compressor actually shrink files?",
+          a: "Your browser decodes the source image, draws it onto an off-screen canvas, then calls canvas.toBlob with your chosen MIME type and quality. For JPEG and WebP the quality slider controls how aggressively the encoder discards detail (lossy); PNG is always lossless. If you set a max dimension the canvas is created at the resized size, which is the single biggest win for huge originals.",
+        },
+        {
+          q: "Which output format should I pick?",
+          a: "WebP at 75–85% quality is almost always the best choice for the web — it's 25–35% smaller than JPEG at the same visual quality, supports transparency and is supported by every modern browser. Pick JPEG if your downstream tool still doesn't accept WebP. PNG is best for graphics with sharp edges, transparency or text, but won't shrink as dramatically.",
+        },
+        {
+          q: "Why did a PNG get larger, not smaller?",
+          a: "Canvas PNG output uses a single, conservative encoder setting. If the source PNG was already heavily optimized (e.g. by pngcrush / oxipng / TinyPNG), re-encoding it from a canvas can produce a larger file. Try the WebP format instead — it's lossless when you keep quality at 100% but typically smaller than PNG.",
+        },
+        {
+          q: "What does Auto mode do?",
+          a: "Auto keeps the source format — PNG → PNG, JPEG → JPEG, WebP → WebP. Pick a specific format if you want to convert as part of compression (e.g. force WebP to maximize savings, or force JPEG for legacy compatibility).",
+        },
+        {
+          q: "Will quality below 100% degrade the image?",
+          a: "Yes, but usually invisibly above 75%. JPEG and WebP are perceptual codecs designed to throw away detail your eyes don't notice first. 80% is a great default for photography; 60–70% for thumbnails. Drop to 40–50% for ultra-light placeholder images.",
+        },
+        {
+          q: "How does max dimension work?",
+          a: "If the longest edge of the original is bigger than the value you set, the canvas is created at the downscaled size (longest edge = max dimension, aspect ratio preserved). 1920 px is a great cap for web hero images; 800 px for thumbnails; 0 (the default) keeps the original size.",
+        },
+        {
+          q: "Are EXIF / GPS metadata kept?",
+          a: "No. The canvas pass only carries pixels, so EXIF tags, GPS coordinates and camera metadata are dropped. That's a privacy win when sharing photos online, but if you need the metadata back, keep the original file.",
+        },
+        {
+          q: "Is there a file-size limit?",
+          a: "Practically, it's whatever your browser's canvas can handle — typically tens of megapixels. Very large originals may fail with a canvas error; in that case set a max dimension to downscale before encoding.",
+        },
+        {
+          q: "Are my images uploaded anywhere?",
+          a: "No. Toollyz has no server — all compression happens entirely in your browser via the native decoder + canvas API. Your files never leave your device.",
+        },
+        {
+          q: "Is this Image Compressor free?",
+          a: "Completely free with no signup and no limits. Compress as many images as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "image-resizer",
