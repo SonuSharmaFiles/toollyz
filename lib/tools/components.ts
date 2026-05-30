@@ -272,6 +272,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "alarm-clock": dynamic(
     () => import("@/components/tools/alarm-clock"),
   ),
+  "pomodoro-timer": dynamic(
+    () => import("@/components/tools/pomodoro-timer"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

@@ -8858,13 +8858,100 @@ export const tools: Tool[] = [
   {
     slug: "pomodoro-timer",
     name: "Pomodoro Timer",
-    tagline: "Focus with 25-minute work and 5-minute break cycles.",
+    tagline: "Focus / short / long break cycles with chime and notifications.",
     description:
-      "A clean Pomodoro timer to boost focus. Customize work and break durations, track sessions, and stay deep.",
+      "Run Pomodoro cycles in your browser — customisable focus / short / long break durations, configurable long-break interval, auto-advance, WebAudio chime, optional browser notifications and today&apos;s session tally. Free, private, browser-only.",
     categoryId: "calculators",
     icon: Hourglass,
-    status: "coming-soon",
-    keywords: ["pomodoro", "focus timer", "productivity"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "pomodoro timer",
+      "online pomodoro timer",
+      "free pomodoro timer",
+      "focus timer",
+      "pomodoro technique",
+      "productivity timer",
+      "25 minute timer",
+      "work break timer",
+      "pomodoro tracker",
+      "browser pomodoro",
+      "pomodoro notification",
+      "study timer",
+      "deep work timer",
+      "interval timer",
+    ],
+    seo: {
+      title: "Pomodoro Timer — Focus With 25 / 5 / 15-Minute Cycles (Free)",
+      description:
+        "Run Pomodoro cycles in your browser with Toollyz Pomodoro Timer. Customisable durations, auto-advance, WebAudio chime, optional desktop notifications and today&apos;s session tally — entirely in your browser, no signup.",
+      what:
+        "The Pomodoro Technique (Francesco Cirillo, 1980s) breaks focused work into 25-minute \"pomodoros\" separated by 5-minute breaks, with a longer 15-minute break every four pomodoros. Toollyz Pomodoro Timer runs the cycle entirely in your browser. A big circular progress ring shows the current phase (Focus = emerald, Short break = sky, Long break = indigo) with a giant MM:SS countdown beside today&apos;s focus-session count and total focus minutes. Every duration is customisable (focus 1–120 min, short break 1–120 min, long break 1–120 min, long-break interval 2–12 sessions); turn off auto-advance if you want to manually start each phase. When a phase completes the timer can play a WebAudio chime (synthesised live, no audio files) and pop up a desktop notification via the standard `Notification` API. Today&apos;s history shows every completed session with its duration; the tally resets at midnight. Toollyz has no backend — settings and today&apos;s log save to localStorage on this device only.",
+      how: [
+        "Pick durations and the long-break interval — defaults are 25 / 5 / 15 minutes with a long break every 4 focus sessions.",
+        "Click Start to begin a focus session — the circular ring fills as the time elapses.",
+        "When the timer hits zero, you hear a chime (and see a notification, if enabled). The next phase queues up automatically when Auto-advance is on, otherwise you start it manually.",
+        "Today&apos;s session count and total focus minutes track your progress at the top of the page.",
+      ],
+      benefits: [
+        "Customisable focus / short break / long break durations (1–120 min) and long-break interval (2–12 sessions).",
+        "Circular progress ring with per-phase colour (emerald / sky / indigo) and giant MM:SS countdown.",
+        "Auto-advance between phases — or pause between to manually start each.",
+        "WebAudio chime synthesised live (no audio files) with a Test button.",
+        "Optional browser notifications via the standard `Notification` API.",
+        "Today&apos;s tally: focus sessions completed and total focus minutes.",
+        "Per-session log of phase, duration and time of day; resets at midnight.",
+        "100% private — Toollyz has no backend, history saves to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "stopwatch",
+        "alarm-clock",
+        "typing-speed-test",
+        "calendar-generator",
+      ],
+      faqs: [
+        {
+          q: "What is the Pomodoro Technique?",
+          a: "A time-management method by Francesco Cirillo (1980s). Work for 25 focused minutes (one pomodoro), then take a 5-minute break. After every fourth pomodoro, take a longer 15-minute break. The structure helps protect attention and prevent burnout.",
+        },
+        {
+          q: "Can I change the durations?",
+          a: "Yes — focus, short break and long break each accept 1–120 minutes. You can also pick how many focus sessions trigger the long break (2–12).",
+        },
+        {
+          q: "Does the timer keep running when the tab is hidden?",
+          a: "Browsers throttle `requestAnimationFrame` to roughly 1 Hz when the tab is hidden, so the visual countdown can lag briefly. The underlying logic tracks the wall-clock end time, so on the next visible frame the timer jumps to the correct remaining time — it doesn&apos;t drift.",
+        },
+        {
+          q: "Does it work when my computer is asleep?",
+          a: "No — JS doesn&apos;t run while the system sleeps. If you put the machine to sleep mid-focus, the timer pauses (effectively) and resumes when the system wakes. For unattended timing across sleep, use an OS-level timer.",
+        },
+        {
+          q: "What does Auto-advance do?",
+          a: "When on, the next phase starts automatically the moment the previous one completes (with a chime). When off, the timer holds at 00:00 until you press Start — useful if you want to physically walk away during the break and start it yourself.",
+        },
+        {
+          q: "Is the chime an audio file?",
+          a: "No — it&apos;s synthesised live with the WebAudio API. The work-end chime is a C5-then-E5 sine pair; the break-end chime is a G5-E5-C5 descending triad. Nothing is downloaded, nothing is licensed.",
+        },
+        {
+          q: "What does the Today tally include?",
+          a: "Today&apos;s count of completed focus sessions and total focus minutes (skipped sessions don&apos;t count). The session log resets at midnight local time so tomorrow&apos;s tally starts fresh.",
+        },
+        {
+          q: "Can I see history beyond today?",
+          a: "Not in this release — only today&apos;s sessions are kept. A long-term history is on the roadmap. For now, jot down each day&apos;s tally manually if you want a streak record.",
+        },
+        {
+          q: "Are my settings shared across devices?",
+          a: "No — they live in localStorage on this device only. Toollyz has no backend; nothing is synced. Set them up once per device.",
+        },
+        {
+          q: "Is this Pomodoro Timer free?",
+          a: "Completely free with no signup and no limits. Run as many cycles as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "age-difference-calculator",
