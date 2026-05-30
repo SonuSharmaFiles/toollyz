@@ -11118,13 +11118,100 @@ export const tools: Tool[] = [
   {
     slug: "avatar-generator",
     name: "Avatar Generator",
-    tagline: "Generate unique avatars from names or seeds.",
+    tagline: "Deterministic avatars in 4 styles — Initials / Identicon / Beam / Pixel.",
     description:
-      "Create unique, deterministic avatars from any seed string — great for placeholder profile pictures.",
+      "Generate unique, deterministic avatars from any seed string. Four styles (Initials, Identicon, Beam, Pixel), six palettes, circle or rounded-square shape, and SVG + four PNG export sizes. Same seed always produces the same avatar. Free and private.",
     categoryId: "generators",
     icon: UserCircle2,
-    status: "coming-soon",
-    keywords: ["avatar", "profile picture", "identicon"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "avatar generator",
+      "deterministic avatar",
+      "identicon generator",
+      "initials avatar generator",
+      "pixel avatar generator",
+      "beam avatar generator",
+      "github style avatar",
+      "boring avatars",
+      "seed based avatar",
+      "free avatar generator",
+      "browser avatar generator",
+      "svg avatar generator",
+      "placeholder avatar",
+      "profile picture generator",
+    ],
+    seo: {
+      title: "Avatar Generator — Deterministic SVG Avatars in 4 Styles (Free)",
+      description:
+        "Generate deterministic avatars from any seed with Toollyz Avatar Generator. Initials, Identicon, Beam shapes and Pixel art styles, six palettes, SVG + PNG exports — entirely in your browser.",
+      what:
+        "An avatar generator turns a stable seed string (name, email, user ID) into a unique placeholder image. Toollyz Avatar Generator runs entirely in your browser and produces **deterministic** avatars: the same seed always returns the same image, so you can use the seed in your own app or database without storing the actual avatar. Four styles ship: **Initials** (one or two letters from the seed on a coloured circle / rounded square), **Identicon** (GitHub-style 5×5 symmetric pixel pattern), **Beam** (Boring-Avatars-inspired overlapping circles and rounded rectangles), and **Pixel** (8×8 mirrored pixel art). Six curated palettes (Indigo &amp; teal, Warm, Cool, Earth, Mono, Candy) drive the colour selection. Seed → FNV-1a 32-bit hash → Mulberry32 PRNG → palette and shape choices, so every step is reproducible. Output is a true SVG (vector, scales perfectly) plus four PNG sizes (64, 128, 256, 512) rasterised via canvas. Toollyz has no backend.",
+      how: [
+        "Type a seed (a name, an email, a user ID — anything that&apos;s stable).",
+        "Pick a style preview, palette and shape.",
+        "Hit Shuffle seed to roll a random seed or type your own.",
+        "Download SVG (vector) or any of the four PNG sizes; copy the SVG markup for direct embedding.",
+      ],
+      benefits: [
+        "Four styles: Initials, Identicon, Beam, Pixel — switch instantly via thumbnail buttons.",
+        "Six curated palettes: Indigo &amp; teal, Warm, Cool, Earth, Mono, Candy.",
+        "Circle (default) or rounded-square shape with a 16% corner radius.",
+        "Deterministic — same seed always returns the same avatar, perfect for app placeholders.",
+        "Identicon and Pixel styles use left-right symmetry for the recognisable GitHub-avatar look.",
+        "Vector SVG output plus PNG export at 64 / 128 / 256 / 512.",
+        "Shuffle seed button for quick random previews.",
+        "100% private — Toollyz has no backend, settings save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "favicon-from-text",
+        "qr-code-generator",
+        "gradient-generator",
+        "color-picker",
+      ],
+      faqs: [
+        {
+          q: "What does &quot;deterministic&quot; mean?",
+          a: "The avatar is fully determined by the seed — there&apos;s no randomness in the result. Run the generator on any device with the same seed, palette and style and you get pixel-for-pixel the same SVG. That&apos;s why apps like GitHub can use just a user ID as the &quot;cache key&quot; for the avatar.",
+        },
+        {
+          q: "How does the seed get turned into an image?",
+          a: "FNV-1a 32-bit hash of the seed → Mulberry32 PRNG → palette colour picks → shape layout. The PRNG is small and fast; the hash is collision-resistant enough that two different seeds basically never collide.",
+        },
+        {
+          q: "Why these four styles?",
+          a: "Initials covers the &quot;just show their letters&quot; case (LinkedIn / Gmail). Identicon is the classic GitHub commit-author look. Beam is the modern overlapping-shape aesthetic popularised by Boring Avatars. Pixel is the playful 8-bit option. Between them you can find an avatar style for almost any product.",
+        },
+        {
+          q: "Can I use the SVG directly in HTML?",
+          a: "Yes — copy the SVG markup and paste it inline. SVGs scale perfectly, theme nicely with CSS and don&apos;t suffer from PNG aliasing. The PNG export exists for places that don&apos;t accept SVG (older email clients, some chat systems).",
+        },
+        {
+          q: "Are the avatars left-right symmetric?",
+          a: "Identicon and Pixel are symmetric (mirrored across the vertical centre line) for the classic recognisable look. Beam and Initials are not symmetric — the shape and letter positions are seed-derived but not mirrored.",
+        },
+        {
+          q: "Can I add custom palettes?",
+          a: "Not in this release — palettes are fixed for stability. A future version may support custom hex arrays. For now, pick the closest of the six and override the brand colour in your CSS if needed.",
+        },
+        {
+          q: "Why not export at 1024 or 2048 px?",
+          a: "Since the source is vector SVG, you can rasterise at any size by editing the canvas size in the export call. The four built-in sizes (64 / 128 / 256 / 512) cover the standard avatar dimensions. For 1024+, use the SVG directly.",
+        },
+        {
+          q: "Does the same seed give the same avatar across browsers?",
+          a: "Yes — the hash, PRNG, palette and shape math are all deterministic and platform-independent. The only browser-dependence is font rendering in the Initials style (system-ui font may look slightly different per OS).",
+        },
+        {
+          q: "Is my seed uploaded anywhere?",
+          a: "No. Toollyz has no backend — generation happens entirely in your browser. The seed and settings save to localStorage on this device only.",
+        },
+        {
+          q: "Is this Avatar Generator free?",
+          a: "Completely free with no signup and no limits. Generate as many avatars as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "qr-menu-generator",
