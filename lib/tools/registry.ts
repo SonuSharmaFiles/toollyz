@@ -7408,13 +7408,100 @@ export const tools: Tool[] = [
   {
     slug: "pdf-to-image",
     name: "PDF to Image Converter",
-    tagline: "Convert PDF pages into JPG or PNG images.",
+    tagline: "Render PDF pages to PNG or JPG at 1×–4× DPI in your browser.",
     description:
-      "Turn each page of a PDF into a high-resolution JPG or PNG. Choose pages, resolution and format.",
+      "Turn each PDF page into a PNG or JPEG image using Mozilla's PDF.js — entirely in your browser. Choose page ranges, scale (1×–4×, up to 288 DPI), JPEG quality and background. Free, private, no upload.",
     categoryId: "pdf",
     icon: FileOutput,
-    status: "coming-soon",
-    keywords: ["pdf to image", "pdf to jpg", "pdf to png"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "pdf to image",
+      "pdf to jpg",
+      "pdf to png",
+      "pdf page extractor",
+      "pdf to image converter",
+      "pdf page to png",
+      "pdf page to jpg",
+      "pdf rasterizer",
+      "extract images from pdf",
+      "convert pdf to png",
+      "free pdf to image",
+      "browser pdf to image",
+      "no upload pdf to image",
+      "high dpi pdf to image",
+    ],
+    seo: {
+      title: "PDF to Image Converter — PDF → PNG / JPG at 1×–4× DPI (Free)",
+      description:
+        "Convert PDF pages to PNG or JPEG with Toollyz PDF to Image Converter. Choose page ranges, scale (1×–4× DPI), JPEG quality and background — rendered by Mozilla's PDF.js entirely in your browser.",
+      what:
+        "A PDF to Image Converter takes a PDF and renders each page as a raster image (PNG or JPEG). Toollyz PDF to Image Converter uses Mozilla's PDF.js library — the same engine Firefox uses to render PDFs — running entirely in your browser. Drop a PDF, the page count is detected, then pick a range (`1-3, 5, 8-10`) or All pages, a format (PNG keeps transparency; JPEG flattens onto a configurable background colour with a quality slider) and a scale from 0.5× to 4× (1× = 72 DPI, 2× = 144 DPI for screens, 3× = 216 DPI for print, 4× = 288 DPI for high-density work). Each page is rasterised on a 2D canvas at the chosen scale and exported with the browser's native PNG / JPEG encoder. The PDF.js worker is served as a static asset from `/pdfjs/pdf.worker.min.mjs` — Toollyz has no server in the path.",
+      how: [
+        "Drop a PDF onto the page — Page count is detected instantly.",
+        "Pick By ranges (`1-3, 5, 8-10`) or All pages, choose PNG or JPEG, dial in scale and quality.",
+        "Click Render — progress is shown live, thumbnails fill the grid as each page completes.",
+        "Save individual images, or click Download all (staggered 120 ms so the browser doesn't block).",
+      ],
+      benefits: [
+        "Mozilla PDF.js rendering — the same engine that ships in Firefox.",
+        "PNG (lossless, transparent) or JPEG (smaller, configurable background).",
+        "Scale 0.5×–4× covers 36 DPI thumbnails to 288 DPI print-ready output.",
+        "Range selector (1-3, 5, 8-10) or All pages.",
+        "Live progress bar plus thumbnail grid as pages complete.",
+        "Per-image filename = `<source>_pX.png` so destinations sort naturally.",
+        "Worker served from `/pdfjs/pdf.worker.min.mjs` — no third-party CDN required.",
+        "100% private — Toollyz has no server in the path, files never leave your device.",
+      ],
+      relatedSlugs: [
+        "image-to-pdf",
+        "pdf-merger",
+        "pdf-splitter",
+        "screenshot-to-pdf",
+      ],
+      faqs: [
+        {
+          q: "Which library does this use?",
+          a: "Mozilla PDF.js (pdfjs-dist), the same open-source library that powers PDF rendering in Firefox. Pages are turned into a 2D canvas at the requested scale and exported with the browser's native canvas.toBlob.",
+        },
+        {
+          q: "What does the scale slider mean?",
+          a: "1× corresponds to 72 DPI (the PDF spec's native resolution). 2× gives 144 DPI (great for screens), 3× gives 216 DPI (print-quality for most uses) and 4× gives 288 DPI (high-density retina or large prints). Higher scales produce sharper images and larger files.",
+        },
+        {
+          q: "Why does JPEG need a background colour?",
+          a: "JPEG can't carry an alpha channel, so anything transparent in the source page would otherwise appear black. The background colour (default white) fills behind the page before the JPEG is encoded. Use PNG if you need true transparency.",
+        },
+        {
+          q: "Can it handle password-protected PDFs?",
+          a: "PDF.js prompts for a password by default. Toollyz currently doesn't expose that prompt — if your PDF requires a password, remove the protection first and retry. We may add a password prompt in a future update.",
+        },
+        {
+          q: "Is there a page limit?",
+          a: "No hard limit, but each rendered page lives in memory until you reload — large PDFs at high DPI can exhaust browser memory. Render in batches if a job fails for memory reasons.",
+        },
+        {
+          q: "What's the output filename?",
+          a: "`<source>_pX.png` or `.jpg`. For example a 12-page file called `report.pdf` rendered at every page produces `report_p1.png`, `report_p2.png`, … `report_p12.png`.",
+        },
+        {
+          q: "Does it work offline?",
+          a: "Once the page (and the PDF.js worker) is cached by your browser, yes — rendering is entirely local. The first visit needs an internet connection to fetch the JS bundle and the worker file.",
+        },
+        {
+          q: "Are my files uploaded?",
+          a: "No. Toollyz has no server in the path — PDF.js runs in your browser, rendering happens on a local canvas and the resulting images are downloaded directly. Nothing leaves your device.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The picker uses your phone's file system; the renderer works in mobile browsers. High-DPI renders on phones can be slow because of memory limits — consider 1× or 2× scale.",
+        },
+        {
+          q: "Is this PDF to Image Converter free?",
+          a: "Completely free with no signup and no limits. Convert as many PDFs as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "image-to-pdf",

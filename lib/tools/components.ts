@@ -227,6 +227,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "pdf-splitter": dynamic(
     () => import("@/components/tools/pdf-splitter"),
   ),
+  "pdf-to-image": dynamic(
+    () => import("@/components/tools/pdf-to-image"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
