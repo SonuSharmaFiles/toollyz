@@ -9250,13 +9250,100 @@ export const tools: Tool[] = [
   {
     slug: "sunrise-sunset",
     name: "Sunrise & Sunset Time",
-    tagline: "Find sunrise, sunset and daylight times by location.",
+    tagline: "NOAA solar position offline; civil / nautical / astronomical twilights.",
     description:
-      "Get sunrise, sunset, solar noon and daylight duration for any city or coordinates on any date.",
+      "Get sunrise, sunset, solar noon, day length and civil / nautical / astronomical twilights for any city or coordinates on any date. NOAA Solar Position Algorithm runs offline; city search uses the open-source Open-Meteo geocoder. Free and private.",
     categoryId: "calculators",
     icon: Sunrise,
-    status: "coming-soon",
-    keywords: ["sunrise", "sunset", "daylight", "solar"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "sunrise sunset calculator",
+      "sunrise time",
+      "sunset time",
+      "solar noon",
+      "day length calculator",
+      "civil twilight",
+      "nautical twilight",
+      "astronomical twilight",
+      "sunrise sunset by city",
+      "sunrise sunset by coordinates",
+      "polar day polar night",
+      "browser sunrise calculator",
+      "free sunrise calculator",
+      "noaa solar position",
+    ],
+    seo: {
+      title: "Sunrise & Sunset Time — NOAA Solar Position For Any City",
+      description:
+        "Find sunrise, sunset, solar noon, day length and civil / nautical / astronomical twilights with Toollyz Sunrise & Sunset Time. Browser-side NOAA Solar Position Algorithm; Open-Meteo geocoder for city search — no Toollyz server in the path.",
+      what:
+        "A sunrise/sunset calculator finds when the sun rises, when it sets, when it&apos;s at its highest point and the durations of the three twilight bands for a given (latitude, longitude, date). Toollyz Sunrise & Sunset Time implements NOAA&apos;s Solar Position Algorithm directly in the browser — the same equations used by gml.noaa.gov/grad/solcalc — so the solar math is offline and entirely client-side. Pick a location by searching a city (we call the open-source Open-Meteo geocoder directly from your browser, no Toollyz server in the path) or by typing latitude and longitude. The hero shows sunrise, solar noon and sunset in the location&apos;s timezone with the UTC time underneath, plus the day length in `Xh Ym Zs`. The twilight panel lists civil (sun 6° below the horizon — \"streetlights start\"), nautical (12° — \"horizon barely visible\") and astronomical (18° — \"true astronomical darkness\") dawns and dusks. At high latitudes the algorithm detects polar day and polar night and surfaces a banner explaining why some events are blank. Refraction is included via the official 90.833° zenith — results are accurate to ±1 minute for typical latitudes.",
+      how: [
+        "Search for a city (or paste latitude / longitude) and pick a date.",
+        "Watch the sunrise / solar noon / sunset cards populate, with the day-length line below.",
+        "Scroll to the Twilights panel for civil / nautical / astronomical dawn and dusk.",
+        "Tap My location to pull your current coordinates via the browser&apos;s Geolocation API.",
+      ],
+      benefits: [
+        "NOAA Solar Position Algorithm — accurate to ±1 minute for typical latitudes.",
+        "Times displayed in the location&apos;s IANA timezone with UTC under each one.",
+        "Civil / nautical / astronomical twilight bands, each with dawn and dusk times.",
+        "Polar-day / polar-night detection — explicit banner instead of \"00:00\" placeholders.",
+        "Open-Meteo geocoder for city search — browser-side direct, no Toollyz server.",
+        "Browser Geolocation API for My location with explicit user-permission prompt.",
+        "Day length displayed in hours, minutes and seconds.",
+        "100% private — solar math runs offline, only city lookups touch the network.",
+      ],
+      relatedSlugs: [
+        "world-clock",
+        "calendar-generator",
+        "leap-year-checker",
+        "age-difference-calculator",
+      ],
+      faqs: [
+        {
+          q: "How accurate are the times?",
+          a: "Within about ±1 minute for typical latitudes (40°N–40°S). At very high latitudes near the polar circles, the algorithm becomes more sensitive to small altitude and refraction effects and the error can grow to a few minutes. For sub-second astronomical precision, use a dedicated tool with the more elaborate SPA from NREL.",
+        },
+        {
+          q: "Does the solar math need an internet connection?",
+          a: "No — the NOAA Solar Position Algorithm runs entirely in your browser using `Math.sin` / `Math.cos`. Only the city search requires a connection; once you have coordinates, switching dates is fully offline.",
+        },
+        {
+          q: "Which geocoder do you use?",
+          a: "Open-Meteo (`https://geocoding-api.open-meteo.com`). It&apos;s free, requires no API key, supports CORS and ships with 200k+ cities. Your browser calls it directly; Toollyz has no server in the path.",
+        },
+        {
+          q: "What are civil, nautical and astronomical twilight?",
+          a: "Civil twilight is when the sun is 6° below the horizon — bright enough for most outdoor activities without artificial light. Nautical is when the sun is 12° below — the horizon is barely visible at sea. Astronomical is when the sun is 18° below — the sky is truly dark and astronomers can observe faint objects.",
+        },
+        {
+          q: "Why is everything blank for some dates?",
+          a: "At high latitudes (above the Arctic / Antarctic circles), there are days when the sun never rises or never sets — polar day and polar night. The calculator detects this and shows a banner explaining what&apos;s happening instead of bogus times.",
+        },
+        {
+          q: "What timezone do I see the times in?",
+          a: "The location&apos;s IANA timezone (e.g. America/New_York). The UTC time is shown underneath each card so you can cross-check or convert manually. The date input is interpreted as local-date in the location&apos;s timezone for consistency.",
+        },
+        {
+          q: "Does altitude affect the results?",
+          a: "Slightly — the official zenith already includes a small refraction correction for sea level. At significant elevation (>500 m) sunrise comes a minute or two earlier than the default and sunset is correspondingly later. Toollyz doesn&apos;t accept altitude in this release.",
+        },
+        {
+          q: "Can I see times for tomorrow / yesterday?",
+          a: "Yes — pick any date in the date input. The algorithm works for any year from ~1900 to ~2100 with the rated accuracy; it&apos;s more imprecise outside that range but still usable.",
+        },
+        {
+          q: "Are my coordinates uploaded?",
+          a: "Only when you click Search (the city name goes to Open-Meteo) or use My location (the browser asks for permission to share GPS coordinates with the page, which Toollyz then uses locally). Toollyz has no server, so coordinates never reach us.",
+        },
+        {
+          q: "Is this Sunrise & Sunset tool free?",
+          a: "Completely free with no signup and no limits. Look up as many cities and dates as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "world-clock",

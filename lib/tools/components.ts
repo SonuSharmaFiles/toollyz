@@ -284,6 +284,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "leap-year-checker": dynamic(
     () => import("@/components/tools/leap-year-checker"),
   ),
+  "sunrise-sunset": dynamic(
+    () => import("@/components/tools/sunrise-sunset"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
