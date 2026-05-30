@@ -9054,13 +9054,100 @@ export const tools: Tool[] = [
   {
     slug: "business-days-calculator",
     name: "Business Days Calculator",
-    tagline: "Count working days between two dates.",
+    tagline: "Working days between dates with custom weekends and holidays.",
     description:
-      "Calculate the number of business days between two dates — skipping weekends and optional holidays.",
+      "Count business days between two dates with configurable weekend rules (Sat-Sun, Sun-only, none) and an arbitrary holiday list. Per-weekday breakdown, holiday parser with comments, and an Add-business-days mode that lands on a real working day. Free and private.",
     categoryId: "calculators",
     icon: CalendarDays,
-    status: "coming-soon",
-    keywords: ["business days", "working days", "weekday counter"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "business days calculator",
+      "working days calculator",
+      "workdays between dates",
+      "weekday counter",
+      "business days online",
+      "working days online",
+      "skip weekends holidays",
+      "add business days",
+      "holiday calculator",
+      "browser business days calculator",
+      "free business days",
+      "private business days",
+      "business days with holidays",
+      "custom weekend calculator",
+    ],
+    seo: {
+      title: "Business Days Calculator — With Custom Weekends & Holidays (Free)",
+      description:
+        "Count business days between two dates with Toollyz Business Days Calculator. Custom weekend rules, an arbitrary holiday list (with comments), per-weekday breakdown and an Add-business-days mode — entirely in your browser.",
+      what:
+        "A business-days calculator counts the working days between two dates and adds working days to a start date. Toollyz Business Days Calculator runs entirely in your browser. Both modes share the same weekend and holiday config: by default Saturday + Sunday are weekends and the holidays list ships with a tiny example (you can paste any number of ISO-format dates with optional `# label` comments). The Count mode shows calendar days, business days, weekend days and excluded holidays in the hero, plus a per-weekday breakdown panel that highlights the configured weekend columns in amber. The Add mode takes a start date and a positive or negative count and lands on the next non-weekend, non-holiday day in that direction. Reverse the dates — the count comes out the same. Toollyz has no backend; the dates, weekend rules and holiday list save to localStorage on this device only.",
+      how: [
+        "Pick a From and To date — both dates are inclusive.",
+        "Edit the weekend toggles (Sat / Sun) for regions where the working week differs.",
+        "Paste public-holiday dates one per line in ISO format (`YYYY-MM-DD`) with optional `# label` comments.",
+        "Switch to Add business days mode to find the date that's N working days away from a start.",
+      ],
+      benefits: [
+        "Count mode: calendar days, business days, weekend days and holidays excluded in the hero plus a per-weekday breakdown.",
+        "Add mode: positive or negative business-day offset that lands on a real working day.",
+        "Configurable weekend rules — Sat-Sun, Sun-only or no weekend (for regions where Saturday or Sunday is a working day).",
+        "Holiday parser tolerates `# comments` per line and reports invalid input.",
+        "Inclusive date math — From and To are each counted as one day if they're working days.",
+        "Per-weekday breakdown highlights weekend columns in amber so the visualisation matches the rule.",
+        "Reverse the dates and get the same result — direction-agnostic counting.",
+        "100% private — Toollyz has no backend, all settings save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "age-difference-calculator",
+        "leap-year-checker",
+        "calendar-generator",
+        "unix-timestamp-converter",
+      ],
+      faqs: [
+        {
+          q: "Are From and To inclusive?",
+          a: "Yes — both endpoints are counted. If From is Mon 1 Jun and To is Fri 5 Jun, that's 5 calendar days and 5 business days. Pick To = From + 1 day to count a single day.",
+        },
+        {
+          q: "How do I add holidays?",
+          a: "Paste them one per line in ISO format (YYYY-MM-DD). You can append a `# label` for documentation; the label is ignored by the parser. The parser tolerates extra whitespace and reports any line it couldn&apos;t parse.",
+        },
+        {
+          q: "What if my weekend isn't Sat-Sun?",
+          a: "Toggle the Sat / Sun checkboxes — Toollyz supports Sat-Sun (default), Sat-only, Sun-only and no weekend. For regions like Israel (Fri-Sat) or parts of the Middle East (Fri-only), a future release will expose every day individually.",
+        },
+        {
+          q: "Does it know real-world public holidays?",
+          a: "No — Toollyz doesn&apos;t bundle a holiday database. Paste the holidays for your country / year into the list. There are open holiday-data projects (e.g. date-holidays, nager.at) you can copy-paste from.",
+        },
+        {
+          q: "How does Add business days work?",
+          a: "It walks the calendar one day at a time, decrementing the remaining count only on non-weekend, non-holiday days. Negative values walk backwards. Adding zero from a weekend or holiday simply returns the same date (it doesn&apos;t advance to the next workday).",
+        },
+        {
+          q: "Are the dates timezone-aware?",
+          a: "They&apos;re local-date only (no time-of-day component). Each date is anchored to midnight in your browser&apos;s timezone, so DST transitions don&apos;t skew the count.",
+        },
+        {
+          q: "What happens if I swap From and To?",
+          a: "The math is direction-agnostic — Toollyz internally swaps them so the count comes out the same in both orders. The Swap button just flips the input values for readability.",
+        },
+        {
+          q: "Are my settings shared across devices?",
+          a: "No — they&apos;re stored in localStorage on this device only. Toollyz has no backend; nothing is uploaded or synced.",
+        },
+        {
+          q: "Is this Business Days Calculator free?",
+          a: "Completely free with no signup and no limits. Calculate as many ranges as you like — privately in your browser.",
+        },
+        {
+          q: "How big can the range be?",
+          a: "The Count mode iterates day-by-day, so multi-decade spans (~10k days) finish in milliseconds. For huge ranges (centuries), a closed-form calculation would be faster, but the simple version is more flexible with custom weekends and holidays.",
+        },
+      ],
+    },
   },
   {
     slug: "leap-year-checker",

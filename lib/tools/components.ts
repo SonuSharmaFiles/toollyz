@@ -278,6 +278,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "age-difference-calculator": dynamic(
     () => import("@/components/tools/age-difference-calculator"),
   ),
+  "business-days-calculator": dynamic(
+    () => import("@/components/tools/business-days-calculator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
