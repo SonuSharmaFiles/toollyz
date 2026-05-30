@@ -8662,13 +8662,100 @@ export const tools: Tool[] = [
   {
     slug: "stopwatch",
     name: "Stopwatch",
-    tagline: "A precise online stopwatch with lap times.",
+    tagline: "Start / stop / lap / reset, sub-millisecond accurate, CSV export.",
     description:
-      "Start, stop, lap and reset — a clean online stopwatch precise to the millisecond.",
+      "Precise online stopwatch with sub-millisecond accuracy via performance.now() + requestAnimationFrame. Up to 200 laps with split times, fastest / slowest highlighted, CSV export and keyboard shortcuts (Space / L / R). Resume preserves elapsed time. Free, private, browser-only.",
     categoryId: "calculators",
     icon: Timer,
-    status: "coming-soon",
-    keywords: ["stopwatch", "timer", "laps"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "stopwatch online",
+      "online stopwatch",
+      "stopwatch with laps",
+      "lap timer",
+      "precision stopwatch",
+      "stopwatch keyboard shortcuts",
+      "stopwatch csv export",
+      "milliseconds stopwatch",
+      "browser stopwatch",
+      "free stopwatch",
+      "private stopwatch",
+      "running stopwatch",
+      "race timer",
+      "interval stopwatch",
+    ],
+    seo: {
+      title: "Stopwatch — Precise Online Lap Timer With CSV Export (Free)",
+      description:
+        "Online stopwatch with sub-millisecond accuracy via performance.now(). Up to 200 laps with split times, fastest / slowest highlighted, CSV export and keyboard shortcuts (Space / L / R) — entirely in your browser.",
+      what:
+        "A stopwatch measures elapsed time from a start command. Toollyz Stopwatch runs entirely in your browser, using `performance.now()` for sub-millisecond resolution and `requestAnimationFrame` to repaint the display at your monitor's refresh rate. Press Start to begin, Stop to pause, Resume to continue, Lap to capture a split and Reset to clear. Each lap stores both its split (since the previous lap) and its elapsed time from start; up to 200 laps are kept. The summary panel surfaces the fastest and slowest splits with subtle background tints and the corresponding rows are highlighted in the list. Keyboard shortcuts give you Space (start/stop), L (lap) and R (reset). Copy the lap list to your clipboard as TSV or export to CSV for a spreadsheet. Laps and the paused elapsed time persist in localStorage between visits so a refresh doesn't lose your data. Toollyz has no backend — the stopwatch runs entirely on your device.",
+      how: [
+        "Press Start (or Space) to begin — the big display updates every frame.",
+        "Press Lap (or L) at any point to capture a split; the list grows from the top.",
+        "Press Stop (or Space) to pause; press Resume to continue from exactly where you left off.",
+        "Copy laps to your clipboard or export as CSV; press Reset (or R) to clear everything.",
+      ],
+      benefits: [
+        "Sub-millisecond accuracy via `performance.now()` + `requestAnimationFrame`.",
+        "Up to 200 laps with both split time and elapsed-from-start.",
+        "Fastest / slowest splits highlighted in the lap list and called out in a summary panel.",
+        "Copy laps to clipboard as TSV or export as a tidy CSV file.",
+        "Keyboard shortcuts: Space (start/stop), L (lap), R (reset).",
+        "Resume preserves the accumulated elapsed time — pausing doesn't lose anything.",
+        "Laps and paused state persist in localStorage so a refresh doesn't wipe your data.",
+        "100% private — Toollyz has no backend, runs stay in your browser.",
+      ],
+      relatedSlugs: [
+        "pomodoro-timer",
+        "alarm-clock",
+        "reaction-time-test",
+        "unix-timestamp-converter",
+      ],
+      faqs: [
+        {
+          q: "How accurate is the stopwatch?",
+          a: "It uses `performance.now()`, which gives sub-millisecond timestamps but is rounded by the browser for privacy. Chrome and Firefox quantise to 0.1 ms in normal contexts and 1 ms in cross-origin-isolated pages. The on-screen update rate matches your monitor's refresh rate (typically 60 Hz, so ~16.7 ms per frame) — but the underlying timestamp is precise.",
+        },
+        {
+          q: "Does it keep running when the tab is hidden?",
+          a: "Browsers throttle `requestAnimationFrame` to roughly 1 Hz when the tab is hidden, so the visual display freezes. But the elapsed time is recalculated from `performance.now()` on every visible frame, so when you switch back, the time jumps to the correct total. Nothing is lost.",
+        },
+        {
+          q: "Can I export the laps?",
+          a: "Yes — Copy puts a TSV (tab-separated) version on your clipboard, and the CSV button downloads `stopwatch-laps.csv` with columns lap, split_ms, split, elapsed_ms, elapsed. Both formats include the raw milliseconds for further analysis.",
+        },
+        {
+          q: "What happens if I close the tab while it's running?",
+          a: "The running state isn't persisted (only laps and the paused elapsed time are), so reopening will show the stopwatch at the last saved elapsed time and stopped. Trying to persist a \"running\" timer across reloads would be misleading because the timer isn't actually running while the page is closed.",
+        },
+        {
+          q: "What keyboard shortcuts are available?",
+          a: "Space toggles start/stop, L records a lap (while running), R resets everything. The shortcuts ignore typing in inputs and textareas so you don't accidentally lap while editing a label.",
+        },
+        {
+          q: "Why are some laps highlighted?",
+          a: "The fastest split is highlighted in emerald and the slowest in amber — a quick visual scan reveals your best and worst splits across the run. The summary panel above the list shows both with their formatted times.",
+        },
+        {
+          q: "How many laps can I record?",
+          a: "Up to 200 laps. Beyond that, oldest laps are trimmed. For longer training sessions or events, export the laps to CSV partway through to keep the full record.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes — the buttons are touch-friendly. The keyboard shortcuts only work with a physical keyboard; mobile users tap the buttons instead.",
+        },
+        {
+          q: "Is my lap history shared across devices?",
+          a: "No — it's stored only in localStorage on this device. Toollyz has no backend; nothing is uploaded or synced. Use the CSV export to share laps with another device.",
+        },
+        {
+          q: "Is this Stopwatch free?",
+          a: "Completely free with no signup and no limits. Run as many sessions as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "alarm-clock",

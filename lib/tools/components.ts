@@ -266,6 +266,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "reaction-time-test": dynamic(
     () => import("@/components/tools/reaction-time-test"),
   ),
+  "stopwatch": dynamic(
+    () => import("@/components/tools/stopwatch"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
