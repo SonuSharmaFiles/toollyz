@@ -212,6 +212,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "image-resizer": dynamic(
     () => import("@/components/tools/image-resizer"),
   ),
+  "gradient-generator": dynamic(
+    () => import("@/components/tools/gradient-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

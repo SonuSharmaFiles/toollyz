@@ -6916,13 +6916,100 @@ export const tools: Tool[] = [
   {
     slug: "gradient-generator",
     name: "Gradient Generator",
-    tagline: "Create beautiful CSS gradients with live preview.",
+    tagline: "Linear, radial & conic CSS gradients with draggable stops.",
     description:
-      "Design linear, radial and conic gradients with intuitive color stops. Copy ready-to-use CSS in one click.",
+      "Design CSS Color Level 4 linear, radial and conic gradients with a draggable-stops editor, 16 curated presets, random generator, repeating mode, SVG export and four copy-ready CSS formats. Free and private.",
     categoryId: "image",
     icon: Brush,
-    status: "coming-soon",
-    keywords: ["gradient", "css gradient", "linear gradient", "radial"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "gradient generator",
+      "css gradient generator",
+      "linear gradient",
+      "radial gradient",
+      "conic gradient",
+      "css gradient maker",
+      "gradient builder",
+      "css backgrounds",
+      "gradient css copy",
+      "gradient color stops",
+      "tailwind gradient",
+      "svg gradient",
+      "repeating gradient",
+      "gradient picker",
+    ],
+    seo: {
+      title: "Gradient Generator — Linear, Radial & Conic CSS Gradients",
+      description:
+        "Design CSS gradients with Toollyz Gradient Generator. Draggable color stops, linear/radial/conic types, 16 presets, random generator, repeating mode, SVG export and four copy-ready CSS formats — entirely in your browser.",
+      what:
+        "A CSS gradient is a smooth blend between two or more colors used as a `background-image` (or any property that accepts an image). CSS Color Level 4 standardizes three gradient functions — `linear-gradient` (angled or directional), `radial-gradient` (elliptical or circular halo) and `conic-gradient` (rotated like a pie chart) — plus their `repeating-*` variants. Toollyz Gradient Generator gives you a draggable color-stops editor (click the bar to add a stop, drag to move, arrow-key to nudge, Delete to remove), 16 curated presets (Dawn, Ocean, Forest, Sunset, Aurora, Plum, Graphite, Nordic, Citrus, Rose, two radial designs and two conic designs), a Random generator that picks pleasant HSL hues, type-specific controls (angle for linear; shape and center for radial; from-angle and center for conic), a Repeating toggle for stripe patterns, four copy-ready outputs (the function call, the `background-image:` declaration, the full shorthand with a fallback color, and a Tailwind-arbitrary class) and SVG export for linear and radial gradients (with a note that conic isn't yet in the SVG spec). Your last gradient and the 12 most recent edits persist in localStorage. Toollyz has no backend — every preview is just CSS.",
+      how: [
+        "Pick a preset or hit Random for an instant starting point, then drag stops or click the bar to add more.",
+        "Switch between Linear, Radial and Conic to swap the geometry — angle, center and shape controls update accordingly.",
+        "Toggle Repeating for stripe patterns, or click Reverse to flip the stop order.",
+        "Copy the function, declaration, shorthand or Tailwind class — or download an SVG file for linear/radial gradients.",
+      ],
+      benefits: [
+        "Three CSS Color Level 4 gradient types (linear, radial, conic) with full control of angle, shape and center.",
+        "Draggable color stops with keyboard nudge (arrows), Delete to remove and a one-click Reverse.",
+        "16 curated presets across light, dark, vibrant and minimal styles.",
+        "Smart Random gradient that picks pleasant HSL hues 30°+ apart for tasteful results.",
+        "Repeating mode for stripe patterns; configurable from a single toggle.",
+        "Four output formats: function call, `background-image:` declaration, shorthand with fallback and Tailwind-arbitrary class.",
+        "SVG export at 1200 × 600 for linear and radial gradients (with a note that SVG doesn't standardize conic).",
+        "100% private — Toollyz has no backend, draft and history saved to localStorage.",
+      ],
+      relatedSlugs: [
+        "color-picker",
+        "hex-to-rgb",
+        "rgb-to-hex",
+        "meta-tag-generator",
+      ],
+      faqs: [
+        {
+          q: "What's the difference between linear, radial and conic?",
+          a: "Linear gradients blend colors along a straight line at a given angle (0° points up, 90° points right). Radial gradients emit from a center point in an ellipse or circle. Conic gradients sweep around a center like a clock face — perfect for pie charts and rainbow swirls. All three are standard CSS today.",
+        },
+        {
+          q: "How do I add or move a color stop?",
+          a: "Click anywhere on the gradient bar to add a stop at that position; drag a stop with the mouse or finger to move it; use the arrow keys for ±1% nudging once a stop is focused; press Delete to remove it.",
+        },
+        {
+          q: "What's a repeating gradient?",
+          a: "Adding `repeating-` to any gradient function tiles the stop pattern across the element. Useful for stripes — set two stops a few percent apart and the pattern repeats for the rest of the canvas.",
+        },
+        {
+          q: "Can I export to SVG?",
+          a: "Yes for linear and radial gradients — the export builds a real SVG file with a `<linearGradient>` or `<radialGradient>` paint server. Conic gradients aren't in the SVG spec yet, so the export falls back to a flat color and the UI says so.",
+        },
+        {
+          q: "Which CSS format should I copy?",
+          a: "Use the Property (`background-image: …`) when you want to layer over a solid color; Shorthand (`background: <fallback>; background-image: …;`) when you also want a fallback for very old browsers; Function (`linear-gradient(…)`) inside CSS variables or other properties; Tailwind class for arbitrary-value Tailwind projects.",
+        },
+        {
+          q: "Will it work in older browsers?",
+          a: "Linear and radial gradients work in every browser shipped since 2013. Conic gradients are supported by all modern engines (Chrome 69+, Firefox 83+, Safari 12.1+). For very old browsers, the Shorthand output includes a fallback solid color.",
+        },
+        {
+          q: "Can I use OKLCH or other modern colors in a stop?",
+          a: "Yes — paste any CSS color string into a stop's color field (HEX, RGB, HSL, OKLCH, color keywords). Modern browsers (Chrome 121+, Safari 16.4+, Firefox 113+) interpolate between OKLCH stops in OKLab for smoother, more perceptually-uniform blends.",
+        },
+        {
+          q: "Are my gradients saved?",
+          a: "Yes — the active gradient and the 12 most recent ones live in your browser's localStorage. Toollyz has no backend, so nothing is uploaded.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes — the bar, stops and controls are touch-friendly. Drag stops with your finger; tap a stop to focus it and use the inline editor below the bar for precision adjustments.",
+        },
+        {
+          q: "Is this Gradient Generator free?",
+          a: "Completely free with no signup and no limits. Design as many gradients as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "meme-generator",
