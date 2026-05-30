@@ -6030,13 +6030,100 @@ export const tools: Tool[] = [
   {
     slug: "currency-converter",
     name: "Currency Converter",
-    tagline: "Live exchange rates between 150+ currencies.",
+    tagline: "Live rates between 160+ currencies, with caching and history.",
     description:
-      "Convert between major and minor world currencies with live rates. Supports historical rates and bulk conversion.",
+      "Convert between 160+ world currencies with live mid-market rates from public providers, a multi-currency snapshot table, smart caching and saved-conversions history. Free and private — no signup, no server.",
     categoryId: "converters",
     icon: Banknote,
-    status: "coming-soon",
-    keywords: ["currency converter", "exchange rate", "forex"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "currency converter",
+      "exchange rate",
+      "forex",
+      "live exchange rate",
+      "usd to eur",
+      "usd to inr",
+      "eur to usd",
+      "gbp to usd",
+      "money converter",
+      "fx converter",
+      "real-time exchange rate",
+      "free currency converter",
+      "browser currency converter",
+      "150 currencies",
+    ],
+    seo: {
+      title: "Currency Converter — Live Rates for 160+ Currencies (Free)",
+      description:
+        "Convert any amount between 160+ world currencies with live mid-market rates from Open Exchange Rates and the European Central Bank. Multi-currency snapshot, saved conversions, smart caching — entirely in your browser.",
+      what:
+        "A Currency Converter takes an amount in one currency (the base) and returns the equivalent in another using a current exchange rate. Toollyz Currency Converter fetches live mid-market rates directly from your browser using a chain of free public providers: open.er-api.com (160+ currencies) with a fallback to api.frankfurter.app (the European Central Bank reference rates for 30 majors). Rates are cached in localStorage for 30 minutes per base currency so re-conversions are instant, with a Refresh button to force a fresh fetch. The hero animates between values, the result panel shows the unit rate (1 USD = X EUR) and the rate's age and provider, a Quick to row jumps between popular currencies, a multi-currency snapshot converts your amount into 9 popular currencies at once, and you can save individual conversions to a history list. Toollyz has no server — your browser talks directly to the providers, nothing passes through us.",
+      how: [
+        "Type or paste the amount, then pick the From and To currencies (use the swap button to flip them).",
+        "The result, unit rate and rate timestamp update live; tap Refresh to bypass the 30-minute cache.",
+        "Use Quick to or the multi-currency snapshot to jump between popular currencies in one click.",
+        "Save useful conversions to the history list, copy the result string, or just keep scrolling.",
+      ],
+      benefits: [
+        "Live mid-market rates from open.er-api.com with a European Central Bank fallback.",
+        "Supports 160+ currencies with full names and flag emojis.",
+        "Animated result with smart decimal precision (4 decimals for sub-unit values).",
+        "Multi-currency snapshot — converts your amount into 9 popular currencies at once.",
+        "Quick-pick row and one-click swap between From and To.",
+        "Saved conversions history with timestamp and provider for each entry.",
+        "30-minute localStorage cache so re-conversions are instant; Refresh forces a fresh fetch.",
+        "100% browser-side — Toollyz has no server, no signup, no tracking.",
+      ],
+      relatedSlugs: [
+        "ip-address-finder",
+        "internet-speed-test",
+        "calendar-generator",
+        "hashtag-generator",
+      ],
+      faqs: [
+        {
+          q: "Where do the exchange rates come from?",
+          a: "Your browser fetches them directly from public providers. The primary source is open.er-api.com (Open Exchange Rates' free tier with 160+ currencies); if that's unreachable, Toollyz falls back to api.frankfurter.app, which serves the European Central Bank's reference rates for 30 major currencies. Toollyz itself has no server in the chain.",
+        },
+        {
+          q: "Are these the rates I'll actually get from my bank?",
+          a: "No — these are mid-market reference rates, the midpoint between the buy and sell prices on currency markets. Banks, card networks and money-transfer apps charge a spread on top, so the rate you actually receive is typically 0.5–3% worse than the mid-market rate shown here.",
+        },
+        {
+          q: "How often are rates updated?",
+          a: "Providers refresh rates roughly hourly during weekdays (the ECB publishes once per business day). Toollyz caches each base currency for 30 minutes in your browser's localStorage so re-conversions are instant; the Refresh button bypasses the cache to fetch fresh data.",
+        },
+        {
+          q: "Does it work offline?",
+          a: "If you've used the converter recently, the last fetched rates are cached for 30 minutes and will keep working briefly while offline. New base currencies or rate refreshes need an internet connection.",
+        },
+        {
+          q: "How many currencies are supported?",
+          a: "When open.er-api.com responds, the converter exposes 160+ currencies including all G20 majors and most emerging-market currencies. With only the Frankfurter fallback you get 30 major currencies (USD, EUR, GBP, JPY, CHF, AUD, CAD, CNY, INR, BRL and 20 others).",
+        },
+        {
+          q: "What currencies are in the multi-currency snapshot?",
+          a: "USD, EUR, GBP, JPY, INR, AUD, CAD, CHF, CNY and BRL — the ten most-traded world currencies. The snapshot excludes whichever one you currently have selected as the From currency.",
+        },
+        {
+          q: "Is my data sent to Toollyz?",
+          a: "No. Toollyz has no server — your browser talks directly to open.er-api.com and api.frankfurter.app. Your conversion history and last-used currencies are stored only in your device's localStorage.",
+        },
+        {
+          q: "Does it support historical rates?",
+          a: "Not currently — Toollyz Currency Converter focuses on live mid-market rates. The underlying providers do support historical lookups, so historical support may land in a future update.",
+        },
+        {
+          q: "Why does the result animate between values?",
+          a: "The hero uses an eased count-up animation so changing the amount or currency feels responsive. The animation respects your OS reduced-motion preference and pauses when the tab is hidden.",
+        },
+        {
+          q: "Is this Currency Converter free?",
+          a: "Completely free with no signup and no limits. Convert as many amounts as you like — privately in your browser.",
+        },
+      ],
+    },
   },
 
   // ─── SEO ─────────────────────────────────────────────────────────────────

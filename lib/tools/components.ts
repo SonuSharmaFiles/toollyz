@@ -191,6 +191,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "robots-txt-generator": dynamic(
     () => import("@/components/tools/robots-txt-generator"),
   ),
+  "currency-converter": dynamic(
+    () => import("@/components/tools/currency-converter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
