@@ -10432,13 +10432,100 @@ export const tools: Tool[] = [
   {
     slug: "random-password-phrase-generator",
     name: "Random Password Phrase Generator",
-    tagline: "Generate memorable passphrases like correct-horse-battery-staple.",
+    tagline: "XKCD-style passphrases with live entropy from a 1646-word list.",
     description:
-      "Generate human-friendly passphrases that are easier to remember and harder to crack than random character strings.",
+      "Generate memorable XKCD-/Diceware-style passphrases from a curated 1646-word English list with crypto.getRandomValues, rejection-sampled to avoid modulo bias. Configure word count, separator, case style, optional digits and symbols; live entropy meter and 12-phrase history. Free and private.",
     categoryId: "generators",
     icon: KeyRound,
-    status: "coming-soon",
-    keywords: ["passphrase", "password", "diceware", "xkcd"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "passphrase generator",
+      "random password phrase",
+      "xkcd password",
+      "diceware",
+      "memorable password",
+      "secure passphrase",
+      "passphrase entropy",
+      "correct horse battery staple",
+      "password generator",
+      "browser passphrase",
+      "free passphrase generator",
+      "passphrase with digits",
+      "passphrase with symbols",
+      "crypto random passphrase",
+    ],
+    seo: {
+      title: "Random Password Phrase Generator — XKCD / Diceware-Style (Free)",
+      description:
+        "Generate strong, memorable passphrases with Toollyz Random Password Phrase Generator. 1646-word English list, crypto.getRandomValues, live entropy meter, configurable word count, separator, case style, digits and symbols — entirely in your browser.",
+      what:
+        "A passphrase generator builds passwords from a string of random words instead of random characters. They&apos;re easier to type, easier to remember and — when long enough — stronger than dense gibberish like &quot;Tr0ub4dor&3&quot;. Toollyz Random Password Phrase Generator implements the classic XKCD 936 / Diceware pattern using a curated 1646-word English list (4–8 letter words, no apostrophes or hyphens) with ~10.7 bits of entropy per word. Word selection uses `crypto.getRandomValues` — the same CSPRNG browsers use for HTTPS key generation — with rejection sampling so every word is exactly equally likely (no modulo bias). Configure the word count (2–12), separator (hyphen / period / underscore / space / none), case style (lowercase / Title Case / UPPER CASE / camelCase), optional 0–4 appended digits and an optional appended symbol from a copy-safe set (`!@#$%&*?+-=`). The hero shows the current phrase with a colour-coded entropy band (Weak &lt; 40 bits / Fair &lt; 60 / Strong &lt; 80 / Excellent ≥ 80). Re-roll generates a fresh phrase; the last 12 are kept in localStorage. Toollyz has no backend.",
+      how: [
+        "Pick how many words you want (5+ recommended for ~53 bits).",
+        "Choose separator, case style and optional digits / symbol.",
+        "Watch the live entropy band — Strong (≥ 60 bits) is good for most accounts, Excellent (≥ 80 bits) for long-term secrets.",
+        "Click Re-roll for a fresh phrase or Copy to grab it.",
+      ],
+      benefits: [
+        "1646-word curated English list (~10.7 bits per word).",
+        "crypto.getRandomValues with rejection sampling — no modulo bias, no Math.random fallback.",
+        "Live entropy meter with four colour-coded bands (Weak / Fair / Strong / Excellent).",
+        "Word count slider 2–12, with 5 as a balanced default (≈ 53 bits).",
+        "Five separators (hyphen / period / underscore / space / none) and four case styles (lowercase / Title / UPPER / camelCase).",
+        "Optional 0–4 appended digits and a copy-paste-safe symbol for sites that demand them.",
+        "12-phrase history kept in localStorage with one-tap copy.",
+        "100% private — phrases generated locally, nothing uploaded.",
+      ],
+      relatedSlugs: [
+        "password-generator",
+        "disposable-password-generator",
+        "hash-generator",
+        "uuid-generator",
+      ],
+      faqs: [
+        {
+          q: "How is this different from the regular Password Generator?",
+          a: "The regular Password Generator builds dense character strings (like &quot;K7q!fX2#&quot;). This Passphrase Generator builds word strings (like &quot;Horse-Battery-Saddle-Pebble-Window&quot;). Both can be strong; passphrases are easier to type and remember, dense passwords are shorter on screen.",
+        },
+        {
+          q: "What does &quot;entropy&quot; mean here?",
+          a: "Entropy measures unpredictability in bits. Each bit doubles the number of guesses an attacker would need to brute-force the secret. 60 bits is solid for most accounts; 80+ is excellent. Each word from a 1646-word list adds ~10.7 bits — five words is ~53 bits, six words is ~64 bits.",
+        },
+        {
+          q: "How random is it really?",
+          a: "Maximally — it uses `crypto.getRandomValues`, the browser&apos;s cryptographically secure PRNG. The same primitive HTTPS uses. Word selection then uses rejection sampling so no word is more likely than another (a naive `% wordlist.length` would bias the first few words).",
+        },
+        {
+          q: "Why these specific words?",
+          a: "All 1646 words are 4–8 lowercase letters with no apostrophes, hyphens or unusual characters — easy to type, easy to remember, easy to dictate. Common English roots that work across English-speaking regions.",
+        },
+        {
+          q: "Should I use digits or symbols?",
+          a: "Only if the site requires them. A long enough word phrase is already strong; adding digits and a symbol just makes the phrase harder to type without much real security gain. The toggles exist because many sites still enforce arbitrary character rules.",
+        },
+        {
+          q: "Is &quot;correct horse battery staple&quot; actually safe?",
+          a: "Per the XKCD 936 math, four common words give ~44 bits of entropy — fine for casual sites but a bit weak by 2026 standards. Five words at this list&apos;s entropy is ~53 bits, six is ~64. Pick at least five for anything important.",
+        },
+        {
+          q: "Can I customise the wordlist?",
+          a: "Not in this release — the curated list is fixed for reproducibility and security. Building your own wordlist is risky: short or unfamiliar words can drop entropy. A future version may support imports.",
+        },
+        {
+          q: "Is the history shared?",
+          a: "No. The last 12 phrases save to localStorage on this device only. Toollyz has no backend; nothing is uploaded.",
+        },
+        {
+          q: "Should I memorise these or use a password manager?",
+          a: "Use a password manager for every account. Use a single memorised passphrase for the manager itself (and any small set of high-stakes accounts that aren&apos;t in the manager). Toollyz Passphrase Generator is great for that small set.",
+        },
+        {
+          q: "Is this Passphrase Generator free?",
+          a: "Completely free with no signup and no limits. Generate as many phrases as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "email-signature-generator",

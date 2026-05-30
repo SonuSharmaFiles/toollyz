@@ -320,6 +320,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "zodiac-sign-finder": dynamic(
     () => import("@/components/tools/zodiac-sign-finder"),
   ),
+  "random-password-phrase-generator": dynamic(
+    () => import("@/components/tools/random-password-phrase-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
