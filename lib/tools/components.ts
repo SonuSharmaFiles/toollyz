@@ -290,6 +290,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "world-clock": dynamic(
     () => import("@/components/tools/world-clock"),
   ),
+  "emi-calculator": dynamic(
+    () => import("@/components/tools/emi-calculator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

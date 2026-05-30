@@ -9446,13 +9446,100 @@ export const tools: Tool[] = [
   {
     slug: "emi-calculator",
     name: "EMI Calculator",
-    tagline: "Calculate monthly EMI for any loan amount.",
+    tagline: "Standard EMI plus a full amortisation schedule and CSV export.",
     description:
-      "Estimate your monthly EMI by entering loan amount, interest rate and tenure. See full amortization schedule.",
+      "Calculate your monthly loan EMI from principal, annual interest rate and tenure. See the principal-versus-interest split, a 100% amortisation schedule and download the schedule as CSV. 23 currencies; free and private.",
     categoryId: "calculators",
     icon: Wallet,
-    status: "coming-soon",
-    keywords: ["emi", "loan emi", "monthly payment"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "emi calculator",
+      "monthly emi",
+      "loan emi calculator",
+      "home loan emi",
+      "car loan emi",
+      "personal loan emi",
+      "amortization schedule",
+      "loan amortization calculator",
+      "interest principal split",
+      "browser emi calculator",
+      "free emi calculator",
+      "emi formula calculator",
+      "emi csv export",
+      "emi inr",
+    ],
+    seo: {
+      title: "EMI Calculator — Monthly Loan EMI + Full Amortisation (Free)",
+      description:
+        "Calculate your monthly loan EMI with Toollyz EMI Calculator. Live principal/interest split, full amortisation schedule, CSV export and 23 currencies — entirely in your browser.",
+      what:
+        "An EMI (Equated Monthly Instalment) calculator works out the fixed monthly payment that pays off a loan in a chosen number of months at a chosen annual interest rate. Toollyz EMI Calculator implements the standard formula P × r × (1+r)ⁿ / ((1+r)ⁿ − 1) — where P is the principal, r is the monthly interest rate and n is the total number of months — entirely in your browser. The hero surfaces the monthly EMI, total interest, total payable and tenure in months alongside a principal-vs-interest split bar. Inputs include sliders + numeric inputs for principal, annual interest rate (0–20%) and tenure (1–30 years), plus a 23-currency selector that drives `Intl.NumberFormat`. The amortisation panel shows opening balance, EMI, principal portion, interest portion and closing balance for every month — by default the first 12 rows; expand to see all. Download the full schedule as CSV with one click. Toollyz has no backend; your draft saves to localStorage.",
+      how: [
+        "Pick your principal, annual interest rate and tenure with the sliders or numeric inputs.",
+        "Watch the EMI, total interest and total payable update live in the hero.",
+        "Expand the amortisation panel to see every month&apos;s breakdown.",
+        "Click Export amortisation (CSV) for a spreadsheet-ready download.",
+      ],
+      benefits: [
+        "Standard EMI formula: P × r × (1+r)ⁿ / ((1+r)ⁿ − 1).",
+        "Live principal-vs-interest split bar with percentage labels.",
+        "Full amortisation schedule with month, opening balance, EMI, principal, interest and closing balance.",
+        "CSV export so you can analyse the schedule in any spreadsheet.",
+        "23 currencies (USD, EUR, GBP, INR, JPY, CNY, AUD, CAD, CHF, SGD, HKD, NZD, KRW, MXN, BRL, ZAR, AED, SAR, TRY, SEK, NOK, DKK, PLN) via `Intl.NumberFormat`.",
+        "Combined slider + numeric input so you can dial in big values quickly or pick exact amounts.",
+        "Copy a one-line summary for sharing in chats or email.",
+        "100% private — Toollyz has no backend, inputs save to localStorage.",
+      ],
+      relatedSlugs: [
+        "loan-calculator",
+        "gst-vat-calculator",
+        "tip-calculator",
+        "currency-converter",
+      ],
+      faqs: [
+        {
+          q: "What is EMI?",
+          a: "EMI stands for Equated Monthly Instalment — the fixed amount you pay each month to repay a loan. Each instalment consists of two parts: an interest charge (proportional to the remaining balance) and a principal repayment. The interest portion shrinks over time as the balance drops; the principal portion grows.",
+        },
+        {
+          q: "What's the EMI formula?",
+          a: "EMI = P × r × (1+r)ⁿ / ((1+r)ⁿ − 1), where P is the principal (loan amount), r is the monthly interest rate (annual rate ÷ 12 ÷ 100) and n is the total number of monthly instalments. This is the standard formula every bank uses for amortising loans.",
+        },
+        {
+          q: "Does it work for floating-rate loans?",
+          a: "It computes the EMI as if the rate is fixed for the full tenure. Real floating-rate loans have an EMI that changes when the reference rate (repo / SOFR / SONIA) moves — you can recompute after each reset using the new outstanding principal and remaining tenure.",
+        },
+        {
+          q: "What about processing fees, GST and insurance?",
+          a: "Toollyz EMI Calculator only models the principal-and-interest cost. Banks usually add a one-time processing fee (~1–2%), GST on the interest portion (jurisdiction-dependent) and optional credit life insurance — none of those are included. Add them separately for the true total cost of borrowing.",
+        },
+        {
+          q: "What's the maximum tenure?",
+          a: "The slider goes up to 30 years; the numeric input allows up to 40. Most home loans cap out at 30 years; education and personal loans are usually shorter.",
+        },
+        {
+          q: "Can I see the amortisation schedule?",
+          a: "Yes — the panel below the inputs shows opening balance, EMI, principal, interest and closing balance for every month. By default it shows the first 12 months; click Show all to expand, or Export amortisation (CSV) for a spreadsheet-ready file.",
+        },
+        {
+          q: "Why does the principal portion grow over time?",
+          a: "Each EMI is a fixed total, but the interest part is proportional to the remaining balance. As the balance falls (you&apos;ve paid off some principal), the interest charge falls too — leaving more of each subsequent EMI to pay down principal. The pattern is the heart of amortisation.",
+        },
+        {
+          q: "How accurate are the rounded values?",
+          a: "Calculations run in IEEE 754 double precision — accurate to ~15 significant digits, which is well beyond what any bank rounds to. Each cell is displayed to two decimal places (or zero for zero-decimal currencies like JPY); the underlying numbers are unrounded.",
+        },
+        {
+          q: "Are my numbers saved across devices?",
+          a: "No — they&apos;re saved in localStorage on this device only. Toollyz has no backend; nothing is uploaded.",
+        },
+        {
+          q: "Is this EMI Calculator free?",
+          a: "Completely free with no signup and no limits. Compute as many EMIs as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "loan-calculator",
