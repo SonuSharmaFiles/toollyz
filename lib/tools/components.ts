@@ -338,6 +338,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "vcard-generator": dynamic(
     () => import("@/components/tools/vcard-generator"),
   ),
+  "digital-business-card": dynamic(
+    () => import("@/components/tools/digital-business-card"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

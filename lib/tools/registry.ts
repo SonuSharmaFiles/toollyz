@@ -11020,13 +11020,100 @@ export const tools: Tool[] = [
   {
     slug: "digital-business-card",
     name: "Digital Business Card Creator",
-    tagline: "Build a shareable digital business card.",
+    tagline: "Standalone HTML card with embedded .vcf — host anywhere.",
     description:
-      "Create a beautiful digital business card with your photo, contact details and social links. Share via link or QR.",
+      "Build a beautiful, mobile-friendly digital business card and export a single standalone HTML file (with the .vcf encoded inline). Host on GitHub Pages / Netlify / your own CDN, then point a QR code at the hosted URL. Free and private — Toollyz has no backend.",
     categoryId: "generators",
     icon: Contact,
-    status: "coming-soon",
-    keywords: ["business card", "digital card", "networking"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "digital business card",
+      "online business card",
+      "shareable business card",
+      "qr business card",
+      "html business card",
+      "v-card business card",
+      "business card with photo",
+      "business card with social links",
+      "free digital business card",
+      "browser business card",
+      "host business card",
+      "static business card",
+      "modern business card",
+      "networking business card",
+    ],
+    seo: {
+      title: "Digital Business Card Creator — Standalone HTML + QR (Free)",
+      description:
+        "Build a digital business card with Toollyz. Live preview, brand colour, photo + social links, exports a standalone card.html with embedded .vcf and a QR pointing at the hosted URL — entirely in your browser.",
+      what:
+        "A digital business card is a shareable web page that holds your photo, role, contact details and social links — like a paper card but tappable and instantly saveable to a phone&apos;s contacts. Toollyz Digital Business Card Creator builds a **standalone HTML file** (no external CSS, no external JS, no hosting dependencies) you can save and host anywhere — GitHub Pages, Netlify, a CDN bucket, even email it directly. The exported page includes a **Save-to-contacts** button backed by an inline data:URL `.vcf` (vCard 3.0), so visitors get a one-tap import on iOS and Android without any external service. The four-tab form covers Identity (name, title, company, photo, short bio), Contact (email, phone, website), Social (LinkedIn, X/Twitter, GitHub, Instagram, YouTube — only those you fill in render) and Style (brand colour and page background). Live preview is rendered in a real sandboxed iframe so what you see is what your visitors see. Two QR helpers: one for the standalone .vcf (no hosting needed; embeds the contact directly) and one for whatever URL you&apos;ll host the HTML page at. Toollyz has no backend; everything saves to localStorage on your device only.",
+      how: [
+        "Fill the Identity, Contact, Social and Style tabs — the live iframe updates instantly.",
+        "Click Download card.html — that&apos;s a complete page ready to upload.",
+        "Host it anywhere (GitHub Pages, Netlify, S3, your CMS).",
+        "Enter the hosted URL in the QR generator below and download the QR PNG.",
+      ],
+      benefits: [
+        "Standalone HTML output — no external CSS, no external JS, no hosting dependencies.",
+        "Embedded vCard 3.0 as a data:URL so the Save-to-contacts button works without any extra service.",
+        "Live preview rendered in a sandboxed iframe so you see exactly what visitors will see.",
+        "Five social platforms (LinkedIn, X/Twitter, GitHub, Instagram, YouTube) with inline SVG icons coloured by the brand colour.",
+        "Brand colour and page background colour pickers.",
+        "Square initials fallback when no photo URL is provided.",
+        "QR generator for the hosted page URL with downloadable PNG.",
+        "100% private — Toollyz has no backend, form data saves to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "vcard-generator",
+        "email-signature-generator",
+        "qr-code-generator",
+        "url-shortener",
+      ],
+      faqs: [
+        {
+          q: "Why does Toollyz make me host the HTML page myself?",
+          a: "Because Toollyz is a static site with no backend — there&apos;s no server to host a unique URL for your card. The honest path is to give you a complete standalone HTML file and let you host it on the platform of your choice (GitHub Pages, Netlify, Vercel, your own CDN).",
+        },
+        {
+          q: "What's the easiest way to host card.html?",
+          a: "Drag the file into Netlify Drop (netlify.com/drop) for instant free hosting; or push it to a GitHub repo with Pages enabled; or upload to any S3-style bucket configured for static hosting. Any of these gives you a public URL you can put on a QR code.",
+        },
+        {
+          q: "Does the page work offline once it&apos;s downloaded?",
+          a: "Almost — text and structure are fully self-contained, but the photo URL is an `<img src>` that needs network when it&apos;s viewed. The Save-to-contacts button works offline because the .vcf is embedded as a data URL.",
+        },
+        {
+          q: "Can I include multiple phones or emails?",
+          a: "The visual card surfaces one of each for clean layout. The embedded .vcf supports multiples — use the VCard Generator tool to build a richer .vcf, then drop its source into this tool&apos;s identity field.",
+        },
+        {
+          q: "How does the Save-to-contacts button work?",
+          a: "It points at a `data:text/vcard;base64,…` URL containing the full vCard 3.0 payload. iOS Safari and Android Chrome both recognise the MIME type and offer Add to Contacts. Outlook web and Gmail may save it as a downloaded file instead.",
+        },
+        {
+          q: "What if my company already has a Linktree or Bento page?",
+          a: "Use that and skip this tool — Linktree is more flexible for adding posts and links. Toollyz Digital Business Card is intentionally simpler: one page per person, one .vcf, no analytics, no third-party tracking, no signup.",
+        },
+        {
+          q: "Why isn't the QR code coloured?",
+          a: "Black-on-white QR codes have the highest contrast and scan rate. Coloured QR codes work but can confuse some scanners. We render in black-on-white for reliability.",
+        },
+        {
+          q: "Will the card look good in dark mode?",
+          a: "The default styling is intentionally dark-mode-friendly (dark page background + light text). Visitors on a system in light mode see the same page — design choice prioritises consistency over OS preference.",
+        },
+        {
+          q: "Are my details uploaded?",
+          a: "No. Toollyz has no backend. Your form data saves to localStorage on this device only. The card.html you download is a static file — whatever happens to it after that is up to you.",
+        },
+        {
+          q: "Is this Business Card Creator free?",
+          a: "Completely free with no signup and no limits. Build as many cards as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "avatar-generator",
