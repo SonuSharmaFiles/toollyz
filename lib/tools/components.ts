@@ -332,6 +332,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "favicon-from-text": dynamic(
     () => import("@/components/tools/favicon-from-text"),
   ),
+  "mac-address-generator": dynamic(
+    () => import("@/components/tools/mac-address-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

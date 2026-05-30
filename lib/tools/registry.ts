@@ -10824,13 +10824,100 @@ export const tools: Tool[] = [
   {
     slug: "mac-address-generator",
     name: "MAC Address Generator",
-    tagline: "Generate random or vendor-specific MAC addresses.",
+    tagline: "Random or 12 vendor-OUI MACs with proper U/L + I/G bits.",
     description:
-      "Create random MAC addresses, with optional OUI prefixes for specific hardware vendors — useful for network testing.",
+      "Generate up to 500 MAC addresses with crypto.getRandomValues. Random mode sets the locally administered bit and clears the multicast bit. Choose from 12 vendor OUI presets (Apple, Cisco, Intel, Dell, HP, Lenovo, Samsung, Microsoft, VMware, Google, Raspberry Pi, Amazon). Four formats (colon / dash / Cisco-dot / plain) and case toggle. Free and private.",
     categoryId: "generators",
     icon: RadioTower,
-    status: "coming-soon",
-    keywords: ["mac address", "network", "oui", "ethernet"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "mac address generator",
+      "random mac address",
+      "vendor mac generator",
+      "oui mac generator",
+      "apple mac address",
+      "cisco mac address",
+      "intel mac address",
+      "ethernet mac generator",
+      "bulk mac generator",
+      "network testing mac",
+      "browser mac generator",
+      "free mac generator",
+      "mac address format",
+      "cisco dot mac format",
+    ],
+    seo: {
+      title: "MAC Address Generator — Random or 12 Vendor OUIs (Free, Bulk)",
+      description:
+        "Generate up to 500 valid MAC addresses with Toollyz MAC Address Generator. crypto.getRandomValues, proper locally-administered + unicast bits, 12 vendor OUI presets, four formats — entirely in your browser.",
+      what:
+        "A MAC (Media Access Control) address generator produces 6-byte hardware identifiers — the unique number every Ethernet, Wi-Fi or Bluetooth interface carries. Toollyz MAC Address Generator runs entirely in your browser using `crypto.getRandomValues`. **Random mode** sets the high two bits of the first byte correctly: the I/G bit (bit 0) is cleared so the address is unicast, and the U/L bit (bit 1) is set so the address is locally administered — meaning it&apos;s guaranteed not to clash with any IEEE-assigned OUI in the wild. **Vendor OUI mode** keeps a real-world 3-byte OUI prefix (Apple, Cisco, Intel, Dell, HP, Lenovo, Samsung, Microsoft, VMware, Google, Raspberry Pi or Amazon — 12 options) and randomises only the last 3 bytes (16.7M combinations per OUI). Output supports four formats: colon (`AA:BB:CC:DD:EE:FF`), dash (`AA-BB-CC-DD-EE-FF`), Cisco dot (`AABB.CCDD.EEFF` — the format Cisco IOS shows in `show interface`) and plain (`AABBCCDDEEFF`). Toggle between UPPER and lowercase. Generate 1–500 at a time, copy individuals or the whole batch, or download as a .txt file. Toollyz has no backend.",
+      how: [
+        "Pick a count (1–500) and a vendor OUI (or Random for locally administered unicast).",
+        "Choose format (colon / dash / Cisco dot / plain) and casing (UPPER / lower).",
+        "Click Generate (or it generates on load) and review the list.",
+        "Copy individual addresses, Copy all or Download .txt for bulk use.",
+      ],
+      benefits: [
+        "crypto.getRandomValues for true random bytes — no Math.random.",
+        "Random mode sets U/L = 1 (locally administered) and clears I/G = 0 (unicast) — the only correct way to randomise.",
+        "12 vendor OUI presets (Apple / Cisco / Intel / Dell / HP / Lenovo / Samsung / Microsoft / VMware / Google / Raspberry Pi / Amazon).",
+        "Four output formats including Cisco-style `XXXX.XXXX.XXXX` for IOS configs.",
+        "Case toggle (UPPER / lower) since vendors and tools differ.",
+        "Bulk generation up to 500 addresses with Copy all and Download .txt actions.",
+        "Per-row copy button for quickly grabbing a single address.",
+        "100% private — Toollyz has no backend, addresses generated locally.",
+      ],
+      relatedSlugs: [
+        "uuid-generator",
+        "ip-address-finder",
+        "hash-generator",
+        "dns-lookup",
+      ],
+      faqs: [
+        {
+          q: "What is a MAC address?",
+          a: "A 6-byte (48-bit) hardware identifier assigned to a network interface (Ethernet, Wi-Fi, Bluetooth). The first 3 bytes are usually an OUI (Organisationally Unique Identifier) assigned to the device manufacturer; the last 3 bytes are device-specific.",
+        },
+        {
+          q: "What's the locally administered bit?",
+          a: "Bit 1 of the first byte (the U/L bit). When 0, the address is universally administered (assigned via the IEEE OUI registry). When 1, the address is locally administered — it&apos;s guaranteed not to clash with any IEEE assignment and is the safe choice for randomly-generated MACs.",
+        },
+        {
+          q: "What's the unicast bit?",
+          a: "Bit 0 of the first byte (the I/G bit). When 0, the address is unicast (one recipient). When 1, the address is multicast or broadcast. Toollyz Random mode always clears this bit so every generated address is a valid unicast.",
+        },
+        {
+          q: "Are the OUI presets real?",
+          a: "Yes — each preset uses a real-world OUI registered to that vendor. Vendors typically own many OUIs each; these are just one representative each. For exhaustive lookups, use the IEEE&apos;s OUI registry directly.",
+        },
+        {
+          q: "Why Cisco dot format?",
+          a: "Cisco IOS displays MAC addresses as `XXXX.XXXX.XXXX` (three groups of four hex digits separated by dots) in `show interface`, `show mac address-table` and configuration output. The format is useful when you&apos;re building or parsing IOS configs.",
+        },
+        {
+          q: "Can I use these on a real network?",
+          a: "For testing, lab setups and as fixture data — absolutely. For impersonating other devices in production — that&apos;s typically against the terms of service of any network you don&apos;t own. Use locally administered random MACs for privacy on your own devices.",
+        },
+        {
+          q: "Are vendor-OUI MACs valid?",
+          a: "The OUI itself is valid (it&apos;s really assigned to that vendor), but the last 3 bytes are random — they&apos;re very unlikely to collide with a real device but theoretically could. For laboratory and testing purposes, treat them as unique.",
+        },
+        {
+          q: "How does randomness compare with privacy MACs my phone uses?",
+          a: "Modern iOS and Android generate per-network locally administered MACs to avoid tracking. They use the same U/L bit trick Toollyz does. The point is the same: a MAC that won&apos;t clash with anyone else&apos;s and won&apos;t reveal your true hardware identity.",
+        },
+        {
+          q: "Are my generated addresses uploaded?",
+          a: "No. Toollyz has no backend — every byte is generated in your browser. Settings save to localStorage on this device only.",
+        },
+        {
+          q: "Is this MAC Address Generator free?",
+          a: "Completely free with no signup and no limits. Generate as many as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "vcard-generator",
