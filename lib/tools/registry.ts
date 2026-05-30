@@ -8270,13 +8270,100 @@ export const tools: Tool[] = [
   {
     slug: "cps-test",
     name: "CPS Test (Clicks Per Second)",
-    tagline: "Measure your clicking speed in clicks per second.",
+    tagline: "Live CPS counter with 1/5/10/30/60 s windows and history.",
     description:
-      "Click as fast as you can in a fixed time window. Track CPS, total clicks and best score.",
+      "Measure your clicks per second over a 1, 5, 10, 30 or 60-second window. Live CPS as you click, best-score-per-duration in the hero and a 30-run history. Free, private, browser-only.",
     categoryId: "calculators",
     icon: MousePointerClick,
-    status: "coming-soon",
-    keywords: ["cps test", "clicks per second", "click speed"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "cps test",
+      "clicks per second test",
+      "click speed test",
+      "cps counter",
+      "fastest click test",
+      "10 second cps test",
+      "5 second cps test",
+      "free cps test",
+      "browser cps test",
+      "online cps test",
+      "click speed counter",
+      "click test",
+      "minecraft cps test",
+      "cps measurement",
+    ],
+    seo: {
+      title: "CPS Test — Free Clicks Per Second Test (1 / 5 / 10 / 30 / 60 s)",
+      description:
+        "Measure your clicks per second with Toollyz CPS Test. Five duration windows, live CPS as you click, best score per duration surfaced in the hero and a 30-run history — entirely in your browser.",
+      what:
+        "A CPS test measures how many times you can click a target in a fixed time window. Toollyz CPS Test runs entirely in your browser using a `requestAnimationFrame` countdown that starts the moment you click the big target button. Pick a window (1, 5, 10, 30 or 60 seconds), click as fast as you can and watch the live count, live CPS (events ÷ seconds elapsed) and time remaining update in real time. When the timer hits zero the final CPS is recorded in a 30-run history alongside its duration and timestamp; the best CPS for the current duration surfaces in the hero so you always know what to beat. Each click on the target button dispatches a single `click` event — autoclickers obviously work but that's between you and the rules of whatever game or benchmark you're warming up for. Toollyz has no backend, so every click stays on your device.",
+      how: [
+        "Pick a duration (1 / 5 / 10 / 30 / 60 seconds).",
+        "Click the big target — the timer begins on the first click.",
+        "Keep clicking; the live count, CPS and time remaining update each frame.",
+        "When time runs out, the result lands in the History list with the per-duration best surfaced in the hero.",
+      ],
+      benefits: [
+        "Five duration windows (1 / 5 / 10 / 30 / 60 s) covering burst tests and endurance.",
+        "rAF-based countdown for accurate elapsed time with no setInterval jitter.",
+        "Live CPS calculated as events ÷ seconds elapsed and updated every frame.",
+        "Best-score-per-duration surfaced in the hero so you always know your target.",
+        "30-run history with timestamp, count and CPS.",
+        "Animated number counters that respect reduced-motion preferences.",
+        "Big touch-friendly target works equally well on desktop and mobile.",
+        "100% private — Toollyz has no backend, clicks stay in your browser.",
+      ],
+      relatedSlugs: [
+        "drag-click-test",
+        "spacebar-counter",
+        "reaction-time-test",
+        "mouse-click-tester",
+      ],
+      faqs: [
+        {
+          q: "What's a good CPS?",
+          a: "For a 10-second test on a regular mouse, 6–8 CPS is solid; 10+ is excellent; 15+ usually means jitter clicking or butterfly clicking (rapid alternating fingers). Top performers reach 20+ CPS for short bursts. Don't compare to autoclicker scores; those don't reflect human speed.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes — the big target button is touch-friendly and each tap counts as a click. Touchscreen CPS is naturally lower than mouse CPS; the test doesn't differentiate.",
+        },
+        {
+          q: "Why does the timer start with the first click?",
+          a: "Auto-start removes the \"3, 2, 1, go\" overhead so your reaction time doesn't taint the result. The first click begins the timer; subsequent clicks contribute to the count.",
+        },
+        {
+          q: "Is autoclicking detected?",
+          a: "No. The tool counts every browser `click` event regardless of how it was generated. If you're testing for a game or benchmark with rules, this is between you and the judge.",
+        },
+        {
+          q: "What's the difference between this and the Drag Click Test?",
+          a: "CPS counts discrete clicks (mousedown + mouseup pairs). The Drag Click Test counts mousedown events that occur while the cursor is moving — it's a different mouse technique aimed at gaming benchmarks (notably Minecraft PvP). Toollyz Drag Click Test is honest about the fact it approximates the technique through Pointer Events.",
+        },
+        {
+          q: "Why are the numbers showing decimals?",
+          a: "CPS is a rate (events per second), so it's reported with two decimal places (e.g. 7.42 CPS = 74 clicks in 10 seconds). The total click count itself is always a whole number.",
+        },
+        {
+          q: "Is the test fair across browsers?",
+          a: "Mostly. Event dispatch is fast enough that browser differences are within a few percent for human-scale tests. Some browsers throttle background tabs aggressively, so keep this tab focused for the most accurate result.",
+        },
+        {
+          q: "Will rapid clicks ever be missed?",
+          a: "Browsers can throttle very fast click sequences (often above ~25 events/second), so extreme autoclicker rates may report lower than the underlying hardware. For human speeds (≤20 CPS) every click is registered.",
+        },
+        {
+          q: "Is my history shared?",
+          a: "No. History is saved only in your browser's localStorage. Toollyz has no backend — nothing is uploaded, nothing is shared across devices.",
+        },
+        {
+          q: "Is this CPS Test free?",
+          a: "Completely free with no signup and no limits. Run as many tests as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "drag-click-test",
