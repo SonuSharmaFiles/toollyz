@@ -4669,13 +4669,100 @@ export const tools: Tool[] = [
   {
     slug: "battery-status",
     name: "Battery Status Checker",
-    tagline: "View your laptop's battery level and charging state.",
+    tagline: "See your battery level, charging state and remaining time.",
     description:
-      "Check your laptop or tablet's battery level, charging status and remaining time — straight from your browser.",
+      "Check your laptop or tablet's battery level, charging status and time to full or empty live in your browser — using the Battery Status API. Free and private.",
     categoryId: "developer",
     icon: Battery,
-    status: "coming-soon",
-    keywords: ["battery", "charge", "laptop battery"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "battery status",
+      "battery checker",
+      "battery percentage",
+      "laptop battery",
+      "battery level",
+      "charging status",
+      "battery time remaining",
+      "battery api",
+      "check battery online",
+      "browser battery",
+      "battery health",
+      "battery monitor",
+      "how much battery left",
+      "battery info",
+    ],
+    seo: {
+      title: "Battery Status Checker — Level, Charging & Time Remaining",
+      description:
+        "Check your laptop, tablet or phone battery level, charging status and time to full or empty — live in your browser with Toollyz Battery Status Checker. Free and 100% private.",
+      what:
+        "A Battery Status Checker reads your device's current battery state via the browser. Toollyz Battery Status Checker uses the Battery Status API to show your battery level as a live percentage, whether you're currently charging, and the estimated time until full (when charging) or until empty (when discharging). The hero updates live as your charging state changes — plug or unplug your charger and watch the numbers move. The Battery Status API is implemented in Chromium-based browsers (Chrome, Edge, Opera, Brave, Arc); Firefox and Safari have removed it for privacy, and the tool shows a clear notice in those browsers. Nothing is uploaded — everything is read directly in your tab.",
+      how: [
+        "Open the tool — your battery level and charging state load instantly.",
+        "Watch the percentage and time-remaining update live as your charging state changes.",
+        "Plug or unplug the charger to see “time to full” and “time remaining” switch.",
+        "Use it as a quick reference while working, or to verify your battery is charging.",
+      ],
+      benefits: [
+        "Live battery percentage with a big, easy-to-read display.",
+        "Charging status and an animated battery indicator.",
+        "Time to full (when charging) and time remaining (when on battery).",
+        "Updates live as you plug or unplug your charger.",
+        "Clear “not supported” state for Firefox and Safari users.",
+        "Works on laptops, tablets and many phones that expose battery info.",
+        "Read in your browser — nothing uploaded, no server involved.",
+        "Free and instant — no signup required.",
+      ],
+      relatedSlugs: [
+        "device-info",
+        "browser-info",
+        "internet-speed-test",
+        "ip-address-finder",
+      ],
+      faqs: [
+        {
+          q: "How does this read my battery?",
+          a: "It uses the browser's Battery Status API (navigator.getBattery), which reports the battery level, charging state, time to full and time remaining. Everything is read locally — Toollyz has no server.",
+        },
+        {
+          q: "Why is it showing “not available” in my browser?",
+          a: "Firefox and Safari no longer expose the Battery Status API to protect against fingerprinting. The tool works in Chromium-based browsers — Chrome, Edge, Opera, Brave, Arc — on devices with a battery.",
+        },
+        {
+          q: "Why does “time remaining” say “Calculating…”?",
+          a: "The browser sometimes reports Infinity for time-to-full or time-remaining when it can't estimate yet (right after plugging or unplugging). Wait a moment and the number will appear.",
+        },
+        {
+          q: "Does it update live when I plug or unplug the charger?",
+          a: "Yes. The tool listens for the levelchange, chargingchange, chargingtimechange and dischargingtimechange events, so the display updates immediately as your charging state and level change.",
+        },
+        {
+          q: "Does it work on a desktop without a battery?",
+          a: "It will report 100% and “charging” (the desktop never runs on battery). The tool is most useful on laptops, tablets and phones that actually have a battery.",
+        },
+        {
+          q: "Does this affect my battery life?",
+          a: "No. It only reads the battery state your browser already exposes; it doesn't keep anything running in the background and there's no extra polling beyond the browser's own events.",
+        },
+        {
+          q: "Is the data sent anywhere?",
+          a: "No. Toollyz has no server — the battery info is read in your browser and never uploaded. Close the tab and nothing remains.",
+        },
+        {
+          q: "Why doesn't it show battery health or cycle count?",
+          a: "Browsers only expose the current level, charging state and time estimates. They deliberately don't expose battery health, cycle count or hardware model — those require OS-level access.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "On mobile browsers that implement the Battery Status API (typically Chrome and other Chromium-based browsers on Android), yes. iOS Safari does not expose it.",
+        },
+        {
+          q: "Is this battery checker free?",
+          a: "Completely free with no signup. The level, charging state and time estimates are all available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "screen-resolution",
