@@ -11314,13 +11314,100 @@ export const tools: Tool[] = [
   {
     slug: "temporary-email-generator",
     name: "Temporary Email Generator",
-    tagline: "Get a disposable inbox to avoid spam.",
+    tagline: "Disposable inbox via mail.tm — read mail in your browser, no signup.",
     description:
-      "Generate a temporary email address that auto-expires. Read incoming messages in your browser without signing up.",
+      "Spin up a fresh disposable email address backed by the public mail.tm API. Read incoming mail in your browser, copy the address, generate new addresses on demand. Toollyz has no backend; the browser talks to mail.tm directly. Free, no signup.",
     categoryId: "generators",
     icon: MailX,
-    status: "coming-soon",
-    keywords: ["temporary email", "disposable email", "throwaway", "spam"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "temporary email generator",
+      "disposable email generator",
+      "throwaway email",
+      "temp mail",
+      "mail.tm",
+      "anti-spam email",
+      "burner email",
+      "one-time email",
+      "free temp email",
+      "browser temp email",
+      "no-signup email",
+      "verify email signup",
+      "trial signup email",
+      "disposable inbox",
+    ],
+    seo: {
+      title: "Temporary Email Generator — Disposable Inbox via mail.tm (Free)",
+      description:
+        "Generate a disposable email address with Toollyz Temporary Email Generator. Read incoming mail in your browser via the public mail.tm API — no signup, no Toollyz server in the path.",
+      what:
+        "A temporary email generator lets you grab a throwaway address for verifying a signup, accepting a trial download or any one-time email confirmation without giving away your real inbox. Toollyz Temporary Email Generator runs in your browser and talks directly to the **public mail.tm API** — a free, no-account, CORS-enabled disposable-mail service. On load Toollyz asks mail.tm for an active domain, generates a random username (`word-1234@domain`) and a strong random password (20 chars from a confusable-free alphabet), creates an account via `POST /accounts`, requests an auth token via `POST /token` and stores both **only in this tab&apos;s memory** — no localStorage persistence so a reload spins up a fresh inbox. The inbox auto-refreshes every 12 seconds while the tab is visible. Tapping a message opens its plain-text content plus a sandboxed HTML preview that blocks scripts and network requests. Toollyz has no backend; everything flows between your browser and mail.tm directly. The honest disclosure panel is prominent: the address is provided by a third party, anyone with the address can read incoming mail until mail.tm deletes the account, and this isn&apos;t suitable for password resets or financial confirmations.",
+      how: [
+        "On load Toollyz auto-creates a fresh disposable address via mail.tm — copy it from the hero.",
+        "Send (or paste into a signup form) — the inbox auto-refreshes every 12 seconds.",
+        "Click a message to view its plain-text content and a sandboxed HTML preview.",
+        "Click Generate new to spin up a brand-new address; click Copy address to grab the current one.",
+      ],
+      benefits: [
+        "Auto-creates a fresh disposable address on page load — no signup, no Toollyz account.",
+        "Random username from a curated word list + random password from a 60-char confusable-free alphabet.",
+        "Browser polls mail.tm every 12 seconds while the tab is visible — fresh enough without rate-limiting.",
+        "Plain-text view + sandboxed HTML preview (`sandbox=&quot;&quot;` blocks scripts and network).",
+        "Generate new address spins up a completely separate inbox in one click.",
+        "Honest disclosure: third-party service (mail.tm), no persistence, public-by-design.",
+        "Token stored only in tab memory — reloading is the equivalent of throwing the address away.",
+        "100% private from Toollyz&apos;s perspective — your browser talks to mail.tm directly, no Toollyz server in the path.",
+      ],
+      relatedSlugs: [
+        "disposable-password-generator",
+        "secure-notes",
+        "hash-generator",
+        "url-shortener",
+      ],
+      faqs: [
+        {
+          q: "Whose service backs this tool?",
+          a: "mail.tm — a free, no-account, CORS-enabled disposable mail service (docs.mail.tm). Toollyz has no backend; your browser talks to mail.tm directly. We&apos;re explicit about the third-party dependency in the honest-disclosure panel.",
+        },
+        {
+          q: "How long does the address last?",
+          a: "mail.tm controls account lifetime — they delete inactive accounts on their own schedule (typically days to weeks). Treat the address as ephemeral; don&apos;t rely on it being there next week.",
+        },
+        {
+          q: "Is the inbox private?",
+          a: "Anyone with the address and an account at mail.tm can sign in and read incoming mail until the account is deleted. The address itself is essentially public. Don&apos;t use the inbox for anything sensitive (password resets to your main accounts, financial confirmations, recovery codes).",
+        },
+        {
+          q: "Why is the address regenerated on every reload?",
+          a: "The auth token is stored only in this tab&apos;s memory — there&apos;s no localStorage persistence. A reload throws the token away and starts fresh. This is intentional: it means a closed tab is truly closed.",
+        },
+        {
+          q: "How is the HTML body rendered safely?",
+          a: "Inside an iframe with `sandbox=&quot;&quot;` (an empty sandbox attribute), which blocks scripts, forms, top-level navigation and same-origin access. Phishing attempts can&apos;t auto-redirect, exfiltrate or run JS.",
+        },
+        {
+          q: "What does &quot;auto-refresh every 12 seconds&quot; mean?",
+          a: "When the tab is visible, Toollyz calls `GET /messages` on mail.tm every 12 seconds. When the tab is hidden, polling pauses — that respects mail.tm&apos;s rate limit and saves bandwidth.",
+        },
+        {
+          q: "Can I send mail from the disposable address?",
+          a: "Not from Toollyz — we only support receiving. mail.tm Premium offers send-as functionality but requires an account on their service; that&apos;s outside the scope of this tool.",
+        },
+        {
+          q: "What happens if mail.tm is down?",
+          a: "Toollyz can&apos;t create accounts or fetch messages — there is no fallback in this release. The honest answer is &quot;wait for mail.tm to come back&quot;.",
+        },
+        {
+          q: "Are my emails uploaded to Toollyz?",
+          a: "No. Toollyz has no server in the path — your browser talks to mail.tm directly via their public CORS endpoints. Messages live on mail.tm, not on Toollyz.",
+        },
+        {
+          q: "Is this Temporary Email Generator free?",
+          a: "Completely free with no signup. mail.tm offers a free tier that this tool uses; they also sell a paid tier with longer retention if you need that.",
+        },
+      ],
+    },
   },
   {
     slug: "ai-prompt-enhancer",
