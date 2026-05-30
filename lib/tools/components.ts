@@ -188,6 +188,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "meta-tag-generator": dynamic(
     () => import("@/components/tools/meta-tag-generator"),
   ),
+  "robots-txt-generator": dynamic(
+    () => import("@/components/tools/robots-txt-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

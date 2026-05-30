@@ -6141,13 +6141,100 @@ export const tools: Tool[] = [
   {
     slug: "robots-txt-generator",
     name: "Robots.txt Generator",
-    tagline: "Build a robots.txt with allow, disallow and sitemap rules.",
+    tagline: "Visual rule blocks, AI-bot presets and a live path tester.",
     description:
-      "Visually build a robots.txt with allow/disallow rules, sitemap links and user-agent targeting.",
+      "Build a standards-conformant robots.txt with multiple User-agent blocks, sitemap URLs, AI-crawler blocking presets and a live path tester. Free, private, generated entirely in your browser.",
     categoryId: "seo",
     icon: Bot,
-    status: "coming-soon",
-    keywords: ["robots.txt", "seo", "crawler", "sitemap"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "robots.txt generator",
+      "robots.txt builder",
+      "robots.txt online",
+      "crawler rules",
+      "user-agent rules",
+      "sitemap meta",
+      "block gptbot",
+      "block claude",
+      "block ai crawlers",
+      "disallow seo",
+      "wordpress robots",
+      "next.js robots",
+      "robots.txt tester",
+      "robots tester",
+    ],
+    seo: {
+      title: "Robots.txt Generator — Visual Rules, AI-Bot Presets, Live Tester",
+      description:
+        "Generate a complete robots.txt with Toollyz Robots.txt Generator. Visual rule blocks, presets for WordPress, Next.js and blocking AI crawlers (GPTBot, ClaudeBot, Google-Extended), sitemap support and a live path tester — entirely in your browser.",
+      what:
+        "A robots.txt Generator is a tool that builds a /robots.txt file from a structured editor instead of hand-edited text. Toollyz Robots.txt Generator models your file as a list of rule blocks — each with one or more User-agent lines, Allow/Disallow paths and an optional Crawl-delay — plus a flat list of Sitemap URLs at the bottom. It ships with one-click presets (Allow everything, Disallow everything, WordPress, Next.js App Router, Shopify, generic e-commerce, and a Block all AI crawlers preset that adds GPTBot, ChatGPT-User, OAI-SearchBot, anthropic-ai, ClaudeBot, Google-Extended, PerplexityBot, CCBot, Bytespider and more) and an integrated path tester that uses Google's longest-match rule to tell you exactly which Allow or Disallow line decides a given URL for a given agent. The output is rendered in real time, validated for common mistakes (paths that don't start with /, sitemap URLs that aren't absolute) and ready to copy or download as robots.txt — generated entirely in your browser.",
+      how: [
+        "Pick a preset (or start from scratch) and edit User-agent, Allow and Disallow lines per block.",
+        "Add sitemap URLs at the bottom — one absolute URL per line.",
+        "Use the path tester to verify a real URL against a real bot (Googlebot, Bingbot, GPTBot, …).",
+        "Copy the generated robots.txt or download it and upload to the root of your domain.",
+      ],
+      benefits: [
+        "Visual rule-block editor — no manual `User-agent:` / `Disallow:` formatting.",
+        "One-click presets for WordPress, Next.js, Shopify, e-commerce, allow-all and disallow-all.",
+        "Block AI crawlers preset covers 19 known LLM/training agents in a single click.",
+        "Live path tester using the official longest-match rule honored by Google and Bing.",
+        "Sitemap section with absolute-URL validation.",
+        "Real-time validation for paths, agents, crawl-delay range and empty blocks.",
+        "One-click Copy or Download as robots.txt — ready to deploy.",
+        "100% private — generated in your browser, draft saved to localStorage.",
+      ],
+      relatedSlugs: [
+        "meta-tag-generator",
+        "url-shortener",
+        "slugify",
+        "dns-lookup",
+      ],
+      faqs: [
+        {
+          q: "What is a robots.txt file?",
+          a: "robots.txt is a plain-text file at the root of your domain (e.g. https://example.com/robots.txt) that tells well-behaved web crawlers which URLs they may or may not request. It uses a simple User-agent / Disallow / Allow grammar standardized by Google and Bing.",
+        },
+        {
+          q: "Where do I upload the file?",
+          a: "Place it at the root of your domain so a request to /robots.txt returns it. On most hosts that means uploading it to /public, /static or the document root; on Next.js you can put it at app/robots.ts or public/robots.txt. It must be reachable over HTTPS without redirects.",
+        },
+        {
+          q: "Does robots.txt actually stop a page from being indexed?",
+          a: "Not directly. robots.txt only stops crawling — it tells bots not to fetch the URL. If other sites link to a disallowed URL, Google may still index it as a link with no snippet. To completely de-index, use a noindex meta tag (or X-Robots-Tag header) on an allowed page.",
+        },
+        {
+          q: "How do I block AI crawlers like GPTBot or ClaudeBot?",
+          a: "Use the “Block AI crawlers” preset — it adds a block listing GPTBot, ChatGPT-User, OAI-SearchBot, anthropic-ai, ClaudeBot, Google-Extended, PerplexityBot, CCBot, FacebookBot, Bytespider, Amazonbot and others, all with Disallow: /. You can edit the list to add or remove agents as new ones appear.",
+        },
+        {
+          q: "Why is there an Allow rule? Doesn't Disallow do the work?",
+          a: "Allow lets you carve exceptions out of broader Disallow rules. For example, WordPress sites commonly disallow /wp-admin/ but allow /wp-admin/admin-ajax.php, because that endpoint is needed by some plugins on the public site.",
+        },
+        {
+          q: "What does the path tester do?",
+          a: "It applies your rules to a given URL path for a given User-agent using the same longest-match algorithm Google and Bing use. It tells you whether the URL is Allowed or Disallowed and which exact rule decided it — handy for debugging tricky cases before you ship.",
+        },
+        {
+          q: "What about Crawl-delay?",
+          a: "Crawl-delay is honored by Bing, Yahoo Slurp and Yandex; Google ignores it. To rate-limit Googlebot, use Google Search Console's crawl-rate setting instead.",
+        },
+        {
+          q: "Should I list my sitemap in robots.txt?",
+          a: "Yes — both Google and Bing recommend listing one or more Sitemap: URLs in robots.txt as a backup discovery mechanism in addition to submitting sitemaps in their respective Search Consoles.",
+        },
+        {
+          q: "Is my data sent anywhere?",
+          a: "No. The generator runs entirely in your browser. Your draft is saved in localStorage so a refresh doesn't lose work, but nothing is uploaded to Toollyz or anywhere else.",
+        },
+        {
+          q: "Is this Robots.txt Generator free?",
+          a: "Completely free with no signup and no limits. Build, test and download as many robots.txt files as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "url-shortener",
