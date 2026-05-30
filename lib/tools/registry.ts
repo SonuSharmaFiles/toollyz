@@ -3846,13 +3846,100 @@ export const tools: Tool[] = [
   {
     slug: "hash-generator",
     name: "Hash Generator",
-    tagline: "Generate MD5, SHA-1, SHA-256 and SHA-512 hashes.",
+    tagline: "MD5 + SHA-1/256/384/512 of text or file, with HMAC support.",
     description:
-      "Hash any string with industry-standard algorithms. Useful for checksums, fingerprints and integrity checks.",
+      "Hash any text or file with MD5, SHA-1, SHA-256, SHA-384 and SHA-512 in one click. Optional HMAC secret switches every algorithm to HMAC-<alg>. Compare against an expected hash for instant integrity checks. Free, private, browser-only.",
     categoryId: "developer",
     icon: Hash,
-    status: "coming-soon",
-    keywords: ["hash", "md5", "sha256", "sha512", "checksum"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "hash generator",
+      "md5 hash generator",
+      "sha256 hash",
+      "sha512 hash",
+      "sha-1 hash",
+      "file hash online",
+      "hmac generator",
+      "checksum calculator",
+      "browser hash generator",
+      "free hash generator",
+      "private hash generator",
+      "verify hash",
+      "compare hash",
+      "subtle crypto hash",
+    ],
+    seo: {
+      title: "Hash Generator — MD5, SHA-1, SHA-256/384/512 + HMAC (Free)",
+      description:
+        "Compute MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes for any text or file in your browser with Toollyz Hash Generator. Optional HMAC mode, hash comparison and copy on every value — Toollyz has no backend.",
+      what:
+        "A hash generator computes a fixed-length \"fingerprint\" of any input using a published one-way function. Toollyz Hash Generator runs five algorithms — MD5, SHA-1, SHA-256, SHA-384 and SHA-512 — entirely in your browser. SHA-1 / 256 / 384 / 512 use the browser's built-in Web Crypto SubtleCrypto (`crypto.subtle.digest`), which is fast, FIPS-180 compliant and implemented in native code. MD5 uses the open-source spark-md5 library because Web Crypto deliberately omits MD5 (it's broken for cryptographic use). An optional HMAC secret transparently switches every algorithm to HMAC-&lt;alg&gt; (HMAC-MD5 implemented locally per RFC 2104; HMAC-SHA-* via `crypto.subtle.sign`). A Compare to field lets you paste an expected hash and get instant case-insensitive \"OK\" / \"≠\" badges next to matching rows. Switch to the File tab to drop in a file — MD5 streams in 2 MB chunks via spark-md5 (so very large files don't blow the JS heap), SHA-* reads the whole file into memory and digests it in one shot. Output casing is toggleable between lowercase (default) and UPPER CASE. Toollyz has no server in the path — your text, key and files never leave your browser.",
+      how: [
+        "Switch between the Text and File tabs depending on what you want to hash.",
+        "(Optional) Add an HMAC secret to switch every algorithm to its HMAC variant, or paste an expected hash into Compare to.",
+        "Watch the five hashes update live as you type (Text) or click Hash all / Compute (File).",
+        "Click the copy icon on any row to grab the hex digest.",
+      ],
+      benefits: [
+        "Five algorithms in one place: MD5, SHA-1, SHA-256, SHA-384, SHA-512.",
+        "HMAC mode that transparently switches all five algorithms to HMAC-&lt;alg&gt;.",
+        "File hashing with a 2 MB-chunked MD5 streamer and SubtleCrypto for SHA-*.",
+        "Compare-to field with case-insensitive OK / ≠ badges for instant integrity checks.",
+        "UPPER CASE toggle for environments that expect uppercase hex.",
+        "Live recompute (debounced 120 ms) as you type — no Compute button for text.",
+        "Honest warnings — MD5 and SHA-1 are flagged as cryptographically broken in the UI.",
+        "100% private — Toollyz has no backend, text and files stay on your device.",
+      ],
+      relatedSlugs: [
+        "jwt-decoder",
+        "base64-encoder-decoder",
+        "secure-notes",
+        "uuid-generator",
+      ],
+      faqs: [
+        {
+          q: "Which algorithm should I use?",
+          a: "For security (passwords, tokens, signatures) use SHA-256 or stronger — and for password storage specifically, use a slow hash like Argon2 or bcrypt rather than a raw SHA. For file integrity (\"did this download arrive intact?\") SHA-256 is the modern standard. MD5 and SHA-1 are still fine for non-security checksums (deduplication, cache keys) but should never be used for security.",
+        },
+        {
+          q: "Why is MD5 considered broken?",
+          a: "Cryptographers have known how to find MD5 collisions since 2004; in 2008 collisions were used to forge a CA-signed TLS certificate. Any attacker can produce two different inputs with the same MD5. MD5 also has practical pre-image weaknesses. It's fine for accidental-corruption checksums but not for security.",
+        },
+        {
+          q: "What about SHA-1?",
+          a: "SHA-1 collisions became practical in 2017 (Google's SHAttered attack). Browsers and Git have been migrating away. Don't use SHA-1 for new security-sensitive work; SHA-256 is a direct replacement.",
+        },
+        {
+          q: "How does HMAC mode work?",
+          a: "HMAC (RFC 2104) is a keyed hash: HMAC(key, msg) = H((key⊕opad) ∥ H((key⊕ipad) ∥ msg)). Toollyz calls `crypto.subtle.sign({ name: 'HMAC', hash: alg })` for SHA-* and implements the construction directly for MD5. The result is a hex digest in the same length as the underlying algorithm.",
+        },
+        {
+          q: "How big a file can it hash?",
+          a: "MD5 streams in 2 MB chunks via spark-md5, so multi-gigabyte files are fine in modern browsers. SHA-* reads the whole file into memory first; that works comfortably up to a few hundred megabytes on desktop and somewhat less on mobile, depending on RAM. For large SHA-256 jobs, prefer a dedicated tool.",
+        },
+        {
+          q: "What does Compare to do?",
+          a: "Paste the expected hash for the current input (from a download page, manifest file or a teammate). Each matching algorithm gets a green OK badge; rows with a different hash get a ≠. Useful for verifying downloads without leaving the page.",
+        },
+        {
+          q: "Is the hashing constant-time?",
+          a: "For SHA-* via Web Crypto, the timing characteristics are whatever the browser's native crypto library provides — typically constant-time. MD5 via spark-md5 is a normal JS implementation; for non-security uses that's fine. Don't use this tool for side-channel-sensitive comparisons.",
+        },
+        {
+          q: "Is my text or file uploaded?",
+          a: "No. Toollyz has no backend — every byte is hashed locally in your browser. Your draft (text and casing preference) saves to localStorage; the HMAC secret and any file never persist.",
+        },
+        {
+          q: "What encoding does the text hash use?",
+          a: "UTF-8 — the standard for web text. The exact bytes are produced by `TextEncoder.encode(text)`. Two strings that look the same but encode to different bytes (e.g. NFC vs NFD Unicode normalisation) will hash differently.",
+        },
+        {
+          q: "Is this Hash Generator free?",
+          a: "Completely free with no signup and no limits. Compute as many hashes as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "regex-tester",

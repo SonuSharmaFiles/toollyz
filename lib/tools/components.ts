@@ -248,6 +248,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "resume-pdf-generator": dynamic(
     () => import("@/components/tools/resume-pdf-generator"),
   ),
+  "hash-generator": dynamic(
+    () => import("@/components/tools/hash-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
