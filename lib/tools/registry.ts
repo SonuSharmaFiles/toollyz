@@ -333,13 +333,100 @@ export const tools: Tool[] = [
   {
     slug: "barcode-generator",
     name: "Barcode Generator",
-    tagline: "Generate barcodes in EAN, UPC, Code 128 and more.",
+    tagline: "EAN, UPC, Code 128, Code 39, ITF and 9 more — SVG and 2× PNG.",
     description:
-      "Create scannable barcodes in every popular standard. Customize size, format and download as PNG or SVG.",
+      "Generate scannable 1D barcodes in 14 popular formats — EAN-13, EAN-8, UPC-A, UPC-E, Code 128, Code 39, ITF-14, ITF, MSI, Pharmacode, Codabar — with live preview, custom colors and sizing, plus SVG and 2× PNG export. Free, private, browser-only.",
     categoryId: "generators",
     icon: Barcode,
-    status: "coming-soon",
-    keywords: ["barcode", "ean", "upc", "code 128", "isbn"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "barcode generator",
+      "barcode generator online",
+      "ean 13 generator",
+      "ean 8 generator",
+      "upc a generator",
+      "upc e generator",
+      "code 128 generator",
+      "code 39 generator",
+      "itf 14 generator",
+      "pharmacode generator",
+      "msi plessey generator",
+      "codabar generator",
+      "barcode svg",
+      "barcode png download",
+    ],
+    seo: {
+      title: "Barcode Generator — EAN, UPC, Code 128, ITF (Free, SVG + PNG)",
+      description:
+        "Make scannable 1D barcodes in 14 popular formats with Toollyz Barcode Generator — EAN-13, EAN-8, UPC-A/E, Code 128, Code 39, ITF-14, Pharmacode, Codabar and more. Live preview, custom colours and SVG / 2× PNG export, all in your browser.",
+      what:
+        "A barcode generator turns a text or numeric value into a scannable 1D barcode using a published encoding (Code 128, EAN-13, Code 39 and so on). Toollyz Barcode Generator runs the encoding inside your browser using the open-source JsBarcode library, which supports 14 production-grade formats: Code 128 (auto / A / B / C variants), Code 39, EAN-13, EAN-8, UPC-A, UPC-E, ITF-14 and ITF (Interleaved 2 of 5), MSI Plessey, Pharmacode and Codabar. Live preview updates as you tweak the value, format, foreground / background colour, bar width, height, margin, font size, custom caption and flat-bottom toggle. Export the result as a crisp SVG (vector, scales to any size) or a 2× PNG (rasterised at double resolution for clean prints). A built-in per-format hint (\"EAN-13 needs 12 or 13 digits\", \"ITF needs an even number of digits\") helps you avoid invalid input before JsBarcode rejects it. Toollyz has no backend — settings save to localStorage so refreshes don't lose your work.",
+      how: [
+        "Pick a format from the grouped Retail / Logistics / Industrial / Pharma / Generic list — the sample value pre-fills.",
+        "Type or paste the value you want to encode. Format-specific hints tell you the expected length and character set.",
+        "Adjust colours, bar width, height, margin and text size — the preview updates live.",
+        "Click SVG (copy/download) for vector output or PNG 2× for a high-resolution raster.",
+      ],
+      benefits: [
+        "14 supported 1D barcode formats — every common retail, logistics, industrial and pharma standard.",
+        "Live SVG preview with custom foreground, background, bar width, height, margin and font size.",
+        "Optional custom caption that overrides the default \"show encoded value\" text.",
+        "Format-specific lint that catches obvious input mistakes before JsBarcode rejects them.",
+        "SVG export (copy markup or download .svg) — vector, infinitely scalable.",
+        "PNG 2× export (rasterised at double resolution) for crisp printable barcodes.",
+        "Flat-bottom toggle to drop the EAN/UPC guard bars when you don't need them.",
+        "100% private — Toollyz has no backend, settings saved to localStorage.",
+      ],
+      relatedSlugs: [
+        "qr-code-generator",
+        "wifi-qr-code-generator",
+        "qr-code-scanner",
+        "uuid-generator",
+      ],
+      faqs: [
+        {
+          q: "Which library does this use?",
+          a: "The open-source JsBarcode library (production-grade encoders for 14 popular 1D barcode formats). The barcode is drawn into an inline SVG, which you can copy as markup or download as a file. The PNG export rasterises the SVG via a canvas at 2× for crisp prints.",
+        },
+        {
+          q: "Which format should I pick?",
+          a: "Use EAN-13 or UPC-A for retail products with a GS1 prefix. Code 128 is the safest general-purpose pick for serial numbers, tracking codes and labels. Code 39 is common in automotive and defence. ITF-14 is the case-level shipping barcode. Pharmacode is for pharma packaging. The format picker is grouped by industry to make this easier.",
+        },
+        {
+          q: "Why won't my value scan?",
+          a: "Most scan failures are either an invalid value for the chosen format (wrong length, wrong characters), too-narrow bars relative to the scanner's optics, or insufficient quiet-zone margin. Toollyz lints common mistakes before rendering; bump the bar width or margin if scans still fail.",
+        },
+        {
+          q: "Can I make a QR code or Data Matrix?",
+          a: "Not from this tool — QR, Data Matrix, PDF417 and Aztec are 2D codes and need different encoders. Use Toollyz QR Code Generator for QR codes. Data Matrix and Aztec may land in future updates.",
+        },
+        {
+          q: "What does the flat-bottom toggle do?",
+          a: "EAN and UPC barcodes traditionally have longer guard bars on each side and at the centre. Flat bottom removes those guards, giving a uniform-height barcode — useful when the barcode is a small detail in a larger design and you don't need the visual marker.",
+        },
+        {
+          q: "Can I add a custom caption?",
+          a: "Yes — use the Custom caption field to override the auto-generated text below the bars. Leave it blank to show the encoded value (or hide the caption entirely with the Show text checkbox).",
+        },
+        {
+          q: "Are EAN and UPC check digits added automatically?",
+          a: "Yes. EAN-13 (12 digits in), EAN-8 (7 digits in), UPC-A (11 digits in) and ITF-14 (13 digits in) all have a check digit appended by JsBarcode. If you paste the full code including a check digit, it's validated rather than recomputed.",
+        },
+        {
+          q: "Does the PNG export include the caption?",
+          a: "Yes — the PNG rasterises the entire SVG including the caption, foreground, background and margin. The SVG export is also self-contained.",
+        },
+        {
+          q: "Are my barcodes uploaded?",
+          a: "No. Toollyz has no backend — JsBarcode runs in your browser and the SVG / PNG is created locally. Settings save to localStorage; the barcode itself is never persisted anywhere.",
+        },
+        {
+          q: "Is this Barcode Generator free?",
+          a: "Completely free with no signup and no limits. Generate as many barcodes as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "uuid-generator",

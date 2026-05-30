@@ -236,6 +236,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "unix-timestamp-converter": dynamic(
     () => import("@/components/tools/unix-timestamp-converter"),
   ),
+  "barcode-generator": dynamic(
+    () => import("@/components/tools/barcode-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
