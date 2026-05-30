@@ -341,9 +341,6 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "digital-business-card": dynamic(
     () => import("@/components/tools/digital-business-card"),
   ),
-  "avatar-generator": dynamic(
-    () => import("@/components/tools/avatar-generator"),
-  ),
   "qr-menu-generator": dynamic(
     () => import("@/components/tools/qr-menu-generator"),
   ),
