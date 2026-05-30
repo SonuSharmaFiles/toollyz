@@ -6424,13 +6424,100 @@ export const tools: Tool[] = [
   {
     slug: "utm-link-generator",
     name: "UTM Link Generator",
-    tagline: "Build UTM-tagged URLs for campaign tracking.",
+    tagline: "Build UTM-tagged URLs with 16 platform presets and a checklist.",
     description:
-      "Generate UTM-tagged URLs to track campaign source, medium and content in Google Analytics and other tools.",
+      "Generate UTM-tagged URLs for Google Analytics, GA4 and any analytics tool. 16 platform presets (Google Ads, Meta, LinkedIn, X, TikTok, email, podcast, QR), live validation, history and instant shorten-link handoff. Free, private, no server.",
     categoryId: "seo",
     icon: BarChart3,
-    status: "coming-soon",
-    keywords: ["utm", "campaign tracking", "google analytics", "marketing"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "utm link generator",
+      "utm builder",
+      "campaign url builder",
+      "google analytics utm",
+      "ga4 utm",
+      "utm parameters",
+      "marketing campaign tracking",
+      "utm source",
+      "utm medium",
+      "utm campaign",
+      "utm content",
+      "utm term",
+      "utm id",
+      "campaign tracking",
+    ],
+    seo: {
+      title: "UTM Link Generator — Free Campaign URL Builder with Presets",
+      description:
+        "Build UTM-tagged URLs for Google Analytics and GA4 with Toollyz UTM Link Generator. 16 platform presets, live validation, save-to-history and direct shorten-link handoff — entirely in your browser.",
+      what:
+        "A UTM Link Generator builds the campaign-tracked URLs marketers paste into ads, emails, QR codes, podcast show notes and partner links. The five (now six in GA4) `utm_*` query parameters — `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content` and `utm_id` — tell analytics tools where a click came from so the resulting session is grouped under the right campaign. Toollyz UTM Link Generator merges those parameters onto your base URL with full WHATWG `URL` percent-encoding (so existing query strings and hash fragments are preserved), supports 16 one-click platform presets that pre-fill the canonical source + medium (google/cpc, facebook/cpc, instagram/cpc, linkedin/cpc, x/cpc, tiktok/cpc, youtube/cpc, reddit/cpc, newsletter/email, lifecycle/email, blog/referral, pr/referral, qr/offline, podcast/audio, partner/affiliate and Google organic), runs a live validation checklist (missing required params, unsafe characters, suspiciously long campaign names) and offers two normalization toggles for consistency: lowercase parameter values and convert spaces to underscores. Save useful URLs to a 30-entry localStorage history, copy with one click, or hand the result off to the Toollyz URL Shortener for a clean, shareable short link. Nothing is uploaded; the form is saved to localStorage so a refresh never wipes your draft.",
+      how: [
+        "Paste your destination URL into Base URL — the form auto-adds https:// if you forget.",
+        "Click a platform preset to pre-fill utm_source + utm_medium, then fill in the campaign name and any optional params.",
+        "Watch the live URL preview and the validation checklist — green means ready to ship.",
+        "Copy the link, save it to history, or hand it off to the URL Shortener for a tinyurl.com / is.gd short link.",
+      ],
+      benefits: [
+        "16 platform presets cover every major paid and organic channel.",
+        "Full GA4-compatible parameters including `utm_id` for cross-system attribution.",
+        "Strict WHATWG URL building — existing query strings and hash fragments are preserved.",
+        "Optional lowercase + spaces-to-underscores normalization for consistent reporting.",
+        "Live checklist: missing required params, unsafe characters, oversized campaign names.",
+        "Save-to-history: 30 most recent UTM URLs in localStorage, tagged with source / medium / campaign.",
+        "One-click handoff to the Toollyz URL Shortener.",
+        "100% private — built in your browser, draft saved locally, no signup or tracking.",
+      ],
+      relatedSlugs: [
+        "url-shortener",
+        "meta-tag-generator",
+        "qr-code-generator",
+        "slugify",
+      ],
+      faqs: [
+        {
+          q: "What are UTM parameters?",
+          a: "UTM parameters (named after the long-retired Urchin Tracking Module) are five — now six in GA4 — query-string keys you append to a URL: utm_source, utm_medium, utm_campaign, utm_term, utm_content and utm_id. Analytics tools read them on landing to attribute the session to a specific marketing source, channel and campaign.",
+        },
+        {
+          q: "Which UTM parameters are required?",
+          a: "Most analytics tools (including GA4) need at least utm_source and utm_medium to recognize a session as a campaign visit. utm_campaign is strongly recommended for grouping. utm_term, utm_content and utm_id are optional but powerful — use utm_term for paid keywords, utm_content to distinguish ad variants and utm_id (GA4-specific) to tie URLs to a campaign in your ad platform.",
+        },
+        {
+          q: "What does a platform preset do?",
+          a: "It pre-fills utm_source and utm_medium with the canonical values used in the industry — e.g. Google Ads → google/cpc, Facebook Ads → facebook/cpc, email newsletter → newsletter/email. You still write the campaign name, content and term yourself; the preset just stops you from accidentally typing 'Google' vs 'google' across campaigns.",
+        },
+        {
+          q: "Why does the tool lowercase and replace spaces?",
+          a: "Most analytics tools treat 'Summer Launch' and 'summer_launch' as different campaigns, which fragments your reports. The default normalization keeps you consistent. Both toggles are optional — turn them off if you have a different convention.",
+        },
+        {
+          q: "Will it break existing query strings on my URL?",
+          a: "No. The tool uses the browser's WHATWG URL API to merge utm_* params onto your base URL, which preserves any existing query string and hash fragment. Existing keys are kept as-is; only utm_* keys are overwritten (and only if you set them).",
+        },
+        {
+          q: "Does it support GA4's utm_id?",
+          a: "Yes. utm_id is a first-class field — it's the GA4-specific parameter that ties a URL to a campaign object inside Google Analytics for cross-platform attribution. Leave it blank if you don't use GA4.",
+        },
+        {
+          q: "Can I shorten the resulting URL?",
+          a: "Yes — click the Shorten this link button to hand it off to the Toollyz URL Shortener, which talks directly to TinyURL or is.gd from your browser. UTM parameters survive shortening; they live on the destination URL once the redirect happens.",
+        },
+        {
+          q: "Where is my data stored?",
+          a: "Only in your browser, in localStorage. The form (so a refresh doesn't wipe your draft) and up to 30 recent UTM URLs. Toollyz has no server, so nothing is uploaded.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The form, presets, checklist and history list are fully responsive and touch-friendly.",
+        },
+        {
+          q: "Is this UTM Link Generator free?",
+          a: "Completely free with no signup and no limits. Build as many campaign URLs as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "whois-lookup",

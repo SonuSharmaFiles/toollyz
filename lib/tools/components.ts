@@ -197,6 +197,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "url-shortener": dynamic(
     () => import("@/components/tools/url-shortener"),
   ),
+  "utm-link-generator": dynamic(
+    () => import("@/components/tools/utm-link-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
