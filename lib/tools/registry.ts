@@ -9936,13 +9936,100 @@ export const tools: Tool[] = [
   {
     slug: "bmi-calculator",
     name: "BMI Calculator",
-    tagline: "Calculate Body Mass Index in metric or imperial.",
+    tagline: "WHO BMI in metric or imperial, with ideal-weight range and honest caveats.",
     description:
-      "Find your BMI from height and weight. See your category and ideal-weight range — supports kg/cm and lb/in.",
+      "Calculate your Body Mass Index from weight and height in kg/cm or lb/ft+in. See WHO categories on a colour-coded scale, your ideal-weight range, BMI prime and ponderal index. Free, private, with explicit caveats about what BMI doesn&apos;t measure.",
     categoryId: "calculators",
     icon: HeartPulse,
-    status: "coming-soon",
-    keywords: ["bmi", "body mass index", "health"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "bmi calculator",
+      "body mass index calculator",
+      "bmi metric",
+      "bmi imperial",
+      "bmi kg cm",
+      "bmi lb in",
+      "ideal weight calculator",
+      "bmi who classification",
+      "bmi prime",
+      "ponderal index",
+      "healthy weight calculator",
+      "browser bmi calculator",
+      "free bmi calculator",
+      "bmi categories",
+    ],
+    seo: {
+      title: "BMI Calculator — WHO Categories, Ideal Weight, Honest Caveats",
+      description:
+        "Calculate Body Mass Index with Toollyz BMI Calculator. Metric (kg/cm) or imperial (lb/ft+in), WHO categories on a colour scale, ideal-weight range, BMI prime and ponderal index — entirely in your browser, with honest caveats about what BMI isn&apos;t.",
+      what:
+        "Body Mass Index (BMI) is weight ÷ height squared — a quick proxy for whether an adult&apos;s body weight is in the WHO healthy range. Toollyz BMI Calculator implements the standard formula BMI = kg ÷ m² entirely in your browser and supports both metric (kg + cm) and imperial (lb + ft + in) inputs. Imperial values are converted with the exact constants 1 lb = 0.45359237 kg and 1 in = 0.0254 m. The hero shows your BMI in big animated digits and a category chip (Severe / Moderate / Mild thinness, Healthy range, Overweight, Obese class I/II/III) coloured to match the WHO scale, plus a banded progress bar from 12 to 40+ with a marker for your position. Three secondary stats are computed: your ideal-weight range (BMI 18.5–24.9 × height² — expressed in your chosen unit), BMI prime (BMI ÷ 25 — 1.0 is the upper end of healthy) and ponderal index (weight ÷ height³ — less sensitive to height than BMI). The Caveats panel is unusually prominent: BMI is a population statistic, not a diagnostic; it doesn&apos;t measure body fat, muscle mass or fat distribution; athletes often land &quot;overweight&quot; despite low body fat; pregnant people, growing children and adolescents need specialised charts. Toollyz has no backend; inputs save to localStorage on this device only.",
+      how: [
+        "Pick Metric (kg, cm) or Imperial (lb, ft+in) at the top of the form.",
+        "Type your weight and height — the BMI updates live as you type.",
+        "Read your category, ideal-weight range, BMI prime and ponderal index in the cards below.",
+        "Read the &quot;What BMI isn&apos;t&quot; panel before drawing conclusions about health.",
+      ],
+      benefits: [
+        "Metric (kg + cm) and imperial (lb + ft + in) inputs with exact unit conversions.",
+        "WHO categories from Severe thinness to Obese class III on a colour-coded scale.",
+        "Ideal-weight range for your height in your chosen unit.",
+        "BMI prime (BMI ÷ 25 — 1.0 is the upper end of healthy).",
+        "Ponderal index (weight ÷ height³) — a less height-sensitive alternative.",
+        "Live banded progress bar (sky / emerald / amber / rose) with a marker for your value.",
+        "Honest caveats panel about what BMI doesn&apos;t measure.",
+        "100% private — Toollyz has no backend, your weight, height and unit choice save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "calorie-calculator",
+        "water-intake-calculator",
+        "age-difference-calculator",
+        "currency-converter",
+      ],
+      faqs: [
+        {
+          q: "What's the BMI formula?",
+          a: "BMI = weight (kg) ÷ height (m)². Imperial input is converted first — 1 lb is exactly 0.45359237 kg and 1 in is exactly 0.0254 m.",
+        },
+        {
+          q: "What's a &quot;healthy&quot; BMI?",
+          a: "The WHO classifies BMI 18.5–24.9 as the healthy range for adults. Anything lower is some degree of thinness; anything higher is overweight or obese. Toollyz uses the WHO bands exactly.",
+        },
+        {
+          q: "Does BMI work for athletes?",
+          a: "Often not. Muscle is denser than fat, so well-trained athletes routinely land in the &quot;overweight&quot; or even &quot;obese&quot; band despite very low body-fat percentages. Body composition (DEXA scan, skinfold caliper, bioelectric impedance) gives a much better picture.",
+        },
+        {
+          q: "What about children and teenagers?",
+          a: "Adult BMI categories don&apos;t apply. For ages 2–19, paediatricians use BMI-for-age percentiles relative to a sex-specific growth chart. Use a specialised paediatric BMI calculator instead.",
+        },
+        {
+          q: "What's BMI prime?",
+          a: "BMI prime = BMI ÷ 25. A value of 1.00 sits at the upper end of the healthy range; 1.20 means you&apos;re 20% above that boundary. It&apos;s a handy way to express how far above/below healthy you are.",
+        },
+        {
+          q: "What's the ponderal index?",
+          a: "Weight (kg) ÷ height (m)³. It corrects for the fact that BMI tends to slightly under-classify tall people and over-classify short people. Less common in clinical use but useful when comparing very tall or very short individuals.",
+        },
+        {
+          q: "Does it work for pregnant or breastfeeding people?",
+          a: "No — pregnancy and breastfeeding change the math fundamentally. Use a pregnancy weight-tracking tool with your doctor instead.",
+        },
+        {
+          q: "How accurate is the calculation?",
+          a: "The math is double-precision floating-point — accurate to ~15 significant digits, far beyond any health relevance. The displayed BMI rounds to one decimal place.",
+        },
+        {
+          q: "Are my measurements uploaded?",
+          a: "No. Toollyz has no backend — the math runs in your browser. Your weight, height and unit choice save to localStorage on this device only.",
+        },
+        {
+          q: "Is this BMI Calculator free?",
+          a: "Completely free with no signup and no limits. Calculate as many BMIs as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "calorie-calculator",
