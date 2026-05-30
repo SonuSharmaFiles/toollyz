@@ -281,6 +281,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "business-days-calculator": dynamic(
     () => import("@/components/tools/business-days-calculator"),
   ),
+  "leap-year-checker": dynamic(
+    () => import("@/components/tools/leap-year-checker"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

@@ -9152,13 +9152,100 @@ export const tools: Tool[] = [
   {
     slug: "leap-year-checker",
     name: "Leap Year Checker",
-    tagline: "Check if any year is a leap year.",
+    tagline: "Yes/no answer plus the Gregorian rule, ranges and Feb 29 helper.",
     description:
-      "Find out which years are leap years and view a list of past and upcoming leap years.",
+      "Check if any year is a leap year with a big YES/NO answer, the Gregorian rule applied step-by-step, the previous and next 10 leap years, a leap years in a range list and a Feb 29 birthday counter. Free, private, browser-only.",
     categoryId: "calculators",
     icon: Calendar,
-    status: "coming-soon",
-    keywords: ["leap year", "year checker", "calendar"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "leap year checker",
+      "is leap year",
+      "leap year calculator",
+      "gregorian leap year",
+      "leap year rule",
+      "year checker",
+      "february 29",
+      "feb 29 birthday",
+      "leap year list",
+      "next leap year",
+      "previous leap year",
+      "leap years range",
+      "free leap year checker",
+      "browser leap year checker",
+    ],
+    seo: {
+      title: "Leap Year Checker — Gregorian Rule, Range List & Feb 29 Helper",
+      description:
+        "Check any year for leap status with Toollyz Leap Year Checker. Big YES/NO answer, step-by-step Gregorian rule, previous and next 10 leap years, range list and a Feb 29 birthday counter — entirely in your browser.",
+      what:
+        "A leap year has 366 days instead of 365 — February gets a 29th day to keep the calendar synced with Earth&apos;s orbit. The Gregorian rule (since 1582) is: divisible by 4, unless divisible by 100, except when also divisible by 400. Toollyz Leap Year Checker takes a year and shows a big YES/NO answer plus the three-step rule resolved for that year (Is it divisible by 4? By 100? By 400?). It also lists the previous 10 and next 10 leap years (click any to jump to it), the leap years in a custom range and a Feb 29 birthday helper that tells you how many \"real\" Feb 29 birthdays a person has had between two years. Notable century years are flagged in the notes: 1600 and 2000 were leap years (also divisible by 400); 1700, 1800 and 1900 were not. Toollyz has no backend — every check runs in your browser.",
+      how: [
+        "Type a year into the input or click one of the preset chips.",
+        "Read the big YES/NO answer and the three-step rule resolution.",
+        "Use the previous / next 10 chips to jump to surrounding leap years.",
+        "Set a range to list every leap year in it, or use the Feb 29 counter for birthday math.",
+      ],
+      benefits: [
+        "Big YES/NO answer with emerald/rose colour coding for instant clarity.",
+        "Three-step Gregorian rule resolution (divisible by 4, by 100, by 400) with per-step ticks.",
+        "Previous 10 and next 10 leap years rendered as clickable chips.",
+        "Range list with a custom From/To pair, showing every leap year between.",
+        "Feb 29 birthday helper that counts \"real\" birthdays between two years.",
+        "Preset chips for current year ±4, year 2000, 1900 and 1582 (Gregorian start).",
+        "Notes call out historically tricky century years (1600, 1700, 1800, 1900, 2000).",
+        "100% private — Toollyz has no backend, settings save to localStorage.",
+      ],
+      relatedSlugs: [
+        "age-difference-calculator",
+        "business-days-calculator",
+        "calendar-generator",
+        "unix-timestamp-converter",
+      ],
+      faqs: [
+        {
+          q: "What's the leap year rule?",
+          a: "A year is a leap year if it&apos;s divisible by 4, unless it&apos;s divisible by 100 (a century year), except when it&apos;s also divisible by 400. So 2024 is a leap year (÷ 4), 1900 is not (÷ 100, not ÷ 400), 2000 is (both).",
+        },
+        {
+          q: "Why do we have leap years?",
+          a: "Earth&apos;s orbit around the Sun takes about 365.2422 days, not exactly 365. Adding a 29th February every four years (with the century corrections) keeps the calendar within a day of the seasons over thousands of years.",
+        },
+        {
+          q: "What's the difference between Julian and Gregorian leap years?",
+          a: "The Julian rule (45 BC) was simpler: every year divisible by 4 is a leap year. That over-counts by ~3 days every 400 years. The Gregorian reform (1582) added the \"divisible by 100 unless 400\" exception to correct the drift. Toollyz uses the Gregorian rule; for years before 1582 you may want the Julian rule instead.",
+        },
+        {
+          q: "Which century years are leap years?",
+          a: "Only those divisible by 400. So 1600 yes, 1700 no, 1800 no, 1900 no, 2000 yes, 2100 no, 2200 no, 2300 no, 2400 yes.",
+        },
+        {
+          q: "Why is the Feb 29 birthday counter useful?",
+          a: "People born on Feb 29 (\"leaplings\") only have their actual birthday every 4 years (or every 8 across a century skip). The helper counts how many leap years between two dates contain a Feb 29 — a fun way to compute someone&apos;s \"real\" birthday count.",
+        },
+        {
+          q: "Are years before 1582 handled correctly?",
+          a: "Toollyz uses the Gregorian rule even for pre-1582 years (the proleptic Gregorian calendar), which is the standard convention in software but not historically accurate. Real-world historians use the Julian calendar for those dates. The notes section calls this out.",
+        },
+        {
+          q: "What's the maximum supported year?",
+          a: "9999. The Gregorian rule will keep working for any year beyond that, but `Date` and most date pickers don&apos;t support years above 9999 cleanly.",
+        },
+        {
+          q: "How many leap years are in a typical century?",
+          a: "24 — every year divisible by 4 except the century year itself (unless that century is divisible by 400, in which case 25). The 21st century has 25 leap years because 2000 is a multiple of 400.",
+        },
+        {
+          q: "Is my range saved across devices?",
+          a: "No — the current year, range and birthday years are saved only in your browser&apos;s localStorage on this device. Toollyz has no backend.",
+        },
+        {
+          q: "Is this Leap Year Checker free?",
+          a: "Completely free with no signup and no limits. Check as many years as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "sunrise-sunset",
