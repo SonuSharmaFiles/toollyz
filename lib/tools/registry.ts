@@ -9838,13 +9838,100 @@ export const tools: Tool[] = [
   {
     slug: "fuel-cost-calculator",
     name: "Fuel Cost Calculator",
-    tagline: "Estimate the fuel cost of any trip.",
+    tagline: "km/L, L/100km, mpg US/UK — per-trip, weekly, monthly, yearly cost.",
     description:
-      "Plan your trip cost based on distance, mileage and fuel price. Compare vehicles and routes.",
+      "Estimate the fuel cost of any trip from distance, fuel efficiency and price. Supports km/L, L/100km, mpg (US) and mpg (UK), kilometres or miles, litre or US/UK gallon pricing, round-trip toggle and per-week / per-month / per-year totals. Free, private, 23 currencies.",
     categoryId: "calculators",
     icon: Fuel,
-    status: "coming-soon",
-    keywords: ["fuel cost", "trip cost", "mileage"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "fuel cost calculator",
+      "trip fuel calculator",
+      "petrol cost calculator",
+      "gas cost calculator",
+      "mileage calculator",
+      "km per litre calculator",
+      "l per 100km calculator",
+      "mpg calculator",
+      "fuel cost per trip",
+      "monthly fuel cost",
+      "yearly fuel cost",
+      "free fuel calculator",
+      "browser fuel calculator",
+      "round-trip fuel cost",
+    ],
+    seo: {
+      title: "Fuel Cost Calculator — Trip Fuel & Cost in Any Unit (Free)",
+      description:
+        "Estimate fuel cost from distance, efficiency and price with Toollyz Fuel Cost Calculator. Supports km/L, L/100km, mpg (US), mpg (UK), kilometres / miles, litres / US gallons / UK gallons and 23 currencies — entirely in your browser.",
+      what:
+        "A fuel cost calculator works out how much fuel a trip consumes and how much that fuel costs. Toollyz Fuel Cost Calculator handles every common unit combination: distance in kilometres or miles, fuel efficiency in km/L, L/100km, mpg (US) or mpg (UK), and fuel price per litre, per US gallon or per UK gallon. Internally everything is normalised to litres per kilometre using exact conversion constants (1 mi = 1.609344 km, 1 US gallon = 3.785411784 L, 1 UK gallon = 4.54609 L), so a US driver entering 30 mpg and \"per US gallon\" gets the same fuel-use rate as a European entering the equivalent L/100 km figure. The hero shows fuel per trip, cost per trip, weekly cost and monthly cost; the conversions panel below shows your efficiency expressed in all four units at once. A round-trip checkbox doubles the distance; a trips-per-week input drives the periodic totals (monthly = weekly × 52 ÷ 12, yearly = weekly × 52). Currency formatting via `Intl.NumberFormat` across 23 ISO 4217 codes. Toollyz has no backend.",
+      how: [
+        "Type the trip distance and pick km or miles. Tick Round-trip if you&apos;re measuring one-way.",
+        "Type the vehicle&apos;s fuel efficiency and pick the matching unit (km/L, L/100km, mpg US or mpg UK).",
+        "Type the local fuel price and pick the price unit (per litre, per US gallon, per UK gallon).",
+        "(Optional) Type trips per week to see weekly, monthly and yearly totals.",
+      ],
+      benefits: [
+        "Four efficiency units: km/L, L/100km, mpg (US), mpg (UK) with exact conversion constants.",
+        "Two distance units: km, miles.",
+        "Three fuel-price units: per litre, per US gallon, per UK gallon.",
+        "Round-trip checkbox automatically doubles the distance.",
+        "Weekly / monthly / yearly totals driven by a trips-per-week input.",
+        "Live conversions panel showing your efficiency in all four units side-by-side.",
+        "23 currencies via `Intl.NumberFormat`.",
+        "100% private — Toollyz has no backend, the form saves to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "currency-converter",
+        "tip-calculator",
+        "gst-vat-calculator",
+        "emi-calculator",
+      ],
+      faqs: [
+        {
+          q: "Which conversion constants does this use?",
+          a: "1 mile = 1.609344 km (the international mile, defined to exactly that in 1959). 1 US gallon = 3.785411784 L (exact, defined since 1893). 1 UK / Imperial gallon = 4.54609 L. Toollyz uses these constants verbatim and runs the math in IEEE 754 double precision.",
+        },
+        {
+          q: "What's the difference between US and UK mpg?",
+          a: "A US gallon is 3.785 L and a UK (Imperial) gallon is 4.546 L. So 30 mpg (UK) ≈ 25 mpg (US) — the UK figure looks better because the gallon is larger. Toollyz lets you pick either; the conversions panel shows both values for the same efficiency.",
+        },
+        {
+          q: "Should I use km/L or L/100 km?",
+          a: "They&apos;re reciprocals: km/L = 100 ÷ (L/100km). km/L is intuitive (\"how far on a litre\") and is the standard in India and parts of Asia. L/100km is intuitive (\"how much fuel per 100 km\") and is the EU standard. Lower L/100 km = more efficient; higher km/L = more efficient.",
+        },
+        {
+          q: "How is monthly cost calculated?",
+          a: "Monthly = weekly × 52 ÷ 12 (assuming a roughly constant week-by-week trip pattern). Yearly = weekly × 52. Both ignore seasonal variation, holidays and one-off trips.",
+        },
+        {
+          q: "Why is real-world fuel use higher than the manufacturer's figure?",
+          a: "Manufacturer figures (EPA, WLTP, NEDC) are measured on a dynamometer under controlled conditions. Real-world driving adds traffic, weather, payload, aggressive acceleration and air conditioning — typically 10–20% worse than the spec. For accurate planning, use your own car&apos;s observed fuel economy.",
+        },
+        {
+          q: "Does it model electric vehicles?",
+          a: "Not directly. For EVs, swap \"fuel price per litre\" for \"electricity price per kWh\" and \"L/100 km\" for \"kWh/100 km\" mentally. The math is identical: cost = distance × consumption × price. A dedicated EV calculator is on the roadmap.",
+        },
+        {
+          q: "Can I compare two vehicles?",
+          a: "Not in a single side-by-side view in this release — run the numbers for one car, copy the summary, then change the inputs for the second. A multi-scenario comparison view (like the Loan Calculator) is on the roadmap.",
+        },
+        {
+          q: "Does it handle tolls or parking?",
+          a: "No — fuel only. Add tolls and parking to the cost-per-trip manually for total trip cost.",
+        },
+        {
+          q: "Are my numbers saved across devices?",
+          a: "No — they&apos;re stored in localStorage on this device only. Toollyz has no backend; nothing is uploaded.",
+        },
+        {
+          q: "Is this Fuel Cost Calculator free?",
+          a: "Completely free with no signup and no limits. Calculate as many trips as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "bmi-calculator",

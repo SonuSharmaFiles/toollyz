@@ -302,6 +302,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "tip-calculator": dynamic(
     () => import("@/components/tools/tip-calculator"),
   ),
+  "fuel-cost-calculator": dynamic(
+    () => import("@/components/tools/fuel-cost-calculator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
