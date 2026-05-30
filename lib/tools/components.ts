@@ -143,6 +143,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "dns-lookup": dynamic(
     () => import("@/components/tools/dns-lookup"),
   ),
+  "screen-resolution": dynamic(
+    () => import("@/components/tools/screen-resolution"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

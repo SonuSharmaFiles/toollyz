@@ -4854,13 +4854,100 @@ export const tools: Tool[] = [
   {
     slug: "screen-resolution",
     name: "Screen Resolution Checker",
-    tagline: "Detect your screen size, DPR and color depth.",
+    tagline: "Detect screen size, viewport, DPR, color depth and refresh rate.",
     description:
-      "Find your screen resolution, viewport size, pixel density and color depth — useful for design and bug reports.",
+      "Find your screen resolution (CSS and hardware pixels), viewport, device pixel ratio, color depth, refresh rate and orientation — live as you resize. Free and private.",
     categoryId: "developer",
     icon: Monitor,
-    status: "coming-soon",
-    keywords: ["screen resolution", "viewport", "dpr", "pixel ratio"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "screen resolution",
+      "screen resolution checker",
+      "what is my screen resolution",
+      "viewport size",
+      "device pixel ratio",
+      "dpr",
+      "color depth",
+      "refresh rate",
+      "screen size",
+      "monitor resolution",
+      "display info",
+      "screen test",
+      "aspect ratio",
+      "screen orientation",
+    ],
+    seo: {
+      title: "Screen Resolution Checker — Size, DPR, Color Depth & Refresh Rate",
+      description:
+        "Find your screen resolution in CSS and hardware pixels, viewport, device pixel ratio, color depth, refresh rate, aspect ratio and orientation — updated live as you resize. Free and private.",
+      what:
+        "A Screen Resolution Checker tells you the dimensions and capabilities of the display you're looking at. Toollyz Screen Resolution Checker shows both the CSS-pixel resolution (what the browser draws) and the hardware-pixel resolution (CSS × device pixel ratio), the current viewport, the device pixel ratio, color depth, aspect ratio and orientation. It also estimates your monitor's refresh rate live by counting browser animation frames. A visual overlay shows your browser window inside the screen so you can see how much real-estate you're using, and the numbers update as you resize the window or rotate your device. Everything is read in your browser; nothing is uploaded.",
+      how: [
+        "Open the tool — your screen and viewport sizes load instantly.",
+        "See both CSS-pixel and hardware-pixel resolutions, plus DPR, color depth and refresh rate.",
+        "Resize the window or rotate your device — the values update live.",
+        "Copy the summary or download it as JSON for bug reports and design specs.",
+      ],
+      benefits: [
+        "Screen resolution in CSS and hardware pixels with live updates.",
+        "Device pixel ratio (DPR), color depth and pixel depth.",
+        "Live refresh-rate estimate by counting animation frames.",
+        "Aspect ratio computed automatically (16:9, 16:10, 3:2 …).",
+        "Visual overlay showing your browser viewport inside the screen.",
+        "Window chrome (toolbars / address bar) height calculation.",
+        "Updates as you resize the window or rotate the device.",
+        "Copy the summary or download it as JSON for tickets.",
+      ],
+      relatedSlugs: [
+        "device-info",
+        "browser-info",
+        "battery-status",
+        "ip-address-finder",
+      ],
+      faqs: [
+        {
+          q: "What's the difference between CSS pixels and hardware pixels?",
+          a: "CSS pixels are what your browser uses to lay out the page — at DPR 2 a “100 px” square actually covers 200 hardware pixels for crisper rendering. The tool shows both: CSS resolution and the underlying hardware resolution (CSS × DPR).",
+        },
+        {
+          q: "What is device pixel ratio (DPR)?",
+          a: "The ratio between CSS pixels and physical screen pixels. Retina laptops and modern phones typically have a DPR of 2 or 3 so each CSS pixel is rendered at higher density.",
+        },
+        {
+          q: "How is the refresh rate measured?",
+          a: "By counting how many requestAnimationFrame callbacks your browser fires in one second. That number closely tracks your display's refresh rate (60 Hz, 90 Hz, 120 Hz…). Background tabs throttle this, so keep the tab focused.",
+        },
+        {
+          q: "Why does my reported resolution change after I zoom?",
+          a: "Browser zoom changes the device pixel ratio — at 110% zoom, CSS pixels are remapped, so the “viewport” shrinks relative to hardware pixels. The values you see always reflect the current zoom level.",
+        },
+        {
+          q: "What's the “window chrome” line?",
+          a: "It's the height of your browser's toolbars (address bar, tabs, etc.). The tool computes outerHeight − innerHeight so you can see how much vertical space the browser UI takes from your screen.",
+        },
+        {
+          q: "Does it work on multi-monitor setups?",
+          a: "Yes — it reports the screen the window is on. Move the window to a different monitor and click Refresh to pick up the new screen's dimensions and DPR.",
+        },
+        {
+          q: "Why is aspect ratio shown as something like 1280:800?",
+          a: "If width and height share no convenient common factor, the simplest integer ratio is shown. Common monitors reduce to 16:9 or 16:10; some unusual sizes don't.",
+        },
+        {
+          q: "Is my screen data sent to a server?",
+          a: "No. Toollyz has no server — everything is read in your browser and never uploaded. Use the Copy or JSON buttons if you want a snapshot.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. Mobile browsers report screen and viewport sizes; the orientation row updates live when you rotate your device.",
+        },
+        {
+          q: "Is this screen resolution checker free?",
+          a: "Completely free with no signup. Resolution, DPR, color depth, refresh rate and viewport info are available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "keyboard-tester",
