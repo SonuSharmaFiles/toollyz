@@ -203,6 +203,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "whois-lookup": dynamic(
     () => import("@/components/tools/whois-lookup"),
   ),
+  "color-picker": dynamic(
+    () => import("@/components/tools/color-picker"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

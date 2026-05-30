@@ -6622,13 +6622,100 @@ export const tools: Tool[] = [
   {
     slug: "color-picker",
     name: "Color Picker",
-    tagline: "Pick colors and convert between HEX, RGB, HSL and OKLCH.",
+    tagline: "9 color formats, WCAG contrast, harmonies and an eyedropper.",
     description:
-      "An interactive color picker with conversion between major color formats and accessibility contrast checks.",
+      "Interactive color picker with HEX, RGB, RGBA, HSL, HSLA, HSV, HWB, OKLCH and CMYK output, live WCAG contrast checks, tints/shades/complementary harmonies, an EyeDropper API integration and saved palettes — entirely in your browser.",
     categoryId: "image",
     icon: Palette,
-    status: "coming-soon",
-    keywords: ["color", "picker", "hex", "rgb", "hsl", "oklch"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "color picker",
+      "hex color picker",
+      "rgb to hsl",
+      "oklch color picker",
+      "wcag contrast checker",
+      "color converter",
+      "color harmonies",
+      "complementary colors",
+      "tints and shades",
+      "eyedropper",
+      "design color tool",
+      "color palette",
+      "hwb color",
+      "css colors",
+    ],
+    seo: {
+      title: "Color Picker — 9 Formats, WCAG Contrast & Harmonies (Free)",
+      description:
+        "Pick any color and convert it to HEX, RGB, RGBA, HSL, HSLA, HSV, HWB, OKLCH or CMYK. Live WCAG contrast checker, tints / shades / complementary harmonies, EyeDropper, favorites and recent history — entirely in your browser.",
+      what:
+        "A color picker lets you pick or type a color and read it back in every format your design system needs. Toollyz Color Picker outputs nine formats in real time — HEX, RGB, RGBA, HSL, HSLA, HSV, HWB, OKLCH and CMYK — and gives you a native browser color input, draggable HSL and RGB sliders, an alpha slider, a one-click random color, ten preset palette swatches, and the modern Chromium EyeDropper API (where available) to pick any color from anywhere on your screen. A live WCAG contrast section compares your color against a compare color (white, black, Toollyz dark or any custom HEX) and grades the ratio against AA Large / AA Normal / AAA Normal thresholds with foreground-on-background and background-on-foreground preview swatches. A harmonies panel auto-generates three tints, three shades, the complementary, two triadic and two analogous companions — click any chip to make it the new active color. Favorites and 18-item recent history persist in localStorage. Nothing leaves your browser.",
+      how: [
+        "Drag the native color picker, type a HEX, or hit Random — every format updates instantly.",
+        "Fine-tune with the HSL or RGB sliders, then drop the alpha slider for transparent variants.",
+        "Check WCAG contrast against white, black, Toollyz dark or any custom color — and read the AA / AAA grades.",
+        "Pin colors to Favorites, click a harmony chip to navigate, or use EyeDropper to pick from your screen.",
+      ],
+      benefits: [
+        "9 output formats: HEX, RGB, RGBA, HSL, HSLA, HSV, HWB, OKLCH and CMYK.",
+        "Live alpha channel propagates to RGBA, HSLA, HWB and OKLCH.",
+        "WCAG 2.1 contrast ratio with AA Large / AA Normal / AAA Normal grading and preview swatches.",
+        "Tints, shades, complementary, triadic and analogous harmonies — clickable to set the active color.",
+        "EyeDropper API support on Chromium browsers (Chrome, Edge, Brave, Opera).",
+        "10 curated preset swatches and one-click Random.",
+        "Favorites palette (up to 24) and 18-item recent history saved to localStorage.",
+        "100% private — Toollyz has no backend, no signup, no tracking.",
+      ],
+      relatedSlugs: [
+        "hex-to-rgb",
+        "rgb-to-hex",
+        "fancy-text-generator",
+        "meta-tag-generator",
+      ],
+      faqs: [
+        {
+          q: "What is OKLCH and why should I use it?",
+          a: "OKLCH is a modern color space (Lightness · Chroma · Hue) based on Björn Ottosson's OKLab. It's perceptually uniform — meaning equal numeric steps look equally different to the eye — so OKLCH gradients, palettes and lightness ramps look more natural than HSL ones. CSS Color Level 4 supports it natively (color: oklch(60% 0.2 250)).",
+        },
+        {
+          q: "What's the difference between HSL, HSV and HWB?",
+          a: "All three are cylindrical color spaces with the same hue axis. HSL uses Saturation + Lightness; HSV (also called HSB) uses Saturation + Value; HWB uses Whiteness + Blackness. HSL is the most common in CSS; HSV/HSB matches what most design tools show; HWB is intuitive for tinting/shading by mixing in white or black.",
+        },
+        {
+          q: "What does the WCAG contrast ratio mean?",
+          a: "It's the ratio between the relative luminances of two colors, defined in WCAG 2.1. To pass AA for normal body text you need ≥ 4.5:1; AAA needs ≥ 7:1. Large text (18pt or 14pt bold) only needs ≥ 3:1 for AA. The number above reflects the standard sRGB luminance formula.",
+        },
+        {
+          q: "Does the Eyedropper actually work?",
+          a: "Yes, when your browser supports the EyeDropper API — that's Chrome, Edge, Brave, Opera and other Chromium browsers as of 2022+. Firefox and Safari don't ship the API yet; in those browsers the Eyedropper button is hidden and a note explains why.",
+        },
+        {
+          q: "Can I copy any of the formats?",
+          a: "Yes — every row in the Formats panel has a copy button. Plus the hero swatch has a one-tap HEX copy at the top.",
+        },
+        {
+          q: "How do tints, shades and harmonies work?",
+          a: "Tints add lightness in 10/20/30% steps; shades subtract lightness. Complementary rotates the HSL hue by 180°; triadic by 120°/240°; analogous by ±30°. Click any chip to make it the new active color — perfect for exploring palette directions.",
+        },
+        {
+          q: "Are my favorites saved?",
+          a: "Yes, in your browser's localStorage. Toollyz has no backend, so they live only on your device. Up to 24 favorites and 18 recent colors are tracked.",
+        },
+        {
+          q: "What's CMYK for?",
+          a: "CMYK (Cyan, Magenta, Yellow, Key/Black) is the subtractive color model used in print. The tool shows a screen-approximation conversion — for accurate print output, use your printer's ICC profile and let your DTP software do the proper separation.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes — the picker, sliders, format list, contrast section and palettes are all responsive and touch-friendly. The native color input opens the OS color picker on most phones.",
+        },
+        {
+          q: "Is this Color Picker free?",
+          a: "Completely free with no signup and no limits. Pick, convert and save as many colors as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "image-compressor",
