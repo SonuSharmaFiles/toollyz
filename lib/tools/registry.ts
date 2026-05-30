@@ -7310,13 +7310,100 @@ export const tools: Tool[] = [
   {
     slug: "pdf-splitter",
     name: "PDF Splitter",
-    tagline: "Split a PDF into single pages or page ranges.",
+    tagline: "Extract page ranges or split into single pages.",
     description:
-      "Extract individual pages or split a PDF into multiple files by page ranges — all without uploading to a server.",
+      "Split a PDF into multiple files by page ranges (e.g. 1-3, 5, 8-10) or break it into single-page PDFs — entirely in your browser. Page count is detected automatically and ranges are validated as you type. Free and private.",
     categoryId: "pdf",
     icon: Scissors,
-    status: "coming-soon",
-    keywords: ["pdf split", "extract pages", "separate pdf"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "pdf splitter",
+      "split pdf",
+      "extract pdf pages",
+      "pdf page extractor",
+      "separate pdf pages",
+      "split pdf online",
+      "pdf range extractor",
+      "free pdf splitter",
+      "browser pdf splitter",
+      "no upload pdf splitter",
+      "pdf page ranges",
+      "single page pdf",
+      "private pdf splitter",
+      "pdf extractor",
+    ],
+    seo: {
+      title: "PDF Splitter — Extract Pages or Split by Ranges (Free, No Upload)",
+      description:
+        "Split a PDF into page ranges (1-3, 5, 8-10) or into single pages with Toollyz PDF Splitter. Range parser with live validation, per-output download — entirely in your browser, no upload, no signup.",
+      what:
+        "A PDF Splitter takes one PDF and produces multiple smaller PDFs, each containing the pages you ask for. Toollyz PDF Splitter runs the split inside your browser using the open-source pdf-lib library: drop a PDF, the page count is detected automatically, then choose between By ranges (type an expression like `1-3, 5, 8-10` — each comma-separated chunk produces one output PDF) or Every page (split into N single-page PDFs, one per page). The range parser validates as you type and reports per-chunk errors (\"exceeds 12 pages\", \"reverses start/end\"). Each output is named `<source>_pX-Y.pdf` so the order in the destination folder matches the source. You can save outputs one at a time or use Download all for batch saves staggered 120 ms apart so the browser doesn't block them. Nothing is uploaded — Toollyz has no server.",
+      how: [
+        "Drop a PDF onto the page (or click Choose PDF) — the page count is detected instantly.",
+        "Pick By ranges and type `1-3, 5, 8-10`, or pick Every page to split into single pages.",
+        "Click Split & list — each output appears with its page count and size.",
+        "Download outputs individually or click Download all.",
+      ],
+      benefits: [
+        "Range parser validates as you type (`1-3, 5, 8-10`) with per-chunk error messages.",
+        "Every-page mode for one-PDF-per-page extraction in one click.",
+        "Each output named `<source>_pX-Y.pdf` so destinations sort naturally.",
+        "Per-output page count and size in the list, with Save and Download all actions.",
+        "Pages copied with pdf-lib so fonts, images and vector graphics are preserved.",
+        "Reads metadata from encrypted PDFs with `ignoreEncryption: true` where possible.",
+        "Source PDF stats in the hero: source pages, output files, total pages out.",
+        "100% private — Toollyz has no server in the path, files never leave your device.",
+      ],
+      relatedSlugs: [
+        "pdf-merger",
+        "pdf-to-image",
+        "image-to-pdf",
+        "screenshot-to-pdf",
+      ],
+      faqs: [
+        {
+          q: "How does the splitter work?",
+          a: "Toollyz reads your PDF into memory, pdf-lib parses the PDF tree, and for each range you specified a fresh PDFDocument is created and the source pages are copied into it. The new PDFs are serialized as Blobs and offered for download — all client-side. Toollyz has no backend.",
+        },
+        {
+          q: "What range syntax does it accept?",
+          a: "Single pages (`5`) and inclusive ranges (`1-3` or `8-10`), separated by commas or newlines. Page numbers are 1-based. Whitespace inside ranges is ignored.",
+        },
+        {
+          q: "Are pages copied losslessly?",
+          a: "Yes — pdf-lib copies pages with their content stream and embedded resources intact, so fonts, images and vector graphics survive. Annotations and form fields are preserved when copyPages is able to round-trip them; some advanced interactive elements may not.",
+        },
+        {
+          q: "What's the difference between By ranges and Every page?",
+          a: "By ranges produces one PDF per range expression — `1-3, 5, 8-10` outputs three PDFs (pages 1-3, page 5, pages 8-10). Every page produces one PDF per page — a 12-page input becomes 12 single-page PDFs.",
+        },
+        {
+          q: "Can I split a password-protected PDF?",
+          a: "Toollyz reads encrypted PDFs in read-only mode (ignoreEncryption: true) for metadata. Many user-password-protected PDFs split fine; some heavily-encrypted or owner-password-locked PDFs refuse to copy pages. Remove the protection first and retry.",
+        },
+        {
+          q: "Why are downloads staggered when I click Download all?",
+          a: "Browsers block more than a few rapid downloads triggered from a single click. The 120 ms stagger lets the browser process each download cleanly. For very large splits, allow multiple downloads in your browser settings.",
+        },
+        {
+          q: "Is there a page-count limit?",
+          a: "There's no hard limit — the queue can be as long as your browser's memory allows. A 500-page split into single pages is fine on a desktop browser; very low-memory devices may struggle.",
+        },
+        {
+          q: "Are my files saved anywhere?",
+          a: "No. Files are loaded into memory while the page is open and discarded on reload. Toollyz has no server, so nothing is ever uploaded.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes — the picker uses your phone's file system, the queue scrolls, and splitting works in any modern mobile browser. For very large PDFs, watch for memory pressure on low-end devices.",
+        },
+        {
+          q: "Is this PDF Splitter free?",
+          a: "Completely free with no signup and no limits. Split as many PDFs as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "pdf-to-image",

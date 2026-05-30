@@ -224,6 +224,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "pdf-merger": dynamic(
     () => import("@/components/tools/pdf-merger"),
   ),
+  "pdf-splitter": dynamic(
+    () => import("@/components/tools/pdf-splitter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
