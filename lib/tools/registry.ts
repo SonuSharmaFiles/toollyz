@@ -6818,13 +6818,100 @@ export const tools: Tool[] = [
   {
     slug: "image-resizer",
     name: "Image Resizer",
-    tagline: "Resize images to exact dimensions or by percentage.",
+    tagline: "Pixel or percent resize with 16 social presets and 3 fit modes.",
     description:
-      "Resize JPG, PNG and WebP images to any width and height. Keep aspect ratio or set custom dimensions.",
+      "Resize JPG, PNG and WebP images to exact pixel dimensions or by percentage, with 16 social-media presets, three fit modes (contain / cover / stretch), aspect-ratio lock, batch up to 30 and instant re-render — entirely in your browser.",
     categoryId: "image",
     icon: Scaling,
-    status: "coming-soon",
-    keywords: ["image resize", "scale image", "resize photo"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "image resizer",
+      "resize image online",
+      "image scaler",
+      "resize jpg",
+      "resize png",
+      "resize webp",
+      "batch image resize",
+      "instagram image resize",
+      "facebook cover resize",
+      "youtube thumbnail size",
+      "free image resizer",
+      "browser image resizer",
+      "image crop resize",
+      "scale image online",
+    ],
+    seo: {
+      title: "Image Resizer — Pixel / Percent + 16 Social Presets (Free)",
+      description:
+        "Resize JPG, PNG and WebP images to exact pixel dimensions or by percentage. 16 social-media presets, three fit modes, aspect-ratio lock and batch of 30 — Toollyz runs everything in your browser, nothing is uploaded.",
+      what:
+        "An Image Resizer takes a source image and produces a new one at the dimensions you specify. Toollyz Image Resizer uses your browser's native decoder + a 2D canvas to resize JPG, PNG and WebP images locally — no upload, no signup. Switch between Pixels mode (set exact W × H, with an optional aspect-ratio lock keyed off the first dropped image) and Percent mode (scale every image to a percentage of its own original size, always preserving aspect). Pick one of 16 built-in social and video presets — Instagram square / portrait / story / landscape, Facebook post and cover, X/Twitter post and header, LinkedIn post and cover, YouTube thumbnail and channel art, TikTok video, 720p, 1080p and 4K. Choose a fit mode: Contain letterboxes the image with a configurable background color (or transparency for PNG/WebP); Cover crops to fill; Stretch ignores aspect ratio. Pick an output format (Auto keeps the source format, or force JPEG / PNG / WebP) and a quality from 30–100% (ignored for PNG since PNG is lossless). Batch up to 30 files, see per-file before/after with new dimensions and size delta, then download each individually or all at once. EXIF and other metadata are dropped during the canvas pass — a privacy bonus when sharing online.",
+      how: [
+        "Pick Pixels for an exact size or Percent to scale by ratio — then dial in a preset, fit and format.",
+        "Drop one or many JPG / PNG / WebP files onto the page (up to 30).",
+        "Review the per-file thumbnail, new dimensions and size delta.",
+        "Change settings and click Re-render all, or download each result individually.",
+      ],
+      benefits: [
+        "Pixels mode with optional aspect-ratio lock (keyed off the first dropped image).",
+        "Percent mode that scales each image relative to its own original size.",
+        "16 social and video presets covering Instagram, Facebook, X, LinkedIn, YouTube, TikTok, 720p, 1080p and 4K.",
+        "Three fit modes: Contain (letterbox), Cover (crop) and Stretch.",
+        "Format selector with Auto / JPEG / PNG / WebP, plus a quality slider for lossy outputs.",
+        "Configurable letterbox background — supports transparent for PNG and WebP.",
+        "Batch up to 30 files with per-file before/after, size delta and Save buttons.",
+        "100% private — Toollyz has no server, the canvas pass strips EXIF and GPS automatically.",
+      ],
+      relatedSlugs: [
+        "image-compressor",
+        "png-to-webp",
+        "jpg-to-png",
+        "color-picker",
+      ],
+      faqs: [
+        {
+          q: "How does the resizer work?",
+          a: "Your browser decodes the source image, draws it onto an off-screen canvas at the target dimensions and exports the result as a Blob with canvas.toBlob. There's no upload — every byte stays on your device.",
+        },
+        {
+          q: "What's the difference between Contain, Cover and Stretch?",
+          a: "Contain preserves the entire image and adds letterbox bars when the source aspect ratio differs from the target (background color is configurable; PNG/WebP can stay transparent). Cover crops the source to fill the target exactly — typical for social-media cards. Stretch ignores aspect ratio and forces the image to the target W × H, which usually distorts it.",
+        },
+        {
+          q: "Will it lose quality?",
+          a: "Resizing always interpolates pixels. Downscaling typically looks great. Upscaling can't add new detail — pixels are interpolated using your browser's built-in algorithm (typically bilinear), so big enlargements look softer than the original. For ultra-high-quality enlargements, use a dedicated AI upscaler.",
+        },
+        {
+          q: "What does the aspect-ratio lock do?",
+          a: "When the lock is on (Pixels mode), Toollyz uses the aspect ratio of the first image you dropped to derive height from width (and vice versa) as you edit. Turn it off if you're targeting a social-preset size that doesn't match your source.",
+        },
+        {
+          q: "Can I resize many images at once?",
+          a: "Yes — drop or pick up to 30 JPGs, PNGs or WebPs at a time. Each runs sequentially through the canvas pipeline, with per-file thumbnails and size deltas in the queue.",
+        },
+        {
+          q: "Why is the output larger than the original?",
+          a: "Three common reasons: (1) you're upscaling; (2) you re-encoded a heavily-compressed JPG as PNG, which is lossless and almost always bigger; (3) the source had aggressive non-canvas optimization (TinyPNG / oxipng / mozjpeg) that the canvas re-encode can't match. Try WebP for the most consistent size savings.",
+        },
+        {
+          q: "Are EXIF / GPS metadata kept?",
+          a: "No. The canvas pass only carries pixels, so EXIF tags, GPS coordinates and camera metadata are dropped. Useful when sharing photos online.",
+        },
+        {
+          q: "Is there a maximum size?",
+          a: "Up to 8192 × 8192 pixels (one of the largest reliable canvas sizes across browsers). Very large source images may fail to decode in some browsers; in that case, downscale first.",
+        },
+        {
+          q: "Are my images uploaded?",
+          a: "No — every resize happens entirely in your browser. Toollyz has no server in the path, so files never leave your device.",
+        },
+        {
+          q: "Is this Image Resizer free?",
+          a: "Completely free with no signup and no limits. Resize as many images as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "gradient-generator",

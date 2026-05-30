@@ -209,6 +209,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "image-compressor": dynamic(
     () => import("@/components/tools/image-compressor"),
   ),
+  "image-resizer": dynamic(
+    () => import("@/components/tools/image-resizer"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
