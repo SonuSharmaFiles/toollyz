@@ -149,6 +149,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "keyboard-tester": dynamic(
     () => import("@/components/tools/keyboard-tester"),
   ),
+  "mouse-click-tester": dynamic(
+    () => import("@/components/tools/mouse-click-tester"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

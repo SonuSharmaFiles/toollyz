@@ -5050,13 +5050,100 @@ export const tools: Tool[] = [
   {
     slug: "mouse-click-tester",
     name: "Mouse Click Tester",
-    tagline: "Test left, right, middle and scroll-wheel clicks.",
+    tagline: "Test every mouse button, double-click, scroll and CPS.",
     description:
-      "Diagnose your mouse — left, right, middle and side buttons, plus scroll-wheel direction tests.",
+      "Click anywhere in the test area to verify left, right, middle, back and forward buttons, double-clicks, scroll-wheel and clicks-per-second — with live counters and visual ripples. Free and private.",
     categoryId: "developer",
     icon: MousePointer,
-    status: "coming-soon",
-    keywords: ["mouse test", "click test", "button test"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "mouse tester",
+      "mouse click test",
+      "click test",
+      "double click test",
+      "scroll test",
+      "mouse button test",
+      "right click test",
+      "middle click test",
+      "cps test",
+      "clicks per second",
+      "mouse diagnostic",
+      "test my mouse",
+      "mouse not working",
+      "verify mouse",
+    ],
+    seo: {
+      title: "Mouse Click Tester — Buttons, Double-Click, Scroll & CPS",
+      description:
+        "Test every mouse button, double-click, scroll-wheel and clicks-per-second with Toollyz Mouse Click Tester. Visual ripples, live counts and event details — 100% in your browser.",
+      what:
+        "A Mouse Click Tester verifies that every button on your mouse — left, right, middle, back and forward — registers correctly and at the speed you'd expect. Toollyz Mouse Click Tester gives you a focused test area that captures pointer-down and pointer-up events, the wheel, double-clicks and pointer movement. Each click renders a color-coded ripple at the exact cursor position, the button counts increment live for left/right/middle/back/forward, a rolling clicks-per-second meter shows your click cadence, and the wheel-tick counter tracks scroll input. The right-click context menu is suppressed inside the test area so right-click testing actually works, and Pointer Events handle both mice and stylus/touch with the same API. Everything is read in your browser — your clicks are never sent anywhere.",
+      how: [
+        "Click anywhere in the test area to register a press — left, right, middle, back or forward.",
+        "Watch the button counts increment and ripples appear at your cursor.",
+        "Click twice quickly to detect a double-click; scroll the wheel to count ticks.",
+        "Use Reset to clear counters, then run through every button to confirm your mouse is healthy.",
+      ],
+      benefits: [
+        "Live counts for left, right, middle, back and forward buttons.",
+        "Visual ripples at the cursor for every click, color-coded by button.",
+        "Double-click detection with a clear indicator.",
+        "Clicks-per-second (CPS) meter over a 5-second rolling window.",
+        "Scroll-wheel tick counter to verify your wheel.",
+        "Cursor coordinates inside the test area for precision checks.",
+        "Right-click context menu suppressed so right-click testing actually works.",
+        "100% private — clicks stay in your browser.",
+      ],
+      relatedSlugs: [
+        "keyboard-tester",
+        "mic-test",
+        "device-info",
+        "browser-info",
+      ],
+      faqs: [
+        {
+          q: "What does this mouse tester check?",
+          a: "Whether every button on your mouse fires events, how fast you can click (CPS), whether your double-click registers, and whether the scroll wheel produces ticks. It's the quickest way to catch a dying switch, a stuck button or a misbehaving wheel.",
+        },
+        {
+          q: "Why doesn't my right-click open the browser menu?",
+          a: "The test area calls preventDefault on contextmenu so right-click registers cleanly without showing the browser's menu. Right-click outside the area to bring the menu back.",
+        },
+        {
+          q: "How are back/forward (side) buttons detected?",
+          a: "If your mouse fires button 3 (back) or button 4 (forward) — most gaming and many office mice do — they show up in their own counters. If they never appear, your mouse may not expose them or your OS/driver is intercepting them.",
+        },
+        {
+          q: "What is CPS (clicks per second)?",
+          a: "How many clicks you registered in the last second, sampled with a short rolling window. Useful for testing gaming mice, mechanical switches and your own click cadence.",
+        },
+        {
+          q: "Why is double-click sometimes missed?",
+          a: "Operating systems treat two clicks as a double-click only when they happen within a configured window (often 300–500 ms). Click faster, or check your OS's mouse-speed setting.",
+        },
+        {
+          q: "Does it work with a trackpad or touch?",
+          a: "Yes. The tool uses Pointer Events, which cover mice, trackpads, pens and touch. Three-finger taps and gestures may not generate button events the way a physical mouse does.",
+        },
+        {
+          q: "Why doesn't my scroll wheel count when I scroll quickly?",
+          a: "Most wheels send multiple wheel events per spin; the counter increments per event. If you see no events at all, either the wheel hardware isn't sending input or the OS is consuming it (zoom shortcuts, gestures, etc.).",
+        },
+        {
+          q: "What about back/forward navigation in the browser?",
+          a: "The test area handles back/forward as plain buttons (3 and 4) and does not navigate. Outside the area, those buttons still control browser history as normal.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "On a touch device, taps are treated as left-button clicks and ripples render at the touch point. Right-click, middle-click and scroll-wheel are mouse-specific and won't be available without a connected mouse.",
+        },
+        {
+          q: "Is this mouse tester free?",
+          a: "Completely free with no signup. Click as much as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "mic-test",
