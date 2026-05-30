@@ -49,6 +49,17 @@ function fnv1a(str: string): number {
   return h;
 }
 
+/**
+ * Deterministic per-config clip-path ID. Without a unique ID, multiple
+ * inlined SVGs collide on `id="clip"` and all later SVGs end up using the
+ * first one's clip-path — which clips them to the upper-left quadrant
+ * (or wherever the first SVG's clip happened to sit).
+ */
+function clipId(opts: AvatarOptions): string {
+  const sig = `${opts.seed}|${opts.style}|${opts.paletteId}|${opts.square ? 1 : 0}|${opts.size}`;
+  return `c${fnv1a(sig).toString(36)}`;
+}
+
 /** Mulberry32 — small, fast PRNG seeded by an integer. */
 function mulberry32(seed: number): () => number {
   let a = seed >>> 0;
@@ -91,11 +102,12 @@ function backgroundShape(size: number, square: boolean, fill: string): string {
   return `<circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" fill="${fill}" />`;
 }
 
-function clipPath(size: number, square: boolean): string {
+function clipPath(size: number, square: boolean, id: string): string {
   // Use a clip-path so non-square shapes (beam) are masked to the avatar shape.
+  // `id` must be unique per inlined SVG — see clipId() for the bug this fixes.
   return square
-    ? `<clipPath id="clip"><rect width="${size}" height="${size}" rx="${Math.round(size * 0.16)}" /></clipPath>`
-    : `<clipPath id="clip"><circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" /></clipPath>`;
+    ? `<clipPath id="${id}"><rect width="${size}" height="${size}" rx="${Math.round(size * 0.16)}" /></clipPath>`
+    : `<clipPath id="${id}"><circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" /></clipPath>`;
 }
 
 function buildInitials(opts: AvatarOptions): string {
@@ -130,9 +142,10 @@ function buildIdenticon(opts: AvatarOptions): string {
       if (col < 2) rects.push(`<rect x="${x2}" y="${y}" width="${cell + 0.5}" height="${cell + 0.5}" fill="${fg}" />`);
     }
   }
+  const id = clipId(opts);
   return `<svg ${svgAttrs(opts.size, opts.square)}>
-    <defs>${clipPath(opts.size, opts.square)}</defs>
-    <g clip-path="url(#clip)">${rects.join("")}</g>
+    <defs>${clipPath(opts.size, opts.square, id)}</defs>
+    <g clip-path="url(#${id})">${rects.join("")}</g>
   </svg>`;
 }
 
@@ -158,9 +171,10 @@ function buildBeam(opts: AvatarOptions): string {
       shapes.push(`<rect x="${cx - w / 2}" y="${cy - h / 2}" width="${w}" height="${h}" rx="${radius * 0.4}" fill="${fill}" opacity="0.85" transform="rotate(${rotate} ${cx} ${cy})" />`);
     }
   }
+  const id = clipId(opts);
   return `<svg ${svgAttrs(opts.size, opts.square)}>
-    <defs>${clipPath(opts.size, opts.square)}</defs>
-    <g clip-path="url(#clip)">
+    <defs>${clipPath(opts.size, opts.square, id)}</defs>
+    <g clip-path="url(#${id})">
       ${backgroundShape(opts.size, opts.square, bg)}
       ${shapes.join("")}
     </g>
@@ -188,9 +202,10 @@ function buildPixel(opts: AvatarOptions): string {
       }
     }
   }
+  const id = clipId(opts);
   return `<svg ${svgAttrs(opts.size, opts.square)}>
-    <defs>${clipPath(opts.size, opts.square)}</defs>
-    <g clip-path="url(#clip)">${rects.join("")}</g>
+    <defs>${clipPath(opts.size, opts.square, id)}</defs>
+    <g clip-path="url(#${id})">${rects.join("")}</g>
   </svg>`;
 }
 
