@@ -311,6 +311,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "calorie-calculator": dynamic(
     () => import("@/components/tools/calorie-calculator"),
   ),
+  "water-intake-calculator": dynamic(
+    () => import("@/components/tools/water-intake-calculator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

@@ -10132,13 +10132,100 @@ export const tools: Tool[] = [
   {
     slug: "water-intake-calculator",
     name: "Water Intake Calculator",
-    tagline: "Find your ideal daily water intake.",
+    tagline: "30 ml/kg + activity + climate + pregnancy, with a daily schedule.",
     description:
-      "Calculate how much water you should drink each day based on your weight, activity and climate.",
+      "Estimate daily water intake from body weight (30 ml/kg baseline), exercise minutes (+350 ml/30min), climate (+500 ml hot, +1 L very hot) and pregnancy / breastfeeding (+300/+700 ml). Output in ml, L, fl oz, glasses and bottles, plus a glass-by-glass schedule. Honest caveats.",
     categoryId: "calculators",
     icon: Droplet,
-    status: "coming-soon",
-    keywords: ["water intake", "hydration", "health"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "water intake calculator",
+      "daily water intake",
+      "hydration calculator",
+      "how much water should i drink",
+      "water per kg",
+      "water glasses per day",
+      "pregnancy water intake",
+      "breastfeeding water intake",
+      "hot climate hydration",
+      "exercise water intake",
+      "browser water calculator",
+      "free hydration calculator",
+      "water schedule",
+      "fluid intake calculator",
+    ],
+    seo: {
+      title: "Water Intake Calculator — Daily Hydration Target & Schedule (Free)",
+      description:
+        "Estimate daily water intake with Toollyz Water Intake Calculator. Body weight × 30 ml/kg, plus exercise / climate / pregnancy adjustments. Output in ml, fl oz, glasses, bottles and a sip-by-sip schedule — entirely in your browser, with honest caveats.",
+      what:
+        "A water-intake calculator estimates how much water you should drink each day based on body weight and lifestyle. Toollyz Water Intake Calculator runs entirely in your browser. The baseline is 30 ml per kilogram of body weight — a common evidence-based rule of thumb for healthy adults that lines up well with the Institute of Medicine&apos;s adequate-intake values (2.7 L women, 3.7 L men) for an average-weight person. On top of the baseline it adds +350 ml for every 30 minutes of exercise, +500 ml in hot weather (+1 L in very hot / desert climates), +300 ml during pregnancy and +700 ml when breastfeeding. Output is shown in millilitres, fluid ounces (US), 500 ml bottles and the user-configurable glass size (default 250 ml), with a per-hour rate derived from the user&apos;s awake hours and a visual schedule. The breakdown panel shows where the litres come from as colour-coded segments. The Honest Caveats panel is prominent: individual needs vary widely; food provides ~20% of daily water; chugging far above your need can cause hyponatraemia. Toollyz has no backend; inputs save to localStorage on this device only.",
+      how: [
+        "Pick Metric (kg) or Imperial (lb) and type your body weight.",
+        "Add daily exercise minutes; pick the climate and any pregnancy / breastfeeding status.",
+        "Read the total in ml, fl oz, bottles, glasses and per-hour intake in the hero.",
+        "Use the schedule panel to space the water across your awake hours.",
+      ],
+      benefits: [
+        "30 ml/kg baseline aligned with IOM adequate-intake guidance.",
+        "Adjustments for exercise (+350 ml / 30 min), climate (+500 ml or +1 L) and pregnancy / breastfeeding (+300 or +700 ml).",
+        "Hero shows total in ml, L, fl oz, glasses, bottles and per-hour rate.",
+        "Configurable glass size (default 250 ml) and awake-hours count for a per-glass schedule.",
+        "Stacked breakdown bar so users see where each litre comes from.",
+        "Metric (kg) and imperial (lb) inputs with the exact conversion 1 lb = 0.45359237 kg.",
+        "Prominent caveats panel — individual needs vary, food provides ~20% of water, hyponatraemia risk noted.",
+        "100% private — Toollyz has no backend, inputs save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "bmi-calculator",
+        "calorie-calculator",
+        "tip-calculator",
+        "alarm-clock",
+      ],
+      faqs: [
+        {
+          q: "Where does &quot;30 ml per kg&quot; come from?",
+          a: "It&apos;s a widely-used clinical rule of thumb (Holliday–Segar for maintenance fluid, adjusted for adults). For a 70 kg adult that&apos;s ~2.1 L of plain water, which lines up well with the Institute of Medicine&apos;s adequate-intake values once food water is factored in.",
+        },
+        {
+          q: "Does this count tea, coffee, juice or food?",
+          a: "No — the output is total water-equivalent intake. In a typical Western diet, ~20% comes from food and the rest from beverages. Tea and coffee count too; the mild diuretic effect of caffeine is generally over-stated and doesn&apos;t outweigh the water in the cup.",
+        },
+        {
+          q: "Why +350 ml per 30 minutes of exercise?",
+          a: "It approximates the American College of Sports Medicine&apos;s recommendation of 0.4–0.8 L per hour of moderate exercise. For very long endurance sessions (>2 hours) you may need significantly more plus electrolytes.",
+        },
+        {
+          q: "What's hyponatraemia?",
+          a: "Low blood sodium caused by drinking far more water than your kidneys can excrete (~0.7–1 L per hour). It&apos;s rare but dangerous and most often hits long-distance runners who over-drink plain water. Trust thirst as a guide; don&apos;t force litres to hit an arbitrary number.",
+        },
+        {
+          q: "What about pregnancy and breastfeeding?",
+          a: "Pregnancy adds about 300 ml/day to a non-pregnant baseline; breastfeeding adds about 700 ml/day to replace the water lost in milk. Toollyz uses those constants directly, but check with your OB / midwife — individual needs vary.",
+        },
+        {
+          q: "Why ask about awake hours?",
+          a: "To compute a per-hour drinking rate that&apos;s realistic — drinking your full target in the last hour before bed is rough on sleep. If you sleep 8 hours, you have 16 awake hours to space the intake.",
+        },
+        {
+          q: "Does climate really change requirements?",
+          a: "Yes — in hot or very hot environments you lose more water through sweat and breathing. The defaults (+500 ml hot, +1 L very hot) are conservative; outdoor work in 35°C+ heat can easily add 1.5–3 L on top.",
+        },
+        {
+          q: "Is the 250 ml glass standard?",
+          a: "It&apos;s a common European/Indian glass size. US &quot;cups&quot; are ~240 ml, &quot;tall glasses&quot; 300–350 ml. Adjust the Glass size field to match what you actually drink from for an accurate schedule.",
+        },
+        {
+          q: "Is this medical advice?",
+          a: "No. Toollyz Water Intake Calculator is a population-level rule of thumb. If you have kidney disease, heart failure, are on diuretics or have any medical condition that affects fluid balance, follow your doctor&apos;s guidance instead.",
+        },
+        {
+          q: "Is this Water Intake Calculator free?",
+          a: "Completely free with no signup and no limits. Calculate as many targets as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "love-compatibility-calculator",
