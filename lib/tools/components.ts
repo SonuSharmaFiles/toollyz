@@ -293,6 +293,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "emi-calculator": dynamic(
     () => import("@/components/tools/emi-calculator"),
   ),
+  "loan-calculator": dynamic(
+    () => import("@/components/tools/loan-calculator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

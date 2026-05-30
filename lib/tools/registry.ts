@@ -9544,13 +9544,100 @@ export const tools: Tool[] = [
   {
     slug: "loan-calculator",
     name: "Loan Calculator",
-    tagline: "Estimate loan payments, interest and total cost.",
+    tagline: "Compare up to 4 scenarios — frequency, rate, term, prepayment.",
     description:
-      "Calculate total loan cost, interest paid and monthly payments for any loan. Compare scenarios side-by-side.",
+      "Compare up to 4 loan scenarios side-by-side. Vary principal, interest rate, tenure, payment frequency (monthly / biweekly / weekly) and per-period prepayment to see total interest, total paid and months saved at a glance. 23 currencies. Free and private.",
     categoryId: "calculators",
     icon: Landmark,
-    status: "coming-soon",
-    keywords: ["loan", "interest", "payment calculator"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "loan calculator",
+      "loan payment calculator",
+      "compare loan scenarios",
+      "biweekly loan calculator",
+      "weekly loan calculator",
+      "loan with prepayment",
+      "loan interest calculator",
+      "mortgage calculator",
+      "personal loan calculator",
+      "car loan calculator",
+      "loan amortization compare",
+      "browser loan calculator",
+      "free loan calculator",
+      "loan total cost",
+    ],
+    seo: {
+      title: "Loan Calculator — Compare 4 Scenarios Side-by-Side (Free)",
+      description:
+        "Compare up to 4 loan scenarios with Toollyz Loan Calculator. Monthly / biweekly / weekly payments, per-period prepayment and total interest in one view — entirely in your browser.",
+      what:
+        "A loan calculator works out the periodic payment, total interest and total cost for a borrow. Toollyz Loan Calculator goes further and runs up to four scenarios side-by-side, so you can see whether a 15-year fixed beats a 30-year fixed, or whether biweekly payments + a small extra-per-period prepayment beat the standard monthly schedule. The math is the standard amortising formula P × r × (1+r)ⁿ / ((1+r)ⁿ − 1) with r equal to the annual rate divided by periods-per-year (12 for monthly, 26 for biweekly, 52 for weekly). Per-period prepayment is modelled by simulating the schedule — the calculator counts how many fewer months it takes to pay off the loan when you add extra to every period. The card with the lowest total interest gets a green \"Lowest interest\" badge; the rest are easy to compare. Currency formatting uses `Intl.NumberFormat` across 23 ISO 4217 codes. Toollyz has no backend — scenarios save to localStorage on this device only.",
+      how: [
+        "Start with three default scenarios (30 yr, 15 yr, 30 yr + $200 extra) or click Reset to restore them.",
+        "Edit any scenario&apos;s principal, rate, term, frequency or extra payment — the totals update live.",
+        "Add up to one more scenario (max 4) or remove ones you don&apos;t need.",
+        "Watch the Lowest interest badge move between scenarios as you experiment.",
+      ],
+      benefits: [
+        "Side-by-side comparison of up to 4 scenarios.",
+        "Three payment frequencies: Monthly (12/yr), Biweekly (26/yr), Weekly (52/yr).",
+        "Per-period prepayment field that simulates the full schedule and reports months saved.",
+        "Live total interest, total paid and number of periods per scenario.",
+        "Lowest-interest badge highlights the best scenario in the current set.",
+        "Editable scenario labels so &quot;30 yr fixed&quot; vs &quot;refinance offer&quot; reads naturally.",
+        "23 currencies via `Intl.NumberFormat`.",
+        "100% private — Toollyz has no backend, scenarios save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "emi-calculator",
+        "gst-vat-calculator",
+        "currency-converter",
+        "tip-calculator",
+      ],
+      faqs: [
+        {
+          q: "How is this different from the EMI Calculator?",
+          a: "The EMI Calculator focuses on one loan with a full month-by-month amortisation table and CSV export. The Loan Calculator focuses on comparing up to four scenarios — biweekly vs monthly, with vs without prepayment, different tenures or rates — without showing the full schedule. They share the same underlying math.",
+        },
+        {
+          q: "What does Extra per period do?",
+          a: "It adds a constant extra payment on top of every regular instalment. The simulation applies the extra after each interest charge, which accelerates the principal payoff. The Time saved row reports how many fewer months it takes to clear the loan compared with the standard schedule.",
+        },
+        {
+          q: "Why biweekly?",
+          a: "Biweekly payment plans (26 payments per year, equivalent to ~13 monthly payments) effectively prepay one full month per year, which can knock years off a mortgage. Toollyz models them as 26 periods at the per-period rate (annual / 26).",
+        },
+        {
+          q: "Why does the &quot;Lowest interest&quot; badge sometimes move?",
+          a: "As you change inputs, the scenario with the lowest cumulative interest becomes the best — that&apos;s the badge. It re-evaluates on every keystroke. If two scenarios tie, the first one in the list wins.",
+        },
+        {
+          q: "Does it model fees, taxes or insurance?",
+          a: "No — this calculator only models the principal and interest. Banks usually add a one-time processing fee (~1–2% of principal), GST/VAT on the interest portion (jurisdiction-dependent) and optional credit life insurance. Add those separately for the true total cost of borrowing.",
+        },
+        {
+          q: "Can I compare different principals?",
+          a: "Yes — every field is editable per scenario. Toollyz doesn&apos;t enforce that the principals match, which is useful when comparing a smaller loan with a tighter rate against a larger one with a longer tenure.",
+        },
+        {
+          q: "What about variable / floating rates?",
+          a: "The tool assumes a fixed rate for the whole term. To approximate a floating-rate scenario, recompute partway through with the new outstanding balance, the new rate and the remaining tenure.",
+        },
+        {
+          q: "Why max 4 scenarios?",
+          a: "Four scenarios is the sweet spot — enough to compare meaningful variations (rate vs tenure vs prepayment), few enough that the cards fit on most screens without scrolling.",
+        },
+        {
+          q: "Are my scenarios shared across devices?",
+          a: "No — they&apos;re stored in localStorage on this device only. Toollyz has no backend; nothing is uploaded or synced.",
+        },
+        {
+          q: "Is this Loan Calculator free?",
+          a: "Completely free with no signup and no limits. Compare as many scenarios as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "gst-vat-calculator",
