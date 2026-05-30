@@ -9642,13 +9642,100 @@ export const tools: Tool[] = [
   {
     slug: "gst-vat-calculator",
     name: "GST / VAT Calculator",
-    tagline: "Add or remove GST/VAT from any amount.",
+    tagline: "Add or remove tax with 18 region presets and 23 currencies.",
     description:
-      "Quickly add or remove GST, VAT or sales tax from any price. Supports multiple regions and custom rates.",
+      "Add a tax to a net amount or back-calculate the net from a gross. 18 region presets (UK, EU, India GST 5/12/18/28, Australia, NZ, Canada GST/HST/QST, Singapore, South Africa, Japan), 23 currencies and switchable mode. Free and private.",
     categoryId: "calculators",
     icon: Percent,
-    status: "coming-soon",
-    keywords: ["gst", "vat", "sales tax", "tax calculator"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "gst calculator",
+      "vat calculator",
+      "sales tax calculator",
+      "tax calculator online",
+      "india gst calculator",
+      "uk vat calculator",
+      "australia gst calculator",
+      "remove vat from price",
+      "add vat to price",
+      "reverse vat calculator",
+      "vat from gross",
+      "gst rate calculator",
+      "hst calculator",
+      "qst calculator",
+    ],
+    seo: {
+      title: "GST / VAT Calculator — Add or Remove Tax, 18 Region Presets",
+      description:
+        "Add or remove GST, VAT or sales tax from any amount with Toollyz GST / VAT Calculator. 18 region presets, 23 currencies, instant mode switching — entirely in your browser.",
+      what:
+        "A GST / VAT calculator adds a percentage tax to a net amount (gross = net × (1 + r)) or reverses the operation to back-calculate the pre-tax value from a gross price (net = gross ÷ (1 + r)). Toollyz GST / VAT Calculator does both in one tabbed UI and ships with 18 region presets — UK (20% / 5% reduced), Germany (19%), France (20%), Italy (22%), Spain (21%), India GST at 5 / 12 / 18 / 28%, Australia GST 10%, New Zealand GST 15%, Canada federal GST 5%, Canada Ontario HST 13%, Canada Quebec QST + GST 14.975%, Singapore GST 9%, South Africa VAT 15% and Japan consumption tax 10%. Pick a preset and both the tax rate and the display currency snap to that country&apos;s convention; tweak either freely afterwards. The hero shows net (pre-tax), tax amount and gross (incl. tax) in three live cards with the gross / net cells emphasised based on the active mode. A Switch-mode button flips the calculator and carries the result across so you can verify both directions of the math. Toollyz has no backend; the last amount, rate, region and currency save to localStorage on this device only.",
+      how: [
+        "Pick the mode: Add tax (net → gross) or Remove tax (gross → net).",
+        "Type the amount, pick a region preset (or set a custom rate), and pick a display currency.",
+        "Read net / tax / gross live in the hero — the highlighted cards depend on the active mode.",
+        "Click Switch mode to verify the math by feeding the result back the other way.",
+      ],
+      benefits: [
+        "Two modes — Add tax and Remove tax — in a single tabbed UI.",
+        "18 region presets covering UK, EU (DE/FR/IT/ES), India GST tiers, Australia, NZ, Canada GST / HST / QST+GST, Singapore, South Africa, Japan.",
+        "Each preset snaps both the tax rate and the display currency to the country&apos;s convention.",
+        "23 ISO 4217 currencies via `Intl.NumberFormat` with proper symbols and decimals.",
+        "Quick-rate chips for 5 / 10 / 12 / 15 / 18 / 20 / 22 / 25%.",
+        "Switch mode flips the calculator and carries the result across to verify both directions.",
+        "Copy-summary action for sharing in chat or email.",
+        "100% private — Toollyz has no backend, the form saves to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "tip-calculator",
+        "currency-converter",
+        "emi-calculator",
+        "invoice-generator",
+      ],
+      faqs: [
+        {
+          q: "What's the difference between Add tax and Remove tax?",
+          a: "Add tax treats the entered amount as the net (pre-tax) price and adds the tax: gross = net × (1 + r). Remove tax treats the entered amount as the gross (tax-inclusive) price and back-calculates the net: net = gross ÷ (1 + r). The tax amount is the difference in either direction.",
+        },
+        {
+          q: "Why net = gross ÷ (1 + r) rather than gross − (gross × r)?",
+          a: "Because the tax is computed on the net, not the gross. If gross = net + net × r = net × (1 + r), then net = gross ÷ (1 + r). Subtracting gross × r would over-deduct the tax — a common spreadsheet bug. Toollyz uses the correct formula.",
+        },
+        {
+          q: "Which regions are included?",
+          a: "United Kingdom (20% standard, 5% reduced), Germany (19%), France (20%), Italy (22%), Spain (21%), India GST at 5%, 12%, 18% and 28%, Australia (10% GST), New Zealand (15% GST), Canada federal GST (5%), Canada Ontario HST (13%), Canada Quebec QST + GST combined (14.975%), Singapore (9% GST), South Africa (15% VAT) and Japan (10% consumption tax). For other regions, pick &quot;Custom rate&quot; and type the percentage.",
+        },
+        {
+          q: "Do the rates stay up to date automatically?",
+          a: "No — these are static defaults as of mid-2026. Tax rates change occasionally (UK reduced 5%, NZ raised to 15% in 2010, etc.); Toollyz doesn&apos;t auto-update. If a country changes its rate, just type the new percentage into the Tax rate field.",
+        },
+        {
+          q: "Can I model Canadian PST + GST?",
+          a: "The QST + GST preset (14.975%) is included for Quebec. Other provinces with PST (BC 7%, Saskatchewan 6%, Manitoba 7%) are not pre-loaded; either pick Canada federal GST 5% and add your PST manually, or set a custom rate to model both at once.",
+        },
+        {
+          q: "How precise is the calculation?",
+          a: "Math runs in IEEE 754 double precision — accurate to about 15 significant digits, well beyond any sales-tax need. Output rounds to two decimal places (or zero for zero-decimal currencies like JPY).",
+        },
+        {
+          q: "Why does the currency change when I pick a region?",
+          a: "Each region preset includes the country&apos;s usual currency (UK → GBP, India → INR, Australia → AUD, etc.) so the displayed amount matches local convention. You can change the currency manually after picking a preset.",
+        },
+        {
+          q: "Is there an itemised mode for multi-line invoices?",
+          a: "Not in this tool — for invoices with multiple line items and per-item taxes, use the Toollyz Invoice Generator. The GST / VAT Calculator is for single-amount conversions.",
+        },
+        {
+          q: "Are my inputs uploaded?",
+          a: "No. Toollyz has no backend — the math runs in your browser. Your last amount, rate, region and currency save to localStorage on this device only.",
+        },
+        {
+          q: "Is this GST / VAT Calculator free?",
+          a: "Completely free with no signup and no limits. Compute as many tax conversions as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "tip-calculator",
