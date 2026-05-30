@@ -10034,13 +10034,100 @@ export const tools: Tool[] = [
   {
     slug: "calorie-calculator",
     name: "Calorie Calculator",
-    tagline: "Estimate daily calorie needs based on activity.",
+    tagline: "Mifflin–St Jeor BMR, TDEE, goal target and macro split.",
     description:
-      "Calculate your daily calorie requirements based on age, gender, weight, height and activity level.",
+      "Estimate daily calories with the Mifflin–St Jeor equation. Five activity multipliers, six cut/bulk goals, suggested protein / fat / carb split and an expected weekly weight change. Metric and imperial. Free, private, with explicit &quot;not medical advice&quot; caveats.",
     categoryId: "calculators",
     icon: Flame,
-    status: "coming-soon",
-    keywords: ["calorie", "tdee", "bmr", "diet"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "calorie calculator",
+      "tdee calculator",
+      "bmr calculator",
+      "mifflin st jeor",
+      "daily calorie intake",
+      "diet calorie calculator",
+      "calorie deficit calculator",
+      "bulk cut calculator",
+      "macro calculator",
+      "protein carbs fat calculator",
+      "weight loss calorie calculator",
+      "weight gain calorie calculator",
+      "browser tdee calculator",
+      "free tdee calculator",
+    ],
+    seo: {
+      title: "Calorie Calculator — BMR + TDEE + Macros (Mifflin–St Jeor, Free)",
+      description:
+        "Estimate daily calories with Toollyz Calorie Calculator. Mifflin–St Jeor BMR, five activity multipliers, six cut/bulk goals and a suggested protein / fat / carb split — entirely in your browser. Not medical advice.",
+      what:
+        "A calorie calculator estimates how many kilocalories you burn in a day and how much to eat for a goal — maintenance, weight loss or weight gain. Toollyz Calorie Calculator uses the Mifflin–St Jeor equation (1990) — the Academy of Nutrition and Dietetics&apos;s preferred BMR formula for healthy adults: BMR = 10×weight(kg) + 6.25×height(cm) − 5×age + 5 (male) or − 161 (female). Multiply by an activity factor (1.20 sedentary, 1.375 light, 1.55 moderate, 1.725 very active, 1.90 extra active) to get TDEE, then apply a goal delta (Aggressive cut −750, Standard cut −500, Mild cut −250, Maintain ±0, Mild bulk +250, Standard bulk +500 kcal/day) to get the target intake. The component supports both metric (kg + cm) and imperial (lb + ft + in) with exact unit conversions (1 lb = 0.45359237 kg, 1 in = 0.0254 m). A live macro panel suggests 1.8 g protein per kg of body weight, 25% of calories from fat and the rest from carbs. The expected weekly weight change uses 7,700 kcal per kg of body fat. The Not Medical Advice panel is prominently displayed: Mifflin–St Jeor estimates a population average with ±10–15% individual variation; the 7,700 kcal/kg rule ignores water, glycogen and lean tissue; pregnant, nursing, ill or athlete users should talk to a clinician. Toollyz has no backend; inputs save to localStorage.",
+      how: [
+        "Pick Metric or Imperial and fill in sex, age, weight and height.",
+        "Choose an activity level (Sedentary → Extra active).",
+        "Pick a goal (Aggressive / Standard / Mild cut, Maintain, Mild / Standard bulk) — the target intake updates live.",
+        "Read your suggested macros and expected weekly weight change.",
+      ],
+      benefits: [
+        "Mifflin–St Jeor BMR — the most validated equation for the general population.",
+        "Five activity multipliers spanning desk workers to heavy training + manual labour.",
+        "Six goal presets covering aggressive cuts through standard bulks.",
+        "Macro split based on 1.8 g protein per kg, 25% fat, balance carbs.",
+        "Weekly weight-change estimate using the 7,700 kcal-per-kg rule of thumb.",
+        "Metric (kg + cm) and imperial (lb + ft + in) inputs with exact unit conversions.",
+        "Honest &quot;not medical advice&quot; caveats panel — algorithms are population statistics, not diagnostics.",
+        "100% private — Toollyz has no backend, inputs save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "bmi-calculator",
+        "water-intake-calculator",
+        "age-difference-calculator",
+        "tip-calculator",
+      ],
+      faqs: [
+        {
+          q: "What's BMR?",
+          a: "Basal Metabolic Rate — the energy your body burns at complete rest just keeping you alive (organs, ion pumps, basal cell function). Mifflin–St Jeor is the most accurate estimate for healthy adults; Harris–Benedict and Katch–McArdle are older or require body-fat percentage.",
+        },
+        {
+          q: "What's TDEE?",
+          a: "Total Daily Energy Expenditure — BMR plus everything else you do (walking, thinking, fidgeting, formal exercise). Toollyz uses the standard activity multipliers from 1.20 (sedentary) to 1.90 (extra active) on top of BMR.",
+        },
+        {
+          q: "What activity level should I pick?",
+          a: "Sedentary = desk job, no real exercise. Light = light activity 1–3 days/week (walks, casual yoga). Moderate = 3–5 sessions/week with real intensity. Very active = 6–7 sessions/week or daily training. Extra active = heavy training plus a physical job. People often over-estimate — pick the level below your gut feeling for a more honest target.",
+        },
+        {
+          q: "Why do men and women have different equations?",
+          a: "Lean body mass differs on average between sexes, so the equation has a different constant: +5 for males and −161 for females, both in kcal/day. The rest of the formula is identical.",
+        },
+        {
+          q: "How accurate is the BMR estimate?",
+          a: "Studies show Mifflin–St Jeor is within ±10% of measured BMR for about 80% of healthy adults. Outliers (very lean, very muscular, very old, very young) can be ±15% or more. Don&apos;t treat the number as gospel — adjust intake based on actual scale weight over 2–3 weeks.",
+        },
+        {
+          q: "What about the &quot;7,700 kcal per kg&quot; rule?",
+          a: "It comes from the energy density of human adipose tissue and applies cleanly only to body fat. Real-world weekly weight changes also include water (glycogen + sodium), undigested food, hormonal cycles and the lean tissue you gain during a bulk. Treat the weekly-change number as a long-run average over weeks, not a daily target.",
+        },
+        {
+          q: "Why suggest 1.8 g protein per kg?",
+          a: "It&apos;s in the middle of the evidence-based range (1.6–2.2 g/kg for active adults) and supports both muscle retention during a cut and muscle gain during a bulk. People with kidney disease should consult a doctor before going high-protein.",
+        },
+        {
+          q: "Is the macro split a hard rule?",
+          a: "No — it&apos;s a starting point. Many people thrive on lower fat / higher carb or vice versa. Toollyz fixes protein and fat (25% calories) and lets carbs fill the rest because that&apos;s a balanced starting point most evidence-based nutrition guides endorse.",
+        },
+        {
+          q: "Can I use this for pregnancy or breastfeeding?",
+          a: "No. Pregnancy and lactation change energy needs in ways the standard equations don&apos;t capture. Use a pregnancy-specific calculator with a clinician&apos;s input.",
+        },
+        {
+          q: "Is this Calorie Calculator free?",
+          a: "Completely free with no signup and no limits. Compute as many estimates as you like — privately in your browser. Toollyz has no backend.",
+        },
+      ],
+    },
   },
   {
     slug: "water-intake-calculator",
