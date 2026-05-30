@@ -5738,13 +5738,100 @@ export const tools: Tool[] = [
   {
     slug: "rgb-to-hex",
     name: "RGB to HEX Converter",
-    tagline: "Convert RGB / RGBA color values to HEX.",
+    tagline: "Convert RGB / RGBA to HEX with live preview and sliders.",
     description:
-      "Turn RGB or RGBA color values into HEX codes. Preview the result and copy the value with one click.",
+      "Type or slide RGB / RGBA values to instantly get HEX, HSL, HSLA and CMYK — with a live color preview, channel sliders and a built-in color picker. Free and private.",
     categoryId: "converters",
     icon: Paintbrush,
-    status: "coming-soon",
-    keywords: ["rgb to hex", "color converter", "hex code"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "rgb to hex",
+      "rgba to hex",
+      "rgb color converter",
+      "rgb to hsl",
+      "rgb to hex code",
+      "color picker",
+      "color converter",
+      "convert rgb",
+      "rgb to hex online",
+      "rgba to hex code",
+      "color value to hex",
+      "hex from rgb",
+      "css color converter",
+      "color tool",
+    ],
+    seo: {
+      title: "RGB to HEX Converter — RGBA, HSL & CMYK with Live Preview",
+      description:
+        "Convert RGB or RGBA values to HEX (and HSL, CMYK) with Toollyz RGB to HEX Converter. Live preview, channel sliders, a color picker and copy-ready outputs — 100% in your browser.",
+      what:
+        "An RGB to HEX Converter takes the RGB triplets used in code or design tools and produces the HEX code most commonly used in CSS and brand guidelines. Toollyz RGB to HEX Converter accepts a wide range of inputs — `rgb(99, 102, 241)`, `rgba(99, 102, 241, 0.5)`, plain `99, 102, 241`, space-separated `99 102 241`, or percentage values — and instantly shows the matching HEX with alpha (where applicable), along with HSL, HSLA, CMYK and a Tailwind-friendly arbitrary-value snippet. A live preview adjusts the background and chooses readable text automatically, and four channel sliders let you fine-tune R, G, B and alpha visually. Everything happens in your browser; nothing is uploaded.",
+      how: [
+        "Type or paste RGB values — `rgb(...)`, `rgba(...)` or comma/space separated.",
+        "Watch the live preview update and the HEX appear at the top.",
+        "Drag the R, G, B and Alpha sliders to fine-tune the color.",
+        "Click any row in All formats to copy that value.",
+      ],
+      benefits: [
+        "Flexible input — rgb(), rgba(), plain numbers, percentages and spaces.",
+        "Live preview with automatic contrast text for readability.",
+        "R, G, B and Alpha sliders for visual fine-tuning.",
+        "Outputs HEX, HEX-with-alpha, RGB, RGBA, HSL, HSLA, CMYK and Tailwind arbitrary.",
+        "Built-in color picker and named presets.",
+        "Alpha channel preserved end-to-end (alpha → #RRGGBBAA).",
+        "Clear error message when input can't be parsed.",
+        "100% private — colors stay in your browser.",
+      ],
+      relatedSlugs: [
+        "hex-to-rgb",
+        "random-color-generator",
+        "css-minifier",
+        "html-minifier",
+      ],
+      faqs: [
+        {
+          q: "What input formats does it accept?",
+          a: "Standard CSS rgb()/rgba(), plain comma-separated (`99, 102, 241`), space-separated (`99 102 241`), and percentages (`39%, 40%, 95%`). Alpha can be a decimal between 0 and 1 or a percentage.",
+        },
+        {
+          q: "How does alpha map to HEX?",
+          a: "Alpha 0–1 becomes a hex byte 00–FF appended to the color. So `rgba(99, 102, 241, 0.5)` becomes #6366F180 (the 80 is ~0.502 in 0–1 space).",
+        },
+        {
+          q: "Should I include alpha in my HEX?",
+          a: "Only when you actually need transparency. The tool shows both forms — six-digit HEX without alpha and eight-digit HEX with alpha — so you can pick whichever your stylesheet expects.",
+        },
+        {
+          q: "What's a Tailwind arbitrary value?",
+          a: "Tailwind lets you use any color via bracket syntax like `bg-[#6366F1]`. The tool generates this snippet for you so you can paste it straight into a className.",
+        },
+        {
+          q: "Why does my color look slightly different in HSL?",
+          a: "HSL is a perceptual model with rounded integer channels, so converting RGB → HSL → RGB rarely round-trips byte-for-byte. The HEX/RGB pair is exact; HSL is a close approximation.",
+        },
+        {
+          q: "Can I use the channel sliders to find a nearby color?",
+          a: "Yes — drag any slider to nudge R, G, B or alpha. The HEX, HSL and CMYK outputs all update in real time, so it's great for tweaking a brand color.",
+        },
+        {
+          q: "Does it work with percentages?",
+          a: "Yes. `rgb(39%, 40%, 95%)` parses correctly and gets converted to byte values internally.",
+        },
+        {
+          q: "What's the difference between rgb() and rgba()?",
+          a: "rgba() adds a fourth alpha channel. CSS now also accepts modern syntax like `rgb(99 102 241 / 0.5)` — the tool handles both.",
+        },
+        {
+          q: "Is any data sent to a server?",
+          a: "No. Toollyz has no server — parsing and conversion happen in your browser. Your last input is saved only in your device's local storage.",
+        },
+        {
+          q: "Is this RGB to HEX converter free?",
+          a: "Completely free with no signup. Convert as many colors as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "jpg-to-png",

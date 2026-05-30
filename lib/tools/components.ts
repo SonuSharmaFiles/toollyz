@@ -170,6 +170,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "hex-to-rgb": dynamic(
     () => import("@/components/tools/hex-to-rgb"),
   ),
+  "rgb-to-hex": dynamic(
+    () => import("@/components/tools/rgb-to-hex"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),
