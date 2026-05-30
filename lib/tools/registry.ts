@@ -4571,13 +4571,100 @@ export const tools: Tool[] = [
   {
     slug: "device-info",
     name: "Device Information Checker",
-    tagline: "Detect device type, OS, screen and hardware specs.",
+    tagline: "Detect device type, OS, screen, GPU and hardware specs.",
     description:
-      "Inspect your device profile — type, OS, screen, GPU, memory and more. Great for support tickets and testing.",
+      "See your device profile: type (phone/tablet/desktop), OS, screen resolution, pixel ratio, viewport, CPU cores, memory, GPU and connection. Read in your browser, free and private.",
     categoryId: "developer",
     icon: MonitorSmartphone,
-    status: "coming-soon",
-    keywords: ["device info", "system info", "hardware"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "device information",
+      "device info checker",
+      "system info",
+      "hardware info",
+      "screen resolution",
+      "device specs",
+      "what device",
+      "device type",
+      "cpu cores",
+      "device memory",
+      "gpu info",
+      "pixel ratio",
+      "device fingerprint",
+      "device test",
+    ],
+    seo: {
+      title: "Device Information Checker — Type, Screen, CPU, GPU & More",
+      description:
+        "Inspect what your device exposes to the browser: type, OS, screen resolution, pixel ratio, viewport, CPU cores, memory, GPU and connection — entirely in your browser with Toollyz.",
+      what:
+        "A Device Information Checker shows the hardware-side details a website can read about your device. Toollyz Device Information Checker classifies the device as a phone, tablet or desktop/laptop, reports the operating system and platform, screen and available resolution with pixel-density (DPR) and color depth, current viewport size, processor cores, device memory, touch points and pointer/hover capabilities, and — where the browser allows — the GPU renderer and vendor (via WebGL) and a connection estimate. It also surfaces which device-level web APIs are available (Battery, Bluetooth, USB, Gamepads, Vibration). Everything is read locally; nothing is uploaded.",
+      how: [
+        "Open the tool — your device profile loads instantly.",
+        "Read your device type, OS, screen and processor information.",
+        "Inspect GPU, connection and which device APIs your browser supports.",
+        "Copy or download the snapshot as JSON for support or testing.",
+      ],
+      benefits: [
+        "Device type detection (phone, tablet, desktop/laptop).",
+        "OS, platform and the browser-reported user-agent platform.",
+        "Screen resolution, available area, color depth and device pixel ratio.",
+        "Viewport size that updates as you resize or rotate.",
+        "Processor cores, device memory and touch capability.",
+        "GPU renderer & vendor via WebGL where the browser exposes them.",
+        "Connection estimate (effective type, downlink, RTT) where supported.",
+        "Battery / Bluetooth / USB / Gamepad / Vibration API availability at a glance.",
+      ],
+      relatedSlugs: [
+        "browser-info",
+        "battery-status",
+        "internet-speed-test",
+        "ip-address-finder",
+      ],
+      faqs: [
+        {
+          q: "How does the tool know what device I'm on?",
+          a: "It combines your user-agent string with browser capabilities — touch points, screen size, pointer/hover support — to classify the device as a phone, tablet or desktop/laptop. It only uses what the browser exposes.",
+        },
+        {
+          q: "Why does my screen resolution look different from my display?",
+          a: "Browsers report the OS-side resolution divided by your device pixel ratio (DPR). A 2560×1600 screen at DPR 2 reports 1280×800 — the “CSS pixels” the browser draws in. The tool shows both the resolution and the DPR.",
+        },
+        {
+          q: "What is device pixel ratio (DPR)?",
+          a: "It's the multiplier between CSS pixels and the actual hardware pixels on your screen. High-DPI displays (Retina, modern phones) typically have a DPR of 2 or 3, so each CSS pixel covers more physical pixels for crisper rendering.",
+        },
+        {
+          q: "Why is my GPU shown as “Apple GPU” or a generic name?",
+          a: "Browsers can obscure the unmasked GPU renderer/vendor for privacy. What you see is what your browser exposes — sometimes a generic identifier rather than the exact chip name.",
+        },
+        {
+          q: "Why don't I see CPU cores or device memory?",
+          a: "Some browsers (notably Safari) don't expose hardwareConcurrency or deviceMemory for privacy. The tool shows “—” when the value isn't available rather than guessing.",
+        },
+        {
+          q: "Why is the connection card missing in some browsers?",
+          a: "The Network Information API is only implemented in Chromium-based browsers. On Safari and Firefox the card is omitted because the data isn't available.",
+        },
+        {
+          q: "Will it update if I resize or rotate?",
+          a: "Yes — the viewport and orientation update live as you resize the window or rotate the device, so you can see the values change.",
+        },
+        {
+          q: "Is any of this data sent to Toollyz?",
+          a: "No. Toollyz has no server — everything is read directly in your browser and never uploaded. You can copy or download a JSON snapshot, but only if you choose to.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The same details are read from mobile browsers, including touch points and orientation.",
+        },
+        {
+          q: "Is this device info tool free?",
+          a: "Completely free with no signup. Device detection, screen, hardware and GPU info are available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "battery-status",

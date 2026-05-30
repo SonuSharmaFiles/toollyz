@@ -134,6 +134,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "browser-info": dynamic(
     () => import("@/components/tools/browser-info"),
   ),
+  "device-info": dynamic(
+    () => import("@/components/tools/device-info"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),
