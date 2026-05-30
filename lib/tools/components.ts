@@ -131,6 +131,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "internet-speed-test": dynamic(
     () => import("@/components/tools/internet-speed-test"),
   ),
+  "browser-info": dynamic(
+    () => import("@/components/tools/browser-info"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),

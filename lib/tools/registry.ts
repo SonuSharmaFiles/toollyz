@@ -4473,13 +4473,100 @@ export const tools: Tool[] = [
   {
     slug: "browser-info",
     name: "Browser Information Checker",
-    tagline: "Inspect your browser, user-agent and capabilities.",
+    tagline: "See your browser, locale, permissions and web-API support.",
     description:
-      "See detailed info about your browser, OS, screen, language and supported web APIs — useful for testing and support.",
+      "Inspect everything your browser reveals to a website — version, engine, OS, user-agent, locale, preferences, permissions and supported web APIs. Read entirely in your browser. Free and private.",
     categoryId: "developer",
     icon: AppWindow,
-    status: "coming-soon",
-    keywords: ["browser info", "user agent", "what browser"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "browser information",
+      "browser info checker",
+      "what browser am i using",
+      "user agent checker",
+      "browser version",
+      "browser capabilities",
+      "web api support",
+      "browser features",
+      "browser detect",
+      "user agent string",
+      "browser test",
+      "feature detection",
+      "browser fingerprint",
+      "browser identification",
+    ],
+    seo: {
+      title: "Browser Information Checker — Version, UA & Web-API Support",
+      description:
+        "See what your browser tells websites about itself: name, version, engine, OS, user-agent, locale, permissions and supported web APIs — read entirely in your browser with Toollyz Browser Information Checker.",
+      what:
+        "A Browser Information Checker shows you everything your browser exposes to the websites you visit. Toollyz Browser Information Checker reads it locally in your tab and groups it into clear sections: which browser and version you're running (with engine and operating system), the full user-agent string, your locale (languages, timezone, primary language), your preferences (color scheme, reduced motion, contrast, Do Not Track, cookies, online status), your current window and screen sizes, the Permissions API states for geolocation, notifications, camera, microphone and clipboard, and a comprehensive web-API support matrix covering storage, workers, media, networking, crypto, devices and UI features. You can copy the full snapshot as JSON or download it — useful for support tickets, compatibility debugging or just satisfying curiosity. Nothing is ever uploaded.",
+      how: [
+        "Open the tool — your browser details load instantly.",
+        "Read your browser identity, locale and current preferences.",
+        "Check the web-API support matrix to see which features your browser implements.",
+        "Click Copy as JSON to share the full snapshot, or download it for a support ticket.",
+      ],
+      benefits: [
+        "Browser name, version, engine, OS and platform at a glance.",
+        "Full user-agent string with click-to-copy.",
+        "Languages, timezone and primary language from your browser.",
+        "Preferences: color scheme, reduced motion, contrast, Do Not Track, cookies, online.",
+        "Permissions API states for geolocation, notifications, camera, microphone and clipboard.",
+        "30+ web-API checks grouped by category (storage, workers, media, network, crypto, device, UI).",
+        "Export everything as a clean JSON snapshot for tickets or testing.",
+        "100% private — read in your browser, nothing uploaded.",
+      ],
+      relatedSlugs: [
+        "device-info",
+        "battery-status",
+        "ip-address-finder",
+        "dns-lookup",
+      ],
+      faqs: [
+        {
+          q: "What does this browser information checker show?",
+          a: "Everything your browser exposes to a website: name, version, engine, OS, user-agent, languages, timezone, preferences (dark mode, reduced motion, etc.), Permissions API states and a matrix of which web APIs your browser supports.",
+        },
+        {
+          q: "What is a user agent string?",
+          a: "The user agent (UA) is a string your browser sends with every request telling servers what browser and OS you're using. It looks something like “Mozilla/5.0 (…) Chrome/120 Safari/537.36” — the tool shows yours and parses out the readable parts.",
+        },
+        {
+          q: "Why might my browser version look wrong?",
+          a: "Modern browsers freeze parts of the UA string for privacy and use newer APIs (userAgentData) to expose the real version. If the UA shows an older minor version, check the “UA brands” row — it reflects the live version.",
+        },
+        {
+          q: "What is feature detection?",
+          a: "Checking whether a specific web API exists before using it. The support matrix on this page is exactly that: it asks your browser whether each API is available so you can confirm capabilities for testing and compatibility work.",
+        },
+        {
+          q: "What do the permission states mean?",
+          a: "“granted” means the site can use that capability now; “denied” means you've blocked it; “prompt” means you haven't decided yet and the browser will ask. The tool shows the current state without triggering a prompt.",
+        },
+        {
+          q: "Is my user agent or any other data sent to a server?",
+          a: "No. Toollyz has no server — everything is read directly in your browser and never uploaded. You can copy or download a JSON snapshot, but only if you choose to.",
+        },
+        {
+          q: "Why does my browser identify itself as “Safari” in Chrome?",
+          a: "For historical compatibility, every Chromium browser's UA string still contains “Safari” and “KHTML, like Gecko”. The tool isolates the real browser name; the “User agent” card shows the unparsed string for reference.",
+        },
+        {
+          q: "Can sites really see all this?",
+          a: "Most of it, yes — UA, languages, timezone, screen and supported APIs are all observable by any page you visit. Permissions states require the Permissions API and are not directly readable by sites; you read them here in your own context.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes. The same details are read from mobile browsers, with mobile/desktop indicators where modern UA-Client-Hints are available.",
+        },
+        {
+          q: "Is this browser checker free?",
+          a: "Completely free with no signup. Browser info, permissions and the web-API support matrix are available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "device-info",
