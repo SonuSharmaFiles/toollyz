@@ -221,6 +221,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "signature-generator": dynamic(
     () => import("@/components/tools/signature-generator"),
   ),
+  "pdf-merger": dynamic(
+    () => import("@/components/tools/pdf-merger"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

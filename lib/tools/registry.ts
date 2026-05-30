@@ -7212,14 +7212,100 @@ export const tools: Tool[] = [
   {
     slug: "pdf-merger",
     name: "PDF Merger",
-    tagline: "Combine multiple PDFs into a single file.",
+    tagline: "Combine PDFs in your browser — pages preserved exactly.",
     description:
-      "Merge multiple PDFs into one in any order. Drag-and-drop to reorder pages before download.",
+      "Merge up to 30 PDFs into a single file with one-click download. Re-order files, see per-file page counts and sizes, and keep fonts, images and layout intact. Free, private, browser-only.",
     categoryId: "pdf",
     icon: FilePlus,
-    status: "coming-soon",
+    status: "live",
     featured: true,
-    keywords: ["pdf merge", "combine pdf", "join pdf"],
+    keywords: [
+      "pdf merger",
+      "merge pdf",
+      "combine pdf",
+      "join pdf",
+      "pdf joiner",
+      "free pdf merger",
+      "browser pdf merger",
+      "online pdf combiner",
+      "pdf concatenate",
+      "private pdf merger",
+      "no upload pdf merger",
+      "merge multiple pdfs",
+      "pdf merge order",
+      "pdf merge reorder",
+    ],
+    seo: {
+      title: "PDF Merger — Combine PDFs in Your Browser (Free, No Upload)",
+      description:
+        "Merge up to 30 PDFs into a single file with Toollyz PDF Merger. Re-order files, preserve fonts and images, one-click download — entirely in your browser, no upload, no signup.",
+      what:
+        "A PDF Merger combines multiple PDF files into one. Toollyz PDF Merger runs the merge inside your browser using the open-source pdf-lib library — your files are read with FileReader, parsed in-memory, every page is copied (preserving fonts, embedded images, vector graphics and layout) into a fresh PDF, and the result is downloaded as a single file. Nothing is uploaded to Toollyz or any other server; we don't have one. You can queue up to 30 PDFs at a time, see the page count and size of each, re-order them with Up/Down buttons before merging, and remove any single file from the queue. The merged file is named `toollyz-merged.pdf` and includes every page from every input in the order shown. Toollyz reads encrypted PDFs with `ignoreEncryption: true` for metadata, but heavily-protected PDFs may still refuse to merge — that's a property of those specific files, not the merger.",
+      how: [
+        "Drop one or many PDFs onto the page, or click Choose PDFs.",
+        "Re-order with the Up/Down buttons and remove anything that doesn't belong.",
+        "Click Merge & download — the combined PDF is built and saved entirely in your browser.",
+        "Verify the result; everything stays on your device unless you choose to share it.",
+      ],
+      benefits: [
+        "Up to 30 PDFs queued, with per-file page count and size.",
+        "Up/Down buttons to re-order before merging — easier than dragging on mobile.",
+        "Pages are copied with pdf-lib so fonts, images and vector graphics are preserved.",
+        "One-click Merge & download produces a single `toollyz-merged.pdf` file.",
+        "Reads metadata from encrypted PDFs with `ignoreEncryption: true` where possible.",
+        "Clear stats: PDFs queued, total pages and combined size in the hero.",
+        "Honest error reporting — broken or unreadable PDFs are skipped with a toast.",
+        "100% private — Toollyz has no server in the path, files never leave your device.",
+      ],
+      relatedSlugs: [
+        "pdf-splitter",
+        "pdf-to-image",
+        "image-to-pdf",
+        "screenshot-to-pdf",
+      ],
+      faqs: [
+        {
+          q: "How does the merger work without a server?",
+          a: "Toollyz is a static site. Your browser reads each PDF into memory, the pdf-lib library copies pages between PDFDocument objects and the result is serialized as a Blob and downloaded — all client-side. Nothing is uploaded to Toollyz; we don't operate any backend.",
+        },
+        {
+          q: "Is there a file-count or size limit?",
+          a: "The queue is capped at 30 files. There's no hard size limit, but the browser has to hold every PDF in memory while copying pages, so very large merges (hundreds of MB total) may struggle on low-memory devices. If a merge fails for memory reasons, split the input into smaller batches.",
+        },
+        {
+          q: "Does it preserve fonts, images and links?",
+          a: "Yes — pdf-lib copies pages with their content stream and embedded resources intact, so fonts, images and vector graphics survive. Links and form fields are preserved when copyPages is able to round-trip them; some advanced interactive elements may not.",
+        },
+        {
+          q: "Can it merge password-protected PDFs?",
+          a: "Toollyz opens encrypted PDFs in read-only mode (ignoreEncryption: true) for metadata. Many user-password-protected PDFs will merge fine; some heavily-encrypted or owner-password-locked PDFs will refuse to copy pages — the merger will show an error and you'll need to remove the protection first.",
+        },
+        {
+          q: "How do I re-order the PDFs?",
+          a: "Use the Up and Down buttons on each item in the queue. The final merged PDF stacks pages in the order shown — top-to-bottom in the queue.",
+        },
+        {
+          q: "Are my files saved anywhere?",
+          a: "No. Files are loaded into memory while the page is open and discarded on reload. Toollyz has no server, so nothing is ever uploaded.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes — the picker uses your phone's file system, the queue scrolls, and merging works in any modern mobile browser. Very large files may strain mobile memory; if a merge fails, retry with fewer files.",
+        },
+        {
+          q: "What's the output filename?",
+          a: "By default `toollyz-merged.pdf`. You can rename it from your browser's download manager before saving.",
+        },
+        {
+          q: "Will the merged file be smaller than the sum of inputs?",
+          a: "Usually slightly smaller — pdf-lib enables object streams which compress the structure. Image and font data inside pages isn't re-compressed, though, so the savings are modest. For aggressive size cuts, run the merged PDF through a separate PDF compressor.",
+        },
+        {
+          q: "Is this PDF Merger free?",
+          a: "Completely free with no signup and no limits. Merge as many PDFs as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "pdf-splitter",
