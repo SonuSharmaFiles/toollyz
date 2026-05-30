@@ -269,6 +269,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "stopwatch": dynamic(
     () => import("@/components/tools/stopwatch"),
   ),
+  "alarm-clock": dynamic(
+    () => import("@/components/tools/alarm-clock"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

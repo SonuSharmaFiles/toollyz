@@ -8760,13 +8760,100 @@ export const tools: Tool[] = [
   {
     slug: "alarm-clock",
     name: "Alarm Clock",
-    tagline: "Set browser-based alarms that ring on time.",
+    tagline: "Multiple alarms, four WebAudio tones, custom days, snooze.",
     description:
-      "Set one or more alarms with custom labels and tones. Keep the tab open and they'll ring on time.",
+      "Set one or many alarms with labels, repeat schedules (once / daily / weekdays / weekends / custom days), four WebAudio tones (bell, chime, beep, buzz) and 5 / 10-minute snooze. Optional desktop notifications. Free, private, browser-only.",
     categoryId: "calculators",
     icon: AlarmClock,
-    status: "coming-soon",
-    keywords: ["alarm clock", "online alarm", "timer"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "alarm clock online",
+      "online alarm clock",
+      "browser alarm",
+      "free alarm clock",
+      "multiple alarms",
+      "alarm clock with snooze",
+      "alarm clock tone",
+      "alarm clock notification",
+      "alarm clock label",
+      "private alarm clock",
+      "no-signup alarm clock",
+      "web alarm clock",
+      "alarm clock weekdays",
+      "alarm clock custom days",
+    ],
+    seo: {
+      title: "Alarm Clock — Free Browser Alarms With Snooze & Notifications",
+      description:
+        "Set one or many alarms with Toollyz Alarm Clock. Labels, repeat schedules, four WebAudio tones, 5 / 10-minute snooze and optional desktop notifications — entirely in your browser, no signup, no upload.",
+      what:
+        "An online alarm clock fires a tone (and optionally a desktop notification) at a chosen time. Toollyz Alarm Clock runs entirely in your browser using a 1 Hz tick that checks every alarm against the current time. Set as many alarms as you need; each has a 24-hour HH:MM time, a label, an enabled toggle, a repeat schedule (Once, Every day, Weekdays, Weekends or Custom with a per-day bitmask) and a tone — Bell (warm decay), Chime (three-note ascending C-E-G), Beep (two-tone alarm) or Buzz (low pulse) — all synthesised live with WebAudio so there are no audio files and no licensing concerns. When an alarm fires you can snooze for 5 or 10 minutes (creates a one-off alarm in the future) or stop it. Granting browser notification permission lets the alarm pop up an OS notification when it rings — useful for muted tabs. Crucially, browsers can't fire alarms when the page is closed, so Toollyz is honest about this in the UI: keep the tab open. The Toollyz Alarm Clock has no backend; alarms save to localStorage on this device only.",
+      how: [
+        "Click + Alarm to add one. Set its time, label, enable toggle, repeat schedule and tone.",
+        "(Optional) Click Enable notifications in the clock to let your browser pop up desktop alerts.",
+        "Keep the tab open — when an alarm hits, a banner appears and the tone plays.",
+        "Hit Stop to silence, or + 5 min / + 10 min to snooze; the alarm is rescheduled as a one-off.",
+      ],
+      benefits: [
+        "Multiple alarms with labels, enable toggle, repeat schedule and individual tone.",
+        "Repeat options: Once, Every day, Weekdays, Weekends or a custom 7-day bitmask.",
+        "Four WebAudio tones (Bell, Chime, Beep, Buzz) — synthesised live, no audio files.",
+        "Test button next to each tone selector — listen before you commit.",
+        "Snooze + 5 / + 10 minutes creates a one-off alarm in the future.",
+        "Optional desktop notifications via the standard `Notification` API.",
+        "Live next-fire time and \"in 2 h 4 m\" countdown for every enabled alarm.",
+        "100% private — alarms save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "stopwatch",
+        "pomodoro-timer",
+        "reaction-time-test",
+        "unix-timestamp-converter",
+      ],
+      faqs: [
+        {
+          q: "Does the alarm ring if I close the tab?",
+          a: "No. Browsers don't run JavaScript in a closed tab, and Toollyz has no backend to fire a server-side push. Keep the tab open (pinning it is a good workaround) so the JS interval can detect the firing time.",
+        },
+        {
+          q: "What happens if my computer is asleep when an alarm should fire?",
+          a: "While asleep, the JS interval doesn't run, so the alarm is missed. When the system wakes, Toollyz checks against the last 30 seconds and will still fire a recently-due alarm if you wake quickly. For mission-critical wake-ups, use your OS or phone alarm app instead.",
+        },
+        {
+          q: "Are the tones audio files?",
+          a: "No — they're synthesised live with the WebAudio API. The Bell is a 660 Hz + 880 Hz sine pair with a 1.4 s decay; Chime is a C5-E5-G5 sine arpeggio; Beep alternates 1200 Hz and 600 Hz sawtooth pulses; Buzz is a 220 Hz square pulse. Nothing is downloaded, nothing is licensed.",
+        },
+        {
+          q: "How does snooze work?",
+          a: "Snooze creates a new one-off alarm 5 or 10 minutes from now with the same label (suffixed \"(snooze)\") and tone, and stops the current ring. The original alarm's schedule isn't touched, so a daily 07:00 alarm keeps repeating tomorrow even if you snooze today.",
+        },
+        {
+          q: "Can I customise which days an alarm repeats?",
+          a: "Yes — pick \"Custom…\" as the repeat option and toggle the day buttons (Sun, Mon, …, Sat). The alarm fires on whichever days are enabled in the bitmask.",
+        },
+        {
+          q: "Do desktop notifications need permission?",
+          a: "Yes — modern browsers ask the user for permission to show notifications. Toollyz exposes an \"Enable notifications\" button in the clock header that calls `Notification.requestPermission()`. You can revoke at any time in browser settings.",
+        },
+        {
+          q: "Can I test a tone without setting an alarm?",
+          a: "Yes — every tone selector has a small Test button next to it that plays the tone immediately. Great for previewing before you commit to a setting.",
+        },
+        {
+          q: "What about timezones?",
+          a: "Alarms are local to your device's timezone (whatever your browser reports). Travelling? Your alarms automatically retime in the new zone because they're stored as wall-clock HH:MM, not as a UTC timestamp.",
+        },
+        {
+          q: "Are my alarms saved across devices?",
+          a: "No — they're stored in localStorage on this device only. Toollyz has no backend; nothing is synced. Set them up once per device.",
+        },
+        {
+          q: "Is this Alarm Clock free?",
+          a: "Completely free with no signup and no limits. Set as many alarms as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "pomodoro-timer",
