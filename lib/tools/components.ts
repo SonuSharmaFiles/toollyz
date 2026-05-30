@@ -233,6 +233,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "image-to-pdf": dynamic(
     () => import("@/components/tools/image-to-pdf"),
   ),
+  "unix-timestamp-converter": dynamic(
+    () => import("@/components/tools/unix-timestamp-converter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

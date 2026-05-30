@@ -7639,13 +7639,100 @@ export const tools: Tool[] = [
   {
     slug: "unix-timestamp-converter",
     name: "Unix Timestamp Converter",
-    tagline: "Convert between Unix timestamps and human-readable dates.",
+    tagline: "Epoch ↔ ISO/UTC/local, with live clock and 16 timezones.",
     description:
-      "Convert epoch timestamps to ISO dates, local time and back — supports seconds and milliseconds.",
+      "Convert Unix timestamps to ISO 8601, UTC, local, RFC 2822 and 16 timezones — with a live ticking clock, auto seconds/ms detection and copy-to-clipboard on every value. Free, private, browser-only.",
     categoryId: "calculators",
     icon: Clock,
-    status: "coming-soon",
-    keywords: ["unix", "timestamp", "epoch", "date converter"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "unix timestamp converter",
+      "epoch converter",
+      "unix to date",
+      "date to unix",
+      "epoch time",
+      "iso 8601 converter",
+      "utc converter",
+      "rfc 2822",
+      "timestamp converter online",
+      "free timestamp converter",
+      "browser timestamp converter",
+      "epoch milliseconds",
+      "epoch seconds",
+      "timezone converter",
+    ],
+    seo: {
+      title: "Unix Timestamp Converter — Epoch ↔ ISO / UTC / Local (Free)",
+      description:
+        "Convert Unix timestamps to ISO 8601, UTC, local time, RFC 2822 and 16 popular timezones with Toollyz Unix Timestamp Converter. Live clock, auto seconds/ms detection — runs entirely in your browser.",
+      what:
+        "A Unix Timestamp Converter turns the number of seconds (or milliseconds) since the Unix epoch (1 Jan 1970 UTC) into a human-readable date — and back. Toollyz Unix Timestamp Converter shows a live ticking clock with the current epoch in both seconds and milliseconds plus the ISO 8601 and UTC strings, then lets you paste any timestamp (seconds, milliseconds or a relaxed ISO/RFC date string) and see it expressed in twelve formats at once: epoch seconds, epoch milliseconds, ISO 8601, UTC (`Date.toUTCString`), local long, local short, UTC readable, RFC 2822, date-only, time-only, weekday + month + day-of-year + ISO week, and a relative phrase (`in 3 minutes`, `2 hours ago`) computed by `Intl.RelativeTimeFormat`. Switch to the Timezones tab to see the same moment in sixteen popular zones (UTC, America/Los_Angeles, America/New_York, Europe/London, Europe/Berlin, Asia/Dubai, Asia/Kolkata, Asia/Tokyo, Australia/Sydney and more) — every formatter respects your browser's built-in IANA tz database, so leap-seconds and DST transitions match the OS. Every value has a one-click copy button. Auto-detect treats 10-digit and shorter integers as seconds and 13-digit positive integers as milliseconds.",
+      how: [
+        "Watch the live hero for the current epoch and ISO time, ticking once per second.",
+        "Paste any timestamp or date into the input — choose Auto / Seconds / Milliseconds for numeric input.",
+        "Read off the formats panel; click the copy icon on any value to grab it.",
+        "Switch to Timezones to see the same instant in 16 popular zones.",
+      ],
+      benefits: [
+        "Live ticking clock with the current epoch in seconds, milliseconds, ISO 8601 and UTC.",
+        "Auto-detection between seconds and milliseconds based on integer length.",
+        "Twelve output formats including ISO, UTC, local, RFC 2822, date-only, time-only and ISO week.",
+        "Relative time formatting via `Intl.RelativeTimeFormat` for natural-language deltas.",
+        "16 common IANA timezones in a dedicated tab, formatted with `Intl.DateTimeFormat`.",
+        "One-click copy on every value.",
+        "Accepts relaxed date strings via `Date.parse` (most ISO 8601 and RFC 2822 work).",
+        "100% private — Toollyz has no backend, draft saved to localStorage.",
+      ],
+      relatedSlugs: [
+        "calendar-generator",
+        "json-formatter",
+        "jwt-decoder",
+        "regex-tester",
+      ],
+      faqs: [
+        {
+          q: "What is a Unix timestamp?",
+          a: "A Unix timestamp is the number of seconds that have elapsed since 00:00:00 UTC on Thursday, 1 January 1970, the so-called Unix epoch. Many APIs, log files and databases store time as an epoch integer because it's compact, unambiguous and easy to compare.",
+        },
+        {
+          q: "How do I know if my number is seconds or milliseconds?",
+          a: "Seconds are 10 digits or fewer through year 2286; milliseconds are 13 digits today. Toollyz auto-detects: it treats 10-digit and shorter integers as seconds and 13-digit positive integers as milliseconds. You can override with the Unit selector.",
+        },
+        {
+          q: "What date formats does the input accept?",
+          a: "Numeric Unix timestamps (seconds or milliseconds), ISO 8601 (`2026-05-30T14:00:00Z`) and most RFC 2822 variants. Anything `Date.parse` understands works; if a string fails, you'll see an error in the input panel.",
+        },
+        {
+          q: "Where do the timezone names come from?",
+          a: "They're official IANA timezone identifiers (the `tz database`). Your browser's `Intl` API ships its own copy of the database; Toollyz simply asks it to format the date in each requested zone.",
+        },
+        {
+          q: "Does it handle daylight-saving time?",
+          a: "Yes — `Intl.DateTimeFormat` applies the correct DST offset for each timezone at the requested instant. If your OS's tz database is out of date, the displayed time may be off; install OS updates to fix.",
+        },
+        {
+          q: "What's the relative-time line?",
+          a: "It uses `Intl.RelativeTimeFormat` to express the difference between the parsed timestamp and the current moment as a natural-language phrase like \"in 3 minutes\" or \"2 days ago\". It updates as the clock ticks.",
+        },
+        {
+          q: "Does it work offline?",
+          a: "Yes — once the page is loaded, every conversion runs in your browser without any network call. The live clock updates each second from `Date.now`.",
+        },
+        {
+          q: "Is my input uploaded?",
+          a: "No. Toollyz has no backend. Your current input is saved to localStorage so a refresh doesn't lose it, but nothing is sent to a server.",
+        },
+        {
+          q: "What is ISO week and day-of-year?",
+          a: "ISO week is the 1–53 week number per ISO 8601 (week starting Monday; the week containing 4 Jan is week 1). Day-of-year is 1–366. Both are useful for project planning and astronomy.",
+        },
+        {
+          q: "Is this Unix Timestamp Converter free?",
+          a: "Completely free with no signup and no limits. Convert as many timestamps as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "typing-speed-test",
