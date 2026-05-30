@@ -7506,13 +7506,100 @@ export const tools: Tool[] = [
   {
     slug: "image-to-pdf",
     name: "Image to PDF Converter",
-    tagline: "Combine images into a single PDF document.",
+    tagline: "Stitch JPG, PNG and WebP into one PDF — A4, Letter, A3, custom.",
     description:
-      "Stitch JPG, PNG and WebP images together into a single PDF. Reorder pages and set page size before download.",
+      "Combine up to 30 JPG, PNG or WebP images into a single PDF with A4 / A3 / Letter / Legal / custom or auto page sizes, Fit / Fill / Stretch layout, configurable margin and background. Built entirely in your browser with pdf-lib. Free and private.",
     categoryId: "pdf",
     icon: FileInput,
-    status: "coming-soon",
-    keywords: ["image to pdf", "jpg to pdf", "png to pdf"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "image to pdf",
+      "jpg to pdf",
+      "png to pdf",
+      "webp to pdf",
+      "photo to pdf",
+      "images to pdf",
+      "image to pdf converter",
+      "stitch images pdf",
+      "merge images pdf",
+      "free image to pdf",
+      "browser image to pdf",
+      "no upload image to pdf",
+      "pdf builder",
+      "a4 image pdf",
+    ],
+    seo: {
+      title: "Image to PDF Converter — JPG/PNG/WebP → 1 PDF (Free, No Upload)",
+      description:
+        "Combine JPG, PNG and WebP images into a single PDF with Toollyz Image to PDF Converter. A4 / A3 / Letter / custom / auto page sizes, Fit / Fill / Stretch layout, margin and background controls — entirely in your browser.",
+      what:
+        "An Image to PDF Converter takes a list of images and produces a single PDF, one image per page. Toollyz Image to PDF Converter runs the build inside your browser using the open-source pdf-lib library: drop up to 30 JPG, PNG or WebP files, re-order them with Up/Down buttons, then pick a page size (A4 595×842 pt, A3 842×1191 pt, US Letter 612×792 pt, US Legal 612×1008 pt, a custom W×H in PDF points, or Auto which matches each image's pixel dimensions), orientation (portrait/landscape, not used in Auto), Fit mode (Fit preserves aspect with letterbox, Fill preserves aspect inside the usable area, Stretch ignores aspect), margin (0–120 pt) and page background colour. JPGs and PNGs are embedded natively; WebP is re-encoded to PNG via a canvas first because the PDF spec doesn't carry WebP. The PDF is built locally and downloaded on click — Toollyz has no server in the path.",
+      how: [
+        "Drop or pick JPG, PNG or WebP images — up to 30. Re-order with Up/Down buttons.",
+        "Pick a page size (or Auto), orientation, Fit mode, margin and background colour.",
+        "Set a filename and click Build PDF — the file is created and saved entirely in your browser.",
+        "Open in your preferred viewer; nothing was uploaded to Toollyz.",
+      ],
+      benefits: [
+        "Six page-size options: A4, A3, Letter, Legal, Custom (in PDF points) and Auto (matches each image).",
+        "Portrait or landscape orientation with one click — not applicable in Auto.",
+        "Three Fit modes (Fit / Fill / Stretch) and a 0–120 pt margin slider.",
+        "Configurable page background colour for letterbox bars.",
+        "Native JPG and PNG embedding via pdf-lib; WebP is re-encoded to PNG transparently.",
+        "Up/Down re-order buttons and per-image thumbnail, size and dimensions.",
+        "Output filename input — set whatever you want before downloading.",
+        "100% private — Toollyz has no server, images stay in your browser.",
+      ],
+      relatedSlugs: [
+        "pdf-to-image",
+        "pdf-merger",
+        "pdf-splitter",
+        "screenshot-to-pdf",
+      ],
+      faqs: [
+        {
+          q: "How does the converter work?",
+          a: "Each image is read into memory with FileReader, pdf-lib creates a fresh PDFDocument, adds a page at the requested size and embeds the image (drawImage). JPGs and PNGs are embedded natively; WebP is re-encoded to PNG via a canvas first because PDF doesn't carry WebP. The PDF is then serialized as a Blob and downloaded.",
+        },
+        {
+          q: "What's the difference between Fit, Fill and Stretch?",
+          a: "Fit preserves the image's aspect ratio and lets bars of the background colour fill the rest (letterbox). Fill also preserves aspect but sizes the image to the larger usable dimension (so it touches the margins on at least two sides). Stretch ignores aspect and forces the image to fill the entire usable area, usually distorting it.",
+        },
+        {
+          q: "What does Auto page size do?",
+          a: "Each page is sized to match its image's pixel dimensions 1:1 (treating pixels as points). Useful when you want zero scaling — every image appears at native size in the PDF. Orientation is ignored in Auto.",
+        },
+        {
+          q: "Why is WebP re-encoded?",
+          a: "The PDF specification supports JPEG and PNG image streams (via DCT and Flate filters) but not WebP. Toollyz transparently decodes WebP via a 2D canvas and embeds it as PNG. The result is identical visually; the file size is slightly larger than the original WebP.",
+        },
+        {
+          q: "How big can the PDF be?",
+          a: "There's no hard cap. The browser must hold every image (decoded to a canvas for WebP, raw bytes for JPG/PNG) in memory, then the merged PDF. Very large batches at high resolution may exhaust mobile memory; if a build fails, retry with fewer images or smaller resolutions.",
+        },
+        {
+          q: "Does it work with HEIC photos?",
+          a: "Not directly. iPhone HEIC photos need to be converted to JPG or PNG first (most macOS and iOS apps do this automatically when sharing or exporting). Toollyz's PNG/WebP converters can also help.",
+        },
+        {
+          q: "Are my files saved anywhere?",
+          a: "No. Files are loaded into memory while the page is open and discarded on reload. Toollyz has no server, so nothing is ever uploaded.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes — the file picker uses your phone's camera roll, the queue scrolls and building works in any modern mobile browser. For large batches, watch for memory pressure on low-end devices.",
+        },
+        {
+          q: "Can I rotate images before adding them?",
+          a: "Not yet — the build respects each image's own orientation. Rotate the source images first (Toollyz Image Resizer's Fit modes can help) or rotate the PDF after building with the PDF Merger in a future release.",
+        },
+        {
+          q: "Is this Image to PDF Converter free?",
+          a: "Completely free with no signup and no limits. Build as many PDFs as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "screenshot-to-pdf",

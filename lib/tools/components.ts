@@ -230,6 +230,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "pdf-to-image": dynamic(
     () => import("@/components/tools/pdf-to-image"),
   ),
+  "image-to-pdf": dynamic(
+    () => import("@/components/tools/image-to-pdf"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
