@@ -8956,13 +8956,100 @@ export const tools: Tool[] = [
   {
     slug: "age-difference-calculator",
     name: "Age Difference Calculator",
-    tagline: "Calculate the precise age difference between two dates.",
+    tagline: "Precise calendar-correct difference with live update and totals.",
     description:
-      "Get the exact difference between two dates — years, months, weeks, days, hours and minutes.",
+      "Calculate the exact difference between two dates as years / months / days / hours / minutes / seconds and as a total in every unit (years, months, weeks, days, hours, minutes, seconds, milliseconds). Live mode counts up in real time. Next anniversary helper with Feb 29 handling. Free and private.",
     categoryId: "calculators",
     icon: Cake,
-    status: "coming-soon",
-    keywords: ["age calculator", "date difference", "years"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "age difference calculator",
+      "age calculator",
+      "date difference calculator",
+      "years between dates",
+      "months between dates",
+      "days between dates",
+      "calendar difference",
+      "exact age calculator",
+      "live age counter",
+      "next birthday calculator",
+      "feb 29 birthday calculator",
+      "browser age calculator",
+      "free age calculator",
+      "anniversary calculator",
+    ],
+    seo: {
+      title: "Age Difference Calculator — Exact Years / Months / Days (Free)",
+      description:
+        "Calculate the precise difference between two dates with Toollyz Age Difference Calculator. Calendar-correct breakdown, totals in every unit, live mode and next-anniversary helper — entirely in your browser.",
+      what:
+        "An age-difference calculator returns the exact gap between two moments in time. Toollyz Age Difference Calculator runs the math entirely in your browser using calendar-correct subtraction — the same convention Day.js&apos;s `.diff` uses, where 30 Jan + 1 month = 28 Feb in a non-leap year. Two `datetime-local` inputs accept the from and to dates down to the minute, and the result is shown two ways: as a six-part breakdown (years, months, days, hours, minutes, seconds) in the hero, and as totals in eight units (decimal years using the Gregorian mean of 365.2425 days/year, months, weeks, days, hours, minutes, seconds and milliseconds). Live mode updates the `To` field once per second so a birthday counter ticks up in real time. The Next Anniversary helper computes the upcoming celebration with Feb-29 handling — in non-leap years the anniversary falls on Feb 28 of that year and snaps back to Feb 29 the following leap year. The current pair persists in localStorage; Toollyz has no backend.",
+      how: [
+        "Pick your From date (e.g. a birthday) and a To date (defaults to now).",
+        "Watch the six-part breakdown and total-in-every-unit panel update.",
+        "Leave Live mode on for a real-time counter, or turn it off to compute a fixed gap.",
+        "Click Copy summary for a shareable line, or Swap to invert the dates.",
+      ],
+      benefits: [
+        "Calendar-correct breakdown: years / months / days / hours / minutes / seconds in the hero.",
+        "Totals in eight units (years, months, weeks, days, hours, minutes, seconds, milliseconds).",
+        "Decimal years using the Gregorian mean of 365.2425 days per year.",
+        "Live mode updates the To field once per second for a real-time counter.",
+        "Next-anniversary helper with explicit Feb 29 handling.",
+        "Datetime-local inputs preserve your timezone — no UTC surprises.",
+        "Reversed-direction detection — the calculator shows the absolute difference and tells you the dates were swapped.",
+        "100% private — Toollyz has no backend, dates save to localStorage on this device only.",
+      ],
+      relatedSlugs: [
+        "business-days-calculator",
+        "leap-year-checker",
+        "unix-timestamp-converter",
+        "calendar-generator",
+      ],
+      faqs: [
+        {
+          q: "How does the calendar-correct subtraction work?",
+          a: "Toollyz subtracts month-by-month, borrowing days from the prior month when needed. For example, going from 30 Jan 2026 to 28 Feb 2026 is 0 years, 1 month, 0 days (a full calendar month) — not 29 days. This matches what Day.js&apos;s `.diff` and ICU&apos;s relative-time formatters do.",
+        },
+        {
+          q: "Why is decimal years slightly different from `years + months/12`?",
+          a: "Pure division ignores leap days. Decimal years uses the Gregorian mean of 365.2425 days per year (the average length when leap years are counted properly), so a span of 1 year and 1 day reports as 1.003 years rather than 1.000.",
+        },
+        {
+          q: "What happens with Feb 29 birthdays?",
+          a: "The Next Anniversary helper detects a Feb 29 birthday and bumps it to Feb 28 in non-leap years — the most widely-used convention. The following leap year, it lands on Feb 29 again. Both behaviours match how most calendars handle leap-day birthdays.",
+        },
+        {
+          q: "Does it handle timezones?",
+          a: "The inputs are `datetime-local`, which means they're interpreted in your browser&apos;s local timezone. Travelling between timezones doesn&apos;t change the calculation — only the wall-clock values you typed do. For UTC math, paste an ISO string starting with `Z` into the address bar or the Unix Timestamp Converter.",
+        },
+        {
+          q: "What's the maximum precision?",
+          a: "The breakdown is to the second; the totals include milliseconds. Browsers&apos; `Date` API is millisecond-precision, so you can&apos;t go finer than that without `performance.now()`-based tools (try the Stopwatch).",
+        },
+        {
+          q: "Why does Live mode tick once per second?",
+          a: "A 1 Hz update is enough for a human-readable age counter without churning the CPU. The underlying calculation is millisecond-precise; only the display is throttled.",
+        },
+        {
+          q: "Can I swap the dates?",
+          a: "Yes — there's a swap button between the two inputs. If From is later than To, the calculator detects it automatically, computes the absolute difference and shows a banner telling you the order is reversed.",
+        },
+        {
+          q: "Are my dates saved across devices?",
+          a: "No — they're stored in localStorage on this device only. Toollyz has no backend; nothing is uploaded or synced.",
+        },
+        {
+          q: "What about the time of day?",
+          a: "Both inputs accept hours and minutes. The breakdown and totals account for them — a birthday at 08:30 will show 0 hours when the current time is 08:30, even if the dates haven&apos;t changed.",
+        },
+        {
+          q: "Is this Age Difference Calculator free?",
+          a: "Completely free with no signup and no limits. Calculate as many spans as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "business-days-calculator",

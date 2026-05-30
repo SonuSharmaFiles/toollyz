@@ -275,6 +275,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "pomodoro-timer": dynamic(
     () => import("@/components/tools/pomodoro-timer"),
   ),
+  "age-difference-calculator": dynamic(
+    () => import("@/components/tools/age-difference-calculator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
