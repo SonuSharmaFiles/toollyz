@@ -329,6 +329,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "disposable-password-generator": dynamic(
     () => import("@/components/tools/disposable-password-generator"),
   ),
+  "favicon-from-text": dynamic(
+    () => import("@/components/tools/favicon-from-text"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {

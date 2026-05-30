@@ -10726,13 +10726,100 @@ export const tools: Tool[] = [
   {
     slug: "favicon-from-text",
     name: "Favicon Generator from Text",
-    tagline: "Create a favicon from a letter, emoji or word.",
+    tagline: "Letter / emoji favicon with auto-fit, 9 PNG sizes and a hand-rolled .ico.",
     description:
-      "Generate a clean favicon set from any text, letter or emoji. Export PNG and ICO sizes ready for production.",
+      "Generate a clean favicon set from a letter, emoji or short word. Auto-fits the text on a 512×512 canvas, three shapes (square / rounded / circle), exports PNG at 16/32/48/64/128/180/192/256/512 plus a true Windows .ico (16+32+48) and a paste-ready &lt;head&gt; HTML snippet. Free and private.",
     categoryId: "generators",
     icon: ImagePlus,
-    status: "coming-soon",
-    keywords: ["favicon", "icon generator", "site icon"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "favicon generator",
+      "text favicon generator",
+      "letter favicon generator",
+      "emoji favicon",
+      "favicon ico generator",
+      "favicon png generator",
+      "apple touch icon",
+      "site icon generator",
+      "favicon set generator",
+      "browser favicon generator",
+      "free favicon generator",
+      "favicon html snippet",
+      "favicon 16x16 32x32",
+      "favicon 512",
+    ],
+    seo: {
+      title: "Favicon Generator from Text — PNG + ICO + HTML Snippet (Free)",
+      description:
+        "Generate a clean favicon set from a letter, emoji or short word with Toollyz Favicon Generator. Auto-fit text, three shapes, 9 PNG sizes plus a hand-rolled Windows .ico and a paste-ready &lt;head&gt; snippet — entirely in your browser.",
+      what:
+        "A favicon generator turns a short string (letter, digits or emoji) into the icon set every modern website needs. Toollyz Favicon Generator from Text renders onto a 512×512 canvas with three shape options (square / rounded square with a 22% corner radius / circle), configurable background colour, text colour, font (System UI / Inter / Georgia / Courier / Comic Sans), bold and italic toggles, and an auto-fit text engine that starts at 64% of the canvas size and shrinks by 15% per step until the text fits within 86% of the canvas width. The live preview row shows the result at 16, 32, 48, 64 and 180 pixels simultaneously so you can see exactly how it&apos;ll look in a browser tab vs an Apple touch icon. Export options: a quick-pick row downloads any of nine PNG sizes (16, 32, 48, 64, 128, 180, 192, 256, 512), &quot;All PNG sizes&quot; saves the whole set, and **Download favicon.ico** assembles a real Windows .ico file with embedded PNG payloads at 16, 32 and 48 (Vista+ format — much smaller than legacy BMP icons). The HTML snippet section copies a paste-ready `&lt;head&gt;` block with the standard link tags, the apple-touch-icon, theme-color and apple-mobile-web-app-title using your chosen site name. Toollyz has no backend.",
+      how: [
+        "Type a letter, digit or emoji (1-3 chars works best — the auto-fit shrinks longer words).",
+        "Pick a shape (square / rounded / circle) and adjust background and text colours.",
+        "Choose a font and the bold / italic toggles. The live preview strip updates instantly.",
+        "Click Download favicon.ico for the classic /favicon.ico file, or All PNG sizes for the full set + Copy snippet for the &lt;head&gt; HTML.",
+      ],
+      benefits: [
+        "Auto-fit text engine that scales the font down by 15% per step until it fits within 86% of the canvas width.",
+        "Three shapes: square, rounded (22% corner radius), circle.",
+        "Five font choices including System UI, Inter, Georgia, Courier and Comic Sans.",
+        "Live preview at 16 / 32 / 48 / 64 / 180 pixels simultaneously.",
+        "Nine PNG export sizes (16, 32, 48, 64, 128, 180, 192, 256, 512).",
+        "Hand-rolled Windows .ico writer with embedded PNG payloads at 16 / 32 / 48 (Vista+ compatible).",
+        "Paste-ready &lt;head&gt; HTML snippet with link tags, apple-touch-icon and theme-color.",
+        "100% private — Toollyz has no backend, every byte stays in your browser.",
+      ],
+      relatedSlugs: [
+        "meta-tag-generator",
+        "qr-code-generator",
+        "color-picker",
+        "barcode-generator",
+      ],
+      faqs: [
+        {
+          q: "How does the auto-fit work?",
+          a: "The text starts at 64% of the canvas size, gets measured, and if it overflows 86% of the canvas width, the font shrinks by 15% and is re-measured. After up to 12 iterations the text fits cleanly — usually in 1-3 steps for short labels.",
+        },
+        {
+          q: "Why a 512×512 canvas if 16×16 is the smallest target?",
+          a: "Rendering at high resolution and downsampling produces sharper text at every size than rendering directly at 16×16 (where each pixel is huge relative to the glyph). The browser&apos;s native scaler handles the downsample with anti-aliasing.",
+        },
+        {
+          q: "What's special about the .ico file?",
+          a: "It&apos;s a true Windows ICO with the standard ICONDIR / ICONDIRENTRY headers and PNG payloads embedded at 16, 32 and 48 pixels. Windows Vista and later accept PNG-payload icons natively — files are much smaller than legacy BMP icons.",
+        },
+        {
+          q: "Will the emoji render the same on every device?",
+          a: "Emoji rendering depends on the OS&apos;s emoji font — Apple Color Emoji on macOS / iOS, Segoe UI Emoji on Windows, Twemoji or Noto Color Emoji on Android. They may look slightly different across platforms, but the canvas captures whatever your current OS renders.",
+        },
+        {
+          q: "What does the HTML snippet include?",
+          a: "Standard link tags for /favicon.ico, /favicon-16x16.png, /favicon-32x32.png, /favicon-192x192.png and /apple-touch-icon.png (180×180), plus a theme-color meta tag and the apple-mobile-web-app-title meta with your chosen site name. Paste it into your `<head>`.",
+        },
+        {
+          q: "Do I need to host the files?",
+          a: "Yes — upload them to your site&apos;s root (or wherever the link tags point). Browsers and search engines fetch them from there. Toollyz only generates the files; you host them.",
+        },
+        {
+          q: "Can I use this for a PWA?",
+          a: "Yes — the 192×192 and 512×512 PNGs satisfy the standard PWA manifest icon sizes. You&apos;ll still need to write a `manifest.json` referencing them.",
+        },
+        {
+          q: "Why three shapes?",
+          a: "Square is the classic browser-tab shape, rounded is what most modern OSes show on home screens (iOS / iPadOS apply their own clip anyway) and circle works well for character-based avatars. Pick the one that matches your brand.",
+        },
+        {
+          q: "Are my files uploaded?",
+          a: "No. Toollyz has no backend — rendering and ICO assembly happen entirely in your browser. Settings save to localStorage on this device only.",
+        },
+        {
+          q: "Is this Favicon Generator free?",
+          a: "Completely free with no signup and no limits. Generate as many favicons as you like — privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "mac-address-generator",
