@@ -67,8 +67,6 @@ import {
   Paintbrush,
   Image as ImageIcon,
   FileImage,
-  Speaker,
-  AudioLines,
   Banknote,
   Link as LinkIcon,
   BarChart3,
@@ -6028,28 +6026,6 @@ export const tools: Tool[] = [
         },
       ],
     },
-  },
-  {
-    slug: "text-to-speech",
-    name: "Text to Speech",
-    tagline: "Convert any text into natural-sounding speech.",
-    description:
-      "Turn written text into spoken audio with multiple voices, languages and speeds. Download as MP3.",
-    categoryId: "converters",
-    icon: Speaker,
-    status: "coming-soon",
-    keywords: ["text to speech", "tts", "voice", "audio"],
-  },
-  {
-    slug: "speech-to-text",
-    name: "Speech to Text",
-    tagline: "Transcribe spoken audio into accurate text.",
-    description:
-      "Speak into your mic or upload an audio file — get a clean, editable transcript in seconds.",
-    categoryId: "converters",
-    icon: AudioLines,
-    status: "coming-soon",
-    keywords: ["speech to text", "transcribe", "stt", "voice to text"],
   },
   {
     slug: "currency-converter",
