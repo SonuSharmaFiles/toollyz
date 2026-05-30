@@ -5246,13 +5246,100 @@ export const tools: Tool[] = [
   {
     slug: "webcam-test",
     name: "Webcam Test Tool",
-    tagline: "Preview your webcam to make sure it's working.",
+    tagline: "Live webcam preview with resolution, FPS, snapshots and record.",
     description:
-      "Test your webcam, framerate and resolution. Verify everything works before a meeting or recording.",
+      "Test your webcam in seconds: live preview, real-time resolution and frame-rate readout, device picker, mirror toggle, PNG snapshots and a quick video recording — all in your browser. Free and private.",
     categoryId: "developer",
     icon: Webcam,
-    status: "coming-soon",
-    keywords: ["webcam test", "camera test", "video"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "webcam test",
+      "camera test",
+      "test webcam online",
+      "webcam checker",
+      "camera preview",
+      "is my webcam working",
+      "webcam fps",
+      "webcam resolution",
+      "online camera test",
+      "browser webcam test",
+      "webcam snapshot",
+      "webcam record",
+      "webcam diagnostic",
+      "verify camera",
+    ],
+    seo: {
+      title: "Webcam Test — Live Preview, Resolution, FPS & Snapshots",
+      description:
+        "Test your webcam with Toollyz Webcam Test Tool. Live preview, real-time resolution and FPS, mirror toggle, PNG snapshots and a short recording — entirely in your browser, no uploads.",
+      what:
+        "A Webcam Test Tool verifies that your camera is connected, selected and producing usable video. Toollyz Webcam Test Tool uses the browser's getUserMedia API to read your camera stream entirely in your tab: it shows a live preview at the camera's negotiated resolution, reads the actual frame rate (via requestVideoFrameCallback where available), lists every connected camera in a device picker and lets you toggle a mirror view for a natural “look at yourself” preview. You can capture PNG snapshots into a gallery and download any of them, or hit Record to capture a short WebM video and play it back in place. Video is processed only in your browser — there's no Toollyz server, nothing is uploaded, and snapshots and recordings are discarded as soon as you leave the page.",
+      how: [
+        "Click Start camera and grant permission when prompted.",
+        "Check the live preview, resolution and FPS in the hero.",
+        "Switch cameras with the device picker, or toggle mirror to flip the view.",
+        "Capture a snapshot to download as PNG, or hit Record for a quick WebM clip.",
+      ],
+      benefits: [
+        "Instant live preview at the camera's negotiated resolution.",
+        "Real-time frame-rate readout via requestVideoFrameCallback.",
+        "Device picker for switching between built-in and external cameras.",
+        "Mirror toggle for a natural left/right preview.",
+        "PNG snapshots into an in-page gallery with one-click download.",
+        "Short WebM recording and inline playback.",
+        "Graceful states for unsupported, denied or missing-camera scenarios.",
+        "100% private — video stays in your browser, nothing is uploaded.",
+      ],
+      relatedSlugs: [
+        "mic-test",
+        "device-info",
+        "browser-info",
+        "screen-resolution",
+      ],
+      faqs: [
+        {
+          q: "How does this webcam test work?",
+          a: "It uses the browser's getUserMedia API to open a video stream from your camera and renders it in a <video> element. Resolution and frame rate are read from the live track; snapshots are drawn to a canvas and offered as PNGs. Everything stays in your browser.",
+        },
+        {
+          q: "Why does the browser ask for permission?",
+          a: "Camera access is sensitive, so browsers always require explicit permission. Click “Allow” when prompted; you can revoke it any time from the lock icon in your address bar.",
+        },
+        {
+          q: "Why is my preview just black?",
+          a: "Either your camera is muted (physical privacy shutter or OS switch), the wrong input is selected (try the device picker), the browser blocked permission, or another app is holding the camera. Close other camera apps and try again.",
+        },
+        {
+          q: "What resolution and frame rate will I see?",
+          a: "The browser negotiates a stream with the camera; you'll see the actual resolution your camera chose (commonly 720p or 1080p) and a live frame-rate readout, typically 24–30 FPS for laptops, higher for some external cameras.",
+        },
+        {
+          q: "Why is the FPS sometimes lower than my camera's spec?",
+          a: "Lighting (cameras drop FPS in low light to expose longer), other apps using the camera, background CPU pressure or browser throttling on background tabs all reduce frame rate. Keep the tab focused for the most accurate reading.",
+        },
+        {
+          q: "What does the mirror toggle do?",
+          a: "It flips the preview horizontally so your movement matches what you'd see in a mirror — most video-call apps do this by default. Snapshots respect the current mirror state.",
+        },
+        {
+          q: "Are snapshots and recordings uploaded?",
+          a: "No. Snapshots are Base64 PNGs held in your tab; recordings are WebM Blobs created by your browser. Nothing is sent to Toollyz, and everything is discarded when you reload or leave the page.",
+        },
+        {
+          q: "Why doesn't recording work on Safari?",
+          a: "MediaRecorder support for video has historically been incomplete on Safari (it's better in recent versions). If recording fails or no codec is available, snapshots still work in any modern browser.",
+        },
+        {
+          q: "Does it work on mobile?",
+          a: "Yes, on mobile browsers that implement getUserMedia (most modern ones do). The browser will ask for permission, and the device picker lets you switch between the front and back cameras.",
+        },
+        {
+          q: "Is this webcam test free?",
+          a: "Completely free with no signup. Test, snapshot and record as much as you like — privately in your browser.",
+        },
+      ],
+    },
   },
 
   // ─── CONVERTERS ──────────────────────────────────────────────────────────

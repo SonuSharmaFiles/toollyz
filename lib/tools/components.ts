@@ -161,6 +161,9 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "base64-encoder-decoder": dynamic(
     () => import("@/components/tools/base64-encoder-decoder"),
   ),
+  "webcam-test": dynamic(
+    () => import("@/components/tools/webcam-test"),
+  ),
   "fancy-text-generator": dynamic(
     () => import("@/components/tools/fancy-text-generator"),
   ),
