@@ -4462,13 +4462,100 @@ export const tools: Tool[] = [
   {
     slug: "dns-lookup",
     name: "DNS Lookup Tool",
-    tagline: "Look up A, AAAA, MX, TXT, CNAME records and more.",
+    tagline: "Resolve A, AAAA, MX, TXT, CNAME, NS, SOA and CAA records.",
     description:
-      "Resolve DNS records for any domain. Inspect A, AAAA, MX, TXT, CNAME, NS and SOA records instantly.",
+      "Look up DNS records for any domain — A, AAAA, CNAME, MX, TXT, NS, SOA and CAA — directly from your browser via DNS-over-HTTPS. Free and private.",
     categoryId: "developer",
     icon: Network,
-    status: "coming-soon",
-    keywords: ["dns", "lookup", "mx records", "txt records", "nameserver"],
+    status: "live",
+    featured: true,
+    keywords: [
+      "dns lookup",
+      "dns checker",
+      "dns records",
+      "mx records",
+      "txt records",
+      "cname lookup",
+      "ns records",
+      "soa record",
+      "caa record",
+      "dns over https",
+      "doh lookup",
+      "nslookup online",
+      "dig online",
+      "dns resolver",
+    ],
+    seo: {
+      title: "DNS Lookup — A, AAAA, MX, TXT, CNAME, NS, SOA & CAA Records",
+      description:
+        "Look up DNS records for any domain — A, AAAA, CNAME, MX, TXT, NS, SOA and CAA — instantly with Toollyz DNS Lookup. Uses DNS-over-HTTPS from your browser; no Toollyz server.",
+      what:
+        "A DNS Lookup Tool resolves the records that map a domain to IP addresses, mail servers, name servers and configuration metadata. Toollyz DNS Lookup uses DNS-over-HTTPS (DoH) directly from your browser against Cloudflare's public 1.1.1.1 resolver, so there's no Toollyz server in the path. Pick which record types you want — A and AAAA for IPv4/IPv6 addresses, CNAME for aliases, MX for mail, TXT for SPF/DKIM/verification, NS for name servers, SOA for zone metadata and CAA for certificate authority authorization — and each is queried in parallel. Results show every record with its data and TTL, plus a clear NXDOMAIN state when a record doesn't exist. Because DoH bypasses your system resolver, results reflect the authoritative zone via Cloudflare and may differ slightly from your local DNS, which is useful for debugging caching and propagation issues.",
+      how: [
+        "Type a domain (no http:// needed) and pick the record types you want.",
+        "Click Lookup — every type is queried in parallel from your browser.",
+        "Read each record's data and TTL. NXDOMAIN means that record doesn't exist.",
+        "Try one of the suggested popular domains, or copy the results in dig-style format.",
+      ],
+      benefits: [
+        "All the common record types: A, AAAA, CNAME, MX, TXT, NS, SOA and CAA.",
+        "Parallel queries for every selected type — fast even for big lookups.",
+        "Clean per-record display with TTL and a clear NXDOMAIN state when missing.",
+        "Bypasses your system DNS via DNS-over-HTTPS, useful for caching/propagation checks.",
+        "Domain normalization — paste a URL and it strips the protocol/path for you.",
+        "Popular-domain shortcuts to compare zones quickly.",
+        "Copy the results in a dig-style text format for tickets or notes.",
+        "100% private — requests go directly to Cloudflare's 1.1.1.1 from your browser.",
+      ],
+      relatedSlugs: [
+        "ip-address-finder",
+        "ping-test",
+        "internet-speed-test",
+        "jwt-decoder",
+      ],
+      faqs: [
+        {
+          q: "What is DNS?",
+          a: "DNS (Domain Name System) maps human-readable domains like toollyz.com to the IP addresses servers use to talk to each other. Different record types carry different mappings — addresses (A/AAAA), mail (MX), text (TXT) and more.",
+        },
+        {
+          q: "What does this tool query?",
+          a: "It queries Cloudflare's public DNS-over-HTTPS (DoH) API at cloudflare-dns.com for whichever record types you've selected. Each type is fetched in parallel and the results are normalized into a common table.",
+        },
+        {
+          q: "Why use DNS-over-HTTPS from the browser?",
+          a: "A browser can't talk to your system DNS resolver directly, so DoH is the standard way to do DNS in the browser. It also makes results consistent: you see what Cloudflare's authoritative-side resolver returns, regardless of any DNS caching on your machine or network.",
+        },
+        {
+          q: "Why might my results differ from “nslookup” or “dig”?",
+          a: "Your system tools use whatever resolver your OS is configured for (often your ISP or router), which can return cached or filtered results. This tool always goes through Cloudflare 1.1.1.1 via DoH, which is closer to the authoritative answer.",
+        },
+        {
+          q: "What does NXDOMAIN mean?",
+          a: "NXDOMAIN is the DNS code for “this name does not exist” — at least for the record type you asked about. It's normal for some types (a domain may have A records but no MX, for example).",
+        },
+        {
+          q: "What is a TTL?",
+          a: "Time-to-live: how long a resolver should cache the record (in seconds). Lower TTL means changes propagate faster but more frequent lookups; higher TTL is the opposite.",
+        },
+        {
+          q: "Why are TXT records sometimes split with quotes?",
+          a: "Long TXT records are returned as multiple quoted strings concatenated. The tool unquotes and joins them so you see the actual value used by mail filters and verification tools.",
+        },
+        {
+          q: "Can I look up reverse DNS (PTR)?",
+          a: "Not yet — this tool focuses on the most common forward-zone record types (A, AAAA, CNAME, MX, TXT, NS, SOA, CAA). Reverse DNS uses a different lookup format that's a separate feature.",
+        },
+        {
+          q: "Is my domain or query sent to Toollyz?",
+          a: "No. Toollyz has no server — the DoH request goes directly from your browser to Cloudflare. Your last domain and selected types are saved only in your browser's local storage.",
+        },
+        {
+          q: "Is this DNS lookup tool free?",
+          a: "Completely free with no signup and no limits. Looking up records is available to everyone, privately in your browser.",
+        },
+      ],
+    },
   },
   {
     slug: "browser-info",
