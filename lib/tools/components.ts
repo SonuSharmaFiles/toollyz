@@ -407,6 +407,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "duplicate-file-cleaner": dynamic(
     () => import("@/components/tools/duplicate-file-cleaner"),
   ),
+  "jwt-generator": dynamic(
+    () => import("@/components/tools/jwt-generator"),
+  ),
+  "cron-time-translator": dynamic(
+    () => import("@/components/tools/cron-time-translator"),
+  ),
+  "cron-job-expression-generator": dynamic(
+    () => import("@/components/tools/cron-job-expression-generator"),
+  ),
+  "toml-formatter": dynamic(
+    () => import("@/components/tools/toml-formatter"),
+  ),
+  "sql-formatter": dynamic(
+    () => import("@/components/tools/sql-formatter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
