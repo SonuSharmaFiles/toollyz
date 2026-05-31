@@ -452,6 +452,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "nato-alphabet-converter": dynamic(
     () => import("@/components/tools/nato-alphabet-converter"),
   ),
+  "html-to-markdown": dynamic(
+    () => import("@/components/tools/html-to-markdown"),
+  ),
+  "hexadecimal-converter": dynamic(
+    () => import("@/components/tools/hexadecimal-converter"),
+  ),
+  "braille-translator": dynamic(
+    () => import("@/components/tools/braille-translator"),
+  ),
+  "unicode-character-finder": dynamic(
+    () => import("@/components/tools/unicode-character-finder"),
+  ),
+  "fake-json-data-generator": dynamic(
+    () => import("@/components/tools/fake-json-data-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
