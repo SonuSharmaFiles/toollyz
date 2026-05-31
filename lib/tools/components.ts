@@ -347,6 +347,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "temporary-email-generator": dynamic(
     () => import("@/components/tools/temporary-email-generator"),
   ),
+  "text-reverser": dynamic(
+    () => import("@/components/tools/text-reverser"),
+  ),
+  "tweet-character-counter": dynamic(
+    () => import("@/components/tools/tweet-character-counter"),
+  ),
+  "text-diff-checker": dynamic(
+    () => import("@/components/tools/text-diff-checker"),
+  ),
+  "duplicate-line-remover": dynamic(
+    () => import("@/components/tools/duplicate-line-remover"),
+  ),
+  "line-sorter": dynamic(
+    () => import("@/components/tools/line-sorter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
