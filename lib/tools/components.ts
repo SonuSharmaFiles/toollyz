@@ -512,6 +512,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "spf-record-checker": dynamic(
     () => import("@/components/tools/spf-record-checker"),
   ),
+  "http-header-checker": dynamic(
+    () => import("@/components/tools/http-header-checker"),
+  ),
+  "code-screenshot-generator": dynamic(
+    () => import("@/components/tools/code-screenshot-generator"),
+  ),
+  "box-shadow-generator": dynamic(
+    () => import("@/components/tools/box-shadow-generator"),
+  ),
+  "glassmorphism-generator": dynamic(
+    () => import("@/components/tools/glassmorphism-generator"),
+  ),
+  "css-clip-path-generator": dynamic(
+    () => import("@/components/tools/css-clip-path-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
