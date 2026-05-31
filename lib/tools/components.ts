@@ -497,6 +497,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "sitemap-validator": dynamic(
     () => import("@/components/tools/sitemap-validator"),
   ),
+  "api-response-viewer": dynamic(
+    () => import("@/components/tools/api-response-viewer"),
+  ),
+  "mime-type-checker": dynamic(
+    () => import("@/components/tools/mime-type-checker"),
+  ),
+  "exif-data-remover": dynamic(
+    () => import("@/components/tools/exif-data-remover"),
+  ),
+  "open-graph-preview": dynamic(
+    () => import("@/components/tools/open-graph-preview"),
+  ),
+  "spf-record-checker": dynamic(
+    () => import("@/components/tools/spf-record-checker"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
