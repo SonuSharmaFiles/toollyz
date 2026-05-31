@@ -467,6 +467,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "fake-json-data-generator": dynamic(
     () => import("@/components/tools/fake-json-data-generator"),
   ),
+  "yaml-to-json": dynamic(
+    () => import("@/components/tools/yaml-to-json"),
+  ),
+  "sql-dummy-data-generator": dynamic(
+    () => import("@/components/tools/sql-dummy-data-generator"),
+  ),
+  "htaccess-redirect-generator": dynamic(
+    () => import("@/components/tools/htaccess-redirect-generator"),
+  ),
+  "email-header-analyzer": dynamic(
+    () => import("@/components/tools/email-header-analyzer"),
+  ),
+  "keyword-density-checker": dynamic(
+    () => import("@/components/tools/keyword-density-checker"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
