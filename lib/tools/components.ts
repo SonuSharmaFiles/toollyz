@@ -542,6 +542,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "noise-texture-generator": dynamic(
     () => import("@/components/tools/noise-texture-generator"),
   ),
+  "youtube-tag-extractor": dynamic(
+    () => import("@/components/tools/youtube-tag-extractor"),
+  ),
+  "canonical-url-checker": dynamic(
+    () => import("@/components/tools/canonical-url-checker"),
+  ),
+  "gradient-mesh-generator": dynamic(
+    () => import("@/components/tools/gradient-mesh-generator"),
+  ),
+  "pixel-art-generator": dynamic(
+    () => import("@/components/tools/pixel-art-generator"),
+  ),
+  "lorem-ipsum-image-generator": dynamic(
+    () => import("@/components/tools/lorem-ipsum-image-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
