@@ -557,6 +557,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "lorem-ipsum-image-generator": dynamic(
     () => import("@/components/tools/lorem-ipsum-image-generator"),
   ),
+  "keyboard-shortcut-generator": dynamic(
+    () => import("@/components/tools/keyboard-shortcut-generator"),
+  ),
+  "website-source-viewer": dynamic(
+    () => import("@/components/tools/website-source-viewer"),
+  ),
+  "meta-tag-analyzer": dynamic(
+    () => import("@/components/tools/meta-tag-analyzer"),
+  ),
+  "svg-shape-generator": dynamic(
+    () => import("@/components/tools/svg-shape-generator"),
+  ),
+  "file-metadata-viewer": dynamic(
+    () => import("@/components/tools/file-metadata-viewer"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
