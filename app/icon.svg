@@ -8,13 +8,9 @@
   </defs>
   <rect width="100" height="100" rx="14" fill="#000000" />
   <g fill="url(#g)">
-    <!-- Upper T: horizontal bar with a chamfered top-right corner -->
-    <path d="M11 12 L75 12 L88 25 L88 30 L11 30 Z" />
-    <!-- Upper T: short vertical stem hanging from the right side of the bar -->
-    <path d="M59 30 L78 30 L78 53 L59 53 Z" />
-    <!-- Lower T: short vertical stem rising from the left side of the bottom bar -->
-    <path d="M22 47 L41 47 L41 70 L22 70 Z" />
-    <!-- Lower T: horizontal bar with a chamfered bottom-left corner -->
-    <path d="M12 70 L89 70 L89 88 L25 88 L12 75 Z" />
+    <!-- Upper Γ: top bar + right descender as a single path, chamfered top-right -->
+    <path d="M10 12 L76 12 L90 26 L90 52 L66 52 L66 32 L10 32 Z" />
+    <!-- Lower Γ: bottom bar + left riser as a single path, chamfered bottom-left (rotated 180° of upper) -->
+    <path d="M90 88 L24 88 L10 74 L10 48 L34 48 L34 68 L90 68 Z" />
   </g>
 </svg>
