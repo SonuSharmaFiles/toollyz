@@ -392,6 +392,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "secure-file-shredder": dynamic(
     () => import("@/components/tools/secure-file-shredder"),
   ),
+  "session-id-generator": dynamic(
+    () => import("@/components/tools/session-id-generator"),
+  ),
+  "api-key-generator": dynamic(
+    () => import("@/components/tools/api-key-generator"),
+  ),
+  "uuid-validator": dynamic(
+    () => import("@/components/tools/uuid-validator"),
+  ),
+  "mac-address-lookup": dynamic(
+    () => import("@/components/tools/mac-address-lookup"),
+  ),
+  "duplicate-file-cleaner": dynamic(
+    () => import("@/components/tools/duplicate-file-cleaner"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
