@@ -362,6 +362,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "line-sorter": dynamic(
     () => import("@/components/tools/line-sorter"),
   ),
+  "duplicate-word-finder": dynamic(
+    () => import("@/components/tools/duplicate-word-finder"),
+  ),
+  "emoji-translator": dynamic(
+    () => import("@/components/tools/emoji-translator"),
+  ),
+  "youtube-timestamp-link": dynamic(
+    () => import("@/components/tools/youtube-timestamp-link"),
+  ),
+  "discord-timestamp-generator": dynamic(
+    () => import("@/components/tools/discord-timestamp-generator"),
+  ),
+  "whatsapp-link-generator": dynamic(
+    () => import("@/components/tools/whatsapp-link-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
