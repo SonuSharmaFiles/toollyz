@@ -35,6 +35,7 @@ import {
   buildMenuHtml,
   newItem,
   newSection,
+  type LogoFrame,
   type MenuInput,
   type MenuItem,
   type MenuSection,
@@ -231,7 +232,12 @@ export default function QrMenuGenerator() {
             </Select>
           </Field>
           <Field label="Upload logo (optional)">
-            <LogoUpload value={menu.logoUrl} onChange={(v) => patch("logoUrl", v)} />
+            <LogoUpload
+              value={menu.logoUrl}
+              onChange={(v) => patch("logoUrl", v)}
+              frame={menu.logoFrame ?? "circle"}
+              onFrameChange={(f) => patch("logoFrame", f)}
+            />
           </Field>
           <Field label="Brand colour">
             <ColorRow value={menu.brandColor} onChange={(v) => patch("brandColor", v)} />
@@ -406,11 +412,22 @@ function safe(name: string): string {
 const LOGO_MAX_BYTES = 512 * 1024; // 512 KB raw file cap → ~700 KB base64
 const ACCEPTED_LOGO_MIME = /^image\/(png|jpe?g|webp|svg\+xml|gif)$/;
 
-function LogoUpload({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+function LogoUpload({
+  value,
+  onChange,
+  frame,
+  onFrameChange,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+  frame: LogoFrame;
+  onFrameChange: (f: LogoFrame) => void;
+}) {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
   const [fileName, setFileName] = React.useState<string | null>(null);
 
-  function readFile(file: File) {
+  function readFile(file: File | undefined) {
+    if (!file) return;
     if (!ACCEPTED_LOGO_MIME.test(file.type)) {
       toast.error("Pick a PNG, JPG, WebP, GIF or SVG image.");
       return;
@@ -429,47 +446,47 @@ function LogoUpload({ value, onChange }: { value: string; onChange: (v: string) 
     reader.readAsDataURL(file);
   }
 
+  function openPicker() {
+    inputRef.current?.click();
+  }
+
   function clear() {
     onChange("");
     setFileName(null);
     if (inputRef.current) inputRef.current.value = "";
   }
 
-  function replace() {
-    inputRef.current?.click();
-  }
-
-  function onPickerChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const f = e.target.files?.[0];
-    if (f) readFile(f);
-  }
-
-  function onDrop(e: React.DragEvent<HTMLLabelElement>) {
-    e.preventDefault();
-    const f = e.dataTransfer.files?.[0];
-    if (f) readFile(f);
-  }
-
   const hasLogo = value.length > 0;
-  // Estimate the embedded byte cost (base64 inflates by ~4/3).
+  // Estimate the embedded byte cost (base64 inflates length by ~4/3).
   const sizeKb = hasLogo ? Math.round((value.length * 0.75) / 1024) : 0;
 
   return (
-    <div className="space-y-1.5">
+    <div className="space-y-2">
+      {/* Single hidden input — both the empty-state drop zone and the
+          Replace button trigger it via .click(). The earlier <label>
+          without an htmlFor/nested input did nothing on click. */}
       <input
         ref={inputRef}
         type="file"
         accept="image/png,image/jpeg,image/webp,image/svg+xml,image/gif"
         className="hidden"
-        onChange={onPickerChange}
+        onChange={(e) => {
+          readFile(e.target.files?.[0]);
+          // Reset so picking the same file twice in a row still fires onChange.
+          e.target.value = "";
+        }}
       />
+
       {hasLogo ? (
-        <div className="flex items-center gap-3 rounded-lg border border-border/60 bg-background p-2">
+        <div className="flex flex-wrap items-center gap-3 rounded-lg border border-border/60 bg-background p-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={value}
             alt="Logo preview"
-            className="size-14 shrink-0 rounded-lg border border-border/60 bg-white object-contain p-1"
+            className={cn(
+              "size-14 shrink-0 border border-border/60 bg-white p-1",
+              frame === "circle" ? "rounded-full object-cover" : "rounded-lg object-contain",
+            )}
           />
           <div className="min-w-0 flex-1 space-y-0.5">
             <div className="truncate text-xs font-medium text-foreground">{fileName ?? "Embedded logo"}</div>
@@ -477,7 +494,7 @@ function LogoUpload({ value, onChange }: { value: string; onChange: (v: string) 
               ~{sizeKb} KB · embedded inline (no external image dependency)
             </div>
           </div>
-          <Button type="button" size="sm" variant="outline" onClick={replace}>
+          <Button type="button" size="sm" variant="outline" onClick={openPicker}>
             <Upload className="size-3.5" />
             Replace
           </Button>
@@ -486,20 +503,74 @@ function LogoUpload({ value, onChange }: { value: string; onChange: (v: string) 
           </Button>
         </div>
       ) : (
-        <label
+        <button
+          type="button"
+          onClick={openPicker}
           onDragOver={(e) => e.preventDefault()}
-          onDrop={onDrop}
-          className={cn(
-            "flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-border bg-background p-3 text-sm text-muted-foreground transition-colors hover:bg-muted/50",
-          )}
+          onDrop={(e) => {
+            e.preventDefault();
+            readFile(e.dataTransfer.files?.[0]);
+          }}
+          className="flex w-full cursor-pointer items-center gap-3 rounded-lg border border-dashed border-border bg-background p-3 text-left text-sm text-muted-foreground transition-colors hover:bg-muted/50"
         >
           <Upload className="size-4 shrink-0" />
           <div className="space-y-0.5">
             <div className="text-xs font-medium text-foreground">Click or drop an image</div>
             <div className="text-[10px] text-muted-foreground">PNG, JPG, WebP, GIF or SVG · up to {LOGO_MAX_BYTES / 1024} KB · embedded as data: URL inside menu.html</div>
           </div>
-        </label>
+        </button>
       )}
+
+      {/* Frame picker — always visible so the user can pick before uploading. */}
+      <div className="flex items-center justify-between gap-2 rounded-lg border border-border/60 bg-background p-1.5">
+        <span className="pl-1 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Show as</span>
+        <div className="flex gap-0.5">
+          <FrameOption label="Circular frame" value="circle" current={frame} onPick={onFrameChange} />
+          <FrameOption label="Without frame" value="none" current={frame} onPick={onFrameChange} />
+        </div>
+      </div>
+      <p className="text-[10px] text-muted-foreground">
+        {frame === "circle"
+          ? "Cropped to a 72-pixel circle — good for round brand marks."
+          : "Original aspect ratio kept; up to 96 px tall, 240 px wide — good for wordmarks and horizontal logos."}
+      </p>
     </div>
+  );
+}
+
+function FrameOption({
+  label,
+  value,
+  current,
+  onPick,
+}: {
+  label: string;
+  value: LogoFrame;
+  current: LogoFrame;
+  onPick: (v: LogoFrame) => void;
+}) {
+  const active = value === current;
+  return (
+    <button
+      type="button"
+      onClick={() => onPick(value)}
+      aria-pressed={active}
+      className={cn(
+        "inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-[11px] font-medium transition-colors",
+        active
+          ? "bg-primary text-primary-foreground"
+          : "text-muted-foreground hover:bg-muted hover:text-foreground",
+      )}
+    >
+      <span
+        aria-hidden
+        className={cn(
+          "block size-3.5 border-2 transition-colors",
+          value === "circle" ? "rounded-full" : "rounded-sm",
+          active ? "border-primary-foreground" : "border-current",
+        )}
+      />
+      {label}
+    </button>
   );
 }

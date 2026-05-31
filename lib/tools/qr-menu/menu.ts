@@ -18,6 +18,8 @@ export interface MenuSection {
   items: MenuItem[];
 }
 
+export type LogoFrame = "circle" | "none";
+
 export interface MenuInput {
   restaurantName: string;
   tagline: string;
@@ -25,6 +27,10 @@ export interface MenuInput {
   brandColor: string;
   pageBackground: string;
   logoUrl: string;
+  /** How the logo image is presented. "circle" crops to a 72px circle (good
+   * for round brand marks). "none" preserves the natural aspect ratio with
+   * a max height of 96px (good for wordmarks and horizontal logos). */
+  logoFrame: LogoFrame;
   footer: string;
   sections: MenuSection[];
 }
@@ -48,6 +54,7 @@ export const DEFAULT_MENU: MenuInput = {
   brandColor: "#0f766e",
   pageBackground: "#fef7ed",
   logoUrl: "",
+  logoFrame: "circle",
   footer: "Made with Toollyz",
   sections: [
     {
@@ -102,8 +109,13 @@ export function buildMenuHtml(menu: MenuInput): string {
     .filter((s) => s.title.trim() || s.items.length > 0)
     .map((s) => sectionHtml(s, brand, menu.currency))
     .join("");
+  const logoStyle = (menu.logoFrame ?? "circle") === "circle"
+    // Circular: hard 72×72 crop with object-fit: cover — good for round marks.
+    ? "display:block;width:72px;height:72px;border-radius:9999px;object-fit:cover;margin:0 auto 16px"
+    // No frame: preserve aspect ratio; max 96px tall, 240px wide; centered.
+    : "display:block;max-width:240px;max-height:96px;width:auto;height:auto;object-fit:contain;margin:0 auto 16px";
   const logoHtml = menu.logoUrl.trim()
-    ? `<img src="${escapeHtml(menu.logoUrl)}" alt="${escapeHtml(menu.restaurantName || "Logo")}" style="display:block;width:72px;height:72px;border-radius:9999px;object-fit:cover;margin:0 auto 16px" />`
+    ? `<img src="${escapeHtml(menu.logoUrl)}" alt="${escapeHtml(menu.restaurantName || "Logo")}" style="${logoStyle}" />`
     : "";
 
   return `<!DOCTYPE html>
