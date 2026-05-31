@@ -27,12 +27,13 @@ export function Logo({ className, showWordmark = true }: LogoProps) {
 }
 
 /**
- * The Toollyz brand mark — a gold "T" monogram inside a dark rounded
- * tile. The top bar has a chamfered upper-right corner (the bar is
- * full-width along its bottom edge and narrower along the top); the
- * foot at the bottom-left mirrors that with a chamfered lower-left
- * corner. The same path data backs `app/icon.svg` so the favicon and
- * the on-page logo stay identical.
+ * The Toollyz brand mark — two interlocking "T" monograms rendered in
+ * gold on a dark rounded tile. The upper T has a horizontal top bar
+ * with a chamfered upper-right corner and a short vertical stem
+ * hanging from the right side; the lower T is the same shape rotated
+ * 180° (chamfered lower-left corner on the bottom bar, stem rising
+ * from the left). The same path data backs `app/icon.svg` so the
+ * favicon and the on-page logo stay identical.
  */
 export function ToollyzMark({ className }: { className?: string }) {
   return (
@@ -51,12 +52,14 @@ export function ToollyzMark({ className }: { className?: string }) {
       </defs>
       <rect width="100" height="100" rx="22" fill="#000000" />
       <g fill="url(#toollyz-mark-gradient)">
-        {/* Top bar: full-width bottom edge, chamfered top-right corner */}
-        <path d="M11 14 L73 14 L89 30 L89 36 L11 36 Z" />
-        {/* Vertical stem */}
-        <path d="M38 36 L60 36 L60 92 L38 92 Z" />
-        {/* Foot extending left from the stem, chamfered bottom-left corner */}
-        <path d="M11 70 L38 70 L38 92 L23 92 L11 80 Z" />
+        {/* Upper T: horizontal bar with a chamfered top-right corner */}
+        <path d="M11 12 L75 12 L88 25 L88 30 L11 30 Z" />
+        {/* Upper T: short vertical stem hanging from the right side of the bar */}
+        <path d="M59 30 L78 30 L78 53 L59 53 Z" />
+        {/* Lower T: short vertical stem rising from the left side of the bottom bar */}
+        <path d="M22 47 L41 47 L41 70 L22 70 Z" />
+        {/* Lower T: horizontal bar with a chamfered bottom-left corner */}
+        <path d="M12 70 L89 70 L89 88 L25 88 L12 75 Z" />
       </g>
     </svg>
   );
