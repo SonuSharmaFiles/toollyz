@@ -377,6 +377,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "whatsapp-link-generator": dynamic(
     () => import("@/components/tools/whatsapp-link-generator"),
   ),
+  "ai-prompt-enhancer": dynamic(
+    () => import("@/components/tools/ai-prompt-enhancer"),
+  ),
+  "social-post-formatter": dynamic(
+    () => import("@/components/tools/social-post-formatter"),
+  ),
+  "linkedin-post-formatter": dynamic(
+    () => import("@/components/tools/linkedin-post-formatter"),
+  ),
+  "instagram-caption-formatter": dynamic(
+    () => import("@/components/tools/instagram-caption-formatter"),
+  ),
+  "secure-file-shredder": dynamic(
+    () => import("@/components/tools/secure-file-shredder"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
