@@ -437,6 +437,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "encryption-key-generator": dynamic(
     () => import("@/components/tools/encryption-key-generator"),
   ),
+  "csv-to-json": dynamic(
+    () => import("@/components/tools/csv-to-json"),
+  ),
+  "json-to-csv": dynamic(
+    () => import("@/components/tools/json-to-csv"),
+  ),
+  "roman-numeral-converter": dynamic(
+    () => import("@/components/tools/roman-numeral-converter"),
+  ),
+  "morse-code-translator": dynamic(
+    () => import("@/components/tools/morse-code-translator"),
+  ),
+  "nato-alphabet-converter": dynamic(
+    () => import("@/components/tools/nato-alphabet-converter"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
