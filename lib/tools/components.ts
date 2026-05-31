@@ -572,6 +572,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "file-metadata-viewer": dynamic(
     () => import("@/components/tools/file-metadata-viewer"),
   ),
+  "sql-query-beautifier": dynamic(
+    () => import("@/components/tools/sql-query-beautifier"),
+  ),
+  "dkim-record-checker": dynamic(
+    () => import("@/components/tools/dkim-record-checker"),
+  ),
+  "dmarc-record-checker": dynamic(
+    () => import("@/components/tools/dmarc-record-checker"),
+  ),
+  "mobile-friendly-test": dynamic(
+    () => import("@/components/tools/mobile-friendly-test"),
+  ),
+  "ssl-certificate-checker": dynamic(
+    () => import("@/components/tools/ssl-certificate-checker"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
