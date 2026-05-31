@@ -27,10 +27,12 @@ export function Logo({ className, showWordmark = true }: LogoProps) {
 }
 
 /**
- * The Toollyz brand mark — a gold "T" monogram (top bar with a slanted
- * right edge, vertical stem, small foot at the bottom-left) inside a
- * dark rounded tile. Reused by the navbar Logo, the footer, and the
- * favicon/apple-icon (which copy the same path data).
+ * The Toollyz brand mark — a gold "T" monogram inside a dark rounded
+ * tile. The top bar has a chamfered upper-right corner (the bar is
+ * full-width along its bottom edge and narrower along the top); the
+ * foot at the bottom-left mirrors that with a chamfered lower-left
+ * corner. The same path data backs `app/icon.svg` so the favicon and
+ * the on-page logo stay identical.
  */
 export function ToollyzMark({ className }: { className?: string }) {
   return (
@@ -42,17 +44,19 @@ export function ToollyzMark({ className }: { className?: string }) {
     >
       <defs>
         <linearGradient id="toollyz-mark-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#f0d68a" />
-          <stop offset="35%" stopColor="#d6ad55" />
-          <stop offset="70%" stopColor="#a87f33" />
-          <stop offset="100%" stopColor="#6e5021" />
+          <stop offset="0%" stopColor="#f6dc7e" />
+          <stop offset="45%" stopColor="#d6a945" />
+          <stop offset="100%" stopColor="#6b4f1f" />
         </linearGradient>
       </defs>
-      <rect width="100" height="100" rx="22" fill="#0a0a0a" />
+      <rect width="100" height="100" rx="22" fill="#000000" />
       <g fill="url(#toollyz-mark-gradient)">
-        <path d="M11 13 H85 L67 36 H11 Z" />
-        <path d="M36 36 H56 V90 H36 Z" />
-        <path d="M11 70 H36 V90 H11 Z" />
+        {/* Top bar: full-width bottom edge, chamfered top-right corner */}
+        <path d="M11 14 L73 14 L89 30 L89 36 L11 36 Z" />
+        {/* Vertical stem */}
+        <path d="M38 36 L60 36 L60 92 L38 92 Z" />
+        {/* Foot extending left from the stem, chamfered bottom-left corner */}
+        <path d="M11 70 L38 70 L38 92 L23 92 L11 80 Z" />
       </g>
     </svg>
   );
