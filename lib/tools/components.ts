@@ -527,6 +527,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "css-clip-path-generator": dynamic(
     () => import("@/components/tools/css-clip-path-generator"),
   ),
+  "neumorphism-generator": dynamic(
+    () => import("@/components/tools/neumorphism-generator"),
+  ),
+  "svg-blob-generator": dynamic(
+    () => import("@/components/tools/svg-blob-generator"),
+  ),
+  "css-animation-generator": dynamic(
+    () => import("@/components/tools/css-animation-generator"),
+  ),
+  "pattern-background-generator": dynamic(
+    () => import("@/components/tools/pattern-background-generator"),
+  ),
+  "noise-texture-generator": dynamic(
+    () => import("@/components/tools/noise-texture-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
