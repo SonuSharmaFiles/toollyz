@@ -422,6 +422,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "sql-formatter": dynamic(
     () => import("@/components/tools/sql-formatter"),
   ),
+  "sentence-rewriter": dynamic(
+    () => import("@/components/tools/sentence-rewriter"),
+  ),
+  "ai-text-humanizer": dynamic(
+    () => import("@/components/tools/ai-text-humanizer"),
+  ),
+  "regex-generator": dynamic(
+    () => import("@/components/tools/regex-generator"),
+  ),
+  "terminal-cheatsheet": dynamic(
+    () => import("@/components/tools/terminal-cheatsheet"),
+  ),
+  "encryption-key-generator": dynamic(
+    () => import("@/components/tools/encryption-key-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
