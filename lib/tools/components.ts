@@ -482,6 +482,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "keyword-density-checker": dynamic(
     () => import("@/components/tools/keyword-density-checker"),
   ),
+  "binary-to-decimal": dynamic(
+    () => import("@/components/tools/binary-to-decimal"),
+  ),
+  "decimal-to-binary": dynamic(
+    () => import("@/components/tools/decimal-to-binary"),
+  ),
+  "keyboard-layout-visualizer": dynamic(
+    () => import("@/components/tools/keyboard-layout-visualizer"),
+  ),
+  "random-file-generator": dynamic(
+    () => import("@/components/tools/random-file-generator"),
+  ),
+  "sitemap-validator": dynamic(
+    () => import("@/components/tools/sitemap-validator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
