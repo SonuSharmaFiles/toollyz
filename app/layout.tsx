@@ -63,9 +63,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
-  icons: {
-    icon: `${SITE.basePath}/favicon.ico`,
-  },
+  // Icons are auto-detected from app/icon.svg + app/apple-icon.tsx (Next.js file conventions).
   formatDetection: { telephone: false, email: false, address: false },
 };
 
