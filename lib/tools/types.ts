@@ -17,6 +17,9 @@ export interface ToolSEO {
   relatedSlugs?: string[];
 }
 
+// Note: seo content lives in `registry-seo.ts` (a side-table keyed by
+// slug) so it stays out of the client search-index bundle. Server-only
+// tool pages read it via `getToolSeo(slug)`.
 export interface Tool {
   slug: string;
   name: string;
@@ -27,7 +30,6 @@ export interface Tool {
   status: ToolStatus;
   featured?: boolean;
   keywords: string[];
-  seo?: ToolSEO;
 }
 
 export interface Category {

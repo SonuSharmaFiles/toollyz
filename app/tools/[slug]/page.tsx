@@ -4,6 +4,7 @@ import { ToolLayout } from "@/components/shared/tool-layout";
 import { ComingSoon } from "@/components/shared/coming-soon";
 import { JsonLd, softwareApplicationSchema, faqSchema, breadcrumbSchema } from "@/lib/seo/json-ld";
 import { getToolBySlug, tools } from "@/lib/tools/registry";
+import { getToolSeo } from "@/lib/tools/registry-seo";
 import { getToolComponent } from "@/lib/tools/components";
 import { getCategoryById } from "@/lib/tools/categories";
 import { toolMetadata } from "@/lib/seo/metadata";
@@ -20,7 +21,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const tool = getToolBySlug(slug);
   if (!tool) return {};
-  return toolMetadata(tool);
+  // Pull seo from the side-table so we don't drag its 1 MB of copy
+  // into the client search-index chunk.
+  return toolMetadata(tool, getToolSeo(slug));
 }
 
 export default async function ToolPage({ params }: PageProps) {
@@ -28,11 +31,12 @@ export default async function ToolPage({ params }: PageProps) {
   const tool = getToolBySlug(slug);
   if (!tool) notFound();
 
+  const seo = getToolSeo(slug);
   const category = getCategoryById(tool.categoryId);
   const ToolComponent = getToolComponent(tool.slug);
 
   const schemas: object[] = [
-    softwareApplicationSchema(tool),
+    softwareApplicationSchema(tool, seo),
     breadcrumbSchema([
       { name: "Home", href: "/" },
       { name: "Tools", href: "/tools" },
@@ -40,12 +44,12 @@ export default async function ToolPage({ params }: PageProps) {
       { name: tool.name, href: `/tools/${tool.slug}` },
     ]),
   ];
-  if (tool.seo?.faqs?.length) schemas.push(faqSchema(tool.seo.faqs));
+  if (seo?.faqs?.length) schemas.push(faqSchema(seo.faqs));
 
   return (
     <>
       <JsonLd data={schemas} />
-      <ToolLayout tool={tool}>
+      <ToolLayout tool={tool} seo={seo}>
         {ToolComponent ? <ToolComponent /> : <ComingSoon tool={tool} />}
       </ToolLayout>
     </>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ToolCard } from "@/components/shared/tool-card";
-import { getRelatedTools } from "@/lib/tools/registry";
+import { getRelatedTools } from "@/lib/tools/registry-seo";
 import { getCategoryById } from "@/lib/tools/categories";
 
 interface RelatedToolsProps {

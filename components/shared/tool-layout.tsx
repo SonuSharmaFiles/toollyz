@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { Tool } from "@/lib/tools/types";
+import type { Tool, ToolSEO } from "@/lib/tools/types";
 import { ToolHeader } from "@/components/shared/tool-header";
 import { FAQSection } from "@/components/shared/faq-section";
 import { RelatedTools } from "@/components/shared/related-tools";
@@ -7,11 +7,11 @@ import { Sparkles, BookOpen, CheckCircle2 } from "lucide-react";
 
 interface ToolLayoutProps {
   tool: Tool;
+  seo?: ToolSEO;
   children: ReactNode;
 }
 
-export function ToolLayout({ tool, children }: ToolLayoutProps) {
-  const seo = tool.seo;
+export function ToolLayout({ tool, seo, children }: ToolLayoutProps) {
 
   return (
     <article className="container-page space-y-12 py-10 sm:py-14 lg:py-16">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE, absoluteUrl } from "./constants";
-import type { Tool, Category } from "@/lib/tools/types";
+import type { Tool, Category, ToolSEO } from "@/lib/tools/types";
 
 interface BuildMetadataInput {
   title: string;
@@ -67,11 +67,13 @@ export function buildMetadata({
 // keyword tail stays visible in search results.
 const TITLE_SUFFIX_FITS_MAX = 50;
 
-export function toolMetadata(tool: Tool): Metadata {
+export function toolMetadata(tool: Tool, seo?: ToolSEO): Metadata {
   // Default: title is brandless here; the root layout template
   // ("%s | Toollyz") appends the brand exactly once.
-  const rawTitle = tool.seo?.title ?? tool.name;
-  const description = tool.seo?.description ?? tool.tagline;
+  // `seo` is passed in by the tool page (sourced from registry-seo.ts);
+  // it's kept optional so callers without seo content still work.
+  const rawTitle = seo?.title ?? tool.name;
+  const description = seo?.description ?? tool.tagline;
   const meta = buildMetadata({
     title: rawTitle,
     description,

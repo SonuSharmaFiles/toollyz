@@ -1,5 +1,5 @@
 import { SITE, absoluteUrl } from "./constants";
-import type { Tool, ToolFAQ } from "@/lib/tools/types";
+import type { Tool, ToolFAQ, ToolSEO } from "@/lib/tools/types";
 
 export function websiteSchema() {
   return {
@@ -26,15 +26,17 @@ export function organizationSchema() {
   };
 }
 
-export function softwareApplicationSchema(tool: Tool) {
+export function softwareApplicationSchema(tool: Tool, seo?: ToolSEO) {
   // Note: we intentionally do NOT emit an `aggregateRating` — Google's
   // structured-data policy requires real user ratings, and we don't
   // collect any. Wire one in here only when there's a real rating source.
+  // `seo` is passed in by the tool page (from registry-seo.ts); optional
+  // so callers without seo content still produce a valid schema.
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: tool.name,
-    description: tool.seo?.description ?? tool.tagline,
+    description: seo?.description ?? tool.tagline,
     url: absoluteUrl(`/tools/${tool.slug}/`),
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Any",
