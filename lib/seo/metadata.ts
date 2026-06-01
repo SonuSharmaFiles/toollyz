@@ -28,7 +28,10 @@ export function buildMetadata({
     title,
     description,
     keywords: keywords?.length ? keywords : [...SITE.keywords],
-    alternates: { canonical: url },
+    // canonical + a single `en` hreflang. Single-locale today; if/when
+    // we ship a translation, add the locale here and Next will emit
+    // matching alternate links.
+    alternates: { canonical: url, languages: { en: url } },
     openGraph: {
       type,
       url,

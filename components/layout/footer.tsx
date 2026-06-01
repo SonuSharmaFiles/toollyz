@@ -2,6 +2,7 @@ import Link from "next/link";
 import { GithubIcon, TwitterIcon, LinkedinIcon } from "@/components/shared/social-icons";
 import { Logo } from "@/components/shared/logo";
 import { FOOTER_LINKS, SITE } from "@/lib/seo/constants";
+import { categories } from "@/lib/tools/categories";
 
 const SOCIAL_LINKS = [
   { label: "Twitter", href: "https://twitter.com", Icon: TwitterIcon },
@@ -75,6 +76,31 @@ export function Footer() {
               </ul>
             </nav>
           ))}
+          {/* Real category links — gives crawlers 8 more internal-link signals
+              per page and lets users jump straight into each section. */}
+          <nav
+            aria-labelledby="footer-categories"
+            className="space-y-3"
+          >
+            <h3
+              id="footer-categories"
+              className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground"
+            >
+              Categories
+            </h3>
+            <ul className="space-y-2">
+              {categories.map((c) => (
+                <li key={c.id}>
+                  <Link
+                    href={`/category/${c.slug}`}
+                    className="text-sm text-foreground/80 transition-colors hover:text-foreground"
+                  >
+                    {c.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>

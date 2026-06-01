@@ -40,8 +40,10 @@ export const FOOTER_LINKS: { title: string; links: { label: string; href: string
   {
     title: "Product",
     links: [
+      // Categories live in their own footer column (rendered from
+      // `categories` in components/layout/footer.tsx), so this column
+      // skips them to avoid duplication.
       { label: "All Tools", href: "/tools" },
-      { label: "Categories", href: "/#categories" },
       { label: "Featured", href: "/#featured" },
     ],
   },
