@@ -36,9 +36,12 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
+        # Now served from the apex domain toollyz.com (set via CNAME in
+        # `public/CNAME`), so no basePath / assetPrefix is needed and
+        # every canonical / OG / sitemap URL points at the real host.
         env:
-          NEXT_PUBLIC_BASE_PATH: /toollyz
-          NEXT_PUBLIC_SITE_URL: https://sonusharmafiles.github.io/toollyz
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: https://toollyz.com
         run: pnpm build
 
       - name: Disable Jekyll

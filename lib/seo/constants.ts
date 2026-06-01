@@ -5,11 +5,10 @@ export const SITE = {
   tagline: "All-in-one online tools for everyone",
   description:
     "A premium suite of fast, privacy-first online tools. Generate, convert, format, and create — all in your browser, no signup required.",
-  // The default points at the live GitHub Pages deployment. The CI build
-  // overrides this with NEXT_PUBLIC_SITE_URL when a different canonical
-  // host (e.g. a future custom domain) is wired up. Avoid hard-coding a
-  // domain we don't actually own.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sonusharmafiles.github.io/toollyz",
+  // The default points at the live custom domain. CI overrides this
+  // with NEXT_PUBLIC_SITE_URL only if/when we need a different host
+  // for a preview environment.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://toollyz.com",
   basePath: BASE_PATH,
   // og:image is emitted by app/opengraph-image.tsx (and per-route
   // variants in app/tools/[slug]/opengraph-image.tsx) — Next's file
