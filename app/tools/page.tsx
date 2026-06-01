@@ -56,11 +56,18 @@ export default function ToolsIndexPage() {
         </p>
       </div>
 
+      {/* Visually hidden section heading anchors the h3 tool-card titles
+          below so the page never skips from h1 → h3 — fixes the WCAG
+          1.3.1 / 2.4.6 heading-hierarchy violation. */}
+      <h2 id="tools-list-heading" className="sr-only">
+        Tool directory
+      </h2>
+
       {/* The full list — server-rendered so every tool is in the HTML.
           The client filter toggles `hidden` on individual <li>s. */}
       <ul
         id="tools-list"
-        aria-label={`${ALL_TOOLS.length} tools`}
+        aria-labelledby="tools-list-heading"
         className="grid list-none gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
         {ALL_TOOLS.map((tool) => {

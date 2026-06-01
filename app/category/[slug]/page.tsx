@@ -78,16 +78,24 @@ export default async function CategoryPage({ params }: PageProps) {
             No tools in this category yet — check back soon.
           </div>
         ) : (
-          <ul
-            aria-label={`${tools.length} ${category.name} tools`}
-            className="grid list-none gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-          >
-            {tools.map((tool) => (
-              <li key={tool.slug}>
-                <ToolCard tool={tool} />
-              </li>
-            ))}
-          </ul>
+          <>
+            {/* Visually hidden section heading anchors the h3 tool-card
+                titles below so the page never skips from h1 → h3 — fixes
+                the WCAG 1.3.1 / 2.4.6 heading-hierarchy violation. */}
+            <h2 id="category-tools-heading" className="sr-only">
+              {category.name} tool directory
+            </h2>
+            <ul
+              aria-labelledby="category-tools-heading"
+              className="grid list-none gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            >
+              {tools.map((tool) => (
+                <li key={tool.slug}>
+                  <ToolCard tool={tool} />
+                </li>
+              ))}
+            </ul>
+          </>
         )}
       </div>
     </>
