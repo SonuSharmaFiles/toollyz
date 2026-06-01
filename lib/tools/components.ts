@@ -617,6 +617,12 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "packing-slip-generator": dynamic(
     () => import("@/components/tools/packing-slip-generator"),
   ),
+  "website-uptime-monitor": dynamic(
+    () => import("@/components/tools/website-uptime-monitor"),
+  ),
+  "website-screenshot-generator": dynamic(
+    () => import("@/components/tools/website-screenshot-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
