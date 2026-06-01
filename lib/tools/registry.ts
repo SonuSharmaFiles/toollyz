@@ -262,7 +262,7 @@ export const tools: Tool[] = [
         "Runs 100% in your browser — frames go camera → canvas → jsQR → text, all client-side.",
         "Works in mobile browsers (iOS Safari 14+, Android Chrome) and desktop browsers.",
       ],
-      relatedSlugs: ["qr-code-generator", "wifi-qr-code-generator", "qr-menu-generator", "favicon-generator-from-text"],
+      relatedSlugs: ["qr-code-generator", "wifi-qr-code-generator", "qr-menu-generator", "favicon-from-text"],
       faqs: [
         { q: "Why does the camera need permission?", a: "Browsers require explicit permission to access camera or microphone — it's a hard requirement of the MediaStream API. The permission is per-origin, so granting it on toollyz.com persists until you revoke it in browser settings." },
         { q: "Does the scanner upload my QR codes anywhere?", a: "No. The video stream stays inside the browser, gets drawn onto a hidden canvas frame-by-frame, and the pixel array goes straight into jsQR (a JavaScript library that runs on your CPU). The decoded text appears on the page but the frames and the text never leave your device." },
@@ -12871,7 +12871,7 @@ export const tools: Tool[] = [
         "Configurable threshold for breaking inline arrays into multi-line.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["json-formatter", "yaml-formatter", "xml-formatter", "html-minifier"],
+      relatedSlugs: ["json-formatter", "yaml-to-json", "xml-formatter", "html-minifier"],
       faqs: [
         { q: "Does this support the full TOML 1.0 spec?", a: "It supports the subset that covers 95% of real-world config files — standard tables, dotted keys, inline tables, all string forms, all integer/float forms, booleans, inline and multi-line arrays, and array-of-tables. Some edge cases (mixed-type arrays in spec-strict mode, locale-specific dates) may parse but not re-emit identically." },
         { q: "Will it work on Cargo.toml?", a: "Yes — Cargo.toml is one of our main test cases. Dependencies, features, workspace members, build profiles all round-trip cleanly." },
@@ -12926,7 +12926,7 @@ export const tools: Tool[] = [
         "Filename, theme, language and style settings persist in localStorage.",
         "Runs 100% in your browser — no server, no upload, no telemetry.",
       ],
-      relatedSlugs: ["html-minifier", "css-minifier", "js-minifier", "json-formatter"],
+      relatedSlugs: ["html-minifier", "css-minifier", "javascript-minifier", "json-formatter"],
       faqs: [
         { q: "How is this different from Carbon or Ray.so?", a: "Both are excellent — but they're SaaS, send your code to a server, and require an internet connection. This tool runs entirely in your browser, never uploads anything, and has no usage limits." },
         { q: "Why does my code look slightly different from VS Code?", a: "The highlighter here is regex-driven and covers the common 80% of each language — it knows keywords, strings, numbers, comments and function calls, but it doesn't have a full parser. For most snippets the result is indistinguishable; for very edge-case syntax (template literals with embedded expressions, JSX inside TS, etc.) some tokens may fall through to the default colour." },
@@ -15225,7 +15225,7 @@ export const tools: Tool[] = [
         "Dedupes status values + name servers case-insensitively.",
         "Runs 100% in your browser — no WHOIS lookup, no registry contact.",
       ],
-      relatedSlugs: ["whois-domain-lookup", "ssl-certificate-checker", "canonical-url-checker", "redirect-chain-checker"],
+      relatedSlugs: ["whois-lookup", "ssl-certificate-checker", "canonical-url-checker", "redirect-chain-checker"],
       faqs: [
         { q: "Can it look up a domain directly?", a: "No — WHOIS lookups require port 43 TCP or a registry's HTTPS API, neither of which works from a static-export browser app. Run `whois` locally and paste the output." },
         { q: "Why doesn't my .de WHOIS show an expiry date?", a: "DENIC (the .de registry) doesn't publish expiry dates via WHOIS as a privacy measure. The tool flags this as 'info' — the record is parsed correctly, just incomplete." },
@@ -15659,7 +15659,7 @@ export const tools: Tool[] = [
         "Runs 100% in your browser — no server-side Puppeteer / Playwright / Chromium.",
         "Sample HTML demonstrates inline styles, gradients, grids, and typography all rendering correctly.",
       ],
-      relatedSlugs: ["code-screenshot-generator", "lorem-ipsum-image-generator", "favicon-generator-from-text", "noise-texture-generator"],
+      relatedSlugs: ["code-screenshot-generator", "lorem-ipsum-image-generator", "favicon-from-text", "noise-texture-generator"],
       faqs: [
         { q: "Why doesn't my Google Font load?", a: "The SVG `foreignObject` sandbox doesn't fetch external stylesheets or @font-face urls. Inline your fonts as base64 data URLs in a `<style>` block, or rely on system fonts. The system font stack (system-ui, -apple-system, sans-serif) renders the same look across modern devices." },
         { q: "Why does my cross-origin image break the export?", a: "When the canvas contains a cross-origin image without CORS, the canvas becomes 'tainted' — `toBlob` throws SecurityError to prevent the page from reading the pixels. Use a data: URL or a same-origin asset, or set CORS headers on the image source." },
@@ -16289,7 +16289,7 @@ export const tools: Tool[] = [
         "Grid, tool, colour and palette persist in localStorage.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["color-picker", "favicon-generator-from-text", "lorem-ipsum-image-generator", "avatar-generator"],
+      relatedSlugs: ["color-picker", "favicon-from-text", "lorem-ipsum-image-generator", "meme-generator"],
       faqs: [
         { q: "Why nearest-neighbour upscaling?", a: "Bilinear or bicubic interpolation would blur the pixels at higher zoom levels — destroying the pixel-art aesthetic. Nearest-neighbour simply repeats each pixel at integer multiples, preserving the crisp edges that define the genre." },
         { q: "What size grid should I pick for an icon?", a: "16×16 (classic favicon), 32×32 (modern app icon), or 48×48 (Windows taskbar). For modern web icons go 64×64 native + 8× export = 512 px, or directly export at 32×." },
@@ -16348,7 +16348,7 @@ export const tools: Tool[] = [
         "Copy PNG to clipboard (where supported) or download PNG / JPG.",
         "Runs 100% in your browser — no server, no third-party CDN dependency.",
       ],
-      relatedSlugs: ["color-picker", "favicon-generator-from-text", "noise-texture-generator", "image-resizer"],
+      relatedSlugs: ["color-picker", "favicon-from-text", "noise-texture-generator", "image-resizer"],
       faqs: [
         { q: "How is this different from placeholder.com or via.placeholder.com?", a: "Those are hosted services — they require internet, and they go down. This generator runs entirely in your browser. The labelled image is identical visually but the asset is yours to download once, then host yourself (or embed as a data URL)." },
         { q: "Why use devicePixelRatio?", a: "Retina screens have 2× or 3× pixel density. Rendering at 1× and letting the browser scale results in blurry text. We multiply the canvas dimensions by devicePixelRatio (capped at 2 to avoid huge files) and `ctx.scale` so the on-screen image looks sharp and the export is high-res." },
@@ -16403,7 +16403,7 @@ export const tools: Tool[] = [
         "URL parsing happens entirely in your browser — no API keys, no rate limits.",
         "Settings persist in localStorage.",
       ],
-      relatedSlugs: ["youtube-tag-extractor", "youtube-timestamp-link-generator", "qr-code-generator", "image-resizer"],
+      relatedSlugs: ["youtube-tag-extractor", "youtube-timestamp-link", "qr-code-generator", "image-resizer"],
       faqs: [
         { q: "Why doesn't `maxresdefault.jpg` always work?", a: "YouTube only generates maxres for videos uploaded at 720p or higher. For older or low-res videos, the maxres URL 404s. The live preview makes this obvious — if the maxres card shows a broken image, fall back to `sddefault.jpg` (640×480), which exists for every video." },
         { q: "Are these CDN URLs legal to use?", a: "Hotlinking thumbnails for legitimate use cases (preview cards, embeds, course materials) is fine. Republishing without attribution or in commercial contexts may violate the platform's TOS — check each platform's policy. Toollyz just builds the URL." },
@@ -16462,7 +16462,7 @@ export const tools: Tool[] = [
         "Print preview hides the editor and shows only the receipt for a clean output.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["invoice-generator", "vcard-generator", "digital-business-card-creator", "qr-menu-generator"],
+      relatedSlugs: ["invoice-generator", "vcard-generator", "digital-business-card", "qr-menu-generator"],
       faqs: [
         { q: "Will the PDF be the same as a real thermal receipt?", a: "Visually yes — same layout, same monospace font, same 80mm width. The PDF is the browser's rendering of the on-screen receipt. To save as PDF: click Print, then in the print dialog choose 'Save as PDF' as the destination." },
         { q: "Does the tax apply before or after the discount?", a: "After. The discount reduces the taxable base, then tax is calculated on the discounted subtotal. This is the convention in most tax jurisdictions (US sales tax, EU VAT). If yours is different, hand-edit the tax rate to compensate." },

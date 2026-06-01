@@ -7,10 +7,10 @@ export function websiteSchema() {
     "@type": "WebSite",
     name: SITE.name,
     description: SITE.description,
-    url: SITE.url,
+    url: absoluteUrl("/"),
     potentialAction: {
       "@type": "SearchAction",
-      target: `${SITE.url}/tools?q={search_term_string}`,
+      target: `${absoluteUrl("/tools/")}?q={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
   };
@@ -21,24 +21,24 @@ export function organizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE.name,
-    url: SITE.url,
+    url: absoluteUrl("/"),
     logo: absoluteUrl("/og-default.png"),
   };
 }
 
 export function softwareApplicationSchema(tool: Tool) {
+  // Note: we intentionally do NOT emit an `aggregateRating` — Google's
+  // structured-data policy requires real user ratings, and we don't
+  // collect any. Wire one in here only when there's a real rating source.
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: tool.name,
     description: tool.seo?.description ?? tool.tagline,
-    url: absoluteUrl(`/tools/${tool.slug}`),
+    url: absoluteUrl(`/tools/${tool.slug}/`),
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    aggregateRating: tool.status === "live"
-      ? { "@type": "AggregateRating", ratingValue: "4.9", ratingCount: "128" }
-      : undefined,
   };
 }
 
@@ -67,9 +67,15 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
       "@type": "ListItem",
       position: idx + 1,
       name: item.name,
-      item: absoluteUrl(item.href),
+      item: absoluteUrl(withTrailingSlash(item.href)),
     })),
   };
+}
+
+function withTrailingSlash(href: string): string {
+  if (href === "/" || href.endsWith("/")) return href;
+  if (href.includes("?") || href.includes("#")) return href;
+  return `${href}/`;
 }
 
 interface JsonLdProps {

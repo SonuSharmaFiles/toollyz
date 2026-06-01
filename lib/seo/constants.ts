@@ -5,7 +5,11 @@ export const SITE = {
   tagline: "All-in-one online tools for everyone",
   description:
     "A premium suite of fast, privacy-first online tools. Generate, convert, format, and create — all in your browser, no signup required.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://toollyz.com",
+  // The default points at the live GitHub Pages deployment. The CI build
+  // overrides this with NEXT_PUBLIC_SITE_URL when a different canonical
+  // host (e.g. a future custom domain) is wired up. Avoid hard-coding a
+  // domain we don't actually own.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sonusharmafiles.github.io/toollyz",
   basePath: BASE_PATH,
   ogImage: `${BASE_PATH}/og-default.png`,
   twitter: "@toollyz",
