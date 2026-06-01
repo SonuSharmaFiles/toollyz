@@ -93,9 +93,22 @@ export function toolMetadata(tool: Tool, seo?: ToolSEO): Metadata {
   return meta;
 }
 
+// Categories whose names are already plural ("Calculators",
+// "Generators", "Converters") get the bare name as their heading —
+// otherwise we'd render "Calculators tools" / "Generators tools".
+// Singular names ("Image", "Text", "Developer", "SEO", "PDF") still
+// take the " tools" suffix so the page reads naturally. The metadata
+// title and h1 both go through this helper so they stay in sync.
+export function categoryHeading(name: string): string {
+  return name.endsWith("s") ? name : `${name} tools`;
+}
+
 export function categoryMetadata(category: Category, toolCount: number): Metadata {
+  const heading = categoryHeading(category.name);
+  // Title-cased version for the <title> tag.
+  const titleCase = heading.replace(/\btools\b/, "Tools");
   return buildMetadata({
-    title: `${category.name} Tools`,
+    title: titleCase,
     description: `${category.description} Browse ${toolCount} ${category.name.toLowerCase()} tools, all free and privacy-first.`,
     path: `/category/${category.slug}`,
   });

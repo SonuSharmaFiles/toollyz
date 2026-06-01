@@ -6,6 +6,7 @@ import { ToolsFilter } from "@/components/tools/tools-filter";
 import { tools as ALL_TOOLS } from "@/lib/tools/registry";
 import { categories } from "@/lib/tools/categories";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { JsonLd, itemListSchema, breadcrumbSchema } from "@/lib/seo/json-ld";
 
 export const metadata: Metadata = buildMetadata({
   title: "All Tools",
@@ -22,8 +23,23 @@ export default function ToolsIndexPage() {
     counts[c.id] = ALL_TOOLS.filter((t) => t.categoryId === c.id).length;
   }
 
+  // ItemList JSON-LD enumerates every tool URL on the directory page —
+  // gives crawlers a clean, indexable manifest of the entire catalog
+  // (and is the canonical schema for index-style listing pages).
+  const schemas = [
+    breadcrumbSchema([
+      { name: "Home", href: "/" },
+      { name: "All Tools", href: "/tools" },
+    ]),
+    itemListSchema(
+      ALL_TOOLS.map((t) => ({ url: `/tools/${t.slug}`, name: t.name })),
+      "All Toollyz tools",
+    ),
+  ];
+
   return (
     <div className="container-page space-y-10 py-10 sm:py-14">
+      <JsonLd data={schemas} />
       <header className="space-y-3">
         <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "All Tools", href: "/tools" }]} />
         <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">

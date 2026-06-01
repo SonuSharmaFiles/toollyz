@@ -19,6 +19,12 @@ export const SITE = {
   locale: "en_US",
   themeColorLight: "#ffffff",
   themeColorDark: "#000000",
+  // ISO 8601 dates surfaced through SoftwareApplication JSON-LD on
+  // every tool page. `launchDate` is when the site went live and stays
+  // fixed; `lastReviewed` is bumped whenever a meaningful editorial /
+  // tool-engine update lands so Google sees fresh content signal.
+  launchDate: "2026-06-01",
+  lastReviewed: "2026-06-01",
   keywords: [
     "online tools",
     "free tools",

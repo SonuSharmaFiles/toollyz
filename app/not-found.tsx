@@ -2,11 +2,22 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { absoluteUrl } from "@/lib/seo/constants";
+
+// Canonical + hreflang on the 404 page too — even though it's
+// noindex, surfacing a canonical URL stops the page from resolving to
+// any of the deep error-fallback URLs Google might otherwise sample,
+// and keeps the alternate-language map consistent across the site.
+const notFoundUrl = absoluteUrl("/404");
 
 export const metadata: Metadata = {
   title: "Page not found",
   description: "The page you were looking for doesn't exist. Browse all 207 tools or head home.",
   robots: { index: false, follow: true },
+  alternates: {
+    canonical: notFoundUrl,
+    languages: { en: notFoundUrl },
+  },
 };
 
 export default function NotFound() {

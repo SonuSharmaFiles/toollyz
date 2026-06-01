@@ -4,8 +4,8 @@ import { Breadcrumb } from "@/components/shared/breadcrumb";
 import { ToolCard } from "@/components/shared/tool-card";
 import { categories, getCategoryBySlug } from "@/lib/tools/categories";
 import { getToolsByCategory } from "@/lib/tools/registry";
-import { categoryMetadata } from "@/lib/seo/metadata";
-import { JsonLd, breadcrumbSchema } from "@/lib/seo/json-ld";
+import { categoryMetadata, categoryHeading } from "@/lib/seo/metadata";
+import { JsonLd, breadcrumbSchema, itemListSchema } from "@/lib/seo/json-ld";
 import { cn } from "@/lib/utils";
 
 interface PageProps {
@@ -32,13 +32,24 @@ export default async function CategoryPage({ params }: PageProps) {
   const tools = getToolsByCategory(category.id);
   const Icon = category.icon;
 
-  const schemas = [
+  const heading = categoryHeading(category.name);
+  const schemas: object[] = [
     breadcrumbSchema([
       { name: "Home", href: "/" },
       { name: "Tools", href: "/tools" },
       { name: category.name, href: `/category/${category.slug}` },
     ]),
   ];
+  // ItemList JSON-LD enumerates every tool URL in this category —
+  // gives crawlers a clean manifest for this section's tool index.
+  if (tools.length) {
+    schemas.push(
+      itemListSchema(
+        tools.map((t) => ({ url: `/tools/${t.slug}`, name: t.name })),
+        `${heading} on Toollyz`,
+      ),
+    );
+  }
 
   return (
     <>
@@ -64,7 +75,7 @@ export default async function CategoryPage({ params }: PageProps) {
             </span>
             <div className="space-y-2">
               <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
-                {category.name} tools
+                {heading}
               </h1>
               <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground">
                 {category.description}
@@ -83,7 +94,7 @@ export default async function CategoryPage({ params }: PageProps) {
                 titles below so the page never skips from h1 → h3 — fixes
                 the WCAG 1.3.1 / 2.4.6 heading-hierarchy violation. */}
             <h2 id="category-tools-heading" className="sr-only">
-              {category.name} tool directory
+              {heading} directory
             </h2>
             <ul
               aria-labelledby="category-tools-heading"

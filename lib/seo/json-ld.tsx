@@ -39,6 +39,8 @@ export function softwareApplicationSchema(tool: Tool, seo?: ToolSEO) {
   // collect any. Wire one in here only when there's a real rating source.
   // `seo` is passed in by the tool page (from registry-seo.ts); optional
   // so callers without seo content still produce a valid schema.
+  // `datePublished` and `dateModified` are sourced from SITE constants
+  // so they update in one place — gives crawlers a freshness signal.
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -47,7 +49,29 @@ export function softwareApplicationSchema(tool: Tool, seo?: ToolSEO) {
     url: absoluteUrl(`/tools/${tool.slug}/`),
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Any",
+    datePublished: SITE.launchDate,
+    dateModified: SITE.lastReviewed,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  };
+}
+
+export interface ItemListEntry {
+  url: string;
+  name?: string;
+}
+
+export function itemListSchema(items: ItemListEntry[], name?: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    ...(name ? { name } : {}),
+    numberOfItems: items.length,
+    itemListElement: items.map((item, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      url: absoluteUrl(withTrailingSlash(item.url)),
+      ...(item.name ? { name: item.name } : {}),
+    })),
   };
 }
 
