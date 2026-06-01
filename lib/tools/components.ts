@@ -587,6 +587,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "ssl-certificate-checker": dynamic(
     () => import("@/components/tools/ssl-certificate-checker"),
   ),
+  "qr-code-scanner": dynamic(
+    () => import("@/components/tools/qr-code-scanner"),
+  ),
+  "ssl-expiry-reminder": dynamic(
+    () => import("@/components/tools/ssl-expiry-reminder"),
+  ),
+  "thumbnail-downloader": dynamic(
+    () => import("@/components/tools/thumbnail-downloader"),
+  ),
+  "broken-link-checker": dynamic(
+    () => import("@/components/tools/broken-link-checker"),
+  ),
+  "receipt-generator": dynamic(
+    () => import("@/components/tools/receipt-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
