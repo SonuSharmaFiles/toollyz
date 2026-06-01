@@ -32,7 +32,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Auto-detects scheme prefixes — paste a domain and we add https:// if missing.",
         "Lossless export — vector-precision at any output size you pick.",
       ],
-      relatedSlugs: ["qr-code-scanner", "wifi-qr-code-generator", "qr-menu-generator", "vcard-generator"],
+      relatedSlugs: ["qr-code-scanner", "wifi-qr-code-generator", "qr-menu-generator", "vcard-generator", "ascii-art-generator", "audio-volume-booster", "barcode-generator", "digital-business-card", "email-signature-generator", "fake-address-generator"],
       faqs: [
         {
           q: "Is the QR Code Generator free to use?",
@@ -107,7 +107,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Runs 100% in your browser — frames go camera → canvas → jsQR → text, all client-side.",
         "Works in mobile browsers (iOS Safari 14+, Android Chrome) and desktop browsers.",
       ],
-      relatedSlugs: ["qr-code-generator", "wifi-qr-code-generator", "qr-menu-generator", "favicon-from-text"],
+      relatedSlugs: ["qr-code-generator", "wifi-qr-code-generator", "qr-menu-generator", "favicon-from-text", "barcode-generator"],
       faqs: [
         { q: "Why does the camera need permission?", a: "Browsers require explicit permission to access camera or microphone — it's a hard requirement of the MediaStream API. The permission is per-origin, so granting it on toollyz.com persists until you revoke it in browser settings." },
         { q: "Does the scanner upload my QR codes anywhere?", a: "No. The video stream stays inside the browser, gets drawn onto a hidden canvas frame-by-frame, and the pixel array goes straight into jsQR (a JavaScript library that runs on your CPU). The decoded text appears on the page but the frames and the text never leave your device." },
@@ -145,12 +145,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Recent networks + favourites saved locally in your browser — never on any server.",
         "100% client-side — your WiFi password never leaves your device.",
       ],
-      relatedSlugs: [
-        "qr-code-generator",
-        "barcode-generator",
-        "password-generator",
-        "secure-notes",
-      ],
+      relatedSlugs: ["qr-code-generator", "barcode-generator", "password-generator", "secure-notes", "audio-volume-booster", "otp-generator", "qr-code-scanner"],
       faqs: [
         {
           q: "What is a WiFi QR code?",
@@ -216,12 +211,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Flat-bottom toggle to drop the EAN/UPC guard bars when you don't need them.",
         "100% private — Toollyz has no backend, settings saved to localStorage.",
       ],
-      relatedSlugs: [
-        "qr-code-generator",
-        "wifi-qr-code-generator",
-        "qr-code-scanner",
-        "uuid-generator",
-      ],
+      relatedSlugs: ["qr-code-generator", "wifi-qr-code-generator", "qr-code-scanner", "uuid-generator", "favicon-from-text", "packing-slip-generator", "vcard-generator"],
       faqs: [
         {
           q: "Which library does this use?",
@@ -288,12 +278,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "v6 and v7 produce time-sortable IDs ideal for database primary keys.",
         "Settings (version, count, formatting) persist in localStorage between visits.",
       ],
-      relatedSlugs: [
-        "password-generator",
-        "hash-generator",
-        "base64-encoder-decoder",
-        "json-formatter",
-      ],
+      relatedSlugs: ["password-generator", "hash-generator", "base64-encoder-decoder", "json-formatter", "barcode-generator", "fake-json-data-generator", "mac-address-generator", "otp-generator", "random-password-phrase-generator", "sql-dummy-data-generator"],
       faqs: [
         {
           q: "What is a UUID?",
@@ -360,12 +345,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Saves your last vocabulary, mode and count to localStorage so the right defaults are one tab-open away.",
         "100% client-side — no signup, no usage limits, no watermark.",
       ],
-      relatedSlugs: [
-        "case-converter",
-        "character-counter",
-        "word-counter",
-        "markdown-editor-previewer",
-      ],
+      relatedSlugs: ["case-converter", "character-counter", "word-counter", "markdown-editor-previewer"],
       faqs: [
         {
           q: "What is Lorem Ipsum?",
@@ -432,12 +412,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Reseed button for reproducible bulk runs; everything keyed off your input seed.",
         "100% client-side — your generated data never touches a server.",
       ],
-      relatedSlugs: [
-        "fake-name-generator",
-        "username-generator",
-        "password-generator",
-        "qr-code-generator",
-      ],
+      relatedSlugs: ["fake-name-generator", "username-generator", "password-generator", "qr-code-generator"],
       faqs: [
         {
           q: "What is a fake address generator?",
@@ -503,12 +478,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Realistic birthdate range tied to the age filter — perfect for date-of-birth form testing.",
         "100% client-side — generated identities never leave your browser.",
       ],
-      relatedSlugs: [
-        "fake-address-generator",
-        "username-generator",
-        "password-generator",
-        "qr-code-generator",
-      ],
+      relatedSlugs: ["fake-address-generator", "username-generator", "password-generator", "qr-code-generator"],
       faqs: [
         {
           q: "What is a fake name generator?",
@@ -574,12 +544,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Smart prefix/suffix toggles — add a year, double letters or an underscore in one click.",
         "Export TXT or CSV for bulk use in spreadsheets and onboarding flows.",
       ],
-      relatedSlugs: [
-        "fake-name-generator",
-        "password-generator",
-        "fake-address-generator",
-        "qr-code-generator",
-      ],
+      relatedSlugs: ["fake-name-generator", "password-generator", "fake-address-generator", "qr-code-generator", "fancy-text-generator", "hashtag-generator", "invisible-text-generator", "random-emoji-generator"],
       faqs: [
         {
           q: "What is a username generator?",
@@ -645,12 +610,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Visible strength bar updates as you type — see immediately when entropy dips.",
         "Local-only history and favourites — passwords never touch a server or network.",
       ],
-      relatedSlugs: [
-        "username-generator",
-        "wifi-qr-code-generator",
-        "uuid-generator",
-        "secure-notes",
-      ],
+      relatedSlugs: ["username-generator", "wifi-qr-code-generator", "uuid-generator", "secure-notes", "api-key-generator", "coin-flip-simulator", "disposable-password-generator", "fake-address-generator", "fake-name-generator", "otp-generator"],
       faqs: [
         {
           q: "What is a password generator?",
@@ -716,12 +676,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Avoid-repeats option for cleaner PINs and verification codes.",
         "Local-only history and favorites — codes never reach our servers.",
       ],
-      relatedSlugs: [
-        "password-generator",
-        "uuid-generator",
-        "secure-notes",
-        "wifi-qr-code-generator",
-      ],
+      relatedSlugs: ["password-generator", "uuid-generator", "secure-notes", "wifi-qr-code-generator"],
       faqs: [
         {
           q: "What is an OTP?",
@@ -787,12 +742,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Lossless WAV export at the original sample rate — exact preview-matches-export rendering.",
         "Works on mobile, desktop, and supports MP3, WAV, OGG, M4A and AAC inputs.",
       ],
-      relatedSlugs: [
-        "qr-code-generator",
-        "wifi-qr-code-generator",
-        "white-noise-generator",
-        "image-compressor",
-      ],
+      relatedSlugs: ["qr-code-generator", "wifi-qr-code-generator", "white-noise-generator", "image-compressor"],
       faqs: [
         {
           q: "What is an audio volume booster?",
@@ -859,12 +809,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Works offline once the page loads (no streaming required).",
         "Favorites stored in your browser, never on any server.",
       ],
-      relatedSlugs: [
-        "audio-volume-booster",
-        "pomodoro-timer",
-        "alarm-clock",
-        "stopwatch",
-      ],
+      relatedSlugs: ["audio-volume-booster", "pomodoro-timer", "alarm-clock", "stopwatch"],
       faqs: [
         {
           q: "What is white noise?",
@@ -932,12 +877,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "5 export formats: CSS variables, SCSS variables, Tailwind config, JSON and a PNG swatch sheet.",
         "Favorites and saved palettes persist locally in your browser — never on any server.",
       ],
-      relatedSlugs: [
-        "color-picker",
-        "gradient-generator",
-        "meta-tag-generator",
-        "css-animation-generator",
-      ],
+      relatedSlugs: ["color-picker", "gradient-generator", "meta-tag-generator", "css-animation-generator", "bingo-card-generator", "hex-to-rgb", "random-emoji-generator", "rgb-to-hex"],
       faqs: [
         {
           q: "What is a random color generator?",
@@ -1004,12 +944,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Spacebar shortcut, reduced-motion support and synthesized flip/landing sounds you can mute.",
         "History and settings saved locally — export results as CSV anytime.",
       ],
-      relatedSlugs: [
-        "spin-wheel-generator",
-        "decision-maker-wheel",
-        "lucky-draw-generator",
-        "password-generator",
-      ],
+      relatedSlugs: ["spin-wheel-generator", "decision-maker-wheel", "lucky-draw-generator", "password-generator", "bingo-card-generator", "random-joke-generator"],
       faqs: [
         {
           q: "What is a coin flip simulator?",
@@ -1075,12 +1010,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Built-in caller mode with shuffle, call history, auto-call and spoken/beep announcements.",
         "Settings saved locally — your theme, grid and content persist between visits.",
       ],
-      relatedSlugs: [
-        "coin-flip-simulator",
-        "spin-wheel-generator",
-        "lucky-draw-generator",
-        "random-color-generator",
-      ],
+      relatedSlugs: ["coin-flip-simulator", "spin-wheel-generator", "lucky-draw-generator", "random-color-generator", "decision-maker-wheel"],
       faqs: [
         {
           q: "What is a bingo card generator?",
@@ -1146,12 +1076,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Adjustable spin duration (quick / normal / dramatic) and a reduced-motion mode.",
         "Export the wheel as PNG or your full setup as JSON. Winner history kept locally.",
       ],
-      relatedSlugs: [
-        "coin-flip-simulator",
-        "bingo-card-generator",
-        "lucky-draw-generator",
-        "decision-maker-wheel",
-      ],
+      relatedSlugs: ["coin-flip-simulator", "bingo-card-generator", "lucky-draw-generator", "decision-maker-wheel", "random-emoji-generator", "random-fact-generator", "random-joke-generator"],
       faqs: [
         {
           q: "What is a spin wheel generator?",
@@ -1217,12 +1142,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Export the wheel as PNG or your setup as JSON; recent decisions saved locally.",
         "100% in your browser — nothing uploaded, no signup, no limits.",
       ],
-      relatedSlugs: [
-        "spin-wheel-generator",
-        "coin-flip-simulator",
-        "bingo-card-generator",
-        "lucky-draw-generator",
-      ],
+      relatedSlugs: ["spin-wheel-generator", "coin-flip-simulator", "bingo-card-generator", "lucky-draw-generator", "random-fact-generator", "random-quote-generator"],
       faqs: [
         {
           q: "What is a decision maker wheel?",
@@ -1288,12 +1208,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Export winners as CSV or a branded winner-card image; recent draws saved locally.",
         "Sound effects, spacebar to draw, reduced-motion support and full mobile optimization.",
       ],
-      relatedSlugs: [
-        "spin-wheel-generator",
-        "decision-maker-wheel",
-        "coin-flip-simulator",
-        "bingo-card-generator",
-      ],
+      relatedSlugs: ["spin-wheel-generator", "decision-maker-wheel", "coin-flip-simulator", "bingo-card-generator", "random-fact-generator"],
       faqs: [
         {
           q: "What is a lucky draw generator?",
@@ -1360,12 +1275,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Save unlimited favorites locally — copy them all in one click.",
         "Floating emoji animations, spacebar reroll and reduced-motion support.",
       ],
-      relatedSlugs: [
-        "username-generator",
-        "random-color-generator",
-        "case-converter",
-        "spin-wheel-generator",
-      ],
+      relatedSlugs: ["username-generator", "random-color-generator", "case-converter", "spin-wheel-generator", "ascii-art-generator", "emoji-translator", "fancy-text-generator", "invisible-text-generator", "random-fact-generator", "random-joke-generator"],
       faqs: [
         {
           q: "What is a random emoji generator?",
@@ -1431,12 +1341,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Spacebar shortcut, reduced-motion support and clean, highly readable typography.",
         "100% in your browser — no signup, no tracking of what you read.",
       ],
-      relatedSlugs: [
-        "random-emoji-generator",
-        "spin-wheel-generator",
-        "decision-maker-wheel",
-        "lucky-draw-generator",
-      ],
+      relatedSlugs: ["random-emoji-generator", "spin-wheel-generator", "decision-maker-wheel", "lucky-draw-generator", "random-joke-generator", "random-quote-generator"],
       faqs: [
         {
           q: "What is a random fact generator?",
@@ -1502,12 +1407,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Save unlimited favorites locally and revisit them anytime.",
         "Spacebar shortcut, reduced-motion support and clean readable typography.",
       ],
-      relatedSlugs: [
-        "random-fact-generator",
-        "random-emoji-generator",
-        "spin-wheel-generator",
-        "coin-flip-simulator",
-      ],
+      relatedSlugs: ["random-fact-generator", "random-emoji-generator", "spin-wheel-generator", "coin-flip-simulator", "random-quote-generator"],
       faqs: [
         {
           q: "What is a random joke generator?",
@@ -1574,12 +1474,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Save unlimited favorites locally and revisit them anytime.",
         "Elegant editorial typography, spacebar shortcut and reduced-motion support.",
       ],
-      relatedSlugs: [
-        "random-fact-generator",
-        "random-joke-generator",
-        "random-emoji-generator",
-        "decision-maker-wheel",
-      ],
+      relatedSlugs: ["random-fact-generator", "random-joke-generator", "random-emoji-generator", "decision-maker-wheel", "horoscope-generator", "love-compatibility-calculator"],
       faqs: [
         {
           q: "What is a random quote generator?",
@@ -1646,12 +1541,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Works for any year — generate 2025, 2026 or any past or future calendar.",
         "100% private: events, notes and exports stay in your browser and are saved locally.",
       ],
-      relatedSlugs: [
-        "world-clock",
-        "pomodoro-timer",
-        "business-days-calculator",
-        "age-difference-calculator",
-      ],
+      relatedSlugs: ["world-clock", "pomodoro-timer", "business-days-calculator", "age-difference-calculator", "currency-converter", "discord-timestamp-generator", "leap-year-checker", "sunrise-sunset", "unix-timestamp-converter", "zodiac-sign-finder"],
       faqs: [
         {
           q: "What is a calendar generator?",
@@ -1718,12 +1608,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Discovery mode to explore every zodiac personality, strength and element.",
         "Save favorite readings and compatibility reports locally — 100% private, no signup.",
       ],
-      relatedSlugs: [
-        "zodiac-sign-finder",
-        "love-compatibility-calculator",
-        "random-quote-generator",
-        "age-difference-calculator",
-      ],
+      relatedSlugs: ["zodiac-sign-finder", "love-compatibility-calculator", "random-quote-generator", "age-difference-calculator"],
       faqs: [
         {
           q: "What is a horoscope generator?",
@@ -1789,12 +1674,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Writing goals with a progress ring, a session timer, typing speed and achievement badges.",
         "Export a TXT summary or a polished PDF report — 100% private, with auto-saved drafts in your browser.",
       ],
-      relatedSlugs: [
-        "character-counter",
-        "case-converter",
-        "keyword-density-checker",
-        "duplicate-word-finder",
-      ],
+      relatedSlugs: ["character-counter", "case-converter", "keyword-density-checker", "duplicate-word-finder", "ai-prompt-enhancer", "ai-text-humanizer", "clipboard-manager", "duplicate-line-remover", "hashtag-generator", "line-sorter"],
       faqs: [
         {
           q: "What is a word counter?",
@@ -1864,12 +1744,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Character targets with a progress ring, session timer, typing speed and achievement badges.",
         "Export a TXT summary or polished PDF report — 100% private, with auto-saved drafts in your browser.",
       ],
-      relatedSlugs: [
-        "word-counter",
-        "tweet-character-counter",
-        "case-converter",
-        "keyword-density-checker",
-      ],
+      relatedSlugs: ["word-counter", "tweet-character-counter", "case-converter", "keyword-density-checker", "lorem-ipsum-generator", "online-notepad", "slugify"],
       faqs: [
         {
           q: "What is a character counter?",
@@ -1939,12 +1814,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Favorite presets, recent-text history, in-text search highlighting, focus and fullscreen modes.",
         "One-click copy, TXT download and share — 100% private, with auto-save in your browser.",
       ],
-      relatedSlugs: [
-        "word-counter",
-        "character-counter",
-        "text-reverser",
-        "duplicate-word-finder",
-      ],
+      relatedSlugs: ["word-counter", "character-counter", "text-reverser", "duplicate-word-finder", "ai-prompt-enhancer", "ai-text-humanizer", "clipboard-manager", "duplicate-file-cleaner", "duplicate-line-remover", "fancy-text-generator"],
       faqs: [
         {
           q: "What is a case converter?",
@@ -2014,12 +1884,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Developer & CMS outputs for WordPress, Next.js routes, API endpoints, DB fields and filenames.",
         "Cleanup toggles for stop words, numbers and emojis — 100% private, with history and auto-save.",
       ],
-      relatedSlugs: [
-        "case-converter",
-        "meta-tag-generator",
-        "word-counter",
-        "character-counter",
-      ],
+      relatedSlugs: ["case-converter", "meta-tag-generator", "word-counter", "character-counter", "clipboard-manager", "duplicate-word-finder", "robots-txt-generator", "url-shortener", "utm-link-generator"],
       faqs: [
         {
           q: "What is a slug?",
@@ -2089,12 +1954,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Focus and fullscreen distraction-free writing modes with light and dark themes.",
         "Export to TXT, Markdown, HTML, PDF and DOC — 100% private, no signup.",
       ],
-      relatedSlugs: [
-        "markdown-editor-previewer",
-        "word-counter",
-        "character-counter",
-        "text-diff-checker",
-      ],
+      relatedSlugs: ["markdown-editor-previewer", "word-counter", "character-counter", "text-diff-checker", "ascii-art-generator", "clipboard-manager", "secure-notes"],
       faqs: [
         {
           q: "What is an online notepad?",
@@ -2164,12 +2024,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Auto-save with version snapshots, undo/redo, find & replace and a Markdown cheat sheet.",
         "View the generated HTML and export to MD, HTML, PDF, DOC or TXT — 100% private, no signup.",
       ],
-      relatedSlugs: [
-        "online-notepad",
-        "markdown-to-html",
-        "word-counter",
-        "text-diff-checker",
-      ],
+      relatedSlugs: ["online-notepad", "markdown-to-html", "word-counter", "text-diff-checker", "ascii-art-generator", "lorem-ipsum-generator"],
       faqs: [
         {
           q: "What is a Markdown editor?",
@@ -2239,12 +2094,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Export to TXT, PNG, SVG and HTML, plus a style gallery and ready-made art.",
         "Saved history and favorites — 100% private, your images never leave your browser.",
       ],
-      relatedSlugs: [
-        "qr-code-generator",
-        "online-notepad",
-        "markdown-editor-previewer",
-        "random-emoji-generator",
-      ],
+      relatedSlugs: ["qr-code-generator", "online-notepad", "markdown-editor-previewer", "random-emoji-generator", "fancy-text-generator", "invisible-text-generator"],
       faqs: [
         {
           q: "What is ASCII art?",
@@ -2310,12 +2160,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Search and category filters to find the perfect style fast.",
         "One-click copy, saved favorites and TXT export — 100% free and private.",
       ],
-      relatedSlugs: [
-        "ascii-art-generator",
-        "case-converter",
-        "username-generator",
-        "random-emoji-generator",
-      ],
+      relatedSlugs: ["ascii-art-generator", "case-converter", "username-generator", "random-emoji-generator", "ai-prompt-enhancer", "braille-translator", "color-picker", "emoji-translator", "hashtag-generator", "invisible-text-generator"],
       faqs: [
         {
           q: "What is a fancy text generator?",
@@ -2381,12 +2226,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "One-click copy with feedback, saved history and TXT export of the full set.",
         "100% free, no signup — everything runs privately in your browser.",
       ],
-      relatedSlugs: [
-        "fancy-text-generator",
-        "username-generator",
-        "ascii-art-generator",
-        "random-emoji-generator",
-      ],
+      relatedSlugs: ["fancy-text-generator", "username-generator", "ascii-art-generator", "random-emoji-generator", "text-reverser"],
       faqs: [
         {
           q: "What is invisible text?",
@@ -2452,12 +2292,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Sort keys, escape/unescape, undo/redo and saved-session history.",
         "Import by drag-and-drop and export to JSON, minified JSON or CSV — 100% private, no upload.",
       ],
-      relatedSlugs: [
-        "json-to-csv",
-        "base64-encoder-decoder",
-        "xml-formatter",
-        "yaml-to-json",
-      ],
+      relatedSlugs: ["json-to-csv", "base64-encoder-decoder", "xml-formatter", "yaml-to-json", "api-response-viewer", "code-screenshot-generator", "css-minifier", "csv-to-json", "fake-json-data-generator", "html-minifier"],
       faqs: [
         {
           q: "What is a JSON formatter?",
@@ -2523,12 +2358,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Statistics dashboard — elements, attributes, namespaces, depth, node count and size.",
         "XML diff, sort attributes, remove empty nodes, escape/unescape and export — 100% private.",
       ],
-      relatedSlugs: [
-        "json-formatter",
-        "yaml-to-json",
-        "base64-encoder-decoder",
-        "json-to-csv",
-      ],
+      relatedSlugs: ["json-formatter", "yaml-to-json", "base64-encoder-decoder", "json-to-csv", "api-response-viewer", "html-minifier", "sql-formatter", "toml-formatter"],
       faqs: [
         {
           q: "What is an XML formatter?",
@@ -2594,12 +2424,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Bulk processing for multiple files with per-file savings and one-click multi-file export.",
         "100% private — everything runs in your browser, with undo/redo, saved sessions and instant export.",
       ],
-      relatedSlugs: [
-        "css-minifier",
-        "javascript-minifier",
-        "json-formatter",
-        "xml-formatter",
-      ],
+      relatedSlugs: ["css-minifier", "javascript-minifier", "json-formatter", "xml-formatter", "base64-encoder-decoder", "code-screenshot-generator", "csv-to-json", "hex-to-rgb", "html-to-markdown", "jpg-to-png"],
       faqs: [
         {
           q: "What is an HTML minifier?",
@@ -2669,12 +2494,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Analytics & bundle analysis — size reduction, optimization score, parse/load savings, function counts.",
         "Before/after comparison, diff, bulk processing and instant export — 100% private in your browser.",
       ],
-      relatedSlugs: [
-        "html-minifier",
-        "css-minifier",
-        "json-formatter",
-        "base64-encoder-decoder",
-      ],
+      relatedSlugs: ["html-minifier", "css-minifier", "json-formatter", "base64-encoder-decoder", "code-screenshot-generator", "regex-tester"],
       faqs: [
         {
           q: "What is a JavaScript minifier?",
@@ -2744,12 +2564,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Analytics & stylesheet analysis — size reduction, optimization score, rules, selectors, colors.",
         "Before/after comparison, diff, bulk processing and instant export — 100% private in your browser.",
       ],
-      relatedSlugs: [
-        "html-minifier",
-        "javascript-minifier",
-        "json-formatter",
-        "base64-encoder-decoder",
-      ],
+      relatedSlugs: ["html-minifier", "javascript-minifier", "json-formatter", "base64-encoder-decoder", "code-screenshot-generator", "hex-to-rgb", "jpg-to-png", "png-to-webp", "rgb-to-hex"],
       faqs: [
         {
           q: "What is a CSS minifier?",
@@ -2819,12 +2634,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Honest warnings — MD5 and SHA-1 are flagged as cryptographically broken in the UI.",
         "100% private — Toollyz has no backend, text and files stay on your device.",
       ],
-      relatedSlugs: [
-        "jwt-decoder",
-        "base64-encoder-decoder",
-        "secure-notes",
-        "uuid-generator",
-      ],
+      relatedSlugs: ["jwt-decoder", "base64-encoder-decoder", "secure-notes", "uuid-generator", "api-key-generator", "binary-to-decimal", "decimal-to-binary", "disposable-password-generator", "encryption-key-generator", "file-metadata-viewer"],
       faqs: [
         {
           q: "Which algorithm should I use?",
@@ -2890,12 +2700,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "ReDoS guardrails — input limits, iteration caps and a catastrophic-backtracking warning.",
         "100% private — patterns and text never leave your browser, and your work autosaves.",
       ],
-      relatedSlugs: [
-        "javascript-minifier",
-        "json-formatter",
-        "html-minifier",
-        "jwt-decoder",
-      ],
+      relatedSlugs: ["javascript-minifier", "json-formatter", "html-minifier", "jwt-decoder", "email-header-analyzer", "htaccess-redirect-generator", "regex-generator", "sitemap-validator", "terminal-cheatsheet", "unix-timestamp-converter"],
       faqs: [
         {
           q: "What is a regex tester?",
@@ -2961,12 +2766,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Works with bearer tokens, ID tokens and access tokens from any provider.",
         "100% private — tokens and secrets never leave your browser, with autosave for your last token.",
       ],
-      relatedSlugs: [
-        "json-formatter",
-        "base64-encoder-decoder",
-        "secure-notes",
-        "regex-tester",
-      ],
+      relatedSlugs: ["json-formatter", "base64-encoder-decoder", "secure-notes", "regex-tester", "dns-lookup", "hash-generator", "ip-address-finder", "jwt-generator", "ssl-certificate-checker", "unix-timestamp-converter"],
       faqs: [
         {
           q: "What is a JWT decoder?",
@@ -3032,12 +2832,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Fresh random salt and IV for every encryption, with a versioned, future-proof format.",
         "Change your master password any time — your notes are transparently re-encrypted.",
       ],
-      relatedSlugs: [
-        "online-notepad",
-        "password-generator",
-        "jwt-decoder",
-        "base64-encoder-decoder",
-      ],
+      relatedSlugs: ["online-notepad", "password-generator", "jwt-decoder", "base64-encoder-decoder", "ai-prompt-enhancer", "disposable-password-generator", "hash-generator", "otp-generator", "secure-file-shredder", "session-id-generator"],
       faqs: [
         {
           q: "How are my notes encrypted?",
@@ -3103,12 +2898,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "100% private: snippets are stored only in your browser and never uploaded.",
         "Automatic de-duplication and a generous history cap keep the list tidy.",
       ],
-      relatedSlugs: [
-        "online-notepad",
-        "word-counter",
-        "case-converter",
-        "slugify",
-      ],
+      relatedSlugs: ["online-notepad", "word-counter", "case-converter", "slugify"],
       faqs: [
         {
           q: "What is a clipboard manager?",
@@ -3174,12 +2964,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Works on any device, no app or signup required.",
         "Free and private — results stay in your browser.",
       ],
-      relatedSlugs: [
-        "ping-test",
-        "ip-address-finder",
-        "dns-lookup",
-        "json-formatter",
-      ],
+      relatedSlugs: ["ping-test", "ip-address-finder", "dns-lookup", "json-formatter", "battery-status", "currency-converter", "device-info", "website-uptime-monitor"],
       faqs: [
         {
           q: "How does this speed test work?",
@@ -3245,12 +3030,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Runs directly from your browser — no Toollyz server in the path.",
         "Honest methodology: clearly labeled HTTP(S) latency, not ICMP ping.",
       ],
-      relatedSlugs: [
-        "internet-speed-test",
-        "ip-address-finder",
-        "dns-lookup",
-        "json-formatter",
-      ],
+      relatedSlugs: ["internet-speed-test", "ip-address-finder", "dns-lookup", "json-formatter", "mac-address-lookup", "website-uptime-monitor", "whois-lookup"],
       faqs: [
         {
           q: "What is a ping test?",
@@ -3320,12 +3100,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Clear privacy notes — no Toollyz server, nothing stored.",
         "Free, instant and works on any device.",
       ],
-      relatedSlugs: [
-        "internet-speed-test",
-        "ping-test",
-        "dns-lookup",
-        "jwt-decoder",
-      ],
+      relatedSlugs: ["internet-speed-test", "ping-test", "dns-lookup", "jwt-decoder", "battery-status", "browser-info", "currency-converter", "device-info", "email-header-analyzer", "mac-address-generator"],
       faqs: [
         {
           q: "What is my IP address?",
@@ -3391,12 +3166,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Copy the results in a dig-style text format for tickets or notes.",
         "100% private — requests go directly to Cloudflare's 1.1.1.1 from your browser.",
       ],
-      relatedSlugs: [
-        "ip-address-finder",
-        "ping-test",
-        "internet-speed-test",
-        "jwt-decoder",
-      ],
+      relatedSlugs: ["ip-address-finder", "ping-test", "internet-speed-test", "jwt-decoder", "browser-info", "email-header-analyzer", "mac-address-generator", "mac-address-lookup", "robots-txt-generator", "spf-record-checker"],
       faqs: [
         {
           q: "What is DNS?",
@@ -3462,12 +3232,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Export everything as a clean JSON snapshot for tickets or testing.",
         "100% private — read in your browser, nothing uploaded.",
       ],
-      relatedSlugs: [
-        "device-info",
-        "battery-status",
-        "ip-address-finder",
-        "dns-lookup",
-      ],
+      relatedSlugs: ["device-info", "battery-status", "ip-address-finder", "dns-lookup", "keyboard-tester", "mic-test", "mouse-click-tester", "screen-resolution", "webcam-test"],
       faqs: [
         {
           q: "What does this browser information checker show?",
@@ -3533,12 +3298,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Connection estimate (effective type, downlink, RTT) where supported.",
         "Battery / Bluetooth / USB / Gamepad / Vibration API availability at a glance.",
       ],
-      relatedSlugs: [
-        "browser-info",
-        "battery-status",
-        "internet-speed-test",
-        "ip-address-finder",
-      ],
+      relatedSlugs: ["browser-info", "battery-status", "internet-speed-test", "ip-address-finder", "keyboard-tester", "mic-test", "mouse-click-tester", "screen-resolution", "webcam-test"],
       faqs: [
         {
           q: "How does the tool know what device I'm on?",
@@ -3604,12 +3364,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Read in your browser — nothing uploaded, no server involved.",
         "Free and instant — no signup required.",
       ],
-      relatedSlugs: [
-        "device-info",
-        "browser-info",
-        "internet-speed-test",
-        "ip-address-finder",
-      ],
+      relatedSlugs: ["device-info", "browser-info", "internet-speed-test", "ip-address-finder", "screen-resolution"],
       faqs: [
         {
           q: "How does this read my battery?",
@@ -3675,12 +3430,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Updates as you resize the window or rotate the device.",
         "Copy the summary or download it as JSON for tickets.",
       ],
-      relatedSlugs: [
-        "device-info",
-        "browser-info",
-        "battery-status",
-        "ip-address-finder",
-      ],
+      relatedSlugs: ["device-info", "browser-info", "battery-status", "ip-address-finder", "webcam-test"],
       faqs: [
         {
           q: "What's the difference between CSS pixels and hardware pixels?",
@@ -3746,12 +3496,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Works for any physical keyboard the OS hands the browser.",
         "100% private — keystrokes are never sent anywhere.",
       ],
-      relatedSlugs: [
-        "mouse-click-tester",
-        "mic-test",
-        "device-info",
-        "browser-info",
-      ],
+      relatedSlugs: ["mouse-click-tester", "mic-test", "device-info", "browser-info", "keyboard-layout-visualizer", "keyboard-shortcut-generator", "spacebar-counter", "typing-speed-test"],
       faqs: [
         {
           q: "What does this keyboard tester check?",
@@ -3817,12 +3562,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Right-click context menu suppressed so right-click testing actually works.",
         "100% private — clicks stay in your browser.",
       ],
-      relatedSlugs: [
-        "keyboard-tester",
-        "mic-test",
-        "device-info",
-        "browser-info",
-      ],
+      relatedSlugs: ["keyboard-tester", "mic-test", "device-info", "browser-info", "cps-test", "drag-click-test"],
       faqs: [
         {
           q: "What does this mouse tester check?",
@@ -3888,12 +3628,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Graceful states for unsupported, denied or missing-mic scenarios.",
         "100% private — audio stays in your browser, nothing is uploaded.",
       ],
-      relatedSlugs: [
-        "device-info",
-        "browser-info",
-        "keyboard-tester",
-        "mouse-click-tester",
-      ],
+      relatedSlugs: ["device-info", "browser-info", "keyboard-tester", "mouse-click-tester", "webcam-test"],
       faqs: [
         {
           q: "How does this mic test work?",
@@ -3959,12 +3694,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Graceful states for unsupported, denied or missing-camera scenarios.",
         "100% private — video stays in your browser, nothing is uploaded.",
       ],
-      relatedSlugs: [
-        "mic-test",
-        "device-info",
-        "browser-info",
-        "screen-resolution",
-      ],
+      relatedSlugs: ["mic-test", "device-info", "browser-info", "screen-resolution"],
       faqs: [
         {
           q: "How does this webcam test work?",
@@ -4030,12 +3760,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Swap input and output to chain conversions.",
         "100% private — files and text never leave your browser.",
       ],
-      relatedSlugs: [
-        "url-encoder-decoder",
-        "jwt-decoder",
-        "json-formatter",
-        "html-minifier",
-      ],
+      relatedSlugs: ["url-encoder-decoder", "jwt-decoder", "json-formatter", "html-minifier", "css-minifier", "hash-generator", "javascript-minifier", "jpg-to-png", "markdown-to-html", "png-to-webp"],
       faqs: [
         {
           q: "What is Base64?",
@@ -4101,12 +3826,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Query parameter table that handles duplicates and special characters.",
         "100% private — encoding happens in your browser, nothing uploaded.",
       ],
-      relatedSlugs: [
-        "base64-encoder-decoder",
-        "json-formatter",
-        "html-minifier",
-        "regex-tester",
-      ],
+      relatedSlugs: ["base64-encoder-decoder", "json-formatter", "html-minifier", "regex-tester", "markdown-to-html", "regex-generator", "sitemap-validator"],
       faqs: [
         {
           q: "What is URL encoding?",
@@ -4172,12 +3892,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Char counts for Markdown and HTML and a word count for the rendered output.",
         "100% private — Markdown and HTML stay in your browser.",
       ],
-      relatedSlugs: [
-        "html-minifier",
-        "url-encoder-decoder",
-        "base64-encoder-decoder",
-        "json-formatter",
-      ],
+      relatedSlugs: ["html-minifier", "url-encoder-decoder", "base64-encoder-decoder", "json-formatter", "html-to-markdown", "markdown-editor-previewer"],
       faqs: [
         {
           q: "What Markdown features are supported?",
@@ -4243,12 +3958,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "CSS custom property snippet ready to paste into a stylesheet.",
         "100% private — colors stay in your browser.",
       ],
-      relatedSlugs: [
-        "rgb-to-hex",
-        "css-minifier",
-        "random-color-generator",
-        "html-minifier",
-      ],
+      relatedSlugs: ["rgb-to-hex", "css-minifier", "random-color-generator", "html-minifier", "binary-to-decimal", "color-picker", "gradient-generator", "hexadecimal-converter"],
       faqs: [
         {
           q: "What is a HEX color code?",
@@ -4314,12 +4024,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Clear error message when input can't be parsed.",
         "100% private — colors stay in your browser.",
       ],
-      relatedSlugs: [
-        "hex-to-rgb",
-        "random-color-generator",
-        "css-minifier",
-        "html-minifier",
-      ],
+      relatedSlugs: ["hex-to-rgb", "random-color-generator", "css-minifier", "html-minifier", "color-picker", "decimal-to-binary", "gradient-generator", "hexadecimal-converter"],
       faqs: [
         {
           q: "What input formats does it accept?",
@@ -4385,12 +4090,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Clear empty / error / done states for each file.",
         "100% private — files are decoded and saved locally, nothing uploaded.",
       ],
-      relatedSlugs: [
-        "png-to-webp",
-        "html-minifier",
-        "base64-encoder-decoder",
-        "css-minifier",
-      ],
+      relatedSlugs: ["png-to-webp", "html-minifier", "base64-encoder-decoder", "css-minifier", "image-compressor", "image-resizer"],
       faqs: [
         {
           q: "Why convert JPG to PNG?",
@@ -4456,12 +4156,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Uses the browser's native WebP encoder so quality matches Chrome / Firefox / Edge / Safari.",
         "100% private — files are decoded and saved locally, nothing uploaded.",
       ],
-      relatedSlugs: [
-        "jpg-to-png",
-        "html-minifier",
-        "css-minifier",
-        "base64-encoder-decoder",
-      ],
+      relatedSlugs: ["jpg-to-png", "html-minifier", "css-minifier", "base64-encoder-decoder", "image-compressor", "image-resizer"],
       faqs: [
         {
           q: "Why convert PNG to WebP?",
@@ -4527,12 +4222,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "30-minute localStorage cache so re-conversions are instant; Refresh forces a fresh fetch.",
         "100% browser-side — Toollyz has no server, no signup, no tracking.",
       ],
-      relatedSlugs: [
-        "ip-address-finder",
-        "internet-speed-test",
-        "calendar-generator",
-        "hashtag-generator",
-      ],
+      relatedSlugs: ["ip-address-finder", "internet-speed-test", "calendar-generator", "hashtag-generator", "bmi-calculator", "emi-calculator", "fuel-cost-calculator", "gst-vat-calculator", "invoice-generator", "loan-calculator"],
       faqs: [
         {
           q: "Where do the exchange rates come from?",
@@ -4598,12 +4288,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Saves your draft to localStorage — refresh-safe, no signup, no cloud.",
         "100% private — every tag is generated in your browser, nothing uploaded.",
       ],
-      relatedSlugs: [
-        "slugify",
-        "robots-txt-generator",
-        "url-shortener",
-        "json-formatter",
-      ],
+      relatedSlugs: ["slugify", "robots-txt-generator", "url-shortener", "json-formatter", "canonical-url-checker", "color-picker", "email-signature-generator", "favicon-from-text", "gradient-generator", "http-header-checker"],
       faqs: [
         {
           q: "What are meta tags?",
@@ -4669,12 +4354,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "One-click Copy or Download as robots.txt — ready to deploy.",
         "100% private — generated in your browser, draft saved to localStorage.",
       ],
-      relatedSlugs: [
-        "meta-tag-generator",
-        "url-shortener",
-        "slugify",
-        "dns-lookup",
-      ],
+      relatedSlugs: ["meta-tag-generator", "url-shortener", "slugify", "dns-lookup", "canonical-url-checker", "htaccess-redirect-generator", "http-header-checker", "open-graph-preview", "sitemap-validator"],
       faqs: [
         {
           q: "What is a robots.txt file?",
@@ -4740,12 +4420,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Offline detection + clear error states.",
         "100% private — Toollyz has no server, your browser talks directly to the providers.",
       ],
-      relatedSlugs: [
-        "meta-tag-generator",
-        "robots-txt-generator",
-        "qr-code-generator",
-        "slugify",
-      ],
+      relatedSlugs: ["meta-tag-generator", "robots-txt-generator", "qr-code-generator", "slugify", "digital-business-card", "email-signature-generator", "htaccess-redirect-generator", "temporary-email-generator", "utm-link-generator", "whois-lookup"],
       faqs: [
         {
           q: "How does Toollyz shorten links without a server?",
@@ -4811,12 +4486,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "One-click handoff to the Toollyz URL Shortener.",
         "100% private — built in your browser, draft saved locally, no signup or tracking.",
       ],
-      relatedSlugs: [
-        "url-shortener",
-        "meta-tag-generator",
-        "qr-code-generator",
-        "slugify",
-      ],
+      relatedSlugs: ["url-shortener", "meta-tag-generator", "qr-code-generator", "slugify", "whatsapp-link-generator", "youtube-timestamp-link"],
       faqs: [
         {
           q: "What are UTM parameters?",
@@ -4882,12 +4552,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "24-hour localStorage cache for the bootstrap so subsequent lookups are fast.",
         "100% browser-side — Toollyz has no server in the chain, ever.",
       ],
-      relatedSlugs: [
-        "dns-lookup",
-        "ip-address-finder",
-        "ping-test",
-        "url-shortener",
-      ],
+      relatedSlugs: ["dns-lookup", "ip-address-finder", "ping-test", "url-shortener", "domain-age-checker", "email-header-analyzer"],
       faqs: [
         {
           q: "What is RDAP and how is it different from WHOIS?",
@@ -4953,12 +4618,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Favorites palette (up to 24) and 18-item recent history saved to localStorage.",
         "100% private — Toollyz has no backend, no signup, no tracking.",
       ],
-      relatedSlugs: [
-        "hex-to-rgb",
-        "rgb-to-hex",
-        "fancy-text-generator",
-        "meta-tag-generator",
-      ],
+      relatedSlugs: ["hex-to-rgb", "rgb-to-hex", "fancy-text-generator", "meta-tag-generator", "box-shadow-generator", "css-clip-path-generator", "favicon-from-text", "glassmorphism-generator", "gradient-generator", "image-compressor"],
       faqs: [
         {
           q: "What is OKLCH and why should I use it?",
@@ -5024,12 +4684,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Strips EXIF / GPS / camera metadata during the canvas pass — privacy bonus.",
         "100% private — files are decoded and re-encoded in your browser, nothing is uploaded.",
       ],
-      relatedSlugs: [
-        "png-to-webp",
-        "jpg-to-png",
-        "image-resizer",
-        "color-picker",
-      ],
+      relatedSlugs: ["png-to-webp", "jpg-to-png", "image-resizer", "color-picker", "audio-volume-booster", "exif-data-remover", "meme-generator", "noise-texture-generator", "signature-generator"],
       faqs: [
         {
           q: "How does the compressor actually shrink files?",
@@ -5095,12 +4750,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Batch up to 30 files with per-file before/after, size delta and Save buttons.",
         "100% private — Toollyz has no server, the canvas pass strips EXIF and GPS automatically.",
       ],
-      relatedSlugs: [
-        "image-compressor",
-        "png-to-webp",
-        "jpg-to-png",
-        "color-picker",
-      ],
+      relatedSlugs: ["image-compressor", "png-to-webp", "jpg-to-png", "color-picker", "exif-data-remover", "lorem-ipsum-image-generator", "meme-generator", "signature-generator", "thumbnail-downloader"],
       faqs: [
         {
           q: "How does the resizer work?",
@@ -5166,12 +4816,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "SVG export at 1200 × 600 for linear and radial gradients (with a note that SVG doesn't standardize conic).",
         "100% private — Toollyz has no backend, draft and history saved to localStorage.",
       ],
-      relatedSlugs: [
-        "color-picker",
-        "hex-to-rgb",
-        "rgb-to-hex",
-        "meta-tag-generator",
-      ],
+      relatedSlugs: ["color-picker", "hex-to-rgb", "rgb-to-hex", "meta-tag-generator", "box-shadow-generator", "css-clip-path-generator", "glassmorphism-generator", "gradient-mesh-generator", "meme-generator", "neumorphism-generator"],
       faqs: [
         {
           q: "What's the difference between linear, radial and conic?",
@@ -5237,12 +4882,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "PNG export with no watermark, no signup, no upload.",
         "100% private — your image never leaves your device, settings saved to localStorage.",
       ],
-      relatedSlugs: [
-        "image-resizer",
-        "image-compressor",
-        "fancy-text-generator",
-        "gradient-generator",
-      ],
+      relatedSlugs: ["image-resizer", "image-compressor", "fancy-text-generator", "gradient-generator", "pixel-art-generator", "signature-generator"],
       faqs: [
         {
           q: "Why don't you bundle famous meme templates?",
@@ -5308,12 +4948,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Last settings saved to localStorage — refresh-safe and offline-friendly.",
         "100% private — Toollyz has no server, your signature never leaves your device.",
       ],
-      relatedSlugs: [
-        "fancy-text-generator",
-        "image-resizer",
-        "image-compressor",
-        "meme-generator",
-      ],
+      relatedSlugs: ["fancy-text-generator", "image-resizer", "image-compressor", "meme-generator"],
       faqs: [
         {
           q: "Is a typed or drawn signature legally binding?",
@@ -5379,12 +5014,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Honest error reporting — broken or unreadable PDFs are skipped with a toast.",
         "100% private — Toollyz has no server in the path, files never leave your device.",
       ],
-      relatedSlugs: [
-        "pdf-splitter",
-        "pdf-to-image",
-        "image-to-pdf",
-        "screenshot-to-pdf",
-      ],
+      relatedSlugs: ["pdf-splitter", "pdf-to-image", "image-to-pdf", "screenshot-to-pdf", "invoice-generator", "resume-pdf-generator"],
       faqs: [
         {
           q: "How does the merger work without a server?",
@@ -5450,12 +5080,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Source PDF stats in the hero: source pages, output files, total pages out.",
         "100% private — Toollyz has no server in the path, files never leave your device.",
       ],
-      relatedSlugs: [
-        "pdf-merger",
-        "pdf-to-image",
-        "image-to-pdf",
-        "screenshot-to-pdf",
-      ],
+      relatedSlugs: ["pdf-merger", "pdf-to-image", "image-to-pdf", "screenshot-to-pdf"],
       faqs: [
         {
           q: "How does the splitter work?",
@@ -5521,12 +5146,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Worker served from `/pdfjs/pdf.worker.min.mjs` — no third-party CDN required.",
         "100% private — Toollyz has no server in the path, files never leave your device.",
       ],
-      relatedSlugs: [
-        "image-to-pdf",
-        "pdf-merger",
-        "pdf-splitter",
-        "screenshot-to-pdf",
-      ],
+      relatedSlugs: ["image-to-pdf", "pdf-merger", "pdf-splitter", "screenshot-to-pdf"],
       faqs: [
         {
           q: "Which library does this use?",
@@ -5592,12 +5212,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Output filename input — set whatever you want before downloading.",
         "100% private — Toollyz has no server, images stay in your browser.",
       ],
-      relatedSlugs: [
-        "pdf-to-image",
-        "pdf-merger",
-        "pdf-splitter",
-        "screenshot-to-pdf",
-      ],
+      relatedSlugs: ["pdf-to-image", "pdf-merger", "pdf-splitter", "screenshot-to-pdf", "resume-pdf-generator"],
       faqs: [
         {
           q: "How does the converter work?",
@@ -5663,12 +5278,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "WebP screenshots transparently re-encoded to PNG (PDF spec doesn't carry WebP).",
         "100% private — Toollyz has no backend, files stay in your browser.",
       ],
-      relatedSlugs: [
-        "image-to-pdf",
-        "pdf-merger",
-        "pdf-splitter",
-        "pdf-to-image",
-      ],
+      relatedSlugs: ["image-to-pdf", "pdf-merger", "pdf-splitter", "pdf-to-image", "invoice-generator"],
       faqs: [
         {
           q: "How does this differ from the regular Image to PDF tool?",
@@ -5734,12 +5344,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Form data saves to localStorage so a refresh doesn't lose your work.",
         "100% private — Toollyz has no backend, everything runs in your browser.",
       ],
-      relatedSlugs: [
-        "invoice-generator",
-        "image-to-pdf",
-        "pdf-merger",
-        "meta-tag-generator",
-      ],
+      relatedSlugs: ["invoice-generator", "image-to-pdf", "pdf-merger", "meta-tag-generator"],
       faqs: [
         {
           q: "Is the PDF ATS-friendly?",
@@ -5805,12 +5410,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Built-in Helvetica + Helvetica Bold via pdf-lib — no font-embedding licensing concerns.",
         "100% private — Toollyz has no backend, form values saved to localStorage (without the logo bytes).",
       ],
-      relatedSlugs: [
-        "currency-converter",
-        "screenshot-to-pdf",
-        "resume-pdf-generator",
-        "pdf-merger",
-      ],
+      relatedSlugs: ["currency-converter", "screenshot-to-pdf", "resume-pdf-generator", "pdf-merger", "gst-vat-calculator", "packing-slip-generator", "receipt-generator"],
       faqs: [
         {
           q: "How does the Invoice Generator work without a server?",
@@ -5876,12 +5476,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Accepts relaxed date strings via `Date.parse` (most ISO 8601 and RFC 2822 work).",
         "100% private — Toollyz has no backend, draft saved to localStorage.",
       ],
-      relatedSlugs: [
-        "calendar-generator",
-        "json-formatter",
-        "jwt-decoder",
-        "regex-tester",
-      ],
+      relatedSlugs: ["calendar-generator", "json-formatter", "jwt-decoder", "regex-tester", "age-difference-calculator", "alarm-clock", "business-days-calculator", "discord-timestamp-generator", "hexadecimal-converter", "leap-year-checker"],
       faqs: [
         {
           q: "What is a Unix timestamp?",
@@ -5947,12 +5542,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Standard WPM formula (correct chars ÷ 5 ÷ minutes elapsed) plus an honest \"raw WPM\" upper bound.",
         "100% private — Toollyz has no backend, keystrokes and history stay in your browser.",
       ],
-      relatedSlugs: [
-        "cps-test",
-        "spacebar-counter",
-        "reaction-time-test",
-        "keyboard-tester",
-      ],
+      relatedSlugs: ["cps-test", "spacebar-counter", "reaction-time-test", "keyboard-tester", "keyboard-layout-visualizer", "pomodoro-timer"],
       faqs: [
         {
           q: "How is WPM calculated?",
@@ -6018,12 +5608,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Big touch-friendly target works equally well on desktop and mobile.",
         "100% private — Toollyz has no backend, clicks stay in your browser.",
       ],
-      relatedSlugs: [
-        "drag-click-test",
-        "spacebar-counter",
-        "reaction-time-test",
-        "mouse-click-tester",
-      ],
+      relatedSlugs: ["drag-click-test", "spacebar-counter", "reaction-time-test", "mouse-click-tester", "keyboard-layout-visualizer", "typing-speed-test"],
       faqs: [
         {
           q: "What's a good CPS?",
@@ -6089,12 +5674,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Touch friendly — `touch-action: none` on the target prevents accidental scroll.",
         "100% private — Toollyz has no backend, every event stays in your browser.",
       ],
-      relatedSlugs: [
-        "cps-test",
-        "mouse-click-tester",
-        "spacebar-counter",
-        "reaction-time-test",
-      ],
+      relatedSlugs: ["cps-test", "mouse-click-tester", "spacebar-counter", "reaction-time-test"],
       faqs: [
         {
           q: "Is this a real drag-click detector?",
@@ -6160,12 +5740,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Touch-friendly via the focusable pad — works on tablets with a connected keyboard.",
         "100% private — Toollyz has no backend, presses stay in your browser.",
       ],
-      relatedSlugs: [
-        "cps-test",
-        "drag-click-test",
-        "typing-speed-test",
-        "keyboard-tester",
-      ],
+      relatedSlugs: ["cps-test", "drag-click-test", "typing-speed-test", "keyboard-tester", "keyboard-layout-visualizer", "reaction-time-test"],
       faqs: [
         {
           q: "Why are some presses ignored?",
@@ -6231,12 +5806,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Mobile-friendly — the big pad works equally well with mouse, trackpad and touch.",
         "100% private — Toollyz has no backend, runs stay in your browser.",
       ],
-      relatedSlugs: [
-        "cps-test",
-        "drag-click-test",
-        "spacebar-counter",
-        "stopwatch",
-      ],
+      relatedSlugs: ["cps-test", "drag-click-test", "spacebar-counter", "stopwatch", "alarm-clock", "typing-speed-test"],
       faqs: [
         {
           q: "What is reaction time?",
@@ -6302,12 +5872,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Laps and paused state persist in localStorage so a refresh doesn't wipe your data.",
         "100% private — Toollyz has no backend, runs stay in your browser.",
       ],
-      relatedSlugs: [
-        "pomodoro-timer",
-        "alarm-clock",
-        "reaction-time-test",
-        "unix-timestamp-converter",
-      ],
+      relatedSlugs: ["pomodoro-timer", "alarm-clock", "reaction-time-test", "unix-timestamp-converter", "cron-job-expression-generator", "cron-time-translator", "white-noise-generator", "world-clock"],
       faqs: [
         {
           q: "How accurate is the stopwatch?",
@@ -6373,12 +5938,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Live next-fire time and \"in 2 h 4 m\" countdown for every enabled alarm.",
         "100% private — alarms save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "stopwatch",
-        "pomodoro-timer",
-        "reaction-time-test",
-        "unix-timestamp-converter",
-      ],
+      relatedSlugs: ["stopwatch", "pomodoro-timer", "reaction-time-test", "unix-timestamp-converter", "cron-job-expression-generator", "cron-time-translator", "water-intake-calculator", "white-noise-generator", "world-clock"],
       faqs: [
         {
           q: "Does the alarm ring if I close the tab?",
@@ -6444,12 +6004,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Per-session log of phase, duration and time of day; resets at midnight.",
         "100% private — Toollyz has no backend, history saves to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "stopwatch",
-        "alarm-clock",
-        "typing-speed-test",
-        "calendar-generator",
-      ],
+      relatedSlugs: ["stopwatch", "alarm-clock", "typing-speed-test", "calendar-generator", "white-noise-generator"],
       faqs: [
         {
           q: "What is the Pomodoro Technique?",
@@ -6515,12 +6070,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Reversed-direction detection — the calculator shows the absolute difference and tells you the dates were swapped.",
         "100% private — Toollyz has no backend, dates save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "business-days-calculator",
-        "leap-year-checker",
-        "unix-timestamp-converter",
-        "calendar-generator",
-      ],
+      relatedSlugs: ["business-days-calculator", "leap-year-checker", "unix-timestamp-converter", "calendar-generator", "bmi-calculator", "calorie-calculator", "horoscope-generator", "sunrise-sunset", "zodiac-sign-finder"],
       faqs: [
         {
           q: "How does the calendar-correct subtraction work?",
@@ -6586,12 +6136,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Reverse the dates and get the same result — direction-agnostic counting.",
         "100% private — Toollyz has no backend, all settings save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "age-difference-calculator",
-        "leap-year-checker",
-        "calendar-generator",
-        "unix-timestamp-converter",
-      ],
+      relatedSlugs: ["age-difference-calculator", "leap-year-checker", "calendar-generator", "unix-timestamp-converter"],
       faqs: [
         {
           q: "Are From and To inclusive?",
@@ -6657,12 +6202,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Notes call out historically tricky century years (1600, 1700, 1800, 1900, 2000).",
         "100% private — Toollyz has no backend, settings save to localStorage.",
       ],
-      relatedSlugs: [
-        "age-difference-calculator",
-        "business-days-calculator",
-        "calendar-generator",
-        "unix-timestamp-converter",
-      ],
+      relatedSlugs: ["age-difference-calculator", "business-days-calculator", "calendar-generator", "unix-timestamp-converter", "sunrise-sunset"],
       faqs: [
         {
           q: "What's the leap year rule?",
@@ -6728,12 +6268,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Day length displayed in hours, minutes and seconds.",
         "100% private — solar math runs offline, only city lookups touch the network.",
       ],
-      relatedSlugs: [
-        "world-clock",
-        "calendar-generator",
-        "leap-year-checker",
-        "age-difference-calculator",
-      ],
+      relatedSlugs: ["world-clock", "calendar-generator", "leap-year-checker", "age-difference-calculator"],
       faqs: [
         {
           q: "How accurate are the times?",
@@ -6799,12 +6334,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "12 / 24-hour and show-seconds toggles persist per device.",
         "100% private — settings save to localStorage; only city searches leave the browser.",
       ],
-      relatedSlugs: [
-        "sunrise-sunset",
-        "unix-timestamp-converter",
-        "alarm-clock",
-        "stopwatch",
-      ],
+      relatedSlugs: ["sunrise-sunset", "unix-timestamp-converter", "alarm-clock", "stopwatch", "calendar-generator", "cron-job-expression-generator", "cron-time-translator", "discord-timestamp-generator"],
       faqs: [
         {
           q: "How accurate is the timezone data?",
@@ -6870,12 +6400,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Copy a one-line summary for sharing in chats or email.",
         "100% private — Toollyz has no backend, inputs save to localStorage.",
       ],
-      relatedSlugs: [
-        "loan-calculator",
-        "gst-vat-calculator",
-        "tip-calculator",
-        "currency-converter",
-      ],
+      relatedSlugs: ["loan-calculator", "gst-vat-calculator", "tip-calculator", "currency-converter", "fuel-cost-calculator"],
       faqs: [
         {
           q: "What is EMI?",
@@ -6941,12 +6466,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "23 currencies via `Intl.NumberFormat`.",
         "100% private — Toollyz has no backend, scenarios save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "emi-calculator",
-        "gst-vat-calculator",
-        "currency-converter",
-        "tip-calculator",
-      ],
+      relatedSlugs: ["emi-calculator", "gst-vat-calculator", "currency-converter", "tip-calculator"],
       faqs: [
         {
           q: "How is this different from the EMI Calculator?",
@@ -7012,12 +6532,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Copy-summary action for sharing in chat or email.",
         "100% private — Toollyz has no backend, the form saves to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "tip-calculator",
-        "currency-converter",
-        "emi-calculator",
-        "invoice-generator",
-      ],
+      relatedSlugs: ["tip-calculator", "currency-converter", "emi-calculator", "invoice-generator", "fuel-cost-calculator", "loan-calculator"],
       faqs: [
         {
           q: "What's the difference between Add tax and Remove tax?",
@@ -7083,12 +6598,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Region-aware tipping notes (US / Europe / Asia) in the About section.",
         "100% private — Toollyz has no backend, the form saves to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "gst-vat-calculator",
-        "currency-converter",
-        "emi-calculator",
-        "fuel-cost-calculator",
-      ],
+      relatedSlugs: ["gst-vat-calculator", "currency-converter", "emi-calculator", "fuel-cost-calculator", "calorie-calculator", "loan-calculator", "water-intake-calculator"],
       faqs: [
         {
           q: "How is the tip calculated?",
@@ -7154,12 +6664,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "23 currencies via `Intl.NumberFormat`.",
         "100% private — Toollyz has no backend, the form saves to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "currency-converter",
-        "tip-calculator",
-        "gst-vat-calculator",
-        "emi-calculator",
-      ],
+      relatedSlugs: ["currency-converter", "tip-calculator", "gst-vat-calculator", "emi-calculator"],
       faqs: [
         {
           q: "Which conversion constants does this use?",
@@ -7225,12 +6730,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Honest caveats panel about what BMI doesn&apos;t measure.",
         "100% private — Toollyz has no backend, your weight, height and unit choice save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "calorie-calculator",
-        "water-intake-calculator",
-        "age-difference-calculator",
-        "currency-converter",
-      ],
+      relatedSlugs: ["calorie-calculator", "water-intake-calculator", "age-difference-calculator", "currency-converter"],
       faqs: [
         {
           q: "What's the BMI formula?",
@@ -7296,12 +6796,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Honest &quot;not medical advice&quot; caveats panel — algorithms are population statistics, not diagnostics.",
         "100% private — Toollyz has no backend, inputs save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "bmi-calculator",
-        "water-intake-calculator",
-        "age-difference-calculator",
-        "tip-calculator",
-      ],
+      relatedSlugs: ["bmi-calculator", "water-intake-calculator", "age-difference-calculator", "tip-calculator"],
       faqs: [
         {
           q: "What's BMR?",
@@ -7367,12 +6862,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Prominent caveats panel — individual needs vary, food provides ~20% of water, hyponatraemia risk noted.",
         "100% private — Toollyz has no backend, inputs save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "bmi-calculator",
-        "calorie-calculator",
-        "tip-calculator",
-        "alarm-clock",
-      ],
+      relatedSlugs: ["bmi-calculator", "calorie-calculator", "tip-calculator", "alarm-clock"],
       faqs: [
         {
           q: "Where does &quot;30 ml per kg&quot; come from?",
@@ -7438,12 +6928,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Prominent &quot;Just for laughs&quot; caveats so nobody mistakes it for actual compatibility advice.",
         "100% private — Toollyz has no backend, the two names save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "zodiac-sign-finder",
-        "fancy-text-generator",
-        "random-quote-generator",
-        "horoscope-generator",
-      ],
+      relatedSlugs: ["zodiac-sign-finder", "fancy-text-generator", "random-quote-generator", "horoscope-generator"],
       faqs: [
         {
           q: "Is this actually accurate?",
@@ -7509,12 +6994,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Honest &quot;for fun, not forecasting&quot; caveats panel explaining astrology is a cultural tradition.",
         "100% private — Toollyz has no backend, birth date saves to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "horoscope-generator",
-        "love-compatibility-calculator",
-        "calendar-generator",
-        "age-difference-calculator",
-      ],
+      relatedSlugs: ["horoscope-generator", "love-compatibility-calculator", "calendar-generator", "age-difference-calculator"],
       faqs: [
         {
           q: "What's the difference between Western and Chinese zodiac?",
@@ -7580,12 +7060,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "12-phrase history kept in localStorage with one-tap copy.",
         "100% private — phrases generated locally, nothing uploaded.",
       ],
-      relatedSlugs: [
-        "password-generator",
-        "disposable-password-generator",
-        "hash-generator",
-        "uuid-generator",
-      ],
+      relatedSlugs: ["password-generator", "disposable-password-generator", "hash-generator", "uuid-generator"],
       faqs: [
         {
           q: "How is this different from the regular Password Generator?",
@@ -7651,12 +7126,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Copy rich (`ClipboardItem` with text/html + text/plain) and Copy HTML source actions.",
         "100% private — Toollyz has no backend, your details save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "meta-tag-generator",
-        "vcard-generator",
-        "qr-code-generator",
-        "url-shortener",
-      ],
+      relatedSlugs: ["meta-tag-generator", "vcard-generator", "qr-code-generator", "url-shortener", "digital-business-card", "dkim-record-checker", "dmarc-record-checker"],
       faqs: [
         {
           q: "Will it work in Outlook?",
@@ -7722,12 +7192,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Honest framing: settings save to localStorage but passwords <strong>never</strong> persist.",
         "100% private — Toollyz has no backend, all randomness is local.",
       ],
-      relatedSlugs: [
-        "password-generator",
-        "random-password-phrase-generator",
-        "hash-generator",
-        "secure-notes",
-      ],
+      relatedSlugs: ["password-generator", "random-password-phrase-generator", "hash-generator", "secure-notes", "temporary-email-generator"],
       faqs: [
         {
           q: "What does &quot;disposable&quot; mean here?",
@@ -7793,12 +7258,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Paste-ready &lt;head&gt; HTML snippet with link tags, apple-touch-icon and theme-color.",
         "100% private — Toollyz has no backend, every byte stays in your browser.",
       ],
-      relatedSlugs: [
-        "meta-tag-generator",
-        "qr-code-generator",
-        "color-picker",
-        "barcode-generator",
-      ],
+      relatedSlugs: ["meta-tag-generator", "qr-code-generator", "color-picker", "barcode-generator", "lorem-ipsum-image-generator", "pixel-art-generator", "qr-code-scanner", "qr-menu-generator", "website-screenshot-generator"],
       faqs: [
         {
           q: "How does the auto-fit work?",
@@ -7864,12 +7324,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Per-row copy button for quickly grabbing a single address.",
         "100% private — Toollyz has no backend, addresses generated locally.",
       ],
-      relatedSlugs: [
-        "uuid-generator",
-        "ip-address-finder",
-        "hash-generator",
-        "dns-lookup",
-      ],
+      relatedSlugs: ["uuid-generator", "ip-address-finder", "hash-generator", "dns-lookup", "mac-address-lookup"],
       faqs: [
         {
           q: "What is a MAC address?",
@@ -7935,12 +7390,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Live QR code embedding the full .vcf — point a phone camera, tap Add to contacts.",
         "100% private — Toollyz has no backend, details save to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "digital-business-card",
-        "qr-code-generator",
-        "email-signature-generator",
-        "barcode-generator",
-      ],
+      relatedSlugs: ["digital-business-card", "qr-code-generator", "email-signature-generator", "barcode-generator", "packing-slip-generator", "receipt-generator", "whatsapp-link-generator"],
       faqs: [
         {
           q: "What's vCard?",
@@ -8006,12 +7456,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "QR generator for the hosted page URL with downloadable PNG.",
         "100% private — Toollyz has no backend, form data saves to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "vcard-generator",
-        "email-signature-generator",
-        "qr-code-generator",
-        "url-shortener",
-      ],
+      relatedSlugs: ["vcard-generator", "email-signature-generator", "qr-code-generator", "url-shortener", "qr-menu-generator", "receipt-generator"],
       faqs: [
         {
           q: "Why does Toollyz make me host the HTML page myself?",
@@ -8077,12 +7522,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "QR generator for the hosted URL — downloadable PNG ready for table cards.",
         "100% private — Toollyz has no backend, menu data saves to localStorage on this device only.",
       ],
-      relatedSlugs: [
-        "digital-business-card",
-        "qr-code-generator",
-        "favicon-from-text",
-        "currency-converter",
-      ],
+      relatedSlugs: ["digital-business-card", "qr-code-generator", "favicon-from-text", "currency-converter", "qr-code-scanner", "receipt-generator", "whatsapp-link-generator"],
       faqs: [
         {
           q: "Why do I host the menu instead of Toollyz?",
@@ -8148,12 +7588,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Token stored only in tab memory — reloading is the equivalent of throwing the address away.",
         "100% private from Toollyz&apos;s perspective — your browser talks to mail.tm directly, no Toollyz server in the path.",
       ],
-      relatedSlugs: [
-        "disposable-password-generator",
-        "secure-notes",
-        "hash-generator",
-        "url-shortener",
-      ],
+      relatedSlugs: ["disposable-password-generator", "secure-notes", "hash-generator", "url-shortener"],
       faqs: [
         {
           q: "Whose service backs this tool?",
@@ -8256,7 +7691,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Persists your last input and mode in localStorage for one-click resume.",
         "Runs entirely in your browser — your text is never uploaded anywhere.",
       ],
-      relatedSlugs: ["case-converter", "fancy-text-generator", "invisible-text-generator", "duplicate-line-remover"],
+      relatedSlugs: ["case-converter", "fancy-text-generator", "invisible-text-generator", "duplicate-line-remover", "emoji-translator"],
       faqs: [
         { q: "What does a text reverser do?", a: "It takes any string and flips it according to the mode you pick — most commonly the entire text end-to-start, but you can also reverse only the word order, only the line order, or each word's characters individually." },
         { q: "Does the upside-down mode actually flip my screen?", a: "No — it swaps each character for a Unicode lookalike that's drawn upside-down (for example 'h' becomes 'ɥ'). The text remains regular Unicode, so you can paste it anywhere fonts are supported." },
@@ -8293,7 +7728,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Unicode-aware tokenisation so accented and non-Latin text counts correctly.",
         "Runs entirely in your browser — your writing never leaves the device.",
       ],
-      relatedSlugs: ["word-counter", "duplicate-line-remover", "case-converter", "slugify"],
+      relatedSlugs: ["word-counter", "duplicate-line-remover", "case-converter", "slugify", "ai-text-humanizer", "keyword-density-checker", "sentence-rewriter"],
       faqs: [
         { q: "What counts as a duplicate word?", a: "Any word that appears at least N times in your text, where N is the 'min count' option (default 2). Case-folded comparison by default so 'Apple' and 'apple' count together; turn off 'ignore case' to keep them separate." },
         { q: "Why are 'the', 'and' and 'of' ignored?", a: "They're stopwords — extremely common glue words that you can't really avoid. Filtering them out means the report focuses on the words you're actually choosing to repeat. Turn the toggle off to include them." },
@@ -8330,7 +7765,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Overused verbs (delve, leverage, utilize) replaced with plain alternatives (explore, use, use).",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["sentence-rewriter", "word-counter", "duplicate-word-finder", "case-converter"],
+      relatedSlugs: ["sentence-rewriter", "word-counter", "duplicate-word-finder", "case-converter", "keyword-density-checker"],
       faqs: [
         { q: "Does this make my text undetectable by AI classifiers?", a: "No — and we say so prominently. AI-text classifiers look at deeper statistical signals (token probability distributions) that our heuristic pass can't fully alter. The point is readability and voice — making your prose less obviously LLM-stiff to a human reader." },
         { q: "Why are 'Furthermore' and 'Moreover' bad?", a: "They're not bad words — they're just overused by LLMs. Human writers vary transitions: 'Also', 'On top of that', 'And', 'What's more'. The humaniser rotates through several options to break the monotony." },
@@ -8367,7 +7802,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Casual mode adds contractions; formal mode expands them — pick once, get both.",
         "Runs 100% in your browser — no LLM call, no API key, no upload.",
       ],
-      relatedSlugs: ["ai-text-humanizer", "word-counter", "case-converter", "duplicate-word-finder"],
+      relatedSlugs: ["ai-text-humanizer", "word-counter", "case-converter", "duplicate-word-finder", "keyword-density-checker"],
       faqs: [
         { q: "Is this an AI rewriter?", a: "No — it's a heuristic, rule-based pass. We apply tone transformations and synonym swaps without calling any LLM. That keeps the tool offline, private and free, but the variations are less creative than what GPT-4 / Claude can produce." },
         { q: "Will the meaning stay the same?", a: "Mostly — but always re-read. Some synonym swaps subtly shift meaning ('utilise' has a slightly more formal connotation than 'use'). Voice changes especially can move emphasis. Treat the output as drafts." },
@@ -8404,7 +7839,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Clickable dictionary panel — discover emoji by keyword and insert in one click.",
         "Runs entirely in your browser — no upload, no API.",
       ],
-      relatedSlugs: ["fancy-text-generator", "hashtag-generator", "random-emoji-generator", "text-reverser"],
+      relatedSlugs: ["fancy-text-generator", "hashtag-generator", "random-emoji-generator", "text-reverser", "unicode-character-finder"],
       faqs: [
         { q: "How does the text → emoji matching work?", a: "Each word in your input is lowercased and looked up in the built-in dictionary. If found, the matching emoji is either substituted in place of the word ('replace') or appended after it ('append'). Words not in the dictionary pass through unchanged." },
         { q: "Why didn't my word match?", a: "The dictionary is curated at ~150 high-traffic entries to keep it small and snappy. Common synonyms work (love, happy, fire, coffee, …) but obscure or technical words may not. The full keyword list is shown at the bottom — use 'Append' mode to leave non-matches untouched." },
@@ -8442,7 +7877,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Input persists in localStorage so your description survives a refresh.",
         "Runs 100% in your browser — Toollyz never contacts YouTube.",
       ],
-      relatedSlugs: ["hashtag-generator", "keyword-density-checker", "discord-timestamp-generator", "whatsapp-link-generator"],
+      relatedSlugs: ["hashtag-generator", "keyword-density-checker", "discord-timestamp-generator", "whatsapp-link-generator", "thumbnail-downloader"],
       faqs: [
         { q: "Does this tool fetch tags from a YouTube URL?", a: "No — paste the description text. Toollyz has no server and the browser's same-origin policy blocks us from scraping youtube.com directly. Open the video, copy the description, paste it here." },
         { q: "Where do I find the tags field in YouTube Studio?", a: "YT Studio → Content → click any video → 'Show More' → 'Tags' field. Paste the comma-separated block from this tool into that field. YT used to display tags publicly but now they're back-end only (ranking signal, not displayed)." },
@@ -8479,7 +7914,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Reorder chapters with up/down buttons; persistence in localStorage.",
         "Runs entirely in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["url-shortener", "utm-link-generator", "qr-code-generator", "discord-timestamp-generator"],
+      relatedSlugs: ["url-shortener", "utm-link-generator", "qr-code-generator", "discord-timestamp-generator", "thumbnail-downloader"],
       faqs: [
         { q: "What URL styles does it accept?", a: "Standard watch URLs (youtube.com/watch?v=…), short URLs (youtu.be/…), embed URLs (/embed/…), /shorts/ URLs, and the legacy /v/ path. You can also paste a bare 11-character video ID directly." },
         { q: "What's the difference between the four link styles?", a: "Short (youtu.be/ID?t=X) is the most concise. Full (youtube.com/watch?v=ID&t=Xs) is the canonical share URL. Embed adds ?start=X for use in iframes. Markdown wraps the link with [m:ss](URL) for blog posts." },
@@ -8553,7 +7988,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Per-piece copy buttons + bulk 'Copy all' for one-shot thread posting.",
         "Runs entirely in your browser — your draft never leaves the device.",
       ],
-      relatedSlugs: ["character-counter", "word-counter", "fancy-text-generator", "hashtag-generator"],
+      relatedSlugs: ["character-counter", "word-counter", "fancy-text-generator", "hashtag-generator", "instagram-caption-formatter", "linkedin-post-formatter", "social-post-formatter"],
       faqs: [
         { q: "Why is the count different from a regular character counter?", a: "X uses a 'weighted' character count, not raw code-point length. CJK ranges, Hangul, Katakana, Hiragana and most pictographic emoji each count as 2 weighted units; everything else counts as 1." },
         { q: "How are URLs counted?", a: "Every URL — whether 10 characters or 200 characters — is rewritten by Twitter to a fixed-length t.co link that takes 23 weighted units. The counter applies that rule directly so you see what the platform will see." },
@@ -8664,7 +8099,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Persists the last-picked moment in localStorage for one-click resume.",
         "Runs entirely in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["unix-timestamp-converter", "world-clock", "youtube-timestamp-link", "calendar-generator"],
+      relatedSlugs: ["unix-timestamp-converter", "world-clock", "youtube-timestamp-link", "calendar-generator", "youtube-tag-extractor"],
       faqs: [
         { q: "What is a Discord timestamp?", a: "It's a piece of message syntax Discord recognises: `<t:UNIX_SECONDS:FORMAT_CODE>`. The Discord client renders it as a viewer-localised date/time, so the same message reads correctly in everyone's time zone." },
         { q: "What are the 7 format codes?", a: "t = short time (16:20), T = long time (16:20:30), d = short date (20/04/2021), D = long date (20 April 2021), f = short date+time (20 April 2021 16:20) — the implicit default, F = long date+time (Tuesday, 20 April 2021 16:20), R = relative (in 2 hours)." },
@@ -8701,7 +8136,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Raw + URL-encoded character count so long messages get flagged before they break on iOS.",
         "Runs entirely in your browser — phone numbers and messages never touch a server.",
       ],
-      relatedSlugs: ["qr-code-generator", "qr-menu-generator", "utm-link-generator", "vcard-generator"],
+      relatedSlugs: ["qr-code-generator", "qr-menu-generator", "utm-link-generator", "vcard-generator", "youtube-tag-extractor"],
       faqs: [
         { q: "What does the wa.me link do?", a: "Tapping or scanning it opens WhatsApp on the user's device and starts (or opens) a chat with the number you specified. If you included a message, that message is pre-typed in the input box — the user just hits send." },
         { q: "Do I need to include the + sign?", a: "No. wa.me URLs use the country dial code followed by the local number with no + or spaces. The generator strips them automatically." },
@@ -8738,7 +8173,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Swap the two sides with one click without retyping.",
         "Runs entirely in your browser — Toollyz has no backend.",
       ],
-      relatedSlugs: ["duplicate-line-remover", "line-sorter", "json-formatter", "case-converter"],
+      relatedSlugs: ["duplicate-line-remover", "line-sorter", "json-formatter", "case-converter", "markdown-editor-previewer", "online-notepad"],
       faqs: [
         { q: "What is a text diff?", a: "A diff is a side-by-side or unified view of the differences between two pieces of text. Each line is classified as equal, added, removed or changed, and the tool highlights exactly which parts differ." },
         { q: "What algorithm does this use?", a: "A standard O(m·n) longest-common-subsequence pass at the line level, followed by a second LCS pass at the word level inside each changed row. It's the same logic used by classic Unix `diff`." },
@@ -8775,7 +8210,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "'Replace input with unique' button feeds the deduped output back into the editor.",
         "Runs 100% in your browser — your list never leaves the device.",
       ],
-      relatedSlugs: ["line-sorter", "text-diff-checker", "word-counter", "case-converter"],
+      relatedSlugs: ["line-sorter", "text-diff-checker", "word-counter", "case-converter", "duplicate-file-cleaner", "duplicate-word-finder", "secure-file-shredder", "text-reverser"],
       faqs: [
         { q: "What counts as a duplicate line?", a: "By default, two lines are duplicates when their normalised forms match. With 'trim whitespace' on, leading/trailing spaces are stripped first. With 'ignore case' on, both lines are lowercased before comparison." },
         { q: "Which copy of a duplicate is kept?", a: "In 'preserve order' mode the first occurrence wins — every later copy is dropped. In 'sort A→Z' mode the unique set is collected first then sorted." },
@@ -8812,7 +8247,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Optional dedupe-after-sort step strips repeated entries in one pass.",
         "Runs entirely in your browser — your list never leaves the device.",
       ],
-      relatedSlugs: ["duplicate-line-remover", "text-diff-checker", "word-counter", "case-converter"],
+      relatedSlugs: ["duplicate-line-remover", "text-diff-checker", "word-counter", "case-converter", "duplicate-file-cleaner"],
       faqs: [
         { q: "How does natural sort differ from A→Z?", a: "Plain A→Z compares character-by-character, so 'image10' comes before 'image2'. Natural sort recognises embedded numbers and orders them numerically, putting 'image2' before 'image10' — the way a human would expect." },
         { q: "How does numeric sort handle non-numeric lines?", a: "It pulls the leading number from each line; lines that don't start with a number are pushed to the end (or beginning in descending mode) and sorted alphabetically among themselves." },
@@ -8849,7 +8284,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Honest framing in the UI: we explain what the browser sandbox can and can't do.",
         "Runs 100% in your browser — files are never uploaded to a server.",
       ],
-      relatedSlugs: ["hash-generator", "secure-notes", "password-generator", "duplicate-line-remover"],
+      relatedSlugs: ["hash-generator", "secure-notes", "password-generator", "duplicate-line-remover", "duplicate-file-cleaner", "exif-data-remover", "file-metadata-viewer", "mime-type-checker", "random-file-generator"],
       faqs: [
         { q: "Does this actually delete my file from disk?", a: "No — and we say so prominently in the tool. Browsers sit inside a sandbox that forbids touching files on disk. What the tool does is overwrite the IN-MEMORY copy of a file you picked and offer the shredded version for download. You can then drag the shredded version over the original yourself if you want to replace it." },
         { q: "What's the DoD 5220.22-M pattern?", a: "A historical US Department of Defense standard for sanitising magnetic media: pass 1 = all zeros (0x00), pass 2 = all ones (0xFF), pass 3 = cryptographic random. Modern SSDs and flash media don't benefit from multi-pass writes (write amplification), but the 3-pass dance is still a recognisable belt-and-braces signal." },
@@ -8886,7 +8321,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Persists last settings in localStorage for one-click resume.",
         "Runs 100% in your browser — tokens are never sent to a server.",
       ],
-      relatedSlugs: ["api-key-generator", "uuid-validator", "password-generator", "secure-notes"],
+      relatedSlugs: ["api-key-generator", "uuid-validator", "password-generator", "secure-notes", "encryption-key-generator", "fake-json-data-generator", "jwt-generator"],
       faqs: [
         { q: "Are these tokens truly random?", a: "Yes — every byte comes from `crypto.getRandomValues`, the WebCrypto cryptographically-strong RNG seeded from the OS entropy pool. They're suitable for production session IDs, magic links and password-reset tokens." },
         { q: "What's the difference between Base64 and Base64URL?", a: "Standard Base64 uses + and / characters and = for padding — all of which can mean trouble in URLs and cookies. Base64URL replaces + with -, / with _ and drops the = padding so the token is safe to put in URLs and cookie names without any encoding." },
@@ -8923,7 +8358,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "UPPERCASE toggle for keys that need to be visually distinct.",
         "Runs 100% in your browser — keys never reach a server.",
       ],
-      relatedSlugs: ["session-id-generator", "uuid-validator", "password-generator", "hash-generator"],
+      relatedSlugs: ["session-id-generator", "uuid-validator", "password-generator", "hash-generator", "encryption-key-generator", "jwt-generator"],
       faqs: [
         { q: "How is this different from the Session ID Generator?", a: "Session IDs are typically opaque random strings. API keys often have a brand prefix ('sk_live_'), are segmented for readability ('xxxx-yyyy-zzzz') and sometimes carry a checksum. This tool handles all three patterns; the Session ID Generator is the simpler tool for raw tokens." },
         { q: "Are these real Stripe / GitHub keys?", a: "No — they share the format but the random body is generated locally. Using a Toollyz-generated key on Stripe or GitHub won't work; their backends won't recognise it. Use the format to test your own systems or to mint keys for your own API." },
@@ -8960,7 +8395,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Auto-regenerates on every algorithm / parameter change for fast iteration.",
         "100% client-side — keys never touch a server.",
       ],
-      relatedSlugs: ["jwt-generator", "session-id-generator", "api-key-generator", "hash-generator"],
+      relatedSlugs: ["jwt-generator", "session-id-generator", "api-key-generator", "hash-generator", "ssl-certificate-checker"],
       faqs: [
         { q: "Are these keys safe for production use?", a: "Yes — they come from the same Web Crypto implementation your backend uses (BoringSSL on Chrome, NSS on Firefox, Apple's CoreCrypto on Safari). The randomness is OS-seeded." },
         { q: "What's the difference between AES-GCM and AES-CBC?", a: "AES-GCM authenticates as it encrypts — you get integrity for free. AES-CBC just encrypts; you need a separate MAC (HMAC-SHA-256 typically) to detect tampering. Use AES-GCM for new code." },
@@ -8997,7 +8432,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Live re-sign on every change — no 'Sign' button to click.",
         "Runs 100% in your browser — secrets and claims never leave the device.",
       ],
-      relatedSlugs: ["jwt-decoder", "session-id-generator", "api-key-generator", "hash-generator"],
+      relatedSlugs: ["jwt-decoder", "session-id-generator", "api-key-generator", "hash-generator", "encryption-key-generator"],
       faqs: [
         { q: "Which algorithms are supported?", a: "HS256, HS384 and HS512 — the symmetric (shared-secret) HMAC algorithms standardised by RFC 7518." },
         { q: "Why not RS256 / ES256?", a: "Asymmetric algorithms require importing a private key (typically as PEM). Pasting a real RSA / EC private key into any webpage is a security risk we won't encourage. Use a server-side library — Node `jsonwebtoken`, Go `golang-jwt`, Python `pyjwt` — for those." },
@@ -9034,7 +8469,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "10 preset buttons cover the most common patterns (every minute, hourly, weekday 9 AM, etc.).",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["cron-job-expression-generator", "stopwatch", "alarm-clock", "world-clock"],
+      relatedSlugs: ["cron-job-expression-generator", "stopwatch", "alarm-clock", "world-clock", "terminal-cheatsheet"],
       faqs: [
         { q: "What cron formats does this support?", a: "5-field POSIX (`* * * * *` → minute hour day-of-month month day-of-week) and 6-field Quartz-ish (leading seconds: `* * * * * *`). The aliases @yearly, @annually, @monthly, @weekly, @daily, @midnight and @hourly all work." },
         { q: "What does 'union vs intersection of DOM and DOW' mean?", a: "Standard cron rule: when both day-of-month and day-of-week are restricted (neither is `*`), the cron fires if EITHER matches. So `0 0 13 * 5` means 'midnight on Friday OR midnight on the 13th'. We follow this." },
@@ -9109,7 +8544,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Try/catch around the tester so a malformed pattern shows an error, not a crash.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["regex-tester", "json-formatter", "url-encoder-decoder", "html-minifier"],
+      relatedSlugs: ["regex-tester", "json-formatter", "url-encoder-decoder", "html-minifier", "htaccess-redirect-generator", "terminal-cheatsheet"],
       faqs: [
         { q: "How is this different from Regex Tester?", a: "Regex Tester is for testing an existing pattern. This tool helps you CREATE the pattern in the first place — via the curated library or the visual builder — then you can test it too." },
         { q: "Why doesn't your email regex match every valid email?", a: "RFC 5322 emails are absurdly permissive. Real-world deployments use a practical regex that covers ~99.9% of actual addresses. Our pattern allows the common forms (with + and . in the local part, ≥ 2-letter TLD) without false positives." },
@@ -9146,7 +8581,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Comments — both `--` line and `/* */` block — are preserved verbatim.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["json-formatter", "toml-formatter", "xml-formatter", "html-minifier"],
+      relatedSlugs: ["json-formatter", "toml-formatter", "xml-formatter", "html-minifier", "sql-dummy-data-generator", "sql-query-beautifier"],
       faqs: [
         { q: "Which SQL dialect does it format?", a: "The dialect-neutral subset most users write — SELECT / INSERT / UPDATE / DELETE / CREATE / ALTER, with WITH, JOINs, sub-queries and the standard data types. Identifier quoting works for PostgreSQL (`\"…\"`), MySQL (` `…` `) and SQL Server (`[…]`) all in the same input." },
         { q: "Will it format my Postgres-specific syntax?", a: "Yes for the common ones — `ON CONFLICT DO UPDATE`, `RETURNING`, `LATERAL JOIN`, `EXCLUDED.*` are all handled. Very dialect-specific operators (`@@`, `->>`, etc.) pass through verbatim." },
@@ -9224,7 +8659,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Configurable threshold for breaking inline arrays into multi-line.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["json-formatter", "yaml-to-json", "xml-formatter", "html-minifier"],
+      relatedSlugs: ["json-formatter", "yaml-to-json", "xml-formatter", "html-minifier", "csv-to-json", "json-to-csv", "sql-formatter", "sql-query-beautifier"],
       faqs: [
         { q: "Does this support the full TOML 1.0 spec?", a: "It supports the subset that covers 95% of real-world config files — standard tables, dotted keys, inline tables, all string forms, all integer/float forms, booleans, inline and multi-line arrays, and array-of-tables. Some edge cases (mixed-type arrays in spec-strict mode, locale-specific dates) may parse but not re-emit identically." },
         { q: "Will it work on Cargo.toml?", a: "Yes — Cargo.toml is one of our main test cases. Dependencies, features, workspace members, build profiles all round-trip cleanly." },
@@ -9261,7 +8696,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Filename, theme, language and style settings persist in localStorage.",
         "Runs 100% in your browser — no server, no upload, no telemetry.",
       ],
-      relatedSlugs: ["html-minifier", "css-minifier", "javascript-minifier", "json-formatter"],
+      relatedSlugs: ["html-minifier", "css-minifier", "javascript-minifier", "json-formatter", "css-animation-generator", "keyboard-shortcut-generator", "website-screenshot-generator"],
       faqs: [
         { q: "How is this different from Carbon or Ray.so?", a: "Both are excellent — but they're SaaS, send your code to a server, and require an internet connection. This tool runs entirely in your browser, never uploads anything, and has no usage limits." },
         { q: "Why does my code look slightly different from VS Code?", a: "The highlighter here is regex-driven and covers the common 80% of each language — it knows keywords, strings, numbers, comments and function calls, but it doesn't have a full parser. For most snippets the result is indistinguishable; for very edge-case syntax (template literals with embedded expressions, JSX inside TS, etc.) some tokens may fall through to the default colour." },
@@ -9298,7 +8733,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Bash-script-friendly examples (with `2>&1`, `head`, `xargs` chains where relevant).",
         "Runs 100% in your browser — no API, no server.",
       ],
-      relatedSlugs: ["regex-generator", "regex-tester", "cron-time-translator", "json-formatter"],
+      relatedSlugs: ["regex-generator", "regex-tester", "cron-time-translator", "json-formatter", "keyboard-shortcut-generator"],
       faqs: [
         { q: "Why these 80 commands and not more?", a: "Curated commands beat comprehensive lists. We picked the variants you'll actually paste into a terminal day-to-day. For exhaustive references use the man page or tldr." },
         { q: "How is this different from `tldr`?", a: "tldr is a CLI tool with community examples. This is a web cheat sheet you can search from any browser, including a phone or tablet. Different use cases — both are valuable." },
@@ -9414,7 +8849,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Handles obs-fold (RFC 7230 multi-line headers) and case-insensitive header lookups.",
         "Runs 100% in your browser — nothing is fetched, nothing is uploaded.",
       ],
-      relatedSlugs: ["meta-tag-generator", "robots-txt-generator", "spf-record-checker", "email-header-analyzer"],
+      relatedSlugs: ["meta-tag-generator", "robots-txt-generator", "spf-record-checker", "email-header-analyzer", "cdn-checker", "redirect-chain-checker", "website-cache-checker"],
       faqs: [
         { q: "Does this tool fetch the URL itself?", a: "No. Toollyz is statically exported with no backend. Paste the headers you already fetched with curl, DevTools or any HTTP client. The browser's same-origin policy would block us from fetching most third-party URLs anyway." },
         { q: "Why is `Access-Control-Allow-Origin: *` with credentials so dangerous?", a: "The Fetch spec explicitly forbids that combination — browsers refuse to send credentials when the response uses the wildcard origin, even if the server allows credentials. The result: every authenticated request from JS fails silently. Always reflect a specific origin instead of using `*`." },
@@ -9489,7 +8924,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Settings (paste) persists in localStorage for an undo-friendly workflow.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["meta-tag-analyzer", "open-graph-preview", "canonical-url-checker", "sitemap-validator"],
+      relatedSlugs: ["meta-tag-analyzer", "open-graph-preview", "canonical-url-checker", "sitemap-validator", "broken-link-checker", "mobile-friendly-test"],
       faqs: [
         { q: "Can it fetch a URL directly?", a: "No — the site is statically exported with no backend. Browser same-origin policy would block client-side fetches of third-party URLs anyway. Open the page, View Source, paste here." },
         { q: "Does the pretty-printer handle invalid HTML?", a: "Yes — DOMParser is forgiving. Browser-style error recovery applies, so partial fragments, unclosed tags, or HTML5 quirks parse into a 'best-effort' DOM that the tool can still walk." },
@@ -9603,7 +9038,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Warnings for expired certificates, sub-2048-bit RSA, SHA-1 signatures, missing SAN.",
         "Runs 100% in your browser — your private cert never leaves your machine.",
       ],
-      relatedSlugs: ["hash-generator", "encryption-key-generator", "jwt-decoder", "spf-record-checker"],
+      relatedSlugs: ["hash-generator", "encryption-key-generator", "jwt-decoder", "spf-record-checker", "cdn-checker", "domain-age-checker", "ssl-expiry-reminder"],
       faqs: [
         { q: "Can I paste a PFX or DER directly?", a: "Not yet — only PEM (base64-armored). Convert with: `openssl x509 -inform DER -in cert.der -out cert.pem`. PFX requires extracting the cert with: `openssl pkcs12 -in cert.pfx -nokeys -out cert.pem`." },
         { q: "Does it fetch certificates from a URL?", a: "No — the site is statically exported and the browser's same-origin policy would block third-party fetches. Use `openssl s_client` or your browser's certificate viewer to extract the PEM, then paste here." },
@@ -9640,7 +9075,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "TSV export ready for `mv` scripts or paste into a spreadsheet.",
         "Runs 100% in your browser — file lists never leave the device.",
       ],
-      relatedSlugs: ["duplicate-line-remover", "line-sorter", "secure-file-shredder", "case-converter"],
+      relatedSlugs: ["duplicate-line-remover", "line-sorter", "secure-file-shredder", "case-converter", "random-file-generator"],
       faqs: [
         { q: "What's the difference vs Duplicate Line Remover?", a: "Duplicate Line Remover deletes duplicate lines. This tool keeps them all but suggests unique alternatives via a counter suffix — that's what you want when each line is a file you need to keep but can't have name conflicts." },
         { q: "Why is the first occurrence not renamed?", a: "macOS / Windows / Linux all leave the first file untouched and rename only the copies. We follow that convention. To override, change 'Start counter at' to 1 (the first will be renamed too)." },
@@ -9718,7 +9153,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Privacy framing in the UI — explains why stripping matters (GPS leaks).",
         "Runs 100% in your browser — your image is never uploaded.",
       ],
-      relatedSlugs: ["secure-file-shredder", "image-compressor", "image-resizer", "mime-type-checker"],
+      relatedSlugs: ["secure-file-shredder", "image-compressor", "image-resizer", "mime-type-checker", "file-metadata-viewer"],
       faqs: [
         { q: "Why do photos have EXIF in the first place?", a: "Phones embed camera settings (ISO, aperture, shutter speed), device model, capture timestamp and — most importantly — GPS coordinates of where the photo was taken. Great for personal albums; bad for public sharing." },
         { q: "Is the JPEG strip lossless?", a: "Yes — perfectly. We walk the JPEG segment chain and drop only the metadata segments (APP1, APP13, etc.), keeping the original Huffman tables, quantisation tables and entropy-coded image data byte-for-byte. The decoded pixels are identical." },
@@ -9793,7 +9228,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Tooltip on hover shows which finger should type each key.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["keyboard-tester", "typing-speed-test", "cps-test", "spacebar-counter"],
+      relatedSlugs: ["keyboard-tester", "typing-speed-test", "cps-test", "spacebar-counter", "keyboard-shortcut-generator"],
       faqs: [
         { q: "What's a 'finger load'?", a: "How many keystrokes a particular finger has to make for a given text. A balanced layout spreads load across all fingers; an unbalanced layout overworks pinkies or skips the home row. Sub-50% home-row hit rate is the classic QWERTY pain point that Dvorak / Colemak / Workman were designed to fix." },
         { q: "Why is Dvorak supposed to be more efficient?", a: "Dvorak put the most-used English letters on the home row, vowels under the left hand and consonants under the right. Result: ~70% home-row hit rate vs ~30% for QWERTY on English text. Real-world speed gains are modest because skilled typists hit ~80 WPM regardless." },
@@ -9832,7 +9267,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Persists your schema in localStorage so you can return to the same shape.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["uuid-generator", "json-formatter", "csv-to-json", "session-id-generator"],
+      relatedSlugs: ["uuid-generator", "json-formatter", "csv-to-json", "session-id-generator", "random-file-generator", "sql-dummy-data-generator"],
       faqs: [
         { q: "Is the randomness cryptographic?", a: "Yes — every random byte comes from `crypto.getRandomValues`, the WebCrypto cryptographically-strong RNG. We use rejection sampling so each character in a string or value within a range has uniform probability (no modulo bias)." },
         { q: "Are the names / companies / cities real?", a: "They're real names of notable historical figures (computer scientists, mathematicians) and a curated list of well-known companies, world cities and countries. None of the email addresses, phones or street addresses are real — they're constructed from synthetic templates." },
@@ -9870,7 +9305,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Persists your schema and options in localStorage for one-click resume.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["fake-json-data-generator", "sql-formatter", "uuid-generator", "json-formatter"],
+      relatedSlugs: ["fake-json-data-generator", "sql-formatter", "uuid-generator", "json-formatter", "sql-query-beautifier"],
       faqs: [
         { q: "Which dialect should I pick?", a: "PostgreSQL/SQLite is the safe default — both use standard ANSI SQL with double-quoted identifiers and `''` string escapes. MySQL uses backticks for identifiers and may need backslash escapes. SQL Server uses square brackets and `N'…'` for Unicode strings." },
         { q: "Does it generate CREATE TABLE statements?", a: "Not currently — only INSERTs. You're expected to have the target table already defined. A future version may add CREATE TABLE generation." },
@@ -9946,7 +9381,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Field-count consistency check — flags rows that don't match for fast debugging.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["json-to-csv", "json-formatter", "toml-formatter", "html-minifier"],
+      relatedSlugs: ["json-to-csv", "json-formatter", "toml-formatter", "html-minifier", "api-response-viewer", "fake-json-data-generator", "yaml-to-json"],
       faqs: [
         { q: "Does it handle quoted fields with embedded commas?", a: "Yes — RFC 4180 quoting is fully supported. A field like `\"Smith, John\"` is parsed as the single value `Smith, John`." },
         { q: "How does it escape double quotes inside a field?", a: "Per RFC 4180, two consecutive double quotes (`\"\"`) inside a quoted field decode to a single `\"`. So `\"He said \"\"hi\"\"\"` parses as `He said \"hi\"`." },
@@ -9984,7 +9419,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "RFC 4180 quoting (`\"\"`-escapes for embedded quotes).",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["csv-to-json", "json-formatter", "toml-formatter", "html-minifier"],
+      relatedSlugs: ["csv-to-json", "json-formatter", "toml-formatter", "html-minifier", "xml-formatter"],
       faqs: [
         { q: "What input shape does it accept?", a: "Three shapes: (1) array of objects — the standard API response, becomes one CSV row per object; (2) array of arrays — the first array becomes the header; (3) single object — becomes a one-row CSV." },
         { q: "How does 'flatten nested objects' work?", a: "Nested objects get dotted keys. `{ address: { city: 'London' } }` becomes the column `address.city`. Without flattening, the nested object is JSON-stringified into a single cell." },
@@ -10022,7 +9457,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Persists your input and direction in localStorage for one-click resume.",
         "Runs 100% in your browser — no upload, no server.",
       ],
-      relatedSlugs: ["json-formatter", "toml-formatter", "html-to-markdown", "csv-to-json"],
+      relatedSlugs: ["json-formatter", "toml-formatter", "html-to-markdown", "csv-to-json", "api-response-viewer", "xml-formatter"],
       faqs: [
         { q: "Does this support every YAML 1.2 feature?", a: "It supports the subset that covers 95% of real-world configs. Not supported (yet): anchors (`&name`), aliases (`*name`), explicit tags (`!!str`), document markers (`---` / `...`), and YAML 1.1's many-named-booleans behaviour. Most Kubernetes, GitHub Actions and docker-compose YAMLs work cleanly." },
         { q: "Will it work on Kubernetes manifests?", a: "Yes — Deployment, Service, ConfigMap, Secret, Ingress, StatefulSet manifests all round-trip cleanly. Multi-document YAMLs (separated by `---`) currently parse only the first document." },
@@ -10060,7 +9495,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Strips scripts, styles and noscript blocks for safety.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["markdown-to-html", "html-minifier", "json-formatter", "case-converter"],
+      relatedSlugs: ["markdown-to-html", "html-minifier", "json-formatter", "case-converter", "open-graph-preview", "yaml-to-json"],
       faqs: [
         { q: "Why DOMParser instead of regex?", a: "Regex-based HTML parsers fail on nested tags, attribute edge cases and invalid HTML the browser silently fixes. DOMParser is the same parser your browser uses for normal page rendering — it handles every weird case correctly." },
         { q: "Does it execute scripts in my input?", a: "No. DOMParser does NOT execute scripts when parsing HTML via `parseFromString`, even when the input contains `<script>` tags. We explicitly drop scripts and styles before emitting Markdown anyway." },
@@ -10097,7 +9532,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Negative numbers via leading minus sign (signed magnitude).",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["decimal-to-binary", "hexadecimal-converter", "hex-to-rgb", "hash-generator"],
+      relatedSlugs: ["decimal-to-binary", "hexadecimal-converter", "hex-to-rgb", "hash-generator", "morse-code-translator", "roman-numeral-converter"],
       faqs: [
         { q: "How is this different from the Hexadecimal Converter?", a: "The Hexadecimal Converter shows all four bases (2/8/10/16) side-by-side. This tool is a focused binary-to-decimal view with two extras: the place-value table breaking down each bit's contribution, and the IEEE 754 float decoder for 32/64-bit inputs." },
         { q: "What's a place-value table?", a: "A row per bit from MSB to LSB. Each row shows the position (2^n exponent), the bit value (0 or 1), and the contribution to the total (2^n if the bit is set, 0 if not). Sum the contributions and you get the decimal value." },
@@ -10135,7 +9570,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Negative numbers via leading minus sign (signed magnitude).",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["binary-to-decimal", "hexadecimal-converter", "rgb-to-hex", "hash-generator"],
+      relatedSlugs: ["binary-to-decimal", "hexadecimal-converter", "rgb-to-hex", "hash-generator", "roman-numeral-converter"],
       faqs: [
         { q: "What's the division-by-2 algorithm?", a: "Divide your number by 2, record the remainder (0 or 1), set the dividend to the quotient, repeat until the quotient is 0. Read the remainders bottom-up — that's your binary representation. It's the standard algorithm taught in CS101." },
         { q: "Why show every step?", a: "Most converters just give you the answer. Showing the steps helps with understanding (great for students), debugging your manual arithmetic, and explaining the result to others." },
@@ -10173,7 +9608,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Handles negatives with minus-sign convention (not two's complement).",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["unix-timestamp-converter", "hex-to-rgb", "rgb-to-hex", "hash-generator"],
+      relatedSlugs: ["unix-timestamp-converter", "hex-to-rgb", "rgb-to-hex", "hash-generator", "binary-to-decimal", "decimal-to-binary", "roman-numeral-converter"],
       faqs: [
         { q: "Why BigInt instead of regular numbers?", a: "JavaScript's regular `Number` type loses precision above 2^53 (≈9 quadrillion). BigInt has arbitrary precision — important when converting 64-bit hashes, UUIDs, IPv6 fragments or any number bigger than ~16 decimal digits." },
         { q: "Can I convert negative numbers?", a: "Yes — prefix with `-`. We use the minus-sign convention (signed magnitude), not two's complement. The displayed binary, octal and hex all carry the minus sign." },
@@ -10210,7 +9645,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Swap button flips the output back into the input field.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["hexadecimal-converter", "binary-to-decimal", "decimal-to-binary", "morse-code-translator"],
+      relatedSlugs: ["hexadecimal-converter", "binary-to-decimal", "decimal-to-binary", "morse-code-translator", "nato-alphabet-converter"],
       faqs: [
         { q: "Why is the maximum 3 999 999?", a: "Standard Roman numerals (without vinculum) max out at 3 999 (MMMCMXCIX). With the vinculum extension — each letter overlined means × 1 000 — the cap becomes 3 999 999 (M̄M̄M̄C̄M̄X̄C̄IX̄CMXCIX)." },
         { q: "What's a vinculum?", a: "A bar drawn above a Roman numeral to multiply it by 1 000. V̄ = 5 000, X̄ = 10 000, M̄ = 1 000 000. Classical Romans used it for large numbers; medieval scribes mostly abandoned it." },
@@ -10362,7 +9797,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Settings persist in localStorage.",
         "Runs 100% in your browser.",
       ],
-      relatedSlugs: ["canonical-url-checker", "meta-tag-analyzer", "website-source-viewer", "mobile-friendly-test"],
+      relatedSlugs: ["canonical-url-checker", "meta-tag-analyzer", "website-source-viewer", "mobile-friendly-test", "redirect-chain-checker"],
       faqs: [
         { q: "Does it fetch URLs to verify they actually return 200?", a: "No — that's a server-side crawler job, and same-origin policy would block it from the browser anyway. This tool catches the patterns that are broken in the markup itself: empty hrefs, placeholder hrefs, mixed content. For 4xx/5xx detection, pair this with a CLI link checker like `lychee` or `linkinator`." },
         { q: "What's a placeholder href and why is it bad?", a: "`#`, `javascript:void(0)`, and `about:blank` are placeholders developers use during prototyping. They render as clickable links but don't actually navigate — a UX trap. If the link triggers JS, use a `<button>` instead. If it's truly a no-op, remove it." },
@@ -10402,7 +9837,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Every meta tag (recognised and 'other') shown in a flat list for manual inspection.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["open-graph-preview", "canonical-url-checker", "meta-tag-generator", "sitemap-validator"],
+      relatedSlugs: ["open-graph-preview", "canonical-url-checker", "meta-tag-generator", "sitemap-validator", "broken-link-checker", "mobile-friendly-test", "website-source-viewer"],
       faqs: [
         { q: "How is this different from the Open Graph Preview?", a: "OG Preview renders Facebook/X/LinkedIn card mockups so you can see how a share will look. Meta Tag Analyzer scores the broader SEO health of the page — title length, description length, technical foundations (charset/viewport/canonical), JSON-LD structured data, PWA tags. Use both: this for the score, OG Preview for the visual." },
         { q: "How was the scoring weighted?", a: "Reflects practical SEO impact: Title (16 pts) and Description (14 pts) drive direct SERP appearance. Technical (14) and OG (16) cover the foundations + social. Twitter (10), PWA (10), International (8) and JSON-LD (12) round out the picture. Edit the weights in `lib/tools/text/meta-analyzer.ts` if you disagree." },
@@ -10440,7 +9875,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "No deployment required — paste HTML, see how it'll look.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["meta-tag-generator", "robots-txt-generator", "html-to-markdown", "canonical-url-checker"],
+      relatedSlugs: ["meta-tag-generator", "robots-txt-generator", "html-to-markdown", "canonical-url-checker", "meta-tag-analyzer", "mobile-friendly-test", "website-source-viewer"],
       faqs: [
         { q: "Why not just use the Facebook Sharing Debugger?", a: "The Facebook Debugger requires your page to be deployed. This tool works on local drafts, staging environments, and anything you can paste — no need to publish to test." },
         { q: "What's the difference between og:* and twitter:* tags?", a: "Open Graph (`og:*`) is the universal standard adopted by Facebook, LinkedIn, Slack, Discord and most other platforms. Twitter has its own `twitter:*` set that lets you override the OG values specifically for X. If `twitter:*` is missing, X falls back to the `og:*` equivalents." },
@@ -10517,7 +9952,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Chain-level finding when hop count > 5 (Google's recommended max).",
         "Runs 100% in your browser — we never follow redirects ourselves.",
       ],
-      relatedSlugs: ["http-header-checker", "canonical-url-checker", "broken-link-checker", "cdn-checker"],
+      relatedSlugs: ["http-header-checker", "canonical-url-checker", "broken-link-checker", "cdn-checker", "domain-age-checker", "website-cache-checker", "website-uptime-monitor"],
       faqs: [
         { q: "Why doesn't this fetch the URL itself?", a: "Same reason as the rest of our HTTP tools: the site is statically exported with no backend, and same-origin policy would block direct fetches anyway. The curl one-liner is fast." },
         { q: "What's the difference between 301 and 308?", a: "Both are permanent. 301 lets the client switch from POST to GET on redirect (most clients do); 308 preserves the method strictly. Same for 302 vs 307 (temporary versions)." },
@@ -10556,7 +9991,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Saves both inputs in localStorage so you can return mid-audit.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["open-graph-preview", "meta-tag-generator", "sitemap-validator", "robots-txt-generator"],
+      relatedSlugs: ["open-graph-preview", "meta-tag-generator", "sitemap-validator", "robots-txt-generator", "broken-link-checker", "cdn-checker", "domain-age-checker", "meta-tag-analyzer", "mobile-friendly-test", "redirect-chain-checker"],
       faqs: [
         { q: "Why is having multiple canonical tags bad?", a: "Google's documentation is explicit: conflicting `rel=canonical` tags may result in Google picking one arbitrarily or ignoring all of them. The result is either the wrong URL gets ranked, or your page splits link equity across both candidates." },
         { q: "What's the difference between canonical, og:url, and twitter:url?", a: "Canonical is for search engines (Google primarily). og:url is for Facebook, LinkedIn, Slack and other Open Graph consumers. twitter:url is X-specific. They should all agree — drift means different platforms index different URLs." },
@@ -10595,7 +10030,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Granular findings with the exact element count and remediation hint.",
         "Runs 100% in your browser — we check the HTML you paste, never fetch.",
       ],
-      relatedSlugs: ["meta-tag-analyzer", "open-graph-preview", "canonical-url-checker", "website-source-viewer"],
+      relatedSlugs: ["meta-tag-analyzer", "open-graph-preview", "canonical-url-checker", "website-source-viewer", "broken-link-checker"],
       faqs: [
         { q: "Why isn't this fetching the URL like Google's version?", a: "Toollyz is statically exported with no backend, and the browser's same-origin policy would block client-side fetches to third-party URLs. Paste the page's HTML — View Source in any browser is one keyboard shortcut away." },
         { q: "Does this catch all mobile-friendliness issues?", a: "It catches the issues encoded directly in HTML attributes and inline styles. Real-world mobile-friendliness depends on layout from external CSS / JS that we don't execute. For a full audit, combine this with Chrome DevTools' Lighthouse mobile mode." },
@@ -10671,7 +10106,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Settings persist in localStorage so a refresh doesn't lose your audit.",
         "Runs 100% in your browser — no DNS lookup, no third-party API.",
       ],
-      relatedSlugs: ["http-header-checker", "website-cache-checker", "ssl-certificate-checker", "canonical-url-checker"],
+      relatedSlugs: ["http-header-checker", "website-cache-checker", "ssl-certificate-checker", "canonical-url-checker", "redirect-chain-checker"],
       faqs: [
         { q: "Why are multiple CDNs detected at once?", a: "It's common to chain CDNs — Cloudflare in front of CloudFront in front of nginx, for example. We report every match so you see the full stack." },
         { q: "What if no CDN is detected?", a: "Either the response is served direct from origin, or the CDN is configured to hide its signature headers (some operators strip them for security through obscurity). The All-Headers table shows everything we received." },
@@ -10710,7 +10145,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Subject CN used as the reminder title — so multiple certs are easy to tell apart in your calendar.",
         "Runs 100% in your browser.",
       ],
-      relatedSlugs: ["ssl-certificate-checker", "spf-record-checker", "dkim-record-checker", "dmarc-record-checker"],
+      relatedSlugs: ["ssl-certificate-checker", "spf-record-checker", "dkim-record-checker", "dmarc-record-checker", "website-uptime-monitor"],
       faqs: [
         { q: "How does it know the expiry date?", a: "By parsing the certificate's ASN.1 DER (after base64-decoding the PEM) and reading the `validity.notAfter` field. The parser handles both UTCTime (pre-2050) and GeneralizedTime formats." },
         { q: "Can I add multiple reminders at once?", a: "Currently one cert per .ics. To add a second, paste a different cert and download a second .ics. Most calendar apps merge multiple .ics imports cleanly." },
@@ -10787,7 +10222,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Issue colour-coding: errors red, warnings amber, infos blue.",
         "Runs 100% in your browser — your sitemap is never uploaded.",
       ],
-      relatedSlugs: ["meta-tag-generator", "robots-txt-generator", "url-encoder-decoder", "regex-tester"],
+      relatedSlugs: ["meta-tag-generator", "robots-txt-generator", "url-encoder-decoder", "regex-tester", "canonical-url-checker", "meta-tag-analyzer", "website-source-viewer"],
       faqs: [
         { q: "What's the difference between urlset and sitemapindex?", a: "A `<urlset>` is a regular sitemap — a list of `<url>` entries each with a `<loc>` (the URL). A `<sitemapindex>` is a sitemap-of-sitemaps — a list of `<sitemap>` entries each with a `<loc>` pointing to another sitemap. Index files are how large sites split a sitemap into multiple files (Google caps at 50,000 URLs per file)." },
         { q: "Why is my <lastmod> flagged as invalid?", a: "Sitemaps.org requires ISO 8601 format. Acceptable: `2026-05-31` (date only) or `2026-05-31T14:30:00Z` (datetime with TZ). Not acceptable: `31/05/2026`, `May 31 2026`, `2026-5-31`. The error message tells you the offending value and URL." },
@@ -10864,7 +10299,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Sample headers loaded by default for safe exploration.",
         "Runs 100% in your browser — Toollyz has no server.",
       ],
-      relatedSlugs: ["dns-lookup", "whois-lookup", "ip-address-finder", "regex-tester"],
+      relatedSlugs: ["dns-lookup", "whois-lookup", "ip-address-finder", "regex-tester", "dkim-record-checker", "dmarc-record-checker", "http-header-checker", "spf-record-checker"],
       faqs: [
         { q: "Where do I find the raw email headers?", a: "Gmail: open the email → ⋮ menu → 'Show original'. Outlook web: 'View → View message source'. Apple Mail: 'View → Message → Raw Source'. Thunderbird: 'View → Message Source'. Outlook desktop: 'File → Properties → Internet headers'." },
         { q: "What's the Received chain?", a: "Each SMTP server that handles the message prepends a `Received:` header with where it came from, where it's going, and when. The bottom-most Received line is the OLDEST hop (closest to the sender); the top-most is the NEWEST. We reverse the display so the order matches the message's actual path." },
@@ -10902,7 +10337,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Issue colour-coding: errors red, warnings amber, infos blue.",
         "Runs 100% in your browser — Toollyz has no server (we don't look up your DNS for you, just parse what you paste).",
       ],
-      relatedSlugs: ["email-header-analyzer", "dns-lookup", "dkim-record-checker", "dmarc-record-checker"],
+      relatedSlugs: ["email-header-analyzer", "dns-lookup", "dkim-record-checker", "dmarc-record-checker", "http-header-checker", "ssl-certificate-checker", "ssl-expiry-reminder"],
       faqs: [
         { q: "What's an SPF record?", a: "A DNS TXT record on your domain (or subdomain) starting with `v=spf1` that lists which mail servers are authorised to send mail using your domain in the envelope From. Receivers query SPF and reject (or quarantine) mail from unlisted servers." },
         { q: "What's the 10-lookup limit?", a: "RFC 7208 §4.6.4 forbids SPF records from causing more than 10 DNS lookups during evaluation. Each `a`, `mx`, `ptr`, `exists` and `include` mechanism costs a lookup — and `include` recursively counts the included record's lookups too. Easy to bust." },
@@ -10939,7 +10374,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Settings persist in localStorage.",
         "Runs 100% in your browser — no DNS lookups, no third-party services.",
       ],
-      relatedSlugs: ["dmarc-record-checker", "spf-record-checker", "email-header-analyzer", "email-signature-generator"],
+      relatedSlugs: ["dmarc-record-checker", "spf-record-checker", "email-header-analyzer", "email-signature-generator", "ssl-expiry-reminder"],
       faqs: [
         { q: "Can it fetch my DKIM record automatically?", a: "No — DNS lookups require a backend. Use `dig`, `nslookup`, or your DNS provider's web UI to fetch the TXT, then paste here." },
         { q: "What's a 'selector'?", a: "A short string (often the mail provider name + an index, like `s1`, `selector1`, or `mailo._domainkey`). Your DKIM record lives at `<selector>._domainkey.<your-domain>`. The selector you choose is up to you; mail providers usually pick one for you." },
@@ -10978,7 +10413,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Settings persist in localStorage.",
         "Runs 100% in your browser — no DNS lookups, no third-party services.",
       ],
-      relatedSlugs: ["dkim-record-checker", "spf-record-checker", "email-header-analyzer", "email-signature-generator"],
+      relatedSlugs: ["dkim-record-checker", "spf-record-checker", "email-header-analyzer", "email-signature-generator", "ssl-expiry-reminder"],
       faqs: [
         { q: "What policy should I start with?", a: "`p=none` is the recommended start — monitor-only. Set up `rua=mailto:...` to receive aggregate reports, watch for failures over 30 days, then move to `p=quarantine` then `p=reject` once your auth is clean." },
         { q: "What's the difference between p=quarantine and p=reject?", a: "quarantine = failing mail goes to spam (low effort for the receiver, recoverable for the sender). reject = bounce at SMTP — failing mail never arrives. reject is the strongest stance once you trust your alignment." },
@@ -11016,7 +10451,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "TSV export ready for paste into Google Sheets / Excel.",
         "Runs 100% in your browser — your text never leaves the device.",
       ],
-      relatedSlugs: ["word-counter", "duplicate-word-finder", "ai-text-humanizer", "sentence-rewriter"],
+      relatedSlugs: ["word-counter", "duplicate-word-finder", "ai-text-humanizer", "sentence-rewriter", "character-counter", "youtube-tag-extractor"],
       faqs: [
         { q: "What's a good keyword density?", a: "Most modern SEO guidelines settle on 1-3% for primary keywords. Below 1% suggests the keyword isn't prominent enough; above 3% looks like keyword stuffing to search engines and reads worse to humans. Long-tail and supporting keywords typically sit lower (0.5-1.5%)." },
         { q: "Why 1/2/3-gram tables?", a: "Search intent is often phrasal. A page about 'project management software' isn't well-served by a single-word density check on 'project' or 'software' — you need the bigram and trigram densities to spot whether the phrase as a whole carries the right weight." },
@@ -11053,12 +10488,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Shuffle for fresh, deterministic variations any time.",
         "100% private — generated in your browser, nothing is uploaded.",
       ],
-      relatedSlugs: [
-        "fancy-text-generator",
-        "username-generator",
-        "word-counter",
-        "case-converter",
-      ],
+      relatedSlugs: ["fancy-text-generator", "username-generator", "word-counter", "case-converter", "currency-converter", "emoji-translator", "instagram-caption-formatter", "tweet-character-counter", "youtube-tag-extractor"],
       faqs: [
         {
           q: "What is a hashtag generator?",
@@ -11242,7 +10672,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Pure CSS output — no JS framework, no animation library.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["box-shadow-generator", "glassmorphism-generator", "css-clip-path-generator", "code-screenshot-generator"],
+      relatedSlugs: ["box-shadow-generator", "glassmorphism-generator", "css-clip-path-generator", "code-screenshot-generator", "random-color-generator"],
       faqs: [
         { q: "Which timing function should I pick?", a: "For UI: `ease-out` for entrances (feels snappy at the start, settles), `ease-in` for exits (drifts away). For attention-grabbers like 'pop' use the overshoot bezier `cubic-bezier(.34,1.56,.64,1)` — it goes 10% past the end then settles, feeling more physical. `linear` is rarely correct for UI except for loops like spinners." },
         { q: "Why does the preview look choppy?", a: "Animating `transform` and `opacity` is GPU-accelerated and runs at 60 fps. If your preview stutters it's likely a browser/devtools overhead — try the actual CSS in your own page. Avoid animating `width`, `height`, `top`, `left` (layout properties) for smoothness." },
@@ -11280,7 +10710,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Layers, stage background and shape persist in localStorage.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["glassmorphism-generator", "gradient-generator", "color-picker", "css-clip-path-generator"],
+      relatedSlugs: ["glassmorphism-generator", "gradient-generator", "color-picker", "css-clip-path-generator", "css-animation-generator", "neumorphism-generator"],
       faqs: [
         { q: "What's the difference between blur and spread?", a: "Blur softens the edge of the shadow — at blur 0 you get a sharp rectangle, at blur 32 a fluffy cloud. Spread grows (or shrinks, if negative) the shadow before the blur is applied. A negative spread + positive blur is the classic 'tight shadow that doesn't bleed past the element'." },
         { q: "What's `inset`?", a: "Renders the shadow inside the element instead of outside — useful for pressed buttons, inset wells, and the highlight half of a neumorphic effect." },
@@ -11318,7 +10748,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Pure CSS output — no SVG filters, no images, no JS.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["box-shadow-generator", "gradient-generator", "color-picker", "css-clip-path-generator"],
+      relatedSlugs: ["box-shadow-generator", "gradient-generator", "color-picker", "css-clip-path-generator", "css-animation-generator", "gradient-mesh-generator", "neumorphism-generator"],
       faqs: [
         { q: "Why does my glass card look invisible?", a: "Glassmorphism only works when there's something to blur. Place the card over a colourful gradient, photo, video or busy pattern. Over plain white or black there's nothing to blur and the effect disappears." },
         { q: "Does `backdrop-filter` work everywhere?", a: "Every evergreen browser supports it — Chrome 76+, Firefox 103+, Safari 9+ (with -webkit prefix), Edge 79+. Mobile coverage is excellent. We ship both the standard and prefixed properties." },
@@ -11395,7 +10825,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Settings persist in localStorage.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["box-shadow-generator", "glassmorphism-generator", "gradient-generator", "color-picker"],
+      relatedSlugs: ["box-shadow-generator", "glassmorphism-generator", "gradient-generator", "color-picker", "css-animation-generator", "svg-blob-generator", "svg-shape-generator"],
       faqs: [
         { q: "What's the difference between polygon() and inset()?", a: "polygon() takes a list of x/y vertices and draws straight lines between them — use it for stars, chevrons, speech bubbles, anything non-rectangular. inset() takes top/right/bottom/left insets and an optional corner radius — use it when you just need to round or crop the edges of a rectangle." },
         { q: "Can I create curved clip-paths?", a: "polygon() and inset() are both straight-edge primitives. For curves you'd need to drop into the SVG `<clipPath>` element via `clip-path: url(#id)` — out of scope for this tool. The closest you can get here is a high-vertex polygon that approximates a curve." },
@@ -11434,7 +10864,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Settings persist in localStorage so your shape is one tab-open away.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["gradient-generator", "noise-texture-generator", "css-clip-path-generator", "color-picker"],
+      relatedSlugs: ["gradient-generator", "noise-texture-generator", "css-clip-path-generator", "color-picker", "gradient-mesh-generator", "pattern-background-generator", "svg-shape-generator"],
       faqs: [
         { q: "Why is my blob always the same?", a: "The same seed always produces the same shape — that's the point. Click 'Random' to roll a new seed, or type any integer into the seed input for full reproducibility." },
         { q: "Why aren't the curves perfectly smooth at low complexity?", a: "They are mathematically smooth — but at 4-5 points the underlying polygon is wide enough that the smoothing can't hide all the angularity. Bump complexity to 8+ for organic blobs, drop to 4-5 for stylised pill or capsule shapes." },
@@ -11474,7 +10904,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Configuration persists in localStorage.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["gradient-generator", "noise-texture-generator", "svg-blob-generator", "color-picker"],
+      relatedSlugs: ["gradient-generator", "noise-texture-generator", "svg-blob-generator", "color-picker", "gradient-mesh-generator"],
       faqs: [
         { q: "Why not just use an SVG or PNG pattern?", a: "Pure CSS patterns are infinitely scalable (no pixelation), have zero asset weight (no extra HTTP request), are themeable in one place (change two CSS variables), and render at any resolution. The only downside is they're limited to gradient-expressible shapes — for organic textures you'd use the Noise Texture Generator." },
         { q: "How does the checks pattern work?", a: "It stacks four linear gradients at 45° and -45° with different offsets — the diagonals create square checks. Because the gradients are perfectly aligned, the pattern tiles seamlessly at any tile size." },
@@ -11515,7 +10945,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Configuration persists in localStorage.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["pattern-background-generator", "gradient-generator", "svg-blob-generator", "image-compressor"],
+      relatedSlugs: ["pattern-background-generator", "gradient-generator", "svg-blob-generator", "image-compressor", "lorem-ipsum-image-generator", "website-screenshot-generator"],
       faqs: [
         { q: "Which engine should I use — Canvas or SVG?", a: "Canvas for the truest 'every pixel is independent' grain (film-style). SVG for smaller CSS payload and a slightly cloud-like procedural look. Use Canvas if you need < 5% opacity (the SVG turbulence loses detail at extreme low opacity)." },
         { q: "How big is the CSS data URL?", a: "A 256×256 PNG embedded as base64 weighs ~50 KB in CSS. For production, click Download PNG and host it as a real static asset — the CSS shrinks from 50 KB to ~30 bytes (`background-image: url(/noise.png)`)." },
@@ -11597,7 +11027,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Copy PNG to clipboard (where supported) or download PNG / JPG.",
         "Runs 100% in your browser — no server, no third-party CDN dependency.",
       ],
-      relatedSlugs: ["color-picker", "favicon-from-text", "noise-texture-generator", "image-resizer"],
+      relatedSlugs: ["color-picker", "favicon-from-text", "noise-texture-generator", "image-resizer", "pixel-art-generator", "website-screenshot-generator"],
       faqs: [
         { q: "How is this different from placeholder.com or via.placeholder.com?", a: "Those are hosted services — they require internet, and they go down. This generator runs entirely in your browser. The labelled image is identical visually but the asset is yours to download once, then host yourself (or embed as a data URL)." },
         { q: "Why use devicePixelRatio?", a: "Retina screens have 2× or 3× pixel density. Rendering at 1× and letting the browser scale results in blurry text. We multiply the canvas dimensions by devicePixelRatio (capped at 2 to avoid huge files) and `ctx.scale` so the on-screen image looks sharp and the export is high-res." },
@@ -11673,7 +11103,7 @@ export const toolSeoBySlug: Record<string, ToolSEO> = {
         "Print preview hides the editor and shows only the receipt for a clean output.",
         "Runs 100% in your browser — no server, no upload.",
       ],
-      relatedSlugs: ["invoice-generator", "vcard-generator", "digital-business-card", "qr-menu-generator"],
+      relatedSlugs: ["invoice-generator", "vcard-generator", "digital-business-card", "qr-menu-generator", "packing-slip-generator"],
       faqs: [
         { q: "Will the PDF be the same as a real thermal receipt?", a: "Visually yes — same layout, same monospace font, same 80mm width. The PDF is the browser's rendering of the on-screen receipt. To save as PDF: click Print, then in the print dialog choose 'Save as PDF' as the destination." },
         { q: "Does the tax apply before or after the discount?", a: "After. The discount reduces the taxable base, then tax is calculated on the discounted subtotal. This is the convention in most tax jurisdictions (US sales tax, EU VAT). If yours is different, hand-edit the tax rate to compensate." },
@@ -11741,7 +11171,21 @@ export function getRelatedTools(slug: string, limit = 4): Tool[] {
 
   const explicit = toolSeoBySlug[slug]?.relatedSlugs ?? [];
   if (explicit.length) {
-    const pinned = explicit
+    // Stable partition: prefer slugs whose own `relatedSlugs` link
+    // back to us. That makes the rendered top-N (which becomes a
+    // crawlable internal link) bidirectional whenever possible — much
+    // better for link equity than a one-way reference. Order within
+    // each group is preserved so curation isn't lost.
+    const bidi: string[] = [];
+    const oneWay: string[] = [];
+    for (const s of explicit) {
+      const back = toolSeoBySlug[s]?.relatedSlugs ?? [];
+      if (back.includes(slug)) bidi.push(s);
+      else oneWay.push(s);
+    }
+    const ordered = [...bidi, ...oneWay];
+
+    const pinned = ordered
       .map((s) => getToolBySlug(s))
       .filter((t): t is Tool => Boolean(t) && t!.slug !== slug);
     if (pinned.length >= limit) return pinned.slice(0, limit);
