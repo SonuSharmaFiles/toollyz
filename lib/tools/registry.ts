@@ -181,7 +181,7 @@ export const tools: Tool[] = [
     featured: true,
     keywords: ["qr", "qr code", "qr generator", "barcode", "scan", "url to qr"],
     seo: {
-      title: "Free QR Code Generator — Create & Download QR Codes Instantly",
+      title: "Free QR Code Generator — Create & Download QR Codes",
       description:
         "Generate custom QR codes for any text or URL. Pick size, colors and error correction, then download as PNG. 100% free, private and instant.",
       what:
@@ -242,7 +242,7 @@ export const tools: Tool[] = [
     seo: {
       title: "QR Code Scanner — Camera + Image File Decoder (Offline)",
       description:
-        "Live camera QR scanning + drop-an-image decode, powered by jsQR running entirely in your browser. Auto-opens URLs, copies text, keeps a 24-entry history. 100% offline.",
+        "Live camera QR scanning + drop-an-image decode, powered by jsQR running entirely in your browser. Auto-opens URLs, copies text, keeps a 24-entry history.",
       what:
         "QR Code Scanner uses the browser's `getUserMedia` API to stream your back camera into a hidden video element, draws each frame onto a hidden canvas, and decodes the pixels with jsQR — a small (~40 KB) pure-JS QR decoder. The decoded text is shown immediately with a Copy button and, when it's an http(s) URL, an Open button that launches it in a new tab. The decoder runs at roughly 30 fps on modern devices, so a QR is usually picked up within a fraction of a second of being framed. You can also drop a PNG, JPG, GIF or WebP onto the second card to decode a QR from a static image — useful for scanning QRs you've already received as a file. Every successful scan is added to a 24-entry history with timestamps, deduplicated against consecutive identical reads, and persisted in localStorage so you can come back later. No frame, no image, no decoded text ever leaves your browser.",
       how: [
@@ -305,7 +305,7 @@ export const tools: Tool[] = [
       title:
         "WiFi QR Code Generator — Create WiFi QR Codes Online Free",
       description:
-        "Generate WiFi QR codes instantly. Create scannable QR codes for any WiFi network, customize colors, pick printable card templates and download as PNG, SVG or JPG — 100% free.",
+        "Generate WiFi QR codes instantly. Create scannable QR codes for any WiFi network, customize colors, pick printable card templates and download as PNG, SVG…",
       what:
         "A WiFi QR Code is a special QR code that, when scanned by a phone's camera, automatically connects the device to a WiFi network — no typing required. Toollyz WiFi QR Code Generator produces standard-compliant codes (the same format Android and iOS use natively), with customizable colors, four printable card templates, and built-in print and download in PNG, SVG and JPG.",
       how: [
@@ -401,9 +401,9 @@ export const tools: Tool[] = [
       "barcode png download",
     ],
     seo: {
-      title: "Barcode Generator — EAN, UPC, Code 128, ITF (Free, SVG + PNG)",
+      title: "Barcode Generator — EAN, UPC, Code 128, ITF",
       description:
-        "Make scannable 1D barcodes in 14 popular formats with Toollyz Barcode Generator — EAN-13, EAN-8, UPC-A/E, Code 128, Code 39, ITF-14, Pharmacode, Codabar and more. Live preview, custom colours and SVG / 2× PNG export, all in your browser.",
+        "Make scannable 1D barcodes in 14 popular formats with Toollyz Barcode Generator — EAN-13, EAN-8, UPC-A/E, Code 128, Code 39, ITF-14, Pharmacode, Codabar…",
       what:
         "A barcode generator turns a text or numeric value into a scannable 1D barcode using a published encoding (Code 128, EAN-13, Code 39 and so on). Toollyz Barcode Generator runs the encoding inside your browser using the open-source JsBarcode library, which supports 14 production-grade formats: Code 128 (auto / A / B / C variants), Code 39, EAN-13, EAN-8, UPC-A, UPC-E, ITF-14 and ITF (Interleaved 2 of 5), MSI Plessey, Pharmacode and Codabar. Live preview updates as you tweak the value, format, foreground / background colour, bar width, height, margin, font size, custom caption and flat-bottom toggle. Export the result as a crisp SVG (vector, scales to any size) or a 2× PNG (rasterised at double resolution for clean prints). A built-in per-format hint (\"EAN-13 needs 12 or 13 digits\", \"ITF needs an even number of digits\") helps you avoid invalid input before JsBarcode rejects it. Toollyz has no backend — settings save to localStorage so refreshes don't lose your work.",
       how: [
@@ -498,7 +498,7 @@ export const tools: Tool[] = [
     seo: {
       title: "UUID Generator — Generate UUID v1, v4, v6 & v7 Online Free",
       description:
-        "Generate secure UUIDs instantly. Create UUID v1, v4, v6 and v7 identifiers, validate UUIDs, copy bulk UUIDs and download results — 100% free, private and instant.",
+        "Generate secure UUIDs instantly. Create UUID v1, v4, v6 and v7 identifiers, validate UUIDs, copy bulk UUIDs and download results — 100% free, private…",
       what:
         "A Universally Unique Identifier (UUID) is a 128-bit value used to uniquely identify items across distributed systems without coordination. Toollyz UUID Generator creates RFC 4122-compliant UUIDs in your browser — supporting versions 1, 4, 6 and 7, plus a validator that detects the version of any UUID you paste in.",
       how: [
@@ -591,9 +591,9 @@ export const tools: Tool[] = [
     ],
     seo: {
       title:
-        "Lorem Ipsum Generator — Generate Placeholder Text Online Free",
+        "Lorem Ipsum Generator — Generate Placeholder Text Online",
       description:
-        "Generate Lorem Ipsum placeholder text instantly. Create paragraphs, sentences, words, or custom-length placeholder text in 6 styles for websites, UI mockups, apps and design projects.",
+        "Generate Lorem Ipsum placeholder text instantly. Create paragraphs, sentences, words, or custom-length placeholder text in 6 styles for websites, UI…",
       what:
         "Lorem Ipsum is scrambled placeholder text used in design and publishing to fill space before real content is available. Toollyz Lorem Ipsum Generator goes further — it produces classic Latin filler plus five modern themed vocabularies (tech, startup, marketing, minimal, funny) so your mockups feel closer to the actual product.",
       how: [
@@ -689,7 +689,7 @@ export const tools: Tool[] = [
       title:
         "Fake Address Generator — Generate Random Addresses Online",
       description:
-        "Generate realistic fake addresses, names, phones and emails from 10+ countries. Export as TXT, CSV or JSON for testing, development and educational purposes — 100% free.",
+        "Generate realistic fake addresses, names, phones and emails from 10+ countries. Export as TXT, CSV or JSON for testing, development and educational…",
       what:
         "A Fake Address Generator produces realistic-looking but entirely fictional postal addresses, names, contact details and identity data for use in testing and development. Toollyz Fake Address Generator covers ten countries with locale-aware formats — addresses look right for the United States, United Kingdom, Canada, Australia, Germany, France, India, Nepal, Japan and Brazil. Generated data is never real and must never be used to deceive anyone.",
       how: [
@@ -783,7 +783,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Fake Name Generator — Generate Random Names & Identities",
       description:
-        "Generate realistic fake names and full identity profiles from 11 cultures. Names, usernames, emails, phones, occupations and birthdates for testing, development and creative projects — 100% free.",
+        "Generate realistic fake names and full identity profiles from 11 cultures. Names, usernames, emails, phones, occupations and birthdates for testing…",
       what:
         "A Fake Name Generator produces realistic-looking but entirely fictional identity profiles for use in development, QA, design mockups and creative writing. Toollyz Fake Name Generator covers eleven cultures — the United States, United Kingdom, India, Nepal, Japan, China, Germany, France, Brazil, Russia and Arabic-speaking countries — generating culturally-accurate names alongside usernames, emails, phone numbers, occupations and locations. All data is invented and must never be used to deceive anyone.",
       how: [
@@ -878,7 +878,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Username Generator — Generate Cool & Unique Usernames",
       description:
-        "Generate unique usernames instantly. 10 styles — gaming, aesthetic, professional, tech, brandable, funny, social media and more. Save favorites and check availability on Instagram, X, TikTok and GitHub.",
+        "Generate unique usernames instantly. 10 styles — gaming, aesthetic, professional, tech, brandable, funny, social media and more. Save favorites and check…",
       what:
         "A Username Generator produces unique handles for online identities — social media, gaming, forums, developer accounts, brands and businesses. Toollyz Username Generator uses curated word lists, smart pattern logic and pronounceable algorithms to produce ten distinct styles of usernames you can actually use.",
       how: [
@@ -972,7 +972,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Password Generator — Create Strong Secure Passwords",
       description:
-        "Generate strong secure passwords instantly. Six modes — Random, Memorable, Passphrase, PIN, WiFi, API Key — with live entropy analysis. 100% client-side, never stored or transmitted.",
+        "Generate strong secure passwords instantly. Six modes — Random, Memorable, Passphrase, PIN, WiFi, API Key — with live entropy analysis.",
       what:
         "A Password Generator produces unpredictable strings of characters that resist brute-force, dictionary and credential-stuffing attacks. Toollyz Password Generator uses the browser's cryptographically secure Web Crypto API (window.crypto.getRandomValues) — the same source modern operating systems trust for key generation — and analyzes every result for entropy and estimated crack time. Six modes cover everything from random alphanumeric passwords to memorable passphrases, PINs, WiFi credentials and API keys.",
       how: [
@@ -1065,7 +1065,7 @@ export const tools: Tool[] = [
     seo: {
       title: "OTP Generator — Generate Secure One-Time Passwords",
       description:
-        "Generate secure OTPs instantly. Six formats — numeric, alphanumeric, hex, PIN, verification, backup recovery — with countdown timer, auto-refresh and TXT/CSV/JSON export. 100% client-side.",
+        "Generate secure OTPs instantly. Six formats — numeric, alphanumeric, hex, PIN, verification, backup recovery — with countdown timer, auto-refresh…",
       what:
         "An OTP (One-Time Password) is a short code that's valid for a single login attempt or a brief time window. They're the backbone of two-factor authentication (2FA), email/SMS verification flows, account recovery, and short-lived API tokens. Toollyz OTP Generator produces six formats — numeric, alphanumeric, hex, PIN, verification, and backup recovery codes — using the browser's cryptographically secure Web Crypto API. Use it to test 2FA flows, seed verification systems, or generate one-off codes you'll consume yourself.",
       how: [
@@ -1159,7 +1159,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Audio Volume Booster — Increase Audio Volume Online Free",
       description:
-        "Boost audio volume online instantly with Toollyz Audio Volume Booster. Increase MP3, WAV and OGG loudness, normalize audio, prevent clipping, preview live and download lossless WAV — 100% client-side.",
+        "Boost audio volume online instantly with Toollyz Audio Volume Booster. Increase MP3, WAV and OGG loudness, normalize audio, prevent clipping, preview live…",
       what:
         "An Audio Volume Booster increases the perceived loudness of a quiet recording by applying gain — a mathematical multiplier on every sample. Toollyz Audio Volume Booster runs entirely in your browser using the Web Audio API. Your file never leaves your device. You get a live waveform, A/B preview against the original, real-time clipping prediction, a soft-limiter to keep boosted audio clean, plus optional bass and voice-clarity enhancements baked into the export.",
       how: [
@@ -1257,7 +1257,7 @@ export const tools: Tool[] = [
       title:
         "White Noise Generator — Relaxing Ambient Sounds Online Free",
       description:
-        "Listen to white noise, brown noise, rain sounds, ocean waves and ambient audio. Mix multiple sounds, save your favorites, set a sleep timer — 100% client-side, no signup.",
+        "Listen to white noise, brown noise, rain sounds, ocean waves and ambient audio. Mix multiple sounds, save your favorites, set a sleep timer — 100%…",
       what:
         "A white noise generator produces a constant calming sound that masks distracting noises, helping you sleep, focus or relax. Toollyz White Noise Generator synthesizes every sound live in your browser using the Web Audio API — five noise colors (white, pink, brown, blue, gray), eight ambient sounds (rain, wind, ocean, fan, fireplace, coffee shop, crickets, heartbeat) and a soft hum, all mixable with individual volume controls.",
       how: [
@@ -1354,7 +1354,7 @@ export const tools: Tool[] = [
       title:
         "Random Color Generator — Generate Beautiful Color Palettes",
       description:
-        "Generate random colors, gradients and stunning color palettes instantly. Export HEX, RGB, HSL, CSS, SCSS, Tailwind config, JSON or PNG. Live UI preview, WCAG contrast checking, and 10 palette styles.",
+        "Generate random colors, gradients and stunning color palettes instantly. Export HEX, RGB, HSL, CSS, SCSS, Tailwind config, JSON or PNG.",
       what:
         "A Random Color Generator helps designers and developers explore color combinations they wouldn't pick on their own. Toollyz Random Color Generator produces colors using ten harmony styles — random, monochromatic, analogous, complementary, triadic, pastel, neon, earthy, dark and minimal — with built-in WCAG contrast checking, real-time UI preview and exports for CSS, SCSS, Tailwind, JSON and PNG. Lock the colors you like, hit space to regenerate the rest.",
       how: [
@@ -1448,7 +1448,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Coin Flip Simulator — Flip a Virtual Coin Online Free",
       description:
-        "Flip a virtual coin instantly. Realistic 3D animation, heads/tails statistics, streak tracking, probability charts, multi-flip modes and customizable coin styles — free, no signup.",
+        "Flip a virtual coin instantly. Realistic 3D animation, heads/tails statistics, streak tracking, probability charts, multi-flip modes and customizable coin…",
       what:
         "A Coin Flip Simulator is a digital coin toss — a fast, fair way to make 50/50 decisions, settle debates, pick teams, or demonstrate probability. Toollyz Coin Flip Simulator uses your browser's cryptographic random generator for true fairness, wrapped in a realistic 3D flip animation with five coin styles, live statistics, streak tracking and decision modes like Yes/No and Truth/Dare.",
       how: [
@@ -1543,7 +1543,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Bingo Card Generator — Create Printable Bingo Cards",
       description:
-        "Generate printable bingo cards instantly. Create custom bingo for classrooms, parties and events with 9 themes, grid sizes 3×3–6×6, a live caller mode and PDF/PNG export — free.",
+        "Generate printable bingo cards instantly. Create custom bingo for classrooms, parties and events with 9 themes, grid sizes 3×3–6×6, a live caller mode…",
       what:
         "A Bingo Card Generator turns a list of items — numbers, words, emoji or your own custom entries — into randomized, printable bingo cards. Toollyz Bingo Card Generator creates classroom games, party activities, team-building icebreakers and trivia rounds, with nine visual themes, grid sizes from 3×3 to 6×6, a free-space toggle, bulk generation up to 100 cards, and a built-in caller for hosting live games.",
       how: [
@@ -1638,7 +1638,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Spin Wheel Generator — Create Random Spinning Wheels",
       description:
-        "Create customizable spinning wheels instantly. Perfect for giveaways, classrooms, raffles, team selection and random choices — 10 themes, elimination mode, confetti winner reveal, free.",
+        "Create customizable spinning wheels instantly. Perfect for giveaways, classrooms, raffles, team selection and random choices — 10 themes, elimination mode…",
       what:
         "A Spin Wheel Generator turns a list of options into an interactive spinning wheel — give it a spin and it randomly lands on one. Toollyz Spin Wheel Generator is built for giveaways, classroom activities, raffles, team selection, prize draws and everyday decisions. Add your own entries, choose from ten vibrant themes, and enjoy physics-inspired spin motion, a celebratory winner reveal with confetti, optional elimination mode and PNG/JSON export — all running in your browser.",
       how: [
@@ -1732,7 +1732,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Decision Maker Wheel — Spin the Wheel Online",
       description:
-        "Make random decisions instantly. Spin a customizable wheel for food choices, movies, teams, workouts and more — 10 ready templates, elimination mode, confetti reveal. Free, no signup.",
+        "Make random decisions instantly. Spin a customizable wheel for food choices, movies, teams, workouts and more — 10 ready templates, elimination mode…",
       what:
         "A Decision Maker Wheel takes the agonizing out of small choices. Type your options (or load a ready-made template like 'What should I eat?'), give the wheel a spin, and let chance decide — complete with a satisfying physics-inspired spin and a celebratory winner reveal. Toollyz Decision Maker Wheel includes ten instant templates, ten themes, elimination mode for tournaments, sound effects and PNG/JSON export, all running locally in your browser.",
       how: [
@@ -1826,7 +1826,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Lucky Draw Generator — Random Winner Picker Online",
       description:
-        "Run fair random lucky draws instantly. Pick giveaway, raffle, classroom and contest winners with an animated reel reveal, multi-winner podium, templates and export — free, no signup.",
+        "Run fair random lucky draws instantly. Pick giveaway, raffle, classroom and contest winners with an animated reel reveal, multi-winner podium, templates…",
       what:
         "A Lucky Draw Generator randomly selects one or more winners from a list of participants. It's the fair, transparent way to run giveaways, raffles, classroom picks, team selections and contest draws. Toollyz Lucky Draw Generator features an exciting slot-machine name reel that flickers through participants before landing on the winners, a multi-winner podium with medal tiers, six ready-made templates, elimination mode, sound effects, and CSV / winner-card export — all powered by your browser's cryptographic random generator.",
       how: [
@@ -1922,7 +1922,7 @@ export const tools: Tool[] = [
       title:
         "Random Emoji Generator — Generate Fun Emoji Combinations",
       description:
-        "Generate random emojis, aesthetic emoji packs, cute combos and social-media emoji sets instantly. Filter by category or vibe, search 400+ emojis, save favorites — free, no signup.",
+        "Generate random emojis, aesthetic emoji packs, cute combos and social-media emoji sets instantly. Filter by category or vibe, search 400+ emojis, save…",
       what:
         "A Random Emoji Generator produces random emojis or curated emoji combinations for messages, bios, captions, usernames and design inspiration. Toollyz Random Emoji Generator goes beyond a basic picker — generate by Unicode category (smileys, animals, food, symbols, hearts and more) or by curated vibe (soft aesthetic, kawaii, gamer, dark aesthetic, TikTok, Instagram bio), search 400+ named emojis instantly, save favorites locally, and preview your pack inside chat, Instagram-bio, TikTok-caption and Discord mockups.",
       how: [
@@ -2017,7 +2017,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Random Fact Generator — Fun & Interesting Facts Online",
       description:
-        "Discover fun, weird, educational and mind-blowing facts instantly. Explore science, space, history, psychology, animals and more — with a daily fact, search and favorites. Free.",
+        "Discover fun, weird, educational and mind-blowing facts instantly. Explore science, space, history, psychology, animals and more — with a daily fact…",
       what:
         "A Random Fact Generator surfaces interesting, bite-sized pieces of knowledge on demand. Toollyz Random Fact Generator pulls from a hand-curated collection of verified facts across 18 categories — science, space, technology, history, psychology, animals, the human body, geography, food, movies, gaming, internet culture, business, nature, weird, funny, mind-blowing and kids. Generate a single fact or a pack, get a fresh Fact of the Day, search by keyword, save your favorites, and explore endlessly in discovery mode.",
       how: [
@@ -2112,7 +2112,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Random Joke Generator — Funny Jokes Online",
       description:
-        "Generate funny random jokes instantly. Explore dad jokes, programming jokes, one-liners, puns, knock-knocks and meme humor — all clean and family-friendly. React, save and share. Free.",
+        "Generate funny random jokes instantly. Explore dad jokes, programming jokes, one-liners, puns, knock-knocks and meme humor — all clean and family-friendly.",
       what:
         "A Random Joke Generator delivers a laugh on demand. Toollyz Random Joke Generator pulls from a hand-curated collection of clean, family-friendly jokes across 15 categories — dad jokes, programming, tech, school, animals, knock-knocks, one-liners, puns, gaming, meme humor, office, relationships, food, kids and science. Every joke is safe-for-work by design. React with emojis, save your favorites, enjoy a fresh Joke of the Day, and share to any platform.",
       how: [
@@ -2208,7 +2208,7 @@ export const tools: Tool[] = [
       title:
         "Random Quote Generator — Inspirational Quotes Online",
       description:
-        "Generate inspirational, motivational, philosophical and famous quotes instantly. Filter by author, export aesthetic quote images, save favorites — explore wisdom, success and happiness. Free.",
+        "Generate inspirational, motivational, philosophical and famous quotes instantly. Filter by author, export aesthetic quote images, save favorites — explore…",
       what:
         "A Random Quote Generator surfaces meaningful quotes on demand for motivation, reflection and content creation. Toollyz Random Quote Generator draws from a curated collection of quotes by great thinkers — Marcus Aurelius, Steve Jobs, Maya Angelou, Lao Tzu, Einstein and many more — across 12 categories from motivation and stoicism to creativity and mindfulness. Filter by author, get a fresh Quote of the Day, export beautiful shareable quote images in six gradient themes, and save the ones that resonate.",
       how: [
@@ -2307,7 +2307,7 @@ export const tools: Tool[] = [
       title:
         "Calendar Generator — Create Printable Calendars Online",
       description:
-        "Free online calendar generator. Make printable monthly or yearly calendars for any year with seven themes, holidays, custom events and a planner. Export to PDF, PNG or ICS — no signup.",
+        "Free online calendar generator. Make printable monthly or yearly calendars for any year with seven themes, holidays, custom events and a planner.",
       what:
         "A Calendar Generator builds clean, customizable calendars you can view, personalize and print for any month or year. Toollyz Calendar Generator lets you switch between a detailed monthly layout and a full-year overview, choose from seven design themes (from minimal and corporate to pastel, classroom and printable black-and-white), start the week on Sunday or Monday, highlight weekends, and overlay public holidays for the US, UK, India or international dates. Add color-coded custom events with emojis, keep a to-do list and notes alongside your calendar, then export everything as a print-ready PDF, a high-resolution PNG image, or an ICS file you can import into Google Calendar, Apple Calendar or Outlook.",
       how: [
@@ -2406,7 +2406,7 @@ export const tools: Tool[] = [
       title:
         "Horoscope Generator — Daily Zodiac Predictions Online",
       description:
-        "Generate personalized daily, weekly, monthly and yearly horoscopes, zodiac compatibility reports, lucky numbers and shareable astrology cards instantly with Toollyz. Free, no signup.",
+        "Generate personalized daily, weekly, monthly and yearly horoscopes, zodiac compatibility reports, lucky numbers and shareable astrology cards instantly…",
       what:
         "A Horoscope Generator creates personalized astrology readings for your zodiac sign on demand. Toollyz Horoscope Generator delivers daily, weekly, monthly and yearly predictions across love, career, health, finance and friendship, complete with a mood indicator, energy meters, lucky numbers, lucky colors and the signs most compatible with you today. An interactive zodiac wheel lets you pick your sign (or find it from your birth date), a compatibility checker compares any two signs with an animated match score and relationship insights, and a discovery mode lets you explore all twelve zodiac personalities by element. Every reading is rendered as a beautiful, shareable cosmic card you can download or post — all generated privately in your browser for entertainment and self-reflection.",
       how: [
@@ -2506,7 +2506,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Word Counter — Count Words, Characters & Reading Time",
       description:
-        "Analyze text instantly with Toollyz Word Counter. Count words, characters, sentences, paragraphs, reading time, keyword density and readability scores online — free and private.",
+        "Analyze text instantly with Toollyz Word Counter. Count words, characters, sentences, paragraphs, reading time, keyword density and readability scores…",
       what:
         "A Word Counter is a writing tool that analyzes your text in real time and reports detailed statistics as you type. Toollyz Word Counter goes far beyond a basic textbox: it counts words, characters (with and without spaces), sentences, paragraphs and lines; estimates reading and speaking time; calculates readability scores like Flesch Reading Ease, Flesch-Kincaid Grade and the Gunning Fog Index; and surfaces keyword density, repeated words, unique-word counts and lexical diversity. A distraction-free editor with focus and fullscreen modes, built-in text-cleaning tools, file import, writing goals, a session timer and one-click PDF reports make it a complete writing-productivity workspace — and because everything runs in your browser, your text is never uploaded.",
       how: [
@@ -2608,7 +2608,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Character Counter — Count Characters, Spaces & Text Length",
       description:
-        "Count characters, spaces, words, lines and bytes instantly with Toollyz Character Counter. Track social media and SEO limits, preview posts, and optimize content — free and private.",
+        "Count characters, spaces, words, lines and bytes instantly with Toollyz Character Counter. Track social media and SEO limits, preview posts, and optimize…",
       what:
         "A Character Counter is a real-time tool that measures the length of your text down to each character. Toollyz Character Counter shows characters with and without spaces, words, sentences, lines, byte size and a full character breakdown (letters, digits, punctuation, symbols, emoji and uppercase/lowercase ratio) as you type. It tracks platform-specific limits for Twitter/X, Instagram, TikTok, Facebook, LinkedIn, YouTube, Google title tags, meta descriptions and SMS, with progress bars and over-limit warnings, and renders live previews of how your text will appear as a tweet, Instagram caption, Google search result, LinkedIn post or SMS. With built-in text-cleaning tools, file import, character targets, a session timer and one-click TXT and PDF reports, it's a complete content-optimization workspace — and everything runs privately in your browser.",
       how: [
@@ -2710,7 +2710,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Case Converter — Convert Text Cases Instantly Online",
       description:
-        "Convert text instantly with Toollyz Case Converter. Transform text into UPPERCASE, lowercase, camelCase, snake_case, PascalCase, title case, kebab-case and more with real-time preview.",
+        "Convert text instantly with Toollyz Case Converter. Transform text into UPPERCASE, lowercase, camelCase, snake_case, PascalCase, title case, kebab-case…",
       what:
         "A Case Converter is a tool that instantly transforms your text into different letter cases and formatting styles. Toollyz Case Converter supports 15+ styles — UPPERCASE, lowercase, Title Case, Sentence case, Capitalized Case, aLtErNaTiNg and InVeRsE for writing, plus developer formats like camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case and Header-Case. It shows the original and converted text side by side with a live preview, applies developer formats per line so you can batch-convert lists, and includes handy utilities like reverse text, sort lines, strip symbols and normalize spacing. Live statistics, favorites, history and one-click copy or download make it a complete text-formatting workspace — and everything runs privately in your browser.",
       how: [
@@ -2812,7 +2812,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Slugify Tool — Generate SEO-Friendly URL Slugs Online",
       description:
-        "Convert text into SEO-friendly URL slugs instantly with Toollyz Slugify. Generate clean blog URLs, WordPress slugs, route names and developer-safe identifiers — with bulk mode and Unicode support.",
+        "Convert text into SEO-friendly URL slugs instantly with Toollyz Slugify. Generate clean blog URLs, WordPress slugs, route names and developer-safe…",
       what:
         "Slugify turns any title or phrase into a clean, SEO-friendly URL slug in real time. Toollyz Slugify lowercases text, replaces spaces with your chosen separator, strips symbols and emojis, and transliterates accented and non-Latin characters (Latin diacritics, Cyrillic and Greek) into URL-safe ASCII — or preserves Unicode letters when you prefer. It supports multiple formats (standard URL slug, snake_case, dot.case, path/case, camelCase and PascalCase), bulk conversion of multiple lines with duplicate detection and CSV/TXT export, a live URL preview, an SEO readability score with actionable tips, and ready-made developer outputs for WordPress, Next.js routes, API endpoints, database fields and filenames. Everything runs privately in your browser.",
       how: [
@@ -2914,7 +2914,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Online Notepad — Free Browser-Based Text Editor",
       description:
-        "Write, edit, save and organize notes instantly with Toollyz Online Notepad. Distraction-free writing with auto-save, Markdown support, live preview, exports and productivity tools — free and private.",
+        "Write, edit, save and organize notes instantly with Toollyz Online Notepad. Distraction-free writing with auto-save, Markdown support, live preview…",
       what:
         "An Online Notepad is a browser-based writing space where you can jot down notes, draft documents and organize ideas without installing anything. Toollyz Online Notepad is a premium, distraction-free workspace that auto-saves every keystroke to your browser, so your notes are always there when you return — even offline. Manage multiple notes in a searchable sidebar with pinning and duplication, write in plain text or Markdown with a floating formatting toolbar and a live split-screen preview, and track your progress with live word and character counts, a word goal, a focus timer and writing streak badges. Find & replace, undo/redo, font and layout customization, focus and fullscreen modes, and one-click export to TXT, Markdown, HTML, PDF or DOC make it a complete lightweight editor. Everything stays private in your browser — no account, no upload.",
       how: [
@@ -3016,7 +3016,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Markdown Editor & Previewer — Live Markdown Editor Online",
       description:
-        "Write, preview and export Markdown instantly with Toollyz Markdown Editor & Previewer. Real-time GitHub-Flavored rendering, syntax highlighting, templates, an outline, analytics and exports.",
+        "Write, preview and export Markdown instantly with Toollyz Markdown Editor & Previewer. Real-time GitHub-Flavored rendering, syntax highlighting, templates…",
       what:
         "A Markdown Editor & Previewer is a writing tool that renders Markdown into formatted HTML in real time as you type. Toollyz Markdown Editor & Previewer is a premium, distraction-free documentation workspace with a split-screen live preview that supports GitHub-Flavored Markdown — headings, bold, italic, strikethrough, tables, task lists, blockquotes, links, images, emoji shortcodes and syntax-highlighted code blocks. A formatting toolbar and keyboard shortcuts speed up writing, an automatic document outline lets you jump between sections, and a template library gives you ready-made README, blog, documentation, changelog and project-plan scaffolds. Live analytics count words, headings, links, images and more; everything auto-saves to your browser with version snapshots and undo/redo; and you can view the generated HTML or export to Markdown, HTML, PDF, DOC or plain text — all completely private and free.",
       how: [
@@ -3118,7 +3118,7 @@ export const tools: Tool[] = [
     seo: {
       title: "ASCII Art Generator — Convert Text & Images to ASCII Online",
       description:
-        "Create stunning ASCII art instantly with Toollyz ASCII Art Generator. Convert text and images into creative ASCII designs, terminal banners, color ASCII and downloadable artwork online.",
+        "Create stunning ASCII art instantly with Toollyz ASCII Art Generator. Convert text and images into creative ASCII designs, terminal banners, color ASCII…",
       what:
         "An ASCII Art Generator turns text and images into pictures made of characters. Toollyz ASCII Art Generator does both: type any word or name and render it as a stylized banner in over a dozen styles — block, shade, outline, banner, shadow, 3D, slant and more — with adjustable height, font family and a custom fill character; or upload an image and convert it to ASCII with control over width, character set (density), brightness, contrast, invert and full-color mode. A frame generator wraps text in decorative borders, a live terminal-style preview offers zoom and fullscreen, and you can copy or export your art as TXT, PNG, SVG or HTML. A built-in style gallery and ready-made art help you start fast — and everything runs privately in your browser, so uploaded images never leave your device.",
       how: [
@@ -3216,7 +3216,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Fancy Text Generator — Stylish Fonts & Unicode Text Online",
       description:
-        "Generate stylish fancy text instantly with Toollyz Fancy Text Generator. Create aesthetic fonts, gaming usernames, Instagram bios, TikTok profiles, Discord nicknames and decorative Unicode text.",
+        "Generate stylish fancy text instantly with Toollyz Fancy Text Generator. Create aesthetic fonts, gaming usernames, Instagram bios, TikTok profiles, Discord…",
       what:
         "A Fancy Text Generator turns ordinary text into eye-catching Unicode styles you can copy and paste anywhere. Toollyz Fancy Text Generator transforms what you type — in real time — into 100+ variations including bold, italic, script, cursive, gothic Fraktur, double-struck, monospace, small caps, circled, squared, bubble, vaporwave (full-width), upside-down, strikethrough and glitch styles. Because the output is real Unicode (not images or fonts), it works directly in Instagram bios, TikTok and Discord names, gaming profiles, WhatsApp, YouTube and more. Beyond fonts, it includes a decoration system for fancy frames like ꧁ text ꧂, a searchable symbol library, a stylish username and nickname generator, an aesthetic bio builder, live social-profile previews, and one-click copy with saved favorites — all running privately in your browser.",
       how: [
@@ -3312,9 +3312,9 @@ export const tools: Tool[] = [
       "invisible character detector",
     ],
     seo: {
-      title: "Invisible Text Generator — Copy Blank Unicode Characters Online",
+      title: "Invisible Text Generator — Copy Blank Unicode Characters",
       description:
-        "Generate invisible text, blank characters and hidden Unicode spaces instantly with Toollyz Invisible Text Generator. Create blank usernames, empty messages and invisible profile text — free.",
+        "Generate invisible text, blank characters and hidden Unicode spaces instantly with Toollyz Invisible Text Generator. Create blank usernames, empty messages…",
       what:
         "An Invisible Text Generator produces real Unicode characters that take up space (or none) but render as nothing visible, so you can copy and paste 'empty' text anywhere. Toollyz Invisible Text Generator lets you pick from several invisible characters — Zero Width Space, Zero Width Joiner/Non-Joiner, Word Joiner, the Hangul Filler and the Braille blank — choose how many to generate, and copy the result in one click. It includes ready-made presets for blank usernames, empty messages and invisible bios, a platform-compatibility dashboard showing where invisible text works (Instagram, TikTok, Discord, WhatsApp and games like Free Fire and PUBG), a built-in analyzer that detects and reveals hidden characters inside any pasted text, and a developer panel with the exact code point, UTF-8/UTF-16 bytes and JS/HTML/CSS escapes. Everything runs privately in your browser.",
       how: [
@@ -3414,7 +3414,7 @@ export const tools: Tool[] = [
     seo: {
       title: "JSON Formatter — Format, Validate & Beautify JSON Online",
       description:
-        "Format, validate, beautify, minify and analyze JSON instantly with Toollyz JSON Formatter. Explore JSON trees, validate with precise errors, compare JSON files and export formatted data.",
+        "Format, validate, beautify, minify and analyze JSON instantly with Toollyz JSON Formatter. Explore JSON trees, validate with precise errors, compare JSON…",
       what:
         "A JSON Formatter is a developer tool that turns messy or minified JSON into clean, readable, validated data. Toollyz JSON Formatter is a full JSON workspace: an IDE-style editor with syntax highlighting and line numbers, real-time validation that pinpoints the exact line, column and reason for every error (with fix hints), one-click beautify and minify with 2-space, 4-space or tab indentation, key sorting, and escape/unescape utilities. An interactive tree explorer lets you expand, collapse, search and copy the path of any node, a statistics dashboard summarizes objects, arrays, keys, depth and size, and a diff view compares two JSON documents and highlights every added, removed and changed value. Import files by drag-and-drop and export to JSON, minified JSON or CSV — all running privately in your browser, so your data is never uploaded.",
       how: [
@@ -3512,7 +3512,7 @@ export const tools: Tool[] = [
     seo: {
       title: "XML Formatter — Format, Validate & Beautify XML Online",
       description:
-        "Format, validate, beautify, minify and analyze XML instantly with Toollyz XML Formatter. Explore XML trees, test XPath, convert XML to JSON, compare documents and export formatted XML.",
+        "Format, validate, beautify, minify and analyze XML instantly with Toollyz XML Formatter. Explore XML trees, test XPath, convert XML to JSON, compare…",
       what:
         "An XML Formatter turns messy or minified XML into clean, readable, well-formed markup. Toollyz XML Formatter is a complete XML workspace: an IDE-style editor with syntax highlighting and line numbers, real-time well-formedness validation that pinpoints the exact line, column and reason for every error (with fix hints), and one-click beautify and minify with 2-space, 4-space or tab indentation. An interactive tree explorer lets you expand, collapse, search and copy the path of any element or attribute; an XPath tester runs queries against your document and highlights matching nodes; an XML-to-JSON converter previews the equivalent JSON; a diff view compares two documents line by line; and a statistics dashboard summarizes elements, attributes, namespaces, depth and size. Import files by drag-and-drop and export to XML, minified XML or JSON — all running privately in your browser, so your data is never uploaded.",
       how: [
@@ -3610,7 +3610,7 @@ export const tools: Tool[] = [
     seo: {
       title: "HTML Minifier — Compress & Optimize HTML Code Online",
       description:
-        "Minify and optimize HTML instantly with Toollyz HTML Minifier. Reduce file size, improve page speed, validate markup, analyze performance gains, and export optimized HTML code online — 100% in your browser.",
+        "Minify and optimize HTML instantly with Toollyz HTML Minifier. Reduce file size, improve page speed, validate markup, analyze performance gains, and export…",
       what:
         "An HTML Minifier removes everything a browser doesn't need — extra whitespace, line breaks, comments and redundant attributes — so your pages download and render faster without changing how they look. Toollyz HTML Minifier is a complete optimization workspace, not just a compressor: an IDE-style editor with syntax highlighting and line numbers, granular minification controls (collapse whitespace, remove comments while preserving conditional comments, drop redundant and empty attributes, collapse boolean attributes, remove optional tags) plus one-click Safe, Maximum and Conservative presets. It minifies inline CSS and JavaScript, beautifies and cleans up messy markup, validates your HTML for unclosed tags, deprecated elements and accessibility gaps, and shows a live before/after comparison with a full analytics dashboard — bytes saved, compression percentage, an optimization score and estimated load-time savings. You can also batch-process multiple files at once and export optimized HTML — all entirely in your browser, so your code is never uploaded.",
       how: [
@@ -3712,7 +3712,7 @@ export const tools: Tool[] = [
     seo: {
       title: "JavaScript Minifier — Compress & Optimize JS Code Online",
       description:
-        "Minify and optimize JavaScript instantly with Toollyz JavaScript Minifier. Reduce file size, improve website performance, validate code, analyze bundle savings, and export optimized JS online — 100% in your browser.",
+        "Minify and optimize JavaScript instantly with Toollyz JavaScript Minifier. Reduce file size, improve website performance, validate code, analyze bundle…",
       what:
         "A JavaScript Minifier removes everything an engine doesn't need to run your code — comments, whitespace, indentation and line breaks — so scripts download and parse faster. Toollyz JavaScript Minifier is a full optimization workspace, not just a compressor: an IDE-style editor with ES6+/ESNext syntax highlighting and line numbers, safe token-based minification, and Safe, Aggressive, Production and Debug-friendly presets. It can remove console and debugger statements, preserve /*! license */ banners, optimize booleans, beautify minified code back into readable form, and validate your JavaScript for unterminated strings, mismatched brackets and syntax errors with line numbers. A live before/after comparison, an analytics dashboard (bytes saved, compression percentage, optimization score, estimated parse and load-time savings) and a bundle analysis (functions, declarations, complexity) give you real insight, and bulk processing optimizes many files at once. Crucially, it never renames your variables or functions — so unlike obfuscators, it can't change how your program behaves — and everything runs in your browser, so your code is never uploaded.",
       how: [
@@ -3814,7 +3814,7 @@ export const tools: Tool[] = [
     seo: {
       title: "CSS Minifier — Compress & Optimize CSS Code Online",
       description:
-        "Minify and optimize CSS instantly with Toollyz CSS Minifier. Reduce file size, improve page speed, validate and analyze your stylesheet, compare before/after, and export optimized CSS online — 100% in your browser.",
+        "Minify and optimize CSS instantly with Toollyz CSS Minifier. Reduce file size, improve page speed, validate and analyze your stylesheet, compare…",
       what:
         "A CSS Minifier removes everything a browser doesn't need to apply your styles — comments, whitespace, indentation and redundant characters — so stylesheets download and parse faster without changing how the page looks. Toollyz CSS Minifier is a complete optimization workspace, not just a compressor: an IDE-style editor with CSS syntax highlighting and line numbers, safe minification, and Safe, Aggressive and Conservative presets. It can lowercase and shorten hex colors (#ffffff → #fff), strip units from zero values, remove empty rules and preserve /*! license */ banners, beautify minified CSS back into readable form, and validate your stylesheet for unbalanced braces and unterminated comments or strings. A live before/after comparison, an analytics dashboard (bytes saved, compression percentage, optimization score, estimated load-time savings) and a stylesheet analysis (rules, selectors, declarations, media queries, colors) give real insight, plus bulk processing for many files at once. Crucially, the minifier never collapses a descendant-combinator space or alters calc() spacing, so it can't break your layout — and everything runs in your browser, so your code is never uploaded.",
       how: [
@@ -3916,7 +3916,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Hash Generator — MD5, SHA-1, SHA-256/384/512 + HMAC (Free)",
       description:
-        "Compute MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes for any text or file in your browser with Toollyz Hash Generator. Optional HMAC mode, hash comparison and copy on every value — Toollyz has no backend.",
+        "Compute MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes for any text or file in your browser with Toollyz Hash Generator. Optional HMAC mode, hash…",
       what:
         "A hash generator computes a fixed-length \"fingerprint\" of any input using a published one-way function. Toollyz Hash Generator runs five algorithms — MD5, SHA-1, SHA-256, SHA-384 and SHA-512 — entirely in your browser. SHA-1 / 256 / 384 / 512 use the browser's built-in Web Crypto SubtleCrypto (`crypto.subtle.digest`), which is fast, FIPS-180 compliant and implemented in native code. MD5 uses the open-source spark-md5 library because Web Crypto deliberately omits MD5 (it's broken for cryptographic use). An optional HMAC secret transparently switches every algorithm to HMAC-&lt;alg&gt; (HMAC-MD5 implemented locally per RFC 2104; HMAC-SHA-* via `crypto.subtle.sign`). A Compare to field lets you paste an expected hash and get instant case-insensitive \"OK\" / \"≠\" badges next to matching rows. Switch to the File tab to drop in a file — MD5 streams in 2 MB chunks via spark-md5 (so very large files don't blow the JS heap), SHA-* reads the whole file into memory and digests it in one shot. Output casing is toggleable between lowercase (default) and UPPER CASE. Toollyz has no server in the path — your text, key and files never leave your browser.",
       how: [
@@ -4014,7 +4014,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Regex Tester — Test & Debug Regular Expressions Online",
       description:
-        "Test and debug regular expressions instantly with Toollyz Regex Tester. Live match highlighting, capture and named groups, a replace preview and a library of common patterns — 100% in your browser.",
+        "Test and debug regular expressions instantly with Toollyz Regex Tester. Live match highlighting, capture and named groups, a replace preview and a library…",
       what:
         "A Regex Tester lets you write a regular expression and immediately see what it matches in your text. Toollyz Regex Tester uses the same JavaScript regex engine your code runs on, so what you test is exactly what you get. As you type, it highlights every match in the test string, lists each match with its position, capture groups and named groups, and shows whether your pattern is valid (with the engine's error message if not). Toggle the g, i, m, s, u and y flags, preview replacements with $1 and $<name> backreferences, and load ready-made patterns for emails, URLs, IPv4 addresses, hex colors, dates and more from the built-in library. It runs entirely in your browser — your patterns and text are never uploaded — with built-in guardrails (input limits, iteration caps and a zero-length-match guard) that keep the page responsive and warn you about patterns prone to catastrophic backtracking.",
       how: [
@@ -4112,7 +4112,7 @@ export const tools: Tool[] = [
     seo: {
       title: "JWT Decoder — Decode & Verify JSON Web Tokens Online",
       description:
-        "Decode and inspect JSON Web Tokens instantly with Toollyz JWT Decoder. Read the header and payload, humanize exp/iat claims, detect unsafe tokens, and verify HS256 signatures — 100% in your browser.",
+        "Decode and inspect JSON Web Tokens instantly with Toollyz JWT Decoder. Read the header and payload, humanize exp/iat claims, detect unsafe tokens,…",
       what:
         "A JWT Decoder splits a JSON Web Token into its three parts — header, payload and signature — and base64url-decodes the first two so you can read what a token actually contains. Toollyz JWT Decoder is a full inspection workspace: it pretty-prints the header and payload with syntax highlighting, lists every claim with a plain-English description, and humanizes the registered date claims (exp, iat, nbf) into readable timestamps with relative times and an at-a-glance status — active, expired or not-yet-valid. It flags unsafe tokens (alg: none), malformed structures and empty signatures, and can verify HS256 signatures right in your browser using the Web Crypto API when you paste the secret. RS256/ES256 tokens are decoded for inspection (verifying those requires the issuer's public key). Everything — decoding, claim analysis and signature verification — happens entirely on your device, so your tokens and secrets are never uploaded.",
       how: [
@@ -4210,7 +4210,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Secure Notes — Password-Encrypted Notes in Your Browser",
       description:
-        "Write password-protected, AES-256-encrypted notes that stay in your browser with Toollyz Secure Notes. Keep a private vault and share self-contained encrypted notes — zero-knowledge and 100% offline.",
+        "Write password-protected, AES-256-encrypted notes that stay in your browser with Toollyz Secure Notes. Keep a private vault and share self-contained…",
       what:
         "Secure Notes is a private, encrypted notebook that runs entirely in your browser. It gives you two things: a password-locked vault — a list of notes encrypted at rest with AES-256-GCM using a key derived from your master password (PBKDF2-SHA-256, 250,000 iterations) — and a share mode that encrypts any note with a passphrase into a single self-contained string you can send to someone, who decrypts it here with the same passphrase. Because it's zero-knowledge, nothing is ever uploaded: your notes, your password and your passphrases all stay on your device. The vault auto-locks when idle, stores only ciphertext in local storage, never keeps your password, and uses a fresh random salt and initialization vector for every encryption. The trade-off of true client-side encryption is that there's no password recovery — if you forget your master password, the notes genuinely cannot be decrypted by anyone, including us.",
       how: [
@@ -4308,7 +4308,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Clipboard Manager — Save & Re-use Clipboard History Online",
       description:
-        "Keep a private clipboard history with Toollyz Clipboard Manager. Save copied text snippets, pin favorites, search them and re-copy with one click — 100% in your browser, nothing uploaded.",
+        "Keep a private clipboard history with Toollyz Clipboard Manager. Save copied text snippets, pin favorites, search them and re-copy with one click — 100%…",
       what:
         "A Clipboard Manager remembers the things you copy so you can paste any of them again later, instead of only the single most-recent item your system clipboard holds. Toollyz Clipboard Manager keeps a running history of text snippets you save: paste or type something and click Save, or pull the current system clipboard in with one button. Each entry shows a preview, character count and when you saved it; click any entry to copy it straight back to your clipboard. You can pin the snippets you reuse most so they stay at the top, search your whole history instantly, and delete entries or clear everything in one go. Everything is stored only in your browser's local storage — there's no account and nothing is ever uploaded — so it works offline and your snippets stay completely private to your device.",
       how: [
@@ -4406,7 +4406,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Internet Speed Test — Check Download, Upload & Ping",
       description:
-        "Test your internet speed with Toollyz Internet Speed Test. Measure download and upload in Mbps, plus ping and jitter, with live gauges — run directly in your browser against Cloudflare's network.",
+        "Test your internet speed with Toollyz Internet Speed Test. Measure download and upload in Mbps, plus ping and jitter, with live gauges — run directly…",
       what:
         "An Internet Speed Test measures how fast your connection is right now: how quickly it downloads data, how quickly it uploads, and how responsive it is (latency). Toollyz Internet Speed Test runs entirely in your browser against Cloudflare's public speed endpoints — the same network many speed tests use. It first measures latency (ping) and jitter with a series of tiny requests, then measures download by streaming data and timing a steady-state window (discarding the initial ramp-up for a stable number), then measures upload by sending data back. Results appear live on animated gauges in megabits per second (Mbps). Because it's a single-stream, browser-based test, the numbers read a little lower than dedicated multi-connection apps — but they're a reliable, repeatable measure of your connection, and nothing is uploaded to Toollyz (there is no Toollyz server; the test talks directly to Cloudflare).",
       how: [
@@ -4504,7 +4504,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Ping Test — Measure Latency, Jitter & Packet Loss Online",
       description:
-        "Measure round-trip latency, jitter and packet loss to any host with Toollyz Ping Test. Live per-request results and one-click presets, run entirely from your browser — free and private.",
+        "Measure round-trip latency, jitter and packet loss to any host with Toollyz Ping Test. Live per-request results and one-click presets, run entirely from…",
       what:
         "A Ping Test measures how long it takes a request to travel to a server and back — your latency. Because browsers cannot send real ICMP ping packets, Toollyz Ping Test measures HTTP(S) round-trip time instead: it times repeated requests to the host you choose and reports the minimum, average, median and maximum latency, plus jitter (how much latency varies) and packet loss. A DNS/TLS warm-up request is discarded so the numbers reflect steady-state latency, and unreachable attempts count as lost packets. The requests go directly from your browser to the host (or fall back to an image load) — there is no Toollyz server in the middle. Because it's HTTP-based, the numbers are higher than a terminal ICMP ping and include the web server's response time, so it's best used to compare hosts and spot instability rather than as an absolute ping value.",
       how: [
@@ -4606,7 +4606,7 @@ export const tools: Tool[] = [
     seo: {
       title: "IP Address Finder — What Is My IP, Location & ISP",
       description:
-        "Instantly find your public IPv4/IPv6 address, approximate location, ISP, timezone, local IP and connection details with Toollyz IP Address Finder — looked up directly from your browser.",
+        "Instantly find your public IPv4/IPv6 address, approximate location, ISP, timezone, local IP and connection details with Toollyz IP Address Finder — looked…",
       what:
         "An IP Address Finder tells you the public IP address your internet connection presents to the websites you visit, along with the details that can be inferred from it. Toollyz IP Address Finder shows your public IPv4 (and IPv6, if your network has one), an approximate location (city, region, country), your ISP and organization, your timezone, and — detected entirely in your browser — your local/private IP and connection estimate. Because this site has no server of its own, the lookup is made directly from your browser to a reputable public API (ipwho.is, with ipapi.co and ipify as fallbacks); finding your public IP necessarily reveals it to that one provider, but Toollyz never sees or stores it. Your local IP is discovered in-browser via WebRTC and never leaves your device, and the browser/connection details come straight from your own browser.",
       how: [
@@ -4704,7 +4704,7 @@ export const tools: Tool[] = [
     seo: {
       title: "DNS Lookup — A, AAAA, MX, TXT, CNAME, NS, SOA & CAA Records",
       description:
-        "Look up DNS records for any domain — A, AAAA, CNAME, MX, TXT, NS, SOA and CAA — instantly with Toollyz DNS Lookup. Uses DNS-over-HTTPS from your browser; no Toollyz server.",
+        "Look up DNS records for any domain — A, AAAA, CNAME, MX, TXT, NS, SOA and CAA — instantly with Toollyz DNS Lookup. Uses DNS-over-HTTPS from your browser…",
       what:
         "A DNS Lookup Tool resolves the records that map a domain to IP addresses, mail servers, name servers and configuration metadata. Toollyz DNS Lookup uses DNS-over-HTTPS (DoH) directly from your browser against Cloudflare's public 1.1.1.1 resolver, so there's no Toollyz server in the path. Pick which record types you want — A and AAAA for IPv4/IPv6 addresses, CNAME for aliases, MX for mail, TXT for SPF/DKIM/verification, NS for name servers, SOA for zone metadata and CAA for certificate authority authorization — and each is queried in parallel. Results show every record with its data and TTL, plus a clear NXDOMAIN state when a record doesn't exist. Because DoH bypasses your system resolver, results reflect the authoritative zone via Cloudflare and may differ slightly from your local DNS, which is useful for debugging caching and propagation issues.",
       how: [
@@ -4802,7 +4802,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Browser Information Checker — Version, UA & Web-API Support",
       description:
-        "See what your browser tells websites about itself: name, version, engine, OS, user-agent, locale, permissions and supported web APIs — read entirely in your browser with Toollyz Browser Information Checker.",
+        "See what your browser tells websites about itself: name, version, engine, OS, user-agent, locale, permissions and supported web APIs — read entirely…",
       what:
         "A Browser Information Checker shows you everything your browser exposes to the websites you visit. Toollyz Browser Information Checker reads it locally in your tab and groups it into clear sections: which browser and version you're running (with engine and operating system), the full user-agent string, your locale (languages, timezone, primary language), your preferences (color scheme, reduced motion, contrast, Do Not Track, cookies, online status), your current window and screen sizes, the Permissions API states for geolocation, notifications, camera, microphone and clipboard, and a comprehensive web-API support matrix covering storage, workers, media, networking, crypto, devices and UI features. You can copy the full snapshot as JSON or download it — useful for support tickets, compatibility debugging or just satisfying curiosity. Nothing is ever uploaded.",
       how: [
@@ -4900,7 +4900,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Device Information Checker — Type, Screen, CPU, GPU & More",
       description:
-        "Inspect what your device exposes to the browser: type, OS, screen resolution, pixel ratio, viewport, CPU cores, memory, GPU and connection — entirely in your browser with Toollyz.",
+        "Inspect what your device exposes to the browser: type, OS, screen resolution, pixel ratio, viewport, CPU cores, memory, GPU and connection — entirely…",
       what:
         "A Device Information Checker shows the hardware-side details a website can read about your device. Toollyz Device Information Checker classifies the device as a phone, tablet or desktop/laptop, reports the operating system and platform, screen and available resolution with pixel-density (DPR) and color depth, current viewport size, processor cores, device memory, touch points and pointer/hover capabilities, and — where the browser allows — the GPU renderer and vendor (via WebGL) and a connection estimate. It also surfaces which device-level web APIs are available (Battery, Bluetooth, USB, Gamepads, Vibration). Everything is read locally; nothing is uploaded.",
       how: [
@@ -4998,7 +4998,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Battery Status Checker — Level, Charging & Time Remaining",
       description:
-        "Check your laptop, tablet or phone battery level, charging status and time to full or empty — live in your browser with Toollyz Battery Status Checker. Free and 100% private.",
+        "Check your laptop, tablet or phone battery level, charging status and time to full or empty — live in your browser with Toollyz Battery Status Checker.",
       what:
         "A Battery Status Checker reads your device's current battery state via the browser. Toollyz Battery Status Checker uses the Battery Status API to show your battery level as a live percentage, whether you're currently charging, and the estimated time until full (when charging) or until empty (when discharging). The hero updates live as your charging state changes — plug or unplug your charger and watch the numbers move. The Battery Status API is implemented in Chromium-based browsers (Chrome, Edge, Opera, Brave, Arc); Firefox and Safari have removed it for privacy, and the tool shows a clear notice in those browsers. Nothing is uploaded — everything is read directly in your tab.",
       how: [
@@ -5094,9 +5094,9 @@ export const tools: Tool[] = [
       "screen orientation",
     ],
     seo: {
-      title: "Screen Resolution Checker — Size, DPR, Color Depth & Refresh Rate",
+      title: "Screen Resolution Checker — Size, DPR, Color Depth & Refresh",
       description:
-        "Find your screen resolution in CSS and hardware pixels, viewport, device pixel ratio, color depth, refresh rate, aspect ratio and orientation — updated live as you resize. Free and private.",
+        "Find your screen resolution in CSS and hardware pixels, viewport, device pixel ratio, color depth, refresh rate, aspect ratio and orientation — updated…",
       what:
         "A Screen Resolution Checker tells you the dimensions and capabilities of the display you're looking at. Toollyz Screen Resolution Checker shows both the CSS-pixel resolution (what the browser draws) and the hardware-pixel resolution (CSS × device pixel ratio), the current viewport, the device pixel ratio, color depth, aspect ratio and orientation. It also estimates your monitor's refresh rate live by counting browser animation frames. A visual overlay shows your browser window inside the screen so you can see how much real-estate you're using, and the numbers update as you resize the window or rotate your device. Everything is read in your browser; nothing is uploaded.",
       how: [
@@ -5194,7 +5194,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Keyboard Tester — Check Every Key in Your Browser",
       description:
-        "Test every key on your keyboard live with Toollyz Keyboard Tester. See key, code, keyCode and modifiers for each press, plus a visual keyboard that highlights what you've tested — 100% in your browser.",
+        "Test every key on your keyboard live with Toollyz Keyboard Tester. See key, code, keyCode and modifiers for each press, plus a visual keyboard that…",
       what:
         "A Keyboard Tester verifies that each key on your physical keyboard registers correctly — useful for diagnosing stuck, ghosted or non-responsive keys after a spill, replacement or before a return. Toollyz Keyboard Tester captures every keydown and keyup event in your browser and shows live details: the typed character (key), the physical button (code), the legacy numeric keyCode, the location (left/right/numpad/standard) and any held modifiers (Ctrl/Alt/Shift/Meta). A virtual QWERTY layout highlights the keys you've pressed in green and lights up the one currently held in indigo, so you can scan for keys that never register. A recent-events log records the last twelve presses with their codes, and Tab/arrows are captured so they don't move focus away. Nothing is uploaded — this is purely an event monitor in your browser.",
       how: [
@@ -5292,7 +5292,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Mouse Click Tester — Buttons, Double-Click, Scroll & CPS",
       description:
-        "Test every mouse button, double-click, scroll-wheel and clicks-per-second with Toollyz Mouse Click Tester. Visual ripples, live counts and event details — 100% in your browser.",
+        "Test every mouse button, double-click, scroll-wheel and clicks-per-second with Toollyz Mouse Click Tester. Visual ripples, live counts and event details —…",
       what:
         "A Mouse Click Tester verifies that every button on your mouse — left, right, middle, back and forward — registers correctly and at the speed you'd expect. Toollyz Mouse Click Tester gives you a focused test area that captures pointer-down and pointer-up events, the wheel, double-clicks and pointer movement. Each click renders a color-coded ripple at the exact cursor position, the button counts increment live for left/right/middle/back/forward, a rolling clicks-per-second meter shows your click cadence, and the wheel-tick counter tracks scroll input. The right-click context menu is suppressed inside the test area so right-click testing actually works, and Pointer Events handle both mice and stylus/touch with the same API. Everything is read in your browser — your clicks are never sent anywhere.",
       how: [
@@ -5390,7 +5390,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Mic Test — Live Volume, Waveform & Record/Playback",
       description:
-        "Test your microphone in your browser with Toollyz Mic Test. Live volume meter, dBFS, real-time waveform, device picker and a quick record-and-playback — entirely in your browser, no uploads.",
+        "Test your microphone in your browser with Toollyz Mic Test. Live volume meter, dBFS, real-time waveform, device picker and a quick record-and-playback —…",
       what:
         "A Mic Test verifies that your microphone is connected, selected and producing usable sound. Toollyz Mic Test uses the browser's getUserMedia and Web Audio APIs to read your mic stream entirely in your tab: it shows a live RMS volume meter as a percentage, a dBFS readout, a real-time waveform on a canvas and a peak-hold marker so you can see whether your levels are too quiet or clipping. A device picker lets you switch between input devices, and a quick record-and-playback step lets you confirm what you actually sound like before joining a call. Audio is processed and recorded in your browser only — there is no Toollyz server, nothing is uploaded, and recorded clips are discarded as soon as you leave the page.",
       how: [
@@ -5488,7 +5488,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Webcam Test — Live Preview, Resolution, FPS & Snapshots",
       description:
-        "Test your webcam with Toollyz Webcam Test Tool. Live preview, real-time resolution and FPS, mirror toggle, PNG snapshots and a short recording — entirely in your browser, no uploads.",
+        "Test your webcam with Toollyz Webcam Test Tool. Live preview, real-time resolution and FPS, mirror toggle, PNG snapshots and a short recording — entirely…",
       what:
         "A Webcam Test Tool verifies that your camera is connected, selected and producing usable video. Toollyz Webcam Test Tool uses the browser's getUserMedia API to read your camera stream entirely in your tab: it shows a live preview at the camera's negotiated resolution, reads the actual frame rate (via requestVideoFrameCallback where available), lists every connected camera in a device picker and lets you toggle a mirror view for a natural “look at yourself” preview. You can capture PNG snapshots into a gallery and download any of them, or hit Record to capture a short WebM video and play it back in place. Video is processed only in your browser — there's no Toollyz server, nothing is uploaded, and snapshots and recordings are discarded as soon as you leave the page.",
       how: [
@@ -5588,7 +5588,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Base64 Encoder / Decoder — Text & File, Standard or URL-Safe",
       description:
-        "Encode or decode Base64 for text and files with Toollyz Base64 Encoder/Decoder — UTF-8 aware, standard or URL-safe variants, image data-URI preview. 100% in your browser.",
+        "Encode or decode Base64 for text and files with Toollyz Base64 Encoder/Decoder — UTF-8 aware, standard or URL-safe variants, image data-URI preview.",
       what:
         "Base64 is an encoding that represents arbitrary bytes using a 64-character alphabet, so binary data can travel through text-only channels like JSON, URLs, emails or HTML. Toollyz Base64 Encoder/Decoder converts both ways — UTF-8 aware text in or out — and also handles whole files: drop any file in and get its Base64 plus a ready-to-paste data URI; if it's an image, you'll see a live preview rendered from that data URI. You can switch between standard Base64 and URL-safe Base64 (`base64url`, using `-` and `_` with no padding — the variant used by JWT, OAuth and many APIs). Decoding catches malformed input and shows the exact error. Files are read in your browser; nothing is uploaded.",
       how: [
@@ -5686,7 +5686,7 @@ export const tools: Tool[] = [
     seo: {
       title: "URL Encoder & Decoder — Percent-Encode and Parse URLs",
       description:
-        "Encode special characters for URLs and decode percent-encoded strings back to readable text with Toollyz URL Encoder/Decoder — plus a URL parts inspector. 100% in your browser.",
+        "Encode special characters for URLs and decode percent-encoded strings back to readable text with Toollyz URL Encoder/Decoder — plus a URL parts inspector.",
       what:
         "A URL Encoder/Decoder converts strings to and from percent-encoding so they're safe to use inside URLs. Toollyz URL Encoder/Decoder handles both directions instantly and lets you switch between component scope (encodeURIComponent — encodes every reserved character, ideal for query values and path segments) and full-URI scope (encodeURI — preserves `://?&=` so a whole URL stays valid). Decoding catches malformed percent escapes and surfaces a clear error. A live URL parts inspector breaks any pasted full URL into its protocol, host, port, pathname, search and hash, and lists each query parameter individually. Everything is computed in your browser — nothing is uploaded.",
       how: [
@@ -5784,7 +5784,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Markdown to HTML — Live Preview, Templates & Clean Export",
       description:
-        "Convert Markdown to clean HTML with Toollyz Markdown to HTML. Live preview, ready-made templates (README, blog post), copy and full-document download — entirely in your browser.",
+        "Convert Markdown to clean HTML with Toollyz Markdown to HTML. Live preview, ready-made templates (README, blog post), copy and full-document download —…",
       what:
         "A Markdown to HTML converter turns Markdown — the lightweight syntax used by GitHub, Notion, Discord and countless static-site generators — into the HTML a browser actually renders. Toollyz Markdown to HTML shows your Markdown on one side and the rendered preview on the other, updating live as you type. Switch to HTML view to read the source, or use Split for both at once. It supports headings, paragraphs, bold/italic, lists (ordered, unordered, nested), inline code and fenced code blocks, blockquotes, links, images, tables and horizontal rules. Pick a ready-made template — README, blog post, changelog — to start from a known-good structure, then copy the rendered HTML fragment or download a full standalone .html document with sensible default styles. Conversion happens entirely in your browser — Markdown and the HTML output never leave the page.",
       how: [
@@ -5882,7 +5882,7 @@ export const tools: Tool[] = [
     seo: {
       title: "HEX to RGB Converter — RGBA, HSL, CMYK with Live Preview",
       description:
-        "Convert any HEX color code to RGB, RGBA, HSL, HSLA and CMYK with Toollyz HEX to RGB Converter. Live preview, alpha support and per-channel breakdown — 100% in your browser.",
+        "Convert any HEX color code to RGB, RGBA, HSL, HSLA and CMYK with Toollyz HEX to RGB Converter. Live preview, alpha support and per-channel breakdown — 100%…",
       what:
         "A HEX to RGB Converter turns the hexadecimal color code you find in CSS, design tools and brand guidelines into the RGB triplets and other formats your code can compute with. Toollyz HEX to RGB Converter accepts 3, 4, 6 or 8-digit HEX (with or without the leading #) and instantly shows the parsed RGB and alpha channels, a large color preview, plus every common output format: RGB, RGBA, HSL, HSLA, CMYK and a ready-to-paste CSS custom property. A color picker lets you sample any color visually, and a per-channel breakdown shows R, G, B and alpha as both numbers and proportional bars. Everything is parsed in your browser; nothing is uploaded.",
       how: [
@@ -5980,7 +5980,7 @@ export const tools: Tool[] = [
     seo: {
       title: "RGB to HEX Converter — RGBA, HSL & CMYK with Live Preview",
       description:
-        "Convert RGB or RGBA values to HEX (and HSL, CMYK) with Toollyz RGB to HEX Converter. Live preview, channel sliders, a color picker and copy-ready outputs — 100% in your browser.",
+        "Convert RGB or RGBA values to HEX (and HSL, CMYK) with Toollyz RGB to HEX Converter. Live preview, channel sliders, a color picker and copy-ready outputs —…",
       what:
         "An RGB to HEX Converter takes the RGB triplets used in code or design tools and produces the HEX code most commonly used in CSS and brand guidelines. Toollyz RGB to HEX Converter accepts a wide range of inputs — `rgb(99, 102, 241)`, `rgba(99, 102, 241, 0.5)`, plain `99, 102, 241`, space-separated `99 102 241`, or percentage values — and instantly shows the matching HEX with alpha (where applicable), along with HSL, HSLA, CMYK and a Tailwind-friendly arbitrary-value snippet. A live preview adjusts the background and chooses readable text automatically, and four channel sliders let you fine-tune R, G, B and alpha visually. Everything happens in your browser; nothing is uploaded.",
       how: [
@@ -6078,7 +6078,7 @@ export const tools: Tool[] = [
     seo: {
       title: "JPG to PNG Converter — Batch, Lossless, In Your Browser",
       description:
-        "Convert JPG to lossless PNG with Toollyz JPG to PNG Converter. Drag-drop batch conversion, per-file size comparison and one-click download — entirely in your browser, no uploads.",
+        "Convert JPG to lossless PNG with Toollyz JPG to PNG Converter. Drag-drop batch conversion, per-file size comparison and one-click download — entirely…",
       what:
         "A JPG to PNG Converter takes JPEG photos and re-encodes them as PNG — a lossless format that supports transparency and crisp edges. Toollyz JPG to PNG Converter runs entirely in your browser: drop one or many JPGs onto the page (up to 30 at a time) and each is decoded with the browser's native image pipeline, drawn to a canvas and exported as a PNG Blob. You can compare each file's original JPG size and new PNG size, download any single result, or grab everything at once. Because PNG is lossless and JPG is compressed, the PNG output is often larger than the input — that's expected and the price of editability, transparency and a clean alpha channel. No file ever leaves your browser.",
       how: [
@@ -6176,7 +6176,7 @@ export const tools: Tool[] = [
     seo: {
       title: "PNG to WebP Converter — Batch with Quality Control",
       description:
-        "Convert PNG (or JPG) to modern WebP with Toollyz PNG to WebP Converter. Quality slider, drag-drop batch, live size savings and one-click download — entirely in your browser.",
+        "Convert PNG (or JPG) to modern WebP with Toollyz PNG to WebP Converter. Quality slider, drag-drop batch, live size savings and one-click download —…",
       what:
         "A PNG to WebP Converter re-encodes images into WebP — a modern format that produces dramatically smaller files than PNG at similar (or better) visual quality, supports transparency and is widely supported by browsers. Toollyz PNG to WebP Converter runs entirely in your browser: drop PNG or JPG files (up to 30 at a time), pick a quality from 20–100% with the slider, and each image is decoded with the browser's native pipeline, drawn to a canvas and exported as a WebP Blob. You'll see the original PNG size, the new WebP size and the percentage saved, and you can re-encode the whole queue with a new quality setting in one click. No file is ever uploaded.",
       how: [
@@ -6274,7 +6274,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Currency Converter — Live Rates for 160+ Currencies (Free)",
       description:
-        "Convert any amount between 160+ world currencies with live mid-market rates from Open Exchange Rates and the European Central Bank. Multi-currency snapshot, saved conversions, smart caching — entirely in your browser.",
+        "Convert any amount between 160+ world currencies with live mid-market rates from Open Exchange Rates and the European Central Bank.",
       what:
         "A Currency Converter takes an amount in one currency (the base) and returns the equivalent in another using a current exchange rate. Toollyz Currency Converter fetches live mid-market rates directly from your browser using a chain of free public providers: open.er-api.com (160+ currencies) with a fallback to api.frankfurter.app (the European Central Bank reference rates for 30 majors). Rates are cached in localStorage for 30 minutes per base currency so re-conversions are instant, with a Refresh button to force a fresh fetch. The hero animates between values, the result panel shows the unit rate (1 USD = X EUR) and the rate's age and provider, a Quick to row jumps between popular currencies, a multi-currency snapshot converts your amount into 9 popular currencies at once, and you can save individual conversions to a history list. Toollyz has no server — your browser talks directly to the providers, nothing passes through us.",
       how: [
@@ -6374,7 +6374,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Meta Tag Generator — Open Graph, Twitter & SEO Tags Online",
       description:
-        "Build SEO-friendly meta tags with Toollyz Meta Tag Generator. Live Google, Facebook and Twitter previews, Open Graph & Twitter Card support, SEO checklist and one-click copy — entirely in your browser.",
+        "Build SEO-friendly meta tags with Toollyz Meta Tag Generator. Live Google, Facebook and Twitter previews, Open Graph & Twitter Card support, SEO checklist…",
       what:
         "A Meta Tag Generator builds the contents of your HTML `<head>` from a structured form: page title, meta description, Open Graph tags (og:title, og:description, og:image, og:url, og:type, og:locale, og:site_name), Twitter Card tags (twitter:card, twitter:site, twitter:creator, twitter:title, twitter:description, twitter:image), canonical link, robots directive, theme color, charset, viewport and favicon. Toollyz Meta Tag Generator updates the output in real time, shows accurate Google SERP, Facebook/LinkedIn and Twitter/X preview cards as you type, and runs lightweight SEO checks — title/description length, missing og:image, malformed URLs, @-prefixed Twitter handles — to produce a 0–100 score. Copy the snippet straight into your page, download it as `head.html`, or refine it until every issue is gone. Nothing leaves your browser; your draft is saved locally so a refresh never wipes your work.",
       how: [
@@ -6470,9 +6470,9 @@ export const tools: Tool[] = [
       "robots tester",
     ],
     seo: {
-      title: "Robots.txt Generator — Visual Rules, AI-Bot Presets, Live Tester",
+      title: "Robots.txt Generator — Visual Rules, AI-Bot Presets, Live",
       description:
-        "Generate a complete robots.txt with Toollyz Robots.txt Generator. Visual rule blocks, presets for WordPress, Next.js and blocking AI crawlers (GPTBot, ClaudeBot, Google-Extended), sitemap support and a live path tester — entirely in your browser.",
+        "Generate a complete robots.txt with Toollyz Robots.txt Generator. Visual rule blocks, presets for WordPress, Next.js and blocking AI crawlers (GPTBot…",
       what:
         "A robots.txt Generator is a tool that builds a /robots.txt file from a structured editor instead of hand-edited text. Toollyz Robots.txt Generator models your file as a list of rule blocks — each with one or more User-agent lines, Allow/Disallow paths and an optional Crawl-delay — plus a flat list of Sitemap URLs at the bottom. It ships with one-click presets (Allow everything, Disallow everything, WordPress, Next.js App Router, Shopify, generic e-commerce, and a Block all AI crawlers preset that adds GPTBot, ChatGPT-User, OAI-SearchBot, anthropic-ai, ClaudeBot, Google-Extended, PerplexityBot, CCBot, Bytespider and more) and an integrated path tester that uses Google's longest-match rule to tell you exactly which Allow or Disallow line decides a given URL for a given agent. The output is rendered in real time, validated for common mistakes (paths that don't start with /, sitemap URLs that aren't absolute) and ready to copy or download as robots.txt — generated entirely in your browser.",
       how: [
@@ -6570,7 +6570,7 @@ export const tools: Tool[] = [
     seo: {
       title: "URL Shortener — Free Short Links via TinyURL & is.gd",
       description:
-        "Shorten any URL with Toollyz URL Shortener. Optional custom alias, smart fallback between TinyURL and is.gd, copy-savings stats and local history — entirely in your browser, no signup, no tracking.",
+        "Shorten any URL with Toollyz URL Shortener. Optional custom alias, smart fallback between TinyURL and is.gd, copy-savings stats and local history —…",
       what:
         "A URL shortener takes a long URL and gives you a much shorter one that redirects to it — ideal for tweets, slides, signage, QR codes and SMS. Toollyz is a static site with no backend of its own, so the actual short link is minted by public providers your browser talks to directly: TinyURL (tinyurl.com/api-create.php) and is.gd (is.gd/create.php). Pick one explicitly or use Auto mode, which tries TinyURL first and falls back to is.gd. Both providers support an optional custom alias (3–30 characters, letters/numbers/hyphen/underscore) — the form validates the alias locally before the request and shows the provider's error if the alias is already taken. Each result shows the original URL, the short URL, characters saved and the provider host. Recent links are kept in localStorage so you can re-copy them, but they're never uploaded to Toollyz. Toollyz has no server in the chain.",
       how: [
@@ -6668,7 +6668,7 @@ export const tools: Tool[] = [
     seo: {
       title: "UTM Link Generator — Free Campaign URL Builder with Presets",
       description:
-        "Build UTM-tagged URLs for Google Analytics and GA4 with Toollyz UTM Link Generator. 16 platform presets, live validation, save-to-history and direct shorten-link handoff — entirely in your browser.",
+        "Build UTM-tagged URLs for Google Analytics and GA4 with Toollyz UTM Link Generator. 16 platform presets, live validation, save-to-history and direct…",
       what:
         "A UTM Link Generator builds the campaign-tracked URLs marketers paste into ads, emails, QR codes, podcast show notes and partner links. The five (now six in GA4) `utm_*` query parameters — `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content` and `utm_id` — tell analytics tools where a click came from so the resulting session is grouped under the right campaign. Toollyz UTM Link Generator merges those parameters onto your base URL with full WHATWG `URL` percent-encoding (so existing query strings and hash fragments are preserved), supports 16 one-click platform presets that pre-fill the canonical source + medium (google/cpc, facebook/cpc, instagram/cpc, linkedin/cpc, x/cpc, tiktok/cpc, youtube/cpc, reddit/cpc, newsletter/email, lifecycle/email, blog/referral, pr/referral, qr/offline, podcast/audio, partner/affiliate and Google organic), runs a live validation checklist (missing required params, unsafe characters, suspiciously long campaign names) and offers two normalization toggles for consistency: lowercase parameter values and convert spaces to underscores. Save useful URLs to a 30-entry localStorage history, copy with one click, or hand the result off to the Toollyz URL Shortener for a clean, shareable short link. Nothing is uploaded; the form is saved to localStorage so a refresh never wipes your draft.",
       how: [
@@ -6766,7 +6766,7 @@ export const tools: Tool[] = [
     seo: {
       title: "WHOIS Domain Lookup — Modern RDAP Lookup (Free, In Browser)",
       description:
-        "Check who owns any domain, when it expires and where it's hosted. Toollyz WHOIS Domain Lookup uses RDAP — the modern standard that replaces WHOIS — fetched directly from the IANA bootstrap and the registry, with no Toollyz server in the chain.",
+        "Check who owns any domain, when it expires and where it's hosted. Toollyz WHOIS Domain Lookup uses RDAP — the modern standard that replaces WHOIS — fetched…",
       what:
         "WHOIS is the traditional plain-text protocol (port 43) that lets you ask a domain registry who owns a given domain, when it was registered, when it expires and which nameservers it uses. Browsers can't speak port 43, so the IETF standardized RDAP (Registration Data Access Protocol) — the modern HTTP+JSON replacement for WHOIS that the major registries (Verisign, Identity Digital, Nominet, Public Interest Registry, etc.) all run today. Toollyz WHOIS Domain Lookup makes RDAP usable from a static website: your browser first fetches the IANA RDAP bootstrap file (a small JSON index of which RDAP server handles each TLD, cached locally for 24 hours), then sends your query directly to the correct registry server. The structured response is parsed into a tidy view — domain age, expiration countdown (red when under 30 days), registrar, registrant, admin/tech/abuse contacts (where disclosed), the full status list, DNSSEC delegation state and every nameserver with its IPv4/IPv6 glue. Some ccTLDs (.de, .fr, .uk, .ru) still rely on traditional WHOIS or block cross-origin browser requests; those failures surface with a clear, honest message. Toollyz never sees your query.",
       how: [
@@ -6866,7 +6866,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Color Picker — 9 Formats, WCAG Contrast & Harmonies (Free)",
       description:
-        "Pick any color and convert it to HEX, RGB, RGBA, HSL, HSLA, HSV, HWB, OKLCH or CMYK. Live WCAG contrast checker, tints / shades / complementary harmonies, EyeDropper, favorites and recent history — entirely in your browser.",
+        "Pick any color and convert it to HEX, RGB, RGBA, HSL, HSLA, HSV, HWB, OKLCH or CMYK. Live WCAG contrast checker, tints / shades / complementary harmonies…",
       what:
         "A color picker lets you pick or type a color and read it back in every format your design system needs. Toollyz Color Picker outputs nine formats in real time — HEX, RGB, RGBA, HSL, HSLA, HSV, HWB, OKLCH and CMYK — and gives you a native browser color input, draggable HSL and RGB sliders, an alpha slider, a one-click random color, ten preset palette swatches, and the modern Chromium EyeDropper API (where available) to pick any color from anywhere on your screen. A live WCAG contrast section compares your color against a compare color (white, black, Toollyz dark or any custom HEX) and grades the ratio against AA Large / AA Normal / AAA Normal thresholds with foreground-on-background and background-on-foreground preview swatches. A harmonies panel auto-generates three tints, three shades, the complementary, two triadic and two analogous companions — click any chip to make it the new active color. Favorites and 18-item recent history persist in localStorage. Nothing leaves your browser.",
       how: [
@@ -6964,7 +6964,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Image Compressor — Batch Compress JPG / PNG / WebP (Free)",
       description:
-        "Compress JPG, PNG and WebP images in your browser with Toollyz Image Compressor. Quality slider, optional max-dimension resize, batch of 30 and a per-file before/after view — everything runs locally, nothing is uploaded.",
+        "Compress JPG, PNG and WebP images in your browser with Toollyz Image Compressor. Quality slider, optional max-dimension resize, batch of 30 and a per-file…",
       what:
         "An Image Compressor takes a photo or graphic and re-encodes it at a lower file size by lowering quality (lossy) and/or downscaling its dimensions. Toollyz Image Compressor uses your browser's native image decoder + canvas re-encode (the same path the Toollyz JPG-to-PNG and PNG-to-WebP converters use), so no file ever leaves your device and there's no install or signup. Drop up to 30 JPG, PNG or WebP files; pick a target format (Auto keeps the source format, or force JPEG / WebP / PNG); slide the quality from 20% to 100% (ignored for PNG output, which is lossless); optionally set a maximum longest-edge dimension to downscale huge originals before re-encoding. Each file shows the original size, the compressed size, the delta with a green badge for smaller / amber for larger, the output dimensions and the chosen format. Total stats (files compressed, KB saved, percent saved) live in the hero. Re-compress all instantly with new settings — original files are kept until you clear the queue. EXIF and other metadata are dropped during the canvas pass, which is a privacy win when sharing photos.",
       how: [
@@ -7062,7 +7062,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Image Resizer — Pixel / Percent + 16 Social Presets (Free)",
       description:
-        "Resize JPG, PNG and WebP images to exact pixel dimensions or by percentage. 16 social-media presets, three fit modes, aspect-ratio lock and batch of 30 — Toollyz runs everything in your browser, nothing is uploaded.",
+        "Resize JPG, PNG and WebP images to exact pixel dimensions or by percentage. 16 social-media presets, three fit modes, aspect-ratio lock and batch of 30 —…",
       what:
         "An Image Resizer takes a source image and produces a new one at the dimensions you specify. Toollyz Image Resizer uses your browser's native decoder + a 2D canvas to resize JPG, PNG and WebP images locally — no upload, no signup. Switch between Pixels mode (set exact W × H, with an optional aspect-ratio lock keyed off the first dropped image) and Percent mode (scale every image to a percentage of its own original size, always preserving aspect). Pick one of 16 built-in social and video presets — Instagram square / portrait / story / landscape, Facebook post and cover, X/Twitter post and header, LinkedIn post and cover, YouTube thumbnail and channel art, TikTok video, 720p, 1080p and 4K. Choose a fit mode: Contain letterboxes the image with a configurable background color (or transparency for PNG/WebP); Cover crops to fill; Stretch ignores aspect ratio. Pick an output format (Auto keeps the source format, or force JPEG / PNG / WebP) and a quality from 30–100% (ignored for PNG since PNG is lossless). Batch up to 30 files, see per-file before/after with new dimensions and size delta, then download each individually or all at once. EXIF and other metadata are dropped during the canvas pass — a privacy bonus when sharing online.",
       how: [
@@ -7160,7 +7160,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Gradient Generator — Linear, Radial & Conic CSS Gradients",
       description:
-        "Design CSS gradients with Toollyz Gradient Generator. Draggable color stops, linear/radial/conic types, 16 presets, random generator, repeating mode, SVG export and four copy-ready CSS formats — entirely in your browser.",
+        "Design CSS gradients with Toollyz Gradient Generator. Draggable color stops, linear/radial/conic types, 16 presets, random generator, repeating mode, SVG…",
       what:
         "A CSS gradient is a smooth blend between two or more colors used as a `background-image` (or any property that accepts an image). CSS Color Level 4 standardizes three gradient functions — `linear-gradient` (angled or directional), `radial-gradient` (elliptical or circular halo) and `conic-gradient` (rotated like a pie chart) — plus their `repeating-*` variants. Toollyz Gradient Generator gives you a draggable color-stops editor (click the bar to add a stop, drag to move, arrow-key to nudge, Delete to remove), 16 curated presets (Dawn, Ocean, Forest, Sunset, Aurora, Plum, Graphite, Nordic, Citrus, Rose, two radial designs and two conic designs), a Random generator that picks pleasant HSL hues, type-specific controls (angle for linear; shape and center for radial; from-angle and center for conic), a Repeating toggle for stripe patterns, four copy-ready outputs (the function call, the `background-image:` declaration, the full shorthand with a fallback color, and a Tailwind-arbitrary class) and SVG export for linear and radial gradients (with a note that conic isn't yet in the SVG spec). Your last gradient and the 12 most recent edits persist in localStorage. Toollyz has no backend — every preview is just CSS.",
       how: [
@@ -7256,9 +7256,9 @@ export const tools: Tool[] = [
       "instagram meme",
     ],
     seo: {
-      title: "Meme Generator — Upload, Caption & Download (Free, No Watermark)",
+      title: "Meme Generator — Upload, Caption & Download",
       description:
-        "Make image-macro memes in your browser. Upload your own image (or pick a blank template), add top/bottom/middle text with full font, color and stroke control, then download as a PNG — no signup, no watermark, fully private.",
+        "Make image-macro memes in your browser. Upload your own image (or pick a blank template), add top/bottom/middle text with full font, color and stroke…",
       what:
         "A meme generator turns an image plus a caption into the classic image-macro everybody knows from social media. Toollyz Meme Generator runs entirely in your browser using an HTML canvas: upload a JPG, PNG or WebP image (or pick one of six blank coloured backgrounds for testing), add one or more text layers anchored to the top, middle or bottom, control every layer's text, font (Impact, Arial Black, Helvetica, Comic Sans MS, Georgia or Courier — all system fonts), font size, fill color, stroke color and stroke width, with an optional UPPERCASE toggle for the classic Impact style. Long captions wrap automatically inside the canvas padding. Render at a canvas width from 480 to 2048 pixels, then download a transparent-background-friendly PNG with no watermark, no signup and no uploads. Toollyz doesn't bundle copyrighted meme templates — upload your own image for the real thing — but the blank templates make it easy to test the engine, build mock layouts or design original macros.",
       how: [
@@ -7354,9 +7354,9 @@ export const tools: Tool[] = [
       "browser signature",
     ],
     seo: {
-      title: "Signature Generator — Draw or Type Your Signature (Free, PNG)",
+      title: "Signature Generator — Draw or Type Your Signature",
       description:
-        "Create a digital signature in your browser with Toollyz Signature Generator. Draw with mouse/trackpad/finger or type your name in a cursive font, customize pen color and width, then download a transparent PNG — entirely private.",
+        "Create a digital signature in your browser with Toollyz Signature Generator. Draw with mouse/trackpad/finger or type your name in a cursive font, customize…",
       what:
         "A digital-signature generator is the easiest way to produce a transparent PNG of your signature to drop into PDFs, Word documents, emails, contracts or signup forms. Toollyz Signature Generator runs entirely in your browser using a 2D canvas: in Draw mode you sign with your mouse, trackpad or finger using Pointer Events (so it works the same on desktop, phone and Wacom tablets), with full pen-color and width control, a smoothed line (quadratic-curve interpolation between captured points, with round line cap and join), Undo / Redo and a Clear button. In Type mode you type your name in one of six system cursive fonts (Brush Script, Lucida Handwriting, Snell Roundhand, Bradley Hand, Comic Sans or generic `cursive`), with font size, fill color, letter spacing and an italic toggle. Both modes export a transparent PNG that's automatically trimmed (with a 16-pixel padding) for a clean placement in your document. Settings persist in localStorage; nothing is uploaded.",
       how: [
@@ -7456,7 +7456,7 @@ export const tools: Tool[] = [
     seo: {
       title: "PDF Merger — Combine PDFs in Your Browser (Free, No Upload)",
       description:
-        "Merge up to 30 PDFs into a single file with Toollyz PDF Merger. Re-order files, preserve fonts and images, one-click download — entirely in your browser, no upload, no signup.",
+        "Merge up to 30 PDFs into a single file with Toollyz PDF Merger. Re-order files, preserve fonts and images, one-click download — entirely in your browser…",
       what:
         "A PDF Merger combines multiple PDF files into one. Toollyz PDF Merger runs the merge inside your browser using the open-source pdf-lib library — your files are read with FileReader, parsed in-memory, every page is copied (preserving fonts, embedded images, vector graphics and layout) into a fresh PDF, and the result is downloaded as a single file. Nothing is uploaded to Toollyz or any other server; we don't have one. You can queue up to 30 PDFs at a time, see the page count and size of each, re-order them with Up/Down buttons before merging, and remove any single file from the queue. The merged file is named `toollyz-merged.pdf` and includes every page from every input in the order shown. Toollyz reads encrypted PDFs with `ignoreEncryption: true` for metadata, but heavily-protected PDFs may still refuse to merge — that's a property of those specific files, not the merger.",
       how: [
@@ -7552,9 +7552,9 @@ export const tools: Tool[] = [
       "pdf extractor",
     ],
     seo: {
-      title: "PDF Splitter — Extract Pages or Split by Ranges (Free, No Upload)",
+      title: "PDF Splitter — Extract Pages or Split by Ranges",
       description:
-        "Split a PDF into page ranges (1-3, 5, 8-10) or into single pages with Toollyz PDF Splitter. Range parser with live validation, per-output download — entirely in your browser, no upload, no signup.",
+        "Split a PDF into page ranges (1-3, 5, 8-10) or into single pages with Toollyz PDF Splitter. Range parser with live validation, per-output download —…",
       what:
         "A PDF Splitter takes one PDF and produces multiple smaller PDFs, each containing the pages you ask for. Toollyz PDF Splitter runs the split inside your browser using the open-source pdf-lib library: drop a PDF, the page count is detected automatically, then choose between By ranges (type an expression like `1-3, 5, 8-10` — each comma-separated chunk produces one output PDF) or Every page (split into N single-page PDFs, one per page). The range parser validates as you type and reports per-chunk errors (\"exceeds 12 pages\", \"reverses start/end\"). Each output is named `<source>_pX-Y.pdf` so the order in the destination folder matches the source. You can save outputs one at a time or use Download all for batch saves staggered 120 ms apart so the browser doesn't block them. Nothing is uploaded — Toollyz has no server.",
       how: [
@@ -7652,7 +7652,7 @@ export const tools: Tool[] = [
     seo: {
       title: "PDF to Image Converter — PDF → PNG / JPG at 1×–4× DPI (Free)",
       description:
-        "Convert PDF pages to PNG or JPEG with Toollyz PDF to Image Converter. Choose page ranges, scale (1×–4× DPI), JPEG quality and background — rendered by Mozilla's PDF.js entirely in your browser.",
+        "Convert PDF pages to PNG or JPEG with Toollyz PDF to Image Converter. Choose page ranges, scale (1×–4× DPI), JPEG quality and background — rendered…",
       what:
         "A PDF to Image Converter takes a PDF and renders each page as a raster image (PNG or JPEG). Toollyz PDF to Image Converter uses Mozilla's PDF.js library — the same engine Firefox uses to render PDFs — running entirely in your browser. Drop a PDF, the page count is detected, then pick a range (`1-3, 5, 8-10`) or All pages, a format (PNG keeps transparency; JPEG flattens onto a configurable background colour with a quality slider) and a scale from 0.5× to 4× (1× = 72 DPI, 2× = 144 DPI for screens, 3× = 216 DPI for print, 4× = 288 DPI for high-density work). Each page is rasterised on a 2D canvas at the chosen scale and exported with the browser's native PNG / JPEG encoder. The PDF.js worker is served as a static asset from `/pdfjs/pdf.worker.min.mjs` — Toollyz has no server in the path.",
       how: [
@@ -7748,9 +7748,9 @@ export const tools: Tool[] = [
       "a4 image pdf",
     ],
     seo: {
-      title: "Image to PDF Converter — JPG/PNG/WebP → 1 PDF (Free, No Upload)",
+      title: "Image to PDF Converter — JPG/PNG/WebP → 1 PDF",
       description:
-        "Combine JPG, PNG and WebP images into a single PDF with Toollyz Image to PDF Converter. A4 / A3 / Letter / custom / auto page sizes, Fit / Fill / Stretch layout, margin and background controls — entirely in your browser.",
+        "Combine JPG, PNG and WebP images into a single PDF with Toollyz Image to PDF Converter. A4 / A3 / Letter / custom / auto page sizes, Fit / Fill / Stretch…",
       what:
         "An Image to PDF Converter takes a list of images and produces a single PDF, one image per page. Toollyz Image to PDF Converter runs the build inside your browser using the open-source pdf-lib library: drop up to 30 JPG, PNG or WebP files, re-order them with Up/Down buttons, then pick a page size (A4 595×842 pt, A3 842×1191 pt, US Letter 612×792 pt, US Legal 612×1008 pt, a custom W×H in PDF points, or Auto which matches each image's pixel dimensions), orientation (portrait/landscape, not used in Auto), Fit mode (Fit preserves aspect with letterbox, Fill preserves aspect inside the usable area, Stretch ignores aspect), margin (0–120 pt) and page background colour. JPGs and PNGs are embedded natively; WebP is re-encoded to PNG via a canvas first because the PDF spec doesn't carry WebP. The PDF is built locally and downloaded on click — Toollyz has no server in the path.",
       how: [
@@ -7846,9 +7846,9 @@ export const tools: Tool[] = [
       "screenshot caption pdf",
     ],
     seo: {
-      title: "Screenshot to PDF — Bug Reports & Walkthroughs (Free, Captions)",
+      title: "Screenshot to PDF — Bug Reports & Walkthroughs",
       description:
-        "Combine PNG/JPG/WebP screenshots into a single PDF with Toollyz Screenshot to PDF. Cover title/subtitle/date, per-page captions, page numbers — entirely in your browser, no upload.",
+        "Combine PNG/JPG/WebP screenshots into a single PDF with Toollyz Screenshot to PDF. Cover title/subtitle/date, per-page captions, page numbers — entirely…",
       what:
         "A screenshot-to-PDF tool stitches multiple screenshots into one shareable PDF — the easiest way to ship a bug report, design walkthrough or step-by-step guide. Toollyz Screenshot to PDF runs everything in your browser using the open-source pdf-lib library. Drop up to 30 PNG, JPG or WebP screenshots; each becomes a page sized exactly to the image (pixels are treated as PDF points so there's zero scaling). Add a 2-line caption under each screenshot — it word-wraps to the page width — and a footer page number (\"Page n / N\") that includes the optional cover page in the count. The cover page can have a title (Helvetica Bold 32pt), subtitle (16pt) and today's date (11pt). Configure the page background colour, text colour and outer margin. WebP screenshots are transparently re-encoded to PNG since the PDF spec doesn't carry WebP. The final PDF downloads with whatever filename you set; nothing is uploaded.",
       how: [
@@ -7946,7 +7946,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Resume PDF Generator — Free Print-Ready CV (No Signup)",
       description:
-        "Build a clean, print-ready resume PDF with Toollyz Resume PDF Generator. Two layouts (Classic / Modern), three standard PDF fonts, theme colour and structured sections for experience, education, skills, projects, languages and certifications — entirely in your browser.",
+        "Build a clean, print-ready resume PDF with Toollyz Resume PDF Generator. Two layouts (Classic / Modern), three standard PDF fonts, theme colour…",
       what:
         "A resume PDF generator turns a structured form into a polished, print-ready CV. Toollyz Resume PDF Generator runs everything inside your browser using the open-source pdf-lib library: it lays out a single-column A4 portrait page (with automatic overflow onto extra pages) using the standard 14 PDF fonts so there are no font-embedding licensing concerns. The form covers every section a recruiter looks for: a header with name, title, email, phone, location and three optional links (Website, LinkedIn, GitHub); a free-form Summary; a list of Experience entries (role, company, location, start/end and a multi-line bullet block); Education entries (school, degree, location, start/end, details); Skills as a comma-, pipe- or newline-separated list rendered with middle-dot separators; Projects (name, link, description); Languages (name and CEFR level / native / fluent); and Certifications (name, issuer, date). Pick the Classic template (centred header, full-width sections with a fine rule under each heading) or Modern (left-aligned header with a 80 × 2.4 pt coloured accent rule); pick Helvetica, Times Roman or Courier; pick a theme colour. Empty sections hide themselves automatically so a minimal resume stays minimal.",
       how: [
@@ -8042,9 +8042,9 @@ export const tools: Tool[] = [
       "invoice with tax discount",
     ],
     seo: {
-      title: "Invoice Generator — Free PDF Invoices With Logo, Tax & Discount",
+      title: "Invoice Generator — Free PDF Invoices With Logo, Tax",
       description:
-        "Build a clean PDF invoice with Toollyz Invoice Generator. Line items, tax, discount, 20 ISO 4217 currencies, your logo and a theme colour — drawn entirely in your browser, no signup, no upload.",
+        "Build a clean PDF invoice with Toollyz Invoice Generator. Line items, tax, discount, 20 ISO 4217 currencies, your logo and a theme colour — drawn entirely…",
       what:
         "An Invoice Generator turns a structured form (sender, recipient, line items, totals) into a polished, print-ready invoice PDF. Toollyz Invoice Generator builds the PDF inside your browser using the open-source pdf-lib library. The form has every field a freelancer or small business needs: From and Bill-to addresses (name + email + freeform multi-line address), invoice number, issue date and due date, currency (20 popular ISO 4217 codes — USD, EUR, GBP, JPY, INR, AUD, CAD, CHF, CNY, BRL, SGD, HKD, NZD, KRW, MXN, SEK, NOK, DKK, PLN, AED), tax percentage and a flat discount amount in the chosen currency, free-form Notes and Payment terms text, plus a theme colour that paints the accent bar and total, and an optional logo (PNG or JPG up to 1.5 MB) that's drawn in the top-right corner. The PDF is A4 portrait with Helvetica + Helvetica Bold (the 14 standard PDF fonts, so there are no font-embedding licensing concerns) and line items overflow to additional pages automatically. Currency formatting uses your browser's `Intl.NumberFormat` — symbols, separators and decimal places follow your locale.",
       how: [
@@ -8144,7 +8144,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Unix Timestamp Converter — Epoch ↔ ISO / UTC / Local (Free)",
       description:
-        "Convert Unix timestamps to ISO 8601, UTC, local time, RFC 2822 and 16 popular timezones with Toollyz Unix Timestamp Converter. Live clock, auto seconds/ms detection — runs entirely in your browser.",
+        "Convert Unix timestamps to ISO 8601, UTC, local time, RFC 2822 and 16 popular timezones with Toollyz Unix Timestamp Converter. Live clock, auto seconds/ms…",
       what:
         "A Unix Timestamp Converter turns the number of seconds (or milliseconds) since the Unix epoch (1 Jan 1970 UTC) into a human-readable date — and back. Toollyz Unix Timestamp Converter shows a live ticking clock with the current epoch in both seconds and milliseconds plus the ISO 8601 and UTC strings, then lets you paste any timestamp (seconds, milliseconds or a relaxed ISO/RFC date string) and see it expressed in twelve formats at once: epoch seconds, epoch milliseconds, ISO 8601, UTC (`Date.toUTCString`), local long, local short, UTC readable, RFC 2822, date-only, time-only, weekday + month + day-of-year + ISO week, and a relative phrase (`in 3 minutes`, `2 hours ago`) computed by `Intl.RelativeTimeFormat`. Switch to the Timezones tab to see the same moment in sixteen popular zones (UTC, America/Los_Angeles, America/New_York, Europe/London, Europe/Berlin, Asia/Dubai, Asia/Kolkata, Asia/Tokyo, Australia/Sydney and more) — every formatter respects your browser's built-in IANA tz database, so leap-seconds and DST transitions match the OS. Every value has a one-click copy button. Auto-detect treats 10-digit and shorter integers as seconds and 13-digit positive integers as milliseconds.",
       how: [
@@ -8242,7 +8242,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Typing Speed Test — Live WPM, Accuracy & Errors (Free)",
       description:
-        "Measure your WPM, raw WPM and accuracy with Toollyz Typing Speed Test. Live char-by-char highlighting, six built-in passages, paste-your-own and a 30-run history with per-duration best scores — entirely in your browser.",
+        "Measure your WPM, raw WPM and accuracy with Toollyz Typing Speed Test. Live char-by-char highlighting, six built-in passages, paste-your-own and a 30-run…",
       what:
         "A typing speed test measures how fast and accurately you can type a known passage. Toollyz Typing Speed Test runs entirely in your browser: pick a duration (15, 30, 60 or 120 seconds), pick a passage (Pangram Drills, Alice in Wonderland excerpt, Moby-Dick opening, a TypeScript code snippet, digits of π or a Common-English-words drill) or paste your own paragraph, and start typing. The text renders character by character — correct keystrokes turn emerald, mistakes are highlighted in rose and the current target glows with a primary underline. WPM is calculated as the standard 5-character word convention (correct chars ÷ 5 ÷ minutes elapsed), Raw WPM ignores errors and Accuracy is correct ÷ total typed. The test ends when the timer hits zero or you reach the end of the passage, whichever comes first. The 30 most recent runs save to localStorage, with per-duration best scores surfaced in the controls. Toollyz has no backend — every keystroke stays on your device.",
       how: [
@@ -8338,9 +8338,9 @@ export const tools: Tool[] = [
       "cps measurement",
     ],
     seo: {
-      title: "CPS Test — Free Clicks Per Second Test (1 / 5 / 10 / 30 / 60 s)",
+      title: "CPS Test — Free Clicks Per Second Test",
       description:
-        "Measure your clicks per second with Toollyz CPS Test. Five duration windows, live CPS as you click, best score per duration surfaced in the hero and a 30-run history — entirely in your browser.",
+        "Measure your clicks per second with Toollyz CPS Test. Five duration windows, live CPS as you click, best score per duration surfaced in the hero and…",
       what:
         "A CPS test measures how many times you can click a target in a fixed time window. Toollyz CPS Test runs entirely in your browser using a `requestAnimationFrame` countdown that starts the moment you click the big target button. Pick a window (1, 5, 10, 30 or 60 seconds), click as fast as you can and watch the live count, live CPS (events ÷ seconds elapsed) and time remaining update in real time. When the timer hits zero the final CPS is recorded in a 30-run history alongside its duration and timestamp; the best CPS for the current duration surfaces in the hero so you always know what to beat. Each click on the target button dispatches a single `click` event — autoclickers obviously work but that's between you and the rules of whatever game or benchmark you're warming up for. Toollyz has no backend, so every click stays on your device.",
       how: [
@@ -8436,9 +8436,9 @@ export const tools: Tool[] = [
       "click during drag",
     ],
     seo: {
-      title: "Drag Click Test — Honest Browser Drag-Click Approximation (Free)",
+      title: "Drag Click Test — Honest Browser Drag-Click Approximation",
       description:
-        "Count rapid clicks while moving the cursor with Toollyz Drag Click Test. Five duration windows, live CPS, a stationary-click rejection counter and a 30-run history — entirely in your browser.",
+        "Count rapid clicks while moving the cursor with Toollyz Drag Click Test. Five duration windows, live CPS, a stationary-click rejection counter and a 30-run…",
       what:
         "Drag clicking in games like Minecraft uses friction between your finger and a specific mouse-button shape to produce dozens of clicks per drag — it's a hardware technique that can't be replicated 1-to-1 in a browser. Toollyz Drag Click Test is an honest approximation: it counts every pointer-down event that arrives while the cursor is in motion (defined as ≥ 4 px of cumulative movement in the last 220 ms) and rejects clicks that arrive while the cursor is stationary. Pick a duration (1, 5, 10, 30 or 60 seconds), click and drag on the target — the first pointer-down arms the test, subsequent ones contribute to the count if you're moving, otherwise they land in the rejected counter. Live CPS, time remaining, the best score for the chosen duration and a 30-run history all surface in the UI. Toollyz is up-front that this is not a hardware drag-click detector; it's the closest the browser can get with Pointer Events.",
       how: [
@@ -8534,9 +8534,9 @@ export const tools: Tool[] = [
       "spacebar 10 seconds",
     ],
     seo: {
-      title: "Spacebar Counter — Free Space-Press Test (Auto-Repeats Ignored)",
+      title: "Spacebar Counter — Free Space-Press Test",
       description:
-        "Count Space presses in 1 / 5 / 10 / 30 / 60-second windows with Toollyz Spacebar Counter. OS auto-repeats are detected and skipped, live presses-per-second updates each frame, 30-run history — entirely in your browser.",
+        "Count Space presses in 1 / 5 / 10 / 30 / 60-second windows with Toollyz Spacebar Counter. OS auto-repeats are detected and skipped, live presses-per-second…",
       what:
         "A spacebar counter measures how many times you can press the Space bar in a fixed time window. Toollyz Spacebar Counter runs entirely in your browser using `keydown` listeners on the window. Pick a duration (1, 5, 10, 30 or 60 seconds), click the focusable pad to capture keyboard focus, then start pressing Space — the first press arms the timer and subsequent presses contribute to the count. Crucially, the counter checks `event.repeat` on every keydown so that OS-level auto-repeats (which fire when you hold a key down) don't pollute the score; rejected auto-repeats are surfaced in a small counter beside the main stats so you know exactly what's happening. Live presses-per-second, time remaining and the best score for the chosen duration update each frame; the 30 most recent runs save to localStorage. Toollyz has no backend — every press stays on your device.",
       how: [
@@ -8634,7 +8634,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Reaction Time Test — Free Visual Reflex Test in Milliseconds",
       description:
-        "Measure your reaction time with Toollyz Reaction Time Test. Random delay, early-click detection, latest / best / 5-trial average / median stats and a 30-run history with categorical labels — entirely in your browser.",
+        "Measure your reaction time with Toollyz Reaction Time Test. Random delay, early-click detection, latest / best / 5-trial average / median stats and…",
       what:
         "A reaction time test measures how fast you can respond to a visual signal. Toollyz Reaction Time Test runs entirely in your browser: click the big pad to arm, the background turns amber while the test waits a random 1.5–5 seconds, then it snaps to emerald with a giant \"CLICK!\" prompt. The moment you click, the elapsed time from the green flash is recorded using `performance.now()` (sub-millisecond resolution per your browser). Early clicks during the amber wait are detected and shown as \"Too soon!\" so anticipation can't game the score. The hero surfaces four live stats — latest, best ever, average of the last 5 runs and median across all runs — and each result earns a categorical label (Lightning &lt; 180 ms, Excellent &lt; 220 ms, Quick &lt; 280 ms, Average &lt; 340 ms, Slow &lt; 420 ms, Sluggish above that). The 30 most recent runs save to localStorage so you can track improvement over time. Toollyz has no backend — every measurement stays on your device.",
       how: [
@@ -8732,7 +8732,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Stopwatch — Precise Online Lap Timer With CSV Export (Free)",
       description:
-        "Online stopwatch with sub-millisecond accuracy via performance.now(). Up to 200 laps with split times, fastest / slowest highlighted, CSV export and keyboard shortcuts (Space / L / R) — entirely in your browser.",
+        "Online stopwatch with sub-millisecond accuracy via performance.now(). Up to 200 laps with split times, fastest / slowest highlighted, CSV export…",
       what:
         "A stopwatch measures elapsed time from a start command. Toollyz Stopwatch runs entirely in your browser, using `performance.now()` for sub-millisecond resolution and `requestAnimationFrame` to repaint the display at your monitor's refresh rate. Press Start to begin, Stop to pause, Resume to continue, Lap to capture a split and Reset to clear. Each lap stores both its split (since the previous lap) and its elapsed time from start; up to 200 laps are kept. The summary panel surfaces the fastest and slowest splits with subtle background tints and the corresponding rows are highlighted in the list. Keyboard shortcuts give you Space (start/stop), L (lap) and R (reset). Copy the lap list to your clipboard as TSV or export to CSV for a spreadsheet. Laps and the paused elapsed time persist in localStorage between visits so a refresh doesn't lose your data. Toollyz has no backend — the stopwatch runs entirely on your device.",
       how: [
@@ -8828,9 +8828,9 @@ export const tools: Tool[] = [
       "alarm clock custom days",
     ],
     seo: {
-      title: "Alarm Clock — Free Browser Alarms With Snooze & Notifications",
+      title: "Alarm Clock — Free Browser Alarms With Snooze",
       description:
-        "Set one or many alarms with Toollyz Alarm Clock. Labels, repeat schedules, four WebAudio tones, 5 / 10-minute snooze and optional desktop notifications — entirely in your browser, no signup, no upload.",
+        "Set one or many alarms with Toollyz Alarm Clock. Labels, repeat schedules, four WebAudio tones, 5 / 10-minute snooze and optional desktop notifications —…",
       what:
         "An online alarm clock fires a tone (and optionally a desktop notification) at a chosen time. Toollyz Alarm Clock runs entirely in your browser using a 1 Hz tick that checks every alarm against the current time. Set as many alarms as you need; each has a 24-hour HH:MM time, a label, an enabled toggle, a repeat schedule (Once, Every day, Weekdays, Weekends or Custom with a per-day bitmask) and a tone — Bell (warm decay), Chime (three-note ascending C-E-G), Beep (two-tone alarm) or Buzz (low pulse) — all synthesised live with WebAudio so there are no audio files and no licensing concerns. When an alarm fires you can snooze for 5 or 10 minutes (creates a one-off alarm in the future) or stop it. Granting browser notification permission lets the alarm pop up an OS notification when it rings — useful for muted tabs. Crucially, browsers can't fire alarms when the page is closed, so Toollyz is honest about this in the UI: keep the tab open. The Toollyz Alarm Clock has no backend; alarms save to localStorage on this device only.",
       how: [
@@ -8928,7 +8928,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Pomodoro Timer — Focus With 25 / 5 / 15-Minute Cycles (Free)",
       description:
-        "Run Pomodoro cycles in your browser with Toollyz Pomodoro Timer. Customisable durations, auto-advance, WebAudio chime, optional desktop notifications and today&apos;s session tally — entirely in your browser, no signup.",
+        "Run Pomodoro cycles in your browser with Toollyz Pomodoro Timer. Customisable durations, auto-advance, WebAudio chime, optional desktop notifications…",
       what:
         "The Pomodoro Technique (Francesco Cirillo, 1980s) breaks focused work into 25-minute \"pomodoros\" separated by 5-minute breaks, with a longer 15-minute break every four pomodoros. Toollyz Pomodoro Timer runs the cycle entirely in your browser. A big circular progress ring shows the current phase (Focus = emerald, Short break = sky, Long break = indigo) with a giant MM:SS countdown beside today&apos;s focus-session count and total focus minutes. Every duration is customisable (focus 1–120 min, short break 1–120 min, long break 1–120 min, long-break interval 2–12 sessions); turn off auto-advance if you want to manually start each phase. When a phase completes the timer can play a WebAudio chime (synthesised live, no audio files) and pop up a desktop notification via the standard `Notification` API. Today&apos;s history shows every completed session with its duration; the tally resets at midnight. Toollyz has no backend — settings and today&apos;s log save to localStorage on this device only.",
       how: [
@@ -9024,9 +9024,9 @@ export const tools: Tool[] = [
       "anniversary calculator",
     ],
     seo: {
-      title: "Age Difference Calculator — Exact Years / Months / Days (Free)",
+      title: "Age Difference Calculator — Exact Years / Months / Days",
       description:
-        "Calculate the precise difference between two dates with Toollyz Age Difference Calculator. Calendar-correct breakdown, totals in every unit, live mode and next-anniversary helper — entirely in your browser.",
+        "Calculate the precise difference between two dates with Toollyz Age Difference Calculator. Calendar-correct breakdown, totals in every unit, live mode…",
       what:
         "An age-difference calculator returns the exact gap between two moments in time. Toollyz Age Difference Calculator runs the math entirely in your browser using calendar-correct subtraction — the same convention Day.js&apos;s `.diff` uses, where 30 Jan + 1 month = 28 Feb in a non-leap year. Two `datetime-local` inputs accept the from and to dates down to the minute, and the result is shown two ways: as a six-part breakdown (years, months, days, hours, minutes, seconds) in the hero, and as totals in eight units (decimal years using the Gregorian mean of 365.2425 days/year, months, weeks, days, hours, minutes, seconds and milliseconds). Live mode updates the `To` field once per second so a birthday counter ticks up in real time. The Next Anniversary helper computes the upcoming celebration with Feb-29 handling — in non-leap years the anniversary falls on Feb 28 of that year and snaps back to Feb 29 the following leap year. The current pair persists in localStorage; Toollyz has no backend.",
       how: [
@@ -9122,9 +9122,9 @@ export const tools: Tool[] = [
       "custom weekend calculator",
     ],
     seo: {
-      title: "Business Days Calculator — With Custom Weekends & Holidays (Free)",
+      title: "Business Days Calculator — With Custom Weekends & Holidays",
       description:
-        "Count business days between two dates with Toollyz Business Days Calculator. Custom weekend rules, an arbitrary holiday list (with comments), per-weekday breakdown and an Add-business-days mode — entirely in your browser.",
+        "Count business days between two dates with Toollyz Business Days Calculator. Custom weekend rules, an arbitrary holiday list (with comments), per-weekday…",
       what:
         "A business-days calculator counts the working days between two dates and adds working days to a start date. Toollyz Business Days Calculator runs entirely in your browser. Both modes share the same weekend and holiday config: by default Saturday + Sunday are weekends and the holidays list ships with a tiny example (you can paste any number of ISO-format dates with optional `# label` comments). The Count mode shows calendar days, business days, weekend days and excluded holidays in the hero, plus a per-weekday breakdown panel that highlights the configured weekend columns in amber. The Add mode takes a start date and a positive or negative count and lands on the next non-weekend, non-holiday day in that direction. Reverse the dates — the count comes out the same. Toollyz has no backend; the dates, weekend rules and holiday list save to localStorage on this device only.",
       how: [
@@ -9220,9 +9220,9 @@ export const tools: Tool[] = [
       "browser leap year checker",
     ],
     seo: {
-      title: "Leap Year Checker — Gregorian Rule, Range List & Feb 29 Helper",
+      title: "Leap Year Checker — Gregorian Rule, Range List & Feb 29",
       description:
-        "Check any year for leap status with Toollyz Leap Year Checker. Big YES/NO answer, step-by-step Gregorian rule, previous and next 10 leap years, range list and a Feb 29 birthday counter — entirely in your browser.",
+        "Check any year for leap status with Toollyz Leap Year Checker. Big YES/NO answer, step-by-step Gregorian rule, previous and next 10 leap years, range list…",
       what:
         "A leap year has 366 days instead of 365 — February gets a 29th day to keep the calendar synced with Earth&apos;s orbit. The Gregorian rule (since 1582) is: divisible by 4, unless divisible by 100, except when also divisible by 400. Toollyz Leap Year Checker takes a year and shows a big YES/NO answer plus the three-step rule resolved for that year (Is it divisible by 4? By 100? By 400?). It also lists the previous 10 and next 10 leap years (click any to jump to it), the leap years in a custom range and a Feb 29 birthday helper that tells you how many \"real\" Feb 29 birthdays a person has had between two years. Notable century years are flagged in the notes: 1600 and 2000 were leap years (also divisible by 400); 1700, 1800 and 1900 were not. Toollyz has no backend — every check runs in your browser.",
       how: [
@@ -9320,7 +9320,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Sunrise & Sunset Time — NOAA Solar Position For Any City",
       description:
-        "Find sunrise, sunset, solar noon, day length and civil / nautical / astronomical twilights with Toollyz Sunrise & Sunset Time. Browser-side NOAA Solar Position Algorithm; Open-Meteo geocoder for city search — no Toollyz server in the path.",
+        "Find sunrise, sunset, solar noon, day length and civil / nautical / astronomical twilights with Toollyz Sunrise & Sunset Time. Browser-side NOAA Solar…",
       what:
         "A sunrise/sunset calculator finds when the sun rises, when it sets, when it&apos;s at its highest point and the durations of the three twilight bands for a given (latitude, longitude, date). Toollyz Sunrise & Sunset Time implements NOAA&apos;s Solar Position Algorithm directly in the browser — the same equations used by gml.noaa.gov/grad/solcalc — so the solar math is offline and entirely client-side. Pick a location by searching a city (we call the open-source Open-Meteo geocoder directly from your browser, no Toollyz server in the path) or by typing latitude and longitude. The hero shows sunrise, solar noon and sunset in the location&apos;s timezone with the UTC time underneath, plus the day length in `Xh Ym Zs`. The twilight panel lists civil (sun 6° below the horizon — \"streetlights start\"), nautical (12° — \"horizon barely visible\") and astronomical (18° — \"true astronomical darkness\") dawns and dusks. At high latitudes the algorithm detects polar day and polar night and surfaces a banner explaining why some events are blank. Refraction is included via the official 90.833° zenith — results are accurate to ±1 minute for typical latitudes.",
       how: [
@@ -9416,9 +9416,9 @@ export const tools: Tool[] = [
       "iana timezones",
     ],
     seo: {
-      title: "World Clock — Live Multi-City Clock With Day/Night Badge (Free)",
+      title: "World Clock — Live Multi-City Clock With Day/Night Badge",
       description:
-        "Track time across multiple cities with Toollyz World Clock. Live tick, IANA timezones, day/night badge via the NOAA solar algorithm, Open-Meteo city search, 12 / 24-hour and show-seconds toggles — entirely in your browser.",
+        "Track time across multiple cities with Toollyz World Clock. Live tick, IANA timezones, day/night badge via the NOAA solar algorithm, Open-Meteo city…",
       what:
         "A world clock keeps the current time across multiple cities visible at a glance. Toollyz World Clock ships with 8 default cities (New York, London, Berlin, Dubai, Mumbai, Singapore, Tokyo, Sydney) and lets you add as many more as you want via the open-source Open-Meteo geocoder — your browser hits the geocoder directly, Toollyz has no server in the path. Each city card shows the live time formatted in the city&apos;s IANA timezone (`Intl.DateTimeFormat` uses your browser&apos;s tz database so DST transitions match the OS), the local date and the UTC offset (computed from the actual `formatToParts` output so daylight-saving offsets are correct), plus a day / night badge calculated by running the NOAA Solar Position Algorithm on the city&apos;s coordinates — the card background gradients from amber for daytime cities to indigo for night-time ones. The top hero shows your own location with a Use my location button. Toggle 12 / 24-hour formatting and whether to show seconds (when seconds are off the clock ticks once every 30 seconds to save CPU). Re-order cards with Up / Down buttons. Settings save to localStorage on this device only.",
       how: [
@@ -9516,7 +9516,7 @@ export const tools: Tool[] = [
     seo: {
       title: "EMI Calculator — Monthly Loan EMI + Full Amortisation (Free)",
       description:
-        "Calculate your monthly loan EMI with Toollyz EMI Calculator. Live principal/interest split, full amortisation schedule, CSV export and 23 currencies — entirely in your browser.",
+        "Calculate your monthly loan EMI with Toollyz EMI Calculator. Live principal/interest split, full amortisation schedule, CSV export and 23 currencies —…",
       what:
         "An EMI (Equated Monthly Instalment) calculator works out the fixed monthly payment that pays off a loan in a chosen number of months at a chosen annual interest rate. Toollyz EMI Calculator implements the standard formula P × r × (1+r)ⁿ / ((1+r)ⁿ − 1) — where P is the principal, r is the monthly interest rate and n is the total number of months — entirely in your browser. The hero surfaces the monthly EMI, total interest, total payable and tenure in months alongside a principal-vs-interest split bar. Inputs include sliders + numeric inputs for principal, annual interest rate (0–20%) and tenure (1–30 years), plus a 23-currency selector that drives `Intl.NumberFormat`. The amortisation panel shows opening balance, EMI, principal portion, interest portion and closing balance for every month — by default the first 12 rows; expand to see all. Download the full schedule as CSV with one click. Toollyz has no backend; your draft saves to localStorage.",
       how: [
@@ -9614,7 +9614,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Loan Calculator — Compare 4 Scenarios Side-by-Side (Free)",
       description:
-        "Compare up to 4 loan scenarios with Toollyz Loan Calculator. Monthly / biweekly / weekly payments, per-period prepayment and total interest in one view — entirely in your browser.",
+        "Compare up to 4 loan scenarios with Toollyz Loan Calculator. Monthly / biweekly / weekly payments, per-period prepayment and total interest in one view —…",
       what:
         "A loan calculator works out the periodic payment, total interest and total cost for a borrow. Toollyz Loan Calculator goes further and runs up to four scenarios side-by-side, so you can see whether a 15-year fixed beats a 30-year fixed, or whether biweekly payments + a small extra-per-period prepayment beat the standard monthly schedule. The math is the standard amortising formula P × r × (1+r)ⁿ / ((1+r)ⁿ − 1) with r equal to the annual rate divided by periods-per-year (12 for monthly, 26 for biweekly, 52 for weekly). Per-period prepayment is modelled by simulating the schedule — the calculator counts how many fewer months it takes to pay off the loan when you add extra to every period. The card with the lowest total interest gets a green \"Lowest interest\" badge; the rest are easy to compare. Currency formatting uses `Intl.NumberFormat` across 23 ISO 4217 codes. Toollyz has no backend — scenarios save to localStorage on this device only.",
       how: [
@@ -9712,7 +9712,7 @@ export const tools: Tool[] = [
     seo: {
       title: "GST / VAT Calculator — Add or Remove Tax, 18 Region Presets",
       description:
-        "Add or remove GST, VAT or sales tax from any amount with Toollyz GST / VAT Calculator. 18 region presets, 23 currencies, instant mode switching — entirely in your browser.",
+        "Add or remove GST, VAT or sales tax from any amount with Toollyz GST / VAT Calculator. 18 region presets, 23 currencies, instant mode switching — entirely…",
       what:
         "A GST / VAT calculator adds a percentage tax to a net amount (gross = net × (1 + r)) or reverses the operation to back-calculate the pre-tax value from a gross price (net = gross ÷ (1 + r)). Toollyz GST / VAT Calculator does both in one tabbed UI and ships with 18 region presets — UK (20% / 5% reduced), Germany (19%), France (20%), Italy (22%), Spain (21%), India GST at 5 / 12 / 18 / 28%, Australia GST 10%, New Zealand GST 15%, Canada federal GST 5%, Canada Ontario HST 13%, Canada Quebec QST + GST 14.975%, Singapore GST 9%, South Africa VAT 15% and Japan consumption tax 10%. Pick a preset and both the tax rate and the display currency snap to that country&apos;s convention; tweak either freely afterwards. The hero shows net (pre-tax), tax amount and gross (incl. tax) in three live cards with the gross / net cells emphasised based on the active mode. A Switch-mode button flips the calculator and carries the result across so you can verify both directions of the math. Toollyz has no backend; the last amount, rate, region and currency save to localStorage on this device only.",
       how: [
@@ -9810,7 +9810,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Tip Calculator — Tip, Bill Split & Rounding (Free, Private)",
       description:
-        "Tip and split a restaurant bill with Toollyz Tip Calculator. 9 tip-percentage chips, n-way bill split, 5 rounding modes and 23 currencies — entirely in your browser.",
+        "Tip and split a restaurant bill with Toollyz Tip Calculator. 9 tip-percentage chips, n-way bill split, 5 rounding modes and 23 currencies — entirely…",
       what:
         "A tip calculator works out a gratuity by percentage and (optionally) splits the total evenly between diners. Toollyz Tip Calculator runs entirely in your browser. The hero shows four live cards — bill, tip, total and per-person — that update as you change inputs. Sliders and quick-pick chips cover the most common tip rates (0%, 5%, 10%, 15%, 18%, 20%, 22%, 25%, 30%); the slider goes up to 40% for generous tips. Bill split is a numeric input with +/− buttons (1–100 people). The rounding panel offers Off, Nearest 1, Nearest 5, Nearest 10 and Round-up — when rounding is on, the displayed Tip absorbs the rounding (so the rounded total is exactly Bill + Tip rather than Tip + Bill plus an awkward few cents). 23 ISO 4217 currencies are formatted with `Intl.NumberFormat`. The notes panel includes region-specific tipping advice (US, Europe, Asia) — useful when travelling. Toollyz has no backend; the last bill, tip percentage and split persist in localStorage on this device only.",
       how: [
@@ -9908,7 +9908,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Fuel Cost Calculator — Trip Fuel & Cost in Any Unit (Free)",
       description:
-        "Estimate fuel cost from distance, efficiency and price with Toollyz Fuel Cost Calculator. Supports km/L, L/100km, mpg (US), mpg (UK), kilometres / miles, litres / US gallons / UK gallons and 23 currencies — entirely in your browser.",
+        "Estimate fuel cost from distance, efficiency and price with Toollyz Fuel Cost Calculator. Supports km/L, L/100km, mpg (US), mpg (UK), kilometres / miles…",
       what:
         "A fuel cost calculator works out how much fuel a trip consumes and how much that fuel costs. Toollyz Fuel Cost Calculator handles every common unit combination: distance in kilometres or miles, fuel efficiency in km/L, L/100km, mpg (US) or mpg (UK), and fuel price per litre, per US gallon or per UK gallon. Internally everything is normalised to litres per kilometre using exact conversion constants (1 mi = 1.609344 km, 1 US gallon = 3.785411784 L, 1 UK gallon = 4.54609 L), so a US driver entering 30 mpg and \"per US gallon\" gets the same fuel-use rate as a European entering the equivalent L/100 km figure. The hero shows fuel per trip, cost per trip, weekly cost and monthly cost; the conversions panel below shows your efficiency expressed in all four units at once. A round-trip checkbox doubles the distance; a trips-per-week input drives the periodic totals (monthly = weekly × 52 ÷ 12, yearly = weekly × 52). Currency formatting via `Intl.NumberFormat` across 23 ISO 4217 codes. Toollyz has no backend.",
       how: [
@@ -10004,9 +10004,9 @@ export const tools: Tool[] = [
       "bmi categories",
     ],
     seo: {
-      title: "BMI Calculator — WHO Categories, Ideal Weight, Honest Caveats",
+      title: "BMI Calculator — WHO Categories, Ideal Weight, Honest",
       description:
-        "Calculate Body Mass Index with Toollyz BMI Calculator. Metric (kg/cm) or imperial (lb/ft+in), WHO categories on a colour scale, ideal-weight range, BMI prime and ponderal index — entirely in your browser, with honest caveats about what BMI isn&apos;t.",
+        "Calculate Body Mass Index with Toollyz BMI Calculator. Metric (kg/cm) or imperial (lb/ft+in), WHO categories on a colour scale, ideal-weight range, BMI…",
       what:
         "Body Mass Index (BMI) is weight ÷ height squared — a quick proxy for whether an adult&apos;s body weight is in the WHO healthy range. Toollyz BMI Calculator implements the standard formula BMI = kg ÷ m² entirely in your browser and supports both metric (kg + cm) and imperial (lb + ft + in) inputs. Imperial values are converted with the exact constants 1 lb = 0.45359237 kg and 1 in = 0.0254 m. The hero shows your BMI in big animated digits and a category chip (Severe / Moderate / Mild thinness, Healthy range, Overweight, Obese class I/II/III) coloured to match the WHO scale, plus a banded progress bar from 12 to 40+ with a marker for your position. Three secondary stats are computed: your ideal-weight range (BMI 18.5–24.9 × height² — expressed in your chosen unit), BMI prime (BMI ÷ 25 — 1.0 is the upper end of healthy) and ponderal index (weight ÷ height³ — less sensitive to height than BMI). The Caveats panel is unusually prominent: BMI is a population statistic, not a diagnostic; it doesn&apos;t measure body fat, muscle mass or fat distribution; athletes often land &quot;overweight&quot; despite low body fat; pregnant people, growing children and adolescents need specialised charts. Toollyz has no backend; inputs save to localStorage on this device only.",
       how: [
@@ -10102,9 +10102,9 @@ export const tools: Tool[] = [
       "free tdee calculator",
     ],
     seo: {
-      title: "Calorie Calculator — BMR + TDEE + Macros (Mifflin–St Jeor, Free)",
+      title: "Calorie Calculator — BMR + TDEE + Macros",
       description:
-        "Estimate daily calories with Toollyz Calorie Calculator. Mifflin–St Jeor BMR, five activity multipliers, six cut/bulk goals and a suggested protein / fat / carb split — entirely in your browser. Not medical advice.",
+        "Estimate daily calories with Toollyz Calorie Calculator. Mifflin–St Jeor BMR, five activity multipliers, six cut/bulk goals and a suggested protein / fat…",
       what:
         "A calorie calculator estimates how many kilocalories you burn in a day and how much to eat for a goal — maintenance, weight loss or weight gain. Toollyz Calorie Calculator uses the Mifflin–St Jeor equation (1990) — the Academy of Nutrition and Dietetics&apos;s preferred BMR formula for healthy adults: BMR = 10×weight(kg) + 6.25×height(cm) − 5×age + 5 (male) or − 161 (female). Multiply by an activity factor (1.20 sedentary, 1.375 light, 1.55 moderate, 1.725 very active, 1.90 extra active) to get TDEE, then apply a goal delta (Aggressive cut −750, Standard cut −500, Mild cut −250, Maintain ±0, Mild bulk +250, Standard bulk +500 kcal/day) to get the target intake. The component supports both metric (kg + cm) and imperial (lb + ft + in) with exact unit conversions (1 lb = 0.45359237 kg, 1 in = 0.0254 m). A live macro panel suggests 1.8 g protein per kg of body weight, 25% of calories from fat and the rest from carbs. The expected weekly weight change uses 7,700 kcal per kg of body fat. The Not Medical Advice panel is prominently displayed: Mifflin–St Jeor estimates a population average with ±10–15% individual variation; the 7,700 kcal/kg rule ignores water, glycogen and lean tissue; pregnant, nursing, ill or athlete users should talk to a clinician. Toollyz has no backend; inputs save to localStorage.",
       how: [
@@ -10200,9 +10200,9 @@ export const tools: Tool[] = [
       "fluid intake calculator",
     ],
     seo: {
-      title: "Water Intake Calculator — Daily Hydration Target & Schedule (Free)",
+      title: "Water Intake Calculator — Daily Hydration Target & Schedule",
       description:
-        "Estimate daily water intake with Toollyz Water Intake Calculator. Body weight × 30 ml/kg, plus exercise / climate / pregnancy adjustments. Output in ml, fl oz, glasses, bottles and a sip-by-sip schedule — entirely in your browser, with honest caveats.",
+        "Estimate daily water intake with Toollyz Water Intake Calculator. Body weight × 30 ml/kg, plus exercise / climate / pregnancy adjustments.",
       what:
         "A water-intake calculator estimates how much water you should drink each day based on body weight and lifestyle. Toollyz Water Intake Calculator runs entirely in your browser. The baseline is 30 ml per kilogram of body weight — a common evidence-based rule of thumb for healthy adults that lines up well with the Institute of Medicine&apos;s adequate-intake values (2.7 L women, 3.7 L men) for an average-weight person. On top of the baseline it adds +350 ml for every 30 minutes of exercise, +500 ml in hot weather (+1 L in very hot / desert climates), +300 ml during pregnancy and +700 ml when breastfeeding. Output is shown in millilitres, fluid ounces (US), 500 ml bottles and the user-configurable glass size (default 250 ml), with a per-hour rate derived from the user&apos;s awake hours and a visual schedule. The breakdown panel shows where the litres come from as colour-coded segments. The Honest Caveats panel is prominent: individual needs vary widely; food provides ~20% of daily water; chugging far above your need can cause hyponatraemia. Toollyz has no backend; inputs save to localStorage on this device only.",
       how: [
@@ -10298,9 +10298,9 @@ export const tools: Tool[] = [
       "letter overlap love",
     ],
     seo: {
-      title: "Love Compatibility Calculator — Playful FLAMES + Letter Score",
+      title: "Love Compatibility Calculator — Playful FLAMES + Letter",
       description:
-        "Type two names, see a playful 0–100% love-compatibility score plus the classic FLAMES verdict. Deterministic blend of letter overlap, vowel harmony, length harmony and a name-based hash — explicitly for fun.",
+        "Type two names, see a playful 0–100% love-compatibility score plus the classic FLAMES verdict. Deterministic blend of letter overlap, vowel harmony, length…",
       what:
         "A love-compatibility calculator turns two names into a playful percentage. Toollyz Love Compatibility Calculator is openly entertainment-only — it blends four deterministic factors into a single 0–100% score: letter overlap (Jaccard similarity of the two normalised name letter sets), vowel harmony (similarity of vowel counts), length harmony (how close the two names are in length) and a &quot;cosmic vibe&quot; FNV-1a hash of the sorted name pair that adds quirky variation. The same names always produce the same result. On top of the percentage it runs the classic FLAMES schoolyard game (F-riends, L-overs, A-ffectionate, M-arriage, E-nemies, S-iblings) — cancel repeated letters between the two names and cycle the remaining count through the six categories. The hero shows the percentage plus a verdict band (Friend zone → Soulmate vibes) and FLAMES category; the breakdown panel shows each factor as a 0–100 bar with the shared letters listed. The Caveats panel is unusually prominent: this is **not** a real measure of compatibility — real relationships are built on values, communication, respect and effort. Toollyz has no backend; the two names save to localStorage on this device only.",
       how: [
@@ -10396,9 +10396,9 @@ export const tools: Tool[] = [
       "lunisolar zodiac",
     ],
     seo: {
-      title: "Zodiac Sign Finder — Western Sun Sign + Chinese Animal (Free)",
+      title: "Zodiac Sign Finder — Western Sun Sign + Chinese Animal",
       description:
-        "Enter your birth date and Toollyz Zodiac Sign Finder returns your Western (tropical) sun sign and your Chinese (lunisolar) zodiac animal with element, polarity, traits and compatible signs. Chinese New Year lookup covers 1900–2050.",
+        "Enter your birth date and Toollyz Zodiac Sign Finder returns your Western (tropical) sun sign and your Chinese (lunisolar) zodiac animal with element…",
       what:
         "A zodiac sign finder converts a birth date to its Western (tropical) sun sign and its Chinese (lunisolar) animal. Toollyz Zodiac Sign Finder ships both engines offline in your browser. The Western engine matches the date against the standard 12 sun-sign ranges (Capricorn wraps Dec 22 → Jan 19) and returns name, glyph, element (Fire / Earth / Air / Water), modality (Cardinal / Fixed / Mutable), ruling planet, four trait words and three popularly-compatible signs. The Chinese engine respects the actual lunisolar boundary — a real Chinese zodiac year starts on Chinese New Year, not Gregorian Jan 1 — so Toollyz ships a lookup table of CNY dates for 1900–2050 and uses the previous year&apos;s animal for dates before that year&apos;s CNY. Animal is computed from (year − 4) mod 12; the element comes from the sexagenary cycle (year mod 10 maps to Wood / Fire / Earth / Metal / Water, two consecutive years per element); polarity (Yang / Yin) from year mod 2. Output includes the animal glyph, the polarity-element pair, traits and compatible animals — and surfaces the actual CNY date used. The Caveats panel is prominently honest: astrology is a cultural tradition, not a predictive science, and &quot;compatible signs&quot; aren&apos;t relationship advice. Toollyz has no backend; the birth date saves to localStorage on this device only.",
       how: [
@@ -10500,9 +10500,9 @@ export const tools: Tool[] = [
       "crypto random passphrase",
     ],
     seo: {
-      title: "Random Password Phrase Generator — XKCD / Diceware-Style (Free)",
+      title: "Random Password Phrase Generator — XKCD / Diceware-Style",
       description:
-        "Generate strong, memorable passphrases with Toollyz Random Password Phrase Generator. 1646-word English list, crypto.getRandomValues, live entropy meter, configurable word count, separator, case style, digits and symbols — entirely in your browser.",
+        "Generate strong, memorable passphrases with Toollyz Random Password Phrase Generator. 1646-word English list, crypto.getRandomValues, live entropy meter…",
       what:
         "A passphrase generator builds passwords from a string of random words instead of random characters. They&apos;re easier to type, easier to remember and — when long enough — stronger than dense gibberish like &quot;Tr0ub4dor&3&quot;. Toollyz Random Password Phrase Generator implements the classic XKCD 936 / Diceware pattern using a curated 1646-word English list (4–8 letter words, no apostrophes or hyphens) with ~10.7 bits of entropy per word. Word selection uses `crypto.getRandomValues` — the same CSPRNG browsers use for HTTPS key generation — with rejection sampling so every word is exactly equally likely (no modulo bias). Configure the word count (2–12), separator (hyphen / period / underscore / space / none), case style (lowercase / Title Case / UPPER CASE / camelCase), optional 0–4 appended digits and an optional appended symbol from a copy-safe set (`!@#$%&*?+-=`). The hero shows the current phrase with a colour-coded entropy band (Weak &lt; 40 bits / Fair &lt; 60 / Strong &lt; 80 / Excellent ≥ 80). Re-roll generates a fresh phrase; the last 12 are kept in localStorage. Toollyz has no backend.",
       how: [
@@ -10598,9 +10598,9 @@ export const tools: Tool[] = [
       "company email signature",
     ],
     seo: {
-      title: "Email Signature Generator — Gmail / Outlook-Friendly HTML (Free)",
+      title: "Email Signature Generator — Gmail / Outlook-Friendly HTML",
       description:
-        "Build a clean table-based HTML email signature with Toollyz Email Signature Generator. Photo, social icons, brand colour, disclaimer — copy as rich or as HTML source. Optimised for Gmail, Outlook and Apple Mail.",
+        "Build a clean table-based HTML email signature with Toollyz Email Signature Generator. Photo, social icons, brand colour, disclaimer — copy as rich or as…",
       what:
         "An email-signature generator turns a structured form into the HTML block that appears under every email you send. Toollyz Email Signature Generator outputs **table-based HTML with fully inline styles** — the only layout strategy that survives Outlook&apos;s Word-based renderer intact. Configure four tabs: Identity (name, pronouns, job title, company, photo URL with optional round/square crop), Contact (email, phone, website, address), Social (LinkedIn, X/Twitter, GitHub, Instagram, YouTube — only the ones you fill render), and Style (brand colour for the accent rule and links, optional disclaimer). The hero shows a true live preview rendered with `dangerouslySetInnerHTML` on a white background so you see exactly what the recipient will see. Two copy actions: **Copy rich** uses the Clipboard API&apos;s `ClipboardItem` to put both `text/html` and `text/plain` on your clipboard — paste straight into Gmail&apos;s or Outlook web&apos;s signature editor and the formatting survives. **Copy HTML source** gives the raw string for email clients that need a hand-edited template. Inline SVG social icons mean no external image dependency for the icons themselves (the photo still needs a public URL). Toollyz has no backend; your details save to localStorage on this device only.",
       how: [
@@ -10696,9 +10696,9 @@ export const tools: Tool[] = [
       "ephemeral password",
     ],
     seo: {
-      title: "Disposable Password Generator — Fresh, Copy, Auto-Clear (Free)",
+      title: "Disposable Password Generator — Fresh, Copy, Auto-Clear",
       description:
-        "Generate single-use passwords with Toollyz Disposable Password Generator. crypto.getRandomValues + rejection sampling, auto-clear from screen 5–300s after copy, honest framing — Toollyz has no backend so no server-side expiring link.",
+        "Generate single-use passwords with Toollyz Disposable Password Generator. crypto.getRandomValues + rejection sampling, auto-clear from screen 5–300s after…",
       what:
         "A disposable password generator produces a fresh, single-use credential each time you ask. Toollyz Disposable Password Generator runs entirely in your browser using `crypto.getRandomValues` — the same cryptographically secure PRNG that backs HTTPS in your browser — with rejection sampling so every character is exactly equally likely. The hero shows the latest password in monospace with a Show/Hide toggle; click Copy and a countdown starts — the password is **cleared from the screen** between 5 and 300 seconds later (configurable). Each Generate next pushes a fresh password to the top and keeps the previous 7 in a recent list, also subject to the auto-clear timer. **Honest framing**: Toollyz is a static site with no backend, so there&apos;s no server-side expiring link. &quot;Disposable&quot; here means *generate fresh, copy once, clear from screen quickly* — for real shared self-destructing secrets across people or devices, use a hosted service like 1Password Items Sharing, Bitwarden Send, OneTimeSecret or PrivateBin. The settings panel covers length (8–64), character classes (uppercase / lowercase / digits / symbols), Avoid confusables (Il1O0 stripped from the alphabet) and Group-with-dashes for readability. Settings save to localStorage; passwords never persist anywhere.",
       how: [
@@ -10794,9 +10794,9 @@ export const tools: Tool[] = [
       "favicon 512",
     ],
     seo: {
-      title: "Favicon Generator from Text — PNG + ICO + HTML Snippet (Free)",
+      title: "Favicon Generator from Text — PNG + ICO + HTML Snippet",
       description:
-        "Generate a clean favicon set from a letter, emoji or short word with Toollyz Favicon Generator. Auto-fit text, three shapes, 9 PNG sizes plus a hand-rolled Windows .ico and a paste-ready &lt;head&gt; snippet — entirely in your browser.",
+        "Generate a clean favicon set from a letter, emoji or short word with Toollyz Favicon Generator. Auto-fit text, three shapes, 9 PNG sizes plus a hand-rolled…",
       what:
         "A favicon generator turns a short string (letter, digits or emoji) into the icon set every modern website needs. Toollyz Favicon Generator from Text renders onto a 512×512 canvas with three shape options (square / rounded square with a 22% corner radius / circle), configurable background colour, text colour, font (System UI / Inter / Georgia / Courier / Comic Sans), bold and italic toggles, and an auto-fit text engine that starts at 64% of the canvas size and shrinks by 15% per step until the text fits within 86% of the canvas width. The live preview row shows the result at 16, 32, 48, 64 and 180 pixels simultaneously so you can see exactly how it&apos;ll look in a browser tab vs an Apple touch icon. Export options: a quick-pick row downloads any of nine PNG sizes (16, 32, 48, 64, 128, 180, 192, 256, 512), &quot;All PNG sizes&quot; saves the whole set, and **Download favicon.ico** assembles a real Windows .ico file with embedded PNG payloads at 16, 32 and 48 (Vista+ format — much smaller than legacy BMP icons). The HTML snippet section copies a paste-ready `&lt;head&gt;` block with the standard link tags, the apple-touch-icon, theme-color and apple-mobile-web-app-title using your chosen site name. Toollyz has no backend.",
       how: [
@@ -10892,9 +10892,9 @@ export const tools: Tool[] = [
       "cisco dot mac format",
     ],
     seo: {
-      title: "MAC Address Generator — Random or 12 Vendor OUIs (Free, Bulk)",
+      title: "MAC Address Generator — Random or 12 Vendor OUIs",
       description:
-        "Generate up to 500 valid MAC addresses with Toollyz MAC Address Generator. crypto.getRandomValues, proper locally-administered + unicast bits, 12 vendor OUI presets, four formats — entirely in your browser.",
+        "Generate up to 500 valid MAC addresses with Toollyz MAC Address Generator. crypto.getRandomValues, proper locally-administered + unicast bits, 12 vendor…",
       what:
         "A MAC (Media Access Control) address generator produces 6-byte hardware identifiers — the unique number every Ethernet, Wi-Fi or Bluetooth interface carries. Toollyz MAC Address Generator runs entirely in your browser using `crypto.getRandomValues`. **Random mode** sets the high two bits of the first byte correctly: the I/G bit (bit 0) is cleared so the address is unicast, and the U/L bit (bit 1) is set so the address is locally administered — meaning it&apos;s guaranteed not to clash with any IEEE-assigned OUI in the wild. **Vendor OUI mode** keeps a real-world 3-byte OUI prefix (Apple, Cisco, Intel, Dell, HP, Lenovo, Samsung, Microsoft, VMware, Google, Raspberry Pi or Amazon — 12 options) and randomises only the last 3 bytes (16.7M combinations per OUI). Output supports four formats: colon (`AA:BB:CC:DD:EE:FF`), dash (`AA-BB-CC-DD-EE-FF`), Cisco dot (`AABB.CCDD.EEFF` — the format Cisco IOS shows in `show interface`) and plain (`AABBCCDDEEFF`). Toggle between UPPER and lowercase. Generate 1–500 at a time, copy individuals or the whole batch, or download as a .txt file. Toollyz has no backend.",
       how: [
@@ -10990,9 +10990,9 @@ export const tools: Tool[] = [
       "rfc 2426",
     ],
     seo: {
-      title: "VCard Generator — RFC 2426 vCard 3.0 + QR Scan (Free, Private)",
+      title: "VCard Generator — RFC 2426 vCard 3.0 + QR Scan",
       description:
-        "Build a compliant vCard 3.0 file with Toollyz VCard Generator. Multiple phones, emails, websites and addresses, photo URL, birthday, notes — download the .vcf or scan the embedded QR to add the contact on any phone.",
+        "Build a compliant vCard 3.0 file with Toollyz VCard Generator. Multiple phones, emails, websites and addresses, photo URL, birthday, notes — download…",
       what:
         "A vCard generator builds the standard `.vcf` file format used by every mobile contacts app on the planet. Toollyz VCard Generator emits **vCard 3.0** (RFC 2426) — version 3.0 specifically because it has the broadest iOS / Android / Outlook / Google Contacts support. The four-tab form covers Identity (first / last / middle / prefix / suffix / nickname / org / department / title / birthday), Contact (multiple phones, emails and websites with type labels like CELL / WORK / HOME), Addresses (full structured address blocks with type labels) and Extras (photo URL and a free-form note). The output is properly escaped (commas, semicolons and newlines per RFC 2426 §2.1.3), wrapped at 75 octets (RFC 2425 §5.8.1) and includes a fresh `REV` timestamp. The hero shows a live QR code embedding the full .vcf — point any modern phone camera at it and the OS offers &quot;Add to contacts&quot; in one tap. Download as `.vcf`, copy the source for inspection or scan the QR. Toollyz has no backend; your contact details save to localStorage on this device only.",
       how: [
@@ -11090,7 +11090,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Digital Business Card Creator — Standalone HTML + QR (Free)",
       description:
-        "Build a digital business card with Toollyz. Live preview, brand colour, photo + social links, exports a standalone card.html with embedded .vcf and a QR pointing at the hosted URL — entirely in your browser.",
+        "Build a digital business card with Toollyz. Live preview, brand colour, photo + social links, exports a standalone card.html with embedded .vcf and a QR…",
       what:
         "A digital business card is a shareable web page that holds your photo, role, contact details and social links — like a paper card but tappable and instantly saveable to a phone&apos;s contacts. Toollyz Digital Business Card Creator builds a **standalone HTML file** (no external CSS, no external JS, no hosting dependencies) you can save and host anywhere — GitHub Pages, Netlify, a CDN bucket, even email it directly. The exported page includes a **Save-to-contacts** button backed by an inline data:URL `.vcf` (vCard 3.0), so visitors get a one-tap import on iOS and Android without any external service. The four-tab form covers Identity (name, title, company, photo, short bio), Contact (email, phone, website), Social (LinkedIn, X/Twitter, GitHub, Instagram, YouTube — only those you fill in render) and Style (brand colour and page background). Live preview is rendered in a real sandboxed iframe so what you see is what your visitors see. Two QR helpers: one for the standalone .vcf (no hosting needed; embeds the contact directly) and one for whatever URL you&apos;ll host the HTML page at. Toollyz has no backend; everything saves to localStorage on your device only.",
       how: [
@@ -11186,9 +11186,9 @@ export const tools: Tool[] = [
       "menu builder online",
     ],
     seo: {
-      title: "QR Menu Generator for Restaurants — Standalone HTML + QR (Free)",
+      title: "QR Menu Generator for Restaurants — Standalone HTML + QR",
       description:
-        "Build a digital menu with Toollyz QR Menu Generator. Sections, items, prices, tags, currency, brand colour. Export a standalone HTML page you host yourself, plus a QR pointing at the hosted URL — entirely in your browser.",
+        "Build a digital menu with Toollyz QR Menu Generator. Sections, items, prices, tags, currency, brand colour. Export a standalone HTML page you host…",
       what:
         "A QR menu lets restaurant guests see the menu on their phone instead of a physical card. Toollyz QR Menu Generator builds a **single standalone HTML file** (inline CSS, no JavaScript, no external assets except an optional logo URL) you host wherever you like — Netlify Drop is the easiest free option, but any static host works (GitHub Pages, Vercel, your own CDN, an S3 bucket). The form covers restaurant identity (name, tagline, currency, logo URL, brand colour, page background colour, footer), and an arbitrary number of sections (Coffee / Brunch / Wine / Desserts…) each containing items with name, description, price and optional tags (vegan, gluten-free, spicy). The hero shows a true live preview rendered in a sandboxed iframe — exactly what guests will see. Prices use `Intl.NumberFormat` with the chosen currency so symbols and decimal conventions follow the customer&apos;s locale. Section reordering with up/down buttons; per-item add and remove. Two export options: download the standalone `menu.html` (typically 5–15 KB) and generate a QR code pointing at the URL where you&apos;ll host it. Toollyz has no backend; menu data saves to localStorage on this device only.",
       how: [
@@ -11284,9 +11284,9 @@ export const tools: Tool[] = [
       "disposable inbox",
     ],
     seo: {
-      title: "Temporary Email Generator — Disposable Inbox via mail.tm (Free)",
+      title: "Temporary Email Generator — Disposable Inbox via mail.tm",
       description:
-        "Generate a disposable email address with Toollyz Temporary Email Generator. Read incoming mail in your browser via the public mail.tm API — no signup, no Toollyz server in the path.",
+        "Generate a disposable email address with Toollyz Temporary Email Generator. Read incoming mail in your browser via the public mail.tm API — no signup, no…",
       what:
         "A temporary email generator lets you grab a throwaway address for verifying a signup, accepting a trial download or any one-time email confirmation without giving away your real inbox. Toollyz Temporary Email Generator runs in your browser and talks directly to the **public mail.tm API** — a free, no-account, CORS-enabled disposable-mail service. On load Toollyz asks mail.tm for an active domain, generates a random username (`word-1234@domain`) and a strong random password (20 chars from a confusable-free alphabet), creates an account via `POST /accounts`, requests an auth token via `POST /token` and stores both **only in this tab&apos;s memory** — no localStorage persistence so a reload spins up a fresh inbox. The inbox auto-refreshes every 12 seconds while the tab is visible. Tapping a message opens its plain-text content plus a sandboxed HTML preview that blocks scripts and network requests. Toollyz has no backend; everything flows between your browser and mail.tm directly. The honest disclosure panel is prominent: the address is provided by a third party, anyone with the address can read incoming mail until mail.tm deletes the account, and this isn&apos;t suitable for password resets or financial confirmations.",
       how: [
@@ -11374,7 +11374,7 @@ export const tools: Tool[] = [
     seo: {
       title: "AI Prompt Enhancer — Score and Rewrite Prompts (No API)",
       description:
-        "Score your prompt against 8 components and get a structured rewrite — markdown, XML or ALL-CAPS sections. Works for ChatGPT, Claude and Gemini. Runs entirely in your browser, no API.",
+        "Score your prompt against 8 components and get a structured rewrite — markdown, XML or ALL-CAPS sections. Works for ChatGPT, Claude and Gemini.",
       what:
         "AI Prompt Enhancer is a heuristic prompt analyser and rewriter — entirely client-side, with no LLM call. It scores your input against the 8 components prompt-engineering literature consistently cites: a role for the model, a clear task verb, surrounding context, constraints, output format, examples, audience and tone. A 0–100 completeness score and per-component pass/fail card pinpoints exactly what's missing. The rewriter then composes a structured prompt with placeholders for every missing component, choosing one of three styles you pick: Markdown sections (## Role / ## Task / …) as a clean universal default; XML tags (`<role>…</role>`) optimised for Claude; or ALL-CAPS sections as a plain-text fallback for older models. Your original prompt is appended at the bottom for reference. Because everything runs locally, your prompt — and any sensitive context inside it — never leaves your browser.",
       how: [
@@ -11429,7 +11429,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Text Reverser — Flip Words, Lines & Upside-Down Text",
       description:
-        "Reverse text instantly with Toollyz Text Reverser. Flip by character, word, line or each word — plus mirror and upside-down Unicode modes. Free and 100% private.",
+        "Reverse text instantly with Toollyz Text Reverser. Flip by character, word, line or each word — plus mirror and upside-down Unicode modes.",
       what:
         "Text Reverser is a Unicode-aware utility that flips any text the way you want — character-by-character, word-by-word, line-by-line, or a combination. It also supports right-to-left mirror text and upside-down Unicode lookalikes for designs, social media tricks, puzzles and gag posts. Splitting happens by code point with the spread operator, so multi-byte characters like emoji and astral-plane glyphs stay intact instead of corrupting into half-pairs. There are eight modes in total — full reverse, word order, line order, each word reversed, each line reversed, mirror, upside-down, and reverse with alternating case. Live counts for characters, words and lines update as you type. Everything runs in your browser; nothing is sent to a server.",
       how: [
@@ -11483,7 +11483,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Duplicate Word Finder — Spot Repeated Words in Your Writing",
       description:
-        "Find and colour-rank repeated words in essays, posts and emails. Configurable stopwords/case/min-length filter, frequency table and lexical-diversity score. Free and private.",
+        "Find and colour-rank repeated words in essays, posts and emails. Configurable stopwords/case/min-length filter, frequency table and lexical-diversity…",
       what:
         "Duplicate Word Finder analyses any block of writing and surfaces the words you've repeated. It tokenises the input by Unicode letter/number runs, filters out stopwords (the, and, of …) and very-short tokens by default, and then ranks every duplicated word by count. The five top offenders get distinct colour highlights inside your text so you can see at a glance where the repetition lands — perfect for tightening up first drafts. A live frequency table lists every repeated word with its count, filterable by substring. A lexical-diversity ratio (unique ÷ total) gives a one-number quality signal. Toggles let you turn case-folding on/off, include or exclude numbers, change the minimum repetition threshold, and the minimum word length — so you can use it for SEO ('what keywords am I over-using?') or for prose ('what filler am I leaning on?'). Pure functions, nothing uploaded.",
       how: [
@@ -11538,7 +11538,7 @@ export const tools: Tool[] = [
     seo: {
       title: "AI Text Humanizer — Break LLM Tells in Your Prose",
       description:
-        "Heuristic rewriter that targets LLM tells: stiff transitions, em-dash abuse, hollow openers, tricolons. Four voice personas. Detected-tells counter included. 100% offline.",
+        "Heuristic rewriter that targets LLM tells: stiff transitions, em-dash abuse, hollow openers, tricolons. Four voice personas. Detected-tells counter…",
       what:
         "AI Text Humanizer is a rule-based pass that targets the telltale rhythm of LLM-generated prose. We look for nine specific patterns — stiff transitions ('Furthermore', 'Moreover'), 'It is important to note that' hedges, overused verbs ('delve', 'leverage', 'utilize'), hollow openers ('In today's fast-paced world', 'Navigating the landscape of'), repeated em-dashes ('—X—Y—'), 'tapestry/mosaic/symphony of' metaphors, hollow assurances ('ensures that', 'guarantees that'), and the X-Y-and-Z tricolon — and rewrite them with plainer alternatives. Four voice personas: Balanced (conservative humanisation), Casual (more contractions, shorter rhythm), Expert (confident assertions, fewer hedges), Story (concrete nouns, varied rhythm). A detected-tells counter shows what we found in the input. **Honest framing:** we can't make text undetectable by AI-text classifiers, and we don't pretend otherwise. The point is readability and voice, not evasion.",
       how: [
@@ -11592,7 +11592,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Sentence Rewriter — 7 Tone Presets, Offline Heuristic",
       description:
-        "Get multiple rewrites of any sentence. 7 tone presets (formal / casual / concise / expanded / persuasive / passive / active), curated synonym thesaurus and whole-text mode. 100% private.",
+        "Get multiple rewrites of any sentence. 7 tone presets (formal / casual / concise / expanded / persuasive / passive / active), curated synonym thesaurus…",
       what:
         "Sentence Rewriter applies rule-based transformations plus a curated synonym thesaurus to generate multiple variations of a sentence. Seven tone presets cover the workhorse rewriting moves: more formal (expand contractions, replace casual fillers), more casual (add contractions, switch transitions), more concise (drop filler phrases like 'in order to' and 'due to the fact that'), more descriptive (add transitions and qualifiers), more persuasive (switch to active verbs, address the reader as 'you'), passive voice (convert active subjects into passive constructions), and active voice (detect passive markers and rewrite). Synonym swaps draw from a ~150-entry curated thesaurus organised across verbs, adjectives and adverbs — small enough that substitutions stay grounded, broad enough to surface real alternatives. Two modes: 'single sentence' produces up to 8 variations of one input; 'whole text' splits a paragraph into sentences and rewrites each. Pure functions, no LLM call.",
       how: [
@@ -11646,7 +11646,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Emoji Translator — Text to Emoji & Back Again",
       description:
-        "Translate plain text into emoji-rich messages or decode emoji back to keywords. 150+ built-in dictionary, replace-or-append modes and grapheme-aware parsing. Free and private.",
+        "Translate plain text into emoji-rich messages or decode emoji back to keywords. 150+ built-in dictionary, replace-or-append modes and grapheme-aware…",
       what:
         "Emoji Translator runs both directions with a built-in dictionary of 150+ entries covering the workhorse emoji users reach for in chat: faces and emotion, food and drink, animals, weather, transport, technology, hands and gestures. Text → emoji matches whole words case-insensitively (with simple plural handling so 'cats' still resolves to 🐱). The 'replace' mode swaps the word for the emoji; 'append' keeps the word and adds the emoji after it — perfect for spicing up a paragraph without changing its meaning. Emoji → text uses Intl.Segmenter so ZWJ-joined sequences and skin-tone modifiers stay intact as a single grapheme, then maps each known emoji to its canonical `:keyword:` form for readable decoded output. A clickable dictionary panel at the bottom doubles as a discovery aid — click any entry to insert it directly into your input. Pure functions, no network.",
       how: [
@@ -11699,9 +11699,9 @@ export const tools: Tool[] = [
       "yt 500 character tags", "video meta tag", "youtube competitive analysis",
     ],
     seo: {
-      title: "YouTube Tag Extractor — Hashtags, `tags:` Lists, Bigram Keywords",
+      title: "YouTube Tag Extractor — Hashtags, `tags:` Lists, Bigram",
       description:
-        "Paste a video description and extract every #hashtag, any `tags:` label list, and auto-mined keyword bigrams from the body. Checks the 60-char above-title hashtag limit and the 500-char back-end tags cap. 100% offline.",
+        "Paste a video description and extract every #hashtag, any `tags:` label list, and auto-mined keyword bigrams from the body. Checks the 60-char above-title…",
       what:
         "YouTube Tag Extractor parses any video description (or any text — it works equally well on blog posts and TikTok captions) and pulls out three categories of taggable content. First, hashtags: matches `#word` patterns (Unicode-aware for emoji-language tags), deduplicates and counts the total character footprint vs. YouTube's ~60-character above-the-title hashtag display limit. Second, comma-separated tag lists: looks for a `tags:` / `keywords:` / `labels:` label or a trailing line with ≥ 5 commas (the common 'paste your YT Studio tags here' pattern), splits on commas/semicolons/newlines and dedupes case-insensitively. Third, auto-extracted keywords: tokenises the body (after stripping URLs, hashtags and mentions), removes stop-words, ranks all bigrams and unigrams by frequency (≥ 2 occurrences), and surfaces the top 24. The 'Ready-to-paste block' combines the top hashtags (up to 12) and the merged comma-tags + keywords (up to 40) for direct paste into YouTube Studio.",
       how: [
@@ -11755,9 +11755,9 @@ export const tools: Tool[] = [
       "share video moment",
     ],
     seo: {
-      title: "YouTube Timestamp Link Generator — Jump-to-Moment URLs + Chapters",
+      title: "YouTube Timestamp Link Generator — Jump-to-Moment URLs",
       description:
-        "Generate YouTube links that jump straight to a specific second. Four link styles (short, full, embed, markdown) and a chapter-description builder that passes YouTube's auto-chapter rules.",
+        "Generate YouTube links that jump straight to a specific second. Four link styles (short, full, embed, markdown) and a chapter-description builder that…",
       what:
         "YouTube Timestamp Link Generator does two related jobs. First, it parses any YouTube URL or 11-character video ID (regular watch URLs, youtu.be shorts, embed URLs, /shorts and /v paths) and lets you build a deep link that starts at any second — formatted as a short youtu.be URL, a full youtube.com/watch URL, an embed iframe URL, or a markdown link ready for blog posts. Second, it includes a multi-row chapter builder for the description box: add labels and timestamps, drag chapters into order, and the tool surfaces YouTube's auto-chapter requirements (first must be 0:00, minimum three chapters, each at least 10 seconds long) with live validation. Output is provided as both the plain-text description format YouTube parses and as a markdown list with clickable links for blogs and READMEs. Timestamps accept many formats — 1:23, 1:23:45, 85s, 1h2m3s — and the engine round-trips them safely.",
       how: [
@@ -11809,9 +11809,9 @@ export const tools: Tool[] = [
       "facebook bold", "reddit format", "social caption formatter",
     ],
     seo: {
-      title: "Social Media Post Formatter — Bold / Italic + Line Break Booster",
+      title: "Social Media Post Formatter — Bold / Italic + Line Break",
       description:
-        "Format social posts with Unicode bold/italic/mono/strike, blank-line boosters that survive copy-paste and a clean hashtag block. Works on X / Twitter, Mastodon, Bluesky, Facebook, Threads.",
+        "Format social posts with Unicode bold/italic/mono/strike, blank-line boosters that survive copy-paste and a clean hashtag block. Works on X / Twitter…",
       what:
         "Social Media Post Formatter applies Unicode Mathematical-Alphanumeric styles — bold, italic, bold-italic, sans-serif variants, monospace, small-caps, strikethrough and underline — so the formatting survives copy-paste into platforms that strip rich text (X / Twitter, Mastodon, Bluesky, Facebook, Threads, Reddit). It also fixes the most common formatting failure: blank lines that platforms collapse. The 'preserve blank lines' option inserts U+2063 INVISIBLE SEPARATOR on empty lines so the gap renders reliably. A hashtag panel takes a comma-separated list, dedupes and normalises tags (adds `#`, optionally lowercases), and drops the cleaned block at the bottom of the post. Live character / line / hashtag counts and a real-time preview let you tune the post before pasting. Pure functions, no network.",
       how: [
@@ -11863,9 +11863,9 @@ export const tools: Tool[] = [
       "x post counter", "twitter limit", "twitter thread generator",
     ],
     seo: {
-      title: "Tweet Character Counter — X/Twitter Weighted Counter & Thread Splitter",
+      title: "Tweet Character Counter — X/Twitter Weighted Counter",
       description:
-        "Count tweets using X's exact weighted-character rules. Live 280-char gauge, automatic thread splitting, URL t.co handling and CJK/emoji weighting. Free and private.",
+        "Count tweets using X's exact weighted-character rules. Live 280-char gauge, automatic thread splitting, URL t.co handling and CJK/emoji weighting.",
       what:
         "Tweet Character Counter implements X / Twitter's official weighted-character rule. Most code points count as 1, but CJK, Japanese, Korean and most pictographic emoji count as 2 — and every URL (no matter the length) is normalised to the platform's fixed t.co length of 23. The counter shows weighted usage against the 280-character free limit, the 4,000-character Premium long-post limit, and the 25,000-character Premium+ ceiling — pick whichever applies. When you cross the limit, Toollyz automatically splits the draft into a thread, breaking on sentence boundaries first, then word boundaries, then weighted code points as a last resort. Each piece is numbered '1/N' with an optional emoji marker, and the actual marker cost is reflected in each tweet's budget so nothing ever spills over. The page also surfaces detected URLs, @mentions and #hashtags so you can spot link-handle issues before you post.",
       how: [
@@ -11918,9 +11918,9 @@ export const tools: Tool[] = [
       "linkedin formatting trick",
     ],
     seo: {
-      title: "LinkedIn Post Formatter — Bold Hook + Line Break Booster + Hook Score",
+      title: "LinkedIn Post Formatter — Bold Hook + Line Break Booster",
       description:
-        "Format LinkedIn posts with separate Unicode styles for the hook and body, blank-line boosters that survive mobile, and a 5-check hook scorer against the 210-char see-more cutoff.",
+        "Format LinkedIn posts with separate Unicode styles for the hook and body, blank-line boosters that survive mobile, and a 5-check hook scorer against…",
       what:
         "LinkedIn Post Formatter is built around the platform's specific quirks. The first 210 characters of every post are what readers see before clicking '…see more' — get the hook wrong and engagement collapses. Toollyz gives the hook its own Unicode style (bold by default) separate from the body, shows you exactly where the 210-character fold lands, and scores the first line against 5 best-practice checks (length ≤ 210, opens with a question/claim, contains a number, ≤ 1 emoji, talks directly to the reader). Body styling is independent — leave it plain for readability, or use sans-bold for executive headers. The blank-line booster uses U+2063 INVISIBLE SEPARATOR so LinkedIn mobile doesn't collapse empty lines. Hashtags get the same clean-block treatment as the Social Post Formatter. Real-time warnings flag posts over the 3 000-character LinkedIn limit and hashtag walls beyond the 5-tag sweet spot.",
       how: [
@@ -11973,9 +11973,9 @@ export const tools: Tool[] = [
       "instagram caption spacing", "ig formatter",
     ],
     seo: {
-      title: "Instagram Caption Formatter — Line Breaks, Bold & Hashtag Block",
+      title: "Instagram Caption Formatter — Line Breaks, Bold & Hashtag",
       description:
-        "Format Instagram captions with line breaks that survive mobile, Unicode bold/italic, and a hashtag block that drops below the &quot;…more&quot; fold. 5–11 hashtag sweet-spot validator + 30-tag cap warning.",
+        "Format Instagram captions with line breaks that survive mobile, Unicode bold/italic, and a hashtag block that drops below the &quot;…more&quot; fold.",
       what:
         "Instagram Caption Formatter fixes the two problems every IG creator hits: line breaks that vanish on mobile, and hashtag blocks that crowd the visible preview. The line-break fix replaces empty lines with U+2063 INVISIBLE SEPARATOR — a zero-width character that Instagram's mobile app treats as content but renders as a gap. The 'push hashtags below the more fold' option adds configurable spacer lines between body and tags so the hashtag block collapses out of the 125-character preview that shows in the feed. The hashtag builder enforces Instagram's 30-tag hard cap, dedupes case-insensitively, optionally lowercases, and counts against the 5–11 sweet-spot range that consistently performs best in published studies. Unicode bold / italic / mono styles apply to the body and survive copy-paste into the IG composer. Real-time warnings flag captions over the 2 200-character limit. Pure functions, no upload.",
       how: [
@@ -12028,9 +12028,9 @@ export const tools: Tool[] = [
       "discord r format", "discord f format",
     ],
     seo: {
-      title: "Discord Timestamp Generator — All 7 Time Codes With Live Preview",
+      title: "Discord Timestamp Generator — All 7 Time Codes With Live",
       description:
-        "Generate every Discord `<t:UNIX:format>` timestamp — short time, long time, short date, long date, short date/time, long date/time, relative. Live local preview, one-click copy.",
+        "Generate every Discord `<t:UNIX:format>` timestamp — short time, long time, short date, long date, short date/time, long date/time, relative.",
       what:
         "Discord renders any message containing the literal `<t:UNIX_SECONDS:FORMAT>` syntax as a localised, viewer-relative timestamp — short time, long time, short date, long date, short date/time, long date/time or relative. Toollyz Discord Timestamp Generator builds all seven at once. Pick a moment with the calendar/time picker, the Unix seconds input, or one of six quick presets ('Right now', 'In 1 hour', 'Tomorrow this time', 'Next week', '30 days from now', 'Tonight at midnight'). Every card shows the exact code to paste into Discord plus a preview rendered with your browser's locale and time zone — so you can confirm Tuesday-at-4pm in London also reads correctly in your viewer's locale. The relative ('R') preview ticks in real time so a 'starts in 5 minutes' announcement counts down as you watch.",
       how: [
@@ -12083,9 +12083,9 @@ export const tools: Tool[] = [
       "whatsapp deep link", "whatsapp universal link",
     ],
     seo: {
-      title: "WhatsApp Link Generator — wa.me Click-to-Chat Links + QR Code",
+      title: "WhatsApp Link Generator — wa.me Click-to-Chat Links + QR",
       description:
-        "Generate WhatsApp click-to-chat links with phone number, pre-filled message and a downloadable QR. Country picker with 40 dial codes. Three URL flavours. Free and 100% private.",
+        "Generate WhatsApp click-to-chat links with phone number, pre-filled message and a downloadable QR. Country picker with 40 dial codes. Three URL flavours.",
       what:
         "WhatsApp Link Generator builds a click-to-chat URL the official way — `https://wa.me/<phone>?text=<encoded-message>` — plus two alternate flavours (`api.whatsapp.com/send/` for web-first fallback, `whatsapp://send` for native-app deep linking) and a downloadable QR PNG. The country picker covers 40 of the most-used WhatsApp markets with their dial code and flag; if your country isn't listed you can type the calling code directly. Inputs are validated against the ITU-T E.164 maximum (15 digits), and the engine strips spaces, dashes and parentheses so users can paste whatever format they have on hand. The pre-filled message is URL-encoded automatically. Live char counts show both raw and encoded length so you can spot URL-length issues that affect older iOS Safari. Everything runs in the browser; no phone number or message touches any server.",
       how: [
@@ -12140,7 +12140,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Text Diff Checker — Compare Two Texts Side-by-Side",
       description:
-        "Find every change between two texts. Side-by-side line diff with inline word highlighting, ignore-whitespace/case options and a copyable unified patch. Free and private.",
+        "Find every change between two texts. Side-by-side line diff with inline word highlighting, ignore-whitespace/case options and a copyable unified patch.",
       what:
         "Text Diff Checker is a side-by-side comparison tool that highlights every addition, removal and change between two pieces of text. It uses a standard longest-common-subsequence algorithm at the line level, then runs a second word-level diff inside each changed row so you can see exactly which words moved or were rewritten — added words go green on the right, removed words go red on the left, and equal words stay neutral. The 'pair adds and removes as changes' option (on by default) gives a much cleaner output for prose by collapsing remove+add runs into single change rows. Toggleable options include ignore-whitespace (collapses runs of spaces/tabs), ignore-case and ignore-blank-lines. The result includes line numbers per side, a similarity percentage and a copyable unified patch (lines prefixed +/-/' ') that you can save as `.patch` or share. Pure functions, no network — your text never leaves the browser.",
       how: [
@@ -12244,9 +12244,9 @@ export const tools: Tool[] = [
       "sort a-z", "sort numerically", "online sort", "uniq sort", "case-insensitive sort",
     ],
     seo: {
-      title: "Line Sorter — Sort Lists Alphabetically, Numerically or Randomly",
+      title: "Line Sorter — Sort Lists Alphabetically, Numerically",
       description:
-        "Sort any list of lines online. A→Z / Z→A, natural sort, by leading number, by length, shuffle or reverse — with case, dedupe and blank-line options. Free and private.",
+        "Sort any list of lines online. A→Z / Z→A, natural sort, by leading number, by length, shuffle or reverse — with case, dedupe and blank-line options.",
       what:
         "Line Sorter takes any newline-separated list and re-orders it ten different ways. Standard alphabetical (A→Z and Z→A) uses the platform's Intl.Collator so Unicode collation matches the user's locale. Natural sort orders 'image2.png' before 'image10.png' by recognising embedded numbers. Numeric sort pulls the leading number out of each line and sorts on that — non-numeric lines fall to the end. Length sort orders by visible character count. Shuffle uses crypto.getRandomValues for a cryptographically strong Fisher-Yates shuffle, and reverse simply flips top↔bottom. Options layer on top: case-sensitive vs case-insensitive comparison, ignore-leading-whitespace (so indentation doesn't poison the sort), drop blank lines, and dedupe after sorting. Stats track input lines, kept lines, blanks dropped and duplicates dropped. Pure functions, no network.",
       how: [
@@ -12299,9 +12299,9 @@ export const tools: Tool[] = [
       "sanitize file", "file obfuscation",
     ],
     seo: {
-      title: "Secure File Shredder — DoD-style Byte Overwrite (Browser, No Upload)",
+      title: "Secure File Shredder — DoD-style Byte Overwrite",
       description:
-        "Overwrite a file's bytes with crypto-random data using DoD-style 3-pass, single random, zero-fill or one-fill patterns. SHA-256 receipt included. 100% client-side — nothing uploaded.",
+        "Overwrite a file's bytes with crypto-random data using DoD-style 3-pass, single random, zero-fill or one-fill patterns. SHA-256 receipt included.",
       what:
         "Secure File Shredder takes a file you select, overwrites its in-memory copy with crypto-random bytes (or a DoD-5220.22-M-style 3-pass pattern) and offers the shredded version as a download. We use `crypto.getRandomValues` for entropy, chunked through the typed-array in 64 KB blocks to respect the per-call API limit, and yield to the event loop between passes so the UI stays responsive on multi-megabyte files. Four patterns: single random pass (fast), DoD 3-pass (zeros → ones → random), pure zero-fill (sparse-file friendly) and pure one-fill. After shredding, we compute a SHA-256 of the resulting bytes as a receipt-style proof of the wipe. Important honest framing: browsers cannot touch files on your disk — the sandbox forbids it. This tool overwrites the IN-MEMORY COPY of the file you picked. You then move the shredded download over the original yourself. Useful for sharing a file's slot (size + filename) without leaking contents, or for confirming an upload pipeline reads bytes rather than file references. 50 MB cap.",
       how: [
@@ -12354,9 +12354,9 @@ export const tools: Tool[] = [
       "uniform random token",
     ],
     seo: {
-      title: "Session ID Generator — Crypto-Random Tokens with Strength Meter",
+      title: "Session ID Generator — Crypto-Random Tokens with Strength",
       description:
-        "Mint high-entropy session tokens with crypto.getRandomValues. Hex, base64, base64url or alphanumeric encoding, custom length, optional prefix, batch sizes. Strength meter included.",
+        "Mint high-entropy session tokens with crypto.getRandomValues. Hex, base64, base64url or alphanumeric encoding, custom length, optional prefix, batch sizes.",
       what:
         "Session ID Generator mints cryptographically-strong random tokens you can use as session identifiers, auth cookies, magic-link tokens, password-reset codes or any other place you need a hard-to-guess identifier. Every byte of entropy comes from `crypto.getRandomValues` — the WebCrypto cryptographically-strong RNG — chunked through the typed-array in 64 KB blocks so it respects the per-call API limit. Four output encodings: hexadecimal (widest compatibility, 2 chars per byte), Base64 (4 chars per 3 bytes), Base64 URL-safe (drops +/= for cookie / URL safety) and an Alphanumeric mode that uses rejection sampling to avoid modulo bias. A live strength meter shows the effective bits of entropy and ranks the configuration as weak / OK / strong / overkill based on common 80 / 128 / 256-bit thresholds. Generate a single token or up to 500 at once, with an optional prefix (`sess_`, `tok_` …). Nothing leaves the browser.",
       how: [
@@ -12410,7 +12410,7 @@ export const tools: Tool[] = [
     seo: {
       title: "API Key Generator — Stripe / GitHub / OpenAI Style + Custom",
       description:
-        "Mint production-ready API keys with templates for Stripe, GitHub, OpenAI and UUID-style segmented keys. Custom prefixes, charset, segments, separator and optional checksum. 100% private.",
+        "Mint production-ready API keys with templates for Stripe, GitHub, OpenAI and UUID-style segmented keys. Custom prefixes, charset, segments, separator…",
       what:
         "API Key Generator mints API keys that mirror the formats real platforms use. Built-in templates: Stripe live (sk_live_…), Stripe test (sk_test_…), GitHub Personal Access Token (ghp_…), OpenAI-style (sk-…), UUID-style segmented (8-4-4-4-12 hex), 4-segment human-dictatable, and raw Base64URL. Or roll your own — set the prefix, charset (alphanumeric / hex / base64url), body length (4–128 chars), number of segments and the separator character. An optional checksum appends a single sum-mod-36 character so single-character typos can be caught client-side (useful when humans copy keys around). Crypto-strong throughout: alphanumeric mode uses rejection sampling to avoid modulo bias and the entropy meter ranks every configuration as weak / OK / strong / overkill against 80 / 128 / 256-bit thresholds. Batch up to 200 keys per click. Nothing leaves the browser.",
       how: [
@@ -12464,7 +12464,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Encryption Key Generator — AES / RSA / ECDSA / ECDH / HMAC",
       description:
-        "Generate cryptographic keys via Web Crypto: AES-GCM/CBC/CTR (128-256), RSA-OAEP/PSS/PKCS1 (2048-4096), ECDSA/ECDH (P-256/384/521), HMAC. Export JWK + PEM. Non-extractable mode.",
+        "Generate cryptographic keys via Web Crypto: AES-GCM/CBC/CTR (128-256), RSA-OAEP/PSS/PKCS1 (2048-4096), ECDSA/ECDH (P-256/384/521), HMAC. Export JWK + PEM.",
       what:
         "Encryption Key Generator wraps the browser's Web Crypto API (`crypto.subtle.generateKey`) to produce production-grade cryptographic keys without ever shipping the bytes to a server. Symmetric algorithms: AES-GCM (the default for new authenticated encryption work), AES-CBC and AES-CTR at 128 / 192 / 256-bit lengths, plus HMAC with SHA-256 / SHA-384 / SHA-512 (used for JWT and API request signing). Asymmetric: RSA-OAEP (encrypt), RSA-PSS (sign — modern preferred), RSASSA-PKCS1-v1_5 (sign — used by older RS256 JWTs), ECDSA (sign), ECDH (key exchange) at 2048 / 3072 / 4096-bit RSA or P-256 / P-384 / P-521 curves. Keys export as JWK (always) and PEM (asymmetric — PKCS#8 for private, SPKI for public). A non-extractable mode generates the CryptoKey without ever exposing the bytes — the right setting for production code that should only use the key through `crypto.subtle.*` methods. Private keys are hidden behind a reveal toggle.",
       how: [
@@ -12518,7 +12518,7 @@ export const tools: Tool[] = [
     seo: {
       title: "JWT Generator — Sign HS256 / HS384 / HS512 JSON Web Tokens",
       description:
-        "Build and sign JWTs with custom header / payload / secret via the Web Crypto API. HS256, HS384, HS512 supported. Claim inspector calls out registered claims. 100% private.",
+        "Build and sign JWTs with custom header / payload / secret via the Web Crypto API. HS256, HS384, HS512 supported. Claim inspector calls out registered…",
       what:
         "JWT Generator builds and signs JSON Web Tokens in your browser using the Web Crypto API's HMAC primitive (`crypto.subtle.sign`). Edit the claims as JSON, pick the algorithm (HS256, HS384 or HS512), set a shared secret (raw UTF-8 or base64url-encoded raw bytes), and the tool produces a valid `header.payload.signature` token with each segment shown separately and copyable. A claim inspector highlights the registered claims (`iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) and explains what each one means — useful when learning the RFC 7519 vocabulary. We deliberately limit the tool to HMAC algorithms: RS256 / ES256 require importing a real private key, and pasting one into any webpage is a security risk we won't encourage. Use a server-side library for RS / ES signing. Claims are stringified with sorted keys for reproducible output.",
       how: [
@@ -12572,7 +12572,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Cron Time Translator — Cron to English + Next Runs",
       description:
-        "Paste any cron expression to see a plain-English description, per-field breakdown, and the next 8 firing times in your local timezone. Handles @aliases and 6-field cron.",
+        "Paste any cron expression to see a plain-English description, per-field breakdown, and the next 8 firing times in your local timezone.",
       what:
         "Cron Time Translator parses 5-field (POSIX) and 6-field (with leading seconds) cron expressions, plus the common `@yearly` / `@monthly` / `@weekly` / `@daily` / `@hourly` aliases. It produces three outputs: a plain-English description (`every 15 minutes`, `at 09:00 on Monday`), a per-field breakdown table (Field, Raw, Resolved values, Count) showing exactly how every wildcard, range, step and list resolved, and the next 8 firing times computed forward from now — shown in your local timezone with relative deltas (`in 12 min`, `in 2 days`). The matcher uses standard cron semantics: when both day-of-month and day-of-week are non-`*`, either match fires (union, not intersection). A 4-year iteration cap prevents pathological combinations (Feb 30) from hanging the browser. Pure functions, no scheduler bus, no setInterval — the same input always returns the same output for a given 'now'.",
       how: [
@@ -12625,7 +12625,7 @@ export const tools: Tool[] = [
       "cron preview", "cron field picker",
     ],
     seo: {
-      title: "Cron Job Expression Generator — Visual Cron Builder + Preview",
+      title: "Cron Job Expression Generator — Visual Cron Builder",
       description:
         "Build cron expressions with per-field 'every / list / range / step' pickers. Live preview, English description and the next 5 firing times. 100% client-side.",
       what:
@@ -12682,7 +12682,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Regex Generator — Library + Visual Builder + Live Tester",
       description:
-        "Pick from 25+ vetted patterns (email, URL, phone, UUID, IPv4, IPv6, ISO date…) or build one visually. Live tester with match highlights. Pattern explanation in plain English.",
+        "Pick from 25+ vetted patterns (email, URL, phone, UUID, IPv4, IPv6, ISO date…) or build one visually. Live tester with match highlights.",
       what:
         "Regex Generator has two complementary surfaces. The library is 25+ curated, tested patterns covering the workhorse cases: email address (practical, not RFC 5322-perfect), URL (http/https), domain name (no protocol), IPv4 (strict 0-255 per octet), IPv6 (canonical 8-group), UUID v1-v8, MAC address, ISO 8601 date and datetime, US and international phone, hex color, CSS rgb()/rgba(), integer, decimal, currency, credit card, URL slug, username, strong password, HTML tag, markdown link, hashtag and mention. Each entry has a one-line description and a sample input that already contains matches so you can verify the regex right away. The visual builder lets you pick a character class (letters / digits / alnum / whitespace / word / any / custom), a quantifier (exactly one / one-or-more / zero-or-more / optional / exact N / between M and N), anchors (^ / $) and flags (g / i / m / s) — then it composes the regex AND writes a plain-English explanation of what it does. A live tester runs the active pattern against a test input and shows every match with its position and capture groups.",
       how: [
@@ -12738,7 +12738,7 @@ export const tools: Tool[] = [
     seo: {
       title: "SQL Formatter — Beautify Queries with Proper Indentation",
       description:
-        "Format messy SQL into readable, indented queries. Token-based formatter handles SELECT / INSERT / UPDATE / DELETE / CREATE / WITH / JOIN, sub-queries, strings and comments. 100% private.",
+        "Format messy SQL into readable, indented queries. Token-based formatter handles SELECT / INSERT / UPDATE / DELETE / CREATE / WITH / JOIN, sub-queries…",
       what:
         "SQL Formatter is a small tokenizer-based formatter that handles the dialect-neutral subset of SQL most users write — SELECT / INSERT / UPDATE / DELETE / CREATE / ALTER, with WITH (CTEs), JOINs, sub-queries, line (`--`) and block (`/* */`) comments, single-quoted strings (with `''` escape), and identifier quoting for PostgreSQL (`\"…\"`), MySQL (`` `…` ``) and SQL Server (`[…]`). The output uses standard 2-space (or configurable) indentation and uppercases the 60+ reserved words by default. Top-level clauses (`SELECT`, `FROM`, `WHERE`, `GROUP BY`, `ORDER BY`, `LIMIT`, `OFFSET`, `INTO`, `VALUES`, `SET`, `WITH`) start on their own lines. JOINs indent under FROM. Multi-line WHERE conditions break before each `AND` / `OR`. Sub-queries inherit the depth of their surrounding clause. Comments are preserved verbatim. Pure functions, no upload.",
       how: [
@@ -12793,7 +12793,7 @@ export const tools: Tool[] = [
     seo: {
       title: "SQL Query Beautifier — Column-Aligned, Configurable Style",
       description:
-        "Reformat SQL into column-aligned style — SELECT alignment, keyword case (UPPER/lower/preserve), trailing or leading commas, configurable indent. Distinct from a basic formatter. 100% offline.",
+        "Reformat SQL into column-aligned style — SELECT alignment, keyword case (UPPER/lower/preserve), trailing or leading commas, configurable indent.",
       what:
         "SQL Query Beautifier is a column-aligned re-formatter. The tokeniser handles SQL strings (single + dollar-quoted), block + line comments (preserved), ~140 ANSI keywords, identifiers and operators. Pass 1 emits each major clause (SELECT / FROM / WHERE / GROUP / ORDER / JOIN / UNION / etc.) on its own line, breaks on commas at parenthesis-depth 0 (trailing or leading style), preserves comments at their relative position. Pass 2 (optional) aligns SELECT columns — pads each column expression to the longest in its group so `AS alias` lines up vertically. Configuration: keyword case (UPPER, lower, or preserve), comma style (trailing = PEP-like, leading = Joe Celko's classic style), indent (2 / 4 / tab). All inputs from one-liners to deeply nested CTEs flow through the same pipeline.",
       how: [
@@ -12851,7 +12851,7 @@ export const tools: Tool[] = [
     seo: {
       title: "TOML Formatter — Parse, Validate & Pretty-Print TOML",
       description:
-        "Beautify and validate TOML 1.0 configuration files (Cargo.toml, pyproject.toml). Line-pointing errors, optional alphabetical key sorting and multi-line array threshold. 100% private.",
+        "Beautify and validate TOML 1.0 configuration files (Cargo.toml, pyproject.toml). Line-pointing errors, optional alphabetical key sorting and multi-line…",
       what:
         "TOML Formatter is a from-scratch TOML 1.0 parser + emitter built specifically for the subset that covers 95% of real-world config files (Cargo.toml, pyproject.toml, dprint config, hyperfine config, niri config, …). It handles comments, bare and quoted keys, dotted keys, basic / literal / multi-line strings (with escape sequences and `'''` literal blocks), decimal / hex / octal / binary integers with underscore separators, floats with inf / nan, booleans, inline arrays (multi-line, trailing-comma-tolerant), inline tables, standard tables, dotted tables, and array of tables (`[[…]]`). Parse errors are reported with both line and column numbers and a precise human-readable message — handy when a 600-line Cargo.toml fails. The emitter re-prints with consistent indentation, an optional alphabetical key sort and a configurable threshold for breaking inline arrays into multi-line. RFC 3339 datetimes are preserved verbatim (we don't try to re-format them). Pure functions, no network.",
       how: [
@@ -12907,7 +12907,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Code Screenshot Generator — Beautiful Code Images (Offline)",
       description:
-        "Paste a snippet, pick a theme and language, render to canvas with window chrome, line numbers and configurable padding. Copy PNG to clipboard or download. 100% offline.",
+        "Paste a snippet, pick a theme and language, render to canvas with window chrome, line numbers and configurable padding. Copy PNG to clipboard or download.",
       what:
         "Code Screenshot Generator renders a code snippet to a PNG using the canvas API. Six themed gradient backgrounds (Midnight, Sunset, Ocean, Forest, Blush, Graphite) each define their own background gradient, window chrome and per-token colours. The syntax highlighter is hand-written (no Prism / Shiki — keeps the page bundle tiny) and covers TypeScript / JavaScript (with type-name distinction), Python, JSON (key vs value), HTML (tag/attribute/value), CSS (property/value/colour), Bash (variables, flags), SQL (case-insensitive keywords) plus a plain mode. Output is rendered at 2× scale for crisp Retina downloads. The macOS-style title bar shows your filename and three traffic-light dots, with optional line numbers and adjustable font size and padding. Click 'Copy PNG' to put the image straight on your clipboard, or 'Download PNG' for a file you can attach to a tweet or blog post.",
       how: [
@@ -12962,7 +12962,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Terminal Command Cheat Sheet — Bash, Git, Docker, Network",
       description:
-        "Curated 80+ command reference covering Bash/Zsh, Git, Docker, networking, macOS and Linux. Each entry has a one-line description, runnable example, and tags. Click to copy.",
+        "Curated 80+ command reference covering Bash/Zsh, Git, Docker, networking, macOS and Linux. Each entry has a one-line description, runnable example,…",
       what:
         "Terminal Command Cheat Sheet is a curated reference of ~80 high-traffic shell commands organised across six sections: Bash/Zsh (file ops, text processing, processes), Git (status, log, stash, amend, rebase, cherry-pick, bisect), Docker (ps, run, exec, logs, build, prune), Networking (curl, wget, ping, traceroute, dig, ssh, scp, rsync), macOS (pbcopy, open, mdfind, brew services) and Linux (apt, systemctl, journalctl, ss). Each entry has a one-line description and a runnable example. Filter by shell section, search by command name or description, and click to copy the command to your clipboard. Tag chips let you narrow further — file / search / log / git / clean / install / service / network and more. Built specifically as a 'forgot the flag' reference; deliberately concise so the most-used variants are one click away.",
       how: [
@@ -13015,7 +13015,7 @@ export const tools: Tool[] = [
       "printable shortcut sheet", "chord builder",
     ],
     seo: {
-      title: "Keyboard Shortcut Generator — Sectioned Cheat Sheet, Markdown Export",
+      title: "Keyboard Shortcut Generator — Sectioned Cheat Sheet",
       description:
         "Build a printable shortcut cheat sheet with sectioned shortcut groups, styled `<kbd>` chips, alternative chords, and Markdown + plain-text export. 100% offline.",
       what:
@@ -13075,7 +13075,7 @@ export const tools: Tool[] = [
     seo: {
       title: "API Response Viewer — JSON / XML Tree + JSONPath Search",
       description:
-        "Paste a JSON or XML API response and explore it with a collapsible tree, type-coloured leaves, JSONPath/XPath addresses, free-text search across keys and values. 100% offline.",
+        "Paste a JSON or XML API response and explore it with a collapsible tree, type-coloured leaves, JSONPath/XPath addresses, free-text search across keys…",
       what:
         "API Response Viewer auto-detects whether your input is JSON or XML and builds a uniform interactive tree you can drill into. JSON uses `JSON.parse`; XML uses DOMParser (safe — no script execution). Every node carries a clickable JSONPath-style address (`$.data.users[0].email`) or XPath (`/response/user[1]/name`) so you can grab the exact selector for use in jq, Postman or your own code. Type-coloured leaves: strings green, numbers amber, booleans violet, null red. Free-text search walks the tree looking for matches in keys, values and (for XML) attribute names + values — returning the path to every hit. Two-level auto-expand on load, expand-all and collapse-all buttons, and per-node toggles let you focus on what matters.",
       how: [
@@ -13129,9 +13129,9 @@ export const tools: Tool[] = [
       "http response audit",
     ],
     seo: {
-      title: "HTTP Header Checker — Security, Caching, CORS Audit (Offline)",
+      title: "HTTP Header Checker — Security, Caching, CORS Audit",
       description:
-        "Paste the response from curl -I or DevTools' Headers tab. Audits HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, COOP/COEP, Cache-Control, CORS and Set-Cookie. 100% offline.",
+        "Paste the response from curl -I or DevTools' Headers tab. Audits HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy…",
       what:
         "HTTP Header Checker parses the raw text of any HTTP response (status line optional) into a structured list of headers, then runs a curated audit across the four areas that matter day-to-day. Security: HSTS (max-age, includeSubDomains, preload), Content-Security-Policy (presence of `unsafe-inline`/`unsafe-eval`, default-src), X-Frame-Options or CSP frame-ancestors, X-Content-Type-Options (`nosniff`), Referrer-Policy, Permissions-Policy, COOP, COEP. Caching: Cache-Control directives, the contradiction of public+private together, max-age over 1 year, the presence of both Expires and Cache-Control, and ETag/Last-Modified for revalidation. CORS: the lethal wildcard-with-credentials combination, missing Vary: Origin when reflecting a specific origin, and wildcard methods/headers with credentials. Content: Content-Type charset, Set-Cookie Secure/HttpOnly/SameSite flags, server-banner leakage. Status codes are flagged at the right severity (5xx errors, 4xx warnings, 3xx redirects with the Location). Nothing is fetched — paste a response you already have.",
       how: [
@@ -13187,7 +13187,7 @@ export const tools: Tool[] = [
     seo: {
       title: "MIME Type Checker — Magic-Byte Detection (Browser-Side)",
       description:
-        "Detect the true MIME type of any file by examining its first 512 bytes against 50+ known magic-byte signatures. Catches renamed files, content-spoofing and broken upload pipelines.",
+        "Detect the true MIME type of any file by examining its first 512 bytes against 50+ known magic-byte signatures. Catches renamed files, content-spoofing…",
       what:
         "MIME Type Checker reads the first 512 bytes of a file you pick (no upload — stays in your browser) and matches them against a curated table of 50+ magic-byte signatures: images (JPEG, PNG, GIF, WebP, AVIF, HEIC, BMP, TIFF, ICO, SVG), documents (PDF, ZIP, RAR, 7z, GZIP, TAR, BZIP2, XZ), audio (MP3, WAV, OGG, FLAC, AAC, MIDI), video (MP4, WebM, MKV, AVI, MOV), fonts (WOFF, WOFF2, TTF, OTF), executables (ELF, PE, Mach-O), and source-text formats (XML, HTML). Some signatures use secondary patterns at specific offsets — WebP needs `RIFF` at byte 0 AND `WEBP` at byte 8; AVI needs `RIFF` + `AVI ` at byte 8. The result shows the hex dump and printable-ASCII view of the first 32 bytes, all matching signatures (longest pattern wins), and an extension-mismatch warning when the file's real content doesn't match its `.ext`.",
       how: [
@@ -13240,9 +13240,9 @@ export const tools: Tool[] = [
       "headings outline", "page meta viewer",
     ],
     seo: {
-      title: "Website Source Viewer — Prettify HTML, Outline, Asset Inventory",
+      title: "Website Source Viewer — Prettify HTML, Outline, Asset",
       description:
-        "Paste HTML and get a pretty-printed source view, heading outline tree, every script / style / link / image / meta tag inventoried with byte counts. 100% offline.",
+        "Paste HTML and get a pretty-printed source view, heading outline tree, every script / style / link / image / meta tag inventoried with byte counts.",
       what:
         "Website Source Viewer is a one-stop inspector for any page's HTML. The textarea accepts the raw View-Source output (or any HTML fragment); DOMParser parses it into a real DOM tree that we then walk for seven distinct views. **Source** — pretty-printed with consistent indentation (the formatter handles self-closing void elements correctly so `<img>`, `<meta>`, `<br>` don't break the tree). **Outline** — the H1-H6 heading hierarchy in DOM order with visual indentation per level — exactly the document outline screen readers see. **Scripts** — every `<script>` tagged inline vs external, byte count for inline blobs, type attribute if set. **Styles** — every `<link rel=stylesheet>` href + every `<style>` block with byte counts. **Links** — every `<a href>` with the anchor text and rel attribute. **Images** — every `<img>` with src, alt, width × height. **Meta** — every `<meta>` and its content. Top-of-page stats show element / script / style / image / link / iframe counts at a glance.",
       how: [
@@ -13298,7 +13298,7 @@ export const tools: Tool[] = [
     seo: {
       title: "MAC Address Lookup — Vendor + Classification, Offline",
       description:
-        "Look up the hardware vendor for any MAC address. Normalises across colon / dash / Cisco dot / bare formats. Classifies as unicast / multicast / broadcast + universal / locally-administered.",
+        "Look up the hardware vendor for any MAC address. Normalises across colon / dash / Cisco dot / bare formats. Classifies as unicast / multicast / broadcast…",
       what:
         "MAC Address Lookup parses any MAC address you paste — colon-separated, dash-separated, Cisco dot-form, bare 12-hex, with or without spaces — then resolves the leading 24-bit OUI against a curated vendor table covering 300+ of the most-deployed manufacturer prefixes (Apple, Cisco, Intel, Samsung, Google, Amazon, Microsoft, HP, Dell, Lenovo, Asus, Raspberry Pi, Espressif, Sonos, Roku, Sony, Nintendo, Netgear, TP-Link, D-Link and many more). It classifies the address as unicast / multicast / broadcast (FF:FF:…) and reports whether it's universally administered (IEEE-assigned) or locally administered (Docker, randomised privacy MAC, virtual NIC). Five canonical format variants are produced — lower-case colon, UPPER-case colon, dash, Cisco dot-quad and bare 12-hex — each with a one-click copy button. We intentionally don't ship the full IEEE OUI registry (~50 000 entries × ~5 MB) because the curated 300+ covers the prefixes home networks actually encounter. Pure functions, no network.",
       how: [
@@ -13350,9 +13350,9 @@ export const tools: Tool[] = [
       "uuid timestamp", "uuid variant",
     ],
     seo: {
-      title: "UUID Validator — Detect Version v1-v8 + Timestamps (RFC 9562)",
+      title: "UUID Validator — Detect Version v1-v8 + Timestamps",
       description:
-        "Validate UUIDs and identify their version — v1, v3, v4, v5, v6, v7 or v8 — plus variant (RFC 4122 / Microsoft / NCS). Decodes embedded timestamps for v1 / v6 / v7. Bulk mode.",
+        "Validate UUIDs and identify their version — v1, v3, v4, v5, v6, v7 or v8 — plus variant (RFC 4122 / Microsoft / NCS). Decodes embedded timestamps for v1…",
       what:
         "UUID Validator parses UUIDs in every common shape — canonical hyphenated (8-4-4-4-12), braced {…}, urn:uuid: prefix and bare 32-char hex — then reports the structural validity plus the encoded version and variant. Version detection covers the full RFC 4122 set (v1 time-based, v2 DCE security, v3 MD5 name-based, v4 random, v5 SHA-1 name-based) AND the modern RFC 9562 additions (v6 reordered timestamp, v7 UNIX-time + random, v8 custom). Variant detection covers RFC 4122 / 9562 ('the variant every modern UUID library produces'), NCS legacy, Microsoft GUID and Reserved. For v1, v6 and v7, the embedded timestamp is decoded and shown both as an ISO string and as a 'how long ago' delta. A bulk mode handles up to 200 UUIDs at once (one per line) with per-line pass/fail + a downloadable TSV report. Pure functions, no network.",
       how: [
@@ -13407,7 +13407,7 @@ export const tools: Tool[] = [
     seo: {
       title: "SSL Certificate Checker — Offline X.509 PEM Parser",
       description:
-        "Paste a PEM certificate to extract version, serial, signature algo, full subject/issuer DNs, validity + days-till-expiry, public key algo + RSA bits or EC curve, SAN, key usage, EKU, SHA-256 fingerprint. 100% offline.",
+        "Paste a PEM certificate to extract version, serial, signature algo, full subject/issuer DNs, validity + days-till-expiry, public key algo + RSA bits or EC…",
       what:
         "SSL Certificate Checker is a hand-rolled X.509 parser — no `node-forge`, no `pkijs`, no `asn1.js`. PEM is decoded to raw DER bytes, then we walk the ASN.1 structure to extract every field a TLS engineer cares about. Subject and issuer Distinguished Names are unpacked into their RDN attribute-value pairs (CN, O, OU, C, L, ST, …) and re-joined into the standard comma-separated form. The validity period parses both UTCTime (pre-2050) and GeneralizedTime formats and computes the days-till-expiry as a primary headline number. The SubjectPublicKeyInfo is inspected: RSA keys get their modulus length read out of the inner DER for a precise bit count; EC keys get their curve OID resolved to the human-readable name (prime256v1 / secp384r1 / secp521r1). v3 extensions parsed: SubjectAltName (DNS, IP, email, URI), BasicConstraints (CA flag), KeyUsage (9-bit flags), ExtendedKeyUsage (serverAuth, clientAuth, codeSigning, etc.). SHA-256 fingerprint of the full DER is computed via Web Crypto and rendered as colon-separated hex. Findings panel flags expired/expiring certs, sub-2048-bit RSA, SHA-1 signatures (deprecated since 2017), and missing SAN.",
       how: [
@@ -13465,7 +13465,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Duplicate File Name Cleaner — Find & Rename Conflicts",
       description:
-        "Paste a list of file names to find duplicates and generate a rename plan with configurable counter patterns. Case + extension-aware grouping, side-by-side diff and TSV export.",
+        "Paste a list of file names to find duplicates and generate a rename plan with configurable counter patterns. Case + extension-aware grouping, side-by-side…",
       what:
         "Duplicate File Name Cleaner takes any newline-separated list of file names — Finder selection, `ls -1` output, a download-folder dump, CSV export — and surfaces every name collision. It groups duplicates case-insensitively by default (so 'Photo.PNG' and 'photo.png' match), with an option to also ignore the extension (so 'foo.png' and 'foo.jpg' match). For every duplicate, the engine suggests a unique alternative using one of four counter patterns: parenthesised (`name (2).ext`), dashed (`name-2.ext`), underscored (`name_2.ext`) or zero-padded (`name_002.ext`). The first occurrence keeps its original name; copies get the counter. A collision-aware loop bumps the counter until uniqueness is achieved, so if your list already contains 'foo (2).png', the second 'foo.png' becomes 'foo (3).png' automatically. Side-by-side rename plan, original ↔ suggested view, and TSV export ready for `mv` scripts or a spreadsheet. Pure functions, no upload.",
       how: [
@@ -13518,9 +13518,9 @@ export const tools: Tool[] = [
       "file integrity check", "renamed file detector",
     ],
     seo: {
-      title: "File Metadata Viewer — MIME Sniff, Dimensions, SHA-256, Hex Dump",
+      title: "File Metadata Viewer — MIME Sniff, Dimensions, SHA-256, Hex",
       description:
-        "Pick a file to extract browser MIME + magic-byte sniffed MIME, last-modified, image dimensions, audio/video duration + bitrate, SHA-256 hash, hex dump of first 32 bytes. 100% offline.",
+        "Pick a file to extract browser MIME + magic-byte sniffed MIME, last-modified, image dimensions, audio/video duration + bitrate, SHA-256 hash, hex dump…",
       what:
         "File Metadata Viewer is a Swiss-army inspector for any file you pick from disk. Uses the File API to read attributes (`name`, `size`, browser-reported `type` from extension, `lastModified` timestamp). Reads the first 64 bytes to sniff the true MIME via a compact magic-byte table — 25 common formats covering images (JPEG, PNG, GIF, WebP, BMP, ICO, HEIC), documents (PDF, ZIP, RAR, 7z, GZIP), audio (MP3, WAV, OGG, FLAC), video (MP4, WebM, QuickTime) and fonts (WOFF, WOFF2, TTF, OTF). For images, creates a hidden `Image` element to read natural dimensions. For audio/video, creates a hidden media element with `preload=metadata` to read duration + (video) dimensions. Computes SHA-256 with Web Crypto for files up to 50 MB (larger files inspect headers only). Renders a hex+ASCII dump of the first 32 bytes for manual inspection. Flags mismatches: when the browser-reported MIME disagrees with the sniffed MIME, that's a strong signal of a renamed file (or worse, content-spoofing).",
       how: [
@@ -13578,7 +13578,7 @@ export const tools: Tool[] = [
     seo: {
       title: "EXIF Data Remover — Lossless JPEG Strip + Canvas Re-encode",
       description:
-        "Strip EXIF, GPS, IPTC, ICC and other metadata segments from images. JPEGs use structural segment removal (lossless). PNG / WebP use canvas re-encode. 100% offline.",
+        "Strip EXIF, GPS, IPTC, ICC and other metadata segments from images. JPEGs use structural segment removal (lossless). PNG / WebP use canvas re-encode.",
       what:
         "EXIF Data Remover picks the right strategy automatically. For JPEGs: we walk the JFIF segment chain (FFE0..FFEF, FFFE COM) and drop the metadata segments (APP1 = EXIF/XMP, APP2 = ICC/FPXR, APP3-APP12, APP13 = Photoshop IRB/IPTC, APP14 = Adobe, COM = comments) while keeping the original pixel-data segments (SOI, DHT, DQT, SOF, SOS) untouched. Result: a perfectly lossless strip — no recompression artefacts, no quality loss, exact same image. For PNG and WebP: we draw the image to a canvas and re-export via `canvas.toBlob`, which strips all metadata as a side effect. PNG re-encode is lossless; WebP re-encode is lossy (quality 0.92 by default). A per-segment report shows what was removed (marker code, segment size, description). Cleaned filename auto-suffixed with `-clean`. 100 MB practical limit per file.",
       how: [
@@ -13634,7 +13634,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Unicode Character Finder — Curated Catalogue + Escapes",
       description:
-        "Search a curated catalogue of 600+ Unicode characters by name, keyword, character or code point. Get U+ code point, HTML entity, JS escape, CSS escape — one click to copy.",
+        "Search a curated catalogue of 600+ Unicode characters by name, keyword, character or code point. Get U+ code point, HTML entity, JS escape, CSS escape —…",
       what:
         "Unicode Character Finder is a curated catalogue of 600+ high-traffic Unicode characters across the categories users actually search for: Punctuation (dashes, quotes, ellipsis, pilcrow, primes), Math (±, ×, ÷, ∞, ∑, ∫, ≤, ≥, ≈, set theory, logic), Currency (40 currency symbols from $ and € to ₹, ₽, ₴, ₦, ₱, ₵), Arrows (single, double, long, hooked, curving), Geometric Shape, Latin extended (accented characters and ligatures), Greek, Cyrillic, Symbols (™, ®, ©, ⌘, ⌥, ⇧, ⌃), and Emoji. We don't ship the full Unicode database (~150,000 characters × ~10 MB) because most users only need the high-traffic subset. Search is forgiving — query by character name (`arrow`), keyword (`pi`), exact character (paste `©`), or code point (`U+2603`, `0x2603`, `2603`). For each focused character you get six representations: the character itself, the canonical `U+XXXX` code point, the HTML hex entity (`&#x2603;`), the HTML decimal entity (`&#9731;`), the JS escape (`\\u2603` or `\\u{1F600}` for astral plane), and the CSS escape (`\\2603`). Every one is one-click copyable.",
       how: [
@@ -13687,9 +13687,9 @@ export const tools: Tool[] = [
       "ergonomic keyboard", "typing efficiency", "keyboard heatmap",
     ],
     seo: {
-      title: "Keyboard Layout Visualizer — QWERTY / Dvorak / Colemak / AZERTY",
+      title: "Keyboard Layout Visualizer — QWERTY / Dvorak / Colemak",
       description:
-        "Visualise five keyboard layouts with finger colour-coding and home-row indicators. Paste any text to see how keystrokes distribute across your fingers. 100% offline.",
+        "Visualise five keyboard layouts with finger colour-coding and home-row indicators. Paste any text to see how keystrokes distribute across your fingers.",
       what:
         "Keyboard Layout Visualizer renders five major keyboard layouts at full size with finger-by-finger colour coding and home-row markers: QWERTY (US, 1873) — Sholes & Glidden's universal default; Dvorak (1936) — August Dvorak's optimised vowels-under-left-home-row layout; Colemak (2006) — Shai Coleman's modern minimum-relocation refresh; AZERTY (1907) — the French national variant of QWERTY; and Workman (2010) — OJ Bucao's bias toward stronger fingers. Each key is colour-coded by which finger should type it (pinkies red/pink, indexes green/cyan, thumbs gray) and the home-row keys are marked with a dot. A finger-load analyser takes any sample text and counts how many keystrokes each finger would make on the chosen layout, showing per-finger percentages, home-row hit rate, and strong-finger (index + middle) load. Useful for evaluating alternative layouts before committing to relearning your typing.",
       how: [
@@ -13745,7 +13745,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Fake JSON Data Generator — 19 Field Types, Schema-Driven",
       description:
-        "Define a schema with 19 field types — UUID, names, emails, phones, addresses, dates, integers, floats, booleans, lorem — and generate up to 10,000 records of fake JSON. 100% offline.",
+        "Define a schema with 19 field types — UUID, names, emails, phones, addresses, dates, integers, floats, booleans, lorem — and generate up to 10,000 records…",
       what:
         "Fake JSON Data Generator is schema-driven — you define a list of fields (each with a name and a type), and the generator produces an array of N JSON objects matching the schema. 19 field types are supported, grouped into 6 categories. Identifiers: UUID v4. Numbers: integer (with min/max), float (with min/max), boolean. Custom: literal (a fixed string). People: full name, first name, last name, username, email, phone. Location: street address, city, country. Business: company, URL. Date: locale date string, ISO 8601 date string. Text: lorem ipsum (sentence count configurable). Every random value uses `crypto.getRandomValues` with rejection sampling — uniform distribution, no modulo bias. The fake data draws from curated lists of ~150 names, 25 companies, 25 cities and 25 countries; UUIDs are real v4 UUIDs with the correct variant bits. Output is up to 10,000 records (limited to keep browser memory sensible). Regenerate button mints a fresh batch on demand.",
       how: [
@@ -13801,9 +13801,9 @@ export const tools: Tool[] = [
       "sql fixture generator",
     ],
     seo: {
-      title: "SQL Dummy Data Generator — INSERTs for PostgreSQL / MySQL / MSSQL",
+      title: "SQL Dummy Data Generator — INSERTs for PostgreSQL / MySQL",
       description:
-        "Define a schema with 19 fake-data field types and generate INSERT statements in PostgreSQL/SQLite, MySQL or SQL Server. Multi-row inserts, transaction wrap, ON CONFLICT.",
+        "Define a schema with 19 fake-data field types and generate INSERT statements in PostgreSQL/SQLite, MySQL or SQL Server. Multi-row inserts, transaction…",
       what:
         "SQL Dummy Data Generator combines the Fake JSON engine's 19 field types (UUID, names, emails, phones, addresses, cities, countries, companies, URLs, integers, floats, booleans, dates, ISO dates, lorem, literal) with three dialect-specific SQL emitters: PostgreSQL / SQLite (standard, double-quoted identifiers, `''` string escape), MySQL / MariaDB (backtick identifiers, backslash escapes), and SQL Server (bracket identifiers, `N'…'` Unicode literals). Pick a table name, define columns, and the tool emits ready-to-run INSERT statements with up to 10,000 rows. Options include single multi-row INSERT (default — much faster than one INSERT per row in PostgreSQL and MySQL), individual INSERTs per row (better for transactional fault isolation), transaction wrap (BEGIN / COMMIT), and conflict handling: `ON CONFLICT DO NOTHING` / `ON CONFLICT DO UPDATE` for Postgres or `ON DUPLICATE KEY UPDATE` for MySQL. Crypto-strong randomness via crypto.getRandomValues.",
       how: [
@@ -13859,7 +13859,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Random File Generator — Up to 100 MB, 5 Content Kinds",
       description:
-        "Generate random test files of any size up to 100 MB: random ASCII text, lorem ipsum, crypto-random binary, zero-filled, or noise PNG. SHA-256 receipt included. 100% browser-side.",
+        "Generate random test files of any size up to 100 MB: random ASCII text, lorem ipsum, crypto-random binary, zero-filled, or noise PNG.",
       what:
         "Random File Generator produces test files of any size up to 100 MB across five content kinds: Random ASCII text (cryptographically-random uniformly-distributed letters + digits — incompressible), Lorem ipsum (Latin filler sentences — text/plain), Random bytes (crypto.getRandomValues output — best for upload testing of incompressible binary), Zero-filled (all 0x00 — useful for sparse-file testing and storage benchmarks since it compresses to near nothing), and Noise PNG (PNG-encoded random RGB noise for image-upload testing where the backend checks content-type). Every random byte comes from `crypto.getRandomValues` chunked in 64 KB blocks to respect the WebCrypto per-call API limit. A SHA-256 hash of the generated content is computed and shown as a receipt — useful when running upload integrity tests. Customisable filename and per-kind file extension. 100 MB hard cap to prevent browser-tab OOM.",
       how: [
@@ -13918,7 +13918,7 @@ export const tools: Tool[] = [
     seo: {
       title: "CSV to JSON Converter — Auto-Detect Delimiter + Types",
       description:
-        "Auto-detect delimiter and headers, optionally infer numbers and booleans, output as array of objects or array of arrays. RFC 4180-compliant — handles quoted fields, embedded commas.",
+        "Auto-detect delimiter and headers, optionally infer numbers and booleans, output as array of objects or array of arrays. RFC 4180-compliant — handles…",
       what:
         "CSV to JSON Converter is a from-scratch RFC 4180 CSV parser plus a JSON emitter. It auto-detects the most common delimiter (comma, semicolon, tab or pipe) by sniffing the first ten lines — or you can pick one manually. Quoted fields containing the delimiter, escaped double quotes (`\"\"`), CRLF or LF line endings are all handled correctly. With 'header row' on (default), the first non-empty row becomes the field names; without it, columns are named `field1`, `field2`, etc. The 'typed values' option auto-converts numbers (integers + floats), booleans (`true` / `false` / `TRUE` / `FALSE`) and `null` / `NULL`; turn it off to keep every cell as a string. Output is either an array of objects (the API-response shape — recommended) or an array of arrays (preserves column order without rebuilding headers). Field-count consistency is reported per row, so malformed CSV (unescaped delimiter inside a field) is flagged. Pure functions, no upload.",
       how: [
@@ -13971,9 +13971,9 @@ export const tools: Tool[] = [
       "convert json array", "object array to csv", "csv from json",
     ],
     seo: {
-      title: "JSON to CSV Converter — Flatten Nested Objects + CRLF for Excel",
+      title: "JSON to CSV Converter — Flatten Nested Objects + CRLF",
       description:
-        "Convert JSON arrays of objects into clean CSV. Flatten nested objects into dotted columns, handle arrays via JSON / pipe-join / first-item modes, CRLF for Excel. 100% client-side.",
+        "Convert JSON arrays of objects into clean CSV. Flatten nested objects into dotted columns, handle arrays via JSON / pipe-join / first-item modes, CRLF…",
       what:
         "JSON to CSV Converter takes any JSON input — an array of objects (the standard API-response shape), an array of arrays (the first one becomes the header), or a single object (output as a one-row CSV) — and emits clean, spreadsheet-ready CSV. Nested objects can be flattened into dotted columns (`address.city`, `address.country` …) or kept as JSON-stringified cells. Nested arrays inside cells have three handling modes: 'Stringify as JSON' (lossless, the default), 'Join with `|`' (human-readable, good for tag lists) or 'Take first item' (when only the first element matters). Pick the delimiter (comma / semicolon / tab / pipe), the newline style (LF or Excel-friendly CRLF) and whether to include the header row. The output respects RFC 4180 quoting — fields that contain the delimiter, a quote or a newline are quoted and embedded quotes are doubled. Header columns are the union of all keys, so rows with missing fields produce empty cells instead of crashing.",
       how: [
@@ -14028,7 +14028,7 @@ export const tools: Tool[] = [
     seo: {
       title: "YAML to JSON Converter — Bidirectional with Subset Parser",
       description:
-        "From-scratch YAML 1.2 subset parser + emitter for K8s manifests, GitHub Actions workflows, docker-compose, dprint config. Bidirectional, all string forms, multi-line scalars.",
+        "From-scratch YAML 1.2 subset parser + emitter for K8s manifests, GitHub Actions workflows, docker-compose, dprint config. Bidirectional, all string forms…",
       what:
         "YAML to JSON Converter is a from-scratch YAML 1.2 subset parser + emitter focused on the configs developers actually edit: Kubernetes manifests, GitHub Actions workflows, GitLab CI configs, docker-compose, dprint / prettier / eslint configs, and CircleCI YAMLs. Supported on the parse side: scalars (plain strings, single-quoted, double-quoted with `\\n` `\\t` `\\uXXXX` escapes), numbers (decimal, hex, octal), booleans (true / false / yes / no), null (null / ~), block maps with arbitrary nesting (indentation-based), block sequences (`- item`), inline flow maps `{key: value, …}`, inline flow sequences `[a, b, c]`, multi-line literal strings (`|` with `+` / `-` chomping indicators), multi-line folded strings (`>`), and comments. Bidirectional: paste JSON, get YAML; paste YAML, get JSON. Errors include line numbers. NOT supported (yet): anchors / aliases (`&foo` / `*foo`), explicit tags (`!!str`), document markers (`---` / `...`).",
       how: [
@@ -14084,7 +14084,7 @@ export const tools: Tool[] = [
     seo: {
       title: "HTML to Markdown — DOMParser-Based GFM Converter",
       description:
-        "Convert HTML into clean GitHub-Flavored Markdown via DOMParser. Handles tables with alignment, code blocks with language hints, blockquotes, task lists, links and images.",
+        "Convert HTML into clean GitHub-Flavored Markdown via DOMParser. Handles tables with alignment, code blocks with language hints, blockquotes, task lists…",
       what:
         "HTML to Markdown is a DOMParser-based converter — we never use innerHTML, so scripts never execute. The output is GitHub-Flavored Markdown that round-trips cleanly through most renderers. Supported elements: all 6 heading levels (atx `#` or setext `===` style), paragraphs, `<br>` hard breaks, horizontal rules, `<strong>` and `<b>`, `<em>` and `<i>`, `<s>` / `<del>` strikethrough, inline `<code>` with automatic backtick escaping, `<pre><code>` code blocks with language hints from `class=\"language-foo\"`, links and images with titles, blockquotes, ordered + unordered lists (with arbitrary nesting), the GFM checkbox `<input type=\"checkbox\">` task-list extension, and tables with per-column alignment read from `align=` or `style=\"text-align:…\"`. Scripts, styles and noscript blocks are stripped. Configure the bullet character (`-`, `*`, `+`), heading style (atx vs setext), bold (`**` vs `__`), italic (`*` vs `_`), unknown-tag handling (drop vs preserve) and optional column wrapping. Live stats track headings, paragraphs, lists, tables, code blocks, links and images.",
       how: [
@@ -14140,7 +14140,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Binary to Decimal — Place-Value Table + IEEE 754 Decoder",
       description:
-        "Convert binary to decimal with a per-bit place-value table showing 2^n contribution. 32/64-bit inputs are decoded as IEEE 754 floats. BigInt-backed arbitrary precision.",
+        "Convert binary to decimal with a per-bit place-value table showing 2^n contribution. 32/64-bit inputs are decoded as IEEE 754 floats.",
       what:
         "Binary to Decimal is a focused single-direction converter built around the binary number system's underlying maths. Type any binary input (with or without `0b` prefix, optionally negative, underscores / commas / spaces ignored) and the tool produces: the canonical decimal value (BigInt, arbitrary precision), a per-bit place-value table from MSB to LSB showing which 2^n term each bit contributes, and a sum-of-set-bits breakdown like `2^7 + 2^6 + 2^0 = 128 + 64 + 1 = 193`. When the input is exactly 32 or 64 bits we additionally decode it as an IEEE 754 single- or double-precision float — showing the sign bit, biased and effective exponent, mantissa, computed value, and classification (zero / subnormal / normal / infinity / NaN). Useful for both learning binary fundamentals and debugging the binary representation of floats in low-level code.",
       how: [
@@ -14195,7 +14195,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Decimal to Binary — Division Steps + IEEE 754 Encoder",
       description:
-        "Convert decimal (integer or float) to binary with a full step-by-step division-by-2 algorithm display. Floats are encoded as IEEE 754 (single + double precision).",
+        "Convert decimal (integer or float) to binary with a full step-by-step division-by-2 algorithm display. Floats are encoded as IEEE 754 (single + double…",
       what:
         "Decimal to Binary is a focused single-direction converter that emphasises the conversion method, not just the result. Type any decimal number (integer or float, optional sign, supports scientific notation) and the tool shows: the binary representation (optionally grouped in 4-bit nibbles for readability), a step-by-step division-by-2 table (divide, record remainder, repeat until quotient is 0 — read remainders bottom-up for the binary digits), and an IEEE 754 encoder for fractional inputs (single and double precision, with sign bit + exponent + mantissa shown in colour-coded segments). BigInt powers the integer math, so 64+ bit decimal numbers convert without precision loss. The step-by-step display is the same algorithm taught in computer science classes — useful for studying for exams, debugging your own binary arithmetic, or building intuition for how integers map to bits.",
       how: [
@@ -14251,7 +14251,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Hexadecimal Converter — Base 2 / 8 / 10 / 16 + BigInt",
       description:
-        "Convert any number between binary, octal, decimal and hexadecimal. BigInt-backed for arbitrary precision — 64-bit and 128-bit values round-trip without rounding errors.",
+        "Convert any number between binary, octal, decimal and hexadecimal. BigInt-backed for arbitrary precision — 64-bit and 128-bit values round-trip without…",
       what:
         "Hexadecimal Converter is a bidirectional base 2 / 8 / 10 / 16 converter built on JavaScript BigInt, so it round-trips arbitrarily large numbers without precision loss. Type a number with no prefix and pick the base hint, or paste with `0x` / `0o` / `0b` and we auto-detect. Underscores, commas and spaces are ignored — `0x_DEAD_BEEF` and `0xDEADBEEF` parse identically. Output shows all four bases at once: binary (grouped in 4-bit nibbles for readability), octal (3-digit groups), decimal (with thousands separators), and hex (with uppercase A-F by default, optionally lowercase). Per-base options include UPPERCASE hex, group-digits-for-readability, and a step-by-step display that shows the divide-by-base remainders for educational use. Stats include bit length (number of bits required to hold the absolute value), and 'fits u32' / 'fits i64' flags to help engineers spot when a value won't fit a fixed-width integer.",
       how: [
@@ -14307,7 +14307,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Roman Numeral Converter — 1–3,999,999 with Vinculum",
       description:
-        "Convert decimal numbers to Roman numerals and back. Standard 1-3,999 plus the classical vinculum (overline) extension up to 3,999,999. Strict parser rejects invalid patterns.",
+        "Convert decimal numbers to Roman numerals and back. Standard 1-3,999 plus the classical vinculum (overline) extension up to 3,999,999.",
       what:
         "Roman Numeral Converter is bidirectional. For decimal → Roman, it produces the canonical form (`MCMXLVII` for 1947, `MMXXVI` for 2026). For numbers above 3,999 it uses the classical vinculum extension — each letter with an overline is multiplied by 1,000, so `V̄` is 5,000 and `M̄` is 1,000,000. The overlines are rendered with the U+0305 combining macron so the output is plain Unicode, paste-anywhere-compatible. For Roman → decimal, the parser is strict: it rejects four-in-a-row (`IIII`, `XXXX`), forbidden repetitions (`VV`, `LL`, `DD`) and invalid subtractive pairs (`IL`, `IC`, `VX`, `XM`). Only the six standard subtractive pairs are accepted: `IV`, `IX`, `XL`, `XC`, `CD`, `CM`. A reference grid lists the 20 most useful value→symbol mappings (from 1 to 1,000,000), each clickable to load the value into the input. Plain-language rules are spelled out so users can learn alongside the conversion.",
       how: [
@@ -14362,7 +14362,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Morse Code Translator — Text ↔ Morse + Web Audio Playback",
       description:
-        "Bidirectional ITU Morse code translator with Web Audio playback at 5-40 WPM and 300-1200 Hz tone. Letters, digits and the standard punctuation set. 100% offline.",
+        "Bidirectional ITU Morse code translator with Web Audio playback at 5-40 WPM and 300-1200 Hz tone. Letters, digits and the standard punctuation set.",
       what:
         "Morse Code Translator covers the full ITU/International Morse alphabet — 26 letters, 10 digits, and 19 punctuation marks (period, comma, question, apostrophe, exclamation, slash, parens, ampersand, colon, semicolon, equals, plus, dash, underscore, double-quote, dollar, at). Encoding uses single-space between symbols within a letter, three spaces between letters and ` / ` as the word separator (the ham-radio convention). Decoding is forgiving: it accepts any whitespace as a separator and word boundaries can be either `/` or `|`. The standout feature is Web Audio playback — pick a speed in words-per-minute (5-40) and a tone frequency in Hz (300-1200, ham-radio sweet spot 500-800) and the tool synthesises a clean square-windowed sine wave at the correct dot / dash / gap durations using the standard PARIS-word reference (1.2 / WPM seconds per unit). The duration estimate at the top tells you how long the transmission will take before you hit play. A live letter-by-letter alphabet grid lets you append symbols by clicking.",
       how: [
@@ -14418,7 +14418,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Braille Translator — Grade 1 English ↔ Unicode Braille",
       description:
-        "Bidirectional translator between English text and uncontracted (Grade 1) Braille using the Unicode Braille Patterns block (U+2800–U+28FF). Capital and number indicators handled.",
+        "Bidirectional translator between English text and uncontracted (Grade 1) Braille using the Unicode Braille Patterns block (U+2800–U+28FF).",
       what:
         "Braille Translator implements uncontracted (Grade 1) English Braille using the Unicode Braille Patterns block — characters U+2800 through U+28FF — so the output is plain text that pastes anywhere fonts support Unicode. Forward direction (text → Braille) handles the 26 letters, the 10 digits (with the number indicator ⠼ inserted before each digit run), the standard punctuation set (period, comma, question, exclamation, semicolon, colon, apostrophe, hyphen, parens, slash, double quote, asterisk, at-sign), and the capital indicator ⠠ before uppercase letters (toggleable). Reverse direction (Braille → text) is forgiving — it handles the number indicator (switching to digit mode until the next non-digit pattern), the capital indicator (capitalising the next letter), the standard punctuation patterns, and the space (U+2800 BRAILLE PATTERN BLANK → ASCII space). A live reference panel shows every letter / digit / indicator with its Braille glyph for learning. Honest note: this is uncontracted Braille (Grade 1) — Grade 2 contractions (where 'and' becomes a single cell, 'with' becomes a single cell, etc.) are not implemented.",
       how: [
@@ -14472,9 +14472,9 @@ export const tools: Tool[] = [
       "decoder nato", "alphabet for radio", "clear comms",
     ],
     seo: {
-      title: "NATO Alphabet Converter — Alpha Bravo Charlie + Phonetic Numbers",
+      title: "NATO Alphabet Converter — Alpha Bravo Charlie + Phonetic",
       description:
-        "Convert text into the 1956 ICAO/NATO phonetic alphabet (Alpha, Bravo, Charlie…) and back. Numbers spelled phonetically. Configurable joiner and casing. 100% offline.",
+        "Convert text into the 1956 ICAO/NATO phonetic alphabet (Alpha, Bravo, Charlie…) and back. Numbers spelled phonetically. Configurable joiner and casing.",
       what:
         "NATO Alphabet Converter implements the 1956 ICAO/NATO phonetic alphabet — Alpha through Zulu — plus the spelled-phonetically digits (Wun, Too, Tree, Fower, Fife, Six, Seven, Eight, Niner, Zero) that aviation and military comms use to avoid 5/9, 3/T, B/D confusion. Forward direction (text → NATO) supports four joiners (space, dash, hyphen, middle dot, comma), an UPPERCASE toggle, an option to spell punctuation (`Stop`, `Comma`, `Question`, `Slash`, `Dash`, …), and a 'drop unknown' toggle to silently skip characters not in the alphabet. Reverse direction (NATO → text) is forgiving — it accepts both standard NATO words (`Juliett`) and common alternative spellings (`Juliet`, `Juliette`), plus the spell-it-out number names (`One`, `Two`, …) alongside the phonetic forms (`Wun`, `Too`, …). A live letter-by-letter table shows every input character paired with its NATO word, perfect for dictating over a phone or radio.",
       how: [
@@ -14532,7 +14532,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Broken Link Checker — Offline HTML Link & Resource Audit",
       description:
-        "Paste HTML; we audit every anchor + stylesheet/script/image/iframe URL for empty hrefs, placeholders, mixed content, missing rel=noopener, tracking params, and duplicate-text-different-href. 100% offline.",
+        "Paste HTML; we audit every anchor + stylesheet/script/image/iframe URL for empty hrefs, placeholders, mixed content, missing rel=noopener, tracking…",
       what:
         "Broken Link Checker is a paste-based link audit — different from a server-side crawler that fetches every URL to check 4xx/5xx responses. This tool catches the broken patterns that live in the HTML itself, with no network round-trips needed. Every `<a>` element is categorised against seven signals: empty href (`href=\"\"`), placeholder hrefs (`#`, `javascript:void(0)`, `about:blank`), whitespace-only hrefs, invalid relative URLs (doesn't start with a scheme, fragment, root path or query), mixed content (http:// link on an HTTPS page — detected via the page's canonical or og:url), missing `rel=\"noopener\"` on `target=\"_blank\"` (a classic phishing-attack vector), and tracking parameters (utm_*, gclid, fbclid, etc.) leaking into internal navigation. The audit also covers resource URLs (`<link rel=stylesheet>`, `<script src>`, `<img src>`, `<iframe src>`) for empty src and mixed-content issues. The duplicate-text detector flags the common SEO mistake of \"Click here\" appearing multiple times pointing to different destinations.",
       how: [
@@ -14588,7 +14588,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Meta Tag Analyzer — Holistic SEO Score Across 8 Categories",
       description:
-        "Paste HTML for an SEO score out of 100 broken down across 8 categories: title, description, technical, Open Graph, Twitter Card, hreflang, JSON-LD, PWA. Granular fix suggestions. 100% offline.",
+        "Paste HTML for an SEO score out of 100 broken down across 8 categories: title, description, technical, Open Graph, Twitter Card, hreflang, JSON-LD, PWA.",
       what:
         "Meta Tag Analyzer is a holistic SEO meta-tag audit — broader than the Open Graph Preview (which renders social cards) and complementary to the Canonical URL Checker (which focuses on URL normalisation). The audit covers eight scoring categories: **Title** (presence + 30-60 char sweet spot, max 16 pts), **Description** (presence + 70-160 chars, max 14 pts), **Technical** (charset + viewport with width=device-width + html lang + canonical + robots, max 14 pts), **Open Graph** (og:title/description/image/url/type, max 16 pts), **Twitter Card** (twitter:card/title/description/image plus card-type validation, max 10 pts), **International** (hreflang count + x-default, max 8 pts), **Structured Data** (JSON-LD parse + recognised @type values like BreadcrumbList/Article/Product/Organization/WebSite/FAQPage, max 12 pts), and **PWA** (theme-color + manifest link, max 10 pts). Total: 100 points. Each category renders a progress bar so you see at a glance which area is under-served. Individual checks call out specifics: title length warnings, missing og:image, contradictory robots directives, invalid twitter:card values, broken JSON-LD parsing, etc.",
       how: [
@@ -14646,7 +14646,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Open Graph Preview — Facebook / X / LinkedIn Card Mockups",
       description:
-        "Paste your page HTML and see exactly how it renders when shared on Facebook, X / Twitter and LinkedIn. Side-by-side preview cards plus a full SEO audit. 100% offline.",
+        "Paste your page HTML and see exactly how it renders when shared on Facebook, X / Twitter and LinkedIn. Side-by-side preview cards plus a full SEO audit.",
       what:
         "Open Graph Preview is a paste-in social-card validator. Give it the raw HTML of your page (just the `<head>` is enough), and it extracts every Open Graph (`og:*`), Twitter (`twitter:*`) and basic SEO meta tag, then renders three side-by-side preview cards that mimic Facebook / Meta share, X (Twitter) — both `summary_large_image` and `summary` cards — and LinkedIn share. Below the previews, a full audit lists every issue: missing required tags (`og:title`, `og:description`, `og:image`, `og:url`), title and description length warnings (over the recommended 30-60 / 50-200 chars), `og:image` relative URLs that won't resolve, unrecognised `twitter:card` values, missing canonical, missing `<title>`. Open Graph Preview is the offline alternative to the Facebook Sharing Debugger and X Card Validator — no need to deploy to test, no cache invalidation hassle.",
       how: [
@@ -14700,9 +14700,9 @@ export const tools: Tool[] = [
       "redirect 301", "redirect 302", "redirect chain",
     ],
     seo: {
-      title: "htaccess Redirect Generator — Apache Rules with Visual Builder",
+      title: "htaccess Redirect Generator — Apache Rules with Visual",
       description:
-        "Build clean .htaccess redirect / rewrite rules from a visual editor. Simple path, wildcard folder, regex rewrite, force-HTTPS, add/remove www, force trailing slash. 301/302/307.",
+        "Build clean .htaccess redirect / rewrite rules from a visual editor. Simple path, wildcard folder, regex rewrite, force-HTTPS, add/remove www, force…",
       what:
         "htaccess Redirect Generator is a visual builder for the most-used Apache `.htaccess` directives. Seven rule types: Simple redirect (`Redirect 301 /old /new` — single path to single path), Wildcard redirect (`RewriteRule ^/old/(.*)$ /new/$1` — folder-to-folder mapping that preserves the tail), Regex rewrite (`RewriteRule` with your own pattern), Force HTTPS (sends every HTTP request to the HTTPS equivalent), Add www (canonical `example.com` → `www.example.com`), Remove www (canonical `www.example.com` → `example.com`), and Force trailing slash (adds `/` to URLs that don't have one). Each rule has configurable HTTP status (301 permanent, 302 temporary, 307 preserve-method) and a toggle to preserve the query string (`[QSA]`). Output options include wrapping the entire block in `<IfModule mod_rewrite.c>` (safer when the module isn't loaded), an optional commented header, and a switch to use `RedirectMatch` (anchored regex) for the simple rule type if you need query-string regex matching. Pure string generation — no Apache validation, just well-formed directives.",
       how: [
@@ -14756,9 +14756,9 @@ export const tools: Tool[] = [
       "redirect debug", "follow redirects", "redirect hop counter",
     ],
     seo: {
-      title: "Redirect Chain Checker — Parse `curl -IL` Output, Audit Each Hop",
+      title: "Redirect Chain Checker — Parse `curl -IL` Output, Audit Each",
       description:
-        "Paste curl -IL output (or any HTTP response chain). Parses every hop's status + Location with relative-URL resolution. Audits HTTPS downgrades, loops, 3xx-without-Location, 301/302/307/308 semantics. 100% offline.",
+        "Paste curl -IL output (or any HTTP response chain). Parses every hop's status + Location with relative-URL resolution. Audits HTTPS downgrades, loops…",
       what:
         "Redirect Chain Checker is a paste-based parser for HTTP redirect chains. Run `curl -IL https://example.com` (or `wget -S --max-redirect=10`) and paste the output. We walk every HTTP status line, group its headers into a hop, and resolve Location headers against the previous URL (so relative Location: /new becomes the absolute https://host/new). Each hop is then audited for: missing Location on 3xx (a spec violation), HTTPS-to-HTTP downgrade (modern browsers warn loudly), redirect loops (the same URL appearing twice in the chain), and the specific semantics of 301 / 302 / 307 / 308 (permanent vs temporary, method-preserving vs not). The chain-level audit counts hops (>5 = SEO smell, >20 = browser cap), checks the final status, and surfaces Set-Cookie on redirects (which survive cross-redirect chains but can balloon).",
       how: [
@@ -14814,7 +14814,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Canonical URL Checker — Audit, Hreflang Loop, Normaliser",
       description:
-        "Paste HTML to audit canonical, og:url, twitter:url, hreflang alternates and base href. Single-URL mode normalises (lowercase host, strip default ports, drop UTM params, remove fragments). 100% offline.",
+        "Paste HTML to audit canonical, og:url, twitter:url, hreflang alternates and base href. Single-URL mode normalises (lowercase host, strip default ports…",
       what:
         "Canonical URL Checker pairs two practical SEO utilities. **HTML audit**: paste a page's source and we extract every canonical-relevant tag using DOMParser. Multiple `<link rel=canonical>` tags are flagged as errors (Google considers conflicting canonicals and may ignore all of them). The canonical is compared against og:url and twitter:url after normalisation — disagreement means Facebook/LinkedIn and Google index different URLs. All href values are validated: must be absolute (the relative-path mistake breaks indexing), must use https (http canonicals get downgraded warnings), must not have a fragment. Hreflang alternates are checked for: presence of `x-default` (Google recommends it for unmatched locales) and a closed loop with the canonical itself (alternates must self-reference). **URL normaliser**: paste any URL and we apply the canonical-URL transformation rules — lowercase scheme + host, strip default ports (:443 for https, :80 for http), drop tracking params (16+ utm_* / gclid / fbclid / etc.), remove fragments, deduplicate. The output is the URL Google would treat as canonical.",
       how: [
@@ -14871,7 +14871,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Mobile-Friendly Test — Paste HTML for an Offline Audit",
       description:
-        "Paste a page's HTML for a 0-100 mobile-friendliness score. Checks viewport, tap targets ≥ 44px, font-size, fixed-width containers, responsive images, plugin content. Same signals Google's Mobile-Friendly Test used. 100% offline.",
+        "Paste a page's HTML for a 0-100 mobile-friendliness score. Checks viewport, tap targets ≥ 44px, font-size, fixed-width containers, responsive images…",
       what:
         "Mobile-Friendly Test is an HTML-paste audit that catches the most common mobile usability mistakes — the same set Google's old (sunset 2023) Mobile-Friendly Test was checking, plus a few extras. **Viewport**: must have `<meta name=viewport content='width=device-width, initial-scale=1'>`; blocking user-scalable or locking maximum-scale=1 is flagged as an accessibility warning (low-vision users can't zoom). **Tap targets**: any `<a>` or `<button>` declaring inline width or height below 44 px (Apple Human Interface Guidelines minimum). **Fonts**: any element with inline `font-size: <12px` (mobile body text should be ≥ 16 px). **Fixed widths**: containers using inline `width: <Npx>` greater than 360 px (the narrowest common phone viewport). **Responsive images**: any `<img>` wider than 480 px without `max-width: 100%` or `width: 100%`. **Plugins**: any `<object>`, `<embed>`, or `<applet>` (Flash, Java) — none of these work on mobile in 2026. Score weighted 30 pts per failure and 8 pts per warning.",
       how: [
@@ -14928,7 +14928,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Website Cache Checker — Cache-Control, ETag, Vary, CDN Audit",
       description:
-        "Paste an HTTP response; we audit Cache-Control, Pragma, Expires, ETag, Last-Modified, Vary, Age, and the CDN cache-status header. Computes freshness window, surfaces contradictions. 100% offline.",
+        "Paste an HTTP response; we audit Cache-Control, Pragma, Expires, ETag, Last-Modified, Vary, Age, and the CDN cache-status header. Computes freshness…",
       what:
         "Website Cache Checker is the cache-specific deep-dive that complements the HTTP Header Checker's broader audit. Every cache-related header gets first-class treatment. Cache-Control is parsed into its directives — recognising `public`, `private`, `no-store`, `no-cache`, `must-revalidate`, `immutable`, `max-age=N`, `s-maxage=N`, `stale-while-revalidate=N` — and each directive's effect is explained in plain English. The freshness window is computed in priority order: `s-maxage` wins for shared caches, then `max-age`, then `Expires`, then nothing (heuristic caching). We surface the actual seconds-of-freshness and convert to human time (3h, 1d, 1y). Contradictions are flagged (public + private, both Cache-Control and Expires set). Validators (ETag, Last-Modified) are surfaced — and we warn when a response is cacheable but has neither (every revalidation re-downloads in full). Age is checked against the freshness — if Age > max-age, the response is stale. The CDN cache-status header is interpreted (HIT / MISS / EXPIRED / DYNAMIC) for Cloudflare, Fastly, Vercel, AWS, Azure, Akamai. Vary is parsed with a specific warning for `Vary: *` (every request is unique → caches can never reuse).",
       how: [
@@ -14984,7 +14984,7 @@ export const tools: Tool[] = [
     seo: {
       title: "CDN Checker — Fingerprint the CDN from Response Headers",
       description:
-        "Paste HTTP headers; we fingerprint Cloudflare, Fastly, Akamai, CloudFront, Vercel, Netlify, GitHub Pages, Bunny, KeyCDN, Imperva, Sucuri, Google CDN, Azure Front Door — and the underlying nginx / Apache origin. 100% offline.",
+        "Paste HTTP headers; we fingerprint Cloudflare, Fastly, Akamai, CloudFront, Vercel, Netlify, GitHub Pages, Bunny, KeyCDN, Imperva, Sucuri, Google CDN…",
       what:
         "CDN Checker is a header-signature fingerprinter. Every major CDN leaks identifying headers — Cloudflare's `cf-ray` is the canonical example, but each platform has its own: Fastly's `x-served-by` (with the distinctive `cache-XYZ-DDD` pattern), AWS CloudFront's `x-amz-cf-id` and `x-amz-cf-pop`, Akamai's `x-akamai-transformed` / `x-akamai-request-id` / `akamai-grn`, Vercel's `x-vercel-id` and `x-vercel-cache`, Netlify's `x-nf-request-id`, GitHub Pages' `x-github-request-id`, Bunny's `server: BunnyCDN` and `cdn-pullzone`, KeyCDN's `server: keycdn-engine`, Imperva's `x-iinfo`, Sucuri's `server: Sucuri/Cloudproxy`, Google Cloud CDN's `via: google-fe`, Azure Front Door's `x-msedge-ref` and `x-azure-ref`. We test each rule independently — multiple matches are common (e.g. Cloudflare in front of nginx). Each hit has a confidence level (high for distinctive signatures, low for shared like `server: nginx`). The flat headers table marks signature headers with a CDN badge so you can see exactly which leaked the platform.",
       how: [
@@ -15038,7 +15038,7 @@ export const tools: Tool[] = [
     seo: {
       title: "SSL Expiry Reminder — Paste PEM, Get a Calendar .ics",
       description:
-        "Paste a PEM certificate; we extract notAfter via our X.509 parser, compute days-till-expiry, and emit a downloadable `.ics` reminder you can drop into Google/Outlook/Apple Calendar. 100% offline.",
+        "Paste a PEM certificate; we extract notAfter via our X.509 parser, compute days-till-expiry, and emit a downloadable `.ics` reminder you can drop into…",
       what:
         "SSL Expiry Reminder builds on the hand-rolled X.509 parser used in the SSL Certificate Checker. Paste a PEM certificate (or use the sample) and we walk the ASN.1 DER to extract the subject CN and the notAfter date. The days-till-expiry counter updates live as you paste. Pick a lead time (7 / 14 / 30 / 60 / 90 days before expiry — 30 is the default since it gives breathing room for renewal QA without being too far out) and an alarm offset (1 hour before, 9 hours, 1 day, or 1 week — defaults to 9 hours so the reminder fires at start-of-workday the day before). The output is an RFC 5545-compliant `.ics` file with: a unique UID per cert, the cert's subject in the summary, the expiry date in the description, an all-day VEVENT, and an embedded VALARM. The file is line-folded at 73 octets per the spec, uses CRLF line endings, and parses cleanly in Google Calendar, Outlook (desktop + web + 365), Apple Calendar, and Fastmail. Download the file or copy the raw .ics text to clipboard.",
       how: [
@@ -15094,7 +15094,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Website Uptime Monitor — Browser-Side Poller, No Backend",
       description:
-        "Add URLs to a watchlist; the tool polls each one at your interval from your own browser using `mode: no-cors`. Live uptime %, avg RTT, and a 240-check timeline. Persists in localStorage. 100% client-side.",
+        "Add URLs to a watchlist; the tool polls each one at your interval from your own browser using `mode: no-cors`. Live uptime %, avg RTT, and a 240-check…",
       what:
         "Website Uptime Monitor is an in-browser uptime tracker. Add URLs (with optional labels), set per-target polling intervals (5-3600 seconds) and timeouts. The tool fetches each URL with `mode: no-cors, cache: no-store` from your browser — this returns an opaque response, but that's enough to tell up (network success) vs down (network error) vs timeout (AbortController fired). The status code is intentionally invisible per CORS rules, but for an up/down monitor the opaque signal is what matters. Per-target stats: uptime % (last 240 checks), average round-trip latency (using performance.now), last status, and a colour-coded timeline strip showing every check in chronological order — emerald for up, rose for down, amber for timeout. All targets + history persist in localStorage so refreshing the tab doesn't reset (the actual polling does need an open tab; mobile browsers throttle background tabs aggressively). The 'Check now' button forces a poll across every target; 'Pause' stops the intervals.",
       how: [
@@ -15151,7 +15151,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Sitemap Validator — Parse, Validate & Extract URLs",
       description:
-        "Parse any sitemap.xml or sitemap-index via DOMParser. Validates against sitemaps.org spec. Flags missing <loc>, invalid lastmod, bad changefreq, duplicates, size limits.",
+        "Parse any sitemap.xml or sitemap-index via DOMParser. Validates against sitemaps.org spec. Flags missing <loc>, invalid lastmod, bad changefreq…",
       what:
         "Sitemap Validator parses any sitemap.xml or sitemap-index file via DOMParser (browser-native, safe — no script execution) and validates the structure against the sitemaps.org spec. It correctly distinguishes between `<urlset>` (a list of URLs) and `<sitemapindex>` (a list of child sitemaps), validates the recommended `xmlns` attribute, and walks every entry. Per-URL checks include: missing or empty `<loc>` (error), `<loc>` not an absolute URL (warning), `<loc>` using http:// instead of https:// (info), `<loc>` over 2,048 characters (warning), invalid `<lastmod>` (not ISO 8601 — warning), invalid `<changefreq>` (not one of always/hourly/daily/weekly/monthly/yearly/never — warning), out-of-range `<priority>` (must be 0.0-1.0 — warning), and duplicate `<loc>` values (warning). File-level checks: empty document (error), no root or wrong root element (error), > 50,000 URLs (warning — Google's per-sitemap limit), > 50 MB file (warning — Google's per-sitemap size limit). Every URL is extracted to a filterable table with TSV export.",
       how: [
@@ -15206,7 +15206,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Domain Age Checker — Parse WHOIS, Compute Age + Expiry",
       description:
-        "Paste a WHOIS record; extract creation / updated / expiry dates, registrar, status, name servers; compute age and days-till-expiry. Handles VeriSign, Nominet, JPRS, AfriNIC and most ccTLDs. 100% offline.",
+        "Paste a WHOIS record; extract creation / updated / expiry dates, registrar, status, name servers; compute age and days-till-expiry.",
       what:
         "Domain Age Checker is a WHOIS record parser. Most TLDs (com, net, org, io, co, etc.) follow VeriSign-style colon-separated key/value pairs that we parse with a curated regex set: `Creation Date:`, `Updated Date:`, `Registry Expiry Date:`, `Registrar:`, `Domain Status:`, `Name Server:`. Some ccTLDs use different keys (`Registered on:` for Nominet, `Last modified:` for AfriNIC) — we handle those too. Date formats are messy in the wild: ISO 8601, DD-MMM-YYYY (Nominet), YYYYMMDD (some Asian registries), and JS-style RFC 2822 — we try them in order. The age is computed in days and years, with a humanised duration like '2y 145d'. The days-till-expiry counter is colour-coded (red < 30, amber < 90, emerald > 90). Critical status values trigger their own warnings: clientHold / serverHold (DNS suspended), redemptionPeriod / pendingDelete (the domain is in the grace window before it's released back to the public pool).",
       how: [
@@ -15261,7 +15261,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Email Header Analyzer — SPF, DKIM, DMARC + Received Chain",
       description:
-        "Paste raw email headers to parse the Received chain hop-by-hop, surface SPF/DKIM/DMARC verdicts with the verified domain, and measure transit timing. RFC 5322 unfolding included.",
+        "Paste raw email headers to parse the Received chain hop-by-hop, surface SPF/DKIM/DMARC verdicts with the verified domain, and measure transit timing.",
       what:
         "Email Header Analyzer parses raw RFC 5322 email headers (the 'View Source' / 'Show Original' content in your mail client) and turns them into a readable forensic view. It unfolds continuation lines, splits the Received chain into individual hops (reversed so index 0 is closest to the sender), extracts the from/by/with/protocol/timestamp from each hop, and computes the inter-hop latency where timestamps are present. SPF / DKIM / DMARC verdicts are pulled from `Authentication-Results`, `Received-SPF` and `DKIM-Signature` headers — each with the method, verdict (pass / fail / softfail / neutral / permerror / temperror), and the domain the verdict applies to. ARC chain authentication is recognised and labelled. The standard identifiers (From, To, Cc, Reply-To, Subject, Date, Message-ID) are extracted to the top. Useful for: investigating delivery issues, hunting phishing, verifying a forwarded message's origin, or just understanding how email actually flows.",
       how: [
@@ -15316,9 +15316,9 @@ export const tools: Tool[] = [
       "email deliverability", "spf debug", "spf record breakdown",
     ],
     seo: {
-      title: "SPF Record Checker — Per-Token Breakdown + Lookup-Limit Audit",
+      title: "SPF Record Checker — Per-Token Breakdown + Lookup-Limit",
       description:
-        "Paste your domain's SPF TXT record and get a per-token breakdown of qualifiers, mechanisms, modifiers, plus a DNS-lookup count vs the RFC 7208 10-lookup limit and issues panel.",
+        "Paste your domain's SPF TXT record and get a per-token breakdown of qualifiers, mechanisms, modifiers, plus a DNS-lookup count vs the RFC 7208 10-lookup…",
       what:
         "SPF Record Checker is a paste-in validator for RFC 7208 SPF records (TXT values beginning with `v=spf1`). It tokenises the record, identifies each token as a mechanism (`a`, `mx`, `ip4`, `ip6`, `include`, `ptr`, `exists`, `all`) or modifier (`redirect`, `exp`), pulls out the qualifier prefix (`+` pass, `-` fail, `~` softfail, `?` neutral), parses CIDR masks (`/24`, `//64`), and validates IP address syntax. Critically, it counts the mechanisms that cause DNS lookups (`a`, `mx`, `ptr`, `exists`, `include`) against the RFC 7208 §4.6.4 hard limit of 10 — most SPF debugging is about staying under this limit, which `include` chains blow through fast. Issues panel surfaces common mistakes: missing `all` terminator (defaults to softfail), `all` not last (anything after it is ignored), `+all` (permit any sender — almost always wrong), invalid IP addresses, out-of-range CIDR masks, unknown mechanism or modifier names.",
       how: [
@@ -15374,7 +15374,7 @@ export const tools: Tool[] = [
     seo: {
       title: "DKIM Record Checker — Tag Validation + RSA Key Length",
       description:
-        "Paste a DKIM TXT record value — validate every RFC 6376 tag (v / k / p / h / s / t), infer RSA modulus bit count from the DER-encoded public key, flag deprecated configurations. 100% offline.",
+        "Paste a DKIM TXT record value — validate every RFC 6376 tag (v / k / p / h / s / t), infer RSA modulus bit count from the DER-encoded public key, flag…",
       what:
         "DKIM Record Checker parses a DKIM TXT record value and validates every tag against RFC 6376. Required tags: v= (must be DKIM1), p= (base64 public key — empty means revoked). Optional but checked: k= (key type: rsa default or ed25519), h= (acceptable hash algorithms — flags SHA-1 as deprecated, missing sha256 as a warning), s= (allowed service types, default `*`), t= (flag list — y=testing, s=strict subdomain alignment), n= (free-text notes). For RSA keys we decode the base64 then walk the DER-encoded SubjectPublicKeyInfo to read the modulus length precisely — < 1024 bits is rejected, < 2048 bits is warned, ≥ 2048 is OK. Ed25519 keys are recognised and noted but the size check doesn't apply. Each parsed tag appears in a table with its meaning column.",
       how: [
@@ -15429,7 +15429,7 @@ export const tools: Tool[] = [
     seo: {
       title: "DMARC Record Checker — Policy Validation + 0-100 Score",
       description:
-        "Paste a DMARC TXT record value — validate every RFC 7489 tag (v / p / sp / adkim / aspf / pct / rua / ruf / ri / fo / rf), compute a 0-100 weighted score across policy strength + reporting. 100% offline.",
+        "Paste a DMARC TXT record value — validate every RFC 7489 tag (v / p / sp / adkim / aspf / pct / rua / ruf / ri / fo / rf), compute a 0-100 weighted score…",
       what:
         "DMARC Record Checker parses a DMARC TXT record value and validates every tag against RFC 7489. Required: v= (must be DMARC1), p= (policy: none / quarantine / reject). Optional but checked: sp= (subdomain policy, defaults to p=), adkim= and aspf= (DKIM/SPF alignment, r=relaxed default or s=strict), pct= (percentage of failing mail subject to policy, 0-100), rua= (aggregate report URIs, comma-separated, must be mailto: or https:), ruf= (forensic report URIs), ri= (report interval in seconds, default 86400 = 1 day), fo= (forensic options: 0/1/d/s), rf= (forensic format, default afrf). The 0-100 score is weighted: policy strength carries the most weight (p=reject 35, quarantine 25, none 5), reporting is rewarded (rua 15, ruf 5), alignment strictness adds bonuses, pct=100 adds 10 for fully-enforced policies. A score above 90 is excellent, 70-90 is strong, 50-70 moderate, 25-50 weak, below 25 missing.",
       how: [
@@ -15486,7 +15486,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Keyword Density Checker — 1/2/3-Gram Frequency + SEO Bands",
       description:
-        "Tokenises any text and produces 1-, 2- and 3-gram frequency tables with density percentages. Each keyword is banded against an ideal 1-3% range — easy spotting of over-optimisation.",
+        "Tokenises any text and produces 1-, 2- and 3-gram frequency tables with density percentages. Each keyword is banded against an ideal 1-3% range — easy…",
       what:
         "Keyword Density Checker tokenises any block of prose into Unicode-aware words and produces three frequency tables side-by-side: 1-grams (single words), 2-grams (consecutive word pairs), and 3-grams (triples). For each keyword we report the raw count, the density percentage (count ÷ total tokens × 100), and a band — 'optimal' (within the configured ideal range, default 1-3% for primary keywords), 'high' (above the ideal range — possible over-optimisation), and 'low' (below the ideal range). Tunables include the optimal range bounds (most SEO guidelines settle on 1-3% for primary keywords; longer-tail or supporting terms can go lower), case-insensitive comparison, stopword filtering (drops the/and/of/to/… for 1-grams), and a minimum word length threshold. A live filter narrows the tables by substring when your text is long. Export the full report as TSV (paste into a spreadsheet) or copy a per-table snippet. The same engine powers our internal SEO writing review.",
       how: [
@@ -15551,7 +15551,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Hashtag Generator — Relevant Hashtags for Any Topic",
       description:
-        "Generate relevant, popular and niche hashtags for Instagram, TikTok, X, LinkedIn and YouTube with Toollyz Hashtag Generator. Pick a reach mix, save favorites and copy with one click — free and private.",
+        "Generate relevant, popular and niche hashtags for Instagram, TikTok, X, LinkedIn and YouTube with Toollyz Hashtag Generator. Pick a reach mix, save…",
       what:
         "A Hashtag Generator turns a topic or keyword into a set of relevant hashtags you can add to a post to reach more people. Toollyz Hashtag Generator expands your seed keyword into useful variations and pairs it with curated banks of popular and long-tail tags tuned for each platform — Instagram, TikTok, X, LinkedIn and YouTube — each with its own sensible default count. A reach-mix control lets you lean toward broad, high-volume tags (more reach, more competition) or niche, long-tail tags (smaller audiences that are easier to rank in), and it auto-detects the topic's category (travel, food, fitness, tech and more) to add fitting suggestions. You can shuffle for fresh ideas, save favorites, and copy everything as a ready-to-paste block or one tag per line. Importantly, these are curated, relevance-ranked suggestions generated entirely in your browser — not live trend data scraped from any platform — so nothing you type is ever uploaded.",
       how: [
@@ -15637,7 +15637,7 @@ export const tools: Tool[] = [
       "html snapshot", "render html offline", "html2png",
     ],
     seo: {
-      title: "Website Screenshot Generator — HTML → PNG via SVG foreignObject",
+      title: "Website Screenshot Generator — HTML → PNG via SVG",
       description:
         "Paste HTML; we render to PNG via the SVG foreignObject pipeline (no html2canvas). Five size presets, 1×/2×/3× scale, custom background. 100% offline.",
       what:
@@ -15697,7 +15697,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Gradient Mesh Generator — Stacked Radial Blobs, Drag-to-Move",
       description:
-        "Build modern mesh gradients with a stack of soft radial colour blobs. Drag any stop in the preview, tweak per-stop size and colour, pick a base. Six curated palettes. One-line CSS output. 100% offline.",
+        "Build modern mesh gradients with a stack of soft radial colour blobs. Drag any stop in the preview, tweak per-stop size and colour, pick a base.",
       what:
         "Gradient Mesh Generator implements the 'mesh gradient' look popularised by Stripe, Linear, Vercel and Apple marketing pages. Technically it's a stack of `radial-gradient(circle at x% y%, color 0%, transparent size%)` layers — each blob is a soft circle with a transparent outer ring, and the layers blend together against a solid base colour. The on-page editor lets you drag every stop directly in the preview (Pointer Events for mouse/touch/pen unification), with per-stop sliders for X position, Y position, size (10-100% of the container's larger dimension), and colour. Six curated palettes (Sunset, Ocean, Forest, Candy, Midnight, Stripe) cover most marketing-page needs; click any preset to load its full stop list. Add or remove stops freely — typical meshes use 3-6 stops. Output is one CSS rule: `background-color:` + `background-image:` with comma-separated radial gradients. No SVG, no images, no JS — pure CSS that renders at any element size.",
       how: [
@@ -15752,9 +15752,9 @@ export const tools: Tool[] = [
       "design assets svg",
     ],
     seo: {
-      title: "SVG Shape Generator — 16 Shapes, Gradient Fill, Copy / Download",
+      title: "SVG Shape Generator — 16 Shapes, Gradient Fill, Copy",
       description:
-        "Pick from 16 shapes (circle, square, polygon, star, heart, arrow, chevron, speech bubble, lightning, cross, ring). Solid or gradient fill, adjustable stroke. Copy SVG or download .svg. 100% offline.",
+        "Pick from 16 shapes (circle, square, polygon, star, heart, arrow, chevron, speech bubble, lightning, cross, ring). Solid or gradient fill, adjustable…",
       what:
         "SVG Shape Generator is a library of 16 hand-coded decorative shapes parameterised with a uniform style state. Each shape is a single `<polygon>` or `<path>` element — no nested groups, no embedded text, no external dependencies. Coverage: basic primitives (circle, square, rounded square, triangle, rhombus), regular polygons (pentagon, hexagon, octagon), and useful UI shapes (5-point star, heart with cubic Bezier curves, right arrow, chevron, speech bubble, lightning bolt, plus-cross, evenodd-filled ring). The style state controls fill (solid or two-stop linear gradient with angle), optional stroke (colour + width), and viewBox size (used for proportions only — SVG scales freely once exported). The on-page picker renders every shape as a 64-pixel mini preview so you can compare options at a glance. Output is a complete self-contained `<svg>` with embedded `<linearGradient>` when applicable.",
       how: [
@@ -15811,7 +15811,7 @@ export const tools: Tool[] = [
     seo: {
       title: "CSS Animation Generator — Keyframes + Live Preview",
       description:
-        "Eight built-in animations (fade-in, slide-up, pop, shake, bounce, pulse, spin, wobble), tune duration / delay / timing / iteration / direction with a live preview, copy the full `@keyframes` block. 100% offline.",
+        "Eight built-in animations (fade-in, slide-up, pop, shake, bounce, pulse, spin, wobble), tune duration / delay / timing / iteration / direction with a live…",
       what:
         "CSS Animation Generator is a preset-driven editor for `@keyframes`. Eight presets cover the recipes you actually use day-to-day: fade-in, slide-up (with a custom cubic-bezier for an iOS-style slide), pop (overshoot bezier), shake (5-step horizontal jitter), bounce (loops), pulse (loops with a 1.08× scale), spin (linear 360° loop) and wobble (rotation + translation, 6 stops). Each preset is a complete keyframe sequence — you control overall timing (duration in ms, delay, iteration count or infinite, direction, timing function from a curated list including overshoot and ease-in-out beziers). The preview is a real DOM element with the generated CSS applied via inline styles + a live `<style>` block; clicking Replay re-mounts to restart the animation. The output is a complete `@keyframes name { … }` block plus a ready-to-paste `.animated { animation: … }` rule.",
       how: [
@@ -15867,7 +15867,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Box Shadow Generator — Layered CSS Shadows + Live Preview",
       description:
-        "Stack any number of shadow layers, each with offset, blur, spread, colour + alpha, and inset. Live preview against four shapes. Eight presets — soft, elevated, floating, neumorphic, glow, focus ring, long shadow, stripes. 100% offline.",
+        "Stack any number of shadow layers, each with offset, blur, spread, colour + alpha, and inset. Live preview against four shapes. Eight presets — soft…",
       what:
         "Box Shadow Generator is a layer-based editor for the CSS `box-shadow` property. Every entry is one shadow with five sliders — X offset (-60 to 60 px), Y offset (-60 to 60 px), blur (0-80 px), spread (-30 to 30 px) and a colour picker with alpha (0-100%). Toggle `inset` per layer to flip a shadow inside the element. Drop in a preset to start from a sensible recipe — Soft (one subtle drop), Elevated (a 2-layer Material-style stack), Floating (close + wide blur for a hovering card), Neumorphic (paired inner highlight + shadow), Glow, Focus ring, Long shadow (18 tiny stacked shadows for a flat retro look), and Layered stripes (three offset colour blocks). The live preview renders against four target shapes — Card, Button, Square, Circle — over a configurable stage background. Output is a single `box-shadow: …;` line with comma-separated layers.",
       how: [
@@ -15923,7 +15923,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Glassmorphism Generator — backdrop-filter Visual Builder",
       description:
-        "Visual builder for the glassmorphism recipe: blur, saturation, tint + alpha, border + alpha. Live preview over six gradient backgrounds. Outputs CSS with the WebKit fallback. 100% offline.",
+        "Visual builder for the glassmorphism recipe: blur, saturation, tint + alpha, border + alpha. Live preview over six gradient backgrounds.",
       what:
         "Glassmorphism Generator is a visual builder for the four-property CSS recipe used in iOS 7+, macOS Big Sur, Vision Pro, and modern dashboards: low-alpha background, `backdrop-filter: blur() saturate()`, a 1-px white border and a soft drop shadow. The on-page preview places your glass card over one of six gradient backgrounds (Sunset, Ocean, Forest, Candy, Midnight, Frost) — glassmorphism is only visible against something colourful behind it, so flat-white previews would defeat the point. Sliders cover blur (0-40 px), saturation (0.5-3.0× — bumps colours behind the glass), border radius (0-64 px), border width (0-6 px), shadow strength (0-100%), and dedicated colour-with-alpha pickers for the tint and border. Output ships both `backdrop-filter` and `-webkit-backdrop-filter` for Safari, plus the supporting background, border, radius and box-shadow lines.",
       how: [
@@ -15979,7 +15979,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Neumorphism Generator — Soft-UI CSS Builder + Live Preview",
       description:
-        "Design soft-UI neumorphic surfaces — matched background, paired diagonal shadows, four variants (flat / convex / concave / pressed), nine presets including dark mode. Live preview, copy CSS. 100% offline.",
+        "Design soft-UI neumorphic surfaces — matched background, paired diagonal shadows, four variants (flat / convex / concave / pressed), nine presets…",
       what:
         "Neumorphism Generator implements the soft-UI design language that briefly trended in 2020 and is still useful for dashboards, fitness apps and dark-mode interfaces. The core recipe is mathematically simple: one base colour used for both the page background AND the surface, then two box-shadows offset diagonally — a darker drop on one side and a lighter highlight on the opposite — so the surface appears to extrude from (or press into) the page. The intensity slider controls how much darker the shadow and lighter the highlight are vs. the base (10-20% reads as 'real', > 35% breaks the illusion). Four variants: Flat (surface = base colour), Convex (subtle gradient toward lighter top), Concave (gradient toward darker top), and Pressed (both shadows inset). Nine presets cover light/dark base palettes, soft/dramatic depth, and the three special variants. Output is the canonical three-line CSS — `background`, `border-radius`, `box-shadow`.",
       how: [
@@ -16035,7 +16035,7 @@ export const tools: Tool[] = [
     seo: {
       title: "CSS Clip-Path Generator — Drag-to-Shape Polygon Editor",
       description:
-        "Drag vertices to reshape any polygon, click between points to insert a new vertex, double-click to remove one. Twelve preset shapes plus inset mode with corner radius. 100% offline.",
+        "Drag vertices to reshape any polygon, click between points to insert a new vertex, double-click to remove one. Twelve preset shapes plus inset mode…",
       what:
         "CSS Clip-Path Generator is an interactive editor for the `clip-path: polygon(...)` and `clip-path: inset(...)` CSS values. The polygon mode shows your shape as a draggable mesh — every vertex is a handle you can drag with the mouse or your finger, mid-edge buttons let you insert a new vertex anywhere along the perimeter, and a double-click removes the vertex. Twelve presets cover the shapes designers actually use: rectangle, triangle, rhombus, trapezoid, parallelogram, pentagon, hexagon, octagon, five-point star, right arrow, chevron and speech bubble. The inset mode gives you a four-sided rectangular crop with an optional corner radius — perfect for rounded rectangle masks that don't require `border-radius`. Five preview backgrounds (Sunset, Ocean, Forest, Midnight, Plain) make the clip-path edge crisp against different scenes. Output ships both the standard `clip-path` and `-webkit-clip-path` for older Safari builds.",
       how: [
@@ -16092,7 +16092,7 @@ export const tools: Tool[] = [
     seo: {
       title: "SVG Blob Generator — Organic Shapes with Reproducible Seeds",
       description:
-        "Generates organic closed-curve SVG blobs using Catmull-Rom-smoothed Bezier paths. Eight gradient palettes, deterministic seeded PRNG (same seed → same shape), complexity / contrast sliders. 100% offline.",
+        "Generates organic closed-curve SVG blobs using Catmull-Rom-smoothed Bezier paths. Eight gradient palettes, deterministic seeded PRNG (same seed → same…",
       what:
         "SVG Blob Generator builds organic 'blob' shapes you can drop into hero sections, decorative backgrounds, sticker illustrations or button backdrops. The algorithm scatters N anchor points evenly around a circle, then wobbles each point's radius by a controllable contrast — points are then joined with cubic Bezier curves whose control handles come from a Catmull-Rom spline, so the curve is perfectly smooth (no kinks even at low complexity). Because the random wobble is driven by a seeded mulberry32 PRNG, the same seed always reproduces the same blob — you can share a seed and your collaborator gets the same shape back, no exporting. Eight curated gradient palettes (Indigo, Sunset, Ocean, Forest, Rose, Lavender, Midnight, Amber) cover most decorative needs; you can override the fill type to solid, swap colours individually, and rotate the gradient angle. The output is a clean self-contained `<svg>` with an embedded `<linearGradient>` (when applicable) and a single `<path>` — copyable as markup or downloadable as `.svg`.",
       how: [
@@ -16149,7 +16149,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Pattern Background Generator — Pure-CSS Repeating Patterns",
       description:
-        "Generate seamless, infinitely tileable backgrounds with only CSS gradients — diagonal/horizontal/vertical stripes, checks, grid, dots, polka, cross-hatch. Two-colour theme + size/thickness/angle sliders. 100% offline.",
+        "Generate seamless, infinitely tileable backgrounds with only CSS gradients — diagonal/horizontal/vertical stripes, checks, grid, dots, polka, cross-hatch.",
       what:
         "Pattern Background Generator builds repeating backgrounds using nothing but CSS `repeating-linear-gradient()`, `linear-gradient()` and `radial-gradient()` — no images, no SVG, no JS. Eight patterns cover the recipes designers actually use: diagonal stripes (configurable angle), horizontal stripes, vertical stripes, classic checks (the 'transparent background' chessboard), pixel grid (great for technical drawings), dots, polka dots (offset two-grid), and diagonal cross-hatch. Each pattern accepts a foreground + background colour pair, a tile size (4-96 px) and a thickness (% of tile size that's foreground). Diagonal stripes additionally take an angle. The output is one to four CSS lines that you paste straight into a stylesheet, fully responsive (the gradients tile to any element size), and instantly themeable — swap the two colours and the pattern follows.",
       how: [
@@ -16207,7 +16207,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Noise Texture Generator — Canvas + SVG Engines, PNG Export",
       description:
-        "Two engines: canvas-pixel noise driven by crypto.getRandomValues, or SVG feTurbulence. Adjustable size, contrast, opacity, monochrome/RGB, blend mode. Live preview, copy CSS data URL or download PNG. 100% offline.",
+        "Two engines: canvas-pixel noise driven by crypto.getRandomValues, or SVG feTurbulence. Adjustable size, contrast, opacity, monochrome/RGB, blend mode.",
       what:
         "Noise Texture Generator produces the subtle film-grain overlays that warm up flat-colour UIs — the look popularised by Vercel's marketing site, modern dashboards, and most premium product pages. Two engines: Canvas writes each pixel directly via `crypto.getRandomValues` (true cryptographic randomness, every pixel independent) — outputs as a PNG data URL you can either copy into CSS or download as a real file. SVG mode uses `feTurbulence` filter with a `fractalNoise` type and 2 octaves, producing more cloud-like, procedural grain — smaller CSS payload but slightly different visual character. Both modes share controls: tile size (32-768 px square), contrast (10-100%, applies a remap curve around mid-grey), monochrome toggle (greyscale vs RGB grain), opacity (5-100%), and CSS `mix-blend-mode` (normal, overlay, multiply, screen, soft-light) — overlay is the typical choice for subtle warmth without darkening. The preview overlays the texture on one of five gradient backgrounds so you can pick the contrast that reads best in your design.",
       how: [
@@ -16264,9 +16264,9 @@ export const tools: Tool[] = [
       "nearest neighbour upscale", "sprite sheet maker",
     ],
     seo: {
-      title: "Pixel Art Generator — Sprite Editor with Flood Fill + Upscale Export",
+      title: "Pixel Art Generator — Sprite Editor with Flood Fill",
       description:
-        "Draw pixel-art sprites on 8 / 16 / 24 / 32 / 48 / 64-cell grids. Paint / fill / erase tools, 20-colour palette, undo, drag-to-paint. Export at native size or 8×/16×/32× nearest-neighbour upscaled. 100% offline.",
+        "Draw pixel-art sprites on 8 / 16 / 24 / 32 / 48 / 64-cell grids. Paint / fill / erase tools, 20-colour palette, undo, drag-to-paint.",
       what:
         "Pixel Art Generator is a sprite editor that runs entirely in the browser. The grid supports six size presets (8×8, 16×16, 24×24, 32×32, 48×48, 64×64) — 16×16 is the classic 'icon' size, 32×32 a common sprite size, 64×64 generous for detailed avatars. Three tools: Paintbrush (click and drag to paint cells with the active colour, the pointer-down + pointer-enter pattern handles continuous strokes), Flood-fill (replaces all connected cells matching the clicked cell's colour — implemented with a 4-way stack-based flood algorithm that handles up to 4,096 cells without recursion limits), and Eraser (paints with the transparent value, leaving the checkerboard background showing through). The 20-colour palette covers the basic chromatic + grey ramp; the colour picker lets you set any arbitrary hex. Undo holds up to 30 history steps — every fill and every brush stroke is one undo step. Export: PNG at 1× (native sprite size, perfect for sprite sheets), 8×, 16× or 32× (nearest-neighbour upscaled so pixels stay crisp). Background colour for exports is configurable — pick the page background for transparent-by-default, or solid for sticker-style assets.",
       how: [
@@ -16325,7 +16325,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Lorem Ipsum Image Generator — Any Size, Any Colour, Offline",
       description:
-        "Generate placeholder images at any width × height. Solid / gradient / stripes / dots modes, foreground + background colours, custom label, noise grain. Exports at devicePixelRatio for retina-sharp PNG or JPG. 100% offline.",
+        "Generate placeholder images at any width × height. Solid / gradient / stripes / dots modes, foreground + background colours, custom label, noise grain.",
       what:
         "Lorem Ipsum Image Generator produces the labelled placeholder rectangles you put in mockups, wireframes, dev environments and Storybook examples — but generated locally so you never depend on a third-party service like placeholder.com being online. Render modes: Solid (single flat colour), Gradient (two-stop linear gradient with the second colour pulled from the accent picker), Diagonal Stripes (procedural stripe overlay on the base — useful for 'work-in-progress' assets), and Dots (regular grid of small dots). Eight size presets cover the formats you actually use day-to-day — Open Graph (1200×630), Square (1080×1080), Story (1080×1920), Twitter (1600×900), Hero (1920×1080), Thumbnail (400×300), Avatar (256×256), Favicon (512×512) — or set any custom width × height. The label is the dimensions by default but you can override with any text (e.g. 'Logo goes here'); font size is a % of the shorter dimension so it scales correctly at any aspect ratio. Optional noise overlay adds film-grain texture. Output renders at `window.devicePixelRatio` so the export is sharp on Retina displays. Download as PNG (transparent-supporting) or JPG (smaller, lossy).",
       how: [
@@ -16382,9 +16382,9 @@ export const tools: Tool[] = [
       "video poster image", "youtube cover image",
     ],
     seo: {
-      title: "Thumbnail Downloader — Direct CDN URLs (YouTube, Vimeo, Dailymotion)",
+      title: "Thumbnail Downloader — Direct CDN URLs",
       description:
-        "Paste a YouTube / Vimeo / Dailymotion URL or a bare video ID; we derive direct thumbnail image URLs at every available resolution with live previews. 100% offline.",
+        "Paste a YouTube / Vimeo / Dailymotion URL or a bare video ID; we derive direct thumbnail image URLs at every available resolution with live previews.",
       what:
         "Thumbnail Downloader is a URL parser, not a downloader-of-files-from-our-server. Each supported platform exposes thumbnails at predictable CDN URLs that you can hotlink or save. YouTube's `img.youtube.com/vi/<id>/<size>.jpg` pattern is the workhorse — we parse video IDs from watch URLs (`?v=…`), shorts (`/shorts/…`), embed (`/embed/…`), live (`/live/…`), and youtu.be short links — then build the five standard sizes (maxres 1280×720, sd 640×480, hq 480×360, mq 320×180, default 120×90). Vimeo doesn't expose its CDN URLs directly, so we use the public `vumbnail.com` proxy which is documented and stable; three sizes are available. Dailymotion has one redirect endpoint that lands you on the active CDN frame. The URL is shown verbatim, with Copy and Open buttons. We also render a live preview of each thumbnail so you can spot the highest available resolution at a glance (YouTube's `maxresdefault.jpg` 404s on very old or low-res videos — the preview fails to load and you fall back to `sddefault.jpg`).",
       how: [
@@ -16441,7 +16441,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Receipt Generator — Thermal-Style, Print to Paper or PDF",
       description:
-        "Form-driven receipt builder: business header, receipt number, line items, tax rate, discount, currency, payment method, footer. Renders as 80mm thermal style; print directly or save as PDF. 100% offline.",
+        "Form-driven receipt builder: business header, receipt number, line items, tax rate, discount, currency, payment method, footer. Renders as 80mm thermal…",
       what:
         "Receipt Generator is a thermal-receipt-style printable builder. The form on top captures every field a real receipt needs — business name, address, phone, tax ID, receipt number, date, cashier name, line items (description + qty + unit price), tax rate, discount rate, currency symbol, payment method, footer note. The preview below renders in classic monospace thermal-printer style: centered header, dashed dividers, right-aligned column for amounts, big bold TOTAL row at the bottom. The CSS @page rule sets the print size to 80mm wide (the standard thermal receipt width); when you hit 'Print / Save as PDF', the browser dialog shows the receipt sized correctly. Save as PDF or print to an actual thermal printer (most accept the browser's USB or network output). Subtotal, discount, tax, and total are computed live as you edit, with sensible decimal formatting. Tax is applied after discount per most jurisdictions (the discount reduces the taxable base).",
       how: [
@@ -16497,7 +16497,7 @@ export const tools: Tool[] = [
     seo: {
       title: "Packing Slip Generator — A4 Printable, Browser → PDF",
       description:
-        "Form-driven packing slip builder — ship-from / ship-to addresses, order + carrier + tracking, SKU line items, notes. Renders as A4; print directly or save as PDF via the browser dialog. 100% offline.",
+        "Form-driven packing slip builder — ship-from / ship-to addresses, order + carrier + tracking, SKU line items, notes. Renders as A4; print directly or save…",
       what:
         "Packing Slip Generator is the warehouse-side companion to the Receipt and Invoice generators. The form on top captures everything a real packing slip needs — ship-from and ship-to with separate name and multi-line address fields, the order number, ship date, carrier name, tracking number, line items (SKU + description + qty), and a free-form notes line printed at the bottom (return policy, thank-you note, etc.). The preview below renders as a clean A4 layout: header with packing-slip title + order + date + carrier card, ship-from / ship-to side-by-side address blocks, line items table with SKU + description + qty + total-items footer, then the notes. The CSS @page rule sets size to A4 with 12mm margins. When you click 'Print / Save as PDF', the browser dialog hides the editor (via print:hidden) and lays out only the packing slip for clean output.",
       how: [

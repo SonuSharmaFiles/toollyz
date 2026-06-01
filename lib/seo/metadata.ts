@@ -58,17 +58,32 @@ export function buildMetadata({
   };
 }
 
+// Maximum SEO title length before the layout's " | Toollyz" suffix
+// (10 chars) pushes the rendered <title> past Google's ~60-char SERP
+// truncation. Tools above this threshold get the brand dropped so the
+// keyword tail stays visible in search results.
+const TITLE_SUFFIX_FITS_MAX = 50;
+
 export function toolMetadata(tool: Tool): Metadata {
-  // Title is brandless here; the root layout template ("%s | Toollyz")
-  // appends the brand exactly once.
-  const title = tool.seo?.title ?? tool.name;
+  // Default: title is brandless here; the root layout template
+  // ("%s | Toollyz") appends the brand exactly once.
+  const rawTitle = tool.seo?.title ?? tool.name;
   const description = tool.seo?.description ?? tool.tagline;
-  return buildMetadata({
-    title,
+  const meta = buildMetadata({
+    title: rawTitle,
     description,
     path: `/tools/${tool.slug}`,
     keywords: tool.keywords,
   });
+
+  // For long SEO titles, override the layout template by setting
+  // `title.absolute` — that drops the brand suffix and keeps the full
+  // keyword phrase visible in SERPs. OG / Twitter titles already use the
+  // brandless string set above, so we don't touch those.
+  if (rawTitle.length > TITLE_SUFFIX_FITS_MAX) {
+    meta.title = { absolute: rawTitle };
+  }
+  return meta;
 }
 
 export function categoryMetadata(category: Category, toolCount: number): Metadata {
