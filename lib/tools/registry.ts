@@ -187,17 +187,22 @@ export const tools: Tool[] = [
       what:
         "A QR Code Generator turns any text, link, Wi-Fi credential or contact information into a scannable Quick Response (QR) code. Modern phones can read these codes from any camera app, making them perfect for sharing links, menus, payment details, or product info.",
       how: [
-        "Type or paste your text, URL or any other content into the input field.",
+        "Type or paste your text, URL, Wi-Fi credentials or vCard content into the input field.",
         "Adjust the size, foreground and background colors, and error-correction level to match your use case.",
-        "Click 'Download PNG' to save a high-resolution image you can use anywhere.",
+        "Preview the QR as it updates live — every keystroke re-renders the canvas.",
+        "Click 'Download PNG' to save a high-resolution image you can use in print or on the web.",
       ],
       benefits: [
         "100% client-side — your data never leaves your browser.",
-        "High-resolution PNG export ready for print or web.",
-        "Customizable colors, sizing and error correction (L/M/Q/H).",
-        "Works for URLs, Wi-Fi credentials, plain text, vCards and more.",
-        "No signup, no watermark, completely free.",
+        "High-resolution PNG export ready for print or web at any size.",
+        "Customizable colors, sizing and error correction (L / M / Q / H).",
+        "Works for URLs, Wi-Fi credentials, plain text, vCards, mailto:, tel: and more.",
+        "No signup, no watermark, no usage cap — completely free.",
+        "Adjustable margin (quiet zone) so the code still scans against busy backgrounds.",
+        "Auto-detects scheme prefixes — paste a domain and we add https:// if missing.",
+        "Lossless export — vector-precision at any output size you pick.",
       ],
+      relatedSlugs: ["qr-code-scanner", "wifi-qr-code-generator", "qr-menu-generator", "vcard-generator"],
       faqs: [
         {
           q: "Is the QR Code Generator free to use?",
@@ -213,11 +218,39 @@ export const tools: Tool[] = [
         },
         {
           q: "Can I customize the colors of my QR code?",
-          a: "Yes — pick any foreground and background color. Make sure to keep enough contrast so the code remains scannable.",
+          a: "Yes — pick any foreground and background color. Make sure to keep enough contrast (WCAG AA-style, ideally ≥4.5:1) so the code remains scannable.",
         },
         {
           q: "What image format does the download use?",
-          a: "QR codes are downloaded as high-resolution PNG files with a transparent-friendly background option.",
+          a: "QR codes are downloaded as high-resolution PNG files. The black-on-white default scans most reliably, but any contrast-preserving color pair works.",
+        },
+        {
+          q: "What's the maximum amount of data I can encode?",
+          a: "QR codes can hold up to 4,296 alphanumeric characters or 2,953 bytes at the lowest error-correction level. Realistic limit for reliable scanning: keep payloads under ~500 chars and stick to URLs or short text.",
+        },
+        {
+          q: "Why does my QR look denser when I add more text?",
+          a: "QR codes use a fixed grid that scales with payload size — more data means a denser grid (smaller modules per char). To keep scanning easy, shorten URLs first (URL shorteners or your own redirect endpoint).",
+        },
+        {
+          q: "Can I generate a Wi-Fi QR with the password?",
+          a: "Yes — paste `WIFI:T:WPA;S:NetworkName;P:password;;` and most modern phone cameras will offer to join the network when they decode it. Or use the dedicated Wi-Fi QR Code Generator for a friendly form.",
+        },
+        {
+          q: "What's the 'quiet zone' (margin) for?",
+          a: "QR readers need ~4 modules of empty space around the code to detect its boundaries. Don't crop the margin tight — your QR will silently fail to scan even when it looks fine on screen.",
+        },
+        {
+          q: "Can I embed a logo in the center?",
+          a: "Not directly in this tool — but you can layer one on top in any image editor afterwards. Use error-correction level H (30% recovery) so the QR still scans with up to a 30 %-area logo overlay.",
+        },
+        {
+          q: "Does the QR expire?",
+          a: "Static QRs (which this tool makes) never expire — they encode the URL directly, so they work as long as the URL works. 'Dynamic' QRs that go through a redirect service can expire if the service shuts down.",
+        },
+        {
+          q: "How do I test my QR before printing?",
+          a: "Scan it with any modern phone camera or with our QR Code Scanner. If it decodes at a typical reading distance (one phone-length away), it'll work in print at a printed size of ≥2 cm/0.8 in on each side.",
         },
       ],
     },
@@ -515,6 +548,8 @@ export const tools: Tool[] = [
         "Formatting controls — UPPERCASE and hyphen-stripped output for any system.",
         "Auto-refresh mode for live regeneration when you need quick variety.",
         "Cryptographically random v4 UUIDs powered by the Web Crypto API.",
+        "v6 and v7 produce time-sortable IDs ideal for database primary keys.",
+        "Settings (version, count, formatting) persist in localStorage between visits.",
       ],
       relatedSlugs: [
         "password-generator",
@@ -608,6 +643,8 @@ export const tools: Tool[] = [
         "Live word, character, sentence, paragraph and reading-time stats.",
         "Output as plain text, HTML <p> tags or Markdown — copy or download as TXT/HTML/MD.",
         "Toggle commas, line breaks and the classic Lorem ipsum opener.",
+        "Seeded mode reproduces the same text every time — handy for design systems and screenshot tests.",
+        "Saves your last vocabulary, mode and count to localStorage so the right defaults are one tab-open away.",
         "100% client-side — no signup, no usage limits, no watermark.",
       ],
       relatedSlugs: [
@@ -704,6 +741,8 @@ export const tools: Tool[] = [
         "Per-card copy, copy-all, plus three export formats (TXT, CSV, JSON) for any downstream tool.",
         "Optional geo coordinates within each country's actual bounding box, with timezone.",
         "Gender and age-group filters for realistic test personas.",
+        "Coordinates include a Google Maps link for instant visual sanity-check.",
+        "Reseed button for reproducible bulk runs; everything keyed off your input seed.",
         "100% client-side — your generated data never touches a server.",
       ],
       relatedSlugs: [
@@ -799,6 +838,7 @@ export const tools: Tool[] = [
         "Gender and age-range filters for realistic test personas.",
         "Bulk export TXT, CSV, JSON — CSV opens directly in spreadsheets.",
         "Per-card copy-as-text and copy-as-JSON, plus per-field hover-to-copy.",
+        "Realistic birthdate range tied to the age filter — perfect for date-of-birth form testing.",
         "100% client-side — generated identities never leave your browser.",
       ],
       relatedSlugs: [
@@ -894,6 +934,7 @@ export const tools: Tool[] = [
         "Length control with quick 4–6 / 6–10 / 10–15 presets and dual sliders.",
         "Save unlimited favorites — persisted locally in your browser, never sent to a server.",
         "One-click availability checks on Instagram, X, TikTok and GitHub.",
+        "Smart prefix/suffix toggles — add a year, double letters or an underscore in one click.",
         "Export TXT or CSV for bulk use in spreadsheets and onboarding flows.",
       ],
       relatedSlugs: [
@@ -988,6 +1029,7 @@ export const tools: Tool[] = [
         "Advanced filters: exclude similar characters (i/l/1/L/o/0/O), exclude ambiguous symbols, avoid repeats, avoid sequences.",
         "Passphrase mode uses a curated dictionary of common English words with capitalization and separator controls.",
         "Bulk generation (1–50) with copy-all, TXT and CSV (including strength column) export.",
+        "Visible strength bar updates as you type — see immediately when entropy dips.",
         "Local-only history and favourites — passwords never touch a server or network.",
       ],
       relatedSlugs: [
@@ -15000,6 +15042,8 @@ export const tools: Tool[] = [
         "Confidence scoring per match (high / medium / low).",
         "Signature headers marked in the All-Headers table.",
         "Evidence shown for each match — the header that triggered the rule.",
+        "All-Headers table marks every signature header with a 'CDN' badge so the trigger is obvious.",
+        "Settings persist in localStorage so a refresh doesn't lose your audit.",
         "Runs 100% in your browser — no DNS lookup, no third-party API.",
       ],
       relatedSlugs: ["http-header-checker", "website-cache-checker", "ssl-certificate-checker", "canonical-url-checker"],
@@ -15223,6 +15267,7 @@ export const tools: Tool[] = [
         "Days-till-expiry colour-coded green / amber / red.",
         "Critical-status detection: clientHold, serverHold, redemptionPeriod, pendingDelete.",
         "Dedupes status values + name servers case-insensitively.",
+        "Recognises 'creation', 'registered on', 'last updated' and 'registry expiry' across registry conventions.",
         "Runs 100% in your browser — no WHOIS lookup, no registry contact.",
       ],
       relatedSlugs: ["whois-lookup", "ssl-certificate-checker", "canonical-url-checker", "redirect-chain-checker"],
