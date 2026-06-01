@@ -2,7 +2,6 @@ import Link from "next/link";
 import { GithubIcon } from "@/components/shared/social-icons";
 import { Logo } from "@/components/shared/logo";
 import { FOOTER_LINKS, SITE } from "@/lib/seo/constants";
-import { categories } from "@/lib/tools/categories";
 
 // Only links we actually own. We previously linked out to twitter.com,
 // github.com and linkedin.com root URLs — those went to brand
@@ -30,7 +29,7 @@ export function Footer() {
         Site footer
       </h2>
       <div className="container-page py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(3,_1fr)]">
+        <div className="grid gap-10 lg:grid-cols-[1.6fr_repeat(3,_1fr)]">
           <div className="space-y-4">
             <Logo />
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
@@ -83,31 +82,6 @@ export function Footer() {
               </ul>
             </nav>
           ))}
-          {/* Real category links — gives crawlers 8 more internal-link signals
-              per page and lets users jump straight into each section. */}
-          <nav
-            aria-labelledby="footer-categories"
-            className="space-y-3"
-          >
-            <h3
-              id="footer-categories"
-              className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground"
-            >
-              Categories
-            </h3>
-            <ul className="space-y-2">
-              {categories.map((c) => (
-                <li key={c.id}>
-                  <Link
-                    href={`/category/${c.slug}`}
-                    className="text-sm text-foreground/80 transition-colors hover:text-foreground"
-                  >
-                    {c.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>

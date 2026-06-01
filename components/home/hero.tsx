@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SearchBar } from "@/components/shared/search-bar";
 import { tools } from "@/lib/tools/registry";
 
 const POPULAR_CHIPS = [
@@ -47,16 +46,7 @@ export function Hero() {
             utilities — fast, private, and crafted with care. No signup, no fluff.
           </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mx-auto mt-8 max-w-xl"
-          >
-            <SearchBar variant="hero" placeholder="Try “QR code”, “JSON” or “password”…" />
-          </motion.div>
-
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
             {chips.map((tool) => {
               const Icon = tool.icon;
               return (
