@@ -11,7 +11,10 @@ export const SITE = {
   // domain we don't actually own.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sonusharmafiles.github.io/toollyz",
   basePath: BASE_PATH,
-  ogImage: `${BASE_PATH}/og-default.png`,
+  // og:image is emitted by app/opengraph-image.tsx (and per-route
+  // variants in app/tools/[slug]/opengraph-image.tsx) — Next's file
+  // convention handles the meta tags, so we no longer carry a manual
+  // image path on the SITE constant.
   twitter: "@toollyz",
   locale: "en_US",
   themeColorLight: "#ffffff",

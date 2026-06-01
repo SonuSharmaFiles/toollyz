@@ -1,13 +1,20 @@
 import Link from "next/link";
-import { GithubIcon, TwitterIcon, LinkedinIcon } from "@/components/shared/social-icons";
+import { GithubIcon } from "@/components/shared/social-icons";
 import { Logo } from "@/components/shared/logo";
 import { FOOTER_LINKS, SITE } from "@/lib/seo/constants";
 import { categories } from "@/lib/tools/categories";
 
+// Only links we actually own. We previously linked out to twitter.com,
+// github.com and linkedin.com root URLs — those went to brand
+// homepages, not to any Toollyz profile, and crawlers (rightly) read
+// them as broken/placeholder external signals. The GitHub link below
+// points at the real source repository that powers this deployment.
 const SOCIAL_LINKS = [
-  { label: "Twitter", href: "https://twitter.com", Icon: TwitterIcon },
-  { label: "GitHub", href: "https://github.com", Icon: GithubIcon },
-  { label: "LinkedIn", href: "https://linkedin.com", Icon: LinkedinIcon },
+  {
+    label: "GitHub",
+    href: "https://github.com/SonuSharmaFiles/toollyz",
+    Icon: GithubIcon,
+  },
 ];
 
 export function Footer() {

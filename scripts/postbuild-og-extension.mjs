@@ -48,12 +48,18 @@ for (const p of ogFiles) {
 
 // 2) Rewrite HTML references. Pattern: `/opengraph-image?HASH` →
 //    `/opengraph-image.png?HASH`. Also rewrite no-query references.
+//    Negative-lookahead `(?!\.png)` ensures we don't double-rewrite a
+//    reference that already ends in `.png` (e.g. an absolute URL
+//    hard-coded in JSON-LD) into `opengraph-image.png.png`.
 const htmlFiles = allFiles.filter((p) => p.endsWith(".html"));
 let rewritten = 0;
 for (const p of htmlFiles) {
   const src = await readFile(p, "utf8");
   // Be careful: only rewrite references to opengraph-image, not other paths.
-  const next = src.replace(/\/opengraph-image(\?[^"'\s<>]*)?/g, "/opengraph-image.png$1");
+  const next = src.replace(
+    /\/opengraph-image(?!\.png)(\?[^"'\s<>]*)?/g,
+    "/opengraph-image.png$1",
+  );
   if (next !== src) {
     await writeFile(p, next, "utf8");
     rewritten++;
