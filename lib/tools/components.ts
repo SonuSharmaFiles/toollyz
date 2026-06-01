@@ -602,6 +602,21 @@ const TOOL_COMPONENTS: Record<string, ComponentType> = {
   "receipt-generator": dynamic(
     () => import("@/components/tools/receipt-generator"),
   ),
+  "domain-age-checker": dynamic(
+    () => import("@/components/tools/domain-age-checker"),
+  ),
+  "redirect-chain-checker": dynamic(
+    () => import("@/components/tools/redirect-chain-checker"),
+  ),
+  "cdn-checker": dynamic(
+    () => import("@/components/tools/cdn-checker"),
+  ),
+  "website-cache-checker": dynamic(
+    () => import("@/components/tools/website-cache-checker"),
+  ),
+  "packing-slip-generator": dynamic(
+    () => import("@/components/tools/packing-slip-generator"),
+  ),
 };
 
 export function getToolComponent(slug: string): ComponentType | null {
