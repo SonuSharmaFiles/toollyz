@@ -42,21 +42,15 @@ export const metadata: Metadata = {
     description: SITE.description,
     siteName: SITE.name,
     locale: SITE.locale,
-    images: [
-      {
-        url: absoluteUrl(SITE.ogImage),
-        width: 1200,
-        height: 630,
-        alt: SITE.name,
-      },
-    ],
+    // images: emitted by app/opengraph-image.tsx (and per-route variants).
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
-    images: [absoluteUrl(SITE.ogImage)],
     creator: SITE.twitter,
+    // images: emitted by opengraph-image.tsx; Next reuses the OG image
+    // for twitter:image automatically.
   },
   robots: {
     index: true,
