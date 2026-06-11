@@ -164,6 +164,18 @@
     transform: translateX(-100%);
     animation: shimmer 1.8s infinite;
   }
+  /* Emerald ring pulse used by the QR scanner result card to flash on
+     every fresh decode — quick, single-shot, and respects reduced
+     motion via the media query below. */
+  @keyframes scan-flash {
+    0%   { box-shadow: 0 0 0 0 oklch(0.72 0.18 152 / 0.65), 0 0 0 0 oklch(0.72 0.18 152 / 0); }
+    35%  { box-shadow: 0 0 0 10px oklch(0.72 0.18 152 / 0), 0 0 36px 12px oklch(0.72 0.18 152 / 0.35); }
+    100% { box-shadow: 0 0 0 0 oklch(0.72 0.18 152 / 0), 0 0 0 0 oklch(0.72 0.18 152 / 0); }
+  }
+  .animate-scan-flash { animation: scan-flash 750ms ease-out 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-scan-flash { animation: none; }
+  }
 }
 
 ::selection {

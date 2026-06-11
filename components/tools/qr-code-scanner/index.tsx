@@ -3,21 +3,35 @@
 import * as React from "react";
 import jsQR from "jsqr";
 import {
+  Calendar,
   Camera,
   CameraOff,
+  CircleDollarSign,
+  Contact,
   Copy,
   Eraser,
   ExternalLink,
+  Eye,
+  EyeOff,
+  Globe,
   Image as ImageIcon,
+  Link as LinkIcon,
   Lock,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Phone,
   ScanLine,
   ShieldCheck,
   Sparkles,
+  Type as TypeIcon,
   Upload,
+  Wifi,
 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { parseQrContent, qrKindLabel, type QrContent } from "@/lib/tools/qr/parse";
 
 const HISTORY_KEY = "toollyz:qr-scan-history";
 const HISTORY_CAP = 24;
@@ -33,6 +47,7 @@ export default function QrCodeScanner() {
   const canvasRef = React.useRef<HTMLCanvasElement | null>(null);
   const streamRef = React.useRef<MediaStream | null>(null);
   const rafRef = React.useRef<number | null>(null);
+  const resultRef = React.useRef<HTMLElement | null>(null);
   const [mounted, setMounted] = React.useState(false);
   const [scanning, setScanning] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -65,6 +80,32 @@ export default function QrCodeScanner() {
     return () => stopCamera();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Confirm-decode feedback: scroll the result card into view, trigger
+  // the emerald flash ring, and emit a short vibration on devices that
+  // support it. Fires on every new scan (keyed on `latest.at`) so a
+  // repeat decode of a different QR also feels live. We respect the
+  // user's reduced-motion preference for the scroll easing — the
+  // flash class itself disables in the keyframe rule.
+  React.useEffect(() => {
+    if (!latest) return;
+    const node = resultRef.current;
+    if (!node) return;
+    const reduced =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    node.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+    // Re-trigger the animation by toggling the class off then on.
+    node.classList.remove("animate-scan-flash");
+    // Force reflow so the next add restarts the animation.
+    void node.offsetWidth;
+    node.classList.add("animate-scan-flash");
+    try {
+      navigator.vibrate?.([35]);
+    } catch {
+      /* device doesn't support vibration — ignore */
+    }
+  }, [latest?.at, latest]);
 
   function stopCamera() {
     if (rafRef.current !== null) {
@@ -182,6 +223,8 @@ export default function QrCodeScanner() {
     );
   }
 
+  const parsed = latest ? parseQrContent(latest.text) : null;
+
   return (
     <div className="space-y-6">
       <section className="space-y-3 overflow-hidden rounded-3xl border border-border/70 bg-card p-4">
@@ -214,7 +257,7 @@ export default function QrCodeScanner() {
           {!scanning && (
             <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-white">
               <ScanLine className="size-12 opacity-70" />
-              <p className="mt-2 text-sm">Tap 'Start camera' to scan a QR</p>
+              <p className="mt-2 text-sm">Tap &apos;Start camera&apos; to scan a QR</p>
             </div>
           )}
           {scanning && (
@@ -253,34 +296,13 @@ export default function QrCodeScanner() {
         </label>
       </section>
 
-      {latest && (
-        <section className="space-y-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm font-semibold tracking-tight text-emerald-700 dark:text-emerald-300">
-              Latest scan ({latest.source})
-            </h2>
-            <div className="flex gap-2">
-              <Button type="button" size="sm" variant="outline" onClick={() => copyText(latest.text)}>
-                <Copy className="size-3.5" />
-                Copy
-              </Button>
-              {/^https?:\/\//i.test(latest.text) && (
-                <a
-                  href={latest.text}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-8 items-center gap-1.5 rounded-md border border-border bg-card px-2.5 text-xs font-medium hover:bg-muted"
-                >
-                  <ExternalLink className="size-3.5" />
-                  Open
-                </a>
-              )}
-            </div>
-          </div>
-          <pre className="overflow-x-auto rounded-xl border border-border/60 bg-background/50 p-3 font-mono text-xs whitespace-pre-wrap break-all">
-            {latest.text}
-          </pre>
-        </section>
+      {latest && parsed && (
+        <ScanResultCard
+          ref={resultRef}
+          parsed={parsed}
+          source={latest.source}
+          onCopy={copyText}
+        />
       )}
 
       {history.length > 0 && (
@@ -293,14 +315,23 @@ export default function QrCodeScanner() {
             </Button>
           </div>
           <ul className="space-y-1 list-none">
-            {history.map((s, i) => (
-              <li key={`${s.at}-${i}`} className="flex items-baseline justify-between gap-2 rounded-lg border border-border/40 bg-background/40 p-2 text-xs">
-                <span className="break-all font-mono">{s.text}</span>
-                <span className="shrink-0 font-mono text-muted-foreground">
-                  {new Date(s.at).toLocaleTimeString()}
-                </span>
-              </li>
-            ))}
+            {history.map((s, i) => {
+              const p = parseQrContent(s.text);
+              return (
+                <li
+                  key={`${s.at}-${i}`}
+                  className="flex items-center justify-between gap-2 rounded-lg border border-border/40 bg-background/40 p-2 text-xs"
+                >
+                  <span className="flex min-w-0 items-center gap-2">
+                    <KindIcon kind={p.kind} className="size-3.5 shrink-0 text-primary" />
+                    <span className="truncate">{qrKindLabel(p.kind)}: {shortSummary(p)}</span>
+                  </span>
+                  <span className="shrink-0 font-mono text-muted-foreground">
+                    {new Date(s.at).toLocaleTimeString()}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         </section>
       )}
@@ -313,4 +344,337 @@ export default function QrCodeScanner() {
       </p>
     </div>
   );
+}
+
+// ---------------- Result card ----------------
+
+interface ScanResultCardProps {
+  parsed: QrContent;
+  source: "camera" | "file";
+  onCopy: (text: string) => void;
+}
+
+const ScanResultCard = React.forwardRef<HTMLElement, ScanResultCardProps>(
+  function ScanResultCard({ parsed, source, onCopy }, ref) {
+    return (
+      <section
+        ref={ref}
+        aria-live="polite"
+        className="space-y-3 rounded-2xl border border-emerald-500/40 bg-emerald-500/5 p-4"
+      >
+        <header className="flex flex-wrap items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex size-8 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-700 dark:text-emerald-300">
+              <KindIcon kind={parsed.kind} className="size-4" />
+            </span>
+            <div>
+              <p className="text-xs font-medium uppercase tracking-wider text-emerald-700/80 dark:text-emerald-300/80">
+                Scanned {source === "camera" ? "from camera" : "from image"}
+              </p>
+              <h2 className="text-base font-semibold tracking-tight">
+                {qrKindLabel(parsed.kind)}
+              </h2>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <Button type="button" size="sm" variant="outline" onClick={() => onCopy(parsed.raw)}>
+              <Copy className="size-3.5" />
+              Copy raw
+            </Button>
+            <PrimaryAction parsed={parsed} />
+          </div>
+        </header>
+
+        <KindBody parsed={parsed} onCopy={onCopy} />
+      </section>
+    );
+  },
+);
+
+function PrimaryAction({ parsed }: { parsed: QrContent }) {
+  switch (parsed.kind) {
+    case "url":
+      return (
+        <a
+          href={parsed.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex h-8 items-center gap-1.5 rounded-md bg-emerald-600 px-2.5 text-xs font-medium text-white hover:bg-emerald-700"
+        >
+          <ExternalLink className="size-3.5" />
+          Open link
+        </a>
+      );
+    case "email":
+      return (
+        <a
+          href={parsed.href}
+          className="inline-flex h-8 items-center gap-1.5 rounded-md bg-emerald-600 px-2.5 text-xs font-medium text-white hover:bg-emerald-700"
+        >
+          <Mail className="size-3.5" />
+          Compose
+        </a>
+      );
+    case "phone":
+      return (
+        <a
+          href={parsed.href}
+          className="inline-flex h-8 items-center gap-1.5 rounded-md bg-emerald-600 px-2.5 text-xs font-medium text-white hover:bg-emerald-700"
+        >
+          <Phone className="size-3.5" />
+          Call
+        </a>
+      );
+    case "sms":
+      return (
+        <a
+          href={parsed.href}
+          className="inline-flex h-8 items-center gap-1.5 rounded-md bg-emerald-600 px-2.5 text-xs font-medium text-white hover:bg-emerald-700"
+        >
+          <MessageSquare className="size-3.5" />
+          Open SMS
+        </a>
+      );
+    case "geo":
+      return (
+        <a
+          href={parsed.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex h-8 items-center gap-1.5 rounded-md bg-emerald-600 px-2.5 text-xs font-medium text-white hover:bg-emerald-700"
+        >
+          <MapPin className="size-3.5" />
+          Open in Maps
+        </a>
+      );
+    case "upi":
+    case "crypto":
+      return (
+        <a
+          href={parsed.href}
+          className="inline-flex h-8 items-center gap-1.5 rounded-md bg-emerald-600 px-2.5 text-xs font-medium text-white hover:bg-emerald-700"
+        >
+          <CircleDollarSign className="size-3.5" />
+          Open in wallet
+        </a>
+      );
+    case "vcard":
+      return <VcardDownload parsed={parsed} />;
+    default:
+      return null;
+  }
+}
+
+function VcardDownload({ parsed }: { parsed: Extract<QrContent, { kind: "vcard" }> }) {
+  function download() {
+    const blob = new Blob([parsed.raw], { type: "text/vcard" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${(parsed.name || "contact").replace(/\W+/g, "-")}.vcf`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 0);
+  }
+  return (
+    <Button type="button" size="sm" onClick={download} className="bg-emerald-600 text-white hover:bg-emerald-700">
+      <Contact className="size-3.5" />
+      Save contact
+    </Button>
+  );
+}
+
+function KindBody({ parsed, onCopy }: { parsed: QrContent; onCopy: (text: string) => void }) {
+  switch (parsed.kind) {
+    case "url":
+      return (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          <Row label="Domain" value={parsed.host} mono />
+          <Row label="Full URL" value={parsed.href} mono wrap />
+        </div>
+      );
+    case "email":
+      return (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          <Row label="To" value={parsed.address} mono />
+          {parsed.subject && <Row label="Subject" value={parsed.subject} />}
+          {parsed.body && <Row label="Body" value={parsed.body} wrap />}
+          {parsed.cc && <Row label="Cc" value={parsed.cc} mono />}
+          {parsed.bcc && <Row label="Bcc" value={parsed.bcc} mono />}
+        </div>
+      );
+    case "phone":
+      return (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          <Row label="Number" value={parsed.number} mono />
+        </div>
+      );
+    case "sms":
+      return (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          <Row label="To" value={parsed.number} mono />
+          {parsed.message && <Row label="Message" value={parsed.message} wrap />}
+        </div>
+      );
+    case "wifi":
+      return <WifiBody parsed={parsed} onCopy={onCopy} />;
+    case "vcard":
+      return (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          {parsed.name && <Row label="Name" value={parsed.name} />}
+          {parsed.org && <Row label="Organization" value={parsed.org} />}
+          {parsed.title && <Row label="Title" value={parsed.title} />}
+          {parsed.phone && <Row label="Phone" value={parsed.phone} mono />}
+          {parsed.email && <Row label="Email" value={parsed.email} mono />}
+          {parsed.url && <Row label="Website" value={parsed.url} mono />}
+          {parsed.address && <Row label="Address" value={parsed.address} wrap />}
+        </div>
+      );
+    case "geo":
+      return (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          <Row label="Latitude" value={parsed.lat.toString()} mono />
+          <Row label="Longitude" value={parsed.lng.toString()} mono />
+        </div>
+      );
+    case "calendar":
+      return (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          {parsed.summary && <Row label="Event" value={parsed.summary} />}
+          {parsed.start && <Row label="Starts" value={parsed.start} mono />}
+          {parsed.end && <Row label="Ends" value={parsed.end} mono />}
+          {parsed.location && <Row label="Location" value={parsed.location} />}
+          {parsed.description && <Row label="Details" value={parsed.description} wrap />}
+        </div>
+      );
+    case "upi":
+      return (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          <Row label="Payee VPA" value={parsed.payee} mono />
+          {parsed.name && <Row label="Name" value={parsed.name} />}
+          {parsed.amount && <Row label="Amount" value={parsed.amount} mono />}
+          {parsed.note && <Row label="Note" value={parsed.note} />}
+        </div>
+      );
+    case "crypto":
+      return (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          <Row label="Network" value={parsed.scheme.toUpperCase()} />
+          <Row label="Address" value={parsed.address} mono wrap />
+          {parsed.amount && <Row label="Amount" value={parsed.amount} mono />}
+        </div>
+      );
+    case "text":
+      return (
+        <pre className="overflow-x-auto rounded-xl border border-border/60 bg-background/50 p-3 font-mono text-xs whitespace-pre-wrap break-all">
+          {parsed.raw}
+        </pre>
+      );
+  }
+}
+
+function WifiBody({
+  parsed,
+  onCopy,
+}: {
+  parsed: Extract<QrContent, { kind: "wifi" }>;
+  onCopy: (text: string) => void;
+}) {
+  const [show, setShow] = React.useState(false);
+  return (
+    <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+      <Row label="Network (SSID)" value={parsed.ssid || "(empty)"} mono />
+      {parsed.auth && <Row label="Security" value={parsed.auth === "nopass" ? "Open (no password)" : parsed.auth} />}
+      {parsed.password && (
+        <div className="flex items-baseline justify-between gap-3">
+          <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Password
+          </span>
+          <span className="flex items-center gap-2 font-mono text-xs">
+            <span className="break-all">{show ? parsed.password : "•".repeat(Math.min(parsed.password.length, 14))}</span>
+            <button
+              type="button"
+              onClick={() => setShow((s) => !s)}
+              className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground"
+              aria-label={show ? "Hide password" : "Show password"}
+            >
+              {show ? <EyeOff className="size-3.5" /> : <Eye className="size-3.5" />}
+            </button>
+            <button
+              type="button"
+              onClick={() => onCopy(parsed.password!)}
+              className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground"
+              aria-label="Copy password"
+            >
+              <Copy className="size-3.5" />
+            </button>
+          </span>
+        </div>
+      )}
+      {parsed.hidden && <Row label="Hidden network" value="Yes" />}
+    </div>
+  );
+}
+
+function Row({
+  label,
+  value,
+  mono,
+  wrap,
+}: {
+  label: string;
+  value: string;
+  mono?: boolean;
+  wrap?: boolean;
+}) {
+  return (
+    <div className="flex items-baseline justify-between gap-3">
+      <span className="shrink-0 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+        {label}
+      </span>
+      <span
+        className={cn(
+          "min-w-0 text-right",
+          mono ? "font-mono text-xs" : "text-sm",
+          wrap ? "break-all text-left whitespace-pre-wrap" : "truncate",
+        )}
+      >
+        {value}
+      </span>
+    </div>
+  );
+}
+
+function KindIcon({ kind, className }: { kind: QrContent["kind"]; className?: string }) {
+  const Icon = {
+    url: Globe,
+    email: Mail,
+    phone: Phone,
+    sms: MessageSquare,
+    wifi: Wifi,
+    vcard: Contact,
+    geo: MapPin,
+    calendar: Calendar,
+    upi: CircleDollarSign,
+    crypto: CircleDollarSign,
+    text: TypeIcon,
+  }[kind] ?? LinkIcon;
+  return <Icon className={className} aria-hidden />;
+}
+
+function shortSummary(parsed: QrContent): string {
+  switch (parsed.kind) {
+    case "url": return parsed.host;
+    case "email": return parsed.address;
+    case "phone": return parsed.number;
+    case "sms": return parsed.number;
+    case "wifi": return parsed.ssid || "(no SSID)";
+    case "vcard": return parsed.name || parsed.org || "Contact";
+    case "geo": return `${parsed.lat.toFixed(4)}, ${parsed.lng.toFixed(4)}`;
+    case "calendar": return parsed.summary || "Event";
+    case "upi": return parsed.payee;
+    case "crypto": return parsed.address.slice(0, 14) + "…";
+    case "text": return parsed.raw.length > 40 ? parsed.raw.slice(0, 40) + "…" : parsed.raw;
+  }
 }
