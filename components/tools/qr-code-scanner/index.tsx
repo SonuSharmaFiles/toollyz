@@ -24,6 +24,7 @@ import {
   ScanLine,
   ShieldCheck,
   Sparkles,
+  Store,
   Type as TypeIcon,
   Upload,
   Wifi,
@@ -565,13 +566,112 @@ function KindBody({ parsed, onCopy }: { parsed: QrContent; onCopy: (text: string
           {parsed.amount && <Row label="Amount" value={parsed.amount} mono />}
         </div>
       );
+    case "emv-merchant":
+      return <EmvMerchantBody parsed={parsed} />;
     case "text":
-      return (
-        <pre className="overflow-x-auto rounded-xl border border-border/60 bg-background/50 p-3 font-mono text-xs whitespace-pre-wrap break-all">
-          {parsed.raw}
-        </pre>
-      );
+      return <TextBody parsed={parsed} />;
   }
+}
+
+function EmvMerchantBody({
+  parsed,
+}: {
+  parsed: Extract<QrContent, { kind: "emv-merchant" }>;
+}) {
+  const location = [parsed.city, parsed.countryName ?? parsed.countryCode]
+    .filter(Boolean)
+    .join(", ");
+  return (
+    <div className="space-y-3">
+      {parsed.merchant && (
+        <div className="rounded-xl border border-emerald-500/30 bg-background/60 p-3">
+          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Pay to
+          </p>
+          <p className="mt-0.5 text-lg font-semibold tracking-tight">{parsed.merchant}</p>
+          {location && <p className="text-xs text-muted-foreground">{location}</p>}
+        </div>
+      )}
+
+      <div className="grid gap-2 sm:grid-cols-2">
+        <div className="rounded-xl border border-border/60 bg-background/50 p-3">
+          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Amount
+          </p>
+          <p className="mt-0.5 text-sm font-semibold">
+            {parsed.amount
+              ? `${parsed.amount} ${parsed.currency?.slice(0, 3) ?? parsed.currencyCode ?? ""}`.trim()
+              : "You enter the amount"}
+          </p>
+          {!parsed.amount && (
+            <p className="text-[11px] text-muted-foreground">
+              No amount baked in — your wallet will prompt you for one.
+            </p>
+          )}
+        </div>
+        <div className="rounded-xl border border-border/60 bg-background/50 p-3">
+          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Network
+          </p>
+          <p className="mt-0.5 text-sm font-semibold">
+            {parsed.networkLabel ?? parsed.network ?? "Unknown"}
+          </p>
+          <p className="text-[11px] text-muted-foreground">
+            {parsed.dynamic ? "Dynamic (single-use)" : "Static (reusable)"}
+          </p>
+        </div>
+      </div>
+
+      {(parsed.currency || parsed.purpose || parsed.storeLabel || parsed.reference || parsed.billNumber) && (
+        <div className="space-y-1 rounded-xl border border-border/60 bg-background/50 p-3 text-sm">
+          {parsed.currency && <Row label="Currency" value={parsed.currency} />}
+          {parsed.purpose && <Row label="Purpose" value={parsed.purpose} />}
+          {parsed.storeLabel && <Row label="Store" value={parsed.storeLabel} />}
+          {parsed.reference && <Row label="Reference" value={parsed.reference} mono />}
+          {parsed.billNumber && parsed.billNumber !== "0" && (
+            <Row label="Bill number" value={parsed.billNumber} mono />
+          )}
+        </div>
+      )}
+
+      <p className="rounded-lg border border-amber-500/30 bg-amber-500/10 p-2 text-[11px] text-amber-700 dark:text-amber-300">
+        <strong>How to pay:</strong> open your bank or mobile-wallet app, choose
+        &quot;Scan QR&quot; and point it at the same code — the merchant details
+        above are what your wallet will show you. Toollyz only reads the QR; it
+        never moves money.
+      </p>
+    </div>
+  );
+}
+
+// Long unrecognized payloads got dumped wholesale before, making the
+// card scroll forever. Now we cap the preview at ~280 chars with a
+// Show more / Show less toggle and a copy button. Still monospace so
+// structure remains visible.
+function TextBody({ parsed }: { parsed: Extract<QrContent, { kind: "text" }> }) {
+  const [expanded, setExpanded] = React.useState(false);
+  const LIMIT = 280;
+  const tooLong = parsed.raw.length > LIMIT;
+  const shown = expanded || !tooLong ? parsed.raw : parsed.raw.slice(0, LIMIT) + "…";
+  return (
+    <div className="space-y-2">
+      <pre className="overflow-x-auto rounded-xl border border-border/60 bg-background/50 p-3 font-mono text-xs whitespace-pre-wrap break-all">
+        {shown}
+      </pre>
+      <div className="flex items-center justify-between text-[11px] text-muted-foreground">
+        <span>{parsed.raw.length.toLocaleString()} characters</span>
+        {tooLong && (
+          <button
+            type="button"
+            onClick={() => setExpanded((e) => !e)}
+            className="rounded px-2 py-1 font-medium text-foreground hover:bg-muted"
+          >
+            {expanded ? "Show less" : "Show full text"}
+          </button>
+        )}
+      </div>
+    </div>
+  );
 }
 
 function WifiBody({
@@ -658,6 +758,7 @@ function KindIcon({ kind, className }: { kind: QrContent["kind"]; className?: st
     calendar: Calendar,
     upi: CircleDollarSign,
     crypto: CircleDollarSign,
+    "emv-merchant": Store,
     text: TypeIcon,
   }[kind] ?? LinkIcon;
   return <Icon className={className} aria-hidden />;
@@ -675,6 +776,7 @@ function shortSummary(parsed: QrContent): string {
     case "calendar": return parsed.summary || "Event";
     case "upi": return parsed.payee;
     case "crypto": return parsed.address.slice(0, 14) + "…";
+    case "emv-merchant": return parsed.merchant || parsed.networkLabel || "Merchant payment";
     case "text": return parsed.raw.length > 40 ? parsed.raw.slice(0, 40) + "…" : parsed.raw;
   }
 }
