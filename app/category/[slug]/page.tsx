@@ -5,7 +5,9 @@ import { ToolCard } from "@/components/shared/tool-card";
 import { categories, getCategoryBySlug } from "@/lib/tools/categories";
 import { getToolsByCategory } from "@/lib/tools/registry";
 import { categoryMetadata, categoryHeading } from "@/lib/seo/metadata";
-import { JsonLd, breadcrumbSchema, itemListSchema } from "@/lib/seo/json-ld";
+import { JsonLd, breadcrumbSchema, itemListSchema, faqSchema } from "@/lib/seo/json-ld";
+import { getCategoryArticle } from "@/lib/seo/category-content";
+import { SeoArticle } from "@/components/shared/seo-article";
 import { cn } from "@/lib/utils";
 
 interface PageProps {
@@ -31,6 +33,7 @@ export default async function CategoryPage({ params }: PageProps) {
 
   const tools = getToolsByCategory(category.id);
   const Icon = category.icon;
+  const article = getCategoryArticle(category.slug);
 
   const heading = categoryHeading(category.name);
   const schemas: object[] = [
@@ -40,6 +43,11 @@ export default async function CategoryPage({ params }: PageProps) {
       { name: category.name, href: `/category/${category.slug}` },
     ]),
   ];
+  // FAQ JSON-LD from the long-form article so this category page is
+  // eligible for FAQ rich results, mirroring the tool pages.
+  if (article?.faqs?.length) {
+    schemas.push(faqSchema(article.faqs));
+  }
   // ItemList JSON-LD enumerates every tool URL in this category —
   // gives crawlers a clean manifest for this section's tool index.
   if (tools.length) {
@@ -108,6 +116,8 @@ export default async function CategoryPage({ params }: PageProps) {
             </ul>
           </>
         )}
+
+        {article && <SeoArticle article={article} title={article.title} />}
       </div>
     </>
   );
