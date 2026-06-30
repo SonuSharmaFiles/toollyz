@@ -28,7 +28,7 @@ export function SeoArticle({ article, title }: SeoArticleProps) {
         {article.lead.map((para, idx) => (
           <p
             key={idx}
-            className="max-w-3xl text-pretty text-base leading-relaxed text-muted-foreground"
+            className="text-pretty text-base leading-relaxed text-muted-foreground"
           >
             {para}
           </p>
@@ -43,13 +43,13 @@ export function SeoArticle({ article, title }: SeoArticleProps) {
           {block.paragraphs.map((para, pIdx) => (
             <p
               key={pIdx}
-              className="max-w-3xl text-pretty text-base leading-relaxed text-muted-foreground"
+              className="text-pretty text-base leading-relaxed text-muted-foreground"
             >
               {para}
             </p>
           ))}
           {block.bullets && (
-            <ul className="max-w-3xl space-y-2 pt-1">
+            <ul className="space-y-2 pt-1">
               {block.bullets.lead && (
                 <p className="text-base leading-relaxed text-muted-foreground">
                   {block.bullets.lead}
