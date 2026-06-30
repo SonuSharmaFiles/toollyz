@@ -664,3 +664,87 @@ export const categoryArticles: Record<string, CategoryArticle> = {
 export function getCategoryArticle(slug: string): CategoryArticle | undefined {
   return categoryArticles[slug];
 }
+
+// Long-form copy for the /tools directory ("All tools") page. Kept here
+// alongside the category articles so the same server-only isolation and
+// the shared <SeoArticle> renderer apply.
+export const allToolsArticle: CategoryArticle = {
+  title: "One free, private toolbox for the small jobs that fill a workday",
+  lead: [
+    "Most of us do not need another heavyweight app. We need a fast place to do the dozens of tiny, unglamorous tasks that punctuate a normal day at a screen — shrinking an image so it will attach to an email, counting the words in a paragraph against a limit, generating a strong password, converting a measurement, formatting a tangle of JSON, splitting a PDF, or working out what a loan really costs. Individually each of these takes a few seconds. Collectively they eat real time, and the usual answer — hunting for a different single-purpose website each time, wading through ads, and often uploading private data to a server you do not control — makes them slower and riskier than they should be. This directory exists to be the opposite of that: every utility in one place, instant to load, and built to keep your data on your own machine.",
+    "What ties the entire catalog together is a single principle: the work happens in your browser, not on someone else's server. There is nothing to sign up for, nothing to install, and in the great majority of tools nothing is ever uploaded. The file you open, the text you paste, and the numbers you enter are processed by code running on your own device and never leave it. That is what makes it safe to use these tools on the things that actually matter — a confidential document, an unreleased image, a real API token, a salary figure — with the same confidence you would have using software installed on your computer, but with none of the installation.",
+  ],
+  blocks: [
+    {
+      heading: "What you will find in the catalog",
+      paragraphs: [
+        "The collection is organized into a handful of broad families so you can find the right tool quickly, either by browsing a category or searching by name. Each family groups together tools that share a purpose, and the search box at the top of this page filters the whole catalog as you type, matching tool names, taglines and keywords so you can jump straight to what you need without remembering which category it lives in.",
+        "Rather than one bloated do-everything app, each tool is deliberately focused on a single job it can do well. That is what keeps them fast to load and obvious to use: you open the one you need, do the task, copy or download the result, and move on. The trade-off — many small tools instead of one large one — is exactly the right one for work that comes in small, frequent bursts.",
+      ],
+      bullets: {
+        lead: "The main families of tools you can reach from here include:",
+        items: [
+          "Image tools to resize, compress, convert, crop and clean up pictures without uploading them.",
+          "Text tools to count, clean, transform, sort and reformat any block of writing or list.",
+          "Developer utilities to format and validate JSON and XML, decode tokens, hash strings and test patterns.",
+          "SEO helpers to write meta tags, generate structured data, and build robots and sitemap files.",
+          "Converters for units, number bases, encodings, timestamps and time zones.",
+          "Generators for passwords, UUIDs, placeholder text, fake data and one-off codes.",
+          "Calculators for loans, percentages, dates, tips and everyday body and finance math.",
+          "PDF tools to merge, split, rotate, reorder and compress documents in your browser.",
+        ],
+      },
+    },
+    {
+      heading: "Why everything runs in your browser",
+      paragraphs: [
+        "The conventional online tool follows a familiar pattern: you upload your file or paste your data, a remote server does the work, and the result comes back. That model carries three quiet costs that you pay every single time. The first is privacy — once your data leaves your device you cannot know how long it is kept, who can access it, or whether it ends up logged, cached, or worse. The second is speed — a network round trip is always slower than a local operation, and it degrades sharply on a poor connection or with a large file. The third is reliability — server tools hit rate limits, go down, or wrap your output in a watermark and a paywall at the worst moment.",
+        "Doing the work locally removes all three at once. Your computer is already more than fast enough to resize an image, format a document, or hash a string in a fraction of a second, and it never charges you, never queues you, and never sees your data because the data never moves. It is also resilient: once a tool's page has loaded, it keeps working even if your connection drops, because there is no server in the loop to call. For the small, frequent tasks these tools handle, that responsiveness and privacy are not luxuries — they are the entire point.",
+      ],
+    },
+    {
+      heading: "Free, with no account and no catch",
+      paragraphs: [
+        "Every tool here is free to use, without limits, without a sign-up wall, and without the bait-and-switch of a free tier that locks the feature you actually need behind a subscription. There is no account to create because there is nothing to store about you — the tools do not need to know who you are to count your words or compress your photo. That absence of friction is intentional: a tool you reach for a dozen times a day should never make you log in, wait, or hand over an email address to do a five-second task.",
+        "It also means there is no usage cap to bump into. Because the processing happens on your own device rather than on metered infrastructure, you can run a tool once or a thousand times at no cost to anyone. Batch through a folder of images, generate a hundred test records, format payload after payload — the tools do not count, throttle, or charge, because there is no server-side meter to run.",
+      ],
+    },
+    {
+      heading: "Built for speed, accessibility and trust",
+      paragraphs: [
+        "Beyond privacy, these tools are built to be genuinely pleasant to use. They load quickly because they are lightweight and do not depend on a server response to function. They give you results in real time, updating as you type or adjust a setting, so you can iterate toward exactly what you want rather than submitting and waiting. And they are designed to be usable by everyone, with clear structure, keyboard-friendly controls, and a light or dark theme that follows your preference.",
+        "Trust is the throughline. A tool you use on real work needs to behave predictably, keep your data to itself, and produce correct output every time — and that is the bar each utility here is held to. Whether you are a developer inspecting a production token, a marketer writing a meta description to length, a student counting words against a limit, or someone simply trying to shrink a photo to fit an upload box, the promise is the same: a focused tool that does its one job well, keeps your data on your device, and gets out of your way.",
+      ],
+    },
+    {
+      heading: "Who these tools are for",
+      paragraphs: [
+        "The honest answer is almost anyone who works at a keyboard. Developers lean on the formatters, decoders, hash and pattern tools many times a day. Writers, students and marketers reach for the text counters, case converters and cleaners. Designers and testers use the generators to fill mockups and seed databases with realistic data. Small-business owners and bloggers use the SEO helpers and image tools to publish faster. And everyone, eventually, needs to convert a unit, split a PDF, work out a percentage, or make a strong password.",
+        "Because the tools are free, require no account, and keep everything local, there is no barrier to picking up whichever one solves the problem in front of you right now. You do not need to commit to a platform or learn a complex interface — you find the tool, use it, and close the tab. New tools are added regularly and appear in this directory first, so the catalog grows toward the long tail of small jobs that, until now, sent you hunting across a dozen different sites.",
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: "Are the tools really free, with no hidden limits?",
+      a: "Yes. Every tool is free to use with no sign-up, no account, and no usage cap. Because the processing runs on your own device rather than on metered servers, there is no cost to running a tool once or thousands of times, so there is nothing to throttle or charge for.",
+    },
+    {
+      q: "Is my data uploaded when I use these tools?",
+      a: "In the overwhelming majority of tools, no. Images, text, documents and data you enter are processed entirely in your browser and never sent to a server, which is what makes it safe to use them on confidential files, real tokens and private information.",
+    },
+    {
+      q: "Do I need to create an account or install anything?",
+      a: "No. The tools are plain web pages that run in any modern browser with nothing to install and no account to create. Once a page has loaded, most tools also keep working offline because the logic runs locally rather than calling a server.",
+    },
+    {
+      q: "How do I find the right tool quickly?",
+      a: "Use the search box at the top of this page to filter the entire catalog by name, tagline or keyword as you type, or browse by category to see related tools grouped together. Either way you can reach any tool in a couple of clicks.",
+    },
+    {
+      q: "Will more tools be added over time?",
+      a: "Yes. New utilities are built and released regularly, and they appear in this directory first. The goal is to keep covering more of the small, everyday tasks people otherwise have to hunt for across many separate sites.",
+    },
+  ],
+};
+

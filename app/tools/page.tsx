@@ -6,7 +6,9 @@ import { ToolsFilter } from "@/components/tools/tools-filter";
 import { tools as ALL_TOOLS } from "@/lib/tools/registry";
 import { categories } from "@/lib/tools/categories";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { JsonLd, itemListSchema, breadcrumbSchema } from "@/lib/seo/json-ld";
+import { JsonLd, itemListSchema, breadcrumbSchema, faqSchema } from "@/lib/seo/json-ld";
+import { allToolsArticle } from "@/lib/seo/category-content";
+import { SeoArticle } from "@/components/shared/seo-article";
 
 export const metadata: Metadata = buildMetadata({
   title: "All Tools",
@@ -26,7 +28,7 @@ export default function ToolsIndexPage() {
   // ItemList JSON-LD enumerates every tool URL on the directory page —
   // gives crawlers a clean, indexable manifest of the entire catalog
   // (and is the canonical schema for index-style listing pages).
-  const schemas = [
+  const schemas: object[] = [
     breadcrumbSchema([
       { name: "Home", href: "/" },
       { name: "All Tools", href: "/tools" },
@@ -36,6 +38,11 @@ export default function ToolsIndexPage() {
       "All Toollyz tools",
     ),
   ];
+  // FAQ JSON-LD from the long-form directory article so the index page
+  // is eligible for FAQ rich results, mirroring the category pages.
+  if (allToolsArticle.faqs?.length) {
+    schemas.push(faqSchema(allToolsArticle.faqs));
+  }
 
   return (
     <div className="container-page space-y-10 py-10 sm:py-14">
@@ -102,6 +109,8 @@ export default function ToolsIndexPage() {
           );
         })}
       </ul>
+
+      <SeoArticle article={allToolsArticle} title={allToolsArticle.title} />
     </div>
   );
 }
